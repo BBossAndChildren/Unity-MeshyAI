@@ -1,3 +1,5 @@
+> 최신 목록: [v002 — 종교시설 3종, 총 71개 구도](panorama-prompts-v002.md). 아래 v001은 이전 기획 이력입니다.
+
 # 직업 공간 파노라마 프롬프트 v001
 
 [기준 통합 목록](asset-panorama-inventory-2026-10-31-v001.md) · [원본 직업 자료](job_base.txt) · [기계용 프롬프트](../../machine/catalog/panorama-prompts-v001.json)

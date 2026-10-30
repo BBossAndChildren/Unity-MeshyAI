@@ -121,10 +121,11 @@ textures는 아래 두 항목만 포함합니다.
 
 - 직업 목록의 선택 source_history는 과거 source 객체 배열이며 이전 원문을 보존합니다.
 
-### panorama-prompts-v001.json
+### panorama-prompts-vNNN.json
 - 파노라마 생성 전 기획 프롬프트 목록입니다. schema_version:3, package_id, version, source_document_path, source_document_sha256, occupation_catalog_path, scope, excluded_categories, execution_status, items를 기록합니다.
 - 각 items 항목은 prompt_id(PRM-숫자 세 자리 이상), version(vNNN), source_category, name, scene_purpose, key_props, layout_intent, status, existing_panorama_ref, result_panorama_ref, prompt를 갖습니다. (prompt_id, version)은 유일합니다.
 - status는 existing_reference(기존 이미지 재사용), prompt_ready(실행 전), needs_subject_selection(주제 선택 필요)입니다. 이번 목록의 execution_status는 not_started입니다.
 - source_category는 직업 후보 목록에 존재하는 장소 분류를 참조합니다. 특정 세부 장면에 원문 분류의 모든 직업을 자동 연결하지 않습니다.
 - existing_panorama_ref는 실제 등록된 catalog/image_id/version 또는 null, result_panorama_ref는 아직 생성하지 않았으면 null입니다. PRM ID를 이미지·모델 ID로 사용하지 않습니다.
+- 파일명 vNNN과 루트 version은 일치해야 합니다. 패키지 개정은 새 파일로 보존하고 변경된 prompt_id의 항목 version을 올립니다. 기존 ID를 재번호화하지 않습니다.
 - 프롬프트 작성·업로드를 이미지 생성·모델 제작·사용 권리 확인으로 기록하지 않습니다. 실제 결과 등록은 기존 이미지 catalog 계약을 따릅니다.
