@@ -8,3 +8,5 @@
 - [에이전트 규칙과 데이터 계약](../../AGENTS.md)
 
 전체 목록의 기준은 docs/machine/catalog/입니다. 설명과 목록을 함께 갱신합니다.
+
+- [파노라마 제작 자료](jobs/panorama-production-package.md): 통합 목록·직업 원문·69개 공간 프롬프트.

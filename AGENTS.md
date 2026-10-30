@@ -102,3 +102,29 @@ textures는 아래 두 항목만 포함합니다.
 - Blender/Unity 재질·장면·WebGL 실행과 URL 가용성은 실제 확인한 범위만 보고.
 
 이 문서는 에이전트의 준수 지침이며 자동 실행 또는 CI 강제를 의미하지 않습니다.
+
+## 직업 공간 기획 catalog 추가 계약
+
+아래 독립 기획 목록은 schema_version: 3을 사용합니다. 기존 모델·빌드 목록의 형식은 이 추가 계약으로 변경하지 않습니다.
+
+### workplace-contexts.json / occupation-workplace-candidates.json
+- 공간 컨텍스트는 모델 등록과 분리된 기획 자료입니다. 파노라마는 개별 에셋을 조립한 최종 공간의 형태·배치·의미 기준이며, 파노라마 신규 생성 지시가 아닙니다.
+- 두 목록은 schema_version: 3, review_status를 포함합니다. review_status는 pending_user_approval 또는 approved이며 사용자 승인 없이 approved로 바꾸지 않습니다.
+- workplace-contexts.json 루트는 occupation_catalog_path, planning_source_path, shared_context, contexts를 포함합니다. 경로는 실제 저장소 상대 경로입니다.
+- contexts 항목은 context_id(소문자 영문·숫자·하이픈), version(vNNN), review_status, name, panorama_ref, reference_role, meaning, tags, office_characteristics, activity_sequence, layout_intent, asset_slots, occupation_groups, avoid_interpretations, adaptation_notes를 포함합니다. (context_id, version)은 유일합니다.
+- panorama_ref는 실제 panoramas 목록의 catalog/image_id/version을 참조합니다. reference_role은 final_scene_composition_reference입니다. tags는 space/activity/interaction/visual의 한국어 문자열 배열입니다. 의미·이용자·업무·상호작용·시각 단서를 함께 기록합니다.
+- occupation_groups는 label, occupation_ids, mapping_basis, reason, applicability_condition을 포함합니다. occupation_ids는 직업 후보 목록에 존재해야 하며 그룹 안에서 중복하지 않습니다. 장면 기획 추정은 editorial_scene_candidate로 표시하고 실제 근무지 검증과 구분합니다.
+- asset_slots는 문맥 전달용 계획이며 실제 에셋 목록이 아닙니다. 각 슬롯에 slot_id(컨텍스트 내 유일), name, semantic_role, placement_relationship, priority(identity/supporting), evidence, asset_ref, quantity, production_status를 기록합니다. 미제작이면 asset_ref와 미정 quantity는 null, production_status는 planning_only입니다. 실제 에셋 연결 시 asset_ref는 존재하는 asset_id/version 쌍이어야 합니다.
+- occupation-workplace-candidates.json은 source, sections, occupations를 포함합니다. source에는 원문 경로·SHA-256, 원문이 보고한 날짜·총수와 실제 추출 수, 자료 완전성·한계·검증 범위를 구분해 기록합니다.
+- occupations는 occupation_id(직업 원문의 seq에서 career-net-<seq>), name, source_url, source_categories, source_status를 포함합니다. occupation_id는 유일합니다. source_categories에는 name과 basis(source_keyword_candidate/source_work_based_estimate)를 기록해 제공 자료의 추정 표시를 유지합니다. source_status는 candidate_not_verified이며 근무지 사실 확인을 뜻하지 않습니다.
+- 직업은 여러 공간의 후보가 될 수 있습니다. 누락 자료·잘린 첨부는 추측으로 복원하지 않습니다. JSON 구문·ID 유일성·원본 해시·파노라마/직업/에셋 참조와 문서 링크를 확인하고 사람용 설명도 함께 갱신합니다.
+
+- 직업 목록의 선택 source_history는 과거 source 객체 배열이며 이전 원문을 보존합니다.
+
+### panorama-prompts-v001.json
+- 파노라마 생성 전 기획 프롬프트 목록입니다. schema_version:3, package_id, version, source_document_path, source_document_sha256, occupation_catalog_path, scope, excluded_categories, execution_status, items를 기록합니다.
+- 각 items 항목은 prompt_id(PRM-숫자 세 자리 이상), version(vNNN), source_category, name, scene_purpose, key_props, layout_intent, status, existing_panorama_ref, result_panorama_ref, prompt를 갖습니다. (prompt_id, version)은 유일합니다.
+- status는 existing_reference(기존 이미지 재사용), prompt_ready(실행 전), needs_subject_selection(주제 선택 필요)입니다. 이번 목록의 execution_status는 not_started입니다.
+- source_category는 직업 후보 목록에 존재하는 장소 분류를 참조합니다. 특정 세부 장면에 원문 분류의 모든 직업을 자동 연결하지 않습니다.
+- existing_panorama_ref는 실제 등록된 catalog/image_id/version 또는 null, result_panorama_ref는 아직 생성하지 않았으면 null입니다. PRM ID를 이미지·모델 ID로 사용하지 않습니다.
+- 프롬프트 작성·업로드를 이미지 생성·모델 제작·사용 권리 확인으로 기록하지 않습니다. 실제 결과 등록은 기존 이미지 catalog 계약을 따릅니다.
