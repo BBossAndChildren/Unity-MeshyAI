@@ -9,7 +9,7 @@
 ```text
 <빌드 ID>.zip
   site/           index.html 및 WebGL 출력 전체
-  manifest.json   빌드·포함 에셋·사용한 텍스처 메타데이터
+  manifest.json   빌드·포함 에셋·최종 팔레트 메타데이터 (schema_version: 3)
   BUILD.md        빌드 상세 설명
   README.md       받는 사람의 실행 안내
 ```
