@@ -1,0 +1,2260 @@
+{
+  "schema_version": 3,
+  "report_id": "panorama-costs-v001",
+  "document_path": "docs/human/jobs/panorama-costs-v001.md",
+  "thread_id": "01a18db7-0ab4-74f2-bc0c-2a8a99ca1d0b",
+  "measurement_source": "Codex current chat event_msg.token_count; built-in image_gen result and registered output files",
+  "token_snapshot_timestamp_utc": "2026-10-30T17:43:28.196Z",
+  "token_scope": "현재 대화 시작부터 해당 로그 시점까지의 모델 누적 사용량. 이미지 생성 모델 자체의 사용량·금액은 별도 미측정. 보고서 작성 이후 및 최종 응답 토큰은 포함되지 않을 수 있음.",
+  "chat_tokens": {
+    "note": "cached_input은 input의 부분집합. reasoning_output은 output의 부분집합. 중복 합산 금지. 청구 금액은 로그에 없으므로 계산하지 않음.",
+    "cached_input_tokens": 11914880,
+    "input_tokens": 12158475,
+    "total_tokens": 12201021,
+    "actual_price": null,
+    "output_tokens": 42546,
+    "uncached_input_tokens": 243595,
+    "reasoning_output_tokens": 8841
+  },
+  "image_generation_calls": 66,
+  "generated_images": 66,
+  "existing_images_reused": 5,
+  "new_model_generation_calls": 0,
+  "meshy_calls": 0,
+  "meshy_credits_used": 0,
+  "generated_image_bytes": 107367773.0,
+  "prompt_characters_total": 44450.0,
+  "prompt_utf8_bytes_total": 104904.0,
+  "image_operations": [
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "prompt_id": "PRM-006",
+        "catalog": "panorama-prompts-v001"
+      },
+      "name": "실험실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-006"
+      },
+      "prompt_sha256": "251750df749d9da95634b529e0dc669203cd8c1f186a74e255e23805b8d220fd",
+      "prompt_characters": 659,
+      "prompt_utf8_bytes": 1556,
+      "generation_calls": 1,
+      "output_bytes": 1633988,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-007",
+        "version": "v001"
+      },
+      "name": "분석실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-007"
+      },
+      "prompt_sha256": "fd6206ea447a892c5fe6be980d929e4af24212ee56e10fe27fe1e98f587e0dd1",
+      "prompt_characters": 663,
+      "prompt_utf8_bytes": 1557,
+      "generation_calls": 1,
+      "output_bytes": 1591466,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-008"
+      },
+      "name": "진료실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-008"
+      },
+      "prompt_sha256": "f7323e5776d5fcd2441c287d3df349d7fe5d0fabc85cde529cb3c9440f711e3f",
+      "prompt_characters": 665,
+      "prompt_utf8_bytes": 1565,
+      "generation_calls": 1,
+      "output_bytes": 1600434,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "prompt_id": "PRM-009",
+        "catalog": "panorama-prompts-v001"
+      },
+      "name": "처치실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-009"
+      },
+      "prompt_sha256": "1a77b74381a1450913d824ce58525fa212229c5ea89c75e8b1db25e6e86e4fce",
+      "prompt_characters": 658,
+      "prompt_utf8_bytes": 1552,
+      "generation_calls": 1,
+      "output_bytes": 1565725,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "prompt_id": "PRM-010",
+        "version": "v001",
+        "catalog": "panorama-prompts-v001"
+      },
+      "name": "병실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-010"
+      },
+      "prompt_sha256": "fd9ce9460be2106075f77609e005bf2d42c4db23e0daede0d66121e5aba33033",
+      "prompt_characters": 658,
+      "prompt_utf8_bytes": 1550,
+      "generation_calls": 1,
+      "output_bytes": 1506327,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "prompt_id": "PRM-011",
+        "catalog": "panorama-prompts-v001",
+        "version": "v001"
+      },
+      "name": "의료 접수실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-011"
+      },
+      "prompt_sha256": "7b6d7734988fd0e5b9df004a414723464a9c42903ea0049cbb9de8e606f8f5a5",
+      "prompt_characters": 669,
+      "prompt_utf8_bytes": 1575,
+      "generation_calls": 1,
+      "output_bytes": 1495666,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-012",
+        "version": "v001"
+      },
+      "name": "교실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-012"
+      },
+      "prompt_sha256": "d6fe8c1da90937c6da687c1d1e1a2be47ebeb05f02ba26127af2ceab0c78ba67",
+      "prompt_characters": 650,
+      "prompt_utf8_bytes": 1534,
+      "generation_calls": 1,
+      "output_bytes": 1560772,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-013",
+        "version": "v001"
+      },
+      "name": "교육 실습실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-013"
+      },
+      "prompt_sha256": "2ef7dcd03eba87b03bf218dcedaf16e93881253567f8b950ee369e200014f971",
+      "prompt_characters": 661,
+      "prompt_utf8_bytes": 1563,
+      "generation_calls": 1,
+      "output_bytes": 1781231,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "prompt_id": "PRM-014",
+        "catalog": "panorama-prompts-v001"
+      },
+      "name": "강의실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-014"
+      },
+      "prompt_sha256": "b9f4ec9eda1d08e6fc7d1e7e973dfa9a58a6bd49c92c1c743b60f13af81b41dc",
+      "prompt_characters": 654,
+      "prompt_utf8_bytes": 1540,
+      "generation_calls": 1,
+      "output_bytes": 1640121,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-015"
+      },
+      "name": "복지·심리 상담실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-015"
+      },
+      "prompt_sha256": "1818825634f0a45689fdb6d1228a99599f494e8bf89bf1661ce20c6a362ea4f1",
+      "prompt_characters": 676,
+      "prompt_utf8_bytes": 1597,
+      "generation_calls": 1,
+      "output_bytes": 1544264,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "prompt_id": "PRM-016",
+        "version": "v001",
+        "catalog": "panorama-prompts-v001"
+      },
+      "name": "복지 활동실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-016"
+      },
+      "prompt_sha256": "e6b46e75170cf6097e0c238bc7a1e98f634911cf08b912af1c16749b16f999af",
+      "prompt_characters": 667,
+      "prompt_utf8_bytes": 1573,
+      "generation_calls": 1,
+      "output_bytes": 1599816,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-017"
+      },
+      "name": "요양실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-017"
+      },
+      "prompt_sha256": "585b17c9411799b429f36c5d4fc970b8ac502c44821a03d3e858258767d254bc",
+      "prompt_characters": 670,
+      "prompt_utf8_bytes": 1578,
+      "generation_calls": 1,
+      "output_bytes": 1565636,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "prompt_id": "PRM-018",
+        "catalog": "panorama-prompts-v001"
+      },
+      "name": "생산 구역",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-018"
+      },
+      "prompt_sha256": "670f4f5a1b853d76f04f7faaa54400443422b29d581875a200bc2a9e845dfb5d",
+      "prompt_characters": 670,
+      "prompt_utf8_bytes": 1582,
+      "generation_calls": 1,
+      "output_bytes": 1640952,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-019"
+      },
+      "name": "조립 구역",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-019"
+      },
+      "prompt_sha256": "6bbe310a4d439babeb52725fcfc242917a73aaae1b621e1a12040edb6bdba282",
+      "prompt_characters": 667,
+      "prompt_utf8_bytes": 1575,
+      "generation_calls": 1,
+      "output_bytes": 1787663,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-020"
+      },
+      "name": "정비 구역",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-020"
+      },
+      "prompt_sha256": "a164653c4ab5713e788eb53a414faedbbb53a825ad2217b3ab9053f9fd0a1154",
+      "prompt_characters": 661,
+      "prompt_utf8_bytes": 1559,
+      "generation_calls": 1,
+      "output_bytes": 1686255,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-021"
+      },
+      "name": "소매점",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-021"
+      },
+      "prompt_sha256": "3f139243dcfd4e6578d09a352e96840146ad5be99dd00512811bb114419b9927",
+      "prompt_characters": 661,
+      "prompt_utf8_bytes": 1553,
+      "generation_calls": 1,
+      "output_bytes": 1684788,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "prompt_id": "PRM-022",
+        "catalog": "panorama-prompts-v001",
+        "version": "v001"
+      },
+      "name": "서비스 창구",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-022"
+      },
+      "prompt_sha256": "9d778ae6f6dd3c49e3c487a9bdf3de48e175c789e0457fc3a5418b2c6ca7073c",
+      "prompt_characters": 679,
+      "prompt_utf8_bytes": 1599,
+      "generation_calls": 1,
+      "output_bytes": 1521077,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-023"
+      },
+      "name": "미용실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-023"
+      },
+      "prompt_sha256": "00feb0805a4b60a3efc5b7991d0c5bff47d3037f027eaeb349495358d660b625",
+      "prompt_characters": 659,
+      "prompt_utf8_bytes": 1553,
+      "generation_calls": 1,
+      "output_bytes": 1672043,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-024"
+      },
+      "name": "주방",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-024"
+      },
+      "prompt_sha256": "48c6b5c8033366a7219dba3403bd56de6b05eef0b9039d88ff7bc3a14e7e2997",
+      "prompt_characters": 667,
+      "prompt_utf8_bytes": 1578,
+      "generation_calls": 1,
+      "output_bytes": 1570890,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-025"
+      },
+      "name": "제과실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-025"
+      },
+      "prompt_sha256": "f988b16911e6faf67bab0facd5e2d89a9588632c2b1223e6918d9865e2ec9ad7",
+      "prompt_characters": 654,
+      "prompt_utf8_bytes": 1544,
+      "generation_calls": 1,
+      "output_bytes": 1758894,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "prompt_id": "PRM-026",
+        "catalog": "panorama-prompts-v001"
+      },
+      "name": "식당 홀",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-026"
+      },
+      "prompt_sha256": "b12c9adf13539348d5d6984b9b7759a85e85d0b1fff211709d67d650f6fef620",
+      "prompt_characters": 663,
+      "prompt_utf8_bytes": 1563,
+      "generation_calls": 1,
+      "output_bytes": 1560827,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-027"
+      },
+      "name": "디자인 작업실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-027"
+      },
+      "prompt_sha256": "dbec9b69b50bfc8afc18734c630d3f6ad246d22d712d75d47d5e488a5d501fe4",
+      "prompt_characters": 670,
+      "prompt_utf8_bytes": 1582,
+      "generation_calls": 1,
+      "output_bytes": 1790359,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-028"
+      },
+      "name": "미술 작업실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-028"
+      },
+      "prompt_sha256": "37e094e04105dab75f2b9a6c01acaff1a9259ac7d9b09a330f7634a579b9db76",
+      "prompt_characters": 665,
+      "prompt_utf8_bytes": 1569,
+      "generation_calls": 1,
+      "output_bytes": 1613046,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "prompt_id": "PRM-029",
+        "catalog": "panorama-prompts-v001"
+      },
+      "name": "공예 작업실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-029"
+      },
+      "prompt_sha256": "651d5780f7d5df02d386d46c6512ddbd1dc84b33b752e9e10e7698991e861f2b",
+      "prompt_characters": 664,
+      "prompt_utf8_bytes": 1568,
+      "generation_calls": 1,
+      "output_bytes": 1699993,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "prompt_id": "PRM-030",
+        "version": "v001",
+        "catalog": "panorama-prompts-v001"
+      },
+      "name": "촬영 스튜디오",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-030"
+      },
+      "prompt_sha256": "480e722f36f9c6218c5837789132e61e4df94fe15fb59ddc17d17c9ee2a268ba",
+      "prompt_characters": 662,
+      "prompt_utf8_bytes": 1566,
+      "generation_calls": 1,
+      "output_bytes": 1571170,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "prompt_id": "PRM-031",
+        "version": "v001",
+        "catalog": "panorama-prompts-v001"
+      },
+      "name": "방송 스튜디오",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-031"
+      },
+      "prompt_sha256": "f1f698add314c56bd20609051a08dc97becfd093c3e0e1e6c1de4e6a927a018d",
+      "prompt_characters": 666,
+      "prompt_utf8_bytes": 1576,
+      "generation_calls": 1,
+      "output_bytes": 1456947,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "prompt_id": "PRM-032",
+        "version": "v001",
+        "catalog": "panorama-prompts-v001"
+      },
+      "name": "영상 편집실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-032"
+      },
+      "prompt_sha256": "b7e1aa43dce47d6ac8f69dcadf47f0bbf75037974f6d7829c1fbdba66ad530e4",
+      "prompt_characters": 668,
+      "prompt_utf8_bytes": 1580,
+      "generation_calls": 1,
+      "output_bytes": 1644308,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "prompt_id": "PRM-033",
+        "catalog": "panorama-prompts-v001"
+      },
+      "name": "공연 무대",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-033"
+      },
+      "prompt_sha256": "75054b9f7340e6cad2afdbe8041d3fcd4b96b5a70260a740d293a8918fdb71f8",
+      "prompt_characters": 657,
+      "prompt_utf8_bytes": 1551,
+      "generation_calls": 1,
+      "output_bytes": 1536407,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-034",
+        "version": "v001"
+      },
+      "name": "전시실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-034"
+      },
+      "prompt_sha256": "84e48bc8b6bacecd9b74cacbbbd6ffff83eeef47e94db48f31b4b64b31444636",
+      "prompt_characters": 658,
+      "prompt_utf8_bytes": 1554,
+      "generation_calls": 1,
+      "output_bytes": 1456826,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "prompt_id": "PRM-035",
+        "catalog": "panorama-prompts-v001",
+        "version": "v001"
+      },
+      "name": "문화 활동실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-035"
+      },
+      "prompt_sha256": "7aa69c0c3e0dd9153f5ff0d9e737e1b3a7016357ee1fe47e68131f9adafea39c",
+      "prompt_characters": 667,
+      "prompt_utf8_bytes": 1574,
+      "generation_calls": 1,
+      "output_bytes": 1565071,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "prompt_id": "PRM-036",
+        "version": "v001",
+        "catalog": "panorama-prompts-v001"
+      },
+      "name": "건축 작업 구역",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-036"
+      },
+      "prompt_sha256": "a2dbdc9b5f5d88e007272b87a5c3a65717f41e02a566dde8db36e8f205919aeb",
+      "prompt_characters": 661,
+      "prompt_utf8_bytes": 1559,
+      "generation_calls": 1,
+      "output_bytes": 1731334,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-037",
+        "version": "v001"
+      },
+      "name": "설비 작업 구역",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-037"
+      },
+      "prompt_sha256": "451e501a2713ab52a5329bcaf2abfe9b6b2093a37f0a4a26d39aba02f18c8472",
+      "prompt_characters": 660,
+      "prompt_utf8_bytes": 1557,
+      "generation_calls": 1,
+      "output_bytes": 1692627,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-038"
+      },
+      "name": "환경 조사 지점",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-038"
+      },
+      "prompt_sha256": "43310fccc7a793517d8fd165364b858a02ed5fb60a18e72d8e75df366a33e77b",
+      "prompt_characters": 673,
+      "prompt_utf8_bytes": 1587,
+      "generation_calls": 1,
+      "output_bytes": 1646318,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "prompt_id": "PRM-039",
+        "catalog": "panorama-prompts-v001"
+      },
+      "name": "관측 지점",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-039"
+      },
+      "prompt_sha256": "42e1d80cc8972ab5c5a64f7b770da22da737a049438701b3c5f665ef4653a58f",
+      "prompt_characters": 669,
+      "prompt_utf8_bytes": 1577,
+      "generation_calls": 1,
+      "output_bytes": 1573423,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-040"
+      },
+      "name": "재배지",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-040"
+      },
+      "prompt_sha256": "b0c5a5cf0f42a0e26e47f074de60cefaf11bef51e22df7554b35781939ce2bf9",
+      "prompt_characters": 654,
+      "prompt_utf8_bytes": 1542,
+      "generation_calls": 1,
+      "output_bytes": 1754572,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-041"
+      },
+      "name": "온실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-041"
+      },
+      "prompt_sha256": "b6fa7a17b6ed04cac155d4e1c752ca958e9acf5efdc77416d565dc1da6a945e3",
+      "prompt_characters": 672,
+      "prompt_utf8_bytes": 1584,
+      "generation_calls": 1,
+      "output_bytes": 1708788,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-042",
+        "version": "v001"
+      },
+      "name": "축사",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-042"
+      },
+      "prompt_sha256": "4fa51492e6ea48ab66dfe40777c38d70e31a3bbd7250e9433845cd34f638281f",
+      "prompt_characters": 655,
+      "prompt_utf8_bytes": 1541,
+      "generation_calls": 1,
+      "output_bytes": 1680505,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-043"
+      },
+      "name": "동물 관리실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-043"
+      },
+      "prompt_sha256": "a687354f432a319f5f6997cde6d382ea8c27b8f38cd190f7e728401ef6546c1f",
+      "prompt_characters": 663,
+      "prompt_utf8_bytes": 1565,
+      "generation_calls": 1,
+      "output_bytes": 1736570,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "prompt_id": "PRM-044",
+        "catalog": "panorama-prompts-v001",
+        "version": "v001"
+      },
+      "name": "선박 갑판",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-044"
+      },
+      "prompt_sha256": "2dd8692ff315f30149e3bf3f4826b188268ce6d103f8cb64119bd611326e2fcf",
+      "prompt_characters": 658,
+      "prompt_utf8_bytes": 1551,
+      "generation_calls": 1,
+      "output_bytes": 1667712,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-045",
+        "version": "v001"
+      },
+      "name": "조타실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-045"
+      },
+      "prompt_sha256": "ab12db207b5341b8ac173c94bf097050eca45db147b74b435affb878063be4c7",
+      "prompt_characters": 650,
+      "prompt_utf8_bytes": 1534,
+      "generation_calls": 1,
+      "output_bytes": 1611774,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "prompt_id": "PRM-046",
+        "version": "v001",
+        "catalog": "panorama-prompts-v001"
+      },
+      "name": "부두",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-046"
+      },
+      "prompt_sha256": "9e5d8304ec7843b83a6df3e8f87e9f818137078fddc0ae629732abf7b2ddafcf",
+      "prompt_characters": 660,
+      "prompt_utf8_bytes": 1560,
+      "generation_calls": 1,
+      "output_bytes": 1527523,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-047",
+        "version": "v001"
+      },
+      "name": "체육관",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-047"
+      },
+      "prompt_sha256": "3b719a82915e18bb4d137cdc784d534a20880b12d02e86143a81c2e1f734f370",
+      "prompt_characters": 641,
+      "prompt_utf8_bytes": 1509,
+      "generation_calls": 1,
+      "output_bytes": 1659201,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "prompt_id": "PRM-048",
+        "version": "v001",
+        "catalog": "panorama-prompts-v001"
+      },
+      "name": "운동 지도실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-048"
+      },
+      "prompt_sha256": "f4c0ddfda2f1491ebb1a449bf6144e2cf419635e6ce89e9b934ec285ce468d40",
+      "prompt_characters": 664,
+      "prompt_utf8_bytes": 1571,
+      "generation_calls": 1,
+      "output_bytes": 1599960,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-049"
+      },
+      "name": "경기 구역",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-049"
+      },
+      "prompt_sha256": "67e6930ce18f7008400a7575b299673e6a272889e267f75b34bac92a2e35c134",
+      "prompt_characters": 657,
+      "prompt_utf8_bytes": 1545,
+      "generation_calls": 1,
+      "output_bytes": 1745391,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-050"
+      },
+      "name": "수사실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-050"
+      },
+      "prompt_sha256": "ba293ba613585e0361d4798d0f24a6e060f3f5d2bb17e6e8d005d01997bce06c",
+      "prompt_characters": 657,
+      "prompt_utf8_bytes": 1549,
+      "generation_calls": 1,
+      "output_bytes": 1750365,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-051"
+      },
+      "name": "증거 분석실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-051"
+      },
+      "prompt_sha256": "3b91b67d248752ac8826d7049bb4a926604b1aedd8f061580e86299a582d0ce1",
+      "prompt_characters": 651,
+      "prompt_utf8_bytes": 1533,
+      "generation_calls": 1,
+      "output_bytes": 1751222,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-052"
+      },
+      "name": "법정",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-052"
+      },
+      "prompt_sha256": "341fb41e6039bc28672a3a5b200e8d04eaeb1178dd39fcb2ebbe82dbe45ba261",
+      "prompt_characters": 653,
+      "prompt_utf8_bytes": 1541,
+      "generation_calls": 1,
+      "output_bytes": 1537889,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-053"
+      },
+      "name": "물류 창고",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-053"
+      },
+      "prompt_sha256": "41d4730ea70065aa088d5a9abc1c7c3038a342bcf44d85f972fb56c2fddc9f0d",
+      "prompt_characters": 654,
+      "prompt_utf8_bytes": 1544,
+      "generation_calls": 1,
+      "output_bytes": 1745564,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-054",
+        "version": "v001"
+      },
+      "name": "운송 조종 공간",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-054"
+      },
+      "prompt_sha256": "8c1254e7e9e7698456d8bf807aa79062613f952edff97cd662eae149f22947ac",
+      "prompt_characters": 683,
+      "prompt_utf8_bytes": 1616,
+      "generation_calls": 1,
+      "output_bytes": 1670235,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-055",
+        "version": "v001"
+      },
+      "name": "운송 거점",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-055"
+      },
+      "prompt_sha256": "064d6a98fc4ecda09e4564ea1f18e9a3bac00e7d90da374d79cf32bd1369d18f",
+      "prompt_characters": 658,
+      "prompt_utf8_bytes": 1549,
+      "generation_calls": 1,
+      "output_bytes": 1645681,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-056",
+        "version": "v001"
+      },
+      "name": "금융 창구",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-056"
+      },
+      "prompt_sha256": "9d86089e4020129bbd3ed936024e4334b0cb7f7a97f156f56d3badb15f8fdef4",
+      "prompt_characters": 678,
+      "prompt_utf8_bytes": 1594,
+      "generation_calls": 1,
+      "output_bytes": 1625243,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-057"
+      },
+      "name": "금융 상담실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-057"
+      },
+      "prompt_sha256": "818763904176f97c882d2b50347a147dc3529f2dfc3ed62260e623c987b11880",
+      "prompt_characters": 677,
+      "prompt_utf8_bytes": 1598,
+      "generation_calls": 1,
+      "output_bytes": 1598611,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-058",
+        "version": "v001"
+      },
+      "name": "가정 수리 공간",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-058"
+      },
+      "prompt_sha256": "c808e96ab2451f05ba22ab198b9c4783058425505b405dee3296425cf3395109",
+      "prompt_characters": 669,
+      "prompt_utf8_bytes": 1581,
+      "generation_calls": 1,
+      "output_bytes": 1705576,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "prompt_id": "PRM-059",
+        "catalog": "panorama-prompts-v001"
+      },
+      "name": "방문 학습 공간",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-059"
+      },
+      "prompt_sha256": "836726ff3e713f2d42aa6066cb27e5b688078488b7d7460c5189d3af5f7c5f3b",
+      "prompt_characters": 662,
+      "prompt_utf8_bytes": 1556,
+      "generation_calls": 1,
+      "output_bytes": 1471888,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-060"
+      },
+      "name": "서버실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-060"
+      },
+      "prompt_sha256": "85f5e69943d5e93fa894f3c91a966732638aa574ef8c085f70ba3104e6a62a3c",
+      "prompt_characters": 656,
+      "prompt_utf8_bytes": 1549,
+      "generation_calls": 1,
+      "output_bytes": 1700135,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "prompt_id": "PRM-061",
+        "catalog": "panorama-prompts-v001",
+        "version": "v001"
+      },
+      "name": "관제실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-061"
+      },
+      "prompt_sha256": "f17a193507dafe39d32343413f69c1e18801ef74b79d62267ec257e2b1f2aa48",
+      "prompt_characters": 661,
+      "prompt_utf8_bytes": 1561,
+      "generation_calls": 1,
+      "output_bytes": 1581818,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "prompt_id": "PRM-062",
+        "catalog": "panorama-prompts-v001",
+        "version": "v001"
+      },
+      "name": "거실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-062"
+      },
+      "prompt_sha256": "b06437e1381c07d3d329f3fafe7e375778bdf777a8ffa6407da5c90e5c268aac",
+      "prompt_characters": 661,
+      "prompt_utf8_bytes": 1557,
+      "generation_calls": 1,
+      "output_bytes": 1534371,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "prompt_id": "PRM-063",
+        "catalog": "panorama-prompts-v001",
+        "version": "v001"
+      },
+      "name": "주택 관리 공간",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-063"
+      },
+      "prompt_sha256": "796046602855cb46666dc93747490009b288eb305e169e9c2cdbe23ceb8840d8",
+      "prompt_characters": 665,
+      "prompt_utf8_bytes": 1567,
+      "generation_calls": 1,
+      "output_bytes": 1564935,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "prompt_id": "PRM-065",
+        "catalog": "panorama-prompts-v001",
+        "version": "v001"
+      },
+      "name": "군 행정실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-065"
+      },
+      "prompt_sha256": "fd793e32d9beaa70b6a9aaa33eac83f03dbf495f4b288922f69b8933c5e4e149",
+      "prompt_characters": 665,
+      "prompt_utf8_bytes": 1564,
+      "generation_calls": 1,
+      "output_bytes": 1761643,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-066",
+        "version": "v001"
+      },
+      "name": "생활관",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-066"
+      },
+      "prompt_sha256": "a0454ac3aeb9e45c7a0d589cd4497b14bed09f679e8c8005041cd8a88ffc2a66",
+      "prompt_characters": 648,
+      "prompt_utf8_bytes": 1530,
+      "generation_calls": 1,
+      "output_bytes": 1590588,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-067"
+      },
+      "name": "장비 관리실",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-067"
+      },
+      "prompt_sha256": "e30afa20c072a3f6bb0c98605fdd6e92894fbbc17dcdcf39d2fab15ba5758682",
+      "prompt_characters": 662,
+      "prompt_utf8_bytes": 1565,
+      "generation_calls": 1,
+      "output_bytes": 1758783,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-068",
+        "version": "v001"
+      },
+      "name": "출장 업무 공간",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-068"
+      },
+      "prompt_sha256": "87e3e8612ba8850bf288eff11f55fc1df2435e3b7e117dd761b763c1186b5eb6",
+      "prompt_characters": 672,
+      "prompt_utf8_bytes": 1584,
+      "generation_calls": 1,
+      "output_bytes": 1468599,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-069",
+        "version": "v001"
+      },
+      "name": "안내 집결 지점",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-069"
+      },
+      "prompt_sha256": "3957b84a4dd3bcf208d7ca3dcc5cacd8186a0e4fc085b26b42dcf0fc8379fa5b",
+      "prompt_characters": 670,
+      "prompt_utf8_bytes": 1580,
+      "generation_calls": 1,
+      "output_bytes": 1649818,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "version": "v002",
+        "prompt_id": "PRM-064"
+      },
+      "name": "기독교(개신교) 예배실 — 목사",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-064"
+      },
+      "prompt_sha256": "17b2464f0b88e8a6b780303fedb6f47b75bef6d6de394155b72f62d160191612",
+      "prompt_characters": 898,
+      "prompt_utf8_bytes": 2135,
+      "generation_calls": 1,
+      "output_bytes": 1451057,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-070"
+      },
+      "name": "불교 법당 — 스님",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-070"
+      },
+      "prompt_sha256": "a7cb483bddc677a9bae8fe4dd96441d0e05c9ffe2f833d9fd3421e9402d119b8",
+      "prompt_characters": 907,
+      "prompt_utf8_bytes": 2158,
+      "generation_calls": 1,
+      "output_bytes": 1603768,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "version": "v001",
+        "prompt_id": "PRM-071"
+      },
+      "name": "천주교 성당 — 신부님",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "version": "v001",
+        "image_id": "PAN-071"
+      },
+      "prompt_sha256": "a389d6a74220ddbaf256135cb0397e6b60882932f72fdda6571e79497cfc57e4",
+      "prompt_characters": 898,
+      "prompt_utf8_bytes": 2145,
+      "generation_calls": 1,
+      "output_bytes": 1561324,
+      "actual_image_input_tokens": null,
+      "actual_image_output_tokens": null,
+      "actual_image_price": null,
+      "attributed_chat_tokens": null,
+      "measurement_note": "생성 결과 도구는 image_url과 output_hint만 반환. 토큰·과금 단가 미제공. 대화 토큰은 전체 누적만 측정, 에셋별 배분 불가."
+    }
+  ],
+  "chat_token_events": [
+    {
+      "sequence": 1,
+      "timestamp_utc": "2026-10-30T16:49:59.597Z",
+      "input_tokens": 29883,
+      "cached_input_tokens": 13184,
+      "uncached_input_tokens": 16699,
+      "output_tokens": 133,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 30016
+    },
+    {
+      "sequence": 2,
+      "timestamp_utc": "2026-10-30T16:50:07.975Z",
+      "input_tokens": 40021,
+      "cached_input_tokens": 29824,
+      "uncached_input_tokens": 10197,
+      "output_tokens": 230,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 40251
+    },
+    {
+      "sequence": 3,
+      "timestamp_utc": "2026-10-30T16:50:17.38Z",
+      "input_tokens": 51226,
+      "cached_input_tokens": 40064,
+      "uncached_input_tokens": 11162,
+      "output_tokens": 204,
+      "reasoning_output_tokens": 8,
+      "total_tokens": 51430
+    },
+    {
+      "sequence": 4,
+      "timestamp_utc": "2026-10-30T16:50:26.689Z",
+      "input_tokens": 62394,
+      "cached_input_tokens": 51200,
+      "uncached_input_tokens": 11194,
+      "output_tokens": 246,
+      "reasoning_output_tokens": 49,
+      "total_tokens": 62640
+    },
+    {
+      "sequence": 5,
+      "timestamp_utc": "2026-10-30T16:50:36.629Z",
+      "input_tokens": 62658,
+      "cached_input_tokens": 62464,
+      "uncached_input_tokens": 194,
+      "output_tokens": 209,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 62867
+    },
+    {
+      "sequence": 6,
+      "timestamp_utc": "2026-10-30T16:51:02.296Z",
+      "input_tokens": 70447,
+      "cached_input_tokens": 62720,
+      "uncached_input_tokens": 7727,
+      "output_tokens": 103,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 70550
+    },
+    {
+      "sequence": 7,
+      "timestamp_utc": "2026-10-30T16:51:09.328Z",
+      "input_tokens": 72666,
+      "cached_input_tokens": 70400,
+      "uncached_input_tokens": 2266,
+      "output_tokens": 109,
+      "reasoning_output_tokens": 10,
+      "total_tokens": 72775
+    },
+    {
+      "sequence": 8,
+      "timestamp_utc": "2026-10-30T16:51:12.745Z",
+      "input_tokens": 73599,
+      "cached_input_tokens": 72576,
+      "uncached_input_tokens": 1023,
+      "output_tokens": 32,
+      "reasoning_output_tokens": 32,
+      "total_tokens": 73631
+    },
+    {
+      "sequence": 9,
+      "timestamp_utc": "2026-10-30T16:51:43.128Z",
+      "input_tokens": 73690,
+      "cached_input_tokens": 73472,
+      "uncached_input_tokens": 218,
+      "output_tokens": 1401,
+      "reasoning_output_tokens": 232,
+      "total_tokens": 75091
+    },
+    {
+      "sequence": 10,
+      "timestamp_utc": "2026-10-30T16:52:02.018Z",
+      "input_tokens": 75163,
+      "cached_input_tokens": 74880,
+      "uncached_input_tokens": 283,
+      "output_tokens": 200,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 75363
+    },
+    {
+      "sequence": 11,
+      "timestamp_utc": "2026-10-30T16:52:28.631Z",
+      "input_tokens": 75539,
+      "cached_input_tokens": 75136,
+      "uncached_input_tokens": 403,
+      "output_tokens": 77,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 75616
+    },
+    {
+      "sequence": 12,
+      "timestamp_utc": "2026-10-30T16:53:14.806Z",
+      "input_tokens": 79909,
+      "cached_input_tokens": 75392,
+      "uncached_input_tokens": 4517,
+      "output_tokens": 266,
+      "reasoning_output_tokens": 74,
+      "total_tokens": 80175
+    },
+    {
+      "sequence": 13,
+      "timestamp_utc": "2026-10-30T16:53:56.38Z",
+      "input_tokens": 84469,
+      "cached_input_tokens": 80000,
+      "uncached_input_tokens": 4469,
+      "output_tokens": 270,
+      "reasoning_output_tokens": 13,
+      "total_tokens": 84739
+    },
+    {
+      "sequence": 14,
+      "timestamp_utc": "2026-10-30T16:54:39.715Z",
+      "input_tokens": 89034,
+      "cached_input_tokens": 84608,
+      "uncached_input_tokens": 4426,
+      "output_tokens": 190,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 89224
+    },
+    {
+      "sequence": 15,
+      "timestamp_utc": "2026-10-30T16:55:27.422Z",
+      "input_tokens": 93517,
+      "cached_input_tokens": 89088,
+      "uncached_input_tokens": 4429,
+      "output_tokens": 305,
+      "reasoning_output_tokens": 45,
+      "total_tokens": 93822
+    },
+    {
+      "sequence": 16,
+      "timestamp_utc": "2026-10-30T16:55:44.024Z",
+      "input_tokens": 98117,
+      "cached_input_tokens": 93696,
+      "uncached_input_tokens": 4421,
+      "output_tokens": 280,
+      "reasoning_output_tokens": 27,
+      "total_tokens": 98397
+    },
+    {
+      "sequence": 17,
+      "timestamp_utc": "2026-10-30T16:56:13.511Z",
+      "input_tokens": 98465,
+      "cached_input_tokens": 98304,
+      "uncached_input_tokens": 161,
+      "output_tokens": 152,
+      "reasoning_output_tokens": 39,
+      "total_tokens": 98617
+    },
+    {
+      "sequence": 18,
+      "timestamp_utc": "2026-10-30T16:56:23.912Z",
+      "input_tokens": 102908,
+      "cached_input_tokens": 98432,
+      "uncached_input_tokens": 4476,
+      "output_tokens": 197,
+      "reasoning_output_tokens": 23,
+      "total_tokens": 103105
+    },
+    {
+      "sequence": 19,
+      "timestamp_utc": "2026-10-30T16:57:13.753Z",
+      "input_tokens": 116223,
+      "cached_input_tokens": 102912,
+      "uncached_input_tokens": 13311,
+      "output_tokens": 303,
+      "reasoning_output_tokens": 35,
+      "total_tokens": 116526
+    },
+    {
+      "sequence": 20,
+      "timestamp_utc": "2026-10-30T16:58:00.843Z",
+      "input_tokens": 120819,
+      "cached_input_tokens": 116352,
+      "uncached_input_tokens": 4467,
+      "output_tokens": 286,
+      "reasoning_output_tokens": 30,
+      "total_tokens": 121105
+    },
+    {
+      "sequence": 21,
+      "timestamp_utc": "2026-10-30T16:58:50.406Z",
+      "input_tokens": 125405,
+      "cached_input_tokens": 120960,
+      "uncached_input_tokens": 4445,
+      "output_tokens": 261,
+      "reasoning_output_tokens": 15,
+      "total_tokens": 125666
+    },
+    {
+      "sequence": 22,
+      "timestamp_utc": "2026-10-30T16:59:34.521Z",
+      "input_tokens": 129956,
+      "cached_input_tokens": 125568,
+      "uncached_input_tokens": 4388,
+      "output_tokens": 277,
+      "reasoning_output_tokens": 33,
+      "total_tokens": 130233
+    },
+    {
+      "sequence": 23,
+      "timestamp_utc": "2026-10-30T17:00:32.392Z",
+      "input_tokens": 134520,
+      "cached_input_tokens": 130048,
+      "uncached_input_tokens": 4472,
+      "output_tokens": 408,
+      "reasoning_output_tokens": 153,
+      "total_tokens": 134928
+    },
+    {
+      "sequence": 24,
+      "timestamp_utc": "2026-10-30T17:00:44.882Z",
+      "input_tokens": 139218,
+      "cached_input_tokens": 134784,
+      "uncached_input_tokens": 4434,
+      "output_tokens": 280,
+      "reasoning_output_tokens": 65,
+      "total_tokens": 139498
+    },
+    {
+      "sequence": 25,
+      "timestamp_utc": "2026-10-30T17:01:43.19Z",
+      "input_tokens": 139813,
+      "cached_input_tokens": 139392,
+      "uncached_input_tokens": 421,
+      "output_tokens": 3169,
+      "reasoning_output_tokens": 85,
+      "total_tokens": 142982
+    },
+    {
+      "sequence": 26,
+      "timestamp_utc": "2026-10-30T17:02:29.069Z",
+      "input_tokens": 143020,
+      "cached_input_tokens": 142848,
+      "uncached_input_tokens": 172,
+      "output_tokens": 292,
+      "reasoning_output_tokens": 25,
+      "total_tokens": 143312
+    },
+    {
+      "sequence": 27,
+      "timestamp_utc": "2026-10-30T17:03:15.692Z",
+      "input_tokens": 147601,
+      "cached_input_tokens": 143232,
+      "uncached_input_tokens": 4369,
+      "output_tokens": 239,
+      "reasoning_output_tokens": 14,
+      "total_tokens": 147840
+    },
+    {
+      "sequence": 28,
+      "timestamp_utc": "2026-10-30T17:03:58.622Z",
+      "input_tokens": 152133,
+      "cached_input_tokens": 147712,
+      "uncached_input_tokens": 4421,
+      "output_tokens": 261,
+      "reasoning_output_tokens": 16,
+      "total_tokens": 152394
+    },
+    {
+      "sequence": 29,
+      "timestamp_utc": "2026-10-30T17:04:46.187Z",
+      "input_tokens": 156683,
+      "cached_input_tokens": 152320,
+      "uncached_input_tokens": 4363,
+      "output_tokens": 297,
+      "reasoning_output_tokens": 55,
+      "total_tokens": 156980
+    },
+    {
+      "sequence": 30,
+      "timestamp_utc": "2026-10-30T17:05:16.418Z",
+      "input_tokens": 161272,
+      "cached_input_tokens": 156800,
+      "uncached_input_tokens": 4472,
+      "output_tokens": 244,
+      "reasoning_output_tokens": 14,
+      "total_tokens": 161516
+    },
+    {
+      "sequence": 31,
+      "timestamp_utc": "2026-10-30T17:05:37.213Z",
+      "input_tokens": 163735,
+      "cached_input_tokens": 161408,
+      "uncached_input_tokens": 2327,
+      "output_tokens": 314,
+      "reasoning_output_tokens": 166,
+      "total_tokens": 164049
+    },
+    {
+      "sequence": 32,
+      "timestamp_utc": "2026-10-30T17:06:20.984Z",
+      "input_tokens": 166207,
+      "cached_input_tokens": 163840,
+      "uncached_input_tokens": 2367,
+      "output_tokens": 190,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 166397
+    },
+    {
+      "sequence": 33,
+      "timestamp_utc": "2026-10-30T17:07:13.876Z",
+      "input_tokens": 170694,
+      "cached_input_tokens": 166272,
+      "uncached_input_tokens": 4422,
+      "output_tokens": 303,
+      "reasoning_output_tokens": 57,
+      "total_tokens": 170997
+    },
+    {
+      "sequence": 34,
+      "timestamp_utc": "2026-10-30T17:08:52.097Z",
+      "input_tokens": 175291,
+      "cached_input_tokens": 170880,
+      "uncached_input_tokens": 4411,
+      "output_tokens": 257,
+      "reasoning_output_tokens": 14,
+      "total_tokens": 175548
+    },
+    {
+      "sequence": 35,
+      "timestamp_utc": "2026-10-30T17:10:02.558Z",
+      "input_tokens": 179841,
+      "cached_input_tokens": 175488,
+      "uncached_input_tokens": 4353,
+      "output_tokens": 365,
+      "reasoning_output_tokens": 110,
+      "total_tokens": 180206
+    },
+    {
+      "sequence": 36,
+      "timestamp_utc": "2026-10-30T17:10:59.135Z",
+      "input_tokens": 184503,
+      "cached_input_tokens": 180096,
+      "uncached_input_tokens": 4407,
+      "output_tokens": 346,
+      "reasoning_output_tokens": 87,
+      "total_tokens": 184849
+    },
+    {
+      "sequence": 37,
+      "timestamp_utc": "2026-10-30T17:11:57.135Z",
+      "input_tokens": 189142,
+      "cached_input_tokens": 184704,
+      "uncached_input_tokens": 4438,
+      "output_tokens": 255,
+      "reasoning_output_tokens": 7,
+      "total_tokens": 189397
+    },
+    {
+      "sequence": 38,
+      "timestamp_utc": "2026-10-30T17:13:02.967Z",
+      "input_tokens": 193694,
+      "cached_input_tokens": 189312,
+      "uncached_input_tokens": 4382,
+      "output_tokens": 259,
+      "reasoning_output_tokens": 34,
+      "total_tokens": 193953
+    },
+    {
+      "sequence": 39,
+      "timestamp_utc": "2026-10-30T17:14:05.585Z",
+      "input_tokens": 198243,
+      "cached_input_tokens": 193920,
+      "uncached_input_tokens": 4323,
+      "output_tokens": 338,
+      "reasoning_output_tokens": 69,
+      "total_tokens": 198581
+    },
+    {
+      "sequence": 40,
+      "timestamp_utc": "2026-10-30T17:14:32.06Z",
+      "input_tokens": 202872,
+      "cached_input_tokens": 198528,
+      "uncached_input_tokens": 4344,
+      "output_tokens": 326,
+      "reasoning_output_tokens": 194,
+      "total_tokens": 203198
+    },
+    {
+      "sequence": 41,
+      "timestamp_utc": "2026-10-30T17:15:45.678Z",
+      "input_tokens": 203407,
+      "cached_input_tokens": 203136,
+      "uncached_input_tokens": 271,
+      "output_tokens": 190,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 203597
+    },
+    {
+      "sequence": 42,
+      "timestamp_utc": "2026-10-30T17:16:43.45Z",
+      "input_tokens": 207886,
+      "cached_input_tokens": 203520,
+      "uncached_input_tokens": 4366,
+      "output_tokens": 271,
+      "reasoning_output_tokens": 26,
+      "total_tokens": 208157
+    },
+    {
+      "sequence": 43,
+      "timestamp_utc": "2026-10-30T17:17:40.808Z",
+      "input_tokens": 212445,
+      "cached_input_tokens": 208128,
+      "uncached_input_tokens": 4317,
+      "output_tokens": 236,
+      "reasoning_output_tokens": 12,
+      "total_tokens": 212681
+    },
+    {
+      "sequence": 44,
+      "timestamp_utc": "2026-10-30T17:18:41.901Z",
+      "input_tokens": 216971,
+      "cached_input_tokens": 212608,
+      "uncached_input_tokens": 4363,
+      "output_tokens": 265,
+      "reasoning_output_tokens": 15,
+      "total_tokens": 217236
+    },
+    {
+      "sequence": 45,
+      "timestamp_utc": "2026-10-30T17:19:44.801Z",
+      "input_tokens": 221521,
+      "cached_input_tokens": 217216,
+      "uncached_input_tokens": 4305,
+      "output_tokens": 252,
+      "reasoning_output_tokens": 14,
+      "total_tokens": 221773
+    },
+    {
+      "sequence": 46,
+      "timestamp_utc": "2026-10-30T17:20:23.577Z",
+      "input_tokens": 226064,
+      "cached_input_tokens": 221568,
+      "uncached_input_tokens": 4496,
+      "output_tokens": 237,
+      "reasoning_output_tokens": 14,
+      "total_tokens": 226301
+    },
+    {
+      "sequence": 47,
+      "timestamp_utc": "2026-10-30T17:20:49.022Z",
+      "input_tokens": 228435,
+      "cached_input_tokens": 226176,
+      "uncached_input_tokens": 2259,
+      "output_tokens": 136,
+      "reasoning_output_tokens": 49,
+      "total_tokens": 228571
+    },
+    {
+      "sequence": 48,
+      "timestamp_utc": "2026-10-30T17:21:13.147Z",
+      "input_tokens": 230778,
+      "cached_input_tokens": 228480,
+      "uncached_input_tokens": 2298,
+      "output_tokens": 148,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 230926
+    },
+    {
+      "sequence": 49,
+      "timestamp_utc": "2026-10-30T17:21:41.268Z",
+      "input_tokens": 234209,
+      "cached_input_tokens": 230784,
+      "uncached_input_tokens": 3425,
+      "output_tokens": 395,
+      "reasoning_output_tokens": 18,
+      "total_tokens": 234604
+    },
+    {
+      "sequence": 50,
+      "timestamp_utc": "2026-10-30T17:22:15.17Z",
+      "input_tokens": 240029,
+      "cached_input_tokens": 234368,
+      "uncached_input_tokens": 5661,
+      "output_tokens": 622,
+      "reasoning_output_tokens": 177,
+      "total_tokens": 240651
+    },
+    {
+      "sequence": 51,
+      "timestamp_utc": "2026-10-30T17:23:13.709Z",
+      "input_tokens": 240844,
+      "cached_input_tokens": 240512,
+      "uncached_input_tokens": 332,
+      "output_tokens": 190,
+      "reasoning_output_tokens": 0,
+      "total_tokens": 241034
+    },
+    {
+      "sequence": 52,
+      "timestamp_utc": "2026-10-30T17:24:14.303Z",
+      "input_tokens": 245332,
+      "cached_input_tokens": 240896,
+      "uncached_input_tokens": 4436,
+      "output_tokens": 241,
+      "reasoning_output_tokens": 10,
+      "total_tokens": 245573
+    },
+    {
+      "sequence": 53,
+      "timestamp_utc": "2026-10-30T17:25:00.421Z",
+      "input_tokens": 249866,
+      "cached_input_tokens": 245376,
+      "uncached_input_tokens": 4490,
+      "output_tokens": 249,
+      "reasoning_output_tokens": 25,
+      "total_tokens": 250115
+    },
+    {
+      "sequence": 54,
+      "timestamp_utc": "2026-10-30T17:25:50.951Z",
+      "input_tokens": 249866,
+      "cached_input_tokens": 245376,
+      "uncached_input_tokens": 4490,
+      "output_tokens": 249,
+      "reasoning_output_tokens": 25,
+      "total_tokens": 250115
+    },
+    {
+      "sequence": 55,
+      "timestamp_utc": "2026-10-30T17:26:20.736Z",
+      "input_tokens": 252919,
+      "cached_input_tokens": 252160,
+      "uncached_input_tokens": 759,
+      "output_tokens": 293,
+      "reasoning_output_tokens": 193,
+      "total_tokens": 253212
+    },
+    {
+      "sequence": 56,
+      "timestamp_utc": "2026-10-30T17:28:36.021Z",
+      "input_tokens": 254563,
+      "cached_input_tokens": 253056,
+      "uncached_input_tokens": 1507,
+      "output_tokens": 5316,
+      "reasoning_output_tokens": 267,
+      "total_tokens": 259879
+    },
+    {
+      "sequence": 57,
+      "timestamp_utc": "2026-10-30T17:29:31.327Z",
+      "input_tokens": 259969,
+      "cached_input_tokens": 259712,
+      "uncached_input_tokens": 257,
+      "output_tokens": 373,
+      "reasoning_output_tokens": 170,
+      "total_tokens": 260342
+    },
+    {
+      "sequence": 58,
+      "timestamp_utc": "2026-10-30T17:30:16.828Z",
+      "input_tokens": 266115,
+      "cached_input_tokens": 260224,
+      "uncached_input_tokens": 5891,
+      "output_tokens": 907,
+      "reasoning_output_tokens": 47,
+      "total_tokens": 267022
+    },
+    {
+      "sequence": 59,
+      "timestamp_utc": "2026-10-30T17:30:46.396Z",
+      "input_tokens": 266115,
+      "cached_input_tokens": 260224,
+      "uncached_input_tokens": 5891,
+      "output_tokens": 907,
+      "reasoning_output_tokens": 47,
+      "total_tokens": 267022
+    },
+    {
+      "sequence": 60,
+      "timestamp_utc": "2026-10-30T17:31:31.18Z",
+      "input_tokens": 268080,
+      "cached_input_tokens": 267776,
+      "uncached_input_tokens": 304,
+      "output_tokens": 550,
+      "reasoning_output_tokens": 273,
+      "total_tokens": 268630
+    },
+    {
+      "sequence": 61,
+      "timestamp_utc": "2026-10-30T17:32:52.05Z",
+      "input_tokens": 268846,
+      "cached_input_tokens": 268544,
+      "uncached_input_tokens": 302,
+      "output_tokens": 3156,
+      "reasoning_output_tokens": 516,
+      "total_tokens": 272002
+    },
+    {
+      "sequence": 62,
+      "timestamp_utc": "2026-10-30T17:33:30.045Z",
+      "input_tokens": 272129,
+      "cached_input_tokens": 271872,
+      "uncached_input_tokens": 257,
+      "output_tokens": 690,
+      "reasoning_output_tokens": 298,
+      "total_tokens": 272819
+    },
+    {
+      "sequence": 63,
+      "timestamp_utc": "2026-10-30T17:34:45.325Z",
+      "input_tokens": 272857,
+      "cached_input_tokens": 272768,
+      "uncached_input_tokens": 89,
+      "output_tokens": 1174,
+      "reasoning_output_tokens": 516,
+      "total_tokens": 274031
+    },
+    {
+      "sequence": 64,
+      "timestamp_utc": "2026-10-30T17:36:02.113Z",
+      "input_tokens": 274368,
+      "cached_input_tokens": 273920,
+      "uncached_input_tokens": 448,
+      "output_tokens": 2873,
+      "reasoning_output_tokens": 516,
+      "total_tokens": 277241
+    },
+    {
+      "sequence": 65,
+      "timestamp_utc": "2026-10-30T17:37:23.453Z",
+      "input_tokens": 277490,
+      "cached_input_tokens": 277120,
+      "uncached_input_tokens": 370,
+      "output_tokens": 2600,
+      "reasoning_output_tokens": 428,
+      "total_tokens": 280090
+    },
+    {
+      "sequence": 66,
+      "timestamp_utc": "2026-10-30T17:38:37.924Z",
+      "input_tokens": 280195,
+      "cached_input_tokens": 280064,
+      "uncached_input_tokens": 131,
+      "output_tokens": 1425,
+      "reasoning_output_tokens": 516,
+      "total_tokens": 281620
+    },
+    {
+      "sequence": 67,
+      "timestamp_utc": "2026-10-30T17:39:15.48Z",
+      "input_tokens": 281663,
+      "cached_input_tokens": 281472,
+      "uncached_input_tokens": 191,
+      "output_tokens": 329,
+      "reasoning_output_tokens": 227,
+      "total_tokens": 281992
+    },
+    {
+      "sequence": 68,
+      "timestamp_utc": "2026-10-30T17:39:50.136Z",
+      "input_tokens": 282059,
+      "cached_input_tokens": 281856,
+      "uncached_input_tokens": 203,
+      "output_tokens": 206,
+      "reasoning_output_tokens": 41,
+      "total_tokens": 282265
+    },
+    {
+      "sequence": 69,
+      "timestamp_utc": "2026-10-30T17:40:38.265Z",
+      "input_tokens": 284838,
+      "cached_input_tokens": 282112,
+      "uncached_input_tokens": 2726,
+      "output_tokens": 763,
+      "reasoning_output_tokens": 516,
+      "total_tokens": 285601
+    },
+    {
+      "sequence": 70,
+      "timestamp_utc": "2026-10-30T17:42:15.429Z",
+      "input_tokens": 288610,
+      "cached_input_tokens": 285440,
+      "uncached_input_tokens": 3170,
+      "output_tokens": 2715,
+      "reasoning_output_tokens": 1330,
+      "total_tokens": 291325
+    },
+    {
+      "sequence": 71,
+      "timestamp_utc": "2026-10-30T17:43:28.196Z",
+      "input_tokens": 291397,
+      "cached_input_tokens": 291200,
+      "uncached_input_tokens": 197,
+      "output_tokens": 1870,
+      "reasoning_output_tokens": 797,
+      "total_tokens": 293267
+    }
+  ]
+}

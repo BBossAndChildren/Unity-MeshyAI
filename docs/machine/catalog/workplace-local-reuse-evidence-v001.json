@@ -1,0 +1,4390 @@
+{
+  "schema_version": 3,
+  "snapshot_id": "workplace-local-reuse-evidence",
+  "version": "v001",
+  "scope": "기존 로컬 assets/scene-assemblies/inspection/placements 기록의 정적 근거 스냅샷. 원격 모델 등록·파일 업로드·이번 Blender/Unity 실행 검증을 뜻하지 않음. 기존 원장의 대체 사용 이력이 아님.",
+  "source_refs": [
+    {
+      "path": "docs/machine/catalog/assets.json",
+      "sha256": "1a6dcabf29d71b6de9e62fdd5bbed35c99fc9a73b8362e4a0d09140db27bbff9"
+    },
+    {
+      "path": "docs/machine/catalog/scene-assemblies.json",
+      "sha256": "b565751f11ad6c1e5c1272ed6f4e5d7126e6f09b88b03dbf6312392b110b8102"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "AST-001",
+      "version": "v001",
+      "name": "COM-01 둥근 모서리 바닥판 베타",
+      "source_path": "meshy/models/original/AST-001/v001/model.glb",
+      "blender_path": "meshy/models/blender/AST-001/v001/model.blend",
+      "runtime_path": "meshy/models/blender/AST-001/v001/exports/rounded-base.glb",
+      "preview_path": "meshy/models/original/AST-001/v001/previews/blender.png",
+      "unity_path": null,
+      "kind": "prop",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-001/v001/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-001/v001/processing/build_palette.py",
+        "meshy/models/blender/AST-001/v001/processing/process_blender.py"
+      ],
+      "status": "in_progress",
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ]
+    },
+    {
+      "asset_id": "AST-001",
+      "version": "v002",
+      "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+      "source_path": "meshy/models/original/AST-001/v002/source.blend",
+      "blender_path": "meshy/models/blender/AST-001/v002/model.blend",
+      "runtime_path": "meshy/models/blender/AST-001/v002/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-001/v002/previews/blender.png",
+      "unity_path": null,
+      "kind": "prop",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-001/v002/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-001/v002/processing/build_direct.py"
+      ],
+      "status": "in_progress",
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ],
+      "generation_method": "blender_direct"
+    },
+    {
+      "asset_id": "AST-002",
+      "version": "v001",
+      "name": "COM-02 바닥 표면 — Blender 직접 제작",
+      "source_path": "meshy/models/original/AST-002/v001/source.blend",
+      "blender_path": "meshy/models/blender/AST-002/v001/model.blend",
+      "runtime_path": "meshy/models/blender/AST-002/v001/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-002/v001/previews/blender.png",
+      "unity_path": null,
+      "kind": "prop",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-002/v001/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-001/v002/processing/build_direct.py"
+      ],
+      "status": "in_progress",
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ],
+      "generation_method": "blender_direct"
+    },
+    {
+      "asset_id": "AST-003",
+      "version": "v001",
+      "name": "COM-04 회전 사무의자 — blender_direct",
+      "source_path": "meshy/models/original/AST-003/v001/source.blend",
+      "blender_path": "meshy/models/blender/AST-003/v001/model.blend",
+      "runtime_path": "meshy/models/blender/AST-003/v001/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-003/v001/previews/front.png",
+      "unity_path": null,
+      "kind": "prop",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-003/v001/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-003/v001/processing/compare_chair.py"
+      ],
+      "status": "in_progress",
+      "generation_method": "blender_direct",
+      "generation_reason": "동일 사무의자 요구사항으로 직접 구조 제작과 Meshy 곡면 생성의 장단점을 비교한다.",
+      "production_record_path": "meshy/models/original/AST-003/v001/README.md",
+      "meshy_credits_used": 0,
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ]
+    },
+    {
+      "asset_id": "AST-003",
+      "version": "v002",
+      "name": "COM-04 회전 사무의자 — meshy",
+      "source_path": "meshy/models/original/AST-003/v002/model.glb",
+      "blender_path": "meshy/models/blender/AST-003/v002/model.blend",
+      "runtime_path": "meshy/models/blender/AST-003/v002/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-003/v002/previews/front.png",
+      "unity_path": null,
+      "kind": "prop",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-003/v002/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-003/v001/processing/compare_chair.py"
+      ],
+      "status": "in_progress",
+      "generation_method": "meshy",
+      "generation_reason": "동일 사무의자 요구사항으로 직접 구조 제작과 Meshy 곡면 생성의 장단점을 비교한다.",
+      "production_record_path": "meshy/models/original/AST-003/v002/README.md",
+      "meshy_credits_used": 5,
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ]
+    },
+    {
+      "asset_id": "AST-004",
+      "version": "v001",
+      "name": "업무 책상",
+      "source_path": "meshy/models/original/AST-004/v001/source.blend",
+      "blender_path": "meshy/models/blender/AST-004/v001/model.blend",
+      "runtime_path": "meshy/models/blender/AST-004/v001/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-004/v001/previews/front.png",
+      "unity_path": null,
+      "kind": "prop",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-004/v001/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-020/v001/processing/build_office.py"
+      ],
+      "status": "in_progress",
+      "generation_method": "blender_direct",
+      "generation_reason": "Repeatable symmetric office objects and exact layout; reuse existing palette and models.",
+      "production_record_path": "meshy/models/original/AST-004/v001/README.md",
+      "meshy_credits_used": 0,
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ]
+    },
+    {
+      "asset_id": "AST-005",
+      "version": "v001",
+      "name": "모니터",
+      "source_path": "meshy/models/original/AST-005/v001/source.blend",
+      "blender_path": "meshy/models/blender/AST-005/v001/model.blend",
+      "runtime_path": "meshy/models/blender/AST-005/v001/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-005/v001/previews/front.png",
+      "unity_path": null,
+      "kind": "prop",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-005/v001/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-020/v001/processing/build_office.py"
+      ],
+      "status": "in_progress",
+      "generation_method": "blender_direct",
+      "generation_reason": "Repeatable symmetric office objects and exact layout; reuse existing palette and models.",
+      "production_record_path": "meshy/models/original/AST-005/v001/README.md",
+      "meshy_credits_used": 0,
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ]
+    },
+    {
+      "asset_id": "AST-006",
+      "version": "v001",
+      "name": "키보드",
+      "source_path": "meshy/models/original/AST-006/v001/source.blend",
+      "blender_path": "meshy/models/blender/AST-006/v001/model.blend",
+      "runtime_path": "meshy/models/blender/AST-006/v001/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-006/v001/previews/front.png",
+      "unity_path": null,
+      "kind": "prop",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-006/v001/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-020/v001/processing/build_office.py"
+      ],
+      "status": "in_progress",
+      "generation_method": "blender_direct",
+      "generation_reason": "Repeatable symmetric office objects and exact layout; reuse existing palette and models.",
+      "production_record_path": "meshy/models/original/AST-006/v001/README.md",
+      "meshy_credits_used": 0,
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ]
+    },
+    {
+      "asset_id": "AST-007",
+      "version": "v001",
+      "name": "마우스",
+      "source_path": "meshy/models/original/AST-007/v001/source.blend",
+      "blender_path": "meshy/models/blender/AST-007/v001/model.blend",
+      "runtime_path": "meshy/models/blender/AST-007/v001/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-007/v001/previews/front.png",
+      "unity_path": null,
+      "kind": "prop",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-007/v001/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-020/v001/processing/build_office.py"
+      ],
+      "status": "in_progress",
+      "generation_method": "blender_direct",
+      "generation_reason": "Repeatable symmetric office objects and exact layout; reuse existing palette and models.",
+      "production_record_path": "meshy/models/original/AST-007/v001/README.md",
+      "meshy_credits_used": 0,
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ]
+    },
+    {
+      "asset_id": "AST-008",
+      "version": "v001",
+      "name": "책상 아래 서랍장",
+      "source_path": "meshy/models/original/AST-008/v001/source.blend",
+      "blender_path": "meshy/models/blender/AST-008/v001/model.blend",
+      "runtime_path": "meshy/models/blender/AST-008/v001/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-008/v001/previews/front.png",
+      "unity_path": null,
+      "kind": "prop",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-008/v001/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-020/v001/processing/build_office.py"
+      ],
+      "status": "in_progress",
+      "generation_method": "blender_direct",
+      "generation_reason": "Repeatable symmetric office objects and exact layout; reuse existing palette and models.",
+      "production_record_path": "meshy/models/original/AST-008/v001/README.md",
+      "meshy_credits_used": 0,
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ]
+    },
+    {
+      "asset_id": "AST-009",
+      "version": "v001",
+      "name": "복합기",
+      "source_path": "meshy/models/original/AST-009/v001/source.blend",
+      "blender_path": "meshy/models/blender/AST-009/v001/model.blend",
+      "runtime_path": "meshy/models/blender/AST-009/v001/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-009/v001/previews/front.png",
+      "unity_path": null,
+      "kind": "prop",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-009/v001/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-020/v001/processing/build_office.py"
+      ],
+      "status": "in_progress",
+      "generation_method": "blender_direct",
+      "generation_reason": "Repeatable symmetric office objects and exact layout; reuse existing palette and models.",
+      "production_record_path": "meshy/models/original/AST-009/v001/README.md",
+      "meshy_credits_used": 0,
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ]
+    },
+    {
+      "asset_id": "AST-010",
+      "version": "v001",
+      "name": "화분",
+      "source_path": "meshy/models/original/AST-010/v001/source.blend",
+      "blender_path": "meshy/models/blender/AST-010/v001/model.blend",
+      "runtime_path": "meshy/models/blender/AST-010/v001/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-010/v001/previews/front.png",
+      "unity_path": null,
+      "kind": "prop",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-010/v001/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-020/v001/processing/build_office.py"
+      ],
+      "status": "in_progress",
+      "generation_method": "blender_direct",
+      "generation_reason": "Repeatable symmetric office objects and exact layout; reuse existing palette and models.",
+      "production_record_path": "meshy/models/original/AST-010/v001/README.md",
+      "meshy_credits_used": 0,
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ]
+    },
+    {
+      "asset_id": "AST-011",
+      "version": "v001",
+      "name": "책 묶음",
+      "source_path": "meshy/models/original/AST-011/v001/source.blend",
+      "blender_path": "meshy/models/blender/AST-011/v001/model.blend",
+      "runtime_path": "meshy/models/blender/AST-011/v001/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-011/v001/previews/front.png",
+      "unity_path": null,
+      "kind": "prop",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-011/v001/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-020/v001/processing/build_office.py"
+      ],
+      "status": "in_progress",
+      "generation_method": "blender_direct",
+      "generation_reason": "Repeatable symmetric office objects and exact layout; reuse existing palette and models.",
+      "production_record_path": "meshy/models/original/AST-011/v001/README.md",
+      "meshy_credits_used": 0,
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ]
+    },
+    {
+      "asset_id": "AST-012",
+      "version": "v001",
+      "name": "펜꽂이",
+      "source_path": "meshy/models/original/AST-012/v001/source.blend",
+      "blender_path": "meshy/models/blender/AST-012/v001/model.blend",
+      "runtime_path": "meshy/models/blender/AST-012/v001/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-012/v001/previews/front.png",
+      "unity_path": null,
+      "kind": "prop",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-012/v001/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-020/v001/processing/build_office.py"
+      ],
+      "status": "in_progress",
+      "generation_method": "blender_direct",
+      "generation_reason": "Repeatable symmetric office objects and exact layout; reuse existing palette and models.",
+      "production_record_path": "meshy/models/original/AST-012/v001/README.md",
+      "meshy_credits_used": 0,
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ]
+    },
+    {
+      "asset_id": "AST-013",
+      "version": "v001",
+      "name": "낮은 책상 스크린",
+      "source_path": "meshy/models/original/AST-013/v001/source.blend",
+      "blender_path": "meshy/models/blender/AST-013/v001/model.blend",
+      "runtime_path": "meshy/models/blender/AST-013/v001/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-013/v001/previews/front.png",
+      "unity_path": null,
+      "kind": "prop",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-013/v001/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-020/v001/processing/build_office.py"
+      ],
+      "status": "in_progress",
+      "generation_method": "blender_direct",
+      "generation_reason": "Repeatable symmetric office objects and exact layout; reuse existing palette and models.",
+      "production_record_path": "meshy/models/original/AST-013/v001/README.md",
+      "meshy_credits_used": 0,
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ]
+    },
+    {
+      "asset_id": "AST-014",
+      "version": "v001",
+      "name": "관절 스탠드",
+      "source_path": "meshy/models/original/AST-014/v001/source.blend",
+      "blender_path": "meshy/models/blender/AST-014/v001/model.blend",
+      "runtime_path": "meshy/models/blender/AST-014/v001/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-014/v001/previews/front.png",
+      "unity_path": null,
+      "kind": "prop",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-014/v001/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-020/v001/processing/build_office.py"
+      ],
+      "status": "in_progress",
+      "generation_method": "blender_direct",
+      "generation_reason": "Repeatable symmetric office objects and exact layout; reuse existing palette and models.",
+      "production_record_path": "meshy/models/original/AST-014/v001/README.md",
+      "meshy_credits_used": 0,
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ]
+    },
+    {
+      "asset_id": "AST-015",
+      "version": "v001",
+      "name": "뒤쪽 수납장",
+      "source_path": "meshy/models/original/AST-015/v001/source.blend",
+      "blender_path": "meshy/models/blender/AST-015/v001/model.blend",
+      "runtime_path": "meshy/models/blender/AST-015/v001/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-015/v001/previews/front.png",
+      "unity_path": null,
+      "kind": "prop",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-015/v001/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-020/v001/processing/build_office.py"
+      ],
+      "status": "in_progress",
+      "generation_method": "blender_direct",
+      "generation_reason": "Repeatable symmetric office objects and exact layout; reuse existing palette and models.",
+      "production_record_path": "meshy/models/original/AST-015/v001/README.md",
+      "meshy_credits_used": 0,
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ]
+    },
+    {
+      "asset_id": "AST-016",
+      "version": "v001",
+      "name": "옷걸이",
+      "source_path": "meshy/models/original/AST-016/v001/source.blend",
+      "blender_path": "meshy/models/blender/AST-016/v001/model.blend",
+      "runtime_path": "meshy/models/blender/AST-016/v001/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-016/v001/previews/front.png",
+      "unity_path": null,
+      "kind": "prop",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-016/v001/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-020/v001/processing/build_office.py"
+      ],
+      "status": "in_progress",
+      "generation_method": "blender_direct",
+      "generation_reason": "Repeatable symmetric office objects and exact layout; reuse existing palette and models.",
+      "production_record_path": "meshy/models/original/AST-016/v001/README.md",
+      "meshy_credits_used": 0,
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ]
+    },
+    {
+      "asset_id": "AST-017",
+      "version": "v001",
+      "name": "업무용 가방",
+      "source_path": "meshy/models/original/AST-017/v001/source.blend",
+      "blender_path": "meshy/models/blender/AST-017/v001/model.blend",
+      "runtime_path": "meshy/models/blender/AST-017/v001/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-017/v001/previews/front.png",
+      "unity_path": null,
+      "kind": "prop",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-017/v001/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-020/v001/processing/build_office.py"
+      ],
+      "status": "in_progress",
+      "generation_method": "blender_direct",
+      "generation_reason": "Repeatable symmetric office objects and exact layout; reuse existing palette and models.",
+      "production_record_path": "meshy/models/original/AST-017/v001/README.md",
+      "meshy_credits_used": 0,
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ]
+    },
+    {
+      "asset_id": "AST-020",
+      "version": "v001",
+      "name": "PAN-001 일반 사무실 조립",
+      "source_path": "meshy/models/original/AST-020/v001/source.blend",
+      "blender_path": "meshy/models/blender/AST-020/v001/model.blend",
+      "runtime_path": "meshy/models/blender/AST-020/v001/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-020/v001/previews/front.png",
+      "unity_path": null,
+      "kind": "diorama",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-020/v001/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-020/v001/processing/build_office.py"
+      ],
+      "status": "in_progress",
+      "generation_method": "blender_direct",
+      "generation_reason": "Repeatable symmetric office objects and exact layout; reuse existing palette and models.",
+      "production_record_path": "meshy/models/original/AST-020/v001/README.md",
+      "meshy_credits_used": 0,
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ]
+    },
+    {
+      "asset_id": "AST-020",
+      "version": "v002",
+      "name": "PAN-001 일반 사무실 — 위치·회전 정렬",
+      "source_path": "meshy/models/original/AST-020/v002/source.blend",
+      "blender_path": "meshy/models/blender/AST-020/v002/model.blend",
+      "runtime_path": "meshy/models/blender/AST-020/v002/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-020/v002/previews/front.png",
+      "unity_path": null,
+      "kind": "diorama",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-020/v002/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-020/v002/processing/align_office.py",
+        "meshy/models/blender/AST-020/v001/processing/build_office.py"
+      ],
+      "status": "in_progress",
+      "generation_method": "blender_direct",
+      "generation_reason": "Reuse all props; align positions, functional facing and editable instance transforms.",
+      "production_record_path": "meshy/models/original/AST-020/v002/README.md",
+      "meshy_credits_used": 0,
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ]
+    },
+    {
+      "asset_id": "AST-020",
+      "version": "v003",
+      "name": "PAN-001 일반 사무실 — 위치·회전 정렬",
+      "source_path": "meshy/models/original/AST-020/v003/source.blend",
+      "blender_path": "meshy/models/blender/AST-020/v003/model.blend",
+      "runtime_path": "meshy/models/blender/AST-020/v003/exports/model.glb",
+      "preview_path": "meshy/models/original/AST-020/v003/previews/front.png",
+      "unity_path": null,
+      "kind": "diorama",
+      "palette_version": "v001",
+      "accent_reason": null,
+      "unity_palette_path": null,
+      "inspection_path": "meshy/models/blender/AST-020/v003/inspection.json",
+      "processing_paths": [
+        "meshy/models/blender/AST-020/v003/processing/align_office.py",
+        "meshy/models/blender/AST-020/v001/processing/build_office.py"
+      ],
+      "status": "in_progress",
+      "generation_method": "blender_direct",
+      "generation_reason": "Reuse all props; align positions, functional facing and editable instance transforms.",
+      "production_record_path": "meshy/models/original/AST-020/v003/README.md",
+      "meshy_credits_used": 0,
+      "source_images": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        }
+      ]
+    }
+  ],
+  "assemblies": [
+    {
+      "assembly_id": "pan-001-office",
+      "revision": 1,
+      "recorded_at": "2026-10-31T01:45:00+09:00",
+      "environment": "blender_and_independent_glb",
+      "assembly_asset_ref": {
+        "asset_id": "AST-020",
+        "version": "v001"
+      },
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-001",
+        "version": "v001"
+      },
+      "placements_path": "meshy/models/blender/AST-020/v001/placements.json",
+      "inspection_path": "meshy/models/blender/AST-020/v001/inspection.json",
+      "component_counts": [
+        {
+          "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+          "asset_ref": {
+            "asset_id": "AST-001",
+            "version": "v002"
+          },
+          "triangles_per_instance": 220,
+          "instance_count": 1,
+          "total_triangles": 220
+        },
+        {
+          "name": "COM-02 바닥 표면 — Blender 직접 제작",
+          "asset_ref": {
+            "asset_id": "AST-002",
+            "version": "v001"
+          },
+          "triangles_per_instance": 108,
+          "instance_count": 1,
+          "total_triangles": 108
+        },
+        {
+          "name": "COM-04 회전 사무의자 — blender_direct",
+          "asset_ref": {
+            "asset_id": "AST-003",
+            "version": "v001"
+          },
+          "triangles_per_instance": 792,
+          "instance_count": 2,
+          "total_triangles": 1584
+        },
+        {
+          "name": "업무 책상",
+          "asset_ref": {
+            "asset_id": "AST-004",
+            "version": "v001"
+          },
+          "triangles_per_instance": 60,
+          "instance_count": 2,
+          "total_triangles": 120
+        },
+        {
+          "name": "모니터",
+          "asset_ref": {
+            "asset_id": "AST-005",
+            "version": "v001"
+          },
+          "triangles_per_instance": 48,
+          "instance_count": 2,
+          "total_triangles": 96
+        },
+        {
+          "name": "키보드",
+          "asset_ref": {
+            "asset_id": "AST-006",
+            "version": "v001"
+          },
+          "triangles_per_instance": 12,
+          "instance_count": 2,
+          "total_triangles": 24
+        },
+        {
+          "name": "마우스",
+          "asset_ref": {
+            "asset_id": "AST-007",
+            "version": "v001"
+          },
+          "triangles_per_instance": 12,
+          "instance_count": 2,
+          "total_triangles": 24
+        },
+        {
+          "name": "책상 아래 서랍장",
+          "asset_ref": {
+            "asset_id": "AST-008",
+            "version": "v001"
+          },
+          "triangles_per_instance": 84,
+          "instance_count": 2,
+          "total_triangles": 168
+        },
+        {
+          "name": "복합기",
+          "asset_ref": {
+            "asset_id": "AST-009",
+            "version": "v001"
+          },
+          "triangles_per_instance": 144,
+          "instance_count": 1,
+          "total_triangles": 144
+        },
+        {
+          "name": "화분",
+          "asset_ref": {
+            "asset_id": "AST-010",
+            "version": "v001"
+          },
+          "triangles_per_instance": 308,
+          "instance_count": 3,
+          "total_triangles": 924
+        },
+        {
+          "name": "책 묶음",
+          "asset_ref": {
+            "asset_id": "AST-011",
+            "version": "v001"
+          },
+          "triangles_per_instance": 72,
+          "instance_count": 3,
+          "total_triangles": 216
+        },
+        {
+          "name": "펜꽂이",
+          "asset_ref": {
+            "asset_id": "AST-012",
+            "version": "v001"
+          },
+          "triangles_per_instance": 76,
+          "instance_count": 2,
+          "total_triangles": 152
+        },
+        {
+          "name": "낮은 책상 스크린",
+          "asset_ref": {
+            "asset_id": "AST-013",
+            "version": "v001"
+          },
+          "triangles_per_instance": 12,
+          "instance_count": 2,
+          "total_triangles": 24
+        },
+        {
+          "name": "관절 스탠드",
+          "asset_ref": {
+            "asset_id": "AST-014",
+            "version": "v001"
+          },
+          "triangles_per_instance": 96,
+          "instance_count": 2,
+          "total_triangles": 192
+        },
+        {
+          "name": "뒤쪽 수납장",
+          "asset_ref": {
+            "asset_id": "AST-015",
+            "version": "v001"
+          },
+          "triangles_per_instance": 60,
+          "instance_count": 1,
+          "total_triangles": 60
+        },
+        {
+          "name": "옷걸이",
+          "asset_ref": {
+            "asset_id": "AST-016",
+            "version": "v001"
+          },
+          "triangles_per_instance": 168,
+          "instance_count": 1,
+          "total_triangles": 168
+        },
+        {
+          "name": "업무용 가방",
+          "asset_ref": {
+            "asset_id": "AST-017",
+            "version": "v001"
+          },
+          "triangles_per_instance": 84,
+          "instance_count": 1,
+          "total_triangles": 84
+        }
+      ],
+      "aggregation_rule": "Components counted once including all instances; assembly parent excluded from sum",
+      "unity_status": "unverified_project_absent",
+      "color_variants_materialized": []
+    },
+    {
+      "assembly_id": "pan-001-office",
+      "revision": 2,
+      "recorded_at": "2026-10-31T01:50:58.794357+09:00",
+      "environment": "blender_and_independent_glb",
+      "assembly_asset_ref": {
+        "asset_id": "AST-020",
+        "version": "v003"
+      },
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-001",
+        "version": "v001"
+      },
+      "placements_path": "meshy/models/blender/AST-020/v003/placements.json",
+      "inspection_path": "meshy/models/blender/AST-020/v003/inspection.json",
+      "component_counts": [
+        {
+          "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+          "asset_ref": {
+            "asset_id": "AST-001",
+            "version": "v002"
+          },
+          "triangles_per_instance": 220,
+          "instance_count": 1,
+          "total_triangles": 220
+        },
+        {
+          "name": "COM-02 바닥 표면 — Blender 직접 제작",
+          "asset_ref": {
+            "asset_id": "AST-002",
+            "version": "v001"
+          },
+          "triangles_per_instance": 108,
+          "instance_count": 1,
+          "total_triangles": 108
+        },
+        {
+          "name": "COM-04 회전 사무의자 — blender_direct",
+          "asset_ref": {
+            "asset_id": "AST-003",
+            "version": "v001"
+          },
+          "triangles_per_instance": 792,
+          "instance_count": 2,
+          "total_triangles": 1584
+        },
+        {
+          "name": "업무 책상",
+          "asset_ref": {
+            "asset_id": "AST-004",
+            "version": "v001"
+          },
+          "triangles_per_instance": 60,
+          "instance_count": 2,
+          "total_triangles": 120
+        },
+        {
+          "name": "모니터",
+          "asset_ref": {
+            "asset_id": "AST-005",
+            "version": "v001"
+          },
+          "triangles_per_instance": 48,
+          "instance_count": 2,
+          "total_triangles": 96
+        },
+        {
+          "name": "키보드",
+          "asset_ref": {
+            "asset_id": "AST-006",
+            "version": "v001"
+          },
+          "triangles_per_instance": 12,
+          "instance_count": 2,
+          "total_triangles": 24
+        },
+        {
+          "name": "마우스",
+          "asset_ref": {
+            "asset_id": "AST-007",
+            "version": "v001"
+          },
+          "triangles_per_instance": 12,
+          "instance_count": 2,
+          "total_triangles": 24
+        },
+        {
+          "name": "책상 아래 서랍장",
+          "asset_ref": {
+            "asset_id": "AST-008",
+            "version": "v001"
+          },
+          "triangles_per_instance": 84,
+          "instance_count": 2,
+          "total_triangles": 168
+        },
+        {
+          "name": "복합기",
+          "asset_ref": {
+            "asset_id": "AST-009",
+            "version": "v001"
+          },
+          "triangles_per_instance": 144,
+          "instance_count": 1,
+          "total_triangles": 144
+        },
+        {
+          "name": "화분",
+          "asset_ref": {
+            "asset_id": "AST-010",
+            "version": "v001"
+          },
+          "triangles_per_instance": 308,
+          "instance_count": 3,
+          "total_triangles": 924
+        },
+        {
+          "name": "책 묶음",
+          "asset_ref": {
+            "asset_id": "AST-011",
+            "version": "v001"
+          },
+          "triangles_per_instance": 72,
+          "instance_count": 3,
+          "total_triangles": 216
+        },
+        {
+          "name": "펜꽂이",
+          "asset_ref": {
+            "asset_id": "AST-012",
+            "version": "v001"
+          },
+          "triangles_per_instance": 76,
+          "instance_count": 2,
+          "total_triangles": 152
+        },
+        {
+          "name": "낮은 책상 스크린",
+          "asset_ref": {
+            "asset_id": "AST-013",
+            "version": "v001"
+          },
+          "triangles_per_instance": 12,
+          "instance_count": 2,
+          "total_triangles": 24
+        },
+        {
+          "name": "관절 스탠드",
+          "asset_ref": {
+            "asset_id": "AST-014",
+            "version": "v001"
+          },
+          "triangles_per_instance": 96,
+          "instance_count": 2,
+          "total_triangles": 192
+        },
+        {
+          "name": "뒤쪽 수납장",
+          "asset_ref": {
+            "asset_id": "AST-015",
+            "version": "v001"
+          },
+          "triangles_per_instance": 60,
+          "instance_count": 1,
+          "total_triangles": 60
+        },
+        {
+          "name": "옷걸이",
+          "asset_ref": {
+            "asset_id": "AST-016",
+            "version": "v001"
+          },
+          "triangles_per_instance": 168,
+          "instance_count": 1,
+          "total_triangles": 168
+        },
+        {
+          "name": "업무용 가방",
+          "asset_ref": {
+            "asset_id": "AST-017",
+            "version": "v001"
+          },
+          "triangles_per_instance": 84,
+          "instance_count": 1,
+          "total_triangles": 84
+        }
+      ],
+      "aggregation_rule": "Components counted once including all instances; assembly parent excluded from sum",
+      "unity_status": "unverified_project_absent",
+      "color_variants_materialized": [],
+      "change_reason": "Align desks, chair facing, peripheral spacing and support heights; preserve editable instance transforms."
+    }
+  ],
+  "inspections": [
+    {
+      "asset_ref": {
+        "version": "v001",
+        "asset_id": "AST-001"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-001/v001/inspection.json",
+      "sha256": "89042d4079f2cd87d492568e772020150c6a93cc631d8f367e1d51d95a5880a2",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-001",
+        "version": "v001",
+        "kind": "prop",
+        "target_web_environment": "Local WebGL browser preview (not Unity WebGL)",
+        "props": [
+          {
+            "name": "COM-01 Rounded Base",
+            "triangles_per_instance": 120,
+            "instance_count": 1,
+            "total_triangles": 120
+          }
+        ],
+        "scene_triangles": 120,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3295580,
+        "checks": {
+          "prop_budget": {
+            "status": "pass",
+            "evidence": "Reimported GLB: 120 triangles",
+            "reason": null
+          },
+          "palette_material": {
+            "status": "pass",
+            "evidence": "Reimported material and image nodes counted",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "Reimported Blender UV centers match color1 row13 col0",
+            "reason": null
+          },
+          "original_palette_pixels": {
+            "status": "pass",
+            "evidence": "build_palette.py compared decoded original pixels",
+            "reason": null
+          },
+          "closed_mesh": {
+            "status": "pass",
+            "evidence": "Reimported geometric connectivity checked after welding coincident export normal splits at 1e-6 m",
+            "reason": null
+          },
+          "web_display": {
+            "status": "pass",
+            "evidence": "2026-10-31 Codex IAB localhost: actual GLB loaded, 120 triangles shown; full and reduced view and wireframe inspected. Screenshot: meshy/models/original/AST-001/v001/previews/web.jpg",
+            "reason": null
+          },
+          "diorama_budget": {
+            "status": "not_applicable",
+            "evidence": null,
+            "reason": "Single prop beta"
+          }
+        },
+        "remaining_issues": [
+          "Palette pixel-preserving layout makes GLB 3295580 bytes; compact palette optimization pending",
+          "User silhouette review pending",
+          "Unity integration and Unity WebGL build not performed"
+        ],
+        "source_triangles": 440,
+        "mesh_correction": "Preserved Meshy source; radial deformation to exponent-8 rounded square, surface flattening, convex hull repair, planar dissolve and triangulation",
+        "palette_selection": {
+          "texture_id": "color1",
+          "row": 13,
+          "column": 0,
+          "source_rect_px": [
+            0,
+            1019,
+            78,
+            78
+          ],
+          "source_sample_px": [
+            39,
+            1058
+          ],
+          "target_rect_px": [
+            0,
+            1019,
+            78,
+            78
+          ],
+          "uv_center": [
+            0.015749601275917065,
+            0.5779505582137161
+          ],
+          "rgb": [
+            243,
+            231,
+            208
+          ]
+        }
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v002",
+        "asset_id": "AST-001"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-001/v002/inspection.json",
+      "sha256": "ce636934d94779baab4758deede86222871ff2ce85af0e8e592e340e8200f411",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-001",
+        "version": "v002",
+        "kind": "prop",
+        "target_web_environment": "Local Three.js browser; not Unity WebGL",
+        "props": [
+          {
+            "name": "COM-01 Rounded Base Direct",
+            "triangles_per_instance": 220,
+            "instance_count": 1,
+            "total_triangles": 220
+          }
+        ],
+        "scene_triangles": 220,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3300688,
+        "checks": {
+          "prop_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport",
+            "reason": null
+          },
+          "closed_mesh": {
+            "status": "pass",
+            "evidence": "Geometric edge manifold check after normal-split weld",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "Reimported UVs match source cell center",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Reimported material and texture nodes",
+            "reason": null
+          },
+          "web_display": {
+            "status": "pass",
+            "evidence": "2026-10-31 local browser: direct 220 triangles and combined 328 triangles, loaded and visually inspected",
+            "reason": null
+          },
+          "diorama_budget": {
+            "status": "not_applicable",
+            "evidence": null,
+            "reason": "Individual prop"
+          }
+        },
+        "remaining_issues": [
+          "Unity not tested",
+          "Full source palette texture remains large"
+        ],
+        "generation_method": "blender_direct",
+        "meshy_task_id": null,
+        "consumed_credits": 0,
+        "processing_seconds_before_render": 0.7,
+        "dimensions_m": [
+          2,
+          2,
+          0.16
+        ],
+        "palette_selection": {
+          "texture_id": "color1",
+          "row": 13,
+          "column": 0,
+          "source_rect_px": [
+            0,
+            1019,
+            78,
+            78
+          ],
+          "source_sample_px": [
+            39,
+            1058
+          ],
+          "target_rect_px": [
+            0,
+            1019,
+            78,
+            78
+          ],
+          "uv_center": [
+            0.015749601275917065,
+            0.5779505582137161
+          ],
+          "rgb": [
+            243,
+            231,
+            208
+          ]
+        }
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v001",
+        "asset_id": "AST-002"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-002/v001/inspection.json",
+      "sha256": "c9572db9575a3be25e3246d8dd94e72aa6a3656e194428889e56d262213e7fbf",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-002",
+        "version": "v001",
+        "kind": "prop",
+        "target_web_environment": "Local Three.js browser; not Unity WebGL",
+        "props": [
+          {
+            "name": "COM-02 Floor Surface",
+            "triangles_per_instance": 108,
+            "instance_count": 1,
+            "total_triangles": 108
+          }
+        ],
+        "scene_triangles": 108,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3292904,
+        "checks": {
+          "prop_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport",
+            "reason": null
+          },
+          "closed_mesh": {
+            "status": "pass",
+            "evidence": "Geometric edge manifold check after normal-split weld",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "Reimported UVs match source cell center",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Reimported material and texture nodes",
+            "reason": null
+          },
+          "web_display": {
+            "status": "pass",
+            "evidence": "2026-10-31 local browser: direct 220 triangles and combined 328 triangles, loaded and visually inspected",
+            "reason": null
+          },
+          "diorama_budget": {
+            "status": "not_applicable",
+            "evidence": null,
+            "reason": "Individual prop"
+          }
+        },
+        "remaining_issues": [
+          "Unity not tested",
+          "Full source palette texture remains large"
+        ],
+        "generation_method": "blender_direct",
+        "meshy_task_id": null,
+        "consumed_credits": 0,
+        "processing_seconds_before_render": 0.422,
+        "dimensions_m": [
+          1.92,
+          1.92,
+          0.008
+        ],
+        "palette_selection": {
+          "texture_id": "color1",
+          "row": 3,
+          "column": 5,
+          "source_rect_px": [
+            392,
+            235,
+            78,
+            79
+          ],
+          "source_sample_px": [
+            431,
+            274
+          ],
+          "target_rect_px": [
+            392,
+            235,
+            78,
+            79
+          ],
+          "uv_center": [
+            0.1720494417862839,
+            0.8905502392344498
+          ],
+          "rgb": [
+            254,
+            181,
+            128
+          ]
+        }
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v001",
+        "asset_id": "AST-003"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-003/v001/inspection.json",
+      "sha256": "aefc0f8cb9188e08cf6b343cb843be8deb01246afb366b50accd435110f71cd8",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-003",
+        "version": "v001",
+        "kind": "prop",
+        "generation_method": "blender_direct",
+        "target_web_environment": "Local Three.js browser, not Unity WebGL",
+        "props": [
+          {
+            "name": "COM-04 swivel office chair",
+            "triangles_per_instance": 792,
+            "instance_count": 1,
+            "total_triangles": 792
+          }
+        ],
+        "scene_triangles": 792,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3343932,
+        "checks": {
+          "prop_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "All reimported UVs reference approved color1 cells",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Final GLB reimport",
+            "reason": null
+          },
+          "geometric_edges": {
+            "status": "pass",
+            "evidence": "0 boundary edges; 0 nonmanifold edges after coordinate weld",
+            "reason": null
+          },
+          "web_display": {
+            "status": "pass",
+            "evidence": "2026-10-31 local browser loaded both models; front, rear and reduced view inspected. Screenshot: meshy/models/original/AST-003/v001/previews/web-comparison.jpg",
+            "reason": null
+          },
+          "diorama_budget": {
+            "status": "not_applicable",
+            "evidence": null,
+            "reason": "One prop"
+          }
+        },
+        "remaining_issues": [
+          "Unity and physical device performance unverified",
+          "Full-resolution shared palette dominates transfer size",
+          "User design approval pending"
+        ],
+        "part_counts": {
+          "Seat": 108,
+          "Backrest": 108,
+          "BackSupport": 12,
+          "ArmPad": 44,
+          "ArmSupport": 12,
+          "ArmPad.001": 44,
+          "ArmSupport.001": 12,
+          "LiftColumn": 36,
+          "ColumnSleeve": 28,
+          "SeatMechanism": 28,
+          "Spoke_0": 12,
+          "CasterStem_0": 20,
+          "Caster_0_-1": 20,
+          "Caster_0_1": 20,
+          "Spoke_1": 12,
+          "CasterStem_1": 20,
+          "Caster_1_-1": 20,
+          "Caster_1_1": 20,
+          "Spoke_2": 12,
+          "CasterStem_2": 20,
+          "Caster_2_-1": 20,
+          "Caster_2_1": 20,
+          "Spoke_3": 12,
+          "CasterStem_3": 20,
+          "Caster_3_-1": 20,
+          "Caster_3_1": 20,
+          "Spoke_4": 12,
+          "CasterStem_4": 20,
+          "Caster_4_-1": 20,
+          "Caster_4_1": 20
+        },
+        "source_triangles": null,
+        "palette_cells": {
+          "cushion": {
+            "texture_id": "color1",
+            "row": 3,
+            "column": 7,
+            "source_rect_px": [
+              549,
+              235,
+              78,
+              79
+            ],
+            "source_sample_px": [
+              588,
+              274
+            ],
+            "target_rect_px": [
+              549,
+              235,
+              78,
+              79
+            ],
+            "uv_center": [
+              0.23464912280701755,
+              0.8905502392344498
+            ],
+            "rgb": [
+              253,
+              169,
+              109
+            ]
+          },
+          "frame": {
+            "texture_id": "color1",
+            "row": 15,
+            "column": 12,
+            "source_rect_px": [
+              940,
+              1176,
+              79,
+              78
+            ],
+            "source_sample_px": [
+              979,
+              1215
+            ],
+            "target_rect_px": [
+              940,
+              1176,
+              79,
+              78
+            ],
+            "uv_center": [
+              0.39055023923444976,
+              0.5153508771929824
+            ],
+            "rgb": [
+              67,
+              67,
+              67
+            ]
+          },
+          "wheel": {
+            "texture_id": "color1",
+            "row": 15,
+            "column": 14,
+            "source_rect_px": [
+              1097,
+              1176,
+              79,
+              78
+            ],
+            "source_sample_px": [
+              1136,
+              1215
+            ],
+            "target_rect_px": [
+              1097,
+              1176,
+              79,
+              78
+            ],
+            "uv_center": [
+              0.4531499202551834,
+              0.5153508771929824
+            ],
+            "rgb": [
+              33,
+              33,
+              32
+            ]
+          }
+        },
+        "processing_seconds": 1.221
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v002",
+        "asset_id": "AST-003"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-003/v002/inspection.json",
+      "sha256": "4b25de011ef922e558d63f57166b4a9b7493af08f8d60174cf51e49906d31346",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-003",
+        "version": "v002",
+        "kind": "prop",
+        "generation_method": "meshy",
+        "target_web_environment": "Local Three.js browser, not Unity WebGL",
+        "props": [
+          {
+            "name": "COM-04 swivel office chair",
+            "triangles_per_instance": 964,
+            "instance_count": 1,
+            "total_triangles": 964
+          }
+        ],
+        "scene_triangles": 964,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3385072,
+        "checks": {
+          "prop_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "All reimported UVs reference approved color1 cells",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Final GLB reimport",
+            "reason": null
+          },
+          "geometric_edges": {
+            "status": "pass",
+            "evidence": "0 boundary edges; 0 nonmanifold edges after coordinate weld",
+            "reason": null
+          },
+          "web_display": {
+            "status": "pass",
+            "evidence": "2026-10-31 local browser loaded both models; front, rear and reduced view inspected. Screenshot: meshy/models/original/AST-003/v001/previews/web-comparison.jpg",
+            "reason": null
+          },
+          "diorama_budget": {
+            "status": "not_applicable",
+            "evidence": null,
+            "reason": "One prop"
+          },
+          "semantic_color_boundaries": {
+            "status": "fail",
+            "evidence": "Front/rear rendered inspection after one spatial mask revision",
+            "reason": "UVs use valid palette cells, but armrest-to-cushion boundary remains approximate"
+          }
+        },
+        "remaining_issues": [
+          "Unity and physical device performance unverified",
+          "Full-resolution shared palette dominates transfer size",
+          "User design approval pending",
+          "Caster wheel pairs not clearly resolved in generated model",
+          "Armrest/cushion semantic color boundaries need manual refinement"
+        ],
+        "part_counts": {
+          "semantic_parts": "Single Meshy mesh; spatial UV assignment, no reliable named part separation"
+        },
+        "source_triangles": 964,
+        "palette_cells": {
+          "cushion": {
+            "texture_id": "color1",
+            "row": 3,
+            "column": 7,
+            "source_rect_px": [
+              549,
+              235,
+              78,
+              79
+            ],
+            "source_sample_px": [
+              588,
+              274
+            ],
+            "target_rect_px": [
+              549,
+              235,
+              78,
+              79
+            ],
+            "uv_center": [
+              0.23464912280701755,
+              0.8905502392344498
+            ],
+            "rgb": [
+              253,
+              169,
+              109
+            ]
+          },
+          "frame": {
+            "texture_id": "color1",
+            "row": 15,
+            "column": 12,
+            "source_rect_px": [
+              940,
+              1176,
+              79,
+              78
+            ],
+            "source_sample_px": [
+              979,
+              1215
+            ],
+            "target_rect_px": [
+              940,
+              1176,
+              79,
+              78
+            ],
+            "uv_center": [
+              0.39055023923444976,
+              0.5153508771929824
+            ],
+            "rgb": [
+              67,
+              67,
+              67
+            ]
+          },
+          "wheel": {
+            "texture_id": "color1",
+            "row": 15,
+            "column": 14,
+            "source_rect_px": [
+              1097,
+              1176,
+              79,
+              78
+            ],
+            "source_sample_px": [
+              1136,
+              1215
+            ],
+            "target_rect_px": [
+              1097,
+              1176,
+              79,
+              78
+            ],
+            "uv_center": [
+              0.4531499202551834,
+              0.5153508771929824
+            ],
+            "rgb": [
+              33,
+              33,
+              32
+            ]
+          }
+        },
+        "processing_seconds": 1.076
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v001",
+        "asset_id": "AST-004"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-004/v001/inspection.json",
+      "sha256": "dee32f16270245ec21c819c850fee4456ac0b7c69c68836cac6c28d5d98ec6b5",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-004",
+        "version": "v001",
+        "kind": "prop",
+        "target_web_environment": "Independent Three.js GLB viewer; Unity not tested",
+        "props": [
+          {
+            "name": "AST-004",
+            "triangles_per_instance": 60,
+            "instance_count": 1,
+            "total_triangles": 60
+          }
+        ],
+        "scene_triangles": 60,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3291048,
+        "checks": {
+          "triangle_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport, instances included",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "GLB reimport UV centers",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Reimport material/image nodes",
+            "reason": null
+          },
+          "web_display": {
+            "status": "unverified",
+            "evidence": null,
+            "reason": "Pending scene browser check"
+          }
+        },
+        "remaining_issues": [
+          "Unity project absent; Unity/WebGL and physical mobile device unverified",
+          "Full preserved palette dominates GLB bytes"
+        ],
+        "palette_mapping_path": "meshy/models/textures/palettes/v001/mapping.json"
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v001",
+        "asset_id": "AST-005"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-005/v001/inspection.json",
+      "sha256": "2016ca419947d62ec332396beaf39aae089cf394280b1038781506bb7a5206b8",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-005",
+        "version": "v001",
+        "kind": "prop",
+        "target_web_environment": "Independent Three.js GLB viewer; Unity not tested",
+        "props": [
+          {
+            "name": "AST-005",
+            "triangles_per_instance": 48,
+            "instance_count": 1,
+            "total_triangles": 48
+          }
+        ],
+        "scene_triangles": 48,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3290240,
+        "checks": {
+          "triangle_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport, instances included",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "GLB reimport UV centers",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Reimport material/image nodes",
+            "reason": null
+          },
+          "web_display": {
+            "status": "unverified",
+            "evidence": null,
+            "reason": "Pending scene browser check"
+          }
+        },
+        "remaining_issues": [
+          "Unity project absent; Unity/WebGL and physical mobile device unverified",
+          "Full preserved palette dominates GLB bytes"
+        ],
+        "palette_mapping_path": "meshy/models/textures/palettes/v001/mapping.json"
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v001",
+        "asset_id": "AST-006"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-006/v001/inspection.json",
+      "sha256": "82987ad91c3d02f9e113013fcadcf7772364edeb60ab080dcbad9c6fee1b28db",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-006",
+        "version": "v001",
+        "kind": "prop",
+        "target_web_environment": "Independent Three.js GLB viewer; Unity not tested",
+        "props": [
+          {
+            "name": "AST-006",
+            "triangles_per_instance": 12,
+            "instance_count": 1,
+            "total_triangles": 12
+          }
+        ],
+        "scene_triangles": 12,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3287716,
+        "checks": {
+          "triangle_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport, instances included",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "GLB reimport UV centers",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Reimport material/image nodes",
+            "reason": null
+          },
+          "web_display": {
+            "status": "unverified",
+            "evidence": null,
+            "reason": "Pending scene browser check"
+          }
+        },
+        "remaining_issues": [
+          "Unity project absent; Unity/WebGL and physical mobile device unverified",
+          "Full preserved palette dominates GLB bytes"
+        ],
+        "palette_mapping_path": "meshy/models/textures/palettes/v001/mapping.json"
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v001",
+        "asset_id": "AST-007"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-007/v001/inspection.json",
+      "sha256": "b38ca03465bde325eef48fc9929dc35469eb3f4067aa6539304fd7da4bcb07bd",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-007",
+        "version": "v001",
+        "kind": "prop",
+        "target_web_environment": "Independent Three.js GLB viewer; Unity not tested",
+        "props": [
+          {
+            "name": "AST-007",
+            "triangles_per_instance": 12,
+            "instance_count": 1,
+            "total_triangles": 12
+          }
+        ],
+        "scene_triangles": 12,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3287716,
+        "checks": {
+          "triangle_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport, instances included",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "GLB reimport UV centers",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Reimport material/image nodes",
+            "reason": null
+          },
+          "web_display": {
+            "status": "unverified",
+            "evidence": null,
+            "reason": "Pending scene browser check"
+          }
+        },
+        "remaining_issues": [
+          "Unity project absent; Unity/WebGL and physical mobile device unverified",
+          "Full preserved palette dominates GLB bytes"
+        ],
+        "palette_mapping_path": "meshy/models/textures/palettes/v001/mapping.json"
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v001",
+        "asset_id": "AST-008"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-008/v001/inspection.json",
+      "sha256": "37a3735f6db287ca3761a2cbc60960ac3f488a376b8fba7fcae12432e3eb4dfb",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-008",
+        "version": "v001",
+        "kind": "prop",
+        "target_web_environment": "Independent Three.js GLB viewer; Unity not tested",
+        "props": [
+          {
+            "name": "AST-008",
+            "triangles_per_instance": 84,
+            "instance_count": 1,
+            "total_triangles": 84
+          }
+        ],
+        "scene_triangles": 84,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3292760,
+        "checks": {
+          "triangle_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport, instances included",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "GLB reimport UV centers",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Reimport material/image nodes",
+            "reason": null
+          },
+          "web_display": {
+            "status": "unverified",
+            "evidence": null,
+            "reason": "Pending scene browser check"
+          }
+        },
+        "remaining_issues": [
+          "Unity project absent; Unity/WebGL and physical mobile device unverified",
+          "Full preserved palette dominates GLB bytes"
+        ],
+        "palette_mapping_path": "meshy/models/textures/palettes/v001/mapping.json"
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v001",
+        "asset_id": "AST-009"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-009/v001/inspection.json",
+      "sha256": "6522b6cc7317e009024552b6a3f5271f91b2de7eafd0286d98186dea0c7b7ba2",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-009",
+        "version": "v001",
+        "kind": "prop",
+        "target_web_environment": "Independent Three.js GLB viewer; Unity not tested",
+        "props": [
+          {
+            "name": "AST-009",
+            "triangles_per_instance": 144,
+            "instance_count": 1,
+            "total_triangles": 144
+          }
+        ],
+        "scene_triangles": 144,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3296960,
+        "checks": {
+          "triangle_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport, instances included",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "GLB reimport UV centers",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Reimport material/image nodes",
+            "reason": null
+          },
+          "web_display": {
+            "status": "unverified",
+            "evidence": null,
+            "reason": "Pending scene browser check"
+          }
+        },
+        "remaining_issues": [
+          "Unity project absent; Unity/WebGL and physical mobile device unverified",
+          "Full preserved palette dominates GLB bytes"
+        ],
+        "palette_mapping_path": "meshy/models/textures/palettes/v001/mapping.json"
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v001",
+        "asset_id": "AST-010"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-010/v001/inspection.json",
+      "sha256": "00968853e97328baa35f05bdcdff9b89cfd415b4cb0ce73fba198caa27baa12d",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-010",
+        "version": "v001",
+        "kind": "prop",
+        "target_web_environment": "Independent Three.js GLB viewer; Unity not tested",
+        "props": [
+          {
+            "name": "AST-010",
+            "triangles_per_instance": 308,
+            "instance_count": 1,
+            "total_triangles": 308
+          }
+        ],
+        "scene_triangles": 308,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3312540,
+        "checks": {
+          "triangle_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport, instances included",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "GLB reimport UV centers",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Reimport material/image nodes",
+            "reason": null
+          },
+          "web_display": {
+            "status": "unverified",
+            "evidence": null,
+            "reason": "Pending scene browser check"
+          }
+        },
+        "remaining_issues": [
+          "Unity project absent; Unity/WebGL and physical mobile device unverified",
+          "Full preserved palette dominates GLB bytes"
+        ],
+        "palette_mapping_path": "meshy/models/textures/palettes/v001/mapping.json"
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v001",
+        "asset_id": "AST-011"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-011/v001/inspection.json",
+      "sha256": "13cb4f73314dde2d176d2980f0ab2c7919c962d1bd6a21cc26dd61addde23ebb",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-011",
+        "version": "v001",
+        "kind": "prop",
+        "target_web_environment": "Independent Three.js GLB viewer; Unity not tested",
+        "props": [
+          {
+            "name": "AST-011",
+            "triangles_per_instance": 72,
+            "instance_count": 1,
+            "total_triangles": 72
+          }
+        ],
+        "scene_triangles": 72,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3291924,
+        "checks": {
+          "triangle_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport, instances included",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "GLB reimport UV centers",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Reimport material/image nodes",
+            "reason": null
+          },
+          "web_display": {
+            "status": "unverified",
+            "evidence": null,
+            "reason": "Pending scene browser check"
+          }
+        },
+        "remaining_issues": [
+          "Unity project absent; Unity/WebGL and physical mobile device unverified",
+          "Full preserved palette dominates GLB bytes"
+        ],
+        "palette_mapping_path": "meshy/models/textures/palettes/v001/mapping.json"
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v001",
+        "asset_id": "AST-012"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-012/v001/inspection.json",
+      "sha256": "094916b9d44a19c680dae14bd61164f06680ae409c1a41376bb1353388b8ce05",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-012",
+        "version": "v001",
+        "kind": "prop",
+        "target_web_environment": "Independent Three.js GLB viewer; Unity not tested",
+        "props": [
+          {
+            "name": "AST-012",
+            "triangles_per_instance": 76,
+            "instance_count": 1,
+            "total_triangles": 76
+          }
+        ],
+        "scene_triangles": 76,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3291756,
+        "checks": {
+          "triangle_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport, instances included",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "GLB reimport UV centers",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Reimport material/image nodes",
+            "reason": null
+          },
+          "web_display": {
+            "status": "unverified",
+            "evidence": null,
+            "reason": "Pending scene browser check"
+          }
+        },
+        "remaining_issues": [
+          "Unity project absent; Unity/WebGL and physical mobile device unverified",
+          "Full preserved palette dominates GLB bytes"
+        ],
+        "palette_mapping_path": "meshy/models/textures/palettes/v001/mapping.json"
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v001",
+        "asset_id": "AST-013"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-013/v001/inspection.json",
+      "sha256": "15ee34a100eda33d88aab0ba587aea738788290368bc18177bad846a033e23ba",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-013",
+        "version": "v001",
+        "kind": "prop",
+        "target_web_environment": "Independent Three.js GLB viewer; Unity not tested",
+        "props": [
+          {
+            "name": "AST-013",
+            "triangles_per_instance": 12,
+            "instance_count": 1,
+            "total_triangles": 12
+          }
+        ],
+        "scene_triangles": 12,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3287712,
+        "checks": {
+          "triangle_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport, instances included",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "GLB reimport UV centers",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Reimport material/image nodes",
+            "reason": null
+          },
+          "web_display": {
+            "status": "unverified",
+            "evidence": null,
+            "reason": "Pending scene browser check"
+          }
+        },
+        "remaining_issues": [
+          "Unity project absent; Unity/WebGL and physical mobile device unverified",
+          "Full preserved palette dominates GLB bytes"
+        ],
+        "palette_mapping_path": "meshy/models/textures/palettes/v001/mapping.json"
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v001",
+        "asset_id": "AST-014"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-014/v001/inspection.json",
+      "sha256": "924bf4a08154eb2c340f743da96b03b60a0a6bb1b35c5e1f9762863c65b662a8",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-014",
+        "version": "v001",
+        "kind": "prop",
+        "target_web_environment": "Independent Three.js GLB viewer; Unity not tested",
+        "props": [
+          {
+            "name": "AST-014",
+            "triangles_per_instance": 96,
+            "instance_count": 1,
+            "total_triangles": 96
+          }
+        ],
+        "scene_triangles": 96,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3292836,
+        "checks": {
+          "triangle_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport, instances included",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "GLB reimport UV centers",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Reimport material/image nodes",
+            "reason": null
+          },
+          "web_display": {
+            "status": "unverified",
+            "evidence": null,
+            "reason": "Pending scene browser check"
+          }
+        },
+        "remaining_issues": [
+          "Unity project absent; Unity/WebGL and physical mobile device unverified",
+          "Full preserved palette dominates GLB bytes"
+        ],
+        "palette_mapping_path": "meshy/models/textures/palettes/v001/mapping.json"
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v001",
+        "asset_id": "AST-015"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-015/v001/inspection.json",
+      "sha256": "8a789194ea1ea8a44b70e1528082fd515b235278eb247605b608c14396f74b02",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-015",
+        "version": "v001",
+        "kind": "prop",
+        "target_web_environment": "Independent Three.js GLB viewer; Unity not tested",
+        "props": [
+          {
+            "name": "AST-015",
+            "triangles_per_instance": 60,
+            "instance_count": 1,
+            "total_triangles": 60
+          }
+        ],
+        "scene_triangles": 60,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3291036,
+        "checks": {
+          "triangle_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport, instances included",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "GLB reimport UV centers",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Reimport material/image nodes",
+            "reason": null
+          },
+          "web_display": {
+            "status": "unverified",
+            "evidence": null,
+            "reason": "Pending scene browser check"
+          }
+        },
+        "remaining_issues": [
+          "Unity project absent; Unity/WebGL and physical mobile device unverified",
+          "Full preserved palette dominates GLB bytes"
+        ],
+        "palette_mapping_path": "meshy/models/textures/palettes/v001/mapping.json"
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v001",
+        "asset_id": "AST-016"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-016/v001/inspection.json",
+      "sha256": "5d9d4876170a59968890dbc072b64aab6ebe6736a8b0add82e2e09441635946b",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-016",
+        "version": "v001",
+        "kind": "prop",
+        "target_web_environment": "Independent Three.js GLB viewer; Unity not tested",
+        "props": [
+          {
+            "name": "AST-016",
+            "triangles_per_instance": 168,
+            "instance_count": 1,
+            "total_triangles": 168
+          }
+        ],
+        "scene_triangles": 168,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3297492,
+        "checks": {
+          "triangle_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport, instances included",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "GLB reimport UV centers",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Reimport material/image nodes",
+            "reason": null
+          },
+          "web_display": {
+            "status": "unverified",
+            "evidence": null,
+            "reason": "Pending scene browser check"
+          }
+        },
+        "remaining_issues": [
+          "Unity project absent; Unity/WebGL and physical mobile device unverified",
+          "Full preserved palette dominates GLB bytes"
+        ],
+        "palette_mapping_path": "meshy/models/textures/palettes/v001/mapping.json"
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v001",
+        "asset_id": "AST-017"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-017/v001/inspection.json",
+      "sha256": "4ee331e5f1fa2e535aef3d5c1686442e2013bf2a56ea3ac02da47db34f4155df",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-017",
+        "version": "v001",
+        "kind": "prop",
+        "target_web_environment": "Independent Three.js GLB viewer; Unity not tested",
+        "props": [
+          {
+            "name": "AST-017",
+            "triangles_per_instance": 84,
+            "instance_count": 1,
+            "total_triangles": 84
+          }
+        ],
+        "scene_triangles": 84,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3292376,
+        "checks": {
+          "triangle_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport, instances included",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "GLB reimport UV centers",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Reimport material/image nodes",
+            "reason": null
+          },
+          "web_display": {
+            "status": "unverified",
+            "evidence": null,
+            "reason": "Pending scene browser check"
+          }
+        },
+        "remaining_issues": [
+          "Unity project absent; Unity/WebGL and physical mobile device unverified",
+          "Full preserved palette dominates GLB bytes"
+        ],
+        "palette_mapping_path": "meshy/models/textures/palettes/v001/mapping.json"
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v001",
+        "asset_id": "AST-020"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-020/v001/inspection.json",
+      "sha256": "b1409dec7678d88c10249ed9a435d72b25ba08190f9ed05ea93e9c6c0015dd80",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-020",
+        "version": "v001",
+        "kind": "diorama",
+        "target_web_environment": "Independent Three.js GLB viewer; Unity not tested",
+        "props": [
+          {
+            "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+            "asset_ref": {
+              "asset_id": "AST-001",
+              "version": "v002"
+            },
+            "triangles_per_instance": 220,
+            "instance_count": 1,
+            "total_triangles": 220
+          },
+          {
+            "name": "COM-02 바닥 표면 — Blender 직접 제작",
+            "asset_ref": {
+              "asset_id": "AST-002",
+              "version": "v001"
+            },
+            "triangles_per_instance": 108,
+            "instance_count": 1,
+            "total_triangles": 108
+          },
+          {
+            "name": "COM-04 회전 사무의자 — blender_direct",
+            "asset_ref": {
+              "asset_id": "AST-003",
+              "version": "v001"
+            },
+            "triangles_per_instance": 792,
+            "instance_count": 2,
+            "total_triangles": 1584
+          },
+          {
+            "name": "업무 책상",
+            "asset_ref": {
+              "asset_id": "AST-004",
+              "version": "v001"
+            },
+            "triangles_per_instance": 60,
+            "instance_count": 2,
+            "total_triangles": 120
+          },
+          {
+            "name": "모니터",
+            "asset_ref": {
+              "asset_id": "AST-005",
+              "version": "v001"
+            },
+            "triangles_per_instance": 48,
+            "instance_count": 2,
+            "total_triangles": 96
+          },
+          {
+            "name": "키보드",
+            "asset_ref": {
+              "asset_id": "AST-006",
+              "version": "v001"
+            },
+            "triangles_per_instance": 12,
+            "instance_count": 2,
+            "total_triangles": 24
+          },
+          {
+            "name": "마우스",
+            "asset_ref": {
+              "asset_id": "AST-007",
+              "version": "v001"
+            },
+            "triangles_per_instance": 12,
+            "instance_count": 2,
+            "total_triangles": 24
+          },
+          {
+            "name": "책상 아래 서랍장",
+            "asset_ref": {
+              "asset_id": "AST-008",
+              "version": "v001"
+            },
+            "triangles_per_instance": 84,
+            "instance_count": 2,
+            "total_triangles": 168
+          },
+          {
+            "name": "복합기",
+            "asset_ref": {
+              "asset_id": "AST-009",
+              "version": "v001"
+            },
+            "triangles_per_instance": 144,
+            "instance_count": 1,
+            "total_triangles": 144
+          },
+          {
+            "name": "화분",
+            "asset_ref": {
+              "asset_id": "AST-010",
+              "version": "v001"
+            },
+            "triangles_per_instance": 308,
+            "instance_count": 3,
+            "total_triangles": 924
+          },
+          {
+            "name": "책 묶음",
+            "asset_ref": {
+              "asset_id": "AST-011",
+              "version": "v001"
+            },
+            "triangles_per_instance": 72,
+            "instance_count": 3,
+            "total_triangles": 216
+          },
+          {
+            "name": "펜꽂이",
+            "asset_ref": {
+              "asset_id": "AST-012",
+              "version": "v001"
+            },
+            "triangles_per_instance": 76,
+            "instance_count": 2,
+            "total_triangles": 152
+          },
+          {
+            "name": "낮은 책상 스크린",
+            "asset_ref": {
+              "asset_id": "AST-013",
+              "version": "v001"
+            },
+            "triangles_per_instance": 12,
+            "instance_count": 2,
+            "total_triangles": 24
+          },
+          {
+            "name": "관절 스탠드",
+            "asset_ref": {
+              "asset_id": "AST-014",
+              "version": "v001"
+            },
+            "triangles_per_instance": 96,
+            "instance_count": 2,
+            "total_triangles": 192
+          },
+          {
+            "name": "뒤쪽 수납장",
+            "asset_ref": {
+              "asset_id": "AST-015",
+              "version": "v001"
+            },
+            "triangles_per_instance": 60,
+            "instance_count": 1,
+            "total_triangles": 60
+          },
+          {
+            "name": "옷걸이",
+            "asset_ref": {
+              "asset_id": "AST-016",
+              "version": "v001"
+            },
+            "triangles_per_instance": 168,
+            "instance_count": 1,
+            "total_triangles": 168
+          },
+          {
+            "name": "업무용 가방",
+            "asset_ref": {
+              "asset_id": "AST-017",
+              "version": "v001"
+            },
+            "triangles_per_instance": 84,
+            "instance_count": 1,
+            "total_triangles": 84
+          }
+        ],
+        "scene_triangles": 4308,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3600680,
+        "checks": {
+          "triangle_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport, instances included",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "GLB reimport UV centers",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Reimport material/image nodes",
+            "reason": null
+          },
+          "web_display": {
+            "status": "pass",
+            "evidence": "2026-10-31 local IAB: GLB loaded, 4308 triangles; front, rear and zoomed-out appearance inspected. previews/web-front.png and web-small.png under original/AST-020/v001.",
+            "reason": null
+          },
+          "unity_webgl": {
+            "status": "unverified",
+            "evidence": null,
+            "reason": "unity/projects contains only .gitkeep; no Unity project configured"
+          }
+        },
+        "remaining_issues": [
+          "Unity project absent; Unity/WebGL and physical mobile device unverified",
+          "Full preserved palette dominates GLB bytes"
+        ],
+        "palette_mapping_path": "meshy/models/textures/palettes/v001/mapping.json"
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v002",
+        "asset_id": "AST-020"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-020/v002/inspection.json",
+      "sha256": "366ec2b678a81944ffab222caa8756046ea1d62312fac85f63f1fe985154df57",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-020",
+        "version": "v002",
+        "kind": "diorama",
+        "target_web_environment": "Independent Three.js GLB viewer; Unity not tested",
+        "props": [
+          {
+            "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+            "asset_ref": {
+              "asset_id": "AST-001",
+              "version": "v002"
+            },
+            "triangles_per_instance": 220,
+            "instance_count": 1,
+            "total_triangles": 220
+          },
+          {
+            "name": "COM-02 바닥 표면 — Blender 직접 제작",
+            "asset_ref": {
+              "asset_id": "AST-002",
+              "version": "v001"
+            },
+            "triangles_per_instance": 108,
+            "instance_count": 1,
+            "total_triangles": 108
+          },
+          {
+            "name": "COM-04 회전 사무의자 — blender_direct",
+            "asset_ref": {
+              "asset_id": "AST-003",
+              "version": "v001"
+            },
+            "triangles_per_instance": 792,
+            "instance_count": 2,
+            "total_triangles": 1584
+          },
+          {
+            "name": "업무 책상",
+            "asset_ref": {
+              "asset_id": "AST-004",
+              "version": "v001"
+            },
+            "triangles_per_instance": 60,
+            "instance_count": 2,
+            "total_triangles": 120
+          },
+          {
+            "name": "모니터",
+            "asset_ref": {
+              "asset_id": "AST-005",
+              "version": "v001"
+            },
+            "triangles_per_instance": 48,
+            "instance_count": 2,
+            "total_triangles": 96
+          },
+          {
+            "name": "키보드",
+            "asset_ref": {
+              "asset_id": "AST-006",
+              "version": "v001"
+            },
+            "triangles_per_instance": 12,
+            "instance_count": 2,
+            "total_triangles": 24
+          },
+          {
+            "name": "마우스",
+            "asset_ref": {
+              "asset_id": "AST-007",
+              "version": "v001"
+            },
+            "triangles_per_instance": 12,
+            "instance_count": 2,
+            "total_triangles": 24
+          },
+          {
+            "name": "책상 아래 서랍장",
+            "asset_ref": {
+              "asset_id": "AST-008",
+              "version": "v001"
+            },
+            "triangles_per_instance": 84,
+            "instance_count": 2,
+            "total_triangles": 168
+          },
+          {
+            "name": "복합기",
+            "asset_ref": {
+              "asset_id": "AST-009",
+              "version": "v001"
+            },
+            "triangles_per_instance": 144,
+            "instance_count": 1,
+            "total_triangles": 144
+          },
+          {
+            "name": "화분",
+            "asset_ref": {
+              "asset_id": "AST-010",
+              "version": "v001"
+            },
+            "triangles_per_instance": 308,
+            "instance_count": 3,
+            "total_triangles": 924
+          },
+          {
+            "name": "책 묶음",
+            "asset_ref": {
+              "asset_id": "AST-011",
+              "version": "v001"
+            },
+            "triangles_per_instance": 72,
+            "instance_count": 3,
+            "total_triangles": 216
+          },
+          {
+            "name": "펜꽂이",
+            "asset_ref": {
+              "asset_id": "AST-012",
+              "version": "v001"
+            },
+            "triangles_per_instance": 76,
+            "instance_count": 2,
+            "total_triangles": 152
+          },
+          {
+            "name": "낮은 책상 스크린",
+            "asset_ref": {
+              "asset_id": "AST-013",
+              "version": "v001"
+            },
+            "triangles_per_instance": 12,
+            "instance_count": 2,
+            "total_triangles": 24
+          },
+          {
+            "name": "관절 스탠드",
+            "asset_ref": {
+              "asset_id": "AST-014",
+              "version": "v001"
+            },
+            "triangles_per_instance": 96,
+            "instance_count": 2,
+            "total_triangles": 192
+          },
+          {
+            "name": "뒤쪽 수납장",
+            "asset_ref": {
+              "asset_id": "AST-015",
+              "version": "v001"
+            },
+            "triangles_per_instance": 60,
+            "instance_count": 1,
+            "total_triangles": 60
+          },
+          {
+            "name": "옷걸이",
+            "asset_ref": {
+              "asset_id": "AST-016",
+              "version": "v001"
+            },
+            "triangles_per_instance": 168,
+            "instance_count": 1,
+            "total_triangles": 168
+          },
+          {
+            "name": "업무용 가방",
+            "asset_ref": {
+              "asset_id": "AST-017",
+              "version": "v001"
+            },
+            "triangles_per_instance": 84,
+            "instance_count": 1,
+            "total_triangles": 84
+          }
+        ],
+        "scene_triangles": 4308,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3608344,
+        "checks": {
+          "triangle_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport, instances included",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "GLB reimport UV centers",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Reimport material/image nodes",
+            "reason": null
+          },
+          "web_display": {
+            "status": "unverified",
+            "evidence": null,
+            "reason": "Pending scene browser check"
+          },
+          "functional_facing": {
+            "status": "fail",
+            "evidence": "Visual comparison before rotation-mode correction",
+            "reason": "Euler rotations ignored on imported quaternion objects"
+          }
+        },
+        "remaining_issues": [
+          "Unity project absent; Unity/WebGL and physical mobile device unverified",
+          "Full preserved palette dominates GLB bytes",
+          "Intermediate: imported quaternion rotation mode prevented intended Euler rotation; superseded by v003."
+        ],
+        "palette_mapping_path": "meshy/models/textures/palettes/v001/mapping.json"
+      }
+    },
+    {
+      "asset_ref": {
+        "version": "v003",
+        "asset_id": "AST-020"
+      },
+      "local_evidence_path": "meshy/models/blender/AST-020/v003/inspection.json",
+      "sha256": "dcb222ba1e6c821aaabacec6f5c618c07c64a67dc0e57e6320b8ba67b58cf3b3",
+      "record": {
+        "schema_version": 3,
+        "asset_id": "AST-020",
+        "version": "v003",
+        "kind": "diorama",
+        "target_web_environment": "Independent Three.js GLB viewer; Unity not tested",
+        "props": [
+          {
+            "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+            "asset_ref": {
+              "asset_id": "AST-001",
+              "version": "v002"
+            },
+            "triangles_per_instance": 220,
+            "instance_count": 1,
+            "total_triangles": 220
+          },
+          {
+            "name": "COM-02 바닥 표면 — Blender 직접 제작",
+            "asset_ref": {
+              "asset_id": "AST-002",
+              "version": "v001"
+            },
+            "triangles_per_instance": 108,
+            "instance_count": 1,
+            "total_triangles": 108
+          },
+          {
+            "name": "COM-04 회전 사무의자 — blender_direct",
+            "asset_ref": {
+              "asset_id": "AST-003",
+              "version": "v001"
+            },
+            "triangles_per_instance": 792,
+            "instance_count": 2,
+            "total_triangles": 1584
+          },
+          {
+            "name": "업무 책상",
+            "asset_ref": {
+              "asset_id": "AST-004",
+              "version": "v001"
+            },
+            "triangles_per_instance": 60,
+            "instance_count": 2,
+            "total_triangles": 120
+          },
+          {
+            "name": "모니터",
+            "asset_ref": {
+              "asset_id": "AST-005",
+              "version": "v001"
+            },
+            "triangles_per_instance": 48,
+            "instance_count": 2,
+            "total_triangles": 96
+          },
+          {
+            "name": "키보드",
+            "asset_ref": {
+              "asset_id": "AST-006",
+              "version": "v001"
+            },
+            "triangles_per_instance": 12,
+            "instance_count": 2,
+            "total_triangles": 24
+          },
+          {
+            "name": "마우스",
+            "asset_ref": {
+              "asset_id": "AST-007",
+              "version": "v001"
+            },
+            "triangles_per_instance": 12,
+            "instance_count": 2,
+            "total_triangles": 24
+          },
+          {
+            "name": "책상 아래 서랍장",
+            "asset_ref": {
+              "asset_id": "AST-008",
+              "version": "v001"
+            },
+            "triangles_per_instance": 84,
+            "instance_count": 2,
+            "total_triangles": 168
+          },
+          {
+            "name": "복합기",
+            "asset_ref": {
+              "asset_id": "AST-009",
+              "version": "v001"
+            },
+            "triangles_per_instance": 144,
+            "instance_count": 1,
+            "total_triangles": 144
+          },
+          {
+            "name": "화분",
+            "asset_ref": {
+              "asset_id": "AST-010",
+              "version": "v001"
+            },
+            "triangles_per_instance": 308,
+            "instance_count": 3,
+            "total_triangles": 924
+          },
+          {
+            "name": "책 묶음",
+            "asset_ref": {
+              "asset_id": "AST-011",
+              "version": "v001"
+            },
+            "triangles_per_instance": 72,
+            "instance_count": 3,
+            "total_triangles": 216
+          },
+          {
+            "name": "펜꽂이",
+            "asset_ref": {
+              "asset_id": "AST-012",
+              "version": "v001"
+            },
+            "triangles_per_instance": 76,
+            "instance_count": 2,
+            "total_triangles": 152
+          },
+          {
+            "name": "낮은 책상 스크린",
+            "asset_ref": {
+              "asset_id": "AST-013",
+              "version": "v001"
+            },
+            "triangles_per_instance": 12,
+            "instance_count": 2,
+            "total_triangles": 24
+          },
+          {
+            "name": "관절 스탠드",
+            "asset_ref": {
+              "asset_id": "AST-014",
+              "version": "v001"
+            },
+            "triangles_per_instance": 96,
+            "instance_count": 2,
+            "total_triangles": 192
+          },
+          {
+            "name": "뒤쪽 수납장",
+            "asset_ref": {
+              "asset_id": "AST-015",
+              "version": "v001"
+            },
+            "triangles_per_instance": 60,
+            "instance_count": 1,
+            "total_triangles": 60
+          },
+          {
+            "name": "옷걸이",
+            "asset_ref": {
+              "asset_id": "AST-016",
+              "version": "v001"
+            },
+            "triangles_per_instance": 168,
+            "instance_count": 1,
+            "total_triangles": 168
+          },
+          {
+            "name": "업무용 가방",
+            "asset_ref": {
+              "asset_id": "AST-017",
+              "version": "v001"
+            },
+            "triangles_per_instance": 84,
+            "instance_count": 1,
+            "total_triangles": 84
+          }
+        ],
+        "scene_triangles": 4308,
+        "material_count": 1,
+        "texture_count": 1,
+        "palette_resolution": [
+          2508,
+          2508
+        ],
+        "glb_bytes": 3608484,
+        "checks": {
+          "triangle_budget": {
+            "status": "pass",
+            "evidence": "Final GLB reimport, instances included",
+            "reason": null
+          },
+          "palette_uv": {
+            "status": "pass",
+            "evidence": "GLB reimport UV centers",
+            "reason": null
+          },
+          "shared_material": {
+            "status": "pass",
+            "evidence": "Reimport material/image nodes",
+            "reason": null
+          },
+          "web_display": {
+            "status": "pass",
+            "evidence": "IAB front/rear/zoomed-out visual inspection; web-front.png saved in original/AST-020/v003/previews",
+            "reason": null
+          }
+        },
+        "remaining_issues": [
+          "Unity project absent; Unity/WebGL and physical mobile device unverified",
+          "Full preserved palette dominates GLB bytes"
+        ],
+        "palette_mapping_path": "meshy/models/textures/palettes/v001/mapping.json"
+      }
+    }
+  ],
+  "placements": [
+    {
+      "assembly_id": "pan-001-office",
+      "revision": 1,
+      "local_evidence_path": "meshy/models/blender/AST-020/v001/placements.json",
+      "sha256": "0fd4d9299e2d39ed29b62b6faa5f678b1f921e93e1454723704940974a1e58c7",
+      "record": {
+        "schema_version": 3,
+        "panorama_ref": {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        },
+        "coordinate_system": "Blender Z-up meters",
+        "instances": [
+          {
+            "asset_id": "AST-001",
+            "version": "v002",
+            "instance_id": "AST-001-0",
+            "position_blender_m": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              3,
+              2.6,
+              1.8
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-002",
+            "version": "v001",
+            "instance_id": "AST-002-0",
+            "position_blender_m": [
+              0,
+              -0.3,
+              0.29
+            ],
+            "scale": [
+              2.4,
+              1.8,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-004",
+            "version": "v001",
+            "instance_id": "AST-004-0",
+            "position_blender_m": [
+              -0.9,
+              0.05,
+              0.3
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-003",
+            "version": "v001",
+            "instance_id": "AST-003-0",
+            "position_blender_m": [
+              -0.9,
+              -0.85,
+              0.3
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-005",
+            "version": "v001",
+            "instance_id": "AST-005-0",
+            "position_blender_m": [
+              -0.9,
+              0.19,
+              1.1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-006",
+            "version": "v001",
+            "instance_id": "AST-006-0",
+            "position_blender_m": [
+              -0.9,
+              -0.14,
+              1.1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-007",
+            "version": "v001",
+            "instance_id": "AST-007-0",
+            "position_blender_m": [
+              -0.56,
+              -0.18,
+              1.1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-008",
+            "version": "v001",
+            "instance_id": "AST-008-0",
+            "position_blender_m": [
+              -1.38,
+              0.03,
+              0.3
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-011",
+            "version": "v001",
+            "instance_id": "AST-011-0",
+            "position_blender_m": [
+              -1.4500000000000002,
+              0.23,
+              1.1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-012",
+            "version": "v001",
+            "instance_id": "AST-012-0",
+            "position_blender_m": [
+              -0.35,
+              0.25,
+              1.1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-014",
+            "version": "v001",
+            "instance_id": "AST-014-0",
+            "position_blender_m": [
+              -0.33999999999999997,
+              0.48,
+              1.1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-013",
+            "version": "v001",
+            "instance_id": "AST-013-0",
+            "position_blender_m": [
+              -0.9,
+              0.47,
+              1.08
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-004",
+            "version": "v001",
+            "instance_id": "AST-004-1",
+            "position_blender_m": [
+              0.9,
+              0.05,
+              0.3
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-003",
+            "version": "v001",
+            "instance_id": "AST-003-1",
+            "position_blender_m": [
+              0.9,
+              -0.85,
+              0.3
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-005",
+            "version": "v001",
+            "instance_id": "AST-005-1",
+            "position_blender_m": [
+              0.9,
+              0.19,
+              1.1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-006",
+            "version": "v001",
+            "instance_id": "AST-006-1",
+            "position_blender_m": [
+              0.9,
+              -0.14,
+              1.1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-007",
+            "version": "v001",
+            "instance_id": "AST-007-1",
+            "position_blender_m": [
+              1.24,
+              -0.18,
+              1.1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-008",
+            "version": "v001",
+            "instance_id": "AST-008-1",
+            "position_blender_m": [
+              0.42000000000000004,
+              0.03,
+              0.3
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-011",
+            "version": "v001",
+            "instance_id": "AST-011-1",
+            "position_blender_m": [
+              0.35,
+              0.23,
+              1.1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-012",
+            "version": "v001",
+            "instance_id": "AST-012-1",
+            "position_blender_m": [
+              1.4500000000000002,
+              0.25,
+              1.1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-014",
+            "version": "v001",
+            "instance_id": "AST-014-1",
+            "position_blender_m": [
+              1.46,
+              0.48,
+              1.1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-013",
+            "version": "v001",
+            "instance_id": "AST-013-1",
+            "position_blender_m": [
+              0.9,
+              0.47,
+              1.08
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-009",
+            "version": "v001",
+            "instance_id": "AST-009-0",
+            "position_blender_m": [
+              -2.15,
+              0.6,
+              0.3
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-015",
+            "version": "v001",
+            "instance_id": "AST-015-0",
+            "position_blender_m": [
+              0.65,
+              1.75,
+              0.3
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-016",
+            "version": "v001",
+            "instance_id": "AST-016-0",
+            "position_blender_m": [
+              2.05,
+              1.65,
+              0.3
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-017",
+            "version": "v001",
+            "instance_id": "AST-017-0",
+            "position_blender_m": [
+              2.05,
+              1.43,
+              1.16
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-010",
+            "version": "v001",
+            "instance_id": "AST-010-0",
+            "position_blender_m": [
+              0,
+              0.12,
+              1.1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-010",
+            "version": "v001",
+            "instance_id": "AST-010-1",
+            "position_blender_m": [
+              0.98,
+              1.75,
+              1.3
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-010",
+            "version": "v001",
+            "instance_id": "AST-010-2",
+            "position_blender_m": [
+              2,
+              -1.2,
+              0.3
+            ],
+            "scale": [
+              1.65,
+              1.65,
+              1.65
+            ],
+            "rotation_z_rad": 0
+          },
+          {
+            "asset_id": "AST-011",
+            "version": "v001",
+            "instance_id": "AST-011-2",
+            "position_blender_m": [
+              0.3,
+              1.75,
+              1.3
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0
+          }
+        ]
+      }
+    },
+    {
+      "assembly_id": "pan-001-office",
+      "revision": 2,
+      "local_evidence_path": "meshy/models/blender/AST-020/v003/placements.json",
+      "sha256": "9956258d9f3eed063cdac70014bf9505eb95650f140aa7003a8aca738f0a5175",
+      "record": {
+        "schema_version": 3,
+        "panorama_ref": {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        },
+        "coordinate_system": "Blender Z-up meters",
+        "instances": [
+          {
+            "asset_id": "AST-001",
+            "version": "v002",
+            "instance_id": "AST-001-0",
+            "position_blender_m": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              3,
+              2.6,
+              1.8
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-002",
+            "version": "v001",
+            "instance_id": "AST-002-0",
+            "position_blender_m": [
+              0,
+              -0.38,
+              0.288
+            ],
+            "scale": [
+              2.4,
+              1.8,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-004",
+            "version": "v001",
+            "instance_id": "AST-004-0",
+            "position_blender_m": [
+              -0.88,
+              0,
+              0.296
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-003",
+            "version": "v001",
+            "instance_id": "AST-003-0",
+            "position_blender_m": [
+              -0.88,
+              -0.86,
+              0.296
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 3.141592653589793,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              180
+            ]
+          },
+          {
+            "asset_id": "AST-005",
+            "version": "v001",
+            "instance_id": "AST-005-0",
+            "position_blender_m": [
+              -0.88,
+              0.12,
+              1.091
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-006",
+            "version": "v001",
+            "instance_id": "AST-006-0",
+            "position_blender_m": [
+              -0.88,
+              -0.2,
+              1.091
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-007",
+            "version": "v001",
+            "instance_id": "AST-007-0",
+            "position_blender_m": [
+              -0.55,
+              -0.2,
+              1.091
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-008",
+            "version": "v001",
+            "instance_id": "AST-008-0",
+            "position_blender_m": [
+              -1.43,
+              0.03,
+              0.296
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-011",
+            "version": "v001",
+            "instance_id": "AST-011-0",
+            "position_blender_m": [
+              -1.45,
+              0.1,
+              1.091
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-012",
+            "version": "v001",
+            "instance_id": "AST-012-0",
+            "position_blender_m": [
+              -0.32,
+              -0.07,
+              1.091
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-014",
+            "version": "v001",
+            "instance_id": "AST-014-0",
+            "position_blender_m": [
+              -0.28,
+              0.22,
+              1.091
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-013",
+            "version": "v001",
+            "instance_id": "AST-013-0",
+            "position_blender_m": [
+              -0.88,
+              0.32,
+              1.056
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-004",
+            "version": "v001",
+            "instance_id": "AST-004-1",
+            "position_blender_m": [
+              0.88,
+              0,
+              0.296
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-003",
+            "version": "v001",
+            "instance_id": "AST-003-1",
+            "position_blender_m": [
+              0.88,
+              -0.86,
+              0.296
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 3.141592653589793,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              180
+            ]
+          },
+          {
+            "asset_id": "AST-005",
+            "version": "v001",
+            "instance_id": "AST-005-1",
+            "position_blender_m": [
+              0.88,
+              0.12,
+              1.091
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-006",
+            "version": "v001",
+            "instance_id": "AST-006-1",
+            "position_blender_m": [
+              0.88,
+              -0.2,
+              1.091
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-007",
+            "version": "v001",
+            "instance_id": "AST-007-1",
+            "position_blender_m": [
+              1.21,
+              -0.2,
+              1.091
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-008",
+            "version": "v001",
+            "instance_id": "AST-008-1",
+            "position_blender_m": [
+              1.43,
+              0.03,
+              0.296
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-011",
+            "version": "v001",
+            "instance_id": "AST-011-1",
+            "position_blender_m": [
+              0.31,
+              0.1,
+              1.091
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-012",
+            "version": "v001",
+            "instance_id": "AST-012-1",
+            "position_blender_m": [
+              1.44,
+              -0.07,
+              1.091
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-014",
+            "version": "v001",
+            "instance_id": "AST-014-1",
+            "position_blender_m": [
+              1.48,
+              0.22,
+              1.091
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-013",
+            "version": "v001",
+            "instance_id": "AST-013-1",
+            "position_blender_m": [
+              0.88,
+              0.32,
+              1.056
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-009",
+            "version": "v001",
+            "instance_id": "AST-009-0",
+            "position_blender_m": [
+              -2.18,
+              0.6,
+              0.233
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-015",
+            "version": "v001",
+            "instance_id": "AST-015-0",
+            "position_blender_m": [
+              0.65,
+              1.6,
+              0.288
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-016",
+            "version": "v001",
+            "instance_id": "AST-016-0",
+            "position_blender_m": [
+              2.1,
+              1.6,
+              0.288
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.5235987755982988,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              30
+            ]
+          },
+          {
+            "asset_id": "AST-017",
+            "version": "v001",
+            "instance_id": "AST-017-0",
+            "position_blender_m": [
+              2.1,
+              1.39,
+              1.048
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-010",
+            "version": "v001",
+            "instance_id": "AST-010-0",
+            "position_blender_m": [
+              0,
+              0.06,
+              1.091
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-010",
+            "version": "v001",
+            "instance_id": "AST-010-1",
+            "position_blender_m": [
+              1.0,
+              1.6,
+              1.288
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-010",
+            "version": "v001",
+            "instance_id": "AST-010-2",
+            "position_blender_m": [
+              2.12,
+              -1.15,
+              0.296
+            ],
+            "scale": [
+              1.65,
+              1.65,
+              1.65
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "asset_id": "AST-011",
+            "version": "v001",
+            "instance_id": "AST-011-2",
+            "position_blender_m": [
+              0.23,
+              1.6,
+              1.288
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "alignment_rules": [
+          "Workstation centers X = -0.88,+0.88m",
+          "Chair forward +Y toward monitor; chair Z rotation 180deg",
+          "Monitor/keyboard/chair centerline aligned",
+          "Tabletop support plane Z=1.091m",
+          "Desk lamps kept inside tabletop Y range",
+          "Drawer cabinets positioned at outer sides",
+          "No per-instance geometry/color changes"
+        ]
+      }
+    }
+  ],
+  "artifact_publication_status": "기존 모델 바이너리·제작 스크립트는 이번 커밋 대상 아님. 저장소 상대 경로는 스냅샷 작성 시 로컬 저장소에서 확인한 위치이며 원격 파일 존재를 보장하지 않음."
+}

@@ -1,0 +1,106 @@
+{
+  "schema_version": 3,
+  "snapshots": [
+    {
+      "snapshot_id": "asset-panorama-inventory-2026-10-31",
+      "version": "v001",
+      "document_path": "docs/human/jobs/asset-panorama-inventory-2026-10-31-v001.md",
+      "document_sha256": "c9d6efb079e6cb5b19d78b0d6aa47bfa1ef545c4cd4168451ccfa6fa7cbf5681",
+      "document_kind": "inventory_and_planning_snapshot",
+      "registration_status": "registered",
+      "planning_status": "pending_user_approval",
+      "source_refs": [
+        {
+          "path": "docs/human/jobs/job_base.txt",
+          "sha256": "39ffd920762c4c1688dfbac656ff4a6ee0bd4f9dd074382072704063e21bb925"
+        }
+      ],
+      "snapshot_counts": {
+        "unique_occupations": 552,
+        "occupation_place_memberships": 809,
+        "place_categories": 26,
+        "nonempty_place_categories": 25,
+        "asset_candidates": 52,
+        "common_asset_candidates": 23,
+        "specialized_asset_candidates": 29
+      },
+      "context_refs": [
+        {
+          "context_id": "office-shared-work",
+          "version": "v001"
+        },
+        {
+          "context_id": "office-collaboration",
+          "version": "v001"
+        },
+        {
+          "context_id": "office-administration",
+          "version": "v001"
+        },
+        {
+          "context_id": "office-public-reception",
+          "version": "v001"
+        },
+        {
+          "context_id": "office-professional-consultation",
+          "version": "v001"
+        }
+      ],
+      "panorama_refs": [
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-001",
+          "version": "v001"
+        },
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-002",
+          "version": "v001"
+        },
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-003",
+          "version": "v001"
+        },
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-004",
+          "version": "v001"
+        },
+        {
+          "catalog": "panoramas",
+          "image_id": "PAN-005",
+          "version": "v001"
+        }
+      ],
+      "asset_refs": [
+        {
+          "asset_id": "AST-001",
+          "version": "v001"
+        },
+        {
+          "asset_id": "AST-001",
+          "version": "v002"
+        },
+        {
+          "asset_id": "AST-002",
+          "version": "v001"
+        },
+        {
+          "asset_id": "AST-003",
+          "version": "v001"
+        },
+        {
+          "asset_id": "AST-003",
+          "version": "v002"
+        }
+      ],
+      "notes": [
+        "문서 저장·등록과 기획·제작 승인 및 사실 검증은 별개다.",
+        "문서 1절의 432개·589개는 작성 당시의 직업 catalog 상태다. 등록 과정에서 현재 catalog를 job_base.txt 기준 552개·809개로 보완했다.",
+        "52개는 문서 내 제작 후보이며 AST ID·제작 완료·실제 배치 기록이 아니다. 색상 칸·selector 미정으로 변형 레시피를 생성하지 않았다.",
+        "문서의 모델 수치·실행 검토는 기존 기록 인용이다. 이번 등록에서 Blender·Unity·WebGL을 실행하지 않았다."
+      ]
+    }
+  ]
+}

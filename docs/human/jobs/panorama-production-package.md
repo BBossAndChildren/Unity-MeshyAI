@@ -1,5 +1,7 @@
 # 파노라마 제작 자료 묶음
 
+현재 실행 결과: [신규 66장 생성 기록](panorama-generation-v001.md), [71개 공간 전체 에셋·사용처 명세 v003](workplace-common-assets-v003.md), [비용·토큰 실측](panorama-costs-v001.md). 아래 '생성 전' 관련 설명은 기획·업로드 시점의 이력이며 현재 결과 수량을 뜻하지 않습니다.
+
 - [71개 공간별 프롬프트](panorama-prompts-v002.md): 기존 참고도 5개, 신규 프롬프트 66개(종교시설 3종 포함).
 - [직업·공간·에셋 통합 검토 원문](asset-panorama-inventory-2026-10-31-v001.md): 내용 보존 스냅샷.
 - [직업 원본](job_base.txt) / [552개 직업 후보 catalog](../../machine/catalog/occupation-workplace-candidates.json)
