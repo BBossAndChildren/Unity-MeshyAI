@@ -1,0 +1,23 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>COM-01 바닥판 · 베타 검증</title>
+<style>body{margin:0;background:#f4f1eb;color:#292f35;font:16px system-ui}header{position:absolute;top:28px;left:32px;z-index:2}h1{font-size:24px;margin:8px 0}p{font-size:14px;color:#5c646b}button{padding:10px 16px;background:white;border:1px solid #c9c7c0;border-radius:8px;cursor:pointer;margin-right:8px}#status{max-width:600px}canvas{display:block;touch-action:none}</style>
+<header><small>MESHY → BLENDER → GLB → WEB</small><h1>Blender 직접 제작 비교</h1><p><a href="?model=old">기존 Meshy</a> · <a href="?model=direct">Blender 바닥판</a> · <a href="?model=surface">다음 소품: 바닥 표면</a> · <a href="?model=combined">조립 보기</a></p><p id="status">모델을 불러오는 중…</p><button id="wire">와이어프레임</button><button id="small">축소 보기</button><button id="reset">시점 초기화</button><p>드래그: 회전 · 휠: 확대/축소</p></header>
+<script type="importmap">{"imports":{"three":"/meshy/models/blender/AST-001/v001/preview/vendor/three.module.js","/meshy/models/blender/AST-001/v001/preview/utils/BufferGeometryUtils.js":"/meshy/models/blender/AST-001/v001/preview/vendor/BufferGeometryUtils.js"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from '/meshy/models/blender/AST-001/v001/preview/vendor/GLTFLoader.js';
+const status=document.querySelector('#status');
+const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);renderer.setClearColor(0xf4f1eb);document.body.appendChild(renderer.domElement);
+const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(35,innerWidth/innerHeight,.01,100);
+scene.add(new THREE.HemisphereLight(0xffffff,0x99938a,2.4));const sun=new THREE.DirectionalLight(0xffffff,3);sun.position.set(-3,5,4);scene.add(sun);
+let yaw=.6,pitch=.65,distance=5.6,model,wire=false,last=null;
+function draw(){const d=distance*Math.max(1,0.85/camera.aspect);camera.position.set(d*Math.cos(pitch)*Math.sin(yaw),d*Math.sin(pitch),d*Math.cos(pitch)*Math.cos(yaw));camera.lookAt(0,.05,0);renderer.render(scene,camera);if(model){window.betaEvidence={loaded:true,triangles:renderer.info.render.triangles,drawCalls:renderer.info.render.calls,textureCount:renderer.info.memory.textures,wireframe:wire,distance};}}
+const mode=new URLSearchParams(location.search).get('model')||'direct';const paths={old:'/meshy/models/blender/AST-001/v001/exports/rounded-base.glb',direct:'/meshy/models/blender/AST-001/v002/exports/model.glb',surface:'/meshy/models/blender/AST-002/v001/exports/model.glb',combined:'/meshy/models/blender/AST-001/v002/exports/model.glb'};try{const gltf=await new GLTFLoader().loadAsync(paths[mode]||paths.direct);model=gltf.scene;scene.add(model);if(mode==='combined'){const surface=await new GLTFLoader().loadAsync(paths.surface);surface.scene.position.y=.16;let shared;model.traverse(o=>{if(o.isMesh)shared=o.material});surface.scene.traverse(o=>{if(o.isMesh){o.material.map?.dispose();o.material.dispose();o.material=shared}});model.add(surface.scene);}draw();status.textContent=`실제 GLB 로드 완료 · ${renderer.info.render.triangles}삼각형 · ${mode} · 공용 팔레트 v001`;document.body.dataset.loaded='true';}catch(e){status.textContent='로드 실패: '+e.message;document.body.dataset.error=e.message;console.error(e);}
+renderer.domElement.addEventListener('pointerdown',e=>{last=[e.clientX,e.clientY];renderer.domElement.setPointerCapture(e.pointerId)});
+renderer.domElement.addEventListener('pointermove',e=>{if(!last)return;yaw-=(e.clientX-last[0])*.008;pitch=Math.max(-1.3,Math.min(1.4,pitch+(e.clientY-last[1])*.008));last=[e.clientX,e.clientY];draw()});
+renderer.domElement.addEventListener('pointerup',()=>last=null);
+renderer.domElement.addEventListener('wheel',e=>{e.preventDefault();distance=Math.max(2.8,Math.min(15,distance*Math.exp(e.deltaY*.001)));draw()},{passive:false});
+document.querySelector('#wire').onclick=()=>{wire=!wire;model?.traverse(o=>{if(o.isMesh)o.material.wireframe=wire});draw()};
+document.querySelector('#small').onclick=()=>{distance=distance>10?5.6:13;draw()};
+document.querySelector('#reset').onclick=()=>{yaw=.6;pitch=.65;distance=5.6;draw()};
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);draw()});
+</script></html>

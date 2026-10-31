@@ -1,0 +1,165 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-003",
+  "version": "v002",
+  "kind": "prop",
+  "generation_method": "meshy",
+  "target_web_environment": "Local Three.js browser, not Unity WebGL",
+  "props": [
+    {
+      "name": "COM-04 swivel office chair",
+      "triangles_per_instance": 964,
+      "instance_count": 1,
+      "total_triangles": 964
+    }
+  ],
+  "scene_triangles": 964,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3385072,
+  "checks": {
+    "prop_budget": {
+      "status": "pass",
+      "evidence": "Final GLB reimport",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "All reimported UVs reference approved color1 cells",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "Final GLB reimport",
+      "reason": null
+    },
+    "geometric_edges": {
+      "status": "pass",
+      "evidence": "0 boundary edges; 0 nonmanifold edges after coordinate weld",
+      "reason": null
+    },
+    "web_display": {
+      "status": "pass",
+      "evidence": "2026-10-31 local browser loaded both models; front, rear and reduced view inspected. Screenshot: meshy/models/original/AST-003/v001/previews/web-comparison.jpg",
+      "reason": null
+    },
+    "diorama_budget": {
+      "status": "not_applicable",
+      "evidence": null,
+      "reason": "One prop"
+    },
+    "semantic_color_boundaries": {
+      "status": "fail",
+      "evidence": "Front/rear rendered inspection after one spatial mask revision",
+      "reason": "UVs use valid palette cells, but armrest-to-cushion boundary remains approximate"
+    }
+  },
+  "remaining_issues": [
+    "Unity and physical device performance unverified",
+    "Full-resolution shared palette dominates transfer size",
+    "User design approval pending",
+    "Caster wheel pairs not clearly resolved in generated model",
+    "Armrest/cushion semantic color boundaries need manual refinement"
+  ],
+  "part_counts": {
+    "semantic_parts": "Single Meshy mesh; spatial UV assignment, no reliable named part separation"
+  },
+  "source_triangles": 964,
+  "palette_cells": {
+    "cushion": {
+      "texture_id": "color1",
+      "row": 3,
+      "column": 7,
+      "source_rect_px": [
+        549,
+        235,
+        78,
+        79
+      ],
+      "source_sample_px": [
+        588,
+        274
+      ],
+      "target_rect_px": [
+        549,
+        235,
+        78,
+        79
+      ],
+      "uv_center": [
+        0.23464912280701755,
+        0.8905502392344498
+      ],
+      "rgb": [
+        253,
+        169,
+        109
+      ]
+    },
+    "frame": {
+      "texture_id": "color1",
+      "row": 15,
+      "column": 12,
+      "source_rect_px": [
+        940,
+        1176,
+        79,
+        78
+      ],
+      "source_sample_px": [
+        979,
+        1215
+      ],
+      "target_rect_px": [
+        940,
+        1176,
+        79,
+        78
+      ],
+      "uv_center": [
+        0.39055023923444976,
+        0.5153508771929824
+      ],
+      "rgb": [
+        67,
+        67,
+        67
+      ]
+    },
+    "wheel": {
+      "texture_id": "color1",
+      "row": 15,
+      "column": 14,
+      "source_rect_px": [
+        1097,
+        1176,
+        79,
+        78
+      ],
+      "source_sample_px": [
+        1136,
+        1215
+      ],
+      "target_rect_px": [
+        1097,
+        1176,
+        79,
+        78
+      ],
+      "uv_center": [
+        0.4531499202551834,
+        0.5153508771929824
+      ],
+      "rgb": [
+        33,
+        33,
+        32
+      ]
+    }
+  },
+  "processing_seconds": 1.076
+}

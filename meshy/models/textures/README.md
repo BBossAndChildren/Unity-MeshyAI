@@ -1,13 +1,25 @@
-# 공용 텍스처 사용 기준
+# 팔레트 원본과 최종 공용 텍스처
 
-| 파일 | 역할 | 사용 기준 |
-|---|---|---|
-| [color1.jpg](color1.jpg) | 기본 채색 | 모든 모델의 일반적인 채색에 우선 사용 |
-| [color2.jpg](color2.jpg) | 강조·원색 | 강조 부분이나 선명한 원색이 필요할 때만 보조로 사용 |
+| 원본 | 역할 |
+|---|---|
+| [color1.jpg](color1.jpg) | 피부·옷·몸통·지형 등 넓은 기본 면의 파스텔 색 |
+| [color2.jpg](color2.jpg) | 강조선·눈·입·작은 장식·포인트의 원색·대비색 |
 
-두 파일은 사용자가 제공한 원본입니다. 임의 색상 변경·교체·추가 텍스처 제작을 하지 않습니다.
-기본 에셋은 color1만 참조하고, color2가 필요한 에셋은 두 파일을 참조하며 accent_reason에 이유를 적습니다.
-모델별 텍스처를 만들지 않고 공용 팔레트에 UV와 재질을 맞춥니다.
-Unity에서는 사용한 파일을 Assets/Shared/Textures/에 동일 바이트로 한 번씩 복사해 공유합니다.
+두 원본은 그대로 보존합니다. 실제 모델에는 두 원본 칸을 함께 담은 정사각형 PNG 한 장을 사용합니다.
 
-[기계용 텍스처 목록](../../../docs/machine/catalog/shared-textures.json)
+```text
+textures/
+  color1.jpg
+  color2.jpg
+  palettes/<버전>/
+    palette.png    색 변화 없이 합친 최종 공용 텍스처
+    mapping.json   원본·행·열·최종 UV 대응표
+```
+
+보간·색상 보정·손실 압축 없이 원본 칸을 재배치하고 글자·격자선·무늬·그림자를 추가하지 않습니다.
+기본 면은 color1 출처 칸, 강조 영역은 color2 출처 칸을 UV로 선택합니다. 색상 수를 4개로 제한하지 않습니다.
+Unity에는 최종 PNG를 Assets/Shared/Textures/<팔레트 버전>/에 동일 바이트로 복사해 공유합니다.
+
+[원본 목록](../../../docs/machine/catalog/shared-textures.json) · [최종 팔레트 목록](../../../docs/machine/catalog/palettes.json) · [제작 기준 요약](../../../docs/human/guides/web-lowpoly.md)
+
+현재 최종 PNG와 대응표는 아직 생성되지 않았습니다.

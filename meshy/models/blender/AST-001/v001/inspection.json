@@ -1,0 +1,97 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-001",
+  "version": "v001",
+  "kind": "prop",
+  "target_web_environment": "Local WebGL browser preview (not Unity WebGL)",
+  "props": [
+    {
+      "name": "COM-01 Rounded Base",
+      "triangles_per_instance": 120,
+      "instance_count": 1,
+      "total_triangles": 120
+    }
+  ],
+  "scene_triangles": 120,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3295580,
+  "checks": {
+    "prop_budget": {
+      "status": "pass",
+      "evidence": "Reimported GLB: 120 triangles",
+      "reason": null
+    },
+    "palette_material": {
+      "status": "pass",
+      "evidence": "Reimported material and image nodes counted",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Reimported Blender UV centers match color1 row13 col0",
+      "reason": null
+    },
+    "original_palette_pixels": {
+      "status": "pass",
+      "evidence": "build_palette.py compared decoded original pixels",
+      "reason": null
+    },
+    "closed_mesh": {
+      "status": "pass",
+      "evidence": "Reimported geometric connectivity checked after welding coincident export normal splits at 1e-6 m",
+      "reason": null
+    },
+    "web_display": {
+      "status": "pass",
+      "evidence": "2026-10-31 Codex IAB localhost: actual GLB loaded, 120 triangles shown; full and reduced view and wireframe inspected. Screenshot: meshy/models/original/AST-001/v001/previews/web.jpg",
+      "reason": null
+    },
+    "diorama_budget": {
+      "status": "not_applicable",
+      "evidence": null,
+      "reason": "Single prop beta"
+    }
+  },
+  "remaining_issues": [
+    "Palette pixel-preserving layout makes GLB 3295580 bytes; compact palette optimization pending",
+    "User silhouette review pending",
+    "Unity integration and Unity WebGL build not performed"
+  ],
+  "source_triangles": 440,
+  "mesh_correction": "Preserved Meshy source; radial deformation to exponent-8 rounded square, surface flattening, convex hull repair, planar dissolve and triangulation",
+  "palette_selection": {
+    "texture_id": "color1",
+    "row": 13,
+    "column": 0,
+    "source_rect_px": [
+      0,
+      1019,
+      78,
+      78
+    ],
+    "source_sample_px": [
+      39,
+      1058
+    ],
+    "target_rect_px": [
+      0,
+      1019,
+      78,
+      78
+    ],
+    "uv_center": [
+      0.015749601275917065,
+      0.5779505582137161
+    ],
+    "rgb": [
+      243,
+      231,
+      208
+    ]
+  }
+}
