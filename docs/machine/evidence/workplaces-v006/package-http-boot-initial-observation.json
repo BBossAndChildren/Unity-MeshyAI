@@ -1,0 +1,12 @@
+{
+  "schema_version": 3,
+  "build_id": "workplaces-v006",
+  "checked_at": "2026-10-30T22:56:06.053Z",
+  "environment": "Actual freshly extracted ZIP under HTTP; Windows Chrome SwiftShader",
+  "cases": [],
+  "errors": [],
+  "status": "fail",
+  "error": "TypeError: Cannot read properties of undefined (reading 'x')\n    at [eval]:14:233",
+  "classification": "harness_observation",
+  "reason": "Initial scene-load diagnostic precedes first GUI button layout; attempt read button before it existed. Retry waits for actual visible PAN001 button."
+}

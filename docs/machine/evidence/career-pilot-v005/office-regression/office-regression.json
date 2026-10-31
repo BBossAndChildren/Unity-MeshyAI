@@ -1,0 +1,152 @@
+{
+  "schema_version": 3,
+  "build_id": "career-pilot-v005",
+  "checked_at": "2026-10-31T04:27:31.305Z",
+  "environment": "Actual HTTP WebGL Chrome SwiftShader; public start/end controls plus actual UI input; readonly diagnostics",
+  "cases": [
+    {
+      "name": "office_external_start_actual_scene",
+      "status": "pass"
+    },
+    {
+      "name": "office_date_error_corrected_actual_document",
+      "status": "pass"
+    },
+    {
+      "name": "office_print_quantity_retry_and_duplicate_lock",
+      "status": "pass"
+    },
+    {
+      "name": "office_classification_error_and_actual_drag",
+      "status": "pass"
+    }
+  ],
+  "errors": [],
+  "status": "fail",
+  "error": "Error: control handoff-title\n    at check ([eval]:8:118)\n    at visible ([eval]:10:159)\n    at async input ([eval]:12:38)\n    at async [eval]:27:1",
+  "final_state": {
+    "session": {
+      "state": "filed",
+      "message": "보관 완료. 제목·날짜·부수·보관처를 동료에게 요약해 인계하세요.",
+      "requestRevision": 1,
+      "confirmedRequestRevision": 1,
+      "documentRevision": 2,
+      "savedRevision": 2,
+      "expectedCopies": 2,
+      "printCompletions": 1,
+      "printedCopies": 2,
+      "printedDocumentRevision": 2,
+      "printedRequestRevision": 1,
+      "run": 2,
+      "paused": false,
+      "changed": false,
+      "complete": false,
+      "date": "11월 2일",
+      "title": "팀 회의자료",
+      "printedDocumentId": "DOC-001",
+      "folder": "회의자료"
+    },
+    "panel": "cabinet",
+    "feedback": "보관 완료. 제목·날짜·부수·보관처를 동료에게 요약해 인계하세요.",
+    "runId": "run-7a201f4eff364424af6316dd9abff832",
+    "experienceId": "17cb3967-b27e-4332-89e4-a11dfa78b3f4",
+    "viewState": "working",
+    "focusedControl": "",
+    "storedBin": "회의자료",
+    "focusedObject": 2,
+    "focusedAction": 0,
+    "renderedCompletedSheets": 0,
+    "targets": [
+      {
+        "id": "monitor",
+        "x": -763.1515502929688,
+        "y": 325.418212890625
+      },
+      {
+        "id": "copier",
+        "x": -717.3616943359375,
+        "y": 445.9305725097656
+      },
+      {
+        "id": "cabinet",
+        "x": 383,
+        "y": 413.00006103515625
+      }
+    ],
+    "buttons": [
+      {
+        "label": "사무실로 돌아가기 [Esc]",
+        "x": 1041.066650390625,
+        "y": 663.1333618164062,
+        "enabled": true,
+        "insideScroll": false
+      }
+    ],
+    "inputs": [],
+    "sorting": [
+      {
+        "name": "document-bundle",
+        "x": 856.2666625976562,
+        "y": 374.26666259765625
+      },
+      {
+        "name": "회의자료",
+        "x": 1098.933349609375,
+        "y": 296.79998779296875
+      },
+      {
+        "name": "인사자료",
+        "x": 1098.933349609375,
+        "y": 369.6000061035156
+      },
+      {
+        "name": "회계자료",
+        "x": 1098.933349609375,
+        "y": 442.3999938964844
+      }
+    ],
+    "triangles": 4308,
+    "interactiveObjects": 3,
+    "visibleRenderers": 1,
+    "paletteWidth": 2508,
+    "paletteHeight": 2508,
+    "unity": "6000.3.26f1",
+    "closeup": true,
+    "reducedMotion": false,
+    "cameraDistance": 2.499124765396118,
+    "transitionSeconds": 0.44999998807907104,
+    "cameraPosition": {
+      "x": -1.2886924743652344,
+      "y": 1.7321887016296387,
+      "z": 0.6561355590820312
+    },
+    "cameraRotation": {
+      "x": 0.026555480435490608,
+      "y": 0.9720740914344788,
+      "z": -0.18895207345485687,
+      "w": 0.13661611080169678
+    },
+    "cameraRect": {
+      "serializedVersion": "2",
+      "x": 0.04888888821005821,
+      "y": 0.18333333730697632,
+      "width": 0.43425923585891724,
+      "height": 0.6499999761581421
+    },
+    "scrollClip": {
+      "serializedVersion": "2",
+      "x": 781.5999755859375,
+      "y": 231.4666748046875,
+      "width": 518.933349609375,
+      "height": 407.86663818359375
+    },
+    "cameraFov": 36
+  },
+  "finished_at": "2026-10-31T04:28:03.088Z",
+  "failure_classification": "resolved_harness_input_diagnostic_publication_wait",
+  "resolution": {
+    "same_binary": true,
+    "evidence": "docs/machine/evidence/career-pilot-v005/office-regression-r002/office-regression.json",
+    "note": "Filed workflow state was observed before next GUI input diagnostics; helper now waits for actual handoff inputs. Original failure status/error/screenshot retained."
+  }
+}

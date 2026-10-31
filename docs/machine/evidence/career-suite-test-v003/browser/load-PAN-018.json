@@ -1,0 +1,98 @@
+{
+  "schema_version": 3,
+  "scope": "actual API launch and end, not fullworkflow",
+  "room": "PAN-018",
+  "objects": [
+    {
+      "id": "object-1",
+      "name": "안전 가드",
+      "assetId": "AST-1076",
+      "assetVersion": "v001",
+      "instanceId": "Room_PAN-018/AST-1076-008",
+      "nodeName": "AST-1076-008",
+      "step": 0,
+      "x": 623.0966,
+      "y": 271.2649,
+      "inFront": true,
+      "renderers": 9,
+      "visibleRenderers": 9,
+      "colliders": 9
+    },
+    {
+      "id": "object-2",
+      "name": "제어 패널",
+      "assetId": "AST-1075",
+      "assetVersion": "v001",
+      "instanceId": "Room_PAN-018/AST-1075-007",
+      "nodeName": "AST-1075-007",
+      "step": 1,
+      "x": 593.9489,
+      "y": 377.6627,
+      "inFront": true,
+      "renderers": 6,
+      "visibleRenderers": 6,
+      "colliders": 6
+    },
+    {
+      "id": "object-3",
+      "name": "완성품 상자",
+      "assetId": "AST-1074",
+      "assetVersion": "v001",
+      "instanceId": "Room_PAN-018/AST-1074-006",
+      "nodeName": "AST-1074-006",
+      "step": 2,
+      "x": 821.2541,
+      "y": 359.5261,
+      "inFront": true,
+      "renderers": 3,
+      "visibleRenderers": 3,
+      "colliders": 3
+    }
+  ],
+  "result": {
+    "type": "experience.ended",
+    "roomId": "PAN-018",
+    "experienceId": "5f8c2f86-06ee-46de-a2d0-8f9f8ddf6a3d",
+    "eventId": "evt-151169a2e3c84ca394e5423f9ebb4e32",
+    "sequence": 25,
+    "result": {
+      "outcome": "aborted",
+      "success": false,
+      "completionCode": "USER_EXITED_BEFORE_START",
+      "data": {
+        "partialResults": [
+          {
+            "stepId": "work-1",
+            "completed": false,
+            "result": null
+          },
+          {
+            "stepId": "work-2",
+            "completed": false,
+            "result": null
+          },
+          {
+            "stepId": "work-3",
+            "completed": false,
+            "result": null
+          }
+        ],
+        "scenarioComplete": false
+      }
+    },
+    "process": {
+      "scope": "scenario",
+      "measurementStatus": "complete",
+      "measurementNote": null,
+      "attemptCount": 0,
+      "navigationBackCount": 0,
+      "backtrackCount": 0,
+      "retryCount": 0,
+      "mistakeCount": 0,
+      "repeatedMistakeCount": 0,
+      "helpRequestCount": 0,
+      "guidanceUsed": false,
+      "elapsedActiveMs": 1040
+    }
+  }
+}

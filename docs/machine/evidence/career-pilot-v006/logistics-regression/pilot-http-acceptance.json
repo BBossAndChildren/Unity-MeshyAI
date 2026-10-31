@@ -1,0 +1,91 @@
+{
+  "schema_version": 3,
+  "build_id": "career-pilot-v006",
+  "environment": "Actual Unity WebGL HTTP Windows Chrome SwiftShader; UI input only; diagnostics readonly",
+  "checked_at": "2026-10-31T05:22:51.212Z",
+  "cases": [
+    {
+      "name": "click_without_drag_preserves_positions",
+      "status": "pass"
+    },
+    {
+      "name": "wrong_visible_slot_rejected",
+      "step": 0,
+      "status": "pass"
+    },
+    {
+      "name": "ordinary_inside_slot_drop_completes",
+      "step": 0,
+      "status": "pass",
+      "input": {
+        "tileX": [
+          0.2,
+          0.5,
+          0.8
+        ],
+        "tileY": [
+          0.35,
+          0.35,
+          0.35
+        ],
+        "settings": [],
+        "fields": [],
+        "observed": [],
+        "validationErrors": [],
+        "elapsed": 0,
+        "completed": true,
+        "running": false,
+        "artifact": null
+      },
+      "targets": [
+        {
+          "kind": "target",
+          "id": "item0",
+          "label": "북부 / A",
+          "x": 925.3333,
+          "y": 362.3667,
+          "left": 863.7333,
+          "top": 334.8333,
+          "width": 123.2,
+          "height": 55.06665
+        },
+        {
+          "kind": "target",
+          "id": "item1",
+          "label": "동부 / B",
+          "x": 1079.333,
+          "y": 362.3667,
+          "left": 1017.733,
+          "top": 334.8333,
+          "width": 123.2,
+          "height": 55.06665
+        },
+        {
+          "kind": "target",
+          "id": "item2",
+          "label": "남부 / C",
+          "x": 1233.333,
+          "y": 362.3667,
+          "left": 1171.733,
+          "top": 334.8333,
+          "width": 123.2,
+          "height": 55.06665
+        }
+      ]
+    },
+    {
+      "name": "wrong_visible_slot_rejected",
+      "step": 1,
+      "status": "pass"
+    },
+    {
+      "name": "logistics-regression",
+      "scenario_id": "career-net-215-experience",
+      "status": "fail",
+      "classification": "untriaged",
+      "error": "frame.waitForFunction: Timeout 10000ms exceeded.\n    at logisticsRegression ([eval]:189:103)\n    at async [eval]:206:46"
+    }
+  ],
+  "errors": [],
+  "currentCareer": "career-net-215-experience"
+}

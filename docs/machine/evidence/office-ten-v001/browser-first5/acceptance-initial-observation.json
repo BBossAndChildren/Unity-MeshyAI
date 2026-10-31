@@ -1,0 +1,191 @@
+{
+  "schema_version": 3,
+  "environment": "Actual compiled Unity WebGL HTTP, Chrome Windows SwiftShader, real mouse/keyboard/CDP Unicode char input; expected data drives inputs, never business-state injection",
+  "jobs": [
+    {
+      "scenario_id": "career-net-208-experience",
+      "name": "국제무역사무원",
+      "status": "fail",
+      "cases": [
+        {
+          "name": "actual_initial_error_rejected",
+          "status": "pass"
+        },
+        {
+          "name": "actual_profession_work_saved_revision1",
+          "status": "pass"
+        },
+        {
+          "name": "camera_and_background_restore",
+          "status": "pass"
+        },
+        {
+          "name": "actual_async_print_pause_resume_and_close",
+          "status": "pass"
+        },
+        {
+          "name": "actual_print_settings_async_once_and_completed_sheets",
+          "status": "pass"
+        }
+      ],
+      "evidence": [
+        "career-net-208-experience-printed.png"
+      ],
+      "error": "page.waitForFunction: Timeout 20000ms exceeded.\n    at until ([eval]:8:40)\n    at open ([eval]:12:185)\n    at async workJob ([eval]:28:16)\n    at async [eval]:33:49",
+      "snapshot": {
+        "scenarioId": "career-net-208-experience",
+        "scenarioVersion": "v002",
+        "occupationId": "career-net-208",
+        "name": "국제무역사무원",
+        "panel": "",
+        "feedback": "배경 물건입니다. 모니터·복합기·뒤쪽 수납장 중 현재 단계의 물건을 선택하세요.",
+        "viewState": "exploring",
+        "focusedControl": "",
+        "runId": "run-e50cea94b0734d39977cc616e69f0d40",
+        "experienceId": "experience-3790384269404d309e65f081a91a5566",
+        "session": {
+          "stepIndex": 2,
+          "requestRevision": 1,
+          "documentRevision": 1,
+          "run": 1,
+          "complete": false,
+          "paused": false,
+          "busy": false,
+          "state": "step_2",
+          "message": "송장 TR-17 · 다음 업무: 보관 및 인계"
+        },
+        "targets": [
+          {
+            "id": "monitor",
+            "x": 401.7912902832031,
+            "y": 374.0255126953125
+          },
+          {
+            "id": "copier",
+            "x": 333.3385009765625,
+            "y": 374.8687744140625
+          },
+          {
+            "id": "cabinet",
+            "x": 578.4428100585938,
+            "y": 390.83172607421875
+          }
+        ],
+        "buttons": [
+          {
+            "label": "직업 선택",
+            "x": 697.5,
+            "y": 49,
+            "enabled": true
+          },
+          {
+            "label": "일시정지 [P]",
+            "x": 880,
+            "y": 49,
+            "enabled": true
+          },
+          {
+            "label": "처음부터 [R]",
+            "x": 1067.5,
+            "y": 49,
+            "enabled": true
+          },
+          {
+            "label": "체험 종료",
+            "x": 1290,
+            "y": 49,
+            "enabled": true
+          },
+          {
+            "label": "1 · 포장명세와 상업송장 수량 맞추기",
+            "x": 1187,
+            "y": 476,
+            "enabled": true
+          },
+          {
+            "label": "2 · 최신 결과물 출력",
+            "x": 1187,
+            "y": 548,
+            "enabled": true
+          },
+          {
+            "label": "3 · 보관 및 인계",
+            "x": 1187,
+            "y": 620,
+            "enabled": true
+          },
+          {
+            "label": "화면 움직임 줄이기: 켜짐",
+            "x": 1187,
+            "y": 695,
+            "enabled": true
+          }
+        ],
+        "inputs": [],
+        "sorting": [],
+        "interactiveObjects": 3,
+        "triangles": 4308,
+        "visibleRenderers": 30,
+        "paletteWidth": 2508,
+        "paletteHeight": 2508,
+        "renderedCompletedSheets": 0,
+        "work": [
+          {
+            "stepId": "prepare",
+            "values": [
+              "50",
+              "12",
+              "600"
+            ],
+            "placements": []
+          },
+          {
+            "stepId": "print",
+            "values": [
+              "TR-17",
+              "1",
+              "2"
+            ],
+            "placements": []
+          },
+          {
+            "stepId": "file",
+            "values": [
+              "초안",
+              "0"
+            ],
+            "placements": [
+              ""
+            ]
+          }
+        ],
+        "selectedItem": -1,
+        "reducedMotion": true,
+        "transitionSeconds": 0.44999998807907104,
+        "cameraPosition": {
+          "x": -3.7753334045410156,
+          "y": 6.174170970916748,
+          "z": 7.10037088394165
+        },
+        "cameraRotation": {
+          "x": 0.07073108106851578,
+          "y": 0.9278984665870667,
+          "z": -0.28368693590164185,
+          "w": 0.23135101795196533
+        },
+        "cameraRect": {
+          "serializedVersion": "2",
+          "x": 0,
+          "y": 0.14499999582767487,
+          "width": 0.6499999761581421,
+          "height": 0.7200000286102295
+        },
+        "cameraFov": 40
+      }
+    }
+  ],
+  "errors": [],
+  "url": "http://127.0.0.1:8178/office-ten-v001/",
+  "classification": "harness_observation",
+  "reason": "Cabinet bounds center ray intersected background; bounds center is not guaranteed a visible selectable mesh surface. Retry uses actual keyboard3 equivalent after observed miss."
+}

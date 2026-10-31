@@ -1,0 +1,47 @@
+{
+  "schema_version": 3,
+  "package_id": "career-preview-v001",
+  "status": "pass_for_intermediate_testing_with_limits",
+  "checked_at": "2026-10-31T15:44:59.225302+09:00",
+  "checks": {
+    "actual_completed_experiences": 10,
+    "actual_completed_work_surfaces": 30,
+    "actual_runtime_events": 400,
+    "reliability_cases": 13,
+    "cross_origin_cases": 4,
+    "actual_react_receipts": "pass",
+    "local_disk_storage_ack": "pass",
+    "runtime_event_contract_sample_review": "pass",
+    "compiled_unity_bytes_unchanged": "pass",
+    "asset_palette_paths_references": "pass",
+    "source_and_existing_artifacts_preserved": true,
+    "new_unity_compile": false,
+    "new_blender_execution": false,
+    "external_service_integration": "unverified",
+    "server_v003_reconciliation": "not_implemented"
+  },
+  "evidence": [
+    "http-playthrough.json",
+    "http-reliability.json",
+    "http-cross-origin.json",
+    "source-reference-review.json"
+  ],
+  "limitations": [
+    "Existing binary retains 11 rooms including unsupported office comparison scene; no new Unity compile or physical stripping.",
+    "External backend/auth/storage/lease/fence/v003 reconciliation not implemented or verified.",
+    "Only basic workflows; optional branches, physical mobile and other browsers unverified.",
+    "Direct raw Unity ALREADY_ENDED lacks original event reference; supplied client resolves originalEventId from actual receipt."
+  ],
+  "usage_measurement": {
+    "meshy_calls": 0,
+    "meshy_credits": 0,
+    "paid_image_calls": 0,
+    "conversation_tokens": null,
+    "input_tokens": null,
+    "cached_input_tokens": null,
+    "output_tokens": null,
+    "active_effort_seconds": null,
+    "unmeasured_reason": "Runtime does not expose token breakdown or measured effort duration."
+  },
+  "package_extraction_verification": "pass; see package-integrity.json (post-package verification)"
+}

@@ -1,0 +1,464 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using UnityEngine;
+
+namespace CareerExperience
+{
+    // The ledger is the single counting authority. Transport replays never add
+    // ledger entries. Dictionaries allow protocol null values without treating
+    // missing measurement as false/zero through Unity's field serializer.
+    public sealed class CareerProtocol : MonoBehaviour
+    {
+        public const string ScenarioId = "career-net-253-office-documents";
+        public const string ScenarioVersion = "v002";
+        const string Room = "PAN-001";
+        static CareerProtocol instance;
+        public OfficeSession Session { get; private set; }
+        public bool Ended { get; private set; }
+        public string RunId { get; private set; }
+        public string ExperienceId { get; private set; }
+        public string EndSummary { get; private set; }
+        public bool CanStartAnother=>Session==null||Ended||(standalone&&!workStarted);
+        static readonly Dictionary<string,string> transportControls=new Dictionary<string,string>();
+        static readonly Dictionary<string,long> transportSequences=new Dictionary<string,long>();
+        public static long NextSequence(string session){long next=transportSequences.TryGetValue(session,out long old)?old+1:1;transportSequences[session]=next;return next;}
+        OfficeDirectExperience view;
+        string sessionId, buildId, currentRoom, lastObject, lastStep, printAttempt;
+        string endedEventId;
+        bool workStarted, focused = true, autoPaused, standalone = true, scenarioComplete;
+        double activeMs, checkpointAt;
+        readonly Dictionary<string, double> interactionMs = new Dictionary<string, double>();
+        readonly List<Entry> entries = new List<Entry>();
+        readonly List<Dictionary<string, object>> previousRuns = new List<Dictionary<string, object>>();
+        readonly Dictionary<string, string> responses = new Dictionary<string, string>();
+        readonly Dictionary<string, string> requests = new Dictionary<string, string>();
+        readonly HashSet<string> usedExperiences = new HashSet<string>();
+        Control pendingStart;
+        [DllImport("__Internal")] static extern void CareerPublish(string json);
+        [DllImport("__Internal")] static extern void CareerCheckpoint(string json);
+        [Serializable] class Control
+        {
+            public int schemaVersion;
+            public string protocol, requestId, action, sessionId, experienceId, roomId, scenarioId, scenarioVersion, reason;
+        }
+        sealed class Entry
+        {
+            public string id, run, session, experience, type, obj, step, workItem, attempt, failure, reasonKey;
+            public string[] reasons = Array.Empty<string>();
+            public int revision;
+            public long sequence;
+            public bool submitted, retry, repeated, isAssistance;
+            public Dictionary<string, object> envelope;
+            public string json;
+        }
+        static string Id(string prefix) => prefix + Guid.NewGuid().ToString("N");
+        static Dictionary<string, object> D(params object[] values)
+        {
+            var result = new Dictionary<string, object>();
+            for (int i = 0; i < values.Length; i += 2) result.Add((string)values[i], values[i + 1]);
+            return result;
+        }
+        public static CareerProtocol Get()
+        {
+            if (instance == null) instance = new GameObject("CareerProtocol").AddComponent<CareerProtocol>();
+            return instance;
+        }
+        void Awake()
+        {
+            if (instance != null && instance != this) { Destroy(gameObject); return; }
+            instance = this; gameObject.name = "CareerProtocol"; DontDestroyOnLoad(gameObject);
+            sessionId = Id("session-"); ExperienceId = Id("experience-");
+            var registry = Resources.Load<TextAsset>("workplace-registry");
+            buildId = registry == null ? "unregistered-editor" : JsonUtility.FromJson<WorkplaceRegistry>(registry.text).buildId;
+        }
+        void OnDestroy() { if (instance == this) instance = null; }
+        void Update()
+        {
+            if(PilotRuntime.HasLiveExperience)return;
+            if (Session != null && currentRoom == Room && view != null && focused && !Session.Paused && !Ended && !scenarioComplete)
+            {
+                double delta = Time.unscaledDeltaTime * 1000.0; activeMs += delta;
+                string obj = view.CurrentObject, step = SurfaceStep(obj);
+                if (obj != null)
+                {
+                    string key = ScopeKey(obj, step);
+                    interactionMs[key] = (interactionMs.TryGetValue(key, out double before) ? before : 0) + delta;
+                }
+            }
+            if (Session != null && Time.unscaledTimeAsDouble - checkpointAt >= 1)
+            {
+                checkpointAt = Time.unscaledTimeAsDouble;
+                PublishCheckpoint();
+            }
+        }
+        public OfficeSession Attach(OfficeData data, OfficeDirectExperience controller)
+        {
+            view = controller;
+            string fromRoom=currentRoom;currentRoom=Room;
+            if (Session == null) Session = new OfficeSession(data);
+            if (pendingStart != null)
+            {
+                var request = pendingStart; pendingStart = null; StartExternal(request);
+            }
+            else if (RunId == null) StartRun(null);
+            if(autoPaused&&!Ended){if(Session.Paused)Session.TogglePause();autoPaused=false;Pause(false);}
+            Emit("scene.entered","enter_room",null,null,D("roomId",Room,"fromNavigationRoomId",fromRoom,"scenarioAvailable",true));
+            return Session;
+        }
+        public void Detach(OfficeDirectExperience controller) { if (view == controller) view = null; }
+        public void OnRoomChanged(string roomId)
+        {
+            if(PilotRuntime.HasLiveExperience){currentRoom=roomId;return;}
+            if (currentRoom == roomId) return;
+            if (Session != null && RunId != null && currentRoom == Room)
+                Emit("scene.exited", "leave_room", null, null, D("fromRoomId", currentRoom, "toRoomId", roomId));
+            if (currentRoom == Room && roomId != Room && Session != null && !Ended && !Session.Paused)
+            {
+                Session.TogglePause(); autoPaused = true; Pause(true);
+            }
+            currentRoom = roomId;
+            if (roomId == Room && Session != null && autoPaused && !Ended)
+            {
+                if (Session.Paused) Session.TogglePause(); autoPaused = false; Pause(false);
+            }
+            if (Session != null && RunId != null&&roomId==Room)
+                Emit("scene.entered", "enter_room", null, null, D("roomId", roomId, "scenarioAvailable", roomId == Room));
+        }
+        public void RoomChanged(string roomId) => OnRoomChanged(roomId);
+        void StartRun(string requestId)
+        {
+            usedExperiences.Add(ExperienceId);
+            RunId = Id("run-"); activeMs = 0; interactionMs.Clear(); workStarted = false;
+            scenarioComplete = false; lastObject = lastStep = printAttempt = null; EndSummary = null;
+            Emit("scenario.started", "start_scenario", null, null, D("changePractice", Session.ChangePractice));
+            if (requestId != null)
+            {
+                Entry started = Emit("experience.started", "start_experience", null, null, D("ready", true), requestId: requestId);
+                responses[requestId] = started.json;
+            }
+            PublishCheckpoint();
+        }
+        static string Step(string action) => action.StartsWith("ask_") || action == "confirm" ? "confirm" : action == "edit_document" || action == "save" ? "review" : action == "print" ? "print" : action == "file" ? "file" : action == "handoff" ? "handoff" : action;
+        static string StepForState(OfficeStage state) => state == OfficeStage.request_pending ? "confirm" : state == OfficeStage.request_confirmed ? "review" : state == OfficeStage.document_saved || state == OfficeStage.printing ? "print" : state == OfficeStage.print_ready ? "file" : "handoff";
+        static string ObjectStep(string obj) => obj == "monitor" ? "review" : obj == "copier" ? "print" : "file";
+        string SurfaceStep(string obj)=>obj=="monitor"?(Session.Stage==OfficeStage.request_pending?"confirm":"review"):obj=="copier"?"print":obj=="cabinet"?(Session.Stage>=OfficeStage.filed?"handoff":"file"):StepForState(Session.Stage);
+        static string ScopeKey(string obj, string step) => obj + "|" + step;
+        public void Open(string obj)
+        {
+            if (Ended) return;
+            string targetStep = SurfaceStep(obj);
+            if (lastStep != null && Rank(targetStep) < Rank(lastStep) && Session.Stage != OfficeStage.request_pending)
+                Emit("workflow.backtracked", "recheck_previous_work", obj, targetStep, D("fromStepId", lastStep, "toStepId", targetStep, "reasonCode", "USER_RECHECK"));
+            lastObject = obj;lastStep=targetStep;
+            Emit("object.selected", "select_object", obj, null, D());
+            Emit("interaction.opened", "open_work_surface", obj, targetStep, D("readOnly", Session.Stage == OfficeStage.complete));
+        }
+        static int Rank(string step) => step == "confirm" ? 0 : step == "review" ? 1 : step == "print" ? 2 : step == "file" ? 3 : step == "handoff" ? 4 : -1;
+        public void Close(string obj)
+        {
+            if (Ended) return;
+            string step=SurfaceStep(obj);
+            Emit("interaction.closed", "close_work_surface", obj, step, D("draftPreserved", true));
+            Emit("navigation.back", "return_to_room", obj, step, D("reasonCode", "NORMAL_RETURN"));
+        }
+        public void Pause(bool paused)
+        {
+            if (!Ended && RunId != null) Emit(paused ? "scenario.paused" : "scenario.resumed", paused ? "pause" : "resume", null, null, D());
+        }
+        public void SetFocus(bool value) { focused = value; }
+        public void Progress(string control,string value,string obj)
+        {
+            if(Ended||Session.Paused)return;
+            workStarted=true;lastObject=obj;lastStep=control.StartsWith("document-")?"review":control.StartsWith("handoff-")?"handoff":StepForState(Session.Stage);
+            Emit("interaction.progress","edit_field",obj,lastStep,D("controlId",control,"value",value,"draft",true));
+        }
+        public string RequestHelp()
+        {
+            if(Ended)return "종료된 체험입니다.";
+            Emit("guidance.requested","request_help",view==null?null:view.CurrentObject,StepForState(Session.Stage),D());
+            const string help="요청을 모두 질문하고 확인 → 문서 회의일을 11월 2일로 수정·저장 → 최신본을 요청 부수로 출력 → 회의자료 칸으로 묶음을 이동 → 인계 네 항목 확인.";
+            Emit("guidance.presented","show_help",view==null?null:view.CurrentObject,StepForState(Session.Stage),D("isAssistance",true,"reasonCode","USER_REQUESTED_HINT","text",help),assistance:true);
+            return help;
+        }
+        public void Action(string action, string obj, OfficeSnapshot before, OfficeSnapshot after, bool ok, bool attempt)
+        {
+            if (Ended || before.complete || before.paused) return;
+            // Locking, completed-work reopening, identical edits and system states
+            // do not manufacture attempts or player failures.
+            if (action == "print" && before.state == "printing") return;
+            string step = Step(action), item = Session.Data.document_id;
+            string attemptId = attempt ? Id("attempt-") : null;
+            workStarted = true; lastObject = obj; lastStep = step;
+            string key = step + "|" + obj + "|" + item + "|" + before.requestRevision;
+            Entry preceding=CurrentEntries.LastOrDefault(e=>e.reasonKey==key&&(e.submitted||e.failure!=null));
+            bool retry = attempt && preceding!=null&&preceding.failure!=null;
+            if(retry)Emit("interaction.retry_requested",action,obj,step,D("reasonCode","RESUBMIT_AFTER_FAILED_ATTEMPT"),attemptId:attemptId,requestRevision:before.requestRevision);
+            var details = D("isAttempt", attempt, "isRetry", retry, "input", view == null ? null : view.ActualInput(action));
+            Entry started = Emit("interaction.started", action, obj, step, details, attemptId: attemptId, submitted: attempt, retry: retry, reasonKey:key,requestRevision: before.requestRevision);
+            if (!ok)
+            {
+                string[] reasons = FailureReasons(action, before, after);
+                string failure = Id("failure-");
+                bool repeated = entries.Any(e => e.run == RunId && e.failure != null && e.reasonKey == key && e.reasons.Intersect(reasons).Any());
+                Emit("interaction.validation_failed", action, obj, step,
+                    D("failureId", failure, "reasonCodes", reasons, "faultSource", "player", "expected", Expected(action), "actual", view == null ? after.message : view.ActualInput(action), "feedback", after.message),
+                    "failed", "VALIDATION_FAILED", attemptId: attemptId, failure: failure, reasons: reasons, repeated: repeated, reasonKey: key, requestRevision: before.requestRevision);
+                return;
+            }
+            if (action == "print") { printAttempt = attemptId; Emit("interaction.progress", action, obj, step, D("state", "printing", "jobId", printAttempt), attemptId: attemptId); }
+            else if (attempt) Emit("interaction.completed", action, obj, step, D("state", after.state), "completed", action.ToUpperInvariant() + "_COMPLETED", attemptId: attemptId);
+            else Emit("interaction.progress", action, obj, step, D("state", after.state, "documentRevision", after.documentRevision));
+            if (after.requestRevision != before.requestRevision)
+                Emit("request.changed", "request_change", null, null, D("previousRevision", before.requestRevision, "requestRevision", after.requestRevision, "copies", after.expectedCopies, "reasonCode", "REQUEST_CHANGED"));
+            if (after.complete && !scenarioComplete)
+            {
+                scenarioComplete = true;
+                Emit("scenario.completed", "complete_scenario", null, null, D(), "completed", "OFFICE_DOCUMENTS_HANDED_OFF");
+            }
+        }
+        string Expected(string action) => action == "save" ? Session.Data.document_title + " / " + Session.Data.expected_date : action == "print" ? Session.Data.document_id + " / r" + Session.SavedRevision + " / " + Session.ExpectedCopies : action == "file" ? Session.Data.expected_folder : action == "handoff" ? Session.Data.document_title + " / " + Session.Data.expected_date + " / " + Session.ExpectedCopies + " / " + Session.Data.expected_folder : "All requested information confirmed";
+        string[] FailureReasons(string action, OfficeSnapshot before, OfficeSnapshot after)
+        {
+            var codes = new List<string>();
+            if (action == "save")
+            {
+                if (Session.Title != Session.Data.document_title) codes.Add("TITLE_MISMATCH");
+                if (Session.Date != Session.Data.expected_date) codes.Add("DATE_MISMATCH");
+            }
+            else if (action == "print")
+            {
+                string input = view == null ? "" : view.ActualInput(action);
+                if (!input.StartsWith(Session.Data.document_id + " / r" + Session.SavedRevision + " / ", StringComparison.Ordinal)) codes.Add("DOCUMENT_REVISION_MISMATCH");
+                string last = input.Split('/').Last().Trim();
+                if (!int.TryParse(last, out int copies) || copies != Session.ExpectedCopies) codes.Add("COPY_COUNT_MISMATCH");
+            }
+            else if (action == "file") codes.Add("WRONG_CLASSIFICATION");
+            else if (action == "handoff") codes.Add("HANDOFF_MISMATCH");
+            else if (action == "confirm") codes.Add("MISSING_REQUEST_INFORMATION");
+            if (codes.Count == 0) codes.Add("SEQUENCE_VIOLATION");
+            return codes.ToArray();
+        }
+        public void PrintCompleted()
+        {
+            if (!Ended && Session.Stage == OfficeStage.print_ready)
+                Emit("interaction.completed", "print", "copier", "print", D("jobId", printAttempt, "printedCopies", Session.PrintedCopies), "completed", "PRINT_COMPLETED", attemptId: printAttempt);
+        }
+        IEnumerable<Entry> CurrentEntries => entries.Where(e => e.run == RunId);
+        Dictionary<string, object> Process(string scope, string obj = null, string step = null)
+        {
+            var selected = CurrentEntries.Where(e => scope == "scenario" || e.obj == obj && e.step == step && e.workItem == Session.Data.document_id).ToArray();
+            double ms = scope == "scenario" ? activeMs : interactionMs.TryGetValue(ScopeKey(obj, step), out double measured) ? measured : 0;
+            return D("scope", scope, "measurementStatus", "complete", "measurementNote", null,
+                "attemptCount", selected.Count(e => e.submitted), "navigationBackCount", selected.Count(e => e.type == "navigation.back"),
+                "backtrackCount", selected.Count(e => e.type == "workflow.backtracked"), "retryCount", selected.Count(e => e.submitted && e.retry),
+                "mistakeCount", selected.Where(e => e.failure != null).Select(e => e.failure).Distinct().Count(),
+                "repeatedMistakeCount", selected.Where(e => e.failure != null && e.repeated).Select(e => e.failure).Distinct().Count(),
+                "helpRequestCount", selected.Count(e => e.type == "guidance.requested"), "guidanceUsed", selected.Any(e => e.isAssistance), "elapsedActiveMs", (long)Math.Round(ms));
+        }
+        Dictionary<string, object> Partial()
+        {
+            return D("documentId", Session.Data.document_id, "documentSaved", Session.Date == Session.Data.expected_date && Session.SavedRevision == Session.DocumentRevision,
+                "documentRevision", Session.DocumentRevision, "savedRevision", Session.SavedRevision, "printedCopies", Session.PrintCompletions > 0 ? Session.PrintedCopies : 0,
+                "folder", Session.Stage >= OfficeStage.filed ? Session.Folder : null, "handoffConfirmed", Session.Stage == OfficeStage.complete,
+                "draftTitle", view == null ? null : view.DraftTitle, "draftDate", view == null ? null : view.DraftDate);
+        }
+        Dictionary<string, object> Result(string outcome, string code)
+        {
+            return D("outcome", outcome, "success", outcome == "pending" ? (object)null : outcome == "completed", "completionCode", code,
+                "data", outcome == "pending" ? D() : outcome == "aborted" ? D("partialResults", Partial()) : Partial());
+        }
+        Dictionary<string, object> Context(string outcome, Dictionary<string, object> process, string extraReason = null, Dictionary<string, object> termination = null, IEnumerable<Entry> scope = null)
+        {
+            Entry[] evidence = (scope ?? CurrentEntries).ToArray();
+            string[] reasons = evidence.SelectMany(e => e.reasons).Concat(extraReason == null ? Array.Empty<string>() : new[] { extraReason }).Distinct().ToArray();
+            bool terminal = outcome != "pending";
+            string assessment = !terminal ? null : outcome != "completed" ? "TASK_INCOMPLETE" : (int)process["repeatedMistakeCount"] > 0 ? "TASK_REPEATED_ERRORS" : (bool)process["guidanceUsed"] ? "TASK_GUIDED_COMPLETED" : (int)process["mistakeCount"] > 0 ? "TASK_SELF_CORRECTED" : "TASK_SMOOTH";
+            return D("assessmentStatus", terminal ? "evaluated" : "pending", "assessmentCode", assessment, "ruleVersion", "v001", "reasonCodes", reasons,
+                "evidenceEventIds", evidence.Select(e => e.id).ToArray(), "interpretation", terminal ? outcome == "completed" ? "기록된 작업 범위의 완료 조건을 충족했습니다. 과정 횟수는 원본 이벤트에서 집계했습니다." : "종료 시점까지의 완료 부분과 남은 업무를 보존했습니다. 종료 자체는 업무 실수가 아닙니다." : null,
+                "limitations", new[] { "가상 업무 체험이며 직업 적성·개인의 전반적 능력 진단이 아님", "브라우저 강제 종료·연결 단절에서는 마지막 전달이 보장되지 않음" }, "termination", termination);
+        }
+        Entry Emit(string type, string action, string obj, string step, Dictionary<string, object> data, string outcome = "pending", string code = null, string requestId = null, string attemptId = null,
+            bool submitted = false, bool retry = false, string failure = null, string[] reasons = null, bool repeated = false, string reasonKey = null, int? requestRevision = null, Dictionary<string, object> termination = null,bool assistance=false)
+        {
+            Entry[] previous = CurrentEntries.ToArray();
+            var e = new Entry { id = Id("evt-"), run = RunId, session = sessionId, experience = ExperienceId, type = type, obj = obj, step = step, attempt = attemptId, workItem = step == null ? null : Session.Data.document_id,
+                sequence = NextSequence(sessionId),
+                submitted = submitted, retry = retry, failure = failure, reasons = reasons ?? Array.Empty<string>(), repeated = repeated, reasonKey = reasonKey, revision = requestRevision ?? Session.RequestRevision,isAssistance=assistance };
+            entries.Add(e);
+            bool interaction = step != null && obj != null && !type.StartsWith("workflow.");
+            string scope = interaction ? "interaction" : "scenario";
+            var process = Process(scope, obj, step);
+            string asset = obj == "monitor" ? "AST-005" : obj == "copier" ? "AST-009" : obj == "cabinet" ? "AST-015" : null;
+            e.envelope = D("schemaVersion", 1, "protocol", "career-experience", "eventId", e.id, "sequence", e.sequence, "occurredAt", DateTimeOffset.Now.ToString("o"),
+                "sessionId", sessionId, "scenarioRunId", RunId, "buildId", buildId, "sceneId", Room, "roomId", Room, "experienceId", ExperienceId, "requestId", requestId,
+                "scenarioId", ScenarioId, "scenarioVersion", ScenarioVersion, "objectId", obj, "instanceId", asset == null ? null : asset + "-0", "assetId", asset, "assetVersion", asset == null ? null : "v001",
+                "stepId", step, "workItemId", e.workItem, "attemptId", attemptId, "requestRevision", e.revision, "documentRevision", Session.DocumentRevision, "type", type, "action", action,
+                "process", process, "result", Result(outcome, code), "context", Context(outcome, process, termination == null ? null : (string)termination["code"], termination, previous.Where(x => !interaction || x.obj == obj && x.step == step)), "data", data);
+            var context=(Dictionary<string,object>)e.envelope["context"];
+            context["reasonCodes"]=((string[])context["reasonCodes"]).Concat(e.reasons).Distinct().ToArray();
+            e.json = Json(e.envelope); Publish(e.json); return e;
+        }
+        public void EndFromUser()
+        {
+            if (Ended) return;
+            Finish("USER_REQUESTED_END", Id("request-user-"));
+        }
+        string[] CompletedSteps()
+        {
+            var done = new List<string>();
+            if (Session.ConfirmedRequestRevision == Session.RequestRevision) done.Add("confirm");
+            if (Session.Date == Session.Data.expected_date && Session.SavedRevision == Session.DocumentRevision) done.Add("review");
+            if (Session.PrintCompletions > 0) done.Add("print");
+            if (Session.Stage >= OfficeStage.filed) done.Add("file");
+            if (Session.Stage == OfficeStage.complete) done.Add("handoff");
+            return done.ToArray();
+        }
+        Dictionary<string, object> Termination(string code, string id)
+        {
+            string[] completed = CompletedSteps();
+            return D("terminationId", id, "code", code, "initiatedBy", "user", "workStarted", workStarted,
+                "lastStepId", lastStep, "lastObjectId", lastObject, "lastState", Session.Stage.ToString(), "completedStepIds", completed,
+                "remainingStepIds", new[] { "confirm", "review", "print", "file", "handoff" }.Except(completed).ToArray(),
+                "inFlightActionIds", Session.Stage == OfficeStage.printing && printAttempt != null ? new[] { printAttempt } : Array.Empty<string>());
+        }
+        Entry AbortRun(string code)
+        {
+            var termination = Termination(code, Id("termination-"));
+            if (workStarted && lastObject != null && (Session.Stage == OfficeStage.printing || Session.Stage == OfficeStage.request_pending || Session.Stage == OfficeStage.request_confirmed))
+                Emit("interaction.aborted", "quit_work", lastObject, lastStep, D(), "aborted", code, termination: termination);
+            return Emit("scenario.aborted", "quit_scenario", null, null, D(), "aborted", code, termination: termination);
+        }
+        void Finish(string reason, string requestId)
+        {
+            Ended = true; bool complete = Session.Stage == OfficeStage.complete;
+            if(view!=null)view.EndUi();
+            string code = complete ? "OFFICE_DOCUMENTS_HANDED_OFF" : workStarted ? "USER_ABORTED" : "USER_EXITED_BEFORE_START";
+            Entry aborted = complete ? null : AbortRun(code);
+            var data = D("previousRuns", previousRuns.ToArray(), "events", entries.Where(e => e.experience == ExperienceId).Select(e => e.envelope).ToArray(), "eventsComplete", true);
+            Entry ended = Emit("experience.ended", "end_experience", null, null, data, complete ? "completed" : "aborted", code, requestId: requestId,
+                termination: aborted == null ? null : (Dictionary<string, object>)((Dictionary<string, object>)aborted.envelope["context"])["termination"]);
+            responses[requestId] = ended.json; endedEventId = ended.id;
+            EndSummary = "결과: " + (complete ? "완료" : code) + " / 기록 " + ended.id;
+            PublishCheckpoint();
+        }
+        public void ResetRun(bool changed)
+        {
+            if (Session == null) return;
+            if (Ended)
+            {
+                ExperienceId = Id("experience-"); usedExperiences.Add(ExperienceId); previousRuns.Clear(); standalone = true; Ended = false; endedEventId = null;
+            }
+            else
+            {
+                Entry terminal = scenarioComplete ? CurrentEntries.LastOrDefault(e => e.type == "scenario.completed") : AbortRun("USER_RESET");
+                if (terminal != null) previousRuns.Add(terminal.envelope);
+                Emit("scenario.reset", "reset_scenario", null, null, D("reasonCode", "USER_RESET", "previousScenarioRunId", RunId));
+            }
+            Session.Reset(changed); StartRun(null);
+        }
+        public void ReceiveControl(string json)
+        {
+            Control c;
+            try { c = JsonUtility.FromJson<Control>(json); }
+            catch { ControlError(null, "INVALID_JSON", "Control must be valid JSON."); return; }
+            if (c == null || c.schemaVersion != 1 || c.protocol != "career-experience" || string.IsNullOrEmpty(c.requestId) || string.IsNullOrEmpty(c.sessionId) || string.IsNullOrEmpty(c.experienceId) || string.IsNullOrEmpty(c.roomId))
+            { ControlError(c, "INVALID_CONTROL", "Required protocol fields are missing or unsupported."); return; }
+            string normalized = JsonUtility.ToJson(c);
+            if(transportControls.TryGetValue(c.requestId,out string priorControl)&&priorControl!=normalized){ControlError(c,"REQUEST_ID_REUSED","Same requestId with different input.",cache:false);return;}
+            transportControls[c.requestId]=normalized;
+            if(PilotRuntime.Instance!=null&&PilotRuntime.Instance.TryControl(json))return;
+            if (requests.TryGetValue(c.requestId, out string previous))
+            {
+                if (previous != normalized) { ControlError(c, "REQUEST_ID_REUSED", "Same requestId with different input.", cache: false); return; }
+                if (responses.TryGetValue(c.requestId, out string receipt)) Publish(receipt);
+                return;
+            }
+            requests[c.requestId] = normalized;
+            if (c.action == "start_experience")
+            {
+                if (c.roomId != Room || c.scenarioId != ScenarioId || c.scenarioVersion != ScenarioVersion) { ControlError(c, "UNSUPPORTED_SCENARIO", "Only PAN-001 office direct work v002 is implemented; other room scenarios remain drafts."); return; }
+                if (usedExperiences.Contains(c.experienceId)) { ControlError(c, "EXPERIENCE_ID_REUSED", "A new start requires a new experienceId."); return; }
+                if (pendingStart != null || Session != null && !Ended && !(standalone && !workStarted)) { ControlError(c, "EXPERIENCE_ACTIVE", "End the current experience before starting another."); return; }
+                if (view == null)
+                {
+                    pendingStart = c;
+                    var explorer = FindFirstObjectByType<WorkplaceExplorer>();
+                    if (explorer != null) explorer.SelectRoom(Room);
+                    else { pendingStart = null; ControlError(c, "ROOM_LOADER_UNAVAILABLE", "Room explorer is not available."); }
+                }
+                else StartExternal(c);
+            }
+            else if (c.action == "end_experience")
+            {
+                if (c.reason != "USER_REQUESTED_END") { ControlError(c, "INVALID_REASON", "Explicit end requires USER_REQUESTED_END."); return; }
+                if (Session == null || c.sessionId != sessionId || c.experienceId != ExperienceId || c.roomId != Room) { ControlError(c, "EXPERIENCE_MISMATCH", "The requested run is not active."); return; }
+                if (Ended) { ControlError(c, "ALREADY_ENDED", "Experience ended; original eventId " + endedEventId); return; }
+                Finish(c.reason, c.requestId);
+            }
+            else ControlError(c, "UNKNOWN_ACTION", "Supported controls are start_experience and end_experience.");
+        }
+        void StartExternal(Control c)
+        {
+            sessionId = c.sessionId; ExperienceId = c.experienceId; usedExperiences.Add(ExperienceId);
+            standalone = false; Ended = false; endedEventId = null; previousRuns.Clear(); autoPaused = false;
+            Session.Reset(false); StartRun(c.requestId);
+            // Attach can happen before the controller has assigned Session, so
+            // its initial ClearInputs performs the reset in that case.
+            if (view != null && view.Session != null) view.BeginExternalRun();
+        }
+        void ControlError(Control c, string code, string message, bool cache = true)
+        {
+            string json = Json(D("schemaVersion", 1, "protocol", "career-experience", "requestId", c?.requestId, "sessionId", c?.sessionId,
+                "experienceId", c?.experienceId, "roomId", c?.roomId, "type", "experience.error", "error", D("code", code, "message", message)));
+            if (cache && c?.requestId != null) responses[c.requestId] = json;
+            Publish(json);
+        }
+        public void Replay(string unused)
+        {
+            if(PilotRuntime.Instance!=null)PilotRuntime.Instance.Replay();
+            foreach (Entry e in entries.Where(e => e.session == sessionId).OrderBy(e => e.sequence)) Publish(e.json);
+        }
+        void PublishCheckpoint()
+        {
+            if (Session == null) return;
+            string json = Json(D("schemaVersion", 1, "protocol", "career-experience", "sessionId", sessionId, "experienceId", ExperienceId, "scenarioRunId", RunId,
+                "roomId", Room, "ended", Ended, "state", Session.Stage.ToString(), "lastStepId", lastStep, "lastObjectId", lastObject, "process", Process("scenario"), "partialResults", Partial(), "workStarted", workStarted,
+                "deliveryStatus", "checkpoint_only_not_terminal", "checkedAt", DateTimeOffset.Now.ToString("o")));
+#if UNITY_WEBGL && !UNITY_EDITOR
+            CareerCheckpoint(json);
+#endif
+        }
+        static void Publish(string json)
+        {
+#if UNITY_WEBGL && !UNITY_EDITOR
+            CareerPublish(json);
+#else
+            Debug.Log("CAREER_EVENT " + json);
+#endif
+        }
+        static string Json(object value)
+        {
+            if (value == null) return "null";
+            if (value is string text) return "\"" + Escape(text) + "\"";
+            if (value is bool flag) return flag ? "true" : "false";
+            if (value is IDictionary<string, object> dict) return "{" + string.Join(",", dict.Select(pair => Json(pair.Key) + ":" + Json(pair.Value))) + "}";
+            if (value is IEnumerable list) { var items = new List<string>(); foreach (object item in list) items.Add(Json(item)); return "[" + string.Join(",", items) + "]"; }
+            return Convert.ToString(value, CultureInfo.InvariantCulture);
+        }
+        static string Escape(string value)
+        {
+            var result = new StringBuilder();
+            foreach (char c in value)
+            {
+                if (c == '\\') result.Append("\\\\"); else if (c == '"') result.Append("\\\""); else if (c == '\n') result.Append("\\n"); else if (c == '\r') result.Append("\\r"); else if (c == '\t') result.Append("\\t");
+                else if (c < 32) result.Append("\\u" + ((int)c).ToString("x4")); else result.Append(c);
+            }
+            return result.ToString();
+        }
+    }
+}

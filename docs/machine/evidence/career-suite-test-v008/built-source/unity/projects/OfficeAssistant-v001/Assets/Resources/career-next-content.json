@@ -1,0 +1,3307 @@
+{
+  "schema_version": 3,
+  "version": "v001",
+  "transitionSeconds": 0.45,
+  "scope": "20 additional original unfinished scenario task definitions; excluded current71-room build until explicit inclusion/rebuild and per-case execution.",
+  "careers": [
+    {
+      "scenarioId": "career-net-934-experience",
+      "version": "v002",
+      "occupationId": "career-net-934",
+      "name": "사회단체활동가",
+      "roomId": "PAN-003",
+      "title": "지역 공동체 프로그램의 참여 요청 정리",
+      "brief": "지역 공동체 프로그램의 참여 요청 정리 — 세 개의 실제 물건에서 요청 확인·직접 조작·결과 기록을 이어갑니다.",
+      "limitation": "직업 원문을 근거로 작성한 가상 교육 사례입니다. 실제 전문 정답·안전 지침·자격·적성 판정이 아닙니다. 이 후속 자료는 현재71공간 검수 빌드에 자동 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "서류철",
+          "candidateId": "CND-022",
+          "assetId": "AST-1022",
+          "assetVersion": "v001",
+          "nodeName": "AST-1022-018",
+          "instanceId": "Room_PAN-003/AST-1022-018"
+        },
+        {
+          "id": "object-2",
+          "name": "모니터",
+          "candidateId": "CND-005",
+          "assetId": "AST-005",
+          "assetVersion": "v001",
+          "nodeName": "AST-005-006",
+          "instanceId": "Room_PAN-003/AST-005-006"
+        },
+        {
+          "id": "object-3",
+          "name": "유선전화",
+          "candidateId": "CND-019",
+          "assetId": "AST-1019",
+          "assetVersion": "v001",
+          "nodeName": "AST-1019-014",
+          "instanceId": "Room_PAN-003/AST-1019-014"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "서류철 프로그램 신청서",
+          "instruction": "가상 지역 모임 신청: 프로그램 이름 골목책방, 날짜 11월16일, 정원 18명입니다. 오래된 초안을 요청에 맞게 수정합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "프로그램",
+              "initial": "골목영화관",
+              "target": "골목책방"
+            },
+            {
+              "id": "f1",
+              "label": "날짜",
+              "initial": "11월15일",
+              "target": "11월16일"
+            },
+            {
+              "id": "f2",
+              "label": "정원",
+              "initial": "12",
+              "target": "18"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "career-net-934-PAN-003-next-1",
+          "successText": "가상 요청 자료를 저장했습니다."
+        },
+        {
+          "kind": "sort",
+          "title": "지원 자원과 활동 연결",
+          "instruction": "활동별 지원표: 책 나누기=도서지원, 장소 안내=시설지원, 진행 도우미=자원봉사입니다. 요청카드를 해당 지원함으로 옮깁니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "진행 도우미",
+              "targetLabel": "자원봉사",
+              "initialX": 0.08,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "책 나누기",
+              "targetLabel": "도서지원",
+              "initialX": 0.33,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "장소 안내",
+              "targetLabel": "시설지원",
+              "initialX": 0.58,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "career-net-934-PAN-003-next-2",
+          "successText": "직접 조작한 작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "참여 지원팀 전화 인계",
+          "instruction": "접수팀에 프로그램 골목책방, 정원 18명, 남은확인 장소 사용 승인을 전달합니다. 승인되지 않은 일정을 확정했다고 쓰지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "프로그램",
+              "initial": "",
+              "target": "골목책방"
+            },
+            {
+              "id": "f1",
+              "label": "정원",
+              "initial": "",
+              "target": "18"
+            },
+            {
+              "id": "f2",
+              "label": "남은확인",
+              "initial": "",
+              "target": "장소 사용 승인"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "career-net-934-PAN-003-next-3",
+          "successText": "마지막 기록과 남은 확인을 인계했습니다."
+        }
+      ],
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/200/data"
+      },
+      "source_basis": {
+        "work": "하는일\n사회단체활동가는 국내나 국외의 정치, 복지, 주택, 고용, 여성, 청소년, 건강 등과 관련된 사회 문제들을 연구하고 평가하여 문제 해결을 위한 방법 및 정책을 제안하고, 이를 변화시키기 위한 사회운동을 합니다.\n개인, 기관, 단체에게 필요한 사회서비스 프로그램을 개발하고 업무 수행을 지원합니다.\n사회 문제를 해결하기 위한 정책을 제도화하기 위해 필요한 자금을 모으거나 기관이나 단체 또는 개인들을 대상으로 의견을 듣거나 수집합니다.\n보다 많은 사람들이 사회 문제에 관심을 갖고 사회 문제 해결을 위한 활동에 함께 참여할 수 있도록 다양한 홍보 활동을 펼칩니다.",
+        "selected_work_evidence": "개인, 기관, 단체에게 필요한 사회서비스 프로그램을 개발하고 업무 수행을 지원합니다.",
+        "core_competencies": [
+          "자기성찰능력"
+        ],
+        "practice_connection": "원문 역량 자기성찰능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/200/data/준비방법"
+      },
+      "bindingEvidence": "docs/machine/evidence/workplaces-v011/PAN-003-unity-scene.json",
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-003-detail-v011.unity",
+      "contentReviewStatus": "authored_educational_task_needs_occupation_review",
+      "currentBuildInclusion": false
+    },
+    {
+      "scenarioId": "career-net-469-experience",
+      "version": "v002",
+      "occupationId": "career-net-469",
+      "name": "고객관리시스템(CRM)전문가",
+      "roomId": "PAN-004",
+      "title": "고객 요청 데이터의 연결과 중복 정리",
+      "brief": "고객 요청 데이터의 연결과 중복 정리 — 세 개의 실제 물건에서 요청 확인·직접 조작·결과 기록을 이어갑니다.",
+      "limitation": "직업 원문을 근거로 작성한 가상 교육 사례입니다. 실제 전문 정답·안전 지침·자격·적성 판정이 아닙니다. 이 후속 자료는 현재71공간 검수 빌드에 자동 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "번호표 발급기",
+          "candidateId": "CND-024",
+          "assetId": "AST-1024",
+          "assetVersion": "v001",
+          "nodeName": "AST-1024-005",
+          "instanceId": "Room_PAN-004/AST-1024-005"
+        },
+        {
+          "id": "object-2",
+          "name": "모니터",
+          "candidateId": "CND-005",
+          "assetId": "AST-005",
+          "assetVersion": "v001",
+          "nodeName": "AST-005-004",
+          "instanceId": "Room_PAN-004/AST-005-004"
+        },
+        {
+          "id": "object-3",
+          "name": "서비스 카운터",
+          "candidateId": "CND-023",
+          "assetId": "AST-1023",
+          "assetVersion": "v001",
+          "nodeName": "AST-1023-002",
+          "instanceId": "Room_PAN-004/AST-1023-002"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "요청 접수 항목 설정",
+          "instruction": "가상 CRM 접수 요청: 요청번호 C-108, 관심품목 독서등, 연락방식 문자입니다. 접수 원문의 오기를 고칩니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "요청번호",
+              "initial": "C-180",
+              "target": "C-108"
+            },
+            {
+              "id": "f1",
+              "label": "관심품목",
+              "initial": "책상",
+              "target": "독서등"
+            },
+            {
+              "id": "f2",
+              "label": "연락방식",
+              "initial": "전화",
+              "target": "문자"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "career-net-469-PAN-004-next-1",
+          "successText": "가상 요청 자료를 저장했습니다."
+        },
+        {
+          "kind": "sort",
+          "title": "고객 자료 병합 규칙",
+          "instruction": "이 연습 규칙: 같은 요청번호=연결, 번호누락=재확인, 다른 요청번호=별도유지입니다. 개인정보를 추정하지 않고 자료 카드를 분류합니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "다른 요청번호",
+              "targetLabel": "별도유지",
+              "initialX": 0.08,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "같은 요청번호",
+              "targetLabel": "연결",
+              "initialX": 0.33,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "번호누락",
+              "targetLabel": "재확인",
+              "initialX": 0.58,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "career-net-469-PAN-004-next-2",
+          "successText": "직접 조작한 작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "서비스 카운터 데이터 품질 보고",
+          "instruction": "가상 집계는 입력 12건, 중복 2건, 고유 요청 10건입니다. 세 수치를 기록해 시스템 설계팀에 전달합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "입력건수",
+              "initial": "",
+              "target": "12"
+            },
+            {
+              "id": "f1",
+              "label": "중복건수",
+              "initial": "",
+              "target": "2"
+            },
+            {
+              "id": "f2",
+              "label": "고유요청",
+              "initial": "",
+              "target": "10"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "career-net-469-PAN-004-next-3",
+          "successText": "마지막 기록과 남은 확인을 인계했습니다."
+        }
+      ],
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/40/data"
+      },
+      "source_basis": {
+        "work": "하는일\n고객관리시스템전문가는 고객과 관련된 기업의 내외부 자료를 분석 및 통합하여 사용자의 특성에 기초한 기업의 영업 활동을 지원하기 위한 정보시스템을 연구하고 설계하는 일을 합니다.\n고객과 관련된 기업의 내외부 자료 및 기업의 전략, 목표 등을 분석하고 기업의 비즈니스와 연결해 효과적으로 고객을 관리할 수 있는 정보시스템을 연구하고 설계합니다.\n고객관리시스템(CRM)과 관련된 국내외의 최신 정보 기술을 파악 및 분석하여 정보시스템을 개선하고 보완합니다.\n기업의 사용자에게 고객관리시스템의 운영 및 관리에 대한 교육과 기술적 조언을 실시합니다.",
+        "selected_work_evidence": "고객관리시스템전문가는 고객과 관련된 기업의 내외부 자료를 분석 및 통합하여 사용자의 특성에 기초한 기업의 영업 활동을 지원하기 위한 정보시스템을 연구하고 설계하는 일을 합니다.",
+        "core_competencies": [
+          "수리·논리력"
+        ],
+        "practice_connection": "원문 역량 수리·논리력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/40/data/준비방법"
+      },
+      "bindingEvidence": "docs/machine/evidence/workplaces-v011/PAN-004-unity-scene.json",
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-004-detail-v011.unity",
+      "contentReviewStatus": "authored_educational_task_needs_occupation_review",
+      "currentBuildInclusion": false
+    },
+    {
+      "scenarioId": "career-net-10079-experience",
+      "version": "v002",
+      "occupationId": "career-net-10079",
+      "name": "창업컨설턴트",
+      "roomId": "PAN-005",
+      "title": "작은 공방 창업의 요청과 비용 구분",
+      "brief": "작은 공방 창업의 요청과 비용 구분 — 세 개의 실제 물건에서 요청 확인·직접 조작·결과 기록을 이어갑니다.",
+      "limitation": "직업 원문을 근거로 작성한 가상 교육 사례입니다. 실제 전문 정답·안전 지침·자격·적성 판정이 아닙니다. 이 후속 자료는 현재71공간 검수 빌드에 자동 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "서류 파일",
+          "candidateId": "CND-027",
+          "assetId": "AST-1027",
+          "assetVersion": "v001",
+          "nodeName": "AST-1027-007",
+          "instanceId": "Room_PAN-005/AST-1027-007"
+        },
+        {
+          "id": "object-2",
+          "name": "테이블",
+          "candidateId": "CND-010",
+          "assetId": "AST-1010",
+          "assetVersion": "v001",
+          "nodeName": "AST-1010-003",
+          "instanceId": "Room_PAN-005/AST-1010-003"
+        },
+        {
+          "id": "object-3",
+          "name": "선반",
+          "candidateId": "CND-028",
+          "assetId": "AST-1028",
+          "assetVersion": "v001",
+          "nodeName": "AST-1028-008",
+          "instanceId": "Room_PAN-005/AST-1028-008"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "창업 상담 신청",
+          "instruction": "가상 의뢰인은 수리 공방, 주 3일 운영, 예약제로 시작하려 합니다. 희망 업종·운영일·방식을 요청과 맞춥니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "희망 업종",
+              "initial": "대형 식당",
+              "target": "수리 공방"
+            },
+            {
+              "id": "f1",
+              "label": "주 운영일",
+              "initial": "6",
+              "target": "3"
+            },
+            {
+              "id": "f2",
+              "label": "운영 방식",
+              "initial": "상시 방문",
+              "target": "예약제"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "career-net-10079-PAN-005-next-1",
+          "successText": "가상 요청 자료를 저장했습니다."
+        },
+        {
+          "kind": "sort",
+          "title": "초기 준비 항목 분류",
+          "instruction": "가상 사업계획표에서 공구 구입은 초기장비, 공간 사용료는 월고정비, 주문 포장지는 주문별비용입니다. 비용카드를 표에 옮깁니다. 실제 투자 수익을 예측하지 않습니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "주문 포장지",
+              "targetLabel": "주문별비용",
+              "initialX": 0.08,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "공구 구입",
+              "targetLabel": "초기장비",
+              "initialX": 0.33,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "공간 사용료",
+              "targetLabel": "월고정비",
+              "initialX": 0.58,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "career-net-10079-PAN-005-next-2",
+          "successText": "직접 조작한 작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "상담안 보관",
+          "instruction": "가상 준비 합계: 공구 20만원+간판 5만원=25만원입니다. 초기준비 25만원, 운영방식 예약제, 남은확인 실제 견적을 기록합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "초기준비(만원)",
+              "initial": "",
+              "target": "25"
+            },
+            {
+              "id": "f1",
+              "label": "운영방식",
+              "initial": "",
+              "target": "예약제"
+            },
+            {
+              "id": "f2",
+              "label": "남은확인",
+              "initial": "",
+              "target": "실제 견적"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "career-net-10079-PAN-005-next-3",
+          "successText": "마지막 기록과 남은 확인을 인계했습니다."
+        }
+      ],
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/439/data"
+      },
+      "source_basis": {
+        "work": "하는일\n창업컨설턴트는 업종, 비용, 수익성 등의 분석을 통해 창업 종목 선정에서부터 개업까지 각 단계별 업무를 도와주는 업무를 수행합니다.\n창업을 원하는 고객과의 상담을 통해 고객의 특성, 희망 업종, 비용, 수익성 등을 분석합니다.\n고객에 대한 분석 결과를 바탕으로 업종 선택, 점포 구매 등 창업 계획을 세웁니다.\n인테리어, 점포 홍보, 마케팅을 도우며, 창업 관련 교육을 합니다.",
+        "selected_work_evidence": "창업을 원하는 고객과의 상담을 통해 고객의 특성, 희망 업종, 비용, 수익성 등을 분석합니다.",
+        "core_competencies": [
+          "대인관계능력"
+        ],
+        "practice_connection": "원문 역량 대인관계능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/439/data/준비방법"
+      },
+      "bindingEvidence": "docs/machine/evidence/workplaces-v011/PAN-005-unity-scene.json",
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-005-detail-v011.unity",
+      "contentReviewStatus": "authored_educational_task_needs_occupation_review",
+      "currentBuildInclusion": false
+    },
+    {
+      "scenarioId": "career-net-334-experience",
+      "version": "v002",
+      "occupationId": "career-net-334",
+      "name": "조향사",
+      "roomId": "PAN-006",
+      "title": "향 디자인 의뢰와 모형 배합 구성",
+      "brief": "향 디자인 의뢰와 모형 배합 구성 — 세 개의 실제 물건에서 요청 확인·직접 조작·결과 기록을 이어갑니다.",
+      "limitation": "직업 원문을 근거로 작성한 가상 교육 사례입니다. 실제 전문 정답·안전 지침·자격·적성 판정이 아닙니다. 이 후속 자료는 현재71공간 검수 빌드에 자동 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "시험관대",
+          "candidateId": "CND-032",
+          "assetId": "AST-1032",
+          "assetVersion": "v001",
+          "nodeName": "AST-1032-005",
+          "instanceId": "Room_PAN-006/AST-1032-005"
+        },
+        {
+          "id": "object-2",
+          "name": "소형 저울",
+          "candidateId": "CND-035",
+          "assetId": "AST-1035",
+          "assetVersion": "v001",
+          "nodeName": "AST-1035-008",
+          "instanceId": "Room_PAN-006/AST-1035-008"
+        },
+        {
+          "id": "object-3",
+          "name": "비커",
+          "candidateId": "CND-033",
+          "assetId": "AST-1033",
+          "assetVersion": "v001",
+          "nodeName": "AST-1033-006",
+          "instanceId": "Room_PAN-006/AST-1033-006"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "sort",
+          "title": "향료 모형 라벨 분류",
+          "instruction": "가상 향 의뢰는 시트러스=도입향, 허브=중간향, 나무=잔향입니다. 실제 향료를 섞지 않고 표시된 모형카드를 각 역할칸에 놓습니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "나무",
+              "targetLabel": "잔향",
+              "initialX": 0.08,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "시트러스",
+              "targetLabel": "도입향",
+              "initialX": 0.33,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "허브",
+              "targetLabel": "중간향",
+              "initialX": 0.58,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "career-net-334-PAN-006-next-1",
+          "successText": "가상 요청 자료를 저장했습니다."
+        },
+        {
+          "kind": "tune",
+          "title": "소형 저울 모형 배합",
+          "instruction": "이 가상 시제품 요청은 도입향 모형 6눈금·중간향 모형 4눈금입니다. 실제 화학 배합·피부 사용량이 아니며 단위 없는 교구 설정입니다.",
+          "values": [
+            {
+              "id": "v0",
+              "label": "도입향",
+              "unit": "모형눈금",
+              "min": 0,
+              "max": 10,
+              "initial": 2,
+              "target": 6,
+              "tolerance": 0.1
+            },
+            {
+              "id": "v1",
+              "label": "중간향",
+              "unit": "모형눈금",
+              "min": 0,
+              "max": 10,
+              "initial": 1,
+              "target": 4,
+              "tolerance": 0.1
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "career-net-334-PAN-006-next-2",
+          "successText": "직접 조작한 작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "비커의 시제품 기록",
+          "instruction": "모형 시제품명 숲 아침, 도입향 시트러스, 잔향 나무입니다. 감상·선호를 단정하지 않고 이번 디자인 요청의 조건만 기록합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "시제품명",
+              "initial": "",
+              "target": "숲 아침"
+            },
+            {
+              "id": "f1",
+              "label": "도입향",
+              "initial": "",
+              "target": "시트러스"
+            },
+            {
+              "id": "f2",
+              "label": "잔향",
+              "initial": "",
+              "target": "나무"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "career-net-334-PAN-006-next-3",
+          "successText": "마지막 기록과 남은 확인을 인계했습니다."
+        }
+      ],
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/420/data"
+      },
+      "source_basis": {
+        "work": "하는일\n조향사는 여러 가지 향료를 배합하여 새로운 향을 만드는 일을 합니다.\n다양한 향료를 배합하여 각 향료의 특성에 맞는 향수를 디자인하고 새로운 향을 개발하기 위한 실험을 합니다.\n향이 사용될 제품의 특징을 고려하여 콘셉트를 정하고 원료를 선정합니다.\n고객의 요청에 따라 새로운 향을 개발하기도 하며 제품이나 식품에 향을 첨가하는 일을 담당합니다.",
+        "selected_work_evidence": "다양한 향료를 배합하여 각 향료의 특성에 맞는 향수를 디자인하고 새로운 향을 개발하기 위한 실험을 합니다.",
+        "core_competencies": [
+          "예술시각능력",
+          "창의력"
+        ],
+        "practice_connection": "원문 역량 예술시각능력, 창의력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/420/data/준비방법"
+      },
+      "bindingEvidence": "docs/machine/evidence/workplaces-v011/PAN-006-unity-scene.json",
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-006-detail-v011.unity",
+      "contentReviewStatus": "authored_educational_task_needs_occupation_review",
+      "currentBuildInclusion": false
+    },
+    {
+      "scenarioId": "career-net-66-experience",
+      "version": "v002",
+      "occupationId": "career-net-66",
+      "name": "로봇연구원",
+      "roomId": "PAN-007",
+      "title": "운반 로봇 모형의 구성과 시험 요청",
+      "brief": "운반 로봇 모형의 구성과 시험 요청 — 세 개의 실제 물건에서 요청 확인·직접 조작·결과 기록을 이어갑니다.",
+      "limitation": "직업 원문을 근거로 작성한 가상 교육 사례입니다. 실제 전문 정답·안전 지침·자격·적성 판정이 아닙니다. 이 후속 자료는 현재71공간 검수 빌드에 자동 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "부품 트레이",
+          "candidateId": "CND-040",
+          "assetId": "AST-1040",
+          "assetVersion": "v001",
+          "nodeName": "AST-1040-009",
+          "instanceId": "Room_PAN-007/AST-1040-009"
+        },
+        {
+          "id": "object-2",
+          "name": "분석 장비",
+          "candidateId": "CND-038",
+          "assetId": "AST-1038",
+          "assetVersion": "v001",
+          "nodeName": "AST-1038-003",
+          "instanceId": "Room_PAN-007/AST-1038-003"
+        },
+        {
+          "id": "object-3",
+          "name": "모니터",
+          "candidateId": "CND-005",
+          "assetId": "AST-005",
+          "assetVersion": "v001",
+          "nodeName": "AST-005-005",
+          "instanceId": "Room_PAN-007/AST-005-005"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "sort",
+          "title": "로봇 모듈 트레이",
+          "instruction": "모형 설계도: 거리센서=감지, 제어보드=판단, 바퀴모듈=이동입니다. 세 모듈 카드를 기능에 맞는 결합칸에 배치합니다. 실제 로봇은 가동하지 않습니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "바퀴모듈",
+              "targetLabel": "이동",
+              "initialX": 0.08,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "거리센서",
+              "targetLabel": "감지",
+              "initialX": 0.33,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "제어보드",
+              "targetLabel": "판단",
+              "initialX": 0.58,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "career-net-66-PAN-007-next-1",
+          "successText": "가상 요청 자료를 저장했습니다."
+        },
+        {
+          "kind": "tune",
+          "title": "분석 장비의 가상 시험값",
+          "instruction": "이번 가상 운반 모형은 이동속도 3칸/초, 장애물알림 2칸 거리로 시험합니다. 실제 산업 로봇 안전거리·속도 지침이 아닙니다.",
+          "values": [
+            {
+              "id": "v0",
+              "label": "이동속도",
+              "unit": "칸/초",
+              "min": 1,
+              "max": 6,
+              "initial": 1,
+              "target": 3,
+              "tolerance": 0.1
+            },
+            {
+              "id": "v1",
+              "label": "알림거리",
+              "unit": "칸",
+              "min": 1,
+              "max": 5,
+              "initial": 4,
+              "target": 2,
+              "tolerance": 0.1
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "career-net-66-PAN-007-next-2",
+          "successText": "직접 조작한 작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "개발 모니터 시험 요청",
+          "instruction": "가상 시험 ID RBT-07, 기능 장애물 알림, 남은확인 모형 경로 시험입니다. 시험하지 않은 결과를 완료로 쓰지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "시험 ID",
+              "initial": "",
+              "target": "RBT-07"
+            },
+            {
+              "id": "f1",
+              "label": "기능",
+              "initial": "",
+              "target": "장애물 알림"
+            },
+            {
+              "id": "f2",
+              "label": "남은확인",
+              "initial": "",
+              "target": "모형 경로 시험"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "career-net-66-PAN-007-next-3",
+          "successText": "마지막 기록과 남은 확인을 인계했습니다."
+        }
+      ],
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/119/data"
+      },
+      "source_basis": {
+        "work": "하는일\n로봇연구원은 산업용, 의료용, 해저자원 개발용 로봇과 실생활에 이용할 수 있는 로봇을 연구하고 개발하는 업무를 담당합니다.\n로봇의 구성 요소를 연구, 개발하고 하나의 단일체로 조립, 제작합니다.\n최적의 방법으로 공장의 생산설비를 자동화하기 위하여 최신 제조기술, 자동화기술 등에 대하여 자문하고 전기, 전자, 기계 장치를 자동화하는 설비를 연구, 개발합니다.\n용접로봇 등 생산 현장에서 사용되는 산업용 로봇이나 자동화시스템 설비를 설치, 운용, 정비, 수리합니다.",
+        "selected_work_evidence": "로봇의 구성 요소를 연구, 개발하고 하나의 단일체로 조립, 제작합니다.",
+        "core_competencies": [
+          "수리·논리력",
+          "공간지각력"
+        ],
+        "practice_connection": "원문 역량 수리·논리력, 공간지각력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/119/data/준비방법"
+      },
+      "bindingEvidence": "docs/machine/evidence/workplaces-v011/PAN-007-unity-scene.json",
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-007-detail-v011.unity",
+      "contentReviewStatus": "authored_educational_task_needs_occupation_review",
+      "currentBuildInclusion": false
+    },
+    {
+      "scenarioId": "career-net-1440-experience",
+      "version": "v002",
+      "occupationId": "career-net-1440",
+      "name": "일반의사",
+      "roomId": "PAN-008",
+      "title": "진료 요청의 관찰 정보와 기록 전달",
+      "brief": "진료 요청의 관찰 정보와 기록 전달 — 세 개의 실제 물건에서 요청 확인·직접 조작·결과 기록을 이어갑니다.",
+      "limitation": "직업 원문을 근거로 작성한 가상 교육 사례입니다. 실제 전문 정답·안전 지침·자격·적성 판정이 아닙니다. 이 후속 자료는 현재71공간 검수 빌드에 자동 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "의료 모니터",
+          "candidateId": "CND-042",
+          "assetId": "AST-1042",
+          "assetVersion": "v001",
+          "nodeName": "AST-1042-006",
+          "instanceId": "Room_PAN-008/AST-1042-006"
+        },
+        {
+          "id": "object-2",
+          "name": "진찰·처치 침대",
+          "candidateId": "CND-041",
+          "assetId": "AST-1041",
+          "assetVersion": "v002",
+          "nodeName": "AST-1041-005",
+          "instanceId": "Room_PAN-008/AST-1041-005"
+        },
+        {
+          "id": "object-3",
+          "name": "업무 책상",
+          "candidateId": "CND-004",
+          "assetId": "AST-004",
+          "assetVersion": "v001",
+          "nodeName": "AST-004-002",
+          "instanceId": "Room_PAN-008/AST-004-002"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "진료 모니터 요청 기록",
+          "instruction": "가상 이용자가 말한 내용은 문의 기침, 기간 3일, 요청 진료 상담입니다. 관찰 정보를 그대로 입력하며 질병·치료·약물을 판정하지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "문의",
+              "initial": "두통",
+              "target": "기침"
+            },
+            {
+              "id": "f1",
+              "label": "기간",
+              "initial": "1일",
+              "target": "3일"
+            },
+            {
+              "id": "f2",
+              "label": "요청",
+              "initial": "진단 확정",
+              "target": "진료 상담"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "career-net-1440-PAN-008-next-1",
+          "successText": "가상 요청 자료를 저장했습니다."
+        },
+        {
+          "kind": "sort",
+          "title": "진찰 자리의 정보 구분",
+          "instruction": "가상 기록의 출처표: 본인 설명=주관적 요청, 측정기록표=제공된 관찰, 빈 검사결과=미확인입니다. 자료를 출처칸에 옮깁니다. 임상 해석은 하지 않습니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "빈 검사결과",
+              "targetLabel": "미확인",
+              "initialX": 0.08,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "본인 설명",
+              "targetLabel": "주관적 요청",
+              "initialX": 0.33,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "측정기록표",
+              "targetLabel": "제공된 관찰",
+              "initialX": 0.58,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "career-net-1440-PAN-008-next-2",
+          "successText": "직접 조작한 작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "업무 책상 상담 인계",
+          "instruction": "진료 상담에 전달할 문의 기침, 기간 3일, 미확인 항목 전문 진찰을 기록합니다. 이 모형에서는 진찰·치료가 이루어졌다고 주장하지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "문의",
+              "initial": "",
+              "target": "기침"
+            },
+            {
+              "id": "f1",
+              "label": "기간",
+              "initial": "",
+              "target": "3일"
+            },
+            {
+              "id": "f2",
+              "label": "미확인 항목",
+              "initial": "",
+              "target": "전문 진찰"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "career-net-1440-PAN-008-next-3",
+          "successText": "마지막 기록과 남은 확인을 인계했습니다."
+        }
+      ],
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/367/data"
+      },
+      "source_basis": {
+        "work": "하는일\n인간의 질병, 장애, 상해를 진단하고 치료하기 위해 진찰과 의학적 검사를 시행합니다.\n치료의 범위와 방향을 정하고, 환자와의 상담을 통해 구체적인 내용을 결정합니다.\n의과학 연구 및 보건 향상을 위한 연구를 수행합니다.\n청진기, 맥박 기록기 등 간단한 의료 기구를 사용하여 환자를 진찰하고 검사하며 결과를 분석하여 치료 및 약물을 처방합니다.\n전염병 예방접종을 실시하고 환자에게 식사, 질병 예방 등에 관하여 조언합니다.",
+        "selected_work_evidence": "청진기, 맥박 기록기 등 간단한 의료 기구를 사용하여 환자를 진찰하고 검사하며 결과를 분석하여 치료 및 약물을 처방합니다.",
+        "core_competencies": [
+          "자기성찰능력",
+          "수리·논리력"
+        ],
+        "practice_connection": "원문 역량 자기성찰능력, 수리·논리력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/367/data/준비방법"
+      },
+      "bindingEvidence": "docs/machine/evidence/workplaces-v011/PAN-008-unity-scene.json",
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-008-detail-v011.unity",
+      "contentReviewStatus": "authored_educational_task_needs_occupation_review",
+      "currentBuildInclusion": false
+    },
+    {
+      "scenarioId": "career-net-33-experience",
+      "version": "v002",
+      "occupationId": "career-net-33",
+      "name": "치과기공사",
+      "roomId": "PAN-009",
+      "title": "치과 보철 모형의 식별과 제작 전달",
+      "brief": "치과 보철 모형의 식별과 제작 전달 — 세 개의 실제 물건에서 요청 확인·직접 조작·결과 기록을 이어갑니다.",
+      "limitation": "직업 원문을 근거로 작성한 가상 교육 사례입니다. 실제 전문 정답·안전 지침·자격·적성 판정이 아닙니다. 이 후속 자료는 현재71공간 검수 빌드에 자동 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "부품 트레이",
+          "candidateId": "CND-040",
+          "assetId": "AST-1040",
+          "assetVersion": "v001",
+          "nodeName": "AST-1040-008",
+          "instanceId": "Room_PAN-009/AST-1040-008"
+        },
+        {
+          "id": "object-2",
+          "name": "작업등",
+          "candidateId": "CND-043",
+          "assetId": "AST-1043",
+          "assetVersion": "v001",
+          "nodeName": "AST-1043-003",
+          "instanceId": "Room_PAN-009/AST-1043-003"
+        },
+        {
+          "id": "object-3",
+          "name": "운반 카트",
+          "candidateId": "CND-016",
+          "assetId": "AST-1016",
+          "assetVersion": "v001",
+          "nodeName": "AST-1016-006",
+          "instanceId": "Room_PAN-009/AST-1016-006"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "sort",
+          "title": "모형 부품 트레이",
+          "instruction": "가상 제작표: 바닥모형=기준, 외형모형=형태, 표지카드=식별입니다. 교구 부품을 역할칸에 놓습니다. 실제 환자 보철물 설계·제작 정답을 판단하지 않습니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "표지카드",
+              "targetLabel": "식별",
+              "initialX": 0.08,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "바닥모형",
+              "targetLabel": "기준",
+              "initialX": 0.33,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "외형모형",
+              "targetLabel": "형태",
+              "initialX": 0.58,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "career-net-33-PAN-009-next-1",
+          "successText": "가상 요청 자료를 저장했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "작업등 아래 모형 라벨",
+          "instruction": "가상 제작요청은 모형 D-016, 제작항목 교육 교구, 기준도면 모형-3입니다. 라벨 오기를 바로잡고 실제 환자 정보를 만들지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "모형",
+              "initial": "D-061",
+              "target": "D-016"
+            },
+            {
+              "id": "f1",
+              "label": "제작항목",
+              "initial": "환자 보철",
+              "target": "교육 교구"
+            },
+            {
+              "id": "f2",
+              "label": "기준도면",
+              "initial": "모형-2",
+              "target": "모형-3"
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "career-net-33-PAN-009-next-2",
+          "successText": "직접 조작한 작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "운반 카트 제작 인계",
+          "instruction": "전달 목록은 모형 D-016, 부품수 3개, 남은확인 담당 기술자 검토입니다. 실제 임상 사용 가능 여부를 확정하지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "모형",
+              "initial": "",
+              "target": "D-016"
+            },
+            {
+              "id": "f1",
+              "label": "부품수",
+              "initial": "",
+              "target": "3"
+            },
+            {
+              "id": "f2",
+              "label": "남은확인",
+              "initial": "",
+              "target": "담당 기술자 검토"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "career-net-33-PAN-009-next-3",
+          "successText": "마지막 기록과 남은 확인을 인계했습니다."
+        }
+      ],
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/454/data"
+      },
+      "source_basis": {
+        "work": "하는일\n치과기공사는 치과의사의 의뢰를 바탕으로 치아, 치아 장치, 교정 장치 등을 다양한 형태와 재료로 제작하고, 수리하는 업무를 수행합니다.\n치과 보철물의 종류, 재료, 설계, 완성 시간 등을 확인합니다.\n치과 병원과 의원에서 제공받은 환자의 치아 모형을 분석, 설계해서 석고 모형을 뜨고, 작업 모형에 맞게 금, 은, 합성수지 등으로 인공 치아를 만들거나 의치, 교정 틀 등 보철 제작물을 주조합니다.\n제작물을 연마, 가공하여 보철물을 완성하고 제작된 모델을 확인합니다.\n치과 기공물과 충전물의 제작, 수리에 사용되는 도구, 장비, 재료 등을 관리합니다.",
+        "selected_work_evidence": "치과 병원과 의원에서 제공받은 환자의 치아 모형을 분석, 설계해서 석고 모형을 뜨고, 작업 모형에 맞게 금, 은, 합성수지 등으로 인공 치아를 만들거나 의치, 교정 틀 등 보철 제작물을 주조합니다.",
+        "core_competencies": [
+          "대인관계능력"
+        ],
+        "practice_connection": "원문 역량 대인관계능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/454/data/준비방법"
+      },
+      "bindingEvidence": "docs/machine/evidence/workplaces-v011/PAN-009-unity-scene.json",
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-009-detail-v011.unity",
+      "contentReviewStatus": "authored_educational_task_needs_occupation_review",
+      "currentBuildInclusion": false
+    },
+    {
+      "scenarioId": "career-net-256-experience",
+      "version": "v002",
+      "occupationId": "career-net-256",
+      "name": "보건의료정보관리사",
+      "roomId": "PAN-011",
+      "title": "진료 기록의 식별과 누락 관리",
+      "brief": "진료 기록의 식별과 누락 관리 — 세 개의 실제 물건에서 요청 확인·직접 조작·결과 기록을 이어갑니다.",
+      "limitation": "직업 원문을 근거로 작성한 가상 교육 사례입니다. 실제 전문 정답·안전 지침·자격·적성 판정이 아닙니다. 이 후속 자료는 현재71공간 검수 빌드에 자동 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "번호표 발급기",
+          "candidateId": "CND-024",
+          "assetId": "AST-1024",
+          "assetVersion": "v001",
+          "nodeName": "AST-1024-005",
+          "instanceId": "Room_PAN-011/AST-1024-005"
+        },
+        {
+          "id": "object-2",
+          "name": "서류 트레이",
+          "candidateId": "CND-049",
+          "assetId": "AST-1049",
+          "assetVersion": "v001",
+          "nodeName": "AST-1049-006",
+          "instanceId": "Room_PAN-011/AST-1049-006"
+        },
+        {
+          "id": "object-3",
+          "name": "모니터",
+          "candidateId": "CND-005",
+          "assetId": "AST-005",
+          "assetVersion": "v001",
+          "nodeName": "AST-005-003",
+          "instanceId": "Room_PAN-011/AST-005-003"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "기록 확인 접수",
+          "instruction": "가상 문서 확인 요청: 기록번호 MR-105, 접수일 11월17일, 담당 기록관리입니다. 방문자 식별정보·질병명을 임의 생성하지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "기록번호",
+              "initial": "MR-150",
+              "target": "MR-105"
+            },
+            {
+              "id": "f1",
+              "label": "접수일",
+              "initial": "11월16일",
+              "target": "11월17일"
+            },
+            {
+              "id": "f2",
+              "label": "담당",
+              "initial": "시설관리",
+              "target": "기록관리"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "career-net-256-PAN-011-next-1",
+          "successText": "가상 요청 자료를 저장했습니다."
+        },
+        {
+          "kind": "sort",
+          "title": "진료 문서 트레이 분류",
+          "instruction": "이번 가상 규칙: 서명있음=확인완료, 서명누락=추가확인, 다른 기록번호=별도기록입니다. 문서를 읽을 수 있는 트레이에 옮깁니다. 진단·청구 코드는 판단하지 않습니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "다른 기록번호",
+              "targetLabel": "별도기록",
+              "initialX": 0.08,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "서명있음",
+              "targetLabel": "확인완료",
+              "initialX": 0.33,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "서명누락",
+              "targetLabel": "추가확인",
+              "initialX": 0.58,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "career-net-256-PAN-011-next-2",
+          "successText": "직접 조작한 작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "기록관리 모니터의 대조 집계",
+          "instruction": "가상 문서 9건 중 확인완료 6건·추가확인 2건·별도기록 1건입니다. 세 수치를 입력해 확인 범위를 전달합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "확인완료",
+              "initial": "",
+              "target": "6"
+            },
+            {
+              "id": "f1",
+              "label": "추가확인",
+              "initial": "",
+              "target": "2"
+            },
+            {
+              "id": "f2",
+              "label": "별도기록",
+              "initial": "",
+              "target": "1"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "career-net-256-PAN-011-next-3",
+          "successText": "마지막 기록과 남은 확인을 인계했습니다."
+        }
+      ],
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/174/data"
+      },
+      "source_basis": {
+        "work": "하는일\n보건의료정보관리사는 보건 행정에 대한 지식을 바탕으로 이용자의 건강 및 질병과 관련된 자료를 수집하고 분석하고 관리합니다.\n의료기관에서 질병과 수술 분류, 진료기록의 분석, 진료 통계, 암 등록, 전사 등 각종 의무에 관한 기록 및 정보를 유지하고 관리하며 확인하는 업무를 수행합니다.\n의료진이 차트를 필요로 할 때 신속하고 정확하게 제공하기 위해 외래 및 입원 환자로 구분하여 의사가 의무기록에 기록한 진단명, 처치, 수술, 검사 등에 대한 정보를 관리합니다.\n정리 및 보관된 의무기록의 내용을 검토하고 분석하여 필요한 정보를 요약하고 통계자료를 작성하며, 미비한 의무기록의 경우 검출 목록을 첨부하여 담당자에게 알립니다.\n질병 색인, 수술 색인 등의 색인 업무를 수행하고 수술실에서 녹음된 테이프를 들으며 녹음 내용을 기록합니다.",
+        "selected_work_evidence": "의료기관에서 질병과 수술 분류, 진료기록의 분석, 진료 통계, 암 등록, 전사 등 각종 의무에 관한 기록 및 정보를 유지하고 관리하며 확인하는 업무를 수행합니다.",
+        "core_competencies": [
+          "대인관계능력"
+        ],
+        "practice_connection": "원문 역량 대인관계능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/174/data/준비방법"
+      },
+      "bindingEvidence": "docs/machine/evidence/workplaces-v011/PAN-011-unity-scene.json",
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-011-detail-v011.unity",
+      "contentReviewStatus": "authored_educational_task_needs_occupation_review",
+      "currentBuildInclusion": false
+    },
+    {
+      "scenarioId": "career-net-395-experience",
+      "version": "v002",
+      "occupationId": "career-net-395",
+      "name": "유치원교사",
+      "roomId": "PAN-012",
+      "title": "유치원 활동 안내와 교구 정리",
+      "brief": "유치원 활동 안내와 교구 정리 — 세 개의 실제 물건에서 요청 확인·직접 조작·결과 기록을 이어갑니다.",
+      "limitation": "직업 원문을 근거로 작성한 가상 교육 사례입니다. 실제 전문 정답·안전 지침·자격·적성 판정이 아닙니다. 이 후속 자료는 현재71공간 검수 빌드에 자동 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "교재",
+          "candidateId": "CND-053",
+          "assetId": "AST-1053",
+          "assetVersion": "v001",
+          "nodeName": "AST-1053-012",
+          "instanceId": "Room_PAN-012/AST-1053-012"
+        },
+        {
+          "id": "object-2",
+          "name": "독립형 칠판",
+          "candidateId": "CND-052",
+          "assetId": "AST-1052",
+          "assetVersion": "v001",
+          "nodeName": "AST-1052-011",
+          "instanceId": "Room_PAN-012/AST-1052-011"
+        },
+        {
+          "id": "object-3",
+          "name": "사물함",
+          "candidateId": "CND-054",
+          "assetId": "AST-1054",
+          "assetVersion": "v001",
+          "nodeName": "AST-1054-013",
+          "instanceId": "Room_PAN-012/AST-1054-013"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "그림책 활동 계획",
+          "instruction": "가상 수업은 그림책 작은 씨앗, 활동일 11월18일, 모둠 3개입니다. 전날 계획안에서 제목·날짜·모둠 수를 수정합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "그림책",
+              "initial": "큰 나무",
+              "target": "작은 씨앗"
+            },
+            {
+              "id": "f1",
+              "label": "활동일",
+              "initial": "11월17일",
+              "target": "11월18일"
+            },
+            {
+              "id": "f2",
+              "label": "모둠",
+              "initial": "4",
+              "target": "3"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "career-net-395-PAN-012-next-1",
+          "successText": "가상 요청 자료를 저장했습니다."
+        },
+        {
+          "kind": "sort",
+          "title": "칠판 활동 순서",
+          "instruction": "활동 계획은 이야기 듣기→그림 순서 놓기→느낌 나누기입니다. 단계카드를 칠판의 순서칸에 배치합니다. 유아의 발달 수준·능력을 판정하지 않습니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "느낌 나누기",
+              "targetLabel": "3 느낌 나누기",
+              "initialX": 0.08,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "이야기 듣기",
+              "targetLabel": "1 이야기 듣기",
+              "initialX": 0.33,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "그림 순서 놓기",
+              "targetLabel": "2 그림 순서 놓기",
+              "initialX": 0.58,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "career-net-395-PAN-012-next-2",
+          "successText": "직접 조작한 작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "sort",
+          "title": "사물함 교구 반납",
+          "instruction": "가상 교구표: 그림책=책칸, 순서카드=카드함, 색연필=필기도구함입니다. 사용한 교구카드를 지정 보관칸에 정리합니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "색연필",
+              "targetLabel": "필기도구함",
+              "initialX": 0.08,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "그림책",
+              "targetLabel": "책칸",
+              "initialX": 0.33,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "순서카드",
+              "targetLabel": "카드함",
+              "initialX": 0.58,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "career-net-395-PAN-012-next-3",
+          "successText": "마지막 기록과 남은 확인을 인계했습니다."
+        }
+      ],
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/342/data"
+      },
+      "source_basis": {
+        "work": "하는일\n유치원교사는 학교에 입학하기 전인 아동에게 필요한 교육을 합니다.\n아동들의 지적, 정서적, 사회적 발달을 위한 교육활동을 합니다.\n유아들이 직접 참여할 수 있는 다양한 수업 방법(발표, 토의, 조사, 견학, 발표회 등)을 계획하고 활용하여 지도합니다.\n등원, 정리 정돈, 평가, 집단활동(토의, 게임, 요리 등) 및 실외활동 진행, 급식 및 간식 제공, 하원,교육과정의 계획 및 운영 등의 일을 합니다.\n학부모를 대상으로 유아 발달에 협조할 수 있는 부모교육, 가정통신문 발송, 출결 사항 관리 등 행정 업무도 하고, 아동들의 유치원 생활, 학습 능력 등 성장 문제에 대하여 상담합니다.",
+        "selected_work_evidence": "등원, 정리 정돈, 평가, 집단활동(토의, 게임, 요리 등) 및 실외활동 진행, 급식 및 간식 제공, 하원,교육과정의 계획 및 운영 등의 일을 합니다.",
+        "core_competencies": [
+          "대인관계능력",
+          "자기성찰능력"
+        ],
+        "practice_connection": "원문 역량 대인관계능력, 자기성찰능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/342/data/준비방법"
+      },
+      "bindingEvidence": "docs/machine/evidence/workplaces-v011/PAN-012-unity-scene.json",
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-012-detail-v011.unity",
+      "contentReviewStatus": "authored_educational_task_needs_occupation_review",
+      "currentBuildInclusion": false
+    },
+    {
+      "scenarioId": "career-net-408-experience",
+      "version": "v002",
+      "occupationId": "career-net-408",
+      "name": "직업상담 및 취업알선원",
+      "roomId": "PAN-015",
+      "title": "희망 근무조건과 채용 정보 대조",
+      "brief": "희망 근무조건과 채용 정보 대조 — 세 개의 실제 물건에서 요청 확인·직접 조작·결과 기록을 이어갑니다.",
+      "limitation": "직업 원문을 근거로 작성한 가상 교육 사례입니다. 실제 전문 정답·안전 지침·자격·적성 판정이 아닙니다. 이 후속 자료는 현재71공간 검수 빌드에 자동 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "상담 노트",
+          "candidateId": "CND-064",
+          "assetId": "AST-1064",
+          "assetVersion": "v001",
+          "nodeName": "AST-1064-006",
+          "instanceId": "Room_PAN-015/AST-1064-006"
+        },
+        {
+          "id": "object-2",
+          "name": "테이블",
+          "candidateId": "CND-010",
+          "assetId": "AST-1010",
+          "assetVersion": "v001",
+          "nodeName": "AST-1010-004",
+          "instanceId": "Room_PAN-015/AST-1010-004"
+        },
+        {
+          "id": "object-3",
+          "name": "선반",
+          "candidateId": "CND-028",
+          "assetId": "AST-1028",
+          "assetVersion": "v001",
+          "nodeName": "AST-1028-007",
+          "instanceId": "Room_PAN-015/AST-1028-007"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "상담 노트의 희망 조건",
+          "instruction": "가상 이용자는 주 3일·오전·서류 정리 업무를 희망합니다. 선호를 그대로 기록하며 사람의 직업 적성이나 능력을 판정하지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "주 근무일",
+              "initial": "5",
+              "target": "3"
+            },
+            {
+              "id": "f1",
+              "label": "시간대",
+              "initial": "야간",
+              "target": "오전"
+            },
+            {
+              "id": "f2",
+              "label": "희망업무",
+              "initial": "운송",
+              "target": "서류 정리"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "career-net-408-PAN-015-next-1",
+          "successText": "가상 요청 자료를 저장했습니다."
+        },
+        {
+          "kind": "sort",
+          "title": "테이블 채용 정보 비교",
+          "instruction": "제공된 채용표: A=주3일 오전 서류정리, B=주5일 오전 서류정리, C=주3일 오후 서류정리. A는조건일치, B는요일재확인, C는시간재확인입니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "C 오후",
+              "targetLabel": "시간재확인",
+              "initialX": 0.08,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "A 주3일 오전",
+              "targetLabel": "조건일치",
+              "initialX": 0.33,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "B 주5일",
+              "targetLabel": "요일재확인",
+              "initialX": 0.58,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "career-net-408-PAN-015-next-2",
+          "successText": "직접 조작한 작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "상담 기록 보관",
+          "instruction": "채용정보 A, 근무시간 오전, 남은확인 채용담당자 문의를 기록합니다. 고용 확정이나 법률 상담 결과로 만들지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "채용정보",
+              "initial": "",
+              "target": "A"
+            },
+            {
+              "id": "f1",
+              "label": "근무시간",
+              "initial": "",
+              "target": "오전"
+            },
+            {
+              "id": "f2",
+              "label": "남은확인",
+              "initial": "",
+              "target": "채용담당자 문의"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "career-net-408-PAN-015-next-3",
+          "successText": "마지막 기록과 남은 확인을 인계했습니다."
+        }
+      ],
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/437/data"
+      },
+      "source_basis": {
+        "work": "하는일\n직업상담 및 취업알선원은 취업을 희망하는 사람에게 적합한 일자리에 대한 정보를 제공하거나 인재 채용을 희망하는 업체에 적합한 사람을 소개합니다.\n직업상담원은 취업을 희망하는 자들에게 구직 등록을 받은 후 인재 채용을 희망하는 업체 중에서 적합한 일자리를 선별하여 안내해 줍니다.\n채용을 희망하는 사람이 잘하는 일, 흥미, 경력 등을 파악하여 알맞은 직업 정보와 취업 정보를 제공합니다.\n근로기준법을 비롯한 노동관계법규 등 노동시장에서 발생하는 직업과 관련된 법적인 일반 상담과 창업상담, 경력개발상담, 직업 적응상담, 직업전화상담, 은퇴 상담 등을 수행합니다.\n청소년, 여성, 실업자 등을 위한 직업지도 프로그램 개발 및 운영을 담당하고, 고용촉진장려금, 실업급여 등 고용보험 업무와 고용 허가 관련 업무 등을 수행합니다.",
+        "selected_work_evidence": "근로기준법을 비롯한 노동관계법규 등 노동시장에서 발생하는 직업과 관련된 법적인 일반 상담과 창업상담, 경력개발상담, 직업 적응상담, 직업전화상담, 은퇴 상담 등을 수행합니다.",
+        "core_competencies": [
+          "자기성찰능력"
+        ],
+        "practice_connection": "원문 역량 자기성찰능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/437/data/준비방법"
+      },
+      "bindingEvidence": "docs/machine/evidence/workplaces-v011/PAN-015-unity-scene.json",
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-015-detail-v011.unity",
+      "contentReviewStatus": "authored_educational_task_needs_occupation_review",
+      "currentBuildInclusion": false
+    },
+    {
+      "scenarioId": "career-net-470-experience",
+      "version": "v002",
+      "occupationId": "career-net-470",
+      "name": "전자상거래전문가",
+      "roomId": "PAN-021",
+      "title": "온라인 주문 상품과 출고 정보 대조",
+      "brief": "온라인 주문 상품과 출고 정보 대조 — 세 개의 실제 물건에서 요청 확인·직접 조작·결과 기록을 이어갑니다.",
+      "limitation": "직업 원문을 근거로 작성한 가상 교육 사례입니다. 실제 전문 정답·안전 지침·자격·적성 판정이 아닙니다. 이 후속 자료는 현재71공간 검수 빌드에 자동 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "단순 포장 상품",
+          "candidateId": "CND-082",
+          "assetId": "AST-1082",
+          "assetVersion": "v001",
+          "nodeName": "AST-1082-004",
+          "instanceId": "Room_PAN-021/AST-1082-004"
+        },
+        {
+          "id": "object-2",
+          "name": "POS 기기",
+          "candidateId": "CND-083",
+          "assetId": "AST-1083",
+          "assetVersion": "v001",
+          "nodeName": "AST-1083-008",
+          "instanceId": "Room_PAN-021/AST-1083-008"
+        },
+        {
+          "id": "object-3",
+          "name": "바구니",
+          "candidateId": "CND-084",
+          "assetId": "AST-1084",
+          "assetVersion": "v001",
+          "nodeName": "AST-1084-009",
+          "instanceId": "Room_PAN-021/AST-1084-009"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "포장 상품 주문표",
+          "instruction": "가상 주문번호 EC-209는 노트 4개·파랑 표지입니다. 잘못 적힌 주문 상품 초안을 수정합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "주문번호",
+              "initial": "EC-290",
+              "target": "EC-209"
+            },
+            {
+              "id": "f1",
+              "label": "수량",
+              "initial": "2",
+              "target": "4"
+            },
+            {
+              "id": "f2",
+              "label": "표지색",
+              "initial": "초록",
+              "target": "파랑"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "career-net-470-PAN-021-next-1",
+          "successText": "가상 요청 자료를 저장했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "POS 주문 금액 대조",
+          "instruction": "가상 판매표에서 노트 한 개는 1500원입니다. 4개의 상품합계 6000원, 배송비 2000원, 결제합계 8000원을 계산해 기록합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "상품합계",
+              "initial": "",
+              "target": "6000"
+            },
+            {
+              "id": "f1",
+              "label": "배송비",
+              "initial": "",
+              "target": "2000"
+            },
+            {
+              "id": "f2",
+              "label": "결제합계",
+              "initial": "",
+              "target": "8000"
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "career-net-470-PAN-021-next-2",
+          "successText": "직접 조작한 작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "sort",
+          "title": "주문 바구니 출고 분류",
+          "instruction": "출고표: 파랑노트4개=EC-209, 초록노트2개=EC-210, 무라벨상품=재확인입니다. 상품카드를 주문별 칸으로 옮깁니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "무라벨상품",
+              "targetLabel": "재확인",
+              "initialX": 0.08,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "파랑노트4개",
+              "targetLabel": "EC-209",
+              "initialX": 0.33,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "초록노트2개",
+              "targetLabel": "EC-210",
+              "initialX": 0.58,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "career-net-470-PAN-021-next-3",
+          "successText": "마지막 기록과 남은 확인을 인계했습니다."
+        }
+      ],
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/395/data"
+      },
+      "source_basis": {
+        "work": "하는일\n전자상거래전문가는 정부, 기업, 개인 등이 인터넷 웹사이트를 통해 상품 및 서비스를 구매할 수 있는 전자상거래 시스템을 설계하고 만드는 일을 합니다.\n전자상거래전문가는 사업 기획부터 콘텐츠 개발, 시스템 구성, 서버 관리 및 운영, 상품 구매 및 판매, 마케팅 및 홍보 등을 담당합니다.\n인터넷을 통해 물건을 구매할 가능성이 있는 고객과 물건을 판매할 개인과 기업의 요구를 포함한 전자상거래 시스템을 만듭니다.\n고객을 대상으로 마케팅 전략을 세우거나 전자상거래의 구축에 대한 전문적인 조언을 합니다.\n전자상거래와 관련된 법률적 문제를 검토하고 사이트를 만들고 판매 및 유통 계획을 수립하고 전체 웹사이트의 운영과 관리에 대해 감독합니다.",
+        "selected_work_evidence": "전자상거래전문가는 사업 기획부터 콘텐츠 개발, 시스템 구성, 서버 관리 및 운영, 상품 구매 및 판매, 마케팅 및 홍보 등을 담당합니다.",
+        "core_competencies": [
+          "수리·논리력"
+        ],
+        "practice_connection": "원문 역량 수리·논리력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/395/data/준비방법"
+      },
+      "bindingEvidence": "docs/machine/evidence/workplaces-v011/PAN-021-unity-scene.json",
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-021-detail-v011.unity",
+      "contentReviewStatus": "authored_educational_task_needs_occupation_review",
+      "currentBuildInclusion": false
+    },
+    {
+      "scenarioId": "career-net-177-experience",
+      "version": "v002",
+      "occupationId": "career-net-177",
+      "name": "푸드스타일리스트",
+      "roomId": "PAN-024",
+      "title": "잡지용 음식 사진의 구성 요청",
+      "brief": "잡지용 음식 사진의 구성 요청 — 세 개의 실제 물건에서 요청 확인·직접 조작·결과 기록을 이어갑니다.",
+      "limitation": "직업 원문을 근거로 작성한 가상 교육 사례입니다. 실제 전문 정답·안전 지침·자격·적성 판정이 아닙니다. 이 후속 자료는 현재71공간 검수 빌드에 자동 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "냉장고",
+          "candidateId": "CND-090",
+          "assetId": "AST-1090",
+          "assetVersion": "v001",
+          "nodeName": "AST-1090-004",
+          "instanceId": "Room_PAN-024/AST-1090-004"
+        },
+        {
+          "id": "object-2",
+          "name": "조리대",
+          "candidateId": "CND-088",
+          "assetId": "AST-1088",
+          "assetVersion": "v001",
+          "nodeName": "AST-1088-002",
+          "instanceId": "Room_PAN-024/AST-1088-002"
+        },
+        {
+          "id": "object-3",
+          "name": "가열 기구",
+          "candidateId": "CND-089",
+          "assetId": "AST-1089",
+          "assetVersion": "v002",
+          "nodeName": "AST-1089-003",
+          "instanceId": "Room_PAN-024/AST-1089-003"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "냉장고 재료 콘셉트표",
+          "instruction": "가상 잡지 촬영 주제는 봄 소풍, 주메뉴 샌드위치, 배경밝기 밝게입니다. 실제 식품 조리·보관 안전기준을 판단하지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "주제",
+              "initial": "겨울 만찬",
+              "target": "봄 소풍"
+            },
+            {
+              "id": "f1",
+              "label": "주메뉴",
+              "initial": "스튜",
+              "target": "샌드위치"
+            },
+            {
+              "id": "f2",
+              "label": "배경밝기",
+              "initial": "어둡게",
+              "target": "밝게"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "career-net-177-PAN-024-next-1",
+          "successText": "가상 요청 자료를 저장했습니다."
+        },
+        {
+          "kind": "sort",
+          "title": "조리대 촬영 구성판",
+          "instruction": "가상 촬영도: 샌드위치=중앙, 과일접시=왼쪽, 제목카드=상단입니다. 구성요소 카드를 작업판의 지정영역에 배치합니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "제목카드",
+              "targetLabel": "상단 제목카드",
+              "initialX": 0.08,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "과일접시",
+              "targetLabel": "왼쪽 과일접시",
+              "initialX": 0.33,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "샌드위치",
+              "targetLabel": "중앙 샌드위치",
+              "initialX": 0.58,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "career-net-177-PAN-024-next-2",
+          "successText": "직접 조작한 작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "가열 기구의 촬영 준비 메모",
+          "instruction": "가상 촬영 요청은 메뉴 샌드위치, 촬영시각 11:00, 남은확인 촬영팀 구도입니다. 기구를 실제 가열하지 않고 준비 기록만 전달합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "메뉴",
+              "initial": "",
+              "target": "샌드위치"
+            },
+            {
+              "id": "f1",
+              "label": "촬영시각",
+              "initial": "",
+              "target": "11:00"
+            },
+            {
+              "id": "f2",
+              "label": "남은확인",
+              "initial": "",
+              "target": "촬영팀 구도"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "career-net-177-PAN-024-next-3",
+          "successText": "마지막 기록과 남은 확인을 인계했습니다."
+        }
+      ],
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/506/data"
+      },
+      "source_basis": {
+        "work": "하는일\n푸드스타일리스트는 식품 조리와 스타일링에 대한 지식을 바탕으로 영화, 드라마, 광고 등에 내보낼 음식 관련 장면을 연출하며, 레스토랑의 새로운 메뉴를 개발하거나 요리책이나 잡지 등에 올릴 요리 개발 및 조리법 작성 등의 일을 수행합니다.\n국내외 요리, 식기, 소품, 인테리어 등의 관련 자료를 수집 및 분석해 요리의 특성과 의뢰자가 원하는 구성에 맞춰 식기와 소품을 구성합니다.\n소비자 시장을 조사하고, 조사 결과를 바탕으로 레스토랑의 기존 메뉴를 보완하거나 새로운 메뉴를 추가하며, 잡지나 요리 프로그램의 기획 주제에 적합한 메뉴를 개발합니다.",
+        "selected_work_evidence": "소비자 시장을 조사하고, 조사 결과를 바탕으로 레스토랑의 기존 메뉴를 보완하거나 새로운 메뉴를 추가하며, 잡지나 요리 프로그램의 기획 주제에 적합한 메뉴를 개발합니다.",
+        "core_competencies": [
+          "예술시각능력",
+          "창의력"
+        ],
+        "practice_connection": "원문 역량 예술시각능력, 창의력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/506/data/준비방법"
+      },
+      "bindingEvidence": "docs/machine/evidence/workplaces-v011/PAN-024-unity-scene.json",
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-024-detail-v011.unity",
+      "contentReviewStatus": "authored_educational_task_needs_occupation_review",
+      "currentBuildInclusion": false
+    },
+    {
+      "scenarioId": "career-net-316-experience",
+      "version": "v002",
+      "occupationId": "career-net-316",
+      "name": "플로리스트",
+      "roomId": "PAN-029",
+      "title": "행사 꽃장식 요청과 배치 계획",
+      "brief": "행사 꽃장식 요청과 배치 계획 — 세 개의 실제 물건에서 요청 확인·직접 조작·결과 기록을 이어갑니다.",
+      "limitation": "직업 원문을 근거로 작성한 가상 교육 사례입니다. 실제 전문 정답·안전 지침·자격·적성 판정이 아닙니다. 이 후속 자료는 현재71공간 검수 빌드에 자동 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "보관 상자",
+          "candidateId": "CND-058",
+          "assetId": "AST-1058",
+          "assetVersion": "v001",
+          "nodeName": "AST-1058-006",
+          "instanceId": "Room_PAN-029/AST-1058-006"
+        },
+        {
+          "id": "object-2",
+          "name": "작업대",
+          "candidateId": "CND-055",
+          "assetId": "AST-1055",
+          "assetVersion": "v001",
+          "nodeName": "AST-1055-002",
+          "instanceId": "Room_PAN-029/AST-1055-002"
+        },
+        {
+          "id": "object-3",
+          "name": "선반",
+          "candidateId": "CND-028",
+          "assetId": "AST-1028",
+          "assetVersion": "v001",
+          "nodeName": "AST-1028-005",
+          "instanceId": "Room_PAN-029/AST-1028-005"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "화훼 보관 상자의 의뢰서",
+          "instruction": "가상 행사 꽃장식은 행사명 책방 개관, 주조색 분홍, 설치위치 입구입니다. 기존 공용 팔레트·모델을 유지하고 고객 요청만 편집합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "행사명",
+              "initial": "카페 개관",
+              "target": "책방 개관"
+            },
+            {
+              "id": "f1",
+              "label": "주조색",
+              "initial": "파랑",
+              "target": "분홍"
+            },
+            {
+              "id": "f2",
+              "label": "설치위치",
+              "initial": "무대",
+              "target": "입구"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "career-net-316-PAN-029-next-1",
+          "successText": "가상 요청 자료를 저장했습니다."
+        },
+        {
+          "kind": "sort",
+          "title": "작업대 꽃장식 구성판",
+          "instruction": "가상 꽃장식 도안: 큰꽃=중앙, 작은꽃=왼쪽, 잎사귀=오른쪽입니다. 꽃·잎 카드로 비대칭 구성판을 직접 만듭니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "잎사귀",
+              "targetLabel": "오른쪽 잎사귀",
+              "initialX": 0.08,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "큰꽃",
+              "targetLabel": "중앙 큰꽃",
+              "initialX": 0.33,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "작은꽃",
+              "targetLabel": "왼쪽 작은꽃",
+              "initialX": 0.58,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "career-net-316-PAN-029-next-2",
+          "successText": "직접 조작한 작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "선반의 설치 인계표",
+          "instruction": "행사 책방 개관, 설치위치 입구, 확인시각 09:30을 담당자에게 전달합니다. 실제 꽃 종류·재배·알레르기 적합성을 판단하지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "행사",
+              "initial": "",
+              "target": "책방 개관"
+            },
+            {
+              "id": "f1",
+              "label": "설치위치",
+              "initial": "",
+              "target": "입구"
+            },
+            {
+              "id": "f2",
+              "label": "확인시각",
+              "initial": "",
+              "target": "09:30"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "career-net-316-PAN-029-next-3",
+          "successText": "마지막 기록과 남은 확인을 인계했습니다."
+        }
+      ],
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/510/data"
+      },
+      "source_basis": {
+        "work": "하는일\n플로리스트는 꽃, 식물, 화초 등의 화훼류를 여러 가지 목적에 따라 보기 좋게 꾸미는 일을 합니다.\n화훼가 시들지 않도록 적정 온도와 습도를 갖추어 보관하고, 고객의 요청에 따라 꽃을 포장하여 판매합니다.\n행사의 특성을 살펴 장식 계획을 세우고, 고객과 협의하여 행사장에 화훼를 장식합니다.",
+        "selected_work_evidence": "행사의 특성을 살펴 장식 계획을 세우고, 고객과 협의하여 행사장에 화훼를 장식합니다.",
+        "core_competencies": [
+          "예술시각능력",
+          "창의력"
+        ],
+        "practice_connection": "원문 역량 예술시각능력, 창의력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/510/data/준비방법"
+      },
+      "bindingEvidence": "docs/machine/evidence/workplaces-v011/PAN-029-unity-scene.json",
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-029-detail-v011.unity",
+      "contentReviewStatus": "authored_educational_task_needs_occupation_review",
+      "currentBuildInclusion": false
+    },
+    {
+      "scenarioId": "career-net-328-experience",
+      "version": "v002",
+      "occupationId": "career-net-328",
+      "name": "작곡가",
+      "roomId": "PAN-032",
+      "title": "짧은 배경음악의 구조와 시연 설정",
+      "brief": "짧은 배경음악의 구조와 시연 설정 — 세 개의 실제 물건에서 요청 확인·직접 조작·결과 기록을 이어갑니다.",
+      "limitation": "직업 원문을 근거로 작성한 가상 교육 사례입니다. 실제 전문 정답·안전 지침·자격·적성 판정이 아닙니다. 이 후속 자료는 현재71공간 검수 빌드에 자동 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "모니터",
+          "candidateId": "CND-005",
+          "assetId": "AST-005",
+          "assetVersion": "v001",
+          "nodeName": "AST-005-004",
+          "instanceId": "Room_PAN-032/AST-005-004"
+        },
+        {
+          "id": "object-2",
+          "name": "헤드폰",
+          "candidateId": "CND-117",
+          "assetId": "AST-1117",
+          "assetVersion": "v001",
+          "nodeName": "AST-1117-010",
+          "instanceId": "Room_PAN-032/AST-1117-010"
+        },
+        {
+          "id": "object-3",
+          "name": "스피커",
+          "candidateId": "CND-120",
+          "assetId": "AST-1120",
+          "assetVersion": "v001",
+          "nodeName": "AST-1120-008",
+          "instanceId": "Room_PAN-032/AST-1120-008"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "sort",
+          "title": "모니터의 악구 구성판",
+          "instruction": "가상 영상 의뢰는 도입 4마디→주제 8마디→마무리 4마디입니다. 악구 카드를 시간 흐름에 맞춰 놓습니다. 실제 음원을 생성했다고 주장하지 않습니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "마무리 4마디",
+              "targetLabel": "3 마무리",
+              "initialX": 0.08,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "도입 4마디",
+              "targetLabel": "1 도입",
+              "initialX": 0.33,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "주제 8마디",
+              "targetLabel": "2 주제",
+              "initialX": 0.58,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "career-net-328-PAN-032-next-1",
+          "successText": "가상 요청 자료를 저장했습니다."
+        },
+        {
+          "kind": "tune",
+          "title": "헤드폰의 시연 요청값",
+          "instruction": "이번 가상 시연 요청은 템포 90BPM·음량 30%입니다. 실제 음악 파일이나 오디오 재생 결과가 아니라 시연 설정판을 조작합니다.",
+          "values": [
+            {
+              "id": "v0",
+              "label": "템포",
+              "unit": "BPM",
+              "min": 60,
+              "max": 140,
+              "initial": 70,
+              "target": 90,
+              "tolerance": 0.5
+            },
+            {
+              "id": "v1",
+              "label": "시연 음량",
+              "unit": "%",
+              "min": 0,
+              "max": 100,
+              "initial": 10,
+              "target": 30,
+              "tolerance": 0.5
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "career-net-328-PAN-032-next-2",
+          "successText": "직접 조작한 작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "스피커 시연 인계",
+          "instruction": "가상 곡 제목 책방 산책, 전체마디 16, 템포 90BPM을 기록합니다. 곡의 예술성이나 유일한 좋은 작곡을 판정하지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "곡 제목",
+              "initial": "",
+              "target": "책방 산책"
+            },
+            {
+              "id": "f1",
+              "label": "전체마디",
+              "initial": "",
+              "target": "16"
+            },
+            {
+              "id": "f2",
+              "label": "템포",
+              "initial": "",
+              "target": "90"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "career-net-328-PAN-032-next-3",
+          "successText": "마지막 기록과 남은 확인을 인계했습니다."
+        }
+      ],
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/378/data"
+      },
+      "source_basis": {
+        "work": "하는일\n작곡가는 관현악, 기악, 성악, 대중가요, 영화음악, 광고음악, 애니메이션음악 및 기타 배경음악 등을 만듭니다.\n화음, 리듬, 멜로디, 음악이론 등을 기초로 작가의 생각과 감정을 악보로 표현합니다.\n음을 합성하거나 관현악단의 연주 효과를 얻기 위해 컴퓨터를 이용하기도 합니다.\n작곡한 음악을 피아노, 기타 등의 악기나 관현악단에서 연주할 수 있도록 편곡을 하기도 합니다.",
+        "selected_work_evidence": "작곡가는 관현악, 기악, 성악, 대중가요, 영화음악, 광고음악, 애니메이션음악 및 기타 배경음악 등을 만듭니다.",
+        "core_competencies": [
+          "음악능력"
+        ],
+        "practice_connection": "원문 역량 음악능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/378/data/준비방법"
+      },
+      "bindingEvidence": "docs/machine/evidence/workplaces-v011/PAN-032-unity-scene.json",
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-032-detail-v011.unity",
+      "contentReviewStatus": "authored_educational_task_needs_occupation_review",
+      "currentBuildInclusion": false
+    },
+    {
+      "scenarioId": "career-net-299-experience",
+      "version": "v002",
+      "occupationId": "career-net-299",
+      "name": "문화재보존원",
+      "roomId": "PAN-034",
+      "title": "문화재 자료의 식별과 관찰 기록",
+      "brief": "문화재 자료의 식별과 관찰 기록 — 세 개의 실제 물건에서 요청 확인·직접 조작·결과 기록을 이어갑니다.",
+      "limitation": "직업 원문을 근거로 작성한 가상 교육 사례입니다. 실제 전문 정답·안전 지침·자격·적성 판정이 아닙니다. 이 후속 자료는 현재71공간 검수 빌드에 자동 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "전시대",
+          "candidateId": "CND-124",
+          "assetId": "AST-1124",
+          "assetVersion": "v001",
+          "nodeName": "AST-1124-002",
+          "instanceId": "Room_PAN-034/AST-1124-002"
+        },
+        {
+          "id": "object-2",
+          "name": "독립형 액자 거치대",
+          "candidateId": "CND-126",
+          "assetId": "AST-1126",
+          "assetVersion": "v002",
+          "nodeName": "AST-1126-006",
+          "instanceId": "Room_PAN-034/AST-1126-006"
+        },
+        {
+          "id": "object-3",
+          "name": "전시 조명",
+          "candidateId": "CND-128",
+          "assetId": "AST-1128",
+          "assetVersion": "v001",
+          "nodeName": "AST-1128-009",
+          "instanceId": "Room_PAN-034/AST-1128-009"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "전시대의 보존 기록표",
+          "instruction": "가상 교육 복제품의 자료번호 H-018, 명칭 나무 상자, 기록일 11월19일입니다. 실제 문화재 재료나 복원 방법을 판정하지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "자료번호",
+              "initial": "H-081",
+              "target": "H-018"
+            },
+            {
+              "id": "f1",
+              "label": "명칭",
+              "initial": "도자기 그릇",
+              "target": "나무 상자"
+            },
+            {
+              "id": "f2",
+              "label": "기록일",
+              "initial": "11월18일",
+              "target": "11월19일"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "career-net-299-PAN-034-next-1",
+          "successText": "가상 요청 자료를 저장했습니다."
+        },
+        {
+          "kind": "sort",
+          "title": "액자 거치대 관찰 자료 분류",
+          "instruction": "가상 자료표: 전체사진=형태기록, 라벨사진=식별기록, 미확인사진=재확인입니다. 사진카드를 기록 목적에 맞게 분류합니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "미확인사진",
+              "targetLabel": "재확인",
+              "initialX": 0.08,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "전체사진",
+              "targetLabel": "형태기록",
+              "initialX": 0.33,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "라벨사진",
+              "targetLabel": "식별기록",
+              "initialX": 0.58,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "career-net-299-PAN-034-next-2",
+          "successText": "직접 조작한 작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "전시 조명의 관리 전달표",
+          "instruction": "가상 관리 요청은 자료 H-018, 확인항목 빛 반사, 남은업무 보존 담당자 검토입니다. 실제 보존 조도나 약품·수리 지침을 만들지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "자료",
+              "initial": "",
+              "target": "H-018"
+            },
+            {
+              "id": "f1",
+              "label": "확인항목",
+              "initial": "",
+              "target": "빛 반사"
+            },
+            {
+              "id": "f2",
+              "label": "남은업무",
+              "initial": "",
+              "target": "보존 담당자 검토"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "career-net-299-PAN-034-next-3",
+          "successText": "마지막 기록과 남은 확인을 인계했습니다."
+        }
+      ],
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/140/data"
+      },
+      "source_basis": {
+        "work": "하는일\n문화재보존원은 궁궐, 사찰, 미술관, 박물관의 소장품과 같은 문화재의 파손 부위를 복원 및 관리합니다.\n손상되거나 훼손된 문화재의 원형을 되살리기 위해 과학적 방법을 사용하며 관련 기술을 연구합니다.\n문화재 수리를 담당하는 중요한 사찰이나 유적의 수리 및 보존 공사를 담당합니다.\n국가유산수리기술자, 국가유산수리기능자, 보존과학기술자 및 기능자 등으로 구분되며 국가유산수리기술자는 각 분야에 대한 기술을 자문하고, 각종 공사와 국가유산수리기능자를 관리 및 감독합니다.\n보존과학기술자 및 기능자는 문화재의 손실 원인을 과학적으로 규명하여 파손을 적합한 방법으로 보존 처리합니다.",
+        "selected_work_evidence": "국가유산수리기술자, 국가유산수리기능자, 보존과학기술자 및 기능자 등으로 구분되며 국가유산수리기술자는 각 분야에 대한 기술을 자문하고, 각종 공사와 국가유산수리기능자를 관리 및 감독합니다.",
+        "core_competencies": [
+          "수리·논리력",
+          "언어능력"
+        ],
+        "practice_connection": "원문 역량 수리·논리력, 언어능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/140/data/준비방법"
+      },
+      "bindingEvidence": "docs/machine/evidence/workplaces-v011/PAN-034-unity-scene.json",
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-034-detail-v011.unity",
+      "contentReviewStatus": "authored_educational_task_needs_occupation_review",
+      "currentBuildInclusion": false
+    },
+    {
+      "scenarioId": "career-net-32-experience",
+      "version": "v002",
+      "occupationId": "career-net-32",
+      "name": "측량사",
+      "roomId": "PAN-038",
+      "title": "가상 지형 기준점과 거리 기록",
+      "brief": "가상 지형 기준점과 거리 기록 — 세 개의 실제 물건에서 요청 확인·직접 조작·결과 기록을 이어갑니다.",
+      "limitation": "직업 원문을 근거로 작성한 가상 교육 사례입니다. 실제 전문 정답·안전 지침·자격·적성 판정이 아닙니다. 이 후속 자료는 현재71공간 검수 빌드에 자동 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "시료 용기",
+          "candidateId": "CND-140",
+          "assetId": "AST-1140",
+          "assetVersion": "v001",
+          "nodeName": "AST-1140-003",
+          "instanceId": "Room_PAN-038/AST-1140-003"
+        },
+        {
+          "id": "object-2",
+          "name": "휴대 측정기",
+          "candidateId": "CND-141",
+          "assetId": "AST-1141",
+          "assetVersion": "v001",
+          "nodeName": "AST-1141-004",
+          "instanceId": "Room_PAN-038/AST-1141-004"
+        },
+        {
+          "id": "object-3",
+          "name": "낮은 지형",
+          "candidateId": "CND-139",
+          "assetId": "AST-1139",
+          "assetVersion": "v001",
+          "nodeName": "AST-1139-002",
+          "instanceId": "Room_PAN-038/AST-1139-002"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "sort",
+          "title": "기준점 표지 용기",
+          "instruction": "이 가상 지도에서 표지 A=서쪽, B=중앙, C=동쪽입니다. 기준점 표지카드를 지점칸에 배치합니다. 실제 토지 경계·권리 판단은 하지 않습니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "C",
+              "targetLabel": "동쪽 C",
+              "initialX": 0.08,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "A",
+              "targetLabel": "서쪽 A",
+              "initialX": 0.33,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "B",
+              "targetLabel": "중앙 B",
+              "initialX": 0.58,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "career-net-32-PAN-038-next-1",
+          "successText": "가상 요청 자료를 저장했습니다."
+        },
+        {
+          "kind": "tune",
+          "title": "휴대 측정기의 모형 눈금",
+          "instruction": "가상 지도 지시는 A-B=20m·B-C=15m입니다. 두 측정값을 요청대로 조절해 모형 측정판에 기록합니다. 실제 정밀측량 장비 교정을 뜻하지 않습니다.",
+          "values": [
+            {
+              "id": "v0",
+              "label": "A-B 거리",
+              "unit": "m",
+              "min": 0,
+              "max": 40,
+              "initial": 5,
+              "target": 20,
+              "tolerance": 0.1
+            },
+            {
+              "id": "v1",
+              "label": "B-C 거리",
+              "unit": "m",
+              "min": 0,
+              "max": 40,
+              "initial": 10,
+              "target": 15,
+              "tolerance": 0.1
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "career-net-32-PAN-038-next-2",
+          "successText": "직접 조작한 작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "지형 거리 대조표",
+          "instruction": "가상 A-B 20m와 B-C 15m는 직선으로 이어집니다. 총거리 35m, 기준점 A-C, 검토상태 도면 대조 필요로 기록합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "총거리",
+              "initial": "",
+              "target": "35"
+            },
+            {
+              "id": "f1",
+              "label": "기준점",
+              "initial": "",
+              "target": "A-C"
+            },
+            {
+              "id": "f2",
+              "label": "검토상태",
+              "initial": "",
+              "target": "도면 대조 필요"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "career-net-32-PAN-038-next-3",
+          "successText": "마지막 기록과 남은 확인을 인계했습니다."
+        }
+      ],
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/453/data"
+      },
+      "source_basis": {
+        "work": "하는일\n측량사는 국토의 이용, 개발, 건설 공사, 지도 제작을 목적으로 토지의 형태, 지형선, 위치, 고도, 면적 등을 측량하는 업무를 수행합니다.\n토지에 대한 측량 계획과 방법, 절차를 계획함으로써 토지에 물권이 미치는 한계를 정합니다.\n토지 자산, 필지, 토지구획에 대한 사법적 경계를 확립하고자 측량을 계획, 지휘, 감독합니다.\n지형, 지형선 등 영역들을 도면화하고자 경도, 각도, 컴퓨터 삼각법, 기타 계산을 활용하여 분석합니다.\n측량 자료를 검토, 수정하여 도면과 측량 결과서를 작성합니다.",
+        "selected_work_evidence": "측량사는 국토의 이용, 개발, 건설 공사, 지도 제작을 목적으로 토지의 형태, 지형선, 위치, 고도, 면적 등을 측량하는 업무를 수행합니다.",
+        "core_competencies": [
+          "수리·논리력",
+          "공간지각력"
+        ],
+        "practice_connection": "원문 역량 수리·논리력, 공간지각력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/453/data/준비방법"
+      },
+      "bindingEvidence": "docs/machine/evidence/workplaces-v011/PAN-038-unity-scene.json",
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-038-detail-v010.unity",
+      "contentReviewStatus": "authored_educational_task_needs_occupation_review",
+      "currentBuildInclusion": false
+    },
+    {
+      "scenarioId": "career-net-31-experience",
+      "version": "v002",
+      "occupationId": "career-net-31",
+      "name": "천문학연구원",
+      "roomId": "PAN-039",
+      "title": "천체 관측 요청과 노출 기록",
+      "brief": "천체 관측 요청과 노출 기록 — 세 개의 실제 물건에서 요청 확인·직접 조작·결과 기록을 이어갑니다.",
+      "limitation": "직업 원문을 근거로 작성한 가상 교육 사례입니다. 실제 전문 정답·안전 지침·자격·적성 판정이 아닙니다. 이 후속 자료는 현재71공간 검수 빌드에 자동 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "삼각대 센서",
+          "candidateId": "CND-144",
+          "assetId": "AST-1144",
+          "assetVersion": "v003",
+          "nodeName": "AST-1144-003",
+          "instanceId": "Room_PAN-039/AST-1144-003"
+        },
+        {
+          "id": "object-2",
+          "name": "소형 관측 장치",
+          "candidateId": "CND-145",
+          "assetId": "AST-1145",
+          "assetVersion": "v001",
+          "nodeName": "AST-1145-004",
+          "instanceId": "Room_PAN-039/AST-1145-004"
+        },
+        {
+          "id": "object-3",
+          "name": "데이터 기록 기기",
+          "candidateId": "CND-146",
+          "assetId": "AST-1146",
+          "assetVersion": "v001",
+          "nodeName": "AST-1146-005",
+          "instanceId": "Room_PAN-039/AST-1146-005"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "삼각대 센서 관측 요청",
+          "instruction": "가상 관측 표적은 교육표적 X-04, 관측시각 21:00, 관측모드 비교사진입니다. 실제 천체 명칭이나 별의 위치를 추정하지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "표적",
+              "initial": "X-40",
+              "target": "X-04"
+            },
+            {
+              "id": "f1",
+              "label": "관측시각",
+              "initial": "20:00",
+              "target": "21:00"
+            },
+            {
+              "id": "f2",
+              "label": "모드",
+              "initial": "영상통화",
+              "target": "비교사진"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "career-net-31-PAN-039-next-1",
+          "successText": "가상 요청 자료를 저장했습니다."
+        },
+        {
+          "kind": "tune",
+          "title": "관측 장치 모형 설정",
+          "instruction": "이번 가상 교육 장치 요청은 노출모형 4눈금·기록간격 3눈금입니다. 실제 천문 장비 노출 설정이나 관측 정답이 아닌 모형 제어입니다.",
+          "values": [
+            {
+              "id": "v0",
+              "label": "노출모형",
+              "unit": "눈금",
+              "min": 1,
+              "max": 10,
+              "initial": 2,
+              "target": 4,
+              "tolerance": 0.1
+            },
+            {
+              "id": "v1",
+              "label": "기록간격",
+              "unit": "눈금",
+              "min": 1,
+              "max": 8,
+              "initial": 1,
+              "target": 3,
+              "tolerance": 0.1
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "career-net-31-PAN-039-next-2",
+          "successText": "직접 조작한 작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "관측 데이터 기록",
+          "instruction": "가상 데이터는 표적 X-04, 시작 21:00, 비교사진 3장입니다. 관측된 범위만 기록하며 실제 연구 결과를 만들지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "표적",
+              "initial": "",
+              "target": "X-04"
+            },
+            {
+              "id": "f1",
+              "label": "시작",
+              "initial": "",
+              "target": "21:00"
+            },
+            {
+              "id": "f2",
+              "label": "사진 수",
+              "initial": "",
+              "target": "3"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "career-net-31-PAN-039-next-3",
+          "successText": "마지막 기록과 남은 확인을 인계했습니다."
+        }
+      ],
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/441/data"
+      },
+      "source_basis": {
+        "work": "하는일\n천문학연구원은 천체를 관측하고, 천체 현상을 물리학적 지식을 적용하여 해석하며, 천체들이 생성되고 소멸하는 원리를 밝히는 연구를 수행합니다.\n천체관측시설의 운영을 관리하고, 천체관측시설을 사용하여 천체의 현상을 연구하며, 천체관측과 관련된 시스템과 관련 장비 등을 연구, 설계합니다.\n물리법칙을 적용하여 혹성, 항성, 성운, 은하계의 크기, 형태, 광도, 성분, 구조, 온도, 운동 등과 같은 특성을 측정합니다.\n우주의 탄생과 진화, 외계행성의 탐색, 우주전파수신 등 우주개발산업에 대한 연구를 수행합니다.\n천체현상에 대한 관측 결과와 연구 결과를 기초과학이나 항해 등의 실제적 문제에 적용합니다.",
+        "selected_work_evidence": "천체관측시설의 운영을 관리하고, 천체관측시설을 사용하여 천체의 현상을 연구하며, 천체관측과 관련된 시스템과 관련 장비 등을 연구, 설계합니다.",
+        "core_competencies": [
+          "수리·논리력"
+        ],
+        "practice_connection": "원문 역량 수리·논리력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/441/data/준비방법"
+      },
+      "bindingEvidence": "docs/machine/evidence/workplaces-v011/PAN-039-unity-scene.json",
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-039-detail-v011.unity",
+      "contentReviewStatus": "authored_educational_task_needs_occupation_review",
+      "currentBuildInclusion": false
+    },
+    {
+      "scenarioId": "career-net-10046-experience",
+      "version": "v002",
+      "occupationId": "career-net-10046",
+      "name": "동물보호보안관",
+      "roomId": "PAN-043",
+      "title": "반려동물 보호 안내 요청 전달",
+      "brief": "반려동물 보호 안내 요청 전달 — 세 개의 실제 물건에서 요청 확인·직접 조작·결과 기록을 이어갑니다.",
+      "limitation": "직업 원문을 근거로 작성한 가상 교육 사례입니다. 실제 전문 정답·안전 지침·자격·적성 판정이 아닙니다. 이 후속 자료는 현재71공간 검수 빌드에 자동 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "운반 케이지",
+          "candidateId": "CND-164",
+          "assetId": "AST-1164",
+          "assetVersion": "v001",
+          "nodeName": "AST-1164-005",
+          "instanceId": "Room_PAN-043/AST-1164-005"
+        },
+        {
+          "id": "object-2",
+          "name": "먹이 그릇",
+          "candidateId": "CND-165",
+          "assetId": "AST-1165",
+          "assetVersion": "v001",
+          "nodeName": "AST-1165-007",
+          "instanceId": "Room_PAN-043/AST-1165-007"
+        },
+        {
+          "id": "object-3",
+          "name": "세척대",
+          "candidateId": "CND-036",
+          "assetId": "AST-1036",
+          "assetVersion": "v001",
+          "nodeName": "AST-1036-003",
+          "instanceId": "Room_PAN-043/AST-1036-003"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "운반 케이지의 보호 요청",
+          "instruction": "가상 보호 안내: 개체이름 보리, 보호자요청 이동 안내, 연락방식 문자입니다. 동물의 성향·질병을 추정하지 않고 요청을 기록합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "개체이름",
+              "initial": "콩이",
+              "target": "보리"
+            },
+            {
+              "id": "f1",
+              "label": "요청",
+              "initial": "진단",
+              "target": "이동 안내"
+            },
+            {
+              "id": "f2",
+              "label": "연락방식",
+              "initial": "전화",
+              "target": "문자"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "career-net-10046-PAN-043-next-1",
+          "successText": "가상 요청 자료를 저장했습니다."
+        },
+        {
+          "kind": "sort",
+          "title": "먹이 그릇의 물품 안내표",
+          "instruction": "가상 보호 물품표: 새물그릇=준비물, 사용그릇=세척안내, 식별누락=담당확인입니다. 안내카드를 해당 목적지에 연결합니다. 실제 급여·치료 처방이 아닙니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "식별누락",
+              "targetLabel": "담당확인",
+              "initialX": 0.08,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "새물그릇",
+              "targetLabel": "준비물",
+              "initialX": 0.33,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "사용그릇",
+              "targetLabel": "세척안내",
+              "initialX": 0.58,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "career-net-10046-PAN-043-next-2",
+          "successText": "직접 조작한 작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "세척대의 보호자 안내 메모",
+          "instruction": "보호자에게 개체 보리, 요청 이동 안내, 추가문의 보호 담당자 확인을 전달합니다. 세척약품·강제 이동법을 안내하지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "개체",
+              "initial": "",
+              "target": "보리"
+            },
+            {
+              "id": "f1",
+              "label": "요청",
+              "initial": "",
+              "target": "이동 안내"
+            },
+            {
+              "id": "f2",
+              "label": "추가문의",
+              "initial": "",
+              "target": "보호 담당자 확인"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "career-net-10046-PAN-043-next-3",
+          "successText": "마지막 기록과 남은 확인을 인계했습니다."
+        }
+      ],
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/108/data"
+      },
+      "source_basis": {
+        "work": "하는일\n동물보호보안관은 동물 학대를 예방하고, 동물을 위험한 상황으로부터 보호하는 일을 합니다.\n동물을 방치하거나 학대 신고를 받고 출동하여 동물을 구조하고, 상황에 따라 동물 학대자를 경고하거나 고발하여 법적인 조치를 합니다.\n동물을 키우는 사람들이 반려동물을 잘 돌볼 수 있도록 돕거나 교육합니다.\n동물과 관련된 기관이나 업체, 서커스나 동물 쇼 같은 행사를 정기적으로 점검하고 다치거나 위험에 빠진 동물을 구조합니다.",
+        "selected_work_evidence": "동물을 키우는 사람들이 반려동물을 잘 돌볼 수 있도록 돕거나 교육합니다.",
+        "core_competencies": [
+          "자연친화력"
+        ],
+        "practice_connection": "원문 역량 자연친화력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/108/data/준비방법"
+      },
+      "bindingEvidence": "docs/machine/evidence/workplaces-v011/PAN-043-unity-scene.json",
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-043-detail-v011.unity",
+      "contentReviewStatus": "authored_educational_task_needs_occupation_review",
+      "currentBuildInclusion": false
+    },
+    {
+      "scenarioId": "career-net-90-experience",
+      "version": "v002",
+      "occupationId": "career-net-90",
+      "name": "조선공학기술자",
+      "roomId": "PAN-046",
+      "title": "선박 모형 설계 자료와 검토 기록",
+      "brief": "선박 모형 설계 자료와 검토 기록 — 세 개의 실제 물건에서 요청 확인·직접 조작·결과 기록을 이어갑니다.",
+      "limitation": "직업 원문을 근거로 작성한 가상 교육 사례입니다. 실제 전문 정답·안전 지침·자격·적성 판정이 아닙니다. 이 후속 자료는 현재71공간 검수 빌드에 자동 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "보관 상자",
+          "candidateId": "CND-058",
+          "assetId": "AST-1058",
+          "assetVersion": "v001",
+          "nodeName": "AST-1058-009",
+          "instanceId": "Room_PAN-046/AST-1058-009"
+        },
+        {
+          "id": "object-2",
+          "name": "손수레",
+          "candidateId": "CND-133",
+          "assetId": "AST-1133",
+          "assetVersion": "v001",
+          "nodeName": "AST-1133-008",
+          "instanceId": "Room_PAN-046/AST-1133-008"
+        },
+        {
+          "id": "object-3",
+          "name": "계류 기둥",
+          "candidateId": "CND-178",
+          "assetId": "AST-1178",
+          "assetVersion": "v001",
+          "nodeName": "AST-1178-004",
+          "instanceId": "Room_PAN-046/AST-1178-004"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "sort",
+          "title": "설계 자료 보관 상자",
+          "instruction": "가상 선박모형 검토표: 외형도=형상, 부품목록=구성, 일정표=제작계획입니다. 자료카드를 검토목적별 함에 놓습니다. 실제 구조 강도·선박 안전 적합성을 판정하지 않습니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "일정표",
+              "targetLabel": "제작계획",
+              "initialX": 0.08,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "외형도",
+              "targetLabel": "형상",
+              "initialX": 0.33,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "부품목록",
+              "targetLabel": "구성",
+              "initialX": 0.58,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "career-net-90-PAN-046-next-1",
+          "successText": "가상 요청 자료를 저장했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "손수레의 모형 부품 인계",
+          "instruction": "가상 교육 모형 요청은 프로젝트 SH-03, 부품상자 5개, 목적지 모형실입니다. 실제 선박 하역·운송 적정 중량을 정하지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "프로젝트",
+              "initial": "",
+              "target": "SH-03"
+            },
+            {
+              "id": "f1",
+              "label": "상자 수",
+              "initial": "",
+              "target": "5"
+            },
+            {
+              "id": "f2",
+              "label": "목적지",
+              "initial": "",
+              "target": "모형실"
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "career-net-90-PAN-046-next-2",
+          "successText": "직접 조작한 작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "계류 기둥의 설치 검토 메모",
+          "instruction": "모형도면 SH-03, 검토항목 설치 위치, 남은업무 설계자 확인입니다. 실제 계류·해양 구조물 설치 공법을 지시하지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "도면",
+              "initial": "",
+              "target": "SH-03"
+            },
+            {
+              "id": "f1",
+              "label": "검토항목",
+              "initial": "",
+              "target": "설치 위치"
+            },
+            {
+              "id": "f2",
+              "label": "남은업무",
+              "initial": "",
+              "target": "설계자 확인"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "career-net-90-PAN-046-next-3",
+          "successText": "마지막 기록과 남은 확인을 인계했습니다."
+        }
+      ],
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/418/data"
+      },
+      "source_basis": {
+        "work": "하는일\n조선공학기술자는 선박과 해저자원의 탐사 및 채굴을 목적으로 하는 해양구조물을 연구하고 해양구조물의 시공 및 관리 등과 관련된 일을 담당합니다.\n선박설계의 원리, 선박설계의 환경조건 등의 조선공학기술을 바탕으로 선박 및 해양구조물을 설계하고 건조합니다.\n선박의 기본적인 특성, 구조 등을 개발, 연구하고 선박 및 해양구조물을 설치하기 위하여 설계계획안, 설계서 등의 관련 자료를 검토하고 분석합니다.\n새로운 선박 및 해양구조물의 설계 및 선박 생산과정의 고능률화와 자동화를 위한 시스템 시뮬레이션 기술을 개발하고 실제에 적용하기 위한 연구를 합니다.",
+        "selected_work_evidence": "선박의 기본적인 특성, 구조 등을 개발, 연구하고 선박 및 해양구조물을 설치하기 위하여 설계계획안, 설계서 등의 관련 자료를 검토하고 분석합니다.",
+        "core_competencies": [
+          "수리·논리력",
+          "공간지각력"
+        ],
+        "practice_connection": "원문 역량 수리·논리력, 공간지각력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/418/data/준비방법"
+      },
+      "bindingEvidence": "docs/machine/evidence/workplaces-v011/PAN-046-unity-scene.json",
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-046-detail-v011.unity",
+      "contentReviewStatus": "authored_educational_task_needs_occupation_review",
+      "currentBuildInclusion": false
+    },
+    {
+      "scenarioId": "career-net-1110-experience",
+      "version": "v002",
+      "occupationId": "career-net-1110",
+      "name": "도선사",
+      "roomId": "PAN-045",
+      "title": "입항 선박 정보와 가상 경로 검토",
+      "brief": "입항 선박 정보와 가상 경로 검토 — 세 개의 실제 물건에서 요청 확인·직접 조작·결과 기록을 이어갑니다.",
+      "limitation": "직업 원문을 근거로 작성한 가상 교육 사례입니다. 실제 전문 정답·안전 지침·자격·적성 판정이 아닙니다. 이 후속 자료는 현재71공간 검수 빌드에 자동 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "항해 화면",
+          "candidateId": "CND-174",
+          "assetId": "AST-1174",
+          "assetVersion": "v001",
+          "nodeName": "AST-1174-006",
+          "instanceId": "Room_PAN-045/AST-1174-006"
+        },
+        {
+          "id": "object-2",
+          "name": "조타 장치",
+          "candidateId": "CND-171",
+          "assetId": "AST-1171",
+          "assetVersion": "v001",
+          "nodeName": "AST-1171-002",
+          "instanceId": "Room_PAN-045/AST-1171-002"
+        },
+        {
+          "id": "object-3",
+          "name": "통신 기기",
+          "candidateId": "CND-175",
+          "assetId": "AST-1175",
+          "assetVersion": "v001",
+          "nodeName": "AST-1175-007",
+          "instanceId": "Room_PAN-045/AST-1175-007"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "항해 화면의 입항 요청",
+          "instruction": "가상 입항 요청은 선박 해솔호, 목적지 서쪽 부두, 요청시각 10:40입니다. 실제 항만 도선·기상 안전 판단이나 항법을 수행하지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "선박",
+              "initial": "달빛호",
+              "target": "해솔호"
+            },
+            {
+              "id": "f1",
+              "label": "목적지",
+              "initial": "동쪽 부두",
+              "target": "서쪽 부두"
+            },
+            {
+              "id": "f2",
+              "label": "요청시각",
+              "initial": "10:04",
+              "target": "10:40"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "career-net-1110-PAN-045-next-1",
+          "successText": "가상 요청 자료를 저장했습니다."
+        },
+        {
+          "kind": "sort",
+          "title": "조타 장치의 가상 경로 자료판",
+          "instruction": "가상 교육지도에서 입구→표지 B→서쪽 부두 순서입니다. 경로 자료카드를 검토 순서에 맞춥니다. 실제 조타각·속도·회피 명령을 만들지 않습니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "서쪽 부두",
+              "targetLabel": "3 서쪽 부두",
+              "initialX": 0.08,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "입구",
+              "targetLabel": "1 입구",
+              "initialX": 0.33,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "표지 B",
+              "targetLabel": "2 표지 B",
+              "initialX": 0.58,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.4,
+              "width": 0.2,
+              "height": 0.15,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "career-net-1110-PAN-045-next-2",
+          "successText": "직접 조작한 작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "통신 기기의 요청 대조",
+          "instruction": "가상 입항팀에게 선박 해솔호, 목적지 서쪽 부두, 확인필요 실제 항만 담당자를 인계합니다. 실제 입항 허가를 발급하지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "선박",
+              "initial": "",
+              "target": "해솔호"
+            },
+            {
+              "id": "f1",
+              "label": "목적지",
+              "initial": "",
+              "target": "서쪽 부두"
+            },
+            {
+              "id": "f2",
+              "label": "확인필요",
+              "initial": "",
+              "target": "실제 항만 담당자"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "career-net-1110-PAN-045-next-3",
+          "successText": "마지막 기록과 남은 확인을 인계했습니다."
+        }
+      ],
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/100/data"
+      },
+      "source_basis": {
+        "work": "하는일\n도선사는 항만, 운하, 강 등의 일정한 도선 구역에서 선박에 탑승하여 해당 선박을 안전한 수로로 안내하는 일을 담당합니다.\n항구에서 출항하거나 귀항하는 선박의 항로를 검토하고 항만에 입출항하는 선박의 종류와 규모를 확인합니다.\n해협, 항만 또는 연안 구역에서 선박의 안전한 항해를 위해 풍속, 풍향, 기상, 조류 등을 고려하여 선박의 항로와 속도를 조정합니다.",
+        "selected_work_evidence": "항구에서 출항하거나 귀항하는 선박의 항로를 검토하고 항만에 입출항하는 선박의 종류와 규모를 확인합니다.",
+        "core_competencies": [
+          "공간지각력"
+        ],
+        "practice_connection": "원문 역량 공간지각력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/100/data/준비방법"
+      },
+      "bindingEvidence": "docs/machine/evidence/workplaces-v011/PAN-045-unity-scene.json",
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-045-detail-v011.unity",
+      "contentReviewStatus": "authored_educational_task_needs_occupation_review",
+      "currentBuildInclusion": false
+    }
+  ]
+}

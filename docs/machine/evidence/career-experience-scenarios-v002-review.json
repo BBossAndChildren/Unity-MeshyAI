@@ -1,0 +1,122 @@
+{
+  "schema_version": 3,
+  "review_kind": "static_authoring_review",
+  "checks": [
+    {
+      "name": "occupation_coverage",
+      "status": "pass",
+      "evidence": "Existing master catalog only; 552 IDs exactly."
+    },
+    {
+      "name": "original_office_preserved",
+      "status": "pass",
+      "evidence": "v001 scenario object equality."
+    },
+    {
+      "name": "three_objects_and_references",
+      "status": "pass",
+      "evidence": "All 552 scenarios: 3 unique objects, candidate/type/source IDs and core competency strings verified."
+    },
+    {
+      "name": "engine_config_fields",
+      "status": "pass",
+      "evidence": "551 generated drafts contain core engine required configuration fields; first office fixture retained separately."
+    },
+    {
+      "name": "all_20_types_assigned",
+      "status": "pass",
+      "evidence": {
+        "core": {
+          "MG-001": 385,
+          "MG-004": 219,
+          "MG-005": 411,
+          "MG-009": 81,
+          "MG-007": 106,
+          "MG-008": 124,
+          "MG-002": 99,
+          "MG-010": 42,
+          "MG-003": 104,
+          "MG-006": 40
+        },
+        "special": {
+          "EX-005": 26,
+          "EX-006": 50,
+          "EX-008": 71,
+          "EX-002": 91,
+          "EX-007": 94,
+          "EX-001": 25,
+          "EX-009": 51,
+          "EX-004": 23,
+          "EX-003": 89,
+          "EX-010": 34
+        }
+      }
+    },
+    {
+      "name": "fixed_scene_and_context_refs",
+      "status": "pass",
+      "evidence": "552 primary scene prompt/panorama refs and optional contexts resolve; 3 subject-selection alternatives resolve."
+    },
+    {
+      "name": "source_byte_preservation",
+      "status": "pass",
+      "evidence": "Source SHA-256 and original Downloads bytes identical."
+    },
+    {
+      "name": "human_links_and_anchors",
+      "status": "pass",
+      "evidence": "All links in the three new documents and 552 explicit scenario anchors resolve."
+    },
+    {
+      "name": "complete_object_reverse_index",
+      "status": "pass",
+      "evidence": "All primary object links and all three unselected subject alternatives represented."
+    }
+  ],
+  "limitations": [
+    "직업별 전문가 전수 검토 미수행",
+    "실제 3D 게임·Unity·WebGL 미실행",
+    "장소 선택·장비 전문성 미검증"
+  ],
+  "source_refs": [
+    {
+      "path": "docs/machine/catalog/occupation-workplace-candidates.json",
+      "sha256": "1fbb52eb90160a9c6ad9b72f9a51691093b9fe80a1aed106400228d7dc894155"
+    },
+    {
+      "path": "docs/machine/catalog/occupation-place-competency-reference-v001.json",
+      "sha256": "1f49b02c4861f99f35e62a57091f1d986179ec308fee3f23157a21daf8d1ae54"
+    },
+    {
+      "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+      "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d"
+    },
+    {
+      "path": "docs/machine/catalog/workplace-asset-candidates-v003.json",
+      "sha256": "59e11719a38eef9bb8cda15632da34024595281fad21ebb87054f00307ad4bf3"
+    },
+    {
+      "path": "docs/machine/catalog/career-minigame-types-v001.json",
+      "sha256": "5dd4c91af76ce6b00ed94b9fcd44e1b2de289d2b8dbc70caf40fa0f8df3cb811"
+    },
+    {
+      "path": "docs/machine/catalog/career-experience-scenarios-v001.json",
+      "sha256": "d006b9db10f31a51789a60e6c10046139e45998990e103c613c055a7ed0ab127"
+    },
+    {
+      "path": "docs/machine/catalog/assets.json",
+      "sha256": "1a6dcabf29d71b6de9e62fdd5bbed35c99fc9a73b8362e4a0d09140db27bbff9"
+    },
+    {
+      "path": "docs/machine/catalog/panoramas.json",
+      "sha256": "28606271875bdca22967418c8e9c0844d77e500d857a8dd207a94e4d36d33685"
+    },
+    {
+      "path": "docs/machine/catalog/scene-assemblies.json",
+      "sha256": "b565751f11ad6c1e5c1272ed6f4e5d7126e6f09b88b03dbf6312392b110b8102"
+    }
+  ],
+  "scenario_sha256": "5ed924efad538c6ff7de34b944514f1697e391be921a165f702c9157666ef148",
+  "document_sha256": "8602bee17a1b5ba8009c3c6207a96e30bb61ebc7b789f347f4d4281867c868a2",
+  "layout_sha256": "6865187642831c3fdaebe6d8b61d622310d651603d5d562d672634359a8e64fc"
+}

@@ -1,0 +1,3323 @@
+{
+  "schema_version": 3,
+  "transitionSeconds": 0.45,
+  "careers": [
+    {
+      "scenarioId": "career-net-10041-experience",
+      "version": "v003",
+      "occupationId": "career-net-10041",
+      "name": "소비생활어드바이저",
+      "roomId": "PAN-022",
+      "title": "반품 요청을 정확히 인계하기",
+      "brief": "반품 요청을 정확히 인계하기. 세 물건에서 자료 확인 → 직접 조작 → 기록·인계를 이어갑니다. 각 작업면에 이번 요청의 조건이 표시됩니다.",
+      "limitation": "원본 직업 업무를 바탕으로 만든 가상 교육 과제입니다. 전문 정답·자격·적성 판정과 실제 시스템 조작은 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "서비스 카운터",
+          "candidateId": "CND-023",
+          "assetId": "AST-1023",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-022/AST-1023-002",
+          "nodeName": "AST-1023-002"
+        },
+        {
+          "id": "object-2",
+          "name": "모니터",
+          "candidateId": "CND-005",
+          "assetId": "AST-005",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-022/AST-005-003",
+          "nodeName": "AST-005-003"
+        },
+        {
+          "id": "object-3",
+          "name": "서류 트레이",
+          "candidateId": "CND-049",
+          "assetId": "AST-1049",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-022/AST-1049-006",
+          "nodeName": "AST-1049-006"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "창구 접수 카드",
+          "instruction": "고객 요청: 주문 R204, 파란 머그컵 2개 중 1개 손상. 교환 희망. 원문을 빠짐없이 기록합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "주문번호",
+              "initial": "",
+              "target": "R204"
+            },
+            {
+              "id": "f1",
+              "label": "손상수량",
+              "initial": "2",
+              "target": "1"
+            },
+            {
+              "id": "f2",
+              "label": "요청",
+              "initial": "환불",
+              "target": "교환"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "pan-022-10041-1",
+          "successText": "자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "sort",
+          "title": "상담 자료 분류",
+          "instruction": "주문내역은 구매 확인, 사진은 상태 확인, 교환신청은 처리 요청 칸으로 옮깁니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "주문 R204 내역",
+              "slotLabel": "구매 확인",
+              "targetLabel": "구매 확인",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "손상 부분 사진",
+              "slotLabel": "상태 확인",
+              "targetLabel": "상태 확인",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "교환 신청서",
+              "slotLabel": "처리 요청",
+              "targetLabel": "처리 요청",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "pan-022-10041-2",
+          "successText": "중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "form",
+          "title": "처리팀 인계 트레이",
+          "instruction": "가상 운영표: 교환팀 14:00 회신 예정. 고객에게 확정되지 않은 즉시 교환을 약속하지 않고 접수 내용을 전달합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "수신팀",
+              "initial": "",
+              "target": "교환팀"
+            },
+            {
+              "id": "f1",
+              "label": "주문번호",
+              "initial": "",
+              "target": "R204"
+            },
+            {
+              "id": "f2",
+              "label": "회신시각",
+              "initial": "",
+              "target": "14:00"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "pan-022-10041-3",
+          "successText": "세 물건의 업무가 연결되어 완료됐습니다. 체험 종료로 원본 결과를 전달하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        }
+      ],
+      "source_basis": {
+        "work": "하는일\n소비생활어드바이저는 기업, 행정 기관, 각종 단체 등의 상담 창구에서 소비자 불만 상담에 응하고, 소비자 의견, 동향 등을 파악하여 상품, 서비스를 개발하고 개선하는 업무를 수행합니다.\n상품, 서비스에 관한 상담과 조언을 합니다.\n제품 성능, 안전성 등 사용 목적에 따라 쇼핑 상담과 조언을 합니다.\n상품 설명서와 같은 각종 자료 작성, 상품 테스트, 모니터링 등을 수행합니다.\n신제품 개발, 기획에 관하여 소비자 입장에서 조언을 합니다.",
+        "selected_work_evidence": "소비생활어드바이저는 기업, 행정 기관, 각종 단체 등의 상담 창구에서 소비자 불만 상담에 응하고, 소비자 의견, 동향 등을 파악하여 상품, 서비스를 개발하고 개선하는 업무를 수행합니다.",
+        "core_competencies": [
+          "대인관계능력"
+        ],
+        "practice_connection": "원문 역량 대인관계능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/236/data/준비방법"
+      },
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/236/data"
+      },
+      "source_scenario_version": "v001",
+      "scene_mapping_status": "user_authorized_71_room_editorial_adaptation",
+      "source_panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-021",
+        "version": "v001"
+      },
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-022-detail-v011.unity",
+      "requestChangeBrief": "고객이 주문번호를 R205로 정정했습니다. 최신 주문번호를 접수·인계 모두에 반영하세요.",
+      "requestChangeReasonCode": "REQUEST_CHANGED",
+      "alternateSurfaces": [
+        {
+          "kind": "form",
+          "title": "창구 접수 카드",
+          "instruction": "고객 요청: 주문 R205, 파란 머그컵 2개 중 1개 손상. 교환 희망. 원문을 빠짐없이 기록합니다. 변경 요청: 고객이 주문번호를 R205로 정정했습니다. 최신 주문번호를 접수·인계 모두에 반영하세요.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "주문번호",
+              "initial": "",
+              "target": "R205"
+            },
+            {
+              "id": "f1",
+              "label": "손상수량",
+              "initial": "2",
+              "target": "1"
+            },
+            {
+              "id": "f2",
+              "label": "요청",
+              "initial": "환불",
+              "target": "교환"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "pan-022-10041-1",
+          "successText": "자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "sort",
+          "title": "상담 자료 분류",
+          "instruction": "주문내역은 구매 확인, 사진은 상태 확인, 교환신청은 처리 요청 칸으로 옮깁니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "주문 R205 내역",
+              "slotLabel": "구매 확인",
+              "targetLabel": "구매 확인",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "손상 부분 사진",
+              "slotLabel": "상태 확인",
+              "targetLabel": "상태 확인",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "교환 신청서",
+              "slotLabel": "처리 요청",
+              "targetLabel": "처리 요청",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "pan-022-10041-2",
+          "successText": "중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "form",
+          "title": "처리팀 인계 트레이",
+          "instruction": "가상 운영표: 교환팀 14:00 회신 예정. 고객에게 확정되지 않은 즉시 교환을 약속하지 않고 접수 내용을 전달합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "수신팀",
+              "initial": "",
+              "target": "교환팀"
+            },
+            {
+              "id": "f1",
+              "label": "주문번호",
+              "initial": "",
+              "target": "R205"
+            },
+            {
+              "id": "f2",
+              "label": "회신시각",
+              "initial": "",
+              "target": "14:00"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "pan-022-10041-3",
+          "successText": "세 물건의 업무가 연결되어 완료됐습니다. 체험 종료로 원본 결과를 전달하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-421-experience",
+      "version": "v003",
+      "occupationId": "career-net-421",
+      "name": "스포츠강사",
+      "roomId": "PAN-047",
+      "title": "어린이 공놀이 수업 준비",
+      "brief": "어린이 공놀이 수업 준비. 세 물건에서 자료 확인 → 직접 조작 → 기록·인계를 이어갑니다. 각 작업면에 이번 요청의 조건이 표시됩니다.",
+      "limitation": "원본 직업 업무를 바탕으로 만든 가상 교육 과제입니다. 전문 정답·자격·적성 판정과 실제 시스템 조작은 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "일반 운동 매트",
+          "candidateId": "CND-179",
+          "assetId": "AST-1179",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-047/AST-1179-002",
+          "nodeName": "AST-1179-002"
+        },
+        {
+          "id": "object-2",
+          "name": "작은 운동 기구",
+          "candidateId": "CND-180",
+          "assetId": "AST-1180",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-047/AST-1180-003",
+          "nodeName": "AST-1180-003"
+        },
+        {
+          "id": "object-3",
+          "name": "공 보관대",
+          "candidateId": "CND-181",
+          "assetId": "AST-1181",
+          "assetVersion": "v002",
+          "instanceId": "Room_PAN-047/AST-1181-004",
+          "nodeName": "AST-1181-004"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "schedule",
+          "title": "활동 구역 배치",
+          "instruction": "이번 가상 수업의 구역표: 준비운동은 시작 구역, 공 전달은 중앙, 정리는 출구 쪽. 카드를 옮겨 수업 동선을 만듭니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "준비운동",
+              "slotLabel": "시작 구역",
+              "targetLabel": "시작 구역",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "공 전달",
+              "slotLabel": "중앙 구역",
+              "targetLabel": "중앙 구역",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "정리",
+              "slotLabel": "출구 구역",
+              "targetLabel": "출구 구역",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "pan-047-421-1",
+          "successText": "자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "tune",
+          "title": "수업용 소도구 수량",
+          "instruction": "예약표에 참여자 8명, 두 명이 한 조인 4조입니다. 1인용 고리 8개와 조별 표식 4개를 준비합니다.",
+          "values": [
+            {
+              "id": "v0",
+              "label": "고리",
+              "unit": "개",
+              "min": 0,
+              "max": 12,
+              "initial": 3,
+              "target": 8,
+              "tolerance": 0
+            },
+            {
+              "id": "v1",
+              "label": "조 표식",
+              "unit": "개",
+              "min": 0,
+              "max": 8,
+              "initial": 1,
+              "target": 4,
+              "tolerance": 0
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "pan-047-421-2",
+          "successText": "중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.",
+          "tiles": [],
+          "fields": [],
+          "findings": []
+        },
+        {
+          "kind": "sort",
+          "title": "공 보관대 마무리",
+          "instruction": "수업용 공을 라벨별로 돌려놓습니다. 작은 공→S칸, 중간 공→M칸, 큰 공→L칸. 실제 운동 처방을 평가하지 않습니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "작은 공",
+              "slotLabel": "S칸",
+              "targetLabel": "S칸",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "중간 공",
+              "slotLabel": "M칸",
+              "targetLabel": "M칸",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "큰 공",
+              "slotLabel": "L칸",
+              "targetLabel": "L칸",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "pan-047-421-3",
+          "successText": "세 물건의 업무가 연결되어 완료됐습니다. 체험 종료로 원본 결과를 전달하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        }
+      ],
+      "source_basis": {
+        "work": "하는일\n스포츠강사는 공공 또는 민간 체육시설에서 사람들을 대상으로 건강 유지와 증진, 스트레스 해소, 여가의 목적을 위해 여러 운동 프로그램을 개발하거나 가르치는 일을 합니다.\n사람들에게 근육 단련이나 건강 유지의 목적을 위해 규칙적인 운동 방법을 가르쳐 주거나 체중 조절을 위한 식이요법에 대한 정보를 제공합니다.\n수영, 태권도, 에어로빅, 테니스, 탁구, 골프 등 스포츠 분야별로 각 종목의 기본 동작이나 응용 동작을 가르치고 숙달할 수 있도록 도와줍니다.\n긴장된 근육을 풀어주거나 준비운동 방법을 가르치고 만일 안전사고가 발생했을 때는 응급조치를 실시합니다.",
+        "selected_work_evidence": "스포츠강사는 공공 또는 민간 체육시설에서 사람들을 대상으로 건강 유지와 증진, 스트레스 해소, 여가의 목적을 위해 여러 운동 프로그램을 개발하거나 가르치는 일을 합니다.",
+        "core_competencies": [
+          "신체·운동능력"
+        ],
+        "practice_connection": "원문 역량 신체·운동능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/256/data/준비방법"
+      },
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/256/data"
+      },
+      "source_scenario_version": "v001",
+      "scene_mapping_status": "user_authorized_71_room_editorial_adaptation",
+      "source_panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-048",
+        "version": "v001"
+      },
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-047-detail-v011.unity"
+    },
+    {
+      "scenarioId": "career-net-365-experience",
+      "version": "v003",
+      "occupationId": "career-net-365",
+      "name": "독서지도사",
+      "roomId": "PAN-059",
+      "title": "이야기의 근거를 찾아 독서 기록 완성",
+      "brief": "이야기의 근거를 찾아 독서 기록 완성. 세 물건에서 자료 확인 → 직접 조작 → 기록·인계를 이어갑니다. 각 작업면에 이번 요청의 조건이 표시됩니다.",
+      "limitation": "원본 직업 업무를 바탕으로 만든 가상 교육 과제입니다. 전문 정답·자격·적성 판정과 실제 시스템 조작은 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "교재",
+          "candidateId": "CND-053",
+          "assetId": "AST-1053",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-059/AST-1053-005",
+          "nodeName": "AST-1053-005"
+        },
+        {
+          "id": "object-2",
+          "name": "필기구",
+          "candidateId": "CND-209",
+          "assetId": "AST-1209",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-059/AST-1209-006",
+          "nodeName": "AST-1209-006"
+        },
+        {
+          "id": "object-3",
+          "name": "업무 책상",
+          "candidateId": "CND-004",
+          "assetId": "AST-004",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-059/AST-004-002",
+          "nodeName": "AST-004-002"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "inspect",
+          "title": "짧은 이야기 읽기",
+          "instruction": "가상 이야기 「씨앗의 약속」 세 장면을 열어 사건과 이유를 확인하세요. 마지막 기록은 읽은 근거로 작성합니다.",
+          "findings": [
+            {
+              "id": "q0",
+              "label": "첫 장면",
+              "detail": "주인공 민서는 마른 화분에서 작은 씨앗을 찾았습니다."
+            },
+            {
+              "id": "q1",
+              "label": "두 번째 장면",
+              "detail": "민서는 창가에 화분을 두고 매일 물을 주었습니다."
+            },
+            {
+              "id": "q2",
+              "label": "마지막 장면",
+              "detail": "일주일 뒤 싹이 돋자 민서는 관찰일지를 친구에게 보여주었습니다."
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "pan-059-365-1",
+          "successText": "자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.",
+          "tiles": [],
+          "fields": [],
+          "values": []
+        },
+        {
+          "kind": "sequence",
+          "title": "사건 순서 카드",
+          "instruction": "읽은 이야기의 처음·중간·마지막 장면을 배열합니다. 단어의 색 대신 사건 내용으로 판단하세요.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "씨앗 발견",
+              "slotLabel": "처음",
+              "targetLabel": "처음",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "매일 물 주기",
+              "slotLabel": "중간",
+              "targetLabel": "중간",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "싹 관찰",
+              "slotLabel": "마지막",
+              "targetLabel": "마지막",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "pan-059-365-2",
+          "successText": "중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "form",
+          "title": "근거 있는 독서 기록",
+          "instruction": "교재의 이름과 행동을 기록합니다. 주인공은 민서, 식물이 자란 장소는 창가, 기록물은 관찰일지입니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "주인공",
+              "initial": "",
+              "target": "민서"
+            },
+            {
+              "id": "f1",
+              "label": "장소",
+              "initial": "",
+              "target": "창가"
+            },
+            {
+              "id": "f2",
+              "label": "기록물",
+              "initial": "",
+              "target": "관찰일지"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "pan-059-365-3",
+          "successText": "세 물건의 업무가 연결되어 완료됐습니다. 체험 종료로 원본 결과를 전달하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        }
+      ],
+      "source_basis": {
+        "work": "하는일\n초등학생, 중학생, 고등학생을 대상으로 독서교육 프로그램을 개발하고 교육하고 평가합니다.\n학생들에게 독서지도를 하며, 독서교육에 대한 학습 상담 및 교육적 자문을 합니다.\n학생들에게 독서 전, 독서 중, 도서 후 활동에 필요한 기술 및 방법을 가르치고, 독후감 쓰기 및 자유로운 독서 토론을 지도합니다.\n학생들의 독서 습관에 대해 부모나 학생들과 상담을 합니다.",
+        "selected_work_evidence": "초등학생, 중학생, 고등학생을 대상으로 독서교육 프로그램을 개발하고 교육하고 평가합니다.",
+        "core_competencies": [
+          "대인관계능력",
+          "자기성찰능력"
+        ],
+        "practice_connection": "원문 역량 대인관계능력, 자기성찰능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/106/data/준비방법"
+      },
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/106/data"
+      },
+      "source_scenario_version": "v001",
+      "scene_mapping_status": "source_primary_room",
+      "source_panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-059",
+        "version": "v001"
+      },
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-059-detail-v011.unity",
+      "requestChangeBrief": "교재 편집자가 주인공 이름을 민지로 정정했습니다. 교재와 독서 기록을 다시 대조하세요.",
+      "requestChangeReasonCode": "REQUEST_CHANGED",
+      "alternateSurfaces": [
+        {
+          "kind": "inspect",
+          "title": "짧은 이야기 읽기",
+          "instruction": "가상 이야기 「씨앗의 약속」 세 장면을 열어 사건과 이유를 확인하세요. 마지막 기록은 읽은 근거로 작성합니다. 변경 요청: 교재 편집자가 주인공 이름을 민지로 정정했습니다. 교재와 독서 기록을 다시 대조하세요.",
+          "findings": [
+            {
+              "id": "q0",
+              "label": "첫 장면",
+              "detail": "주인공 민지는 마른 화분에서 작은 씨앗을 찾았습니다."
+            },
+            {
+              "id": "q1",
+              "label": "두 번째 장면",
+              "detail": "민지는 창가에 화분을 두고 매일 물을 주었습니다."
+            },
+            {
+              "id": "q2",
+              "label": "마지막 장면",
+              "detail": "일주일 뒤 싹이 돋자 민지는 관찰일지를 친구에게 보여주었습니다."
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "pan-059-365-1",
+          "successText": "자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.",
+          "tiles": [],
+          "fields": [],
+          "values": []
+        },
+        {
+          "kind": "sequence",
+          "title": "사건 순서 카드",
+          "instruction": "읽은 이야기의 처음·중간·마지막 장면을 배열합니다. 단어의 색 대신 사건 내용으로 판단하세요.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "씨앗 발견",
+              "slotLabel": "처음",
+              "targetLabel": "처음",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "매일 물 주기",
+              "slotLabel": "중간",
+              "targetLabel": "중간",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "싹 관찰",
+              "slotLabel": "마지막",
+              "targetLabel": "마지막",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "pan-059-365-2",
+          "successText": "중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "form",
+          "title": "근거 있는 독서 기록",
+          "instruction": "교재의 이름과 행동을 기록합니다. 주인공은 민지, 식물이 자란 장소는 창가, 기록물은 관찰일지입니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "주인공",
+              "initial": "",
+              "target": "민지"
+            },
+            {
+              "id": "f1",
+              "label": "장소",
+              "initial": "",
+              "target": "창가"
+            },
+            {
+              "id": "f2",
+              "label": "기록물",
+              "initial": "",
+              "target": "관찰일지"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "pan-059-365-3",
+          "successText": "세 물건의 업무가 연결되어 완료됐습니다. 체험 종료로 원본 결과를 전달하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-431-experience",
+      "version": "v003",
+      "occupationId": "career-net-431",
+      "name": "데이터베이스관리자",
+      "roomId": "PAN-060",
+      "title": "데이터 백업 작업의 실행 조건 맞추기",
+      "brief": "데이터 백업 작업의 실행 조건 맞추기. 세 물건에서 자료 확인 → 직접 조작 → 기록·인계를 이어갑니다. 각 작업면에 이번 요청의 조건이 표시됩니다.",
+      "limitation": "원본 직업 업무를 바탕으로 만든 가상 교육 과제입니다. 전문 정답·자격·적성 판정과 실제 시스템 조작은 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "관리 단말",
+          "candidateId": "CND-212",
+          "assetId": "AST-1212",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-060/AST-1212-007",
+          "nodeName": "AST-1212-007"
+        },
+        {
+          "id": "object-2",
+          "name": "케이블 트레이",
+          "candidateId": "CND-211",
+          "assetId": "AST-1211",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-060/AST-1211-006",
+          "nodeName": "AST-1211-006"
+        },
+        {
+          "id": "object-3",
+          "name": "서버 랙",
+          "candidateId": "CND-210",
+          "assetId": "AST-1210",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-060/AST-1210-002",
+          "nodeName": "AST-1210-002"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "변경 요청 등록",
+          "instruction": "가상 작업표 DB07: 대상은 고객목록, 작업은 백업, 승인된 실행시각 22:00입니다. 실제 시스템에 명령을 실행하지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "대상",
+              "initial": "",
+              "target": "고객목록"
+            },
+            {
+              "id": "f1",
+              "label": "작업",
+              "initial": "삭제",
+              "target": "백업"
+            },
+            {
+              "id": "f2",
+              "label": "예약시각",
+              "initial": "20:00",
+              "target": "22:00"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "pan-060-431-1",
+          "successText": "자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "assembly",
+          "title": "연결표 정리",
+          "instruction": "표의 케이블 라벨과 목적지를 대응시킵니다. DB07→데이터, BK02→백업, MG01→관리. UI에서만 연결을 구성합니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "DB07",
+              "slotLabel": "데이터",
+              "targetLabel": "데이터",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "BK02",
+              "slotLabel": "백업",
+              "targetLabel": "백업",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "MG01",
+              "slotLabel": "관리",
+              "targetLabel": "관리",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "pan-060-431-2",
+          "successText": "중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "tune",
+          "title": "백업 검증 조건",
+          "instruction": "가상 요청서는 보존기간 7일, 복사본 2개를 지정했습니다. 두 설정을 맞춘 뒤 검증 결과를 저장하세요.",
+          "values": [
+            {
+              "id": "v0",
+              "label": "보존기간",
+              "unit": "일",
+              "min": 1,
+              "max": 14,
+              "initial": 3,
+              "target": 7,
+              "tolerance": 0
+            },
+            {
+              "id": "v1",
+              "label": "복사본",
+              "unit": "개",
+              "min": 1,
+              "max": 4,
+              "initial": 1,
+              "target": 2,
+              "tolerance": 0
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "pan-060-431-3",
+          "successText": "세 물건의 업무가 연결되어 완료됐습니다. 체험 종료로 원본 결과를 전달하세요.",
+          "tiles": [],
+          "fields": [],
+          "findings": []
+        }
+      ],
+      "source_basis": {
+        "work": "하는일\n데이터베이스관리자는 컴퓨터를 사용하여 각종 데이터를 체계적으로 수집, 정리, 가공하거나 입력하여 데이터베이스를 구축, 관리, 분석하는 일을 합니다.\n데이터베이스를 분석하고 전산시스템 사용자에 대한 등록, 데이터 접근 범위, 읽고 쓰기 권한, 사용자 로그인 및 암호를 관리합니다.\n데이터베이스 시스템에 장애가 발생하거나 서버 부품의 고장으로 인해 문제가 발생하면 신속히 원인을 파악하고 빠르게 시스템을 복구합니다.\n데이터베이스를 매일 또는 정기적으로 백업하거나 보관하여 데이터의 손실을 예방합니다.\n고객이 요구하는 특정 분야의 자료를 일정 기간 동안 수집하여 정리하고, 입력된 자료를 검토하여 문제점을 보완합니다.",
+        "selected_work_evidence": "데이터베이스관리자는 컴퓨터를 사용하여 각종 데이터를 체계적으로 수집, 정리, 가공하거나 입력하여 데이터베이스를 구축, 관리, 분석하는 일을 합니다.",
+        "core_competencies": [
+          "수리·논리력"
+        ],
+        "practice_connection": "원문 역량 수리·논리력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/97/data/준비방법"
+      },
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/97/data"
+      },
+      "source_scenario_version": "v001",
+      "scene_mapping_status": "source_primary_room",
+      "source_panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-060",
+        "version": "v001"
+      },
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-060-detail-v011.unity",
+      "requestChangeBrief": "담당자가 백업 대상을 예약목록으로 변경했습니다. 실행시각과 보존조건은 그대로입니다.",
+      "requestChangeReasonCode": "REQUEST_CHANGED",
+      "alternateSurfaces": [
+        {
+          "kind": "form",
+          "title": "변경 요청 등록",
+          "instruction": "가상 작업표 DB07: 대상은 예약목록, 작업은 백업, 승인된 실행시각 22:00입니다. 실제 시스템에 명령을 실행하지 않습니다. 변경 요청: 담당자가 백업 대상을 예약목록으로 변경했습니다. 실행시각과 보존조건은 그대로입니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "대상",
+              "initial": "",
+              "target": "예약목록"
+            },
+            {
+              "id": "f1",
+              "label": "작업",
+              "initial": "삭제",
+              "target": "백업"
+            },
+            {
+              "id": "f2",
+              "label": "예약시각",
+              "initial": "20:00",
+              "target": "22:00"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "pan-060-431-1",
+          "successText": "자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "assembly",
+          "title": "연결표 정리",
+          "instruction": "표의 케이블 라벨과 목적지를 대응시킵니다. DB07→데이터, BK02→백업, MG01→관리. UI에서만 연결을 구성합니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "DB07",
+              "slotLabel": "데이터",
+              "targetLabel": "데이터",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "BK02",
+              "slotLabel": "백업",
+              "targetLabel": "백업",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "MG01",
+              "slotLabel": "관리",
+              "targetLabel": "관리",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "pan-060-431-2",
+          "successText": "중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "tune",
+          "title": "백업 검증 조건",
+          "instruction": "가상 요청서는 보존기간 7일, 복사본 2개를 지정했습니다. 두 설정을 맞춘 뒤 검증 결과를 저장하세요.",
+          "values": [
+            {
+              "id": "v0",
+              "label": "보존기간",
+              "unit": "일",
+              "min": 1,
+              "max": 14,
+              "initial": 3,
+              "target": 7,
+              "tolerance": 0
+            },
+            {
+              "id": "v1",
+              "label": "복사본",
+              "unit": "개",
+              "min": 1,
+              "max": 4,
+              "initial": 1,
+              "target": 2,
+              "tolerance": 0
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "pan-060-431-3",
+          "successText": "세 물건의 업무가 연결되어 완료됐습니다. 체험 종료로 원본 결과를 전달하세요.",
+          "tiles": [],
+          "fields": [],
+          "findings": []
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-358-experience",
+      "version": "v003",
+      "occupationId": "career-net-358",
+      "name": "경비원",
+      "roomId": "PAN-061",
+      "title": "방문자 확인과 관제 기록 인계",
+      "brief": "방문자 확인과 관제 기록 인계. 세 물건에서 자료 확인 → 직접 조작 → 기록·인계를 이어갑니다. 각 작업면에 이번 요청의 조건이 표시됩니다.",
+      "limitation": "원본 직업 업무를 바탕으로 만든 가상 교육 과제입니다. 전문 정답·자격·적성 판정과 실제 시스템 조작은 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "모니터",
+          "candidateId": "CND-005",
+          "assetId": "AST-005",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-061/AST-005-009",
+          "nodeName": "AST-005-009"
+        },
+        {
+          "id": "object-2",
+          "name": "관제 콘솔",
+          "candidateId": "CND-213",
+          "assetId": "AST-1213",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-061/AST-1213-002",
+          "nodeName": "AST-1213-002"
+        },
+        {
+          "id": "object-3",
+          "name": "통신 기기",
+          "candidateId": "CND-175",
+          "assetId": "AST-1175",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-061/AST-1175-008",
+          "nodeName": "AST-1175-008"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "inspect",
+          "title": "방문 요청 대조",
+          "instruction": "예정 방문자를 원장과 대조합니다. 실제 보안 시스템을 조작하지 않는 가상 접수 연습입니다.",
+          "findings": [
+            {
+              "id": "q0",
+              "label": "예약 원장",
+              "detail": "방문번호 V12, 대상 회의실 3층, 담당자 한솔."
+            },
+            {
+              "id": "q1",
+              "label": "접수 내용",
+              "detail": "방문자는 13:30 도착했고 회의실 위치를 문의했습니다."
+            },
+            {
+              "id": "q2",
+              "label": "담당자 회신",
+              "detail": "한솔 담당자가 로비에서 만나 안내한다고 회신했습니다."
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "pan-061-358-1",
+          "successText": "자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.",
+          "tiles": [],
+          "fields": [],
+          "values": []
+        },
+        {
+          "kind": "sort",
+          "title": "관제 업무 분류",
+          "instruction": "예약번호 기록은 방문 원장, 담당자 연락은 연락 기록, 안내 위치는 안내 메모로 옮깁니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "V12 예약",
+              "slotLabel": "방문 원장",
+              "targetLabel": "방문 원장",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "한솔 회신",
+              "slotLabel": "연락 기록",
+              "targetLabel": "연락 기록",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "로비 만남",
+              "slotLabel": "안내 메모",
+              "targetLabel": "안내 메모",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "pan-061-358-2",
+          "successText": "중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "form",
+          "title": "교대 근무자에게 전달",
+          "instruction": "확인된 정보만 인계합니다. 방문번호 V12 / 담당자 한솔 / 만남 장소 로비.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "방문번호",
+              "initial": "",
+              "target": "V12"
+            },
+            {
+              "id": "f1",
+              "label": "담당자",
+              "initial": "",
+              "target": "한솔"
+            },
+            {
+              "id": "f2",
+              "label": "만남 장소",
+              "initial": "",
+              "target": "로비"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "pan-061-358-3",
+          "successText": "세 물건의 업무가 연결되어 완료됐습니다. 체험 종료로 원본 결과를 전달하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        }
+      ],
+      "source_basis": {
+        "work": "하는일\n경비원은 아파트, 주택, 사무실 등 각종 건물 및 시설물을 관리하며, 건물 내의 거주자들을 화재, 도난, 불법침입으로부터 보호하기 위해 출입자 통제, 내방객 안내 등의 업무를 담당합니다.\n건물에서 방문자의 출입을 점검하고 입주자에게 필요한 정보를 제공합니다.\n건물을 관리하며 간단한 수선 및 정비를 합니다.\n소음 및 공동생활에 문제를 일으킬 수 있는 행동을 하는 사람에게 그러한 행동을 하지 못하도록 합니다.\n거주자를 대신하여 배달물을 접수하는 등 소규모 서비스를 제공합니다.",
+        "selected_work_evidence": "경비원은 아파트, 주택, 사무실 등 각종 건물 및 시설물을 관리하며, 건물 내의 거주자들을 화재, 도난, 불법침입으로부터 보호하기 위해 출입자 통제, 내방객 안내 등의 업무를 담당합니다.",
+        "core_competencies": [
+          "대인관계능력"
+        ],
+        "practice_connection": "원문 역량 대인관계능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/34/data/준비방법"
+      },
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/34/data"
+      },
+      "source_scenario_version": "v001",
+      "scene_mapping_status": "source_primary_room",
+      "source_panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-061",
+        "version": "v001"
+      },
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-061-detail-v011.unity"
+    },
+    {
+      "scenarioId": "career-net-352-experience",
+      "version": "v003",
+      "occupationId": "career-net-352",
+      "name": "가사도우미",
+      "roomId": "PAN-062",
+      "title": "가족 요청에 맞춰 거실 정리하기",
+      "brief": "가족 요청에 맞춰 거실 정리하기. 세 물건에서 자료 확인 → 직접 조작 → 기록·인계를 이어갑니다. 각 작업면에 이번 요청의 조건이 표시됩니다.",
+      "limitation": "원본 직업 업무를 바탕으로 만든 가상 교육 과제입니다. 전문 정답·자격·적성 판정과 실제 시스템 조작은 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "테이블",
+          "candidateId": "CND-010",
+          "assetId": "AST-1010",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-062/AST-1010-003",
+          "nodeName": "AST-1010-003"
+        },
+        {
+          "id": "object-2",
+          "name": "뒤쪽 수납장",
+          "candidateId": "CND-009",
+          "assetId": "AST-015",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-062/AST-015-005",
+          "nodeName": "AST-015-005"
+        },
+        {
+          "id": "object-3",
+          "name": "독립형 TV",
+          "candidateId": "CND-216",
+          "assetId": "AST-1216",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-062/AST-1216-004",
+          "nodeName": "AST-1216-004"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "sort",
+          "title": "테이블 위 물건 정리",
+          "instruction": "가족 메모: 책은 독서칸, 장난감은 놀이칸, 리모컨은 기기칸. 세 물건을 지정된 자리로 옮깁니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "읽던 책",
+              "slotLabel": "독서칸",
+              "targetLabel": "독서칸",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "블록 상자",
+              "slotLabel": "놀이칸",
+              "targetLabel": "놀이칸",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "리모컨",
+              "slotLabel": "기기칸",
+              "targetLabel": "기기칸",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "pan-062-352-1",
+          "successText": "자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "tune",
+          "title": "수납장 소모품 확인",
+          "instruction": "오늘 준비 요청은 작은 수건 4장, 컵 받침 3개입니다. 현재 수량을 확인하고 필요한 준비량을 맞춥니다.",
+          "values": [
+            {
+              "id": "v0",
+              "label": "작은 수건",
+              "unit": "장",
+              "min": 0,
+              "max": 8,
+              "initial": 2,
+              "target": 4,
+              "tolerance": 0
+            },
+            {
+              "id": "v1",
+              "label": "컵 받침",
+              "unit": "개",
+              "min": 0,
+              "max": 6,
+              "initial": 1,
+              "target": 3,
+              "tolerance": 0
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "pan-062-352-2",
+          "successText": "중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.",
+          "tiles": [],
+          "fields": [],
+          "findings": []
+        },
+        {
+          "kind": "form",
+          "title": "TV 옆 완료 메모",
+          "instruction": "가족이 요청한 물건을 찾기 쉽게 메모합니다. 리모컨 위치는 기기칸, 수건 4장, 컵 받침 3개입니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "리모컨 위치",
+              "initial": "",
+              "target": "기기칸"
+            },
+            {
+              "id": "f1",
+              "label": "수건",
+              "initial": "",
+              "target": "4"
+            },
+            {
+              "id": "f2",
+              "label": "받침",
+              "initial": "",
+              "target": "3"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "pan-062-352-3",
+          "successText": "세 물건의 업무가 연결되어 완료됐습니다. 체험 종료로 원본 결과를 전달하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        }
+      ],
+      "source_basis": {
+        "work": "하는일\n가사도우미는 가정에 방문하여 청소, 요리, 세탁 등의 일을 합니다.\n가정의 화장실과 거실 등 집 안을 청소하고, 정리 정돈을 합니다.\n의복과 이불 등을 세탁하고 다림질합니다.\n고용된 가정에 따라 음식을 만들고 공과금 납부, 우편물 보관 등의 가사 업무를 합니다.",
+        "selected_work_evidence": "가사도우미는 가정에 방문하여 청소, 요리, 세탁 등의 일을 합니다.",
+        "core_competencies": [
+          "대인관계능력"
+        ],
+        "practice_connection": "원문 역량 대인관계능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/7/data/준비방법"
+      },
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/7/data"
+      },
+      "source_scenario_version": "v001",
+      "scene_mapping_status": "source_primary_room",
+      "source_panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-062",
+        "version": "v001"
+      },
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-062-detail-v011.unity"
+    },
+    {
+      "scenarioId": "career-net-405-experience",
+      "version": "v003",
+      "occupationId": "career-net-405",
+      "name": "주택관리사",
+      "roomId": "PAN-063",
+      "title": "공용 시설 점검 요청 정리",
+      "brief": "공용 시설 점검 요청 정리. 세 물건에서 자료 확인 → 직접 조작 → 기록·인계를 이어갑니다. 각 작업면에 이번 요청의 조건이 표시됩니다.",
+      "limitation": "원본 직업 업무를 바탕으로 만든 가상 교육 과제입니다. 전문 정답·자격·적성 판정과 실제 시스템 조작은 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "점검 보드",
+          "candidateId": "CND-218",
+          "assetId": "AST-1218",
+          "assetVersion": "v002",
+          "instanceId": "Room_PAN-063/AST-1218-005",
+          "nodeName": "AST-1218-005"
+        },
+        {
+          "id": "object-2",
+          "name": "설비함",
+          "candidateId": "CND-217",
+          "assetId": "AST-1217",
+          "assetVersion": "v002",
+          "instanceId": "Room_PAN-063/AST-1217-004",
+          "nodeName": "AST-1217-004"
+        },
+        {
+          "id": "object-3",
+          "name": "청소 도구",
+          "candidateId": "CND-163",
+          "assetId": "AST-1163",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-063/AST-1163-007",
+          "nodeName": "AST-1163-007"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "점검 보드 등록",
+          "instruction": "접수 M31: 2동 공용등 깜빡임, 점검 요청시각 15:00. 실제 전기 수리 대신 접수와 작업 구역 안내를 연습합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "접수번호",
+              "initial": "",
+              "target": "M31"
+            },
+            {
+              "id": "f1",
+              "label": "위치",
+              "initial": "",
+              "target": "2동"
+            },
+            {
+              "id": "f2",
+              "label": "요청시각",
+              "initial": "",
+              "target": "15:00"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "pan-063-405-1",
+          "successText": "자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "inspect",
+          "title": "설비함 외관 기록",
+          "instruction": "설비함을 열거나 전원을 조작하지 않습니다. 가상 화면의 관리 라벨·접수·방문 예약을 대조합니다.",
+          "findings": [
+            {
+              "id": "q0",
+              "label": "관리 라벨",
+              "detail": "관리번호 L02 / 위치 2동."
+            },
+            {
+              "id": "q1",
+              "label": "접수 기록",
+              "detail": "공용등 깜빡임 접수 M31."
+            },
+            {
+              "id": "q2",
+              "label": "방문 일정",
+              "detail": "담당 점검팀 15:00 방문 예약."
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "pan-063-405-2",
+          "successText": "중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.",
+          "tiles": [],
+          "fields": [],
+          "values": []
+        },
+        {
+          "kind": "sort",
+          "title": "주변 정리와 안내 준비",
+          "instruction": "안내 표지는 작업 안내칸, 정리 도구는 도구칸, 인계 메모는 담당자칸에 배치합니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "점검 안내표",
+              "slotLabel": "작업 안내칸",
+              "targetLabel": "작업 안내칸",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "주변 정리도구",
+              "slotLabel": "도구칸",
+              "targetLabel": "도구칸",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "M31 인계메모",
+              "slotLabel": "담당자칸",
+              "targetLabel": "담당자칸",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "pan-063-405-3",
+          "successText": "세 물건의 업무가 연결되어 완료됐습니다. 체험 종료로 원본 결과를 전달하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        }
+      ],
+      "source_basis": {
+        "work": "하는일\n주택관리사는 아파트와 같은 대규모 공동주택의 각종 시설 및 환경을 유지 관리하며, 공동시설의 유지 및 보수와 관련된 각종 회계 업무를 담당합니다.\n공동주택의 공동시설인 노인정, 놀이터, 주차장 등을 관리하고 유지하여 아파트 내 시설물에 의한 안전사고가 발생하지 않도록 합니다.\n관리비를 징수하고 공과금 납부를 대행합니다.\n공동주택의 주민의 안전관리와 입주, 퇴거에 관한 업무를 수행합니다.\n전기기술자, 경리, 경비, 청소 직원 등의 업무를 감독하고, 인사를 관리합니다.",
+        "selected_work_evidence": "주택관리사는 아파트와 같은 대규모 공동주택의 각종 시설 및 환경을 유지 관리하며, 공동시설의 유지 및 보수와 관련된 각종 회계 업무를 담당합니다.",
+        "core_competencies": [
+          "대인관계능력"
+        ],
+        "practice_connection": "원문 역량 대인관계능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/426/data/준비방법"
+      },
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/426/data"
+      },
+      "source_scenario_version": "v001",
+      "scene_mapping_status": "source_primary_room",
+      "source_panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-063",
+        "version": "v001"
+      },
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-063-detail-v011.unity"
+    },
+    {
+      "scenarioId": "career-net-384-experience",
+      "version": "v003",
+      "occupationId": "career-net-384",
+      "name": "성직자",
+      "roomId": "PAN-064",
+      "title": "예배실의 방문 상담 일정 준비",
+      "brief": "예배실의 방문 상담 일정 준비. 세 물건에서 자료 확인 → 직접 조작 → 기록·인계를 이어갑니다. 각 작업면에 이번 요청의 조건이 표시됩니다.",
+      "limitation": "원본 직업 업무를 바탕으로 만든 가상 교육 과제입니다. 전문 정답·자격·적성 판정과 실제 시스템 조작은 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "펼친 성경",
+          "candidateId": "CND-245",
+          "assetId": "AST-1245",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-064/AST-1245-003",
+          "nodeName": "AST-1245-003"
+        },
+        {
+          "id": "object-2",
+          "name": "설교 강대상",
+          "candidateId": "CND-244",
+          "assetId": "AST-1244",
+          "assetVersion": "v004",
+          "instanceId": "Room_PAN-064/AST-1244-002",
+          "nodeName": "AST-1244-002"
+        },
+        {
+          "id": "object-3",
+          "name": "찬송가 책 거치대",
+          "candidateId": "CND-248",
+          "assetId": "AST-1248",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-064/AST-1248-009",
+          "nodeName": "AST-1248-009"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "상담 요청 메모",
+          "instruction": "가상 지역 모임 요청: 이름 은별, 상담 희망 14:00, 장소 상담실. 교리의 정답이나 개인 신앙을 평가하지 않습니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "이름",
+              "initial": "",
+              "target": "은별"
+            },
+            {
+              "id": "f1",
+              "label": "희망시각",
+              "initial": "",
+              "target": "14:00"
+            },
+            {
+              "id": "f2",
+              "label": "장소",
+              "initial": "",
+              "target": "상담실"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "pan-064-384-1",
+          "successText": "자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "schedule",
+          "title": "방문자 안내 순서",
+          "instruction": "이 모임의 안내표: 13:30 환영, 14:00 개별상담, 15:00 나눔모임. 시간표에 자료를 배치합니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "환영 안내",
+              "slotLabel": "13:30",
+              "targetLabel": "13:30",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "개별 상담",
+              "slotLabel": "14:00",
+              "targetLabel": "14:00",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "나눔 모임",
+              "slotLabel": "15:00",
+              "targetLabel": "15:00",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "pan-064-384-2",
+          "successText": "중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "tune",
+          "title": "공동체 모임 자료 준비",
+          "instruction": "찬송가 거치대의 모임용 자료 UI입니다. 참석 예약 12명, 진행자용 자료 2부를 별도로 준비합니다.",
+          "values": [
+            {
+              "id": "v0",
+              "label": "참석자 자료",
+              "unit": "부",
+              "min": 0,
+              "max": 20,
+              "initial": 6,
+              "target": 12,
+              "tolerance": 0
+            },
+            {
+              "id": "v1",
+              "label": "진행자 자료",
+              "unit": "부",
+              "min": 0,
+              "max": 4,
+              "initial": 0,
+              "target": 2,
+              "tolerance": 0
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "pan-064-384-3",
+          "successText": "세 물건의 업무가 연결되어 완료됐습니다. 체험 종료로 원본 결과를 전달하세요.",
+          "tiles": [],
+          "fields": [],
+          "findings": []
+        }
+      ],
+      "source_basis": {
+        "work": "하는일\n성직자는 신자들에게 정신적, 도덕적 지도를 하며 교리 해설과 설교를 하고 종교의식을 거행합니다.\n성직자는 승려, 목사, 신부 등이 있으며 교리를 해석하고 전달하며 신자들의 고충을 들어주고 안식을 주는 상담자로서 역할을 수행하면서 사회 지도자로서의 역할을 하기도 합니다.\n일반적으로 종교 의례와 의식을 거행 및 관리하며, 의식을 거행할 때에는 불경이나 성경 등의 경전을 읽습니다.\n그 외에도 병든 사람을 위로하거나 가난한 사람을 도와주고, 정신적인 아픔을 호소하거나 안식을 원하는 사람을 돕고 신앙으로 인도합니다.",
+        "selected_work_evidence": "성직자는 승려, 목사, 신부 등이 있으며 교리를 해석하고 전달하며 신자들의 고충을 들어주고 안식을 주는 상담자로서 역할을 수행하면서 사회 지도자로서의 역할을 하기도 합니다.",
+        "core_competencies": [
+          "자기성찰능력"
+        ],
+        "practice_connection": "원문 역량 자기성찰능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/231/data/준비방법"
+      },
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/231/data"
+      },
+      "source_scenario_version": "v001",
+      "scene_mapping_status": "source_primary_room",
+      "source_panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-064",
+        "version": "v001"
+      },
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-064-spatial-v009.unity"
+    },
+    {
+      "scenarioId": "career-net-1100-experience",
+      "version": "v003",
+      "occupationId": "career-net-1100",
+      "name": "군무원",
+      "roomId": "PAN-065",
+      "title": "교육 일정 변경 공문 정리",
+      "brief": "교육 일정 변경 공문 정리. 세 물건에서 자료 확인 → 직접 조작 → 기록·인계를 이어갑니다. 각 작업면에 이번 요청의 조건이 표시됩니다.",
+      "limitation": "원본 직업 업무를 바탕으로 만든 가상 교육 과제입니다. 전문 정답·자격·적성 판정과 실제 시스템 조작은 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "일정 보드",
+          "candidateId": "CND-219",
+          "assetId": "AST-1219",
+          "assetVersion": "v002",
+          "instanceId": "Room_PAN-065/AST-1219-006",
+          "nodeName": "AST-1219-006"
+        },
+        {
+          "id": "object-2",
+          "name": "모니터",
+          "candidateId": "CND-005",
+          "assetId": "AST-005",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-065/AST-005-004",
+          "nodeName": "AST-005-004"
+        },
+        {
+          "id": "object-3",
+          "name": "통신 기기",
+          "candidateId": "CND-175",
+          "assetId": "AST-1175",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-065/AST-1175-007",
+          "nodeName": "AST-1175-007"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "schedule",
+          "title": "행정 일정 보드",
+          "instruction": "가상 교육일정: 09:00 등록, 10:00 교육, 11:30 정리. 참가자가 겹치지 않게 순서대로 배치합니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "등록 접수",
+              "slotLabel": "09:00",
+              "targetLabel": "09:00",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "교육 진행",
+              "slotLabel": "10:00",
+              "targetLabel": "10:00",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "자료 정리",
+              "slotLabel": "11:30",
+              "targetLabel": "11:30",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "pan-065-1100-1",
+          "successText": "자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "form",
+          "title": "변경 공문 작성",
+          "instruction": "접수 A18: 교육 장소가 2강의실로 바뀌었고 참석자는 16명입니다. 제목은 교육 장소 안내로 저장합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "제목",
+              "initial": "",
+              "target": "교육 장소 안내"
+            },
+            {
+              "id": "f1",
+              "label": "장소",
+              "initial": "1강의실",
+              "target": "2강의실"
+            },
+            {
+              "id": "f2",
+              "label": "인원",
+              "initial": "12",
+              "target": "16"
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "pan-065-1100-2",
+          "successText": "중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "form",
+          "title": "담당자에게 읽어 확인",
+          "instruction": "통신 기기에서 최신 공문 내용을 인계합니다. 문서번호 A18, 장소 2강의실, 인원 16명.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "문서번호",
+              "initial": "",
+              "target": "A18"
+            },
+            {
+              "id": "f1",
+              "label": "장소",
+              "initial": "",
+              "target": "2강의실"
+            },
+            {
+              "id": "f2",
+              "label": "인원",
+              "initial": "",
+              "target": "16"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "pan-065-1100-3",
+          "successText": "세 물건의 업무가 연결되어 완료됐습니다. 체험 종료로 원본 결과를 전달하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        }
+      ],
+      "source_basis": {
+        "work": "하는일\n군무원은 군부대에서 군인과 함께 근무하는 특정직 국가 공무원으로서 담당 직렬에 따라 기술, 연구, 일반 행정, 이미용 등에 대한 업무를 수행합니다.\n국민에 대한 봉사자로서 직업윤리 정신을 바탕으로 공공의 이익을 실현하고 공무를 올바르게 수행합니다.\n업무 분야에 대한 전문 지식을 활용하여 보고서 및 문서를 작성하고 관리합니다.",
+        "selected_work_evidence": "업무 분야에 대한 전문 지식을 활용하여 보고서 및 문서를 작성하고 관리합니다.",
+        "core_competencies": [
+          "대인관계능력"
+        ],
+        "practice_connection": "원문 역량 대인관계능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/65/data/준비방법"
+      },
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/65/data"
+      },
+      "source_scenario_version": "v001",
+      "scene_mapping_status": "source_primary_room",
+      "source_panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-065",
+        "version": "v001"
+      },
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-065-detail-v011.unity",
+      "requestChangeBrief": "문서 담당자가 제목을 교육 일정 안내로 바꾸라고 요청했습니다. 장소·인원은 그대로입니다.",
+      "requestChangeReasonCode": "REQUEST_CHANGED",
+      "alternateSurfaces": [
+        {
+          "kind": "schedule",
+          "title": "행정 일정 보드",
+          "instruction": "가상 교육일정: 09:00 등록, 10:00 교육, 11:30 정리. 참가자가 겹치지 않게 순서대로 배치합니다. 변경 요청: 문서 담당자가 제목을 교육 일정 안내로 바꾸라고 요청했습니다. 장소·인원은 그대로입니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "등록 접수",
+              "slotLabel": "09:00",
+              "targetLabel": "09:00",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "교육 진행",
+              "slotLabel": "10:00",
+              "targetLabel": "10:00",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "자료 정리",
+              "slotLabel": "11:30",
+              "targetLabel": "11:30",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "pan-065-1100-1",
+          "successText": "자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "form",
+          "title": "변경 공문 작성",
+          "instruction": "접수 A18: 교육 장소가 2강의실로 바뀌었고 참석자는 16명입니다. 제목은 교육 일정 안내로 저장합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "제목",
+              "initial": "",
+              "target": "교육 일정 안내"
+            },
+            {
+              "id": "f1",
+              "label": "장소",
+              "initial": "1강의실",
+              "target": "2강의실"
+            },
+            {
+              "id": "f2",
+              "label": "인원",
+              "initial": "12",
+              "target": "16"
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "pan-065-1100-2",
+          "successText": "중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "form",
+          "title": "담당자에게 읽어 확인",
+          "instruction": "통신 기기에서 최신 공문 내용을 인계합니다. 문서번호 A18, 장소 2강의실, 인원 16명.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "문서번호",
+              "initial": "",
+              "target": "A18"
+            },
+            {
+              "id": "f1",
+              "label": "장소",
+              "initial": "",
+              "target": "2강의실"
+            },
+            {
+              "id": "f2",
+              "label": "인원",
+              "initial": "",
+              "target": "16"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "pan-065-1100-3",
+          "successText": "세 물건의 업무가 연결되어 완료됐습니다. 체험 종료로 원본 결과를 전달하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-1100-experience",
+      "version": "v003",
+      "occupationId": "career-net-1100",
+      "name": "군무원",
+      "roomId": "PAN-066",
+      "title": "생활관 비품 배정 기록",
+      "brief": "생활관 비품 배정 기록. 세 물건에서 자료 확인 → 직접 조작 → 기록·인계를 이어갑니다. 각 작업면에 이번 요청의 조건이 표시됩니다.",
+      "limitation": "원본 직업 업무를 바탕으로 만든 가상 교육 과제입니다. 전문 정답·자격·적성 판정과 실제 시스템 조작은 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "생활 침대",
+          "candidateId": "CND-044",
+          "assetId": "AST-1044",
+          "assetVersion": "v002",
+          "instanceId": "Room_PAN-066/AST-1044-002",
+          "nodeName": "AST-1044-002"
+        },
+        {
+          "id": "object-2",
+          "name": "사물함",
+          "candidateId": "CND-054",
+          "assetId": "AST-1054",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-066/AST-1054-005",
+          "nodeName": "AST-1054-005"
+        },
+        {
+          "id": "object-3",
+          "name": "신발 정리대",
+          "candidateId": "CND-220",
+          "assetId": "AST-1220",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-066/AST-1220-007",
+          "nodeName": "AST-1220-007"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "tune",
+          "title": "침구 준비 수량",
+          "instruction": "가상 입실표: 이번 입실 4명, 1명당 침구 1세트와 여분 1세트입니다. 총 5세트를 준비합니다.",
+          "values": [
+            {
+              "id": "v0",
+              "label": "침구 세트",
+              "unit": "세트",
+              "min": 0,
+              "max": 10,
+              "initial": 2,
+              "target": 5,
+              "tolerance": 0
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "pan-066-1100-1",
+          "successText": "자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.",
+          "tiles": [],
+          "fields": [],
+          "findings": []
+        },
+        {
+          "kind": "sort",
+          "title": "개인 보관칸 배정",
+          "instruction": "입실표에 민수→A칸, 서연→B칸, 지후→C칸으로 지정됐습니다. 이름표를 해당 칸으로 옮깁니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "민수 이름표",
+              "slotLabel": "A칸",
+              "targetLabel": "A칸",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "서연 이름표",
+              "slotLabel": "B칸",
+              "targetLabel": "B칸",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "지후 이름표",
+              "slotLabel": "C칸",
+              "targetLabel": "C칸",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "pan-066-1100-2",
+          "successText": "중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "form",
+          "title": "생활관 인계 메모",
+          "instruction": "배정 결과를 기록합니다. 구역은 1생활관, 침구 5세트, 배정된 보관칸 3개입니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "구역",
+              "initial": "",
+              "target": "1생활관"
+            },
+            {
+              "id": "f1",
+              "label": "침구",
+              "initial": "",
+              "target": "5"
+            },
+            {
+              "id": "f2",
+              "label": "보관칸",
+              "initial": "",
+              "target": "3"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "pan-066-1100-3",
+          "successText": "세 물건의 업무가 연결되어 완료됐습니다. 체험 종료로 원본 결과를 전달하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        }
+      ],
+      "source_basis": {
+        "work": "하는일\n군무원은 군부대에서 군인과 함께 근무하는 특정직 국가 공무원으로서 담당 직렬에 따라 기술, 연구, 일반 행정, 이미용 등에 대한 업무를 수행합니다.\n국민에 대한 봉사자로서 직업윤리 정신을 바탕으로 공공의 이익을 실현하고 공무를 올바르게 수행합니다.\n업무 분야에 대한 전문 지식을 활용하여 보고서 및 문서를 작성하고 관리합니다.",
+        "selected_work_evidence": "업무 분야에 대한 전문 지식을 활용하여 보고서 및 문서를 작성하고 관리합니다.",
+        "core_competencies": [
+          "대인관계능력"
+        ],
+        "practice_connection": "원문 역량 대인관계능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/65/data/준비방법"
+      },
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/65/data"
+      },
+      "source_scenario_version": "v001",
+      "scene_mapping_status": "user_authorized_71_room_editorial_adaptation",
+      "source_panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-065",
+        "version": "v001"
+      },
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-066-detail-v011.unity"
+    },
+    {
+      "scenarioId": "career-net-407-experience",
+      "version": "v003",
+      "occupationId": "career-net-407",
+      "name": "직업군인",
+      "roomId": "PAN-067",
+      "title": "공용 물품 재고와 대여 기록",
+      "brief": "공용 물품 재고와 대여 기록. 세 물건에서 자료 확인 → 직접 조작 → 기록·인계를 이어갑니다. 각 작업면에 이번 요청의 조건이 표시됩니다.",
+      "limitation": "원본 직업 업무를 바탕으로 만든 가상 교육 과제입니다. 전문 정답·자격·적성 판정과 실제 시스템 조작은 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "보관 케이스",
+          "candidateId": "CND-114",
+          "assetId": "AST-1114",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-067/AST-1114-007",
+          "nodeName": "AST-1114-007"
+        },
+        {
+          "id": "object-2",
+          "name": "작업대",
+          "candidateId": "CND-055",
+          "assetId": "AST-1055",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-067/AST-1055-004",
+          "nodeName": "AST-1055-004"
+        },
+        {
+          "id": "object-3",
+          "name": "선반",
+          "candidateId": "CND-028",
+          "assetId": "AST-1028",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-067/AST-1028-002",
+          "nodeName": "AST-1028-002"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "inspect",
+          "title": "공용 물품 상태 확인",
+          "instruction": "교육용 비전투 물품의 라벨·수량·반납 요청을 확인합니다. 무기 사용이나 작전 판단은 포함하지 않습니다.",
+          "findings": [
+            {
+              "id": "q0",
+              "label": "손전등 라벨",
+              "detail": "공용 손전등 3개, 반납함 A."
+            },
+            {
+              "id": "q1",
+              "label": "지도 케이스",
+              "detail": "빈 지도 케이스 2개, 반납함 B."
+            },
+            {
+              "id": "q2",
+              "label": "기록판",
+              "detail": "기록판 1개, 반납함 C."
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "pan-067-407-1",
+          "successText": "자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.",
+          "tiles": [],
+          "fields": [],
+          "values": []
+        },
+        {
+          "kind": "tune",
+          "title": "대여 수량 기록",
+          "instruction": "요청서 G06: 손전등 3개와 빈 지도 케이스 2개. 요청에 맞춰 대여 수량을 기록합니다.",
+          "values": [
+            {
+              "id": "v0",
+              "label": "손전등",
+              "unit": "개",
+              "min": 0,
+              "max": 5,
+              "initial": 1,
+              "target": 3,
+              "tolerance": 0
+            },
+            {
+              "id": "v1",
+              "label": "빈 지도 케이스",
+              "unit": "개",
+              "min": 0,
+              "max": 5,
+              "initial": 1,
+              "target": 2,
+              "tolerance": 0
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "pan-067-407-2",
+          "successText": "중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.",
+          "tiles": [],
+          "fields": [],
+          "findings": []
+        },
+        {
+          "kind": "sort",
+          "title": "반납 선반 분류",
+          "instruction": "라벨을 보고 공용 물품을 선반 A·B·C로 정리합니다. 손전등 A, 지도 케이스 B, 기록판 C.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "손전등",
+              "slotLabel": "A 선반",
+              "targetLabel": "A 선반",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "지도 케이스",
+              "slotLabel": "B 선반",
+              "targetLabel": "B 선반",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "기록판",
+              "slotLabel": "C 선반",
+              "targetLabel": "C 선반",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "pan-067-407-3",
+          "successText": "세 물건의 업무가 연결되어 완료됐습니다. 체험 종료로 원본 결과를 전달하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        }
+      ],
+      "source_basis": {
+        "work": "하는일\n직업군인은 국가의 안전보장과 국민의 생명 및 재산을 보호하기 위한 일을 합니다.\n지휘관으로서 일반 병사를 지휘, 통솔하거나 혹은 참모로서 지휘관을 보좌하여 정보, 작전, 인사, 군수 등 전문 업무를 수행합니다.\n외부의 모든 군사적 위협으로부터 국가를 보호하고 전쟁이 일어나지 않도록 하며 군사적 긴장을 낮추어 평화와 안정을 위한 일을 합니다.\n남북한 간의 군사분계선 감시 및 관리, 해안선 및 국가 중요 시설에 대한 경계와 수색 정찰을 합니다.\n국가 기간산업의 보호, 환경보호 활동 지원, 구난구조, 테러 방지, 분쟁지역에 대한 평화유지 활동, 해상 수송로 보호 등의 일을 합니다.",
+        "selected_work_evidence": "남북한 간의 군사분계선 감시 및 관리, 해안선 및 국가 중요 시설에 대한 경계와 수색 정찰을 합니다.",
+        "core_competencies": [
+          "신체·운동능력"
+        ],
+        "practice_connection": "원문 역량 신체·운동능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/435/data/준비방법"
+      },
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/435/data"
+      },
+      "source_scenario_version": "v001",
+      "scene_mapping_status": "source_primary_room",
+      "source_panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-067",
+        "version": "v001"
+      },
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-067-detail-v010.unity"
+    },
+    {
+      "scenarioId": "career-net-267-experience",
+      "version": "v003",
+      "occupationId": "career-net-267",
+      "name": "번역가",
+      "roomId": "PAN-068",
+      "title": "번역 용어 확인과 수정본 인계",
+      "brief": "번역 용어 확인과 수정본 인계. 세 물건에서 자료 확인 → 직접 조작 → 기록·인계를 이어갑니다. 각 작업면에 이번 요청의 조건이 표시됩니다.",
+      "limitation": "원본 직업 업무를 바탕으로 만든 가상 교육 과제입니다. 전문 정답·자격·적성 판정과 실제 시스템 조작은 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "휴대 전화",
+          "candidateId": "CND-222",
+          "assetId": "AST-1222",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-068/AST-1222-005",
+          "nodeName": "AST-1222-005"
+        },
+        {
+          "id": "object-2",
+          "name": "노트북",
+          "candidateId": "CND-012",
+          "assetId": "AST-1012",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-068/AST-1012-004",
+          "nodeName": "AST-1012-004"
+        },
+        {
+          "id": "object-3",
+          "name": "문서 파우치",
+          "candidateId": "CND-223",
+          "assetId": "AST-1223",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-068/AST-1223-006",
+          "nodeName": "AST-1223-006"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "inspect",
+          "title": "의뢰인 용어 확인",
+          "instruction": "이번 가상 안내문의 승인 용어집을 확인합니다. 단어는 제공된 맥락에서만 대응시키며 전문 번역 정답으로 일반화하지 않습니다.",
+          "findings": [
+            {
+              "id": "q0",
+              "label": "meeting room",
+              "detail": "의뢰인이 승인한 표기: 회의실."
+            },
+            {
+              "id": "q1",
+              "label": "visitor pass",
+              "detail": "의뢰인이 승인한 표기: 방문증."
+            },
+            {
+              "id": "q2",
+              "label": "help desk",
+              "detail": "의뢰인이 승인한 표기: 안내 창구."
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "pan-068-267-1",
+          "successText": "자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.",
+          "tiles": [],
+          "fields": [],
+          "values": []
+        },
+        {
+          "kind": "form",
+          "title": "초안 용어 수정",
+          "instruction": "의뢰인이 승인한 용어집대로 세 표현을 수정하고 저장합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "meeting room",
+              "initial": "미팅 방",
+              "target": "회의실"
+            },
+            {
+              "id": "f1",
+              "label": "visitor pass",
+              "initial": "방문 패스",
+              "target": "방문증"
+            },
+            {
+              "id": "f2",
+              "label": "help desk",
+              "initial": "도움 책상",
+              "target": "안내 창구"
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "pan-068-267-2",
+          "successText": "중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "sort",
+          "title": "전달 문서 파우치",
+          "instruction": "수정 번역문은 최종본, 이전 초안은 이전본, 승인 용어집은 참고자료 칸에 분리합니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "수정 번역문",
+              "slotLabel": "최종본",
+              "targetLabel": "최종본",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "초기 번역 초안",
+              "slotLabel": "이전본",
+              "targetLabel": "이전본",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "승인 용어집",
+              "slotLabel": "참고자료",
+              "targetLabel": "참고자료",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "pan-068-267-3",
+          "successText": "세 물건의 업무가 연결되어 완료됐습니다. 체험 종료로 원본 결과를 전달하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        }
+      ],
+      "source_basis": {
+        "work": "하는일\n번역가는 외국어로 쓰인 문서, 보고서 또는 전문 서적 등을 우리말로 옮기거나 우리말을 외국어로 옮기는 작업을 전문적으로 합니다.\n번역을 의뢰받은 원문의 정확한 이해를 위해 사전 및 기타 참고 자료를 수집하고, 원문을 연구하여 본래의 사상과 감정을 그대로 살려서 씁니다.\n전문 서적의 경우 해당 분야 전문가나 번역 업체를 통해 전문 용어를 감수받아 잘못 번역된 부분이 없는지 확인합니다.\n번역된 내용에 대한 수정, 보완, 교정 작업을 거쳐 완성본을 만듭니다.\n서적, 그리고 비즈니스 서류, 기획, 수출입 관련 무역 서신, 제품 매뉴얼 등 각종 계약서 및 서류 등을 번역하기도 합니다.",
+        "selected_work_evidence": "전문 서적의 경우 해당 분야 전문가나 번역 업체를 통해 전문 용어를 감수받아 잘못 번역된 부분이 없는지 확인합니다.",
+        "core_competencies": [
+          "언어능력",
+          "창의력"
+        ],
+        "practice_connection": "원문 역량 언어능력, 창의력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/165/data/준비방법"
+      },
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/165/data"
+      },
+      "source_scenario_version": "v001",
+      "scene_mapping_status": "source_primary_room",
+      "source_panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-068",
+        "version": "v001"
+      },
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-068-detail-v011.unity"
+    },
+    {
+      "scenarioId": "career-net-10016-experience",
+      "version": "v003",
+      "occupationId": "career-net-10016",
+      "name": "여행 기획자",
+      "roomId": "PAN-069",
+      "title": "마을 여행 경로와 집결 안내",
+      "brief": "마을 여행 경로와 집결 안내. 세 물건에서 자료 확인 → 직접 조작 → 기록·인계를 이어갑니다. 각 작업면에 이번 요청의 조건이 표시됩니다.",
+      "limitation": "원본 직업 업무를 바탕으로 만든 가상 교육 과제입니다. 전문 정답·자격·적성 판정과 실제 시스템 조작은 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "지도 거치대",
+          "candidateId": "CND-224",
+          "assetId": "AST-1224",
+          "assetVersion": "v002",
+          "instanceId": "Room_PAN-069/AST-1224-002",
+          "nodeName": "AST-1224-002"
+        },
+        {
+          "id": "object-2",
+          "name": "안내판",
+          "candidateId": "CND-205",
+          "assetId": "AST-1205",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-069/AST-1205-003",
+          "nodeName": "AST-1205-003"
+        },
+        {
+          "id": "object-3",
+          "name": "여행 가방",
+          "candidateId": "CND-221",
+          "assetId": "AST-1221",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-069/AST-1221-010",
+          "nodeName": "AST-1221-010"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "schedule",
+          "title": "여행 동선 만들기",
+          "instruction": "가상 예약표: 09:00 광장 집결, 10:00 박물관, 12:00 시장. 정해진 예약 시간을 지키도록 카드를 배치합니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "광장 집결",
+              "slotLabel": "09:00",
+              "targetLabel": "09:00",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "박물관 방문",
+              "slotLabel": "10:00",
+              "targetLabel": "10:00",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "시장 탐방",
+              "slotLabel": "12:00",
+              "targetLabel": "12:00",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "pan-069-10016-1",
+          "successText": "자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "form",
+          "title": "집결 안내판 편집",
+          "instruction": "오늘 팀명은 느티나무, 집결지는 중앙광장, 집결시각은 09:00입니다. 안내판의 잘못된 내용을 수정합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "팀명",
+              "initial": "소나무",
+              "target": "느티나무"
+            },
+            {
+              "id": "f1",
+              "label": "집결지",
+              "initial": "동문",
+              "target": "중앙광장"
+            },
+            {
+              "id": "f2",
+              "label": "집결시각",
+              "initial": "09:30",
+              "target": "09:00"
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "pan-069-10016-2",
+          "successText": "중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "tune",
+          "title": "인솔용 준비물 수량",
+          "instruction": "예약 인원은 10명입니다. 참가자 안내지도 10장과 인솔자 예비지도 2장을 준비합니다.",
+          "values": [
+            {
+              "id": "v0",
+              "label": "참가자 지도",
+              "unit": "장",
+              "min": 0,
+              "max": 15,
+              "initial": 5,
+              "target": 10,
+              "tolerance": 0
+            },
+            {
+              "id": "v1",
+              "label": "예비 지도",
+              "unit": "장",
+              "min": 0,
+              "max": 5,
+              "initial": 0,
+              "target": 2,
+              "tolerance": 0
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "pan-069-10016-3",
+          "successText": "세 물건의 업무가 연결되어 완료됐습니다. 체험 종료로 원본 결과를 전달하세요.",
+          "tiles": [],
+          "fields": [],
+          "findings": []
+        }
+      ],
+      "source_basis": {
+        "work": "하는일\n여행 기획자는 관광에 대한 지식을 바탕으로 국내 여행이나 해외여행 상품을 개발하는 일을 합니다.\n여행에 필요한 교통수단, 비용, 관광 명소, 숙박 및 편의시설, 이동 경로 등을 파악하고 이를 바탕으로 여행 코스와 일정을 기획합니다.\n관광지로 잘 알려지지 않은 곳을 발굴하고 사전 답사를 하거나 자료를 수집하여 새로운 여행 상품을 만들기도 합니다.\n철도 여행, 공정 여행, 건축 여행, 장애인 여행 등 테마별 여행을 기획하기도 합니다.",
+        "selected_work_evidence": "여행 기획자는 관광에 대한 지식을 바탕으로 국내 여행이나 해외여행 상품을 개발하는 일을 합니다.",
+        "core_competencies": [
+          "대인관계능력"
+        ],
+        "practice_connection": "원문 역량 대인관계능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/301/data/준비방법"
+      },
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/301/data"
+      },
+      "source_scenario_version": "v001",
+      "scene_mapping_status": "source_primary_room",
+      "source_panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-069",
+        "version": "v001"
+      },
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-069-detail-v011.unity",
+      "requestChangeBrief": "예약 팀명이 은행나무로 정정됐습니다. 시간·동선·지도 수량은 유지합니다.",
+      "requestChangeReasonCode": "REQUEST_CHANGED",
+      "alternateSurfaces": [
+        {
+          "kind": "schedule",
+          "title": "여행 동선 만들기",
+          "instruction": "가상 예약표: 09:00 광장 집결, 10:00 박물관, 12:00 시장. 정해진 예약 시간을 지키도록 카드를 배치합니다. 변경 요청: 예약 팀명이 은행나무로 정정됐습니다. 시간·동선·지도 수량은 유지합니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "광장 집결",
+              "slotLabel": "09:00",
+              "targetLabel": "09:00",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "박물관 방문",
+              "slotLabel": "10:00",
+              "targetLabel": "10:00",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "시장 탐방",
+              "slotLabel": "12:00",
+              "targetLabel": "12:00",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "pan-069-10016-1",
+          "successText": "자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "form",
+          "title": "집결 안내판 편집",
+          "instruction": "오늘 팀명은 은행나무, 집결지는 중앙광장, 집결시각은 09:00입니다. 안내판의 잘못된 내용을 수정합니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "팀명",
+              "initial": "소나무",
+              "target": "은행나무"
+            },
+            {
+              "id": "f1",
+              "label": "집결지",
+              "initial": "동문",
+              "target": "중앙광장"
+            },
+            {
+              "id": "f2",
+              "label": "집결시각",
+              "initial": "09:30",
+              "target": "09:00"
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "pan-069-10016-2",
+          "successText": "중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "tune",
+          "title": "인솔용 준비물 수량",
+          "instruction": "예약 인원은 10명입니다. 참가자 안내지도 10장과 인솔자 예비지도 2장을 준비합니다.",
+          "values": [
+            {
+              "id": "v0",
+              "label": "참가자 지도",
+              "unit": "장",
+              "min": 0,
+              "max": 15,
+              "initial": 5,
+              "target": 10,
+              "tolerance": 0
+            },
+            {
+              "id": "v1",
+              "label": "예비 지도",
+              "unit": "장",
+              "min": 0,
+              "max": 5,
+              "initial": 0,
+              "target": 2,
+              "tolerance": 0
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "pan-069-10016-3",
+          "successText": "세 물건의 업무가 연결되어 완료됐습니다. 체험 종료로 원본 결과를 전달하세요.",
+          "tiles": [],
+          "fields": [],
+          "findings": []
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-384-experience",
+      "version": "v003",
+      "occupationId": "career-net-384",
+      "name": "성직자",
+      "roomId": "PAN-070",
+      "title": "법당 방문자에게 프로그램 안내",
+      "brief": "법당 방문자에게 프로그램 안내. 세 물건에서 자료 확인 → 직접 조작 → 기록·인계를 이어갑니다. 각 작업면에 이번 요청의 조건이 표시됩니다.",
+      "limitation": "원본 직업 업무를 바탕으로 만든 가상 교육 과제입니다. 전문 정답·자격·적성 판정과 실제 시스템 조작은 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "낮은 경전 독서대",
+          "candidateId": "CND-253",
+          "assetId": "AST-1253",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-070/AST-1253-010",
+          "nodeName": "AST-1253-010"
+        },
+        {
+          "id": "object-2",
+          "name": "방석",
+          "candidateId": "CND-252",
+          "assetId": "AST-1252",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-070/AST-1252-004",
+          "nodeName": "AST-1252-004"
+        },
+        {
+          "id": "object-3",
+          "name": "목탁",
+          "candidateId": "CND-254",
+          "assetId": "AST-1254",
+          "assetVersion": "v002",
+          "instanceId": "Room_PAN-070/AST-1254-011",
+          "nodeName": "AST-1254-011"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "방문 프로그램 요청서",
+          "instruction": "가상 문화 방문 모임: 이름 연우, 예약 인원 6명, 시작 10:00. 교리와 의례의 정답을 판정하는 체험이 아닙니다.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "예약자",
+              "initial": "",
+              "target": "연우"
+            },
+            {
+              "id": "f1",
+              "label": "인원",
+              "initial": "",
+              "target": "6"
+            },
+            {
+              "id": "f2",
+              "label": "시작시각",
+              "initial": "",
+              "target": "10:00"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "pan-070-384-1",
+          "successText": "자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "sort",
+          "title": "좌석 구역 안내",
+          "instruction": "안내도에서 처음 방문한 팀→입구, 설명을 듣는 팀→중앙, 대기 팀→뒤쪽으로 지정됐습니다. 구역 카드를 배치합니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "첫 방문 팀",
+              "slotLabel": "입구 구역",
+              "targetLabel": "입구 구역",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "설명 참가 팀",
+              "slotLabel": "중앙 구역",
+              "targetLabel": "중앙 구역",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "대기 팀",
+              "slotLabel": "뒤쪽 구역",
+              "targetLabel": "뒤쪽 구역",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "pan-070-384-2",
+          "successText": "중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "schedule",
+          "title": "프로그램 진행 카드",
+          "instruction": "목탁 옆 진행표 UI입니다. 이번 모임은 10:00 공간 안내, 10:20 조용한 관찰, 10:40 질의로 예약됐습니다. 실제 의례 순서가 아닙니다.",
+          "tiles": [
+            {
+              "id": "t0",
+              "label": "공간 안내",
+              "slotLabel": "10:00",
+              "targetLabel": "10:00",
+              "initialX": 0.12,
+              "initialY": 0.84,
+              "targetX": 0.17,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t1",
+              "label": "조용한 관찰",
+              "slotLabel": "10:20",
+              "targetLabel": "10:20",
+              "initialX": 0.45,
+              "initialY": 0.84,
+              "targetX": 0.5,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            },
+            {
+              "id": "t2",
+              "label": "질의 시간",
+              "slotLabel": "10:40",
+              "targetLabel": "10:40",
+              "initialX": 0.78,
+              "initialY": 0.84,
+              "targetX": 0.83,
+              "targetY": 0.34,
+              "width": 0.24,
+              "height": 0.22,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "pan-070-384-3",
+          "successText": "세 물건의 업무가 연결되어 완료됐습니다. 체험 종료로 원본 결과를 전달하세요.",
+          "fields": [],
+          "values": [],
+          "findings": []
+        }
+      ],
+      "source_basis": {
+        "work": "하는일\n성직자는 신자들에게 정신적, 도덕적 지도를 하며 교리 해설과 설교를 하고 종교의식을 거행합니다.\n성직자는 승려, 목사, 신부 등이 있으며 교리를 해석하고 전달하며 신자들의 고충을 들어주고 안식을 주는 상담자로서 역할을 수행하면서 사회 지도자로서의 역할을 하기도 합니다.\n일반적으로 종교 의례와 의식을 거행 및 관리하며, 의식을 거행할 때에는 불경이나 성경 등의 경전을 읽습니다.\n그 외에도 병든 사람을 위로하거나 가난한 사람을 도와주고, 정신적인 아픔을 호소하거나 안식을 원하는 사람을 돕고 신앙으로 인도합니다.",
+        "selected_work_evidence": "성직자는 승려, 목사, 신부 등이 있으며 교리를 해석하고 전달하며 신자들의 고충을 들어주고 안식을 주는 상담자로서 역할을 수행하면서 사회 지도자로서의 역할을 하기도 합니다.",
+        "core_competencies": [
+          "자기성찰능력"
+        ],
+        "practice_connection": "원문 역량 자기성찰능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/231/data/준비방법"
+      },
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/231/data"
+      },
+      "source_scenario_version": "v001",
+      "scene_mapping_status": "user_authorized_71_room_editorial_adaptation",
+      "source_panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-064",
+        "version": "v001"
+      },
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-070-detail-v010.unity"
+    },
+    {
+      "scenarioId": "career-net-384-experience",
+      "version": "v003",
+      "occupationId": "career-net-384",
+      "name": "성직자",
+      "roomId": "PAN-071",
+      "title": "성당 공동체 방문 모임 준비",
+      "brief": "성당 공동체 방문 모임 준비. 세 물건에서 자료 확인 → 직접 조작 → 기록·인계를 이어갑니다. 각 작업면에 이번 요청의 조건이 표시됩니다.",
+      "limitation": "원본 직업 업무를 바탕으로 만든 가상 교육 과제입니다. 전문 정답·자격·적성 판정과 실제 시스템 조작은 포함하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "전례서",
+          "candidateId": "CND-261",
+          "assetId": "AST-1261",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-071/AST-1261-006",
+          "nodeName": "AST-1261-006"
+        },
+        {
+          "id": "object-2",
+          "name": "독서대",
+          "candidateId": "CND-258",
+          "assetId": "AST-1258",
+          "assetVersion": "v003",
+          "instanceId": "Room_PAN-071/AST-1258-003",
+          "nodeName": "AST-1258-003"
+        },
+        {
+          "id": "object-3",
+          "name": "촛대",
+          "candidateId": "CND-262",
+          "assetId": "AST-1262",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-071/AST-1262-007",
+          "nodeName": "AST-1262-007"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "inspect",
+          "title": "방문 요청 자료 읽기",
+          "instruction": "전례서 옆 방문 안내 UI에서 가상 모임 요청을 확인합니다. 미사·교리의 정답을 시험하지 않습니다.",
+          "findings": [
+            {
+              "id": "q0",
+              "label": "예약 정보",
+              "detail": "예약자 하늘, 방문 8명, 시작 11:00."
+            },
+            {
+              "id": "q1",
+              "label": "지원 요청",
+              "detail": "처음 방문한 사람에게 공간 안내 자료를 제공합니다."
+            },
+            {
+              "id": "q2",
+              "label": "진행자 회신",
+              "detail": "담당 진행자는 지안, 모임 장소는 안내실입니다."
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "pan-071-384-1",
+          "successText": "자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.",
+          "tiles": [],
+          "fields": [],
+          "values": []
+        },
+        {
+          "kind": "form",
+          "title": "독서대 안내 문안",
+          "instruction": "방문자를 위한 안내문을 작성합니다. 시작 11:00 / 담당 지안 / 장소 안내실.",
+          "fields": [
+            {
+              "id": "f0",
+              "label": "시작시각",
+              "initial": "",
+              "target": "11:00"
+            },
+            {
+              "id": "f1",
+              "label": "담당자",
+              "initial": "",
+              "target": "지안"
+            },
+            {
+              "id": "f2",
+              "label": "장소",
+              "initial": "",
+              "target": "안내실"
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "pan-071-384-2",
+          "successText": "중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.",
+          "tiles": [],
+          "values": [],
+          "findings": []
+        },
+        {
+          "kind": "tune",
+          "title": "방문 자료 준비",
+          "instruction": "촛대 옆 행사 준비 UI입니다. 실물 촛불을 다루지 않습니다. 참가자용 안내문 8부와 진행자용 1부를 준비합니다.",
+          "values": [
+            {
+              "id": "v0",
+              "label": "참가자 안내문",
+              "unit": "부",
+              "min": 0,
+              "max": 12,
+              "initial": 4,
+              "target": 8,
+              "tolerance": 0
+            },
+            {
+              "id": "v1",
+              "label": "진행자 안내문",
+              "unit": "부",
+              "min": 0,
+              "max": 3,
+              "initial": 0,
+              "target": 1,
+              "tolerance": 0
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "pan-071-384-3",
+          "successText": "세 물건의 업무가 연결되어 완료됐습니다. 체험 종료로 원본 결과를 전달하세요.",
+          "tiles": [],
+          "fields": [],
+          "findings": []
+        }
+      ],
+      "source_basis": {
+        "work": "하는일\n성직자는 신자들에게 정신적, 도덕적 지도를 하며 교리 해설과 설교를 하고 종교의식을 거행합니다.\n성직자는 승려, 목사, 신부 등이 있으며 교리를 해석하고 전달하며 신자들의 고충을 들어주고 안식을 주는 상담자로서 역할을 수행하면서 사회 지도자로서의 역할을 하기도 합니다.\n일반적으로 종교 의례와 의식을 거행 및 관리하며, 의식을 거행할 때에는 불경이나 성경 등의 경전을 읽습니다.\n그 외에도 병든 사람을 위로하거나 가난한 사람을 도와주고, 정신적인 아픔을 호소하거나 안식을 원하는 사람을 돕고 신앙으로 인도합니다.",
+        "selected_work_evidence": "성직자는 승려, 목사, 신부 등이 있으며 교리를 해석하고 전달하며 신자들의 고충을 들어주고 안식을 주는 상담자로서 역할을 수행하면서 사회 지도자로서의 역할을 하기도 합니다.",
+        "core_competencies": [
+          "자기성찰능력"
+        ],
+        "practice_connection": "원문 역량 자기성찰능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/231/data/준비방법"
+      },
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/231/data"
+      },
+      "source_scenario_version": "v001",
+      "scene_mapping_status": "user_authorized_71_room_editorial_adaptation",
+      "source_panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-064",
+        "version": "v001"
+      },
+      "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-071-spatial-v009.unity"
+    }
+  ]
+}

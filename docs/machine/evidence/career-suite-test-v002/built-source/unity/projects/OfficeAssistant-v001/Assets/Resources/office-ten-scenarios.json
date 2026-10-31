@@ -1,0 +1,1132 @@
+{
+  "schema_version": 3,
+  "package_id": "office-ten-direct-work",
+  "version": "v001",
+  "scenarios": [
+    {
+      "scenario_id": "career-net-208-experience",
+      "version": "v002",
+      "occupation_id": "career-net-208",
+      "name": "국제무역사무원",
+      "title": "포장명세와 상업송장 수량 맞추기",
+      "request": "가상 수출 건 TR-17. 포장명세: 상자5개에 각10개, 단가12달러. 송장의 수량·단가·합계를 대조하세요. 최신 송장 r1을2부 출력해 수출완료함에 보관합니다.",
+      "help": "요청 원문과 자료를 대조하세요. 저장·출력·보관은 순서대로 진행하며 화면을 닫아도 초안은 유지됩니다.",
+      "steps": [
+        {
+          "step_id": "prepare",
+          "object_id": "monitor",
+          "work_item_id": "TR-17",
+          "title": "포장명세와 상업송장 수량 맞추기",
+          "instruction": "가상 수출 건 TR-17. 포장명세: 상자5개에 각10개, 단가12달러. 송장의 수량·단가·합계를 대조하세요. 최신 송장 r1을2부 출력해 수출완료함에 보관합니다.",
+          "kind": "table",
+          "fields": [
+            {
+              "id": "quantity",
+              "label": "송장 수량(개)",
+              "initial": "48",
+              "expected": "50"
+            },
+            {
+              "id": "unit_price",
+              "label": "단가(달러)",
+              "initial": "12",
+              "expected": "12"
+            },
+            {
+              "id": "total",
+              "label": "송장 합계(달러)",
+              "initial": "576",
+              "expected": "600"
+            }
+          ],
+          "items": [],
+          "destinations": [],
+          "receipt_label": "송장 TR-17",
+          "seconds": 0
+        },
+        {
+          "step_id": "print",
+          "object_id": "copier",
+          "work_item_id": "TR-17",
+          "title": "최신 결과물 출력",
+          "instruction": "모니터에서 저장한 TR-17 문서 r1을 2부 출력하세요. 출력 중 설정 변경·중복 시작은 잠깁니다.",
+          "kind": "print",
+          "fields": [
+            {
+              "id": "document_id",
+              "label": "출력 문서 ID",
+              "initial": "OLD-DRAFT",
+              "expected": "TR-17"
+            },
+            {
+              "id": "revision",
+              "label": "출력 revision",
+              "initial": "0",
+              "expected": "1"
+            },
+            {
+              "id": "copies",
+              "label": "출력 부수",
+              "initial": "1",
+              "expected": "2"
+            }
+          ],
+          "items": [],
+          "destinations": [],
+          "receipt_label": "송장 TR-17",
+          "seconds": 2
+        },
+        {
+          "step_id": "file",
+          "object_id": "cabinet",
+          "work_item_id": "TR-17",
+          "title": "보관 및 인계",
+          "instruction": "출력 묶음을 수출완료 칸으로 옮기고 문서명과 부수를 인계하세요.",
+          "kind": "handoff",
+          "fields": [
+            {
+              "id": "title",
+              "label": "인계 문서명",
+              "initial": "초안",
+              "expected": "송장 TR-17"
+            },
+            {
+              "id": "copies",
+              "label": "인계 부수",
+              "initial": "0",
+              "expected": "2"
+            }
+          ],
+          "items": [
+            {
+              "id": "TR-17",
+              "label": "송장 TR-17 2부",
+              "target": "수출완료"
+            }
+          ],
+          "destinations": [
+            "수출완료",
+            "재확인",
+            "이전자료"
+          ],
+          "receipt_label": "송장 TR-17",
+          "seconds": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "career-net-10118-experience",
+      "version": "v002",
+      "occupation_id": "career-net-10118",
+      "name": "데이터 라벨러",
+      "title": "고객문의 문장에 라벨 붙이기",
+      "request": "가상 학습자료3문장을 배송/결제/계정으로 분류합니다. 배송: 도착·운송 문의, 결제: 요금·취소 문의, 계정: 로그인·비밀번호 문의. 라벨 목록 r1을1부 출력해 검수완료함에 보관합니다.",
+      "help": "요청 원문과 자료를 대조하세요. 저장·출력·보관은 순서대로 진행하며 화면을 닫아도 초안은 유지됩니다.",
+      "steps": [
+        {
+          "step_id": "prepare",
+          "object_id": "monitor",
+          "work_item_id": "LB-22",
+          "title": "고객문의 문장에 라벨 붙이기",
+          "instruction": "가상 학습자료3문장을 배송/결제/계정으로 분류합니다. 배송: 도착·운송 문의, 결제: 요금·취소 문의, 계정: 로그인·비밀번호 문의. 라벨 목록 r1을1부 출력해 검수완료함에 보관합니다.",
+          "kind": "sort",
+          "fields": [],
+          "items": [
+            {
+              "id": "L1",
+              "label": "택배가 언제 도착하나요?",
+              "target": "배송"
+            },
+            {
+              "id": "L2",
+              "label": "결제가 두 번 됐어요.",
+              "target": "결제"
+            },
+            {
+              "id": "L3",
+              "label": "비밀번호를 잊었어요.",
+              "target": "계정"
+            }
+          ],
+          "destinations": [
+            "배송",
+            "결제",
+            "계정"
+          ],
+          "receipt_label": "문의 라벨 목록",
+          "seconds": 0
+        },
+        {
+          "step_id": "print",
+          "object_id": "copier",
+          "work_item_id": "LB-22",
+          "title": "최신 결과물 출력",
+          "instruction": "모니터에서 저장한 LB-22 문서 r1을 1부 출력하세요. 출력 중 설정 변경·중복 시작은 잠깁니다.",
+          "kind": "print",
+          "fields": [
+            {
+              "id": "document_id",
+              "label": "출력 문서 ID",
+              "initial": "OLD-DRAFT",
+              "expected": "LB-22"
+            },
+            {
+              "id": "revision",
+              "label": "출력 revision",
+              "initial": "0",
+              "expected": "1"
+            },
+            {
+              "id": "copies",
+              "label": "출력 부수",
+              "initial": "1",
+              "expected": "1"
+            }
+          ],
+          "items": [],
+          "destinations": [],
+          "receipt_label": "문의 라벨 목록",
+          "seconds": 2
+        },
+        {
+          "step_id": "file",
+          "object_id": "cabinet",
+          "work_item_id": "LB-22",
+          "title": "보관 및 인계",
+          "instruction": "출력 묶음을 검수완료 칸으로 옮기고 문서명과 부수를 인계하세요.",
+          "kind": "handoff",
+          "fields": [
+            {
+              "id": "title",
+              "label": "인계 문서명",
+              "initial": "초안",
+              "expected": "문의 라벨 목록"
+            },
+            {
+              "id": "copies",
+              "label": "인계 부수",
+              "initial": "0",
+              "expected": "1"
+            }
+          ],
+          "items": [
+            {
+              "id": "LB-22",
+              "label": "문의 라벨 목록 1부",
+              "target": "검수완료"
+            }
+          ],
+          "destinations": [
+            "검수완료",
+            "재확인",
+            "이전자료"
+          ],
+          "receipt_label": "문의 라벨 목록",
+          "seconds": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "career-net-252-experience",
+      "version": "v002",
+      "occupation_id": "career-net-252",
+      "name": "법률사무원",
+      "title": "가상 접수표와 첨부표지 대조하기",
+      "request": "교육용 가상 접수표: 사건 CASE-24, 신청인 김가상, 문서명 자료제출서. 첨부표지와 접수 입력을 일치시킵니다. 법률 판단이나 법정 기한 계산은 하지 않습니다. 접수확인표 r1을2부 출력해 접수완료함에 보관합니다.",
+      "help": "요청 원문과 자료를 대조하세요. 저장·출력·보관은 순서대로 진행하며 화면을 닫아도 초안은 유지됩니다.",
+      "steps": [
+        {
+          "step_id": "prepare",
+          "object_id": "monitor",
+          "work_item_id": "CASE-24",
+          "title": "가상 접수표와 첨부표지 대조하기",
+          "instruction": "교육용 가상 접수표: 사건 CASE-24, 신청인 김가상, 문서명 자료제출서. 첨부표지와 접수 입력을 일치시킵니다. 법률 판단이나 법정 기한 계산은 하지 않습니다. 접수확인표 r1을2부 출력해 접수완료함에 보관합니다.",
+          "kind": "table",
+          "fields": [
+            {
+              "id": "case_id",
+              "label": "사건 식별번호",
+              "initial": "CASE-42",
+              "expected": "CASE-24"
+            },
+            {
+              "id": "applicant",
+              "label": "신청인",
+              "initial": "이가상",
+              "expected": "김가상"
+            },
+            {
+              "id": "document",
+              "label": "첨부 문서명",
+              "initial": "진술서",
+              "expected": "자료제출서"
+            }
+          ],
+          "items": [],
+          "destinations": [],
+          "receipt_label": "접수확인표 CASE-24",
+          "seconds": 0
+        },
+        {
+          "step_id": "print",
+          "object_id": "copier",
+          "work_item_id": "CASE-24",
+          "title": "최신 결과물 출력",
+          "instruction": "모니터에서 저장한 CASE-24 문서 r1을 2부 출력하세요. 출력 중 설정 변경·중복 시작은 잠깁니다.",
+          "kind": "print",
+          "fields": [
+            {
+              "id": "document_id",
+              "label": "출력 문서 ID",
+              "initial": "OLD-DRAFT",
+              "expected": "CASE-24"
+            },
+            {
+              "id": "revision",
+              "label": "출력 revision",
+              "initial": "0",
+              "expected": "1"
+            },
+            {
+              "id": "copies",
+              "label": "출력 부수",
+              "initial": "1",
+              "expected": "2"
+            }
+          ],
+          "items": [],
+          "destinations": [],
+          "receipt_label": "접수확인표 CASE-24",
+          "seconds": 2
+        },
+        {
+          "step_id": "file",
+          "object_id": "cabinet",
+          "work_item_id": "CASE-24",
+          "title": "보관 및 인계",
+          "instruction": "출력 묶음을 접수완료 칸으로 옮기고 문서명과 부수를 인계하세요.",
+          "kind": "handoff",
+          "fields": [
+            {
+              "id": "title",
+              "label": "인계 문서명",
+              "initial": "초안",
+              "expected": "접수확인표 CASE-24"
+            },
+            {
+              "id": "copies",
+              "label": "인계 부수",
+              "initial": "0",
+              "expected": "2"
+            }
+          ],
+          "items": [
+            {
+              "id": "CASE-24",
+              "label": "접수확인표 CASE-24 2부",
+              "target": "접수완료"
+            }
+          ],
+          "destinations": [
+            "접수완료",
+            "재확인",
+            "이전자료"
+          ],
+          "receipt_label": "접수확인표 CASE-24",
+          "seconds": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "career-net-1432-experience",
+      "version": "v002",
+      "occupation_id": "career-net-1432",
+      "name": "베타테스터",
+      "title": "경계값 테스트에서 오류 보고서 작성하기",
+      "request": "가상 쇼핑앱 사양: 주문액50000원 이상은 배송비0원. 테스트기록: T01 주문49000/표시3000, T02 주문50000/표시3000, T03 주문51000/표시0. 실패 테스트와 기대값, 재현 절차를 기록합니다. 보고서 r1을1부 출력해 수정요청함에 보관합니다. 재현 절차는「주문50000 → 배송비 조회」형식으로 기록하세요.",
+      "help": "요청 원문과 자료를 대조하세요. 저장·출력·보관은 순서대로 진행하며 화면을 닫아도 초안은 유지됩니다.",
+      "steps": [
+        {
+          "step_id": "prepare",
+          "object_id": "monitor",
+          "work_item_id": "TST-04",
+          "title": "경계값 테스트에서 오류 보고서 작성하기",
+          "instruction": "가상 쇼핑앱 사양: 주문액50000원 이상은 배송비0원. 테스트기록: T01 주문49000/표시3000, T02 주문50000/표시3000, T03 주문51000/표시0. 실패 테스트와 기대값, 재현 절차를 기록합니다. 보고서 r1을1부 출력해 수정요청함에 보관합니다. 재현 절차는「주문50000 → 배송비 조회」형식으로 기록하세요.",
+          "kind": "table",
+          "fields": [
+            {
+              "id": "failed_case",
+              "label": "실패 테스트 ID",
+              "initial": "T01",
+              "expected": "T02"
+            },
+            {
+              "id": "expected_fee",
+              "label": "실패 테스트 기대 배송비(원)",
+              "initial": "3000",
+              "expected": "0"
+            },
+            {
+              "id": "reproduction",
+              "label": "재현 절차",
+              "initial": "주문49000 → 배송비 조회",
+              "expected": "주문50000 → 배송비 조회"
+            }
+          ],
+          "items": [],
+          "destinations": [],
+          "receipt_label": "배송비 경계값 오류 보고서",
+          "seconds": 0
+        },
+        {
+          "step_id": "print",
+          "object_id": "copier",
+          "work_item_id": "TST-04",
+          "title": "최신 결과물 출력",
+          "instruction": "모니터에서 저장한 TST-04 문서 r1을 1부 출력하세요. 출력 중 설정 변경·중복 시작은 잠깁니다.",
+          "kind": "print",
+          "fields": [
+            {
+              "id": "document_id",
+              "label": "출력 문서 ID",
+              "initial": "OLD-DRAFT",
+              "expected": "TST-04"
+            },
+            {
+              "id": "revision",
+              "label": "출력 revision",
+              "initial": "0",
+              "expected": "1"
+            },
+            {
+              "id": "copies",
+              "label": "출력 부수",
+              "initial": "1",
+              "expected": "1"
+            }
+          ],
+          "items": [],
+          "destinations": [],
+          "receipt_label": "배송비 경계값 오류 보고서",
+          "seconds": 2
+        },
+        {
+          "step_id": "file",
+          "object_id": "cabinet",
+          "work_item_id": "TST-04",
+          "title": "보관 및 인계",
+          "instruction": "출력 묶음을 수정요청 칸으로 옮기고 문서명과 부수를 인계하세요.",
+          "kind": "handoff",
+          "fields": [
+            {
+              "id": "title",
+              "label": "인계 문서명",
+              "initial": "초안",
+              "expected": "배송비 경계값 오류 보고서"
+            },
+            {
+              "id": "copies",
+              "label": "인계 부수",
+              "initial": "0",
+              "expected": "1"
+            }
+          ],
+          "items": [
+            {
+              "id": "TST-04",
+              "label": "배송비 경계값 오류 보고서 1부",
+              "target": "수정요청"
+            }
+          ],
+          "destinations": [
+            "수정요청",
+            "재확인",
+            "이전자료"
+          ],
+          "receipt_label": "배송비 경계값 오류 보고서",
+          "seconds": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "career-net-10032-experience",
+      "version": "v002",
+      "occupation_id": "career-net-10032",
+      "name": "빅 데이터 전문가",
+      "title": "중복 기록을 제거하고 요약 집계하기",
+      "request": "가상 자료: A=10, B=20, B=20, C=30, D=28. 동일ID와 값의 완전 중복은 한 건만 남깁니다. 정제 후 건수·합계·평균을 입력합니다. 집계 보고서 r1을2부 출력해 분석완료함에 보관합니다.",
+      "help": "요청 원문과 자료를 대조하세요. 저장·출력·보관은 순서대로 진행하며 화면을 닫아도 초안은 유지됩니다.",
+      "steps": [
+        {
+          "step_id": "prepare",
+          "object_id": "monitor",
+          "work_item_id": "DS-08",
+          "title": "중복 기록을 제거하고 요약 집계하기",
+          "instruction": "가상 자료: A=10, B=20, B=20, C=30, D=28. 동일ID와 값의 완전 중복은 한 건만 남깁니다. 정제 후 건수·합계·평균을 입력합니다. 집계 보고서 r1을2부 출력해 분석완료함에 보관합니다.",
+          "kind": "table",
+          "fields": [
+            {
+              "id": "count",
+              "label": "중복 제거 후 건수",
+              "initial": "5",
+              "expected": "4"
+            },
+            {
+              "id": "sum",
+              "label": "값 합계",
+              "initial": "108",
+              "expected": "88"
+            },
+            {
+              "id": "mean",
+              "label": "값 평균",
+              "initial": "21.6",
+              "expected": "22"
+            }
+          ],
+          "items": [],
+          "destinations": [],
+          "receipt_label": "정제 자료 요약 보고서",
+          "seconds": 0
+        },
+        {
+          "step_id": "print",
+          "object_id": "copier",
+          "work_item_id": "DS-08",
+          "title": "최신 결과물 출력",
+          "instruction": "모니터에서 저장한 DS-08 문서 r1을 2부 출력하세요. 출력 중 설정 변경·중복 시작은 잠깁니다.",
+          "kind": "print",
+          "fields": [
+            {
+              "id": "document_id",
+              "label": "출력 문서 ID",
+              "initial": "OLD-DRAFT",
+              "expected": "DS-08"
+            },
+            {
+              "id": "revision",
+              "label": "출력 revision",
+              "initial": "0",
+              "expected": "1"
+            },
+            {
+              "id": "copies",
+              "label": "출력 부수",
+              "initial": "1",
+              "expected": "2"
+            }
+          ],
+          "items": [],
+          "destinations": [],
+          "receipt_label": "정제 자료 요약 보고서",
+          "seconds": 2
+        },
+        {
+          "step_id": "file",
+          "object_id": "cabinet",
+          "work_item_id": "DS-08",
+          "title": "보관 및 인계",
+          "instruction": "출력 묶음을 분석완료 칸으로 옮기고 문서명과 부수를 인계하세요.",
+          "kind": "handoff",
+          "fields": [
+            {
+              "id": "title",
+              "label": "인계 문서명",
+              "initial": "초안",
+              "expected": "정제 자료 요약 보고서"
+            },
+            {
+              "id": "copies",
+              "label": "인계 부수",
+              "initial": "0",
+              "expected": "2"
+            }
+          ],
+          "items": [
+            {
+              "id": "DS-08",
+              "label": "정제 자료 요약 보고서 2부",
+              "target": "분석완료"
+            }
+          ],
+          "destinations": [
+            "분석완료",
+            "재확인",
+            "이전자료"
+          ],
+          "receipt_label": "정제 자료 요약 보고서",
+          "seconds": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "career-net-462-experience",
+      "version": "v002",
+      "occupation_id": "career-net-462",
+      "name": "사이버교육운영자",
+      "title": "실시간 수업 운영표 배치하기",
+      "request": "가상 온라인 수업 운영: 실시간강의10:00, 질의응답10:30, 다시보기공개11:00. 세 운영 카드를 알맞은 시간 슬롯에 배치합니다. 운영표 r1을2부 출력해 수업운영함에 보관합니다.",
+      "help": "요청 원문과 자료를 대조하세요. 저장·출력·보관은 순서대로 진행하며 화면을 닫아도 초안은 유지됩니다.",
+      "steps": [
+        {
+          "step_id": "prepare",
+          "object_id": "monitor",
+          "work_item_id": "EDU-06",
+          "title": "실시간 수업 운영표 배치하기",
+          "instruction": "가상 온라인 수업 운영: 실시간강의10:00, 질의응답10:30, 다시보기공개11:00. 세 운영 카드를 알맞은 시간 슬롯에 배치합니다. 운영표 r1을2부 출력해 수업운영함에 보관합니다.",
+          "kind": "schedule",
+          "fields": [],
+          "items": [
+            {
+              "id": "lecture",
+              "label": "실시간강의",
+              "target": "10:00"
+            },
+            {
+              "id": "questions",
+              "label": "질의응답",
+              "target": "10:30"
+            },
+            {
+              "id": "replay",
+              "label": "다시보기공개",
+              "target": "11:00"
+            }
+          ],
+          "destinations": [
+            "10:00",
+            "10:30",
+            "11:00"
+          ],
+          "receipt_label": "온라인 수업 운영표",
+          "seconds": 0
+        },
+        {
+          "step_id": "print",
+          "object_id": "copier",
+          "work_item_id": "EDU-06",
+          "title": "최신 결과물 출력",
+          "instruction": "모니터에서 저장한 EDU-06 문서 r1을 2부 출력하세요. 출력 중 설정 변경·중복 시작은 잠깁니다.",
+          "kind": "print",
+          "fields": [
+            {
+              "id": "document_id",
+              "label": "출력 문서 ID",
+              "initial": "OLD-DRAFT",
+              "expected": "EDU-06"
+            },
+            {
+              "id": "revision",
+              "label": "출력 revision",
+              "initial": "0",
+              "expected": "1"
+            },
+            {
+              "id": "copies",
+              "label": "출력 부수",
+              "initial": "1",
+              "expected": "2"
+            }
+          ],
+          "items": [],
+          "destinations": [],
+          "receipt_label": "온라인 수업 운영표",
+          "seconds": 2
+        },
+        {
+          "step_id": "file",
+          "object_id": "cabinet",
+          "work_item_id": "EDU-06",
+          "title": "보관 및 인계",
+          "instruction": "출력 묶음을 수업운영 칸으로 옮기고 문서명과 부수를 인계하세요.",
+          "kind": "handoff",
+          "fields": [
+            {
+              "id": "title",
+              "label": "인계 문서명",
+              "initial": "초안",
+              "expected": "온라인 수업 운영표"
+            },
+            {
+              "id": "copies",
+              "label": "인계 부수",
+              "initial": "0",
+              "expected": "2"
+            }
+          ],
+          "items": [
+            {
+              "id": "EDU-06",
+              "label": "온라인 수업 운영표 2부",
+              "target": "수업운영"
+            }
+          ],
+          "destinations": [
+            "수업운영",
+            "재확인",
+            "이전자료"
+          ],
+          "receipt_label": "온라인 수업 운영표",
+          "seconds": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "career-net-459-experience",
+      "version": "v002",
+      "occupation_id": "career-net-459",
+      "name": "속기사",
+      "title": "가상 발언 기록의 전사문 교정하기",
+      "request": "가상 발언 원문: 의장「오늘 안건은 도서관 운영입니다.」, 위원「운영 시간을 한 시간 늘립시다.」 발언자와 두 문장을 원문대로 교정합니다. 음성 인식이나 실제 속기 속도를 평가하는 사례가 아닙니다. 교정본 r1을1부 출력해 회의록함에 보관합니다.",
+      "help": "요청 원문과 자료를 대조하세요. 저장·출력·보관은 순서대로 진행하며 화면을 닫아도 초안은 유지됩니다.",
+      "steps": [
+        {
+          "step_id": "prepare",
+          "object_id": "monitor",
+          "work_item_id": "MTG-31",
+          "title": "가상 발언 기록의 전사문 교정하기",
+          "instruction": "가상 발언 원문: 의장「오늘 안건은 도서관 운영입니다.」, 위원「운영 시간을 한 시간 늘립시다.」 발언자와 두 문장을 원문대로 교정합니다. 음성 인식이나 실제 속기 속도를 평가하는 사례가 아닙니다. 교정본 r1을1부 출력해 회의록함에 보관합니다.",
+          "kind": "field",
+          "fields": [
+            {
+              "id": "speaker",
+              "label": "첫 발언자",
+              "initial": "위원",
+              "expected": "의장"
+            },
+            {
+              "id": "line1",
+              "label": "첫 발언 전사문",
+              "initial": "오늘 안건은 도서관 운행입니다.",
+              "expected": "오늘 안건은 도서관 운영입니다."
+            },
+            {
+              "id": "line2",
+              "label": "둘째 발언 전사문",
+              "initial": "운영 시간을 두 시간 늘립시다.",
+              "expected": "운영 시간을 한 시간 늘립시다."
+            }
+          ],
+          "items": [],
+          "destinations": [],
+          "receipt_label": "도서관 회의 전사문",
+          "seconds": 0
+        },
+        {
+          "step_id": "print",
+          "object_id": "copier",
+          "work_item_id": "MTG-31",
+          "title": "최신 결과물 출력",
+          "instruction": "모니터에서 저장한 MTG-31 문서 r1을 1부 출력하세요. 출력 중 설정 변경·중복 시작은 잠깁니다.",
+          "kind": "print",
+          "fields": [
+            {
+              "id": "document_id",
+              "label": "출력 문서 ID",
+              "initial": "OLD-DRAFT",
+              "expected": "MTG-31"
+            },
+            {
+              "id": "revision",
+              "label": "출력 revision",
+              "initial": "0",
+              "expected": "1"
+            },
+            {
+              "id": "copies",
+              "label": "출력 부수",
+              "initial": "1",
+              "expected": "1"
+            }
+          ],
+          "items": [],
+          "destinations": [],
+          "receipt_label": "도서관 회의 전사문",
+          "seconds": 2
+        },
+        {
+          "step_id": "file",
+          "object_id": "cabinet",
+          "work_item_id": "MTG-31",
+          "title": "보관 및 인계",
+          "instruction": "출력 묶음을 회의록 칸으로 옮기고 문서명과 부수를 인계하세요.",
+          "kind": "handoff",
+          "fields": [
+            {
+              "id": "title",
+              "label": "인계 문서명",
+              "initial": "초안",
+              "expected": "도서관 회의 전사문"
+            },
+            {
+              "id": "copies",
+              "label": "인계 부수",
+              "initial": "0",
+              "expected": "1"
+            }
+          ],
+          "items": [
+            {
+              "id": "MTG-31",
+              "label": "도서관 회의 전사문 1부",
+              "target": "회의록"
+            }
+          ],
+          "destinations": [
+            "회의록",
+            "재확인",
+            "이전자료"
+          ],
+          "receipt_label": "도서관 회의 전사문",
+          "seconds": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "career-net-230-experience",
+      "version": "v002",
+      "occupation_id": "career-net-230",
+      "name": "시장 및 여론조사전문가",
+      "title": "설문 표본 할당표 맞추기",
+      "request": "가상 조사 목표20명. 20~34세30%, 35~49세45%, 50세이상25%를 적용합니다. 각 집단의 모집 인원을 정수로 입력하고 전체20명인지 대조합니다. 할당표 r1을2부 출력해 조사준비함에 보관합니다.",
+      "help": "요청 원문과 자료를 대조하세요. 저장·출력·보관은 순서대로 진행하며 화면을 닫아도 초안은 유지됩니다.",
+      "steps": [
+        {
+          "step_id": "prepare",
+          "object_id": "monitor",
+          "work_item_id": "SV-12",
+          "title": "설문 표본 할당표 맞추기",
+          "instruction": "가상 조사 목표20명. 20~34세30%, 35~49세45%, 50세이상25%를 적용합니다. 각 집단의 모집 인원을 정수로 입력하고 전체20명인지 대조합니다. 할당표 r1을2부 출력해 조사준비함에 보관합니다.",
+          "kind": "table",
+          "fields": [
+            {
+              "id": "young",
+              "label": "20~34세 모집 인원",
+              "initial": "5",
+              "expected": "6"
+            },
+            {
+              "id": "middle",
+              "label": "35~49세 모집 인원",
+              "initial": "10",
+              "expected": "9"
+            },
+            {
+              "id": "older",
+              "label": "50세 이상 모집 인원",
+              "initial": "5",
+              "expected": "5"
+            },
+            {
+              "id": "total",
+              "label": "전체 모집 인원",
+              "initial": "20",
+              "expected": "20"
+            }
+          ],
+          "items": [],
+          "destinations": [],
+          "receipt_label": "설문 표본 할당표",
+          "seconds": 0
+        },
+        {
+          "step_id": "print",
+          "object_id": "copier",
+          "work_item_id": "SV-12",
+          "title": "최신 결과물 출력",
+          "instruction": "모니터에서 저장한 SV-12 문서 r1을 2부 출력하세요. 출력 중 설정 변경·중복 시작은 잠깁니다.",
+          "kind": "print",
+          "fields": [
+            {
+              "id": "document_id",
+              "label": "출력 문서 ID",
+              "initial": "OLD-DRAFT",
+              "expected": "SV-12"
+            },
+            {
+              "id": "revision",
+              "label": "출력 revision",
+              "initial": "0",
+              "expected": "1"
+            },
+            {
+              "id": "copies",
+              "label": "출력 부수",
+              "initial": "1",
+              "expected": "2"
+            }
+          ],
+          "items": [],
+          "destinations": [],
+          "receipt_label": "설문 표본 할당표",
+          "seconds": 2
+        },
+        {
+          "step_id": "file",
+          "object_id": "cabinet",
+          "work_item_id": "SV-12",
+          "title": "보관 및 인계",
+          "instruction": "출력 묶음을 조사준비 칸으로 옮기고 문서명과 부수를 인계하세요.",
+          "kind": "handoff",
+          "fields": [
+            {
+              "id": "title",
+              "label": "인계 문서명",
+              "initial": "초안",
+              "expected": "설문 표본 할당표"
+            },
+            {
+              "id": "copies",
+              "label": "인계 부수",
+              "initial": "0",
+              "expected": "2"
+            }
+          ],
+          "items": [
+            {
+              "id": "SV-12",
+              "label": "설문 표본 할당표 2부",
+              "target": "조사준비"
+            }
+          ],
+          "destinations": [
+            "조사준비",
+            "재확인",
+            "이전자료"
+          ],
+          "receipt_label": "설문 표본 할당표",
+          "seconds": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "career-net-378-experience",
+      "version": "v002",
+      "occupation_id": "career-net-378",
+      "name": "전문비서",
+      "title": "이동 시간을 고려해 회의 일정 배치하기",
+      "request": "가상 요청: 내부회의09:00, 외부손님면담10:00, 자료정리11:00. 각 업무는30분이고 외부면담 전후30분은 이동·준비 시간으로 비웁니다. 업무 카드를 지정 시간에 배치한 뒤 일정표 r1을2부 출력해 일정확정함에 보관합니다.",
+      "help": "요청 원문과 자료를 대조하세요. 저장·출력·보관은 순서대로 진행하며 화면을 닫아도 초안은 유지됩니다.",
+      "steps": [
+        {
+          "step_id": "prepare",
+          "object_id": "monitor",
+          "work_item_id": "CAL-09",
+          "title": "이동 시간을 고려해 회의 일정 배치하기",
+          "instruction": "가상 요청: 내부회의09:00, 외부손님면담10:00, 자료정리11:00. 각 업무는30분이고 외부면담 전후30분은 이동·준비 시간으로 비웁니다. 업무 카드를 지정 시간에 배치한 뒤 일정표 r1을2부 출력해 일정확정함에 보관합니다.",
+          "kind": "schedule",
+          "fields": [],
+          "items": [
+            {
+              "id": "internal",
+              "label": "내부회의",
+              "target": "09:00"
+            },
+            {
+              "id": "visitor",
+              "label": "외부손님면담",
+              "target": "10:00"
+            },
+            {
+              "id": "organize",
+              "label": "자료정리",
+              "target": "11:00"
+            }
+          ],
+          "destinations": [
+            "09:00",
+            "10:00",
+            "11:00"
+          ],
+          "receipt_label": "회의 및 면담 일정표",
+          "seconds": 0
+        },
+        {
+          "step_id": "print",
+          "object_id": "copier",
+          "work_item_id": "CAL-09",
+          "title": "최신 결과물 출력",
+          "instruction": "모니터에서 저장한 CAL-09 문서 r1을 2부 출력하세요. 출력 중 설정 변경·중복 시작은 잠깁니다.",
+          "kind": "print",
+          "fields": [
+            {
+              "id": "document_id",
+              "label": "출력 문서 ID",
+              "initial": "OLD-DRAFT",
+              "expected": "CAL-09"
+            },
+            {
+              "id": "revision",
+              "label": "출력 revision",
+              "initial": "0",
+              "expected": "1"
+            },
+            {
+              "id": "copies",
+              "label": "출력 부수",
+              "initial": "1",
+              "expected": "2"
+            }
+          ],
+          "items": [],
+          "destinations": [],
+          "receipt_label": "회의 및 면담 일정표",
+          "seconds": 2
+        },
+        {
+          "step_id": "file",
+          "object_id": "cabinet",
+          "work_item_id": "CAL-09",
+          "title": "보관 및 인계",
+          "instruction": "출력 묶음을 일정확정 칸으로 옮기고 문서명과 부수를 인계하세요.",
+          "kind": "handoff",
+          "fields": [
+            {
+              "id": "title",
+              "label": "인계 문서명",
+              "initial": "초안",
+              "expected": "회의 및 면담 일정표"
+            },
+            {
+              "id": "copies",
+              "label": "인계 부수",
+              "initial": "0",
+              "expected": "2"
+            }
+          ],
+          "items": [
+            {
+              "id": "CAL-09",
+              "label": "회의 및 면담 일정표 2부",
+              "target": "일정확정"
+            }
+          ],
+          "destinations": [
+            "일정확정",
+            "재확인",
+            "이전자료"
+          ],
+          "receipt_label": "회의 및 면담 일정표",
+          "seconds": 0
+        }
+      ]
+    },
+    {
+      "scenario_id": "career-net-258-experience",
+      "version": "v002",
+      "occupation_id": "career-net-258",
+      "name": "회계사무원",
+      "title": "영수증과 지출 장부 대조하기",
+      "request": "가상 영수증: 문구점12000원, 배송료3500원, 교통비2400원. 장부의 세 지출액과 합계를 바로잡습니다. 세금이나 회계 자문이 아닌 가상 기록 대조입니다. 지출표 r1을1부 출력해 지출증빙함에 보관합니다.",
+      "help": "요청 원문과 자료를 대조하세요. 저장·출력·보관은 순서대로 진행하며 화면을 닫아도 초안은 유지됩니다.",
+      "steps": [
+        {
+          "step_id": "prepare",
+          "object_id": "monitor",
+          "work_item_id": "AC-04",
+          "title": "영수증과 지출 장부 대조하기",
+          "instruction": "가상 영수증: 문구점12000원, 배송료3500원, 교통비2400원. 장부의 세 지출액과 합계를 바로잡습니다. 세금이나 회계 자문이 아닌 가상 기록 대조입니다. 지출표 r1을1부 출력해 지출증빙함에 보관합니다.",
+          "kind": "table",
+          "fields": [
+            {
+              "id": "stationery",
+              "label": "문구점 지출(원)",
+              "initial": "1200",
+              "expected": "12000"
+            },
+            {
+              "id": "delivery",
+              "label": "배송료(원)",
+              "initial": "3500",
+              "expected": "3500"
+            },
+            {
+              "id": "transport",
+              "label": "교통비(원)",
+              "initial": "4200",
+              "expected": "2400"
+            },
+            {
+              "id": "total",
+              "label": "지출 합계(원)",
+              "initial": "8900",
+              "expected": "17900"
+            }
+          ],
+          "items": [],
+          "destinations": [],
+          "receipt_label": "가상 지출 장부",
+          "seconds": 0
+        },
+        {
+          "step_id": "print",
+          "object_id": "copier",
+          "work_item_id": "AC-04",
+          "title": "최신 결과물 출력",
+          "instruction": "모니터에서 저장한 AC-04 문서 r1을 1부 출력하세요. 출력 중 설정 변경·중복 시작은 잠깁니다.",
+          "kind": "print",
+          "fields": [
+            {
+              "id": "document_id",
+              "label": "출력 문서 ID",
+              "initial": "OLD-DRAFT",
+              "expected": "AC-04"
+            },
+            {
+              "id": "revision",
+              "label": "출력 revision",
+              "initial": "0",
+              "expected": "1"
+            },
+            {
+              "id": "copies",
+              "label": "출력 부수",
+              "initial": "1",
+              "expected": "1"
+            }
+          ],
+          "items": [],
+          "destinations": [],
+          "receipt_label": "가상 지출 장부",
+          "seconds": 2
+        },
+        {
+          "step_id": "file",
+          "object_id": "cabinet",
+          "work_item_id": "AC-04",
+          "title": "보관 및 인계",
+          "instruction": "출력 묶음을 지출증빙 칸으로 옮기고 문서명과 부수를 인계하세요.",
+          "kind": "handoff",
+          "fields": [
+            {
+              "id": "title",
+              "label": "인계 문서명",
+              "initial": "초안",
+              "expected": "가상 지출 장부"
+            },
+            {
+              "id": "copies",
+              "label": "인계 부수",
+              "initial": "0",
+              "expected": "1"
+            }
+          ],
+          "items": [
+            {
+              "id": "AC-04",
+              "label": "가상 지출 장부 1부",
+              "target": "지출증빙"
+            }
+          ],
+          "destinations": [
+            "지출증빙",
+            "재확인",
+            "이전자료"
+          ],
+          "receipt_label": "가상 지출 장부",
+          "seconds": 0
+        }
+      ]
+    }
+  ]
+}

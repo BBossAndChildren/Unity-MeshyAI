@@ -1,0 +1,2849 @@
+{
+  "schema_version": 3,
+  "build_id": "career-suite-test-v006",
+  "scenarioId": "career-net-431-experience",
+  "scenarioVersion": "v003",
+  "roomId": "PAN-060",
+  "method": "actual public start/end and real browser pointer/native fields; no direct work-state mutation",
+  "started": {
+    "schemaVersion": 1,
+    "protocol": "career-experience",
+    "eventId": "evt-ae926fddd1254ebb86c5bc8c1bc95573",
+    "sequence": 182,
+    "occurredAt": "2026-10-31T16:30:35.8730000+09:00",
+    "sessionId": "8d1726cb-1bf8-4e8e-b861-b0a55ba5e03b",
+    "scenarioRunId": "run-354ec2be70734176a4b94fb1023baa7f",
+    "buildId": "career-suite-test-v006",
+    "sceneId": "PAN-060",
+    "roomId": "PAN-060",
+    "scenarioId": "career-net-431-experience",
+    "scenarioVersion": "v003",
+    "experienceId": "f3ca1bb9-2dcd-4f7e-8c5a-5e335eb140fc",
+    "requestId": "b8acb3e2-9725-4d8f-86fb-5b11425a37c5",
+    "objectId": null,
+    "instanceId": null,
+    "assetId": null,
+    "assetVersion": null,
+    "stepId": null,
+    "workItemId": null,
+    "attemptId": null,
+    "requestRevision": 1,
+    "documentRevision": null,
+    "type": "experience.started",
+    "action": "start_experience",
+    "process": {
+      "scope": "scenario",
+      "measurementStatus": "complete",
+      "measurementNote": null,
+      "attemptCount": 0,
+      "navigationBackCount": 0,
+      "backtrackCount": 0,
+      "retryCount": 0,
+      "mistakeCount": 0,
+      "repeatedMistakeCount": 0,
+      "helpRequestCount": 0,
+      "guidanceUsed": false,
+      "elapsedActiveMs": 0
+    },
+    "result": {
+      "outcome": "pending",
+      "success": null,
+      "completionCode": null,
+      "data": {}
+    },
+    "context": {
+      "assessmentStatus": "pending",
+      "assessmentCode": null,
+      "ruleVersion": "v001",
+      "reasonCodes": [],
+      "evidenceEventIds": [],
+      "interpretation": null,
+      "limitations": [
+        "원본 직업 업무를 바탕으로 만든 가상 교육 과제입니다. 전문 정답·자격·적성 판정과 실제 시스템 조작은 포함하지 않습니다.",
+        "이 기록은 선택한 가상 시나리오 한 회의 수행이며 직업 적성·전문 자격 평가가 아닙니다."
+      ],
+      "termination": null
+    },
+    "data": {
+      "ready": true,
+      "firstSequence": 181
+    }
+  },
+  "checks": [
+    {
+      "name": "actual_3D_terminal_selection_and_native_fields",
+      "pass": true,
+      "state": {
+        "schema_version": 3,
+        "buildId": "career-suite-test-v006",
+        "roomId": "PAN-060",
+        "ready": true,
+        "scenarioId": "career-net-431-experience",
+        "scenarioVersion": "v003",
+        "experienceId": "f3ca1bb9-2dcd-4f7e-8c5a-5e335eb140fc",
+        "runId": "run-354ec2be70734176a4b94fb1023baa7f",
+        "panel": 0,
+        "transition": false,
+        "reducedMotion": false,
+        "paused": false,
+        "ended": false,
+        "complete": false,
+        "activeMs": 32315.0011608377,
+        "feedback": "3D 물건을 선택해 업무를 시작하세요.",
+        "camera": {
+          "position": [
+            -1.646481,
+            1.968744,
+            1.603916
+          ],
+          "rotation": [
+            0.08370177,
+            0.9147031,
+            -0.3063654,
+            0.2499051
+          ],
+          "fov": 42,
+          "rect": [
+            0.245,
+            0.16,
+            0.29,
+            0.64
+          ]
+        },
+        "visibleRenderers": 5,
+        "focusedControl": "field-2",
+        "objects": [
+          {
+            "id": "object-1",
+            "name": "관리 단말",
+            "assetId": "AST-1212",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1212-007",
+            "nodeName": "AST-1212-007",
+            "step": 0,
+            "x": 741.4999,
+            "y": 342.9999,
+            "inFront": true,
+            "renderers": 5,
+            "visibleRenderers": 5,
+            "colliders": 5
+          },
+          {
+            "id": "object-2",
+            "name": "케이블 트레이",
+            "assetId": "AST-1211",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1211-006",
+            "nodeName": "AST-1211-006",
+            "step": 1,
+            "x": 690.5767,
+            "y": -186.7713,
+            "inFront": true,
+            "renderers": 9,
+            "visibleRenderers": 0,
+            "colliders": 9
+          },
+          {
+            "id": "object-3",
+            "name": "서버 랙",
+            "assetId": "AST-1210",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1210-002",
+            "nodeName": "AST-1210-002",
+            "step": 2,
+            "x": 505.0105,
+            "y": 69.51782,
+            "inFront": true,
+            "renderers": 22,
+            "visibleRenderers": 0,
+            "colliders": 22
+          }
+        ],
+        "surfaces": [
+          {
+            "id": "work-1",
+            "kind": "form",
+            "completed": false,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [],
+              "fields": [
+                "고객목록",
+                "백업",
+                "22:00"
+              ],
+              "observed": [],
+              "draftRevision": 3,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-2",
+            "kind": "assembly",
+            "completed": false,
+            "input": {
+              "tileX": [
+                0.12,
+                0.45,
+                0.78
+              ],
+              "tileY": [
+                0.84,
+                0.84,
+                0.84
+              ],
+              "settings": [],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 0,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-3",
+            "kind": "tune",
+            "completed": false,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [
+                3,
+                1
+              ],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 0,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          }
+        ],
+        "controls": [
+          {
+            "kind": "field",
+            "id": "field-0",
+            "value": "고객목록",
+            "x": 1297.806,
+            "y": 228.8194,
+            "enabled": true
+          },
+          {
+            "kind": "field",
+            "id": "field-1",
+            "value": "백업",
+            "x": 1297.806,
+            "y": 294.7194,
+            "enabled": true
+          },
+          {
+            "kind": "field",
+            "id": "field-2",
+            "value": "22:00",
+            "x": 1297.806,
+            "y": 360.6194,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "submit",
+            "label": "작업 결과 저장·확정",
+            "x": 1233.736,
+            "y": 485.0972,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "close",
+            "label": "닫기 · Esc",
+            "x": 1083.63,
+            "y": 583.9472,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "help",
+            "label": "도움",
+            "x": 1217.261,
+            "y": 583.9472,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "pause-work",
+            "label": "일시정지",
+            "x": 1365.536,
+            "y": 583.9472,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "close_reopen_preserves_unsaved_native_fields",
+      "pass": true,
+      "state": {
+        "schema_version": 3,
+        "buildId": "career-suite-test-v006",
+        "roomId": "PAN-060",
+        "ready": true,
+        "scenarioId": "career-net-431-experience",
+        "scenarioVersion": "v003",
+        "experienceId": "f3ca1bb9-2dcd-4f7e-8c5a-5e335eb140fc",
+        "runId": "run-354ec2be70734176a4b94fb1023baa7f",
+        "panel": 0,
+        "transition": true,
+        "reducedMotion": false,
+        "paused": false,
+        "ended": false,
+        "complete": false,
+        "activeMs": 45543.0014748126,
+        "feedback": "3D 물건을 선택해 업무를 시작하세요.",
+        "camera": {
+          "position": [
+            -1.666022,
+            1.997741,
+            1.637008
+          ],
+          "rotation": [
+            0.08374893,
+            0.9146733,
+            -0.3062315,
+            0.2501626
+          ],
+          "fov": 41.98613,
+          "rect": [
+            0.2433005,
+            0.1594451,
+            0.2927053,
+            0.6410405
+          ]
+        },
+        "visibleRenderers": 5,
+        "focusedControl": "",
+        "objects": [
+          {
+            "id": "object-1",
+            "name": "관리 단말",
+            "assetId": "AST-1212",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1212-007",
+            "nodeName": "AST-1212-007",
+            "step": 0,
+            "x": 740.239,
+            "y": 342.6357,
+            "inFront": true,
+            "renderers": 5,
+            "visibleRenderers": 5,
+            "colliders": 5
+          },
+          {
+            "id": "object-2",
+            "name": "케이블 트레이",
+            "assetId": "AST-1211",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1211-006",
+            "nodeName": "AST-1211-006",
+            "step": 1,
+            "x": 690.5434,
+            "y": -176.5998,
+            "inFront": true,
+            "renderers": 9,
+            "visibleRenderers": 0,
+            "colliders": 9
+          },
+          {
+            "id": "object-3",
+            "name": "서버 랙",
+            "assetId": "AST-1210",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1210-002",
+            "nodeName": "AST-1210-002",
+            "step": 2,
+            "x": 506.9228,
+            "y": 72.38214,
+            "inFront": true,
+            "renderers": 22,
+            "visibleRenderers": 0,
+            "colliders": 22
+          }
+        ],
+        "surfaces": [
+          {
+            "id": "work-1",
+            "kind": "form",
+            "completed": false,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [],
+              "fields": [
+                "고객목록",
+                "백업",
+                "22:00"
+              ],
+              "observed": [],
+              "draftRevision": 3,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-2",
+            "kind": "assembly",
+            "completed": false,
+            "input": {
+              "tileX": [
+                0.12,
+                0.45,
+                0.78
+              ],
+              "tileY": [
+                0.84,
+                0.84,
+                0.84
+              ],
+              "settings": [],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 0,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-3",
+            "kind": "tune",
+            "completed": false,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [
+                3,
+                1
+              ],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 0,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          }
+        ],
+        "controls": [
+          {
+            "kind": "field",
+            "id": "field-0",
+            "value": "고객목록",
+            "x": 1297.806,
+            "y": 228.8194,
+            "enabled": false
+          },
+          {
+            "kind": "field",
+            "id": "field-1",
+            "value": "백업",
+            "x": 1297.806,
+            "y": 294.7194,
+            "enabled": false
+          },
+          {
+            "kind": "field",
+            "id": "field-2",
+            "value": "22:00",
+            "x": 1297.806,
+            "y": 360.6194,
+            "enabled": false
+          },
+          {
+            "kind": "button",
+            "id": "submit",
+            "label": "작업 결과 저장·확정",
+            "x": 1233.736,
+            "y": 485.0972,
+            "enabled": false
+          },
+          {
+            "kind": "button",
+            "id": "close",
+            "label": "닫기 · Esc",
+            "x": 1083.63,
+            "y": 583.9472,
+            "enabled": false
+          },
+          {
+            "kind": "button",
+            "id": "help",
+            "label": "도움",
+            "x": 1217.261,
+            "y": 583.9472,
+            "enabled": false
+          },
+          {
+            "kind": "button",
+            "id": "pause-work",
+            "label": "일시정지",
+            "x": 1365.536,
+            "y": 583.9472,
+            "enabled": false
+          }
+        ]
+      }
+    },
+    {
+      "name": "native_document_saved",
+      "pass": true,
+      "state": {
+        "schema_version": 3,
+        "buildId": "career-suite-test-v006",
+        "roomId": "PAN-060",
+        "ready": true,
+        "scenarioId": "career-net-431-experience",
+        "scenarioVersion": "v003",
+        "experienceId": "f3ca1bb9-2dcd-4f7e-8c5a-5e335eb140fc",
+        "runId": "run-354ec2be70734176a4b94fb1023baa7f",
+        "panel": 0,
+        "transition": false,
+        "reducedMotion": false,
+        "paused": false,
+        "ended": false,
+        "complete": false,
+        "activeMs": 59809.0020697564,
+        "feedback": "✓ 자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.\n닫기 → 케이블 트레이에서 업무 계속",
+        "camera": {
+          "position": [
+            -1.646481,
+            1.968744,
+            1.603916
+          ],
+          "rotation": [
+            0.08370177,
+            0.9147031,
+            -0.3063654,
+            0.2499051
+          ],
+          "fov": 42,
+          "rect": [
+            0.245,
+            0.16,
+            0.29,
+            0.64
+          ]
+        },
+        "visibleRenderers": 5,
+        "focusedControl": "",
+        "objects": [
+          {
+            "id": "object-1",
+            "name": "관리 단말",
+            "assetId": "AST-1212",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1212-007",
+            "nodeName": "AST-1212-007",
+            "step": 0,
+            "x": 741.4999,
+            "y": 342.9999,
+            "inFront": true,
+            "renderers": 5,
+            "visibleRenderers": 5,
+            "colliders": 5
+          },
+          {
+            "id": "object-2",
+            "name": "케이블 트레이",
+            "assetId": "AST-1211",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1211-006",
+            "nodeName": "AST-1211-006",
+            "step": 1,
+            "x": 690.5767,
+            "y": -186.7713,
+            "inFront": true,
+            "renderers": 9,
+            "visibleRenderers": 0,
+            "colliders": 9
+          },
+          {
+            "id": "object-3",
+            "name": "서버 랙",
+            "assetId": "AST-1210",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1210-002",
+            "nodeName": "AST-1210-002",
+            "step": 2,
+            "x": 505.0105,
+            "y": 69.51782,
+            "inFront": true,
+            "renderers": 22,
+            "visibleRenderers": 0,
+            "colliders": 22
+          }
+        ],
+        "surfaces": [
+          {
+            "id": "work-1",
+            "kind": "form",
+            "completed": true,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [],
+              "fields": [
+                "고객목록",
+                "백업",
+                "22:00"
+              ],
+              "observed": [],
+              "draftRevision": 3,
+              "savedRevision": 3,
+              "savedRequestRevision": 1,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": true,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-2",
+            "kind": "assembly",
+            "completed": false,
+            "input": {
+              "tileX": [
+                0.12,
+                0.45,
+                0.78
+              ],
+              "tileY": [
+                0.84,
+                0.84,
+                0.84
+              ],
+              "settings": [],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 0,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-3",
+            "kind": "tune",
+            "completed": false,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [
+                3,
+                1
+              ],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 0,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          }
+        ],
+        "controls": [
+          {
+            "kind": "field",
+            "id": "field-0",
+            "value": "고객목록",
+            "x": 1297.806,
+            "y": 228.8194,
+            "enabled": false
+          },
+          {
+            "kind": "field",
+            "id": "field-1",
+            "value": "백업",
+            "x": 1297.806,
+            "y": 294.7194,
+            "enabled": false
+          },
+          {
+            "kind": "field",
+            "id": "field-2",
+            "value": "22:00",
+            "x": 1297.806,
+            "y": 360.6194,
+            "enabled": false
+          },
+          {
+            "kind": "button",
+            "id": "submit",
+            "label": "저장된 결과",
+            "x": 1233.736,
+            "y": 485.0972,
+            "enabled": false
+          },
+          {
+            "kind": "button",
+            "id": "close",
+            "label": "닫기 · Esc",
+            "x": 1083.63,
+            "y": 583.9472,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "help",
+            "label": "도움",
+            "x": 1217.261,
+            "y": 583.9472,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "pause-work",
+            "label": "일시정지",
+            "x": 1365.536,
+            "y": 583.9472,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "camera_viewport_restore",
+      "pass": true,
+      "before": {
+        "position": [
+          -4.46354,
+          6.148975,
+          6.374595
+        ],
+        "rotation": [
+          0.09042397,
+          0.9095761,
+          -0.2867882,
+          0.2867882
+        ],
+        "fov": 40,
+        "rect": [
+          0,
+          0.08,
+          0.68,
+          0.79
+        ]
+      },
+      "after": {
+        "position": [
+          -4.46354,
+          6.148975,
+          6.374595
+        ],
+        "rotation": [
+          0.09042397,
+          0.9095761,
+          -0.2867882,
+          0.2867882
+        ],
+        "fov": 40,
+        "rect": [
+          0,
+          0.08,
+          0.68,
+          0.79
+        ]
+      }
+    },
+    {
+      "name": "actual_3D_cable_tray_selection",
+      "pass": false,
+      "state": {
+        "schema_version": 3,
+        "buildId": "career-suite-test-v006",
+        "roomId": "PAN-060",
+        "ready": true,
+        "scenarioId": "career-net-431-experience",
+        "scenarioVersion": "v003",
+        "experienceId": "f3ca1bb9-2dcd-4f7e-8c5a-5e335eb140fc",
+        "runId": "run-354ec2be70734176a4b94fb1023baa7f",
+        "panel": -1,
+        "transition": false,
+        "reducedMotion": false,
+        "paused": false,
+        "ended": false,
+        "complete": false,
+        "activeMs": 74855.0024963915,
+        "feedback": "✓ 자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.\n닫기 → 케이블 트레이에서 업무 계속",
+        "camera": {
+          "position": [
+            -4.46354,
+            6.148975,
+            6.374595
+          ],
+          "rotation": [
+            0.09042397,
+            0.9095761,
+            -0.2867882,
+            0.2867882
+          ],
+          "fov": 40,
+          "rect": [
+            0,
+            0.08,
+            0.68,
+            0.79
+          ]
+        },
+        "visibleRenderers": 166,
+        "focusedControl": "",
+        "objects": [
+          {
+            "id": "object-1",
+            "name": "관리 단말",
+            "assetId": "AST-1212",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1212-007",
+            "nodeName": "AST-1212-007",
+            "step": 0,
+            "x": 690.2955,
+            "y": 372.4147,
+            "inFront": true,
+            "renderers": 5,
+            "visibleRenderers": 5,
+            "colliders": 5
+          },
+          {
+            "id": "object-2",
+            "name": "케이블 트레이",
+            "assetId": "AST-1211",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1211-006",
+            "nodeName": "AST-1211-006",
+            "step": 1,
+            "x": 682.0346,
+            "y": 212.3622,
+            "inFront": true,
+            "renderers": 9,
+            "visibleRenderers": 9,
+            "colliders": 9
+          },
+          {
+            "id": "object-3",
+            "name": "서버 랙",
+            "assetId": "AST-1210",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1210-002",
+            "nodeName": "AST-1210-002",
+            "step": 2,
+            "x": 597.5665,
+            "y": 255.1604,
+            "inFront": true,
+            "renderers": 22,
+            "visibleRenderers": 22,
+            "colliders": 22
+          }
+        ],
+        "surfaces": [
+          {
+            "id": "work-1",
+            "kind": "form",
+            "completed": true,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [],
+              "fields": [
+                "고객목록",
+                "백업",
+                "22:00"
+              ],
+              "observed": [],
+              "draftRevision": 3,
+              "savedRevision": 3,
+              "savedRequestRevision": 1,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": true,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-2",
+            "kind": "assembly",
+            "completed": false,
+            "input": {
+              "tileX": [
+                0.12,
+                0.45,
+                0.78
+              ],
+              "tileY": [
+                0.84,
+                0.84,
+                0.84
+              ],
+              "settings": [],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 0,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-3",
+            "kind": "tune",
+            "completed": false,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [
+                3,
+                1
+              ],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 0,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          }
+        ],
+        "controls": [
+          {
+            "kind": "button",
+            "id": "open-0",
+            "label": "1 관리 단말 ✓",
+            "x": 1305.128,
+            "y": 320.3472,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "open-1",
+            "label": "2 케이블 트레이",
+            "x": 1305.128,
+            "y": 367.9417,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "open-2",
+            "label": "3 서버 랙",
+            "x": 1305.128,
+            "y": 415.5361,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "pause",
+            "label": "일시정지",
+            "x": 1230.075,
+            "y": 533.79,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "end",
+            "label": "체험 종료",
+            "x": 1372.858,
+            "y": 533.79,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "request-change",
+            "label": "마감 변경 요청 확인",
+            "x": 1305.128,
+            "y": 575.5267,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "cable_tray_pointer_visible_surface_retry",
+      "pass": false,
+      "note": "Renderer bounds centre hit empty or occluded area; second pointer targets visible cable tray surface.",
+      "state": {
+        "schema_version": 3,
+        "buildId": "career-suite-test-v006",
+        "roomId": "PAN-060",
+        "ready": true,
+        "scenarioId": "career-net-431-experience",
+        "scenarioVersion": "v003",
+        "experienceId": "f3ca1bb9-2dcd-4f7e-8c5a-5e335eb140fc",
+        "runId": "run-354ec2be70734176a4b94fb1023baa7f",
+        "panel": 2,
+        "transition": false,
+        "reducedMotion": false,
+        "paused": false,
+        "ended": false,
+        "complete": false,
+        "activeMs": 92554.0029294789,
+        "feedback": "✓ 자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.\n닫기 → 케이블 트레이에서 업무 계속",
+        "camera": {
+          "position": [
+            -0.542182,
+            2.903452,
+            1.590654
+          ],
+          "rotation": [
+            0.08053597,
+            0.9142951,
+            -0.2252924,
+            0.3268358
+          ],
+          "fov": 42,
+          "rect": [
+            0.245,
+            0.16,
+            0.29,
+            0.64
+          ]
+        },
+        "visibleRenderers": 22,
+        "focusedControl": "",
+        "objects": [
+          {
+            "id": "object-1",
+            "name": "관리 단말",
+            "assetId": "AST-1212",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1212-007",
+            "nodeName": "AST-1212-007",
+            "step": 0,
+            "x": 1351.999,
+            "y": 1179.274,
+            "inFront": true,
+            "renderers": 5,
+            "visibleRenderers": 0,
+            "colliders": 5
+          },
+          {
+            "id": "object-2",
+            "name": "케이블 트레이",
+            "assetId": "AST-1211",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1211-006",
+            "nodeName": "AST-1211-006",
+            "step": 1,
+            "x": 1013.725,
+            "y": 218.0325,
+            "inFront": true,
+            "renderers": 9,
+            "visibleRenderers": 0,
+            "colliders": 9
+          },
+          {
+            "id": "object-3",
+            "name": "서버 랙",
+            "assetId": "AST-1210",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1210-002",
+            "nodeName": "AST-1210-002",
+            "step": 2,
+            "x": 741.5,
+            "y": 343,
+            "inFront": true,
+            "renderers": 22,
+            "visibleRenderers": 22,
+            "colliders": 22
+          }
+        ],
+        "surfaces": [
+          {
+            "id": "work-1",
+            "kind": "form",
+            "completed": true,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [],
+              "fields": [
+                "고객목록",
+                "백업",
+                "22:00"
+              ],
+              "observed": [],
+              "draftRevision": 3,
+              "savedRevision": 3,
+              "savedRequestRevision": 1,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": true,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-2",
+            "kind": "assembly",
+            "completed": false,
+            "input": {
+              "tileX": [
+                0.12,
+                0.45,
+                0.78
+              ],
+              "tileY": [
+                0.84,
+                0.84,
+                0.84
+              ],
+              "settings": [],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 0,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-3",
+            "kind": "tune",
+            "completed": false,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [
+                3,
+                1
+              ],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 0,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          }
+        ],
+        "controls": [
+          {
+            "kind": "button",
+            "id": "submit",
+            "label": "작업 결과 저장·확정",
+            "x": 1233.736,
+            "y": 485.0972,
+            "enabled": false
+          },
+          {
+            "kind": "button",
+            "id": "close",
+            "label": "닫기 · Esc",
+            "x": 1083.63,
+            "y": 583.9472,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "help",
+            "label": "도움",
+            "x": 1217.261,
+            "y": 583.9472,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "pause-work",
+            "label": "일시정지",
+            "x": 1365.536,
+            "y": 583.9472,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "locked_later_object_has_no_submit",
+      "pass": true,
+      "state": {
+        "schema_version": 3,
+        "buildId": "career-suite-test-v006",
+        "roomId": "PAN-060",
+        "ready": true,
+        "scenarioId": "career-net-431-experience",
+        "scenarioVersion": "v003",
+        "experienceId": "f3ca1bb9-2dcd-4f7e-8c5a-5e335eb140fc",
+        "runId": "run-354ec2be70734176a4b94fb1023baa7f",
+        "panel": 2,
+        "transition": false,
+        "reducedMotion": false,
+        "paused": false,
+        "ended": false,
+        "complete": false,
+        "activeMs": 92554.0029294789,
+        "feedback": "✓ 자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.\n닫기 → 케이블 트레이에서 업무 계속",
+        "camera": {
+          "position": [
+            -0.542182,
+            2.903452,
+            1.590654
+          ],
+          "rotation": [
+            0.08053597,
+            0.9142951,
+            -0.2252924,
+            0.3268358
+          ],
+          "fov": 42,
+          "rect": [
+            0.245,
+            0.16,
+            0.29,
+            0.64
+          ]
+        },
+        "visibleRenderers": 22,
+        "focusedControl": "",
+        "objects": [
+          {
+            "id": "object-1",
+            "name": "관리 단말",
+            "assetId": "AST-1212",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1212-007",
+            "nodeName": "AST-1212-007",
+            "step": 0,
+            "x": 1351.999,
+            "y": 1179.274,
+            "inFront": true,
+            "renderers": 5,
+            "visibleRenderers": 0,
+            "colliders": 5
+          },
+          {
+            "id": "object-2",
+            "name": "케이블 트레이",
+            "assetId": "AST-1211",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1211-006",
+            "nodeName": "AST-1211-006",
+            "step": 1,
+            "x": 1013.725,
+            "y": 218.0325,
+            "inFront": true,
+            "renderers": 9,
+            "visibleRenderers": 0,
+            "colliders": 9
+          },
+          {
+            "id": "object-3",
+            "name": "서버 랙",
+            "assetId": "AST-1210",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1210-002",
+            "nodeName": "AST-1210-002",
+            "step": 2,
+            "x": 741.5,
+            "y": 343,
+            "inFront": true,
+            "renderers": 22,
+            "visibleRenderers": 22,
+            "colliders": 22
+          }
+        ],
+        "surfaces": [
+          {
+            "id": "work-1",
+            "kind": "form",
+            "completed": true,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [],
+              "fields": [
+                "고객목록",
+                "백업",
+                "22:00"
+              ],
+              "observed": [],
+              "draftRevision": 3,
+              "savedRevision": 3,
+              "savedRequestRevision": 1,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": true,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-2",
+            "kind": "assembly",
+            "completed": false,
+            "input": {
+              "tileX": [
+                0.12,
+                0.45,
+                0.78
+              ],
+              "tileY": [
+                0.84,
+                0.84,
+                0.84
+              ],
+              "settings": [],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 0,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-3",
+            "kind": "tune",
+            "completed": false,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [
+                3,
+                1
+              ],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 0,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          }
+        ],
+        "controls": [
+          {
+            "kind": "button",
+            "id": "submit",
+            "label": "작업 결과 저장·확정",
+            "x": 1233.736,
+            "y": 485.0972,
+            "enabled": false
+          },
+          {
+            "kind": "button",
+            "id": "close",
+            "label": "닫기 · Esc",
+            "x": 1083.63,
+            "y": 583.9472,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "help",
+            "label": "도움",
+            "x": 1217.261,
+            "y": 583.9472,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "pause-work",
+            "label": "일시정지",
+            "x": 1365.536,
+            "y": 583.9472,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "keyboard_equivalent_selects_cable_tray",
+      "pass": true,
+      "state": {
+        "schema_version": 3,
+        "buildId": "career-suite-test-v006",
+        "roomId": "PAN-060",
+        "ready": true,
+        "scenarioId": "career-net-431-experience",
+        "scenarioVersion": "v003",
+        "experienceId": "f3ca1bb9-2dcd-4f7e-8c5a-5e335eb140fc",
+        "runId": "run-354ec2be70734176a4b94fb1023baa7f",
+        "panel": 1,
+        "transition": false,
+        "reducedMotion": false,
+        "paused": false,
+        "ended": false,
+        "complete": false,
+        "activeMs": 103175.003233366,
+        "feedback": "✓ 자료를 확인하고 첫 결과를 저장했습니다. 다음 물건에서 이어서 작업하세요.\n닫기 → 케이블 트레이에서 업무 계속",
+        "camera": {
+          "position": [
+            -2.137526,
+            4.154163,
+            2.635812
+          ],
+          "rotation": [
+            0.0579829,
+            0.9398674,
+            -0.2029654,
+            0.2685002
+          ],
+          "fov": 42,
+          "rect": [
+            0.245,
+            0.16,
+            0.29,
+            0.64
+          ]
+        },
+        "visibleRenderers": 9,
+        "focusedControl": "",
+        "objects": [
+          {
+            "id": "object-1",
+            "name": "관리 단말",
+            "assetId": "AST-1212",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1212-007",
+            "nodeName": "AST-1212-007",
+            "step": 0,
+            "x": 768.6034,
+            "y": 665.0891,
+            "inFront": true,
+            "renderers": 5,
+            "visibleRenderers": 0,
+            "colliders": 5
+          },
+          {
+            "id": "object-2",
+            "name": "케이블 트레이",
+            "assetId": "AST-1211",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1211-006",
+            "nodeName": "AST-1211-006",
+            "step": 1,
+            "x": 741.5,
+            "y": 343,
+            "inFront": true,
+            "renderers": 9,
+            "visibleRenderers": 9,
+            "colliders": 9
+          },
+          {
+            "id": "object-3",
+            "name": "서버 랙",
+            "assetId": "AST-1210",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1210-002",
+            "nodeName": "AST-1210-002",
+            "step": 2,
+            "x": 622.1326,
+            "y": 406.2957,
+            "inFront": true,
+            "renderers": 22,
+            "visibleRenderers": 0,
+            "colliders": 22
+          }
+        ],
+        "surfaces": [
+          {
+            "id": "work-1",
+            "kind": "form",
+            "completed": true,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [],
+              "fields": [
+                "고객목록",
+                "백업",
+                "22:00"
+              ],
+              "observed": [],
+              "draftRevision": 3,
+              "savedRevision": 3,
+              "savedRequestRevision": 1,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": true,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-2",
+            "kind": "assembly",
+            "completed": false,
+            "input": {
+              "tileX": [
+                0.12,
+                0.45,
+                0.78
+              ],
+              "tileY": [
+                0.84,
+                0.84,
+                0.84
+              ],
+              "settings": [],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 0,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-3",
+            "kind": "tune",
+            "completed": false,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [
+                3,
+                1
+              ],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 0,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          }
+        ],
+        "controls": [
+          {
+            "kind": "target",
+            "id": "t0",
+            "label": "데이터",
+            "x": 1099.007,
+            "y": 282.1252,
+            "left": 1050.681,
+            "top": 258.3646,
+            "width": 96.65332,
+            "height": 47.52124
+          },
+          {
+            "kind": "target",
+            "id": "t1",
+            "label": "백업",
+            "x": 1231.906,
+            "y": 282.1252,
+            "left": 1183.579,
+            "top": 258.3646,
+            "width": 96.65332,
+            "height": 47.52124
+          },
+          {
+            "kind": "target",
+            "id": "t2",
+            "label": "관리",
+            "x": 1364.804,
+            "y": 282.1252,
+            "left": 1316.477,
+            "top": 258.3646,
+            "width": 96.65332,
+            "height": 47.52124
+          },
+          {
+            "kind": "button",
+            "id": "tile-0",
+            "label": "선택 1",
+            "x": 1095.346,
+            "y": 441.1639,
+            "enabled": true
+          },
+          {
+            "kind": "tile",
+            "id": "t0",
+            "label": "DB07",
+            "x": 1078.871,
+            "y": 390.128,
+            "normalizedX": 0.12,
+            "normalizedY": 0.84
+          },
+          {
+            "kind": "button",
+            "id": "tile-1",
+            "label": "선택 2",
+            "x": 1229.343,
+            "y": 441.1639,
+            "enabled": true
+          },
+          {
+            "kind": "tile",
+            "id": "t1",
+            "label": "BK02",
+            "x": 1211.769,
+            "y": 390.128,
+            "normalizedX": 0.45,
+            "normalizedY": 0.84
+          },
+          {
+            "kind": "button",
+            "id": "tile-2",
+            "label": "선택 3",
+            "x": 1363.339,
+            "y": 441.1639,
+            "enabled": true
+          },
+          {
+            "kind": "tile",
+            "id": "t2",
+            "label": "MG01",
+            "x": 1344.668,
+            "y": 390.128,
+            "normalizedX": 0.78,
+            "normalizedY": 0.84
+          },
+          {
+            "kind": "button",
+            "id": "submit",
+            "label": "작업 결과 저장·확정",
+            "x": 1233.736,
+            "y": 485.0972,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "close",
+            "label": "닫기 · Esc",
+            "x": 1083.63,
+            "y": 583.9472,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "help",
+            "label": "도움",
+            "x": 1217.261,
+            "y": 583.9472,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "pause-work",
+            "label": "일시정지",
+            "x": 1365.536,
+            "y": 583.9472,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "actual_pointer_drag_t0",
+      "pass": true,
+      "state": {
+        "schema_version": 3,
+        "buildId": "career-suite-test-v006",
+        "roomId": "PAN-060",
+        "ready": true,
+        "scenarioId": "career-net-431-experience",
+        "scenarioVersion": "v003",
+        "experienceId": "f3ca1bb9-2dcd-4f7e-8c5a-5e335eb140fc",
+        "runId": "run-354ec2be70734176a4b94fb1023baa7f",
+        "panel": 1,
+        "transition": false,
+        "reducedMotion": false,
+        "paused": false,
+        "ended": false,
+        "complete": false,
+        "activeMs": 114780.003597029,
+        "feedback": "DB07 → 데이터 배치. 저장 버튼으로 결과를 확인하세요.",
+        "camera": {
+          "position": [
+            -2.137526,
+            4.154163,
+            2.635812
+          ],
+          "rotation": [
+            0.0579829,
+            0.9398674,
+            -0.2029654,
+            0.2685002
+          ],
+          "fov": 42,
+          "rect": [
+            0.245,
+            0.16,
+            0.29,
+            0.64
+          ]
+        },
+        "visibleRenderers": 9,
+        "focusedControl": "",
+        "objects": [
+          {
+            "id": "object-1",
+            "name": "관리 단말",
+            "assetId": "AST-1212",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1212-007",
+            "nodeName": "AST-1212-007",
+            "step": 0,
+            "x": 768.6034,
+            "y": 665.0891,
+            "inFront": true,
+            "renderers": 5,
+            "visibleRenderers": 0,
+            "colliders": 5
+          },
+          {
+            "id": "object-2",
+            "name": "케이블 트레이",
+            "assetId": "AST-1211",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1211-006",
+            "nodeName": "AST-1211-006",
+            "step": 1,
+            "x": 741.5,
+            "y": 343,
+            "inFront": true,
+            "renderers": 9,
+            "visibleRenderers": 9,
+            "colliders": 9
+          },
+          {
+            "id": "object-3",
+            "name": "서버 랙",
+            "assetId": "AST-1210",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1210-002",
+            "nodeName": "AST-1210-002",
+            "step": 2,
+            "x": 622.1326,
+            "y": 406.2957,
+            "inFront": true,
+            "renderers": 22,
+            "visibleRenderers": 0,
+            "colliders": 22
+          }
+        ],
+        "surfaces": [
+          {
+            "id": "work-1",
+            "kind": "form",
+            "completed": true,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [],
+              "fields": [
+                "고객목록",
+                "백업",
+                "22:00"
+              ],
+              "observed": [],
+              "draftRevision": 3,
+              "savedRevision": 3,
+              "savedRequestRevision": 1,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": true,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-2",
+            "kind": "assembly",
+            "completed": false,
+            "input": {
+              "tileX": [
+                0.17,
+                0.45,
+                0.78
+              ],
+              "tileY": [
+                0.3400001,
+                0.84,
+                0.84
+              ],
+              "settings": [],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 9,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-3",
+            "kind": "tune",
+            "completed": false,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [
+                3,
+                1
+              ],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 0,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          }
+        ],
+        "controls": [
+          {
+            "kind": "target",
+            "id": "t0",
+            "label": "데이터",
+            "x": 1099.007,
+            "y": 282.1252,
+            "left": 1050.681,
+            "top": 258.3646,
+            "width": 96.65332,
+            "height": 47.52124
+          },
+          {
+            "kind": "target",
+            "id": "t1",
+            "label": "백업",
+            "x": 1231.906,
+            "y": 282.1252,
+            "left": 1183.579,
+            "top": 258.3646,
+            "width": 96.65332,
+            "height": 47.52124
+          },
+          {
+            "kind": "target",
+            "id": "t2",
+            "label": "관리",
+            "x": 1364.804,
+            "y": 282.1252,
+            "left": 1316.477,
+            "top": 258.3646,
+            "width": 96.65332,
+            "height": 47.52124
+          },
+          {
+            "kind": "button",
+            "id": "tile-0",
+            "label": "선택 1",
+            "x": 1095.346,
+            "y": 441.1639,
+            "enabled": true
+          },
+          {
+            "kind": "tile",
+            "id": "t0",
+            "label": "DB07",
+            "x": 1099.007,
+            "y": 282.1252,
+            "normalizedX": 0.17,
+            "normalizedY": 0.3400001
+          },
+          {
+            "kind": "button",
+            "id": "tile-1",
+            "label": "선택 2",
+            "x": 1229.343,
+            "y": 441.1639,
+            "enabled": true
+          },
+          {
+            "kind": "tile",
+            "id": "t1",
+            "label": "BK02",
+            "x": 1211.769,
+            "y": 390.128,
+            "normalizedX": 0.45,
+            "normalizedY": 0.84
+          },
+          {
+            "kind": "button",
+            "id": "tile-2",
+            "label": "선택 3",
+            "x": 1363.339,
+            "y": 441.1639,
+            "enabled": true
+          },
+          {
+            "kind": "tile",
+            "id": "t2",
+            "label": "MG01",
+            "x": 1344.668,
+            "y": 390.128,
+            "normalizedX": 0.78,
+            "normalizedY": 0.84
+          },
+          {
+            "kind": "button",
+            "id": "submit",
+            "label": "작업 결과 저장·확정",
+            "x": 1233.736,
+            "y": 485.0972,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "close",
+            "label": "닫기 · Esc",
+            "x": 1083.63,
+            "y": 583.9472,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "help",
+            "label": "도움",
+            "x": 1217.261,
+            "y": 583.9472,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "pause-work",
+            "label": "일시정지",
+            "x": 1365.536,
+            "y": 583.9472,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "actual_pointer_drag_t1",
+      "pass": true,
+      "state": {
+        "schema_version": 3,
+        "buildId": "career-suite-test-v006",
+        "roomId": "PAN-060",
+        "ready": true,
+        "scenarioId": "career-net-431-experience",
+        "scenarioVersion": "v003",
+        "experienceId": "f3ca1bb9-2dcd-4f7e-8c5a-5e335eb140fc",
+        "runId": "run-354ec2be70734176a4b94fb1023baa7f",
+        "panel": 1,
+        "transition": false,
+        "reducedMotion": false,
+        "paused": false,
+        "ended": false,
+        "complete": false,
+        "activeMs": 115546.00362014,
+        "feedback": "BK02 → 백업 배치. 저장 버튼으로 결과를 확인하세요.",
+        "camera": {
+          "position": [
+            -2.137526,
+            4.154163,
+            2.635812
+          ],
+          "rotation": [
+            0.0579829,
+            0.9398674,
+            -0.2029654,
+            0.2685002
+          ],
+          "fov": 42,
+          "rect": [
+            0.245,
+            0.16,
+            0.29,
+            0.64
+          ]
+        },
+        "visibleRenderers": 9,
+        "focusedControl": "",
+        "objects": [
+          {
+            "id": "object-1",
+            "name": "관리 단말",
+            "assetId": "AST-1212",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1212-007",
+            "nodeName": "AST-1212-007",
+            "step": 0,
+            "x": 768.6034,
+            "y": 665.0891,
+            "inFront": true,
+            "renderers": 5,
+            "visibleRenderers": 0,
+            "colliders": 5
+          },
+          {
+            "id": "object-2",
+            "name": "케이블 트레이",
+            "assetId": "AST-1211",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1211-006",
+            "nodeName": "AST-1211-006",
+            "step": 1,
+            "x": 741.5,
+            "y": 343,
+            "inFront": true,
+            "renderers": 9,
+            "visibleRenderers": 9,
+            "colliders": 9
+          },
+          {
+            "id": "object-3",
+            "name": "서버 랙",
+            "assetId": "AST-1210",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1210-002",
+            "nodeName": "AST-1210-002",
+            "step": 2,
+            "x": 622.1326,
+            "y": 406.2957,
+            "inFront": true,
+            "renderers": 22,
+            "visibleRenderers": 0,
+            "colliders": 22
+          }
+        ],
+        "surfaces": [
+          {
+            "id": "work-1",
+            "kind": "form",
+            "completed": true,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [],
+              "fields": [
+                "고객목록",
+                "백업",
+                "22:00"
+              ],
+              "observed": [],
+              "draftRevision": 3,
+              "savedRevision": 3,
+              "savedRequestRevision": 1,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": true,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-2",
+            "kind": "assembly",
+            "completed": false,
+            "input": {
+              "tileX": [
+                0.17,
+                0.5,
+                0.78
+              ],
+              "tileY": [
+                0.3400001,
+                0.3400001,
+                0.84
+              ],
+              "settings": [],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 18,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-3",
+            "kind": "tune",
+            "completed": false,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [
+                3,
+                1
+              ],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 0,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          }
+        ],
+        "controls": [
+          {
+            "kind": "target",
+            "id": "t0",
+            "label": "데이터",
+            "x": 1099.007,
+            "y": 282.1252,
+            "left": 1050.681,
+            "top": 258.3646,
+            "width": 96.65332,
+            "height": 47.52124
+          },
+          {
+            "kind": "target",
+            "id": "t1",
+            "label": "백업",
+            "x": 1231.906,
+            "y": 282.1252,
+            "left": 1183.579,
+            "top": 258.3646,
+            "width": 96.65332,
+            "height": 47.52124
+          },
+          {
+            "kind": "target",
+            "id": "t2",
+            "label": "관리",
+            "x": 1364.804,
+            "y": 282.1252,
+            "left": 1316.477,
+            "top": 258.3646,
+            "width": 96.65332,
+            "height": 47.52124
+          },
+          {
+            "kind": "button",
+            "id": "tile-0",
+            "label": "선택 1",
+            "x": 1095.346,
+            "y": 441.1639,
+            "enabled": true
+          },
+          {
+            "kind": "tile",
+            "id": "t0",
+            "label": "DB07",
+            "x": 1099.007,
+            "y": 282.1252,
+            "normalizedX": 0.17,
+            "normalizedY": 0.3400001
+          },
+          {
+            "kind": "button",
+            "id": "tile-1",
+            "label": "선택 2",
+            "x": 1229.343,
+            "y": 441.1639,
+            "enabled": true
+          },
+          {
+            "kind": "tile",
+            "id": "t1",
+            "label": "BK02",
+            "x": 1231.906,
+            "y": 282.1252,
+            "normalizedX": 0.5,
+            "normalizedY": 0.3400001
+          },
+          {
+            "kind": "button",
+            "id": "tile-2",
+            "label": "선택 3",
+            "x": 1363.339,
+            "y": 441.1639,
+            "enabled": true
+          },
+          {
+            "kind": "tile",
+            "id": "t2",
+            "label": "MG01",
+            "x": 1344.668,
+            "y": 390.128,
+            "normalizedX": 0.78,
+            "normalizedY": 0.84
+          },
+          {
+            "kind": "button",
+            "id": "submit",
+            "label": "작업 결과 저장·확정",
+            "x": 1233.736,
+            "y": 485.0972,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "close",
+            "label": "닫기 · Esc",
+            "x": 1083.63,
+            "y": 583.9472,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "help",
+            "label": "도움",
+            "x": 1217.261,
+            "y": 583.9472,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "pause-work",
+            "label": "일시정지",
+            "x": 1365.536,
+            "y": 583.9472,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "actual_pointer_drag_t2",
+      "pass": true,
+      "state": {
+        "schema_version": 3,
+        "buildId": "career-suite-test-v006",
+        "roomId": "PAN-060",
+        "ready": true,
+        "scenarioId": "career-net-431-experience",
+        "scenarioVersion": "v003",
+        "experienceId": "f3ca1bb9-2dcd-4f7e-8c5a-5e335eb140fc",
+        "runId": "run-354ec2be70734176a4b94fb1023baa7f",
+        "panel": 1,
+        "transition": false,
+        "reducedMotion": false,
+        "paused": false,
+        "ended": false,
+        "complete": false,
+        "activeMs": 116306.003628299,
+        "feedback": "MG01 → 관리 배치. 저장 버튼으로 결과를 확인하세요.",
+        "camera": {
+          "position": [
+            -2.137526,
+            4.154163,
+            2.635812
+          ],
+          "rotation": [
+            0.0579829,
+            0.9398674,
+            -0.2029654,
+            0.2685002
+          ],
+          "fov": 42,
+          "rect": [
+            0.245,
+            0.16,
+            0.29,
+            0.64
+          ]
+        },
+        "visibleRenderers": 9,
+        "focusedControl": "",
+        "objects": [
+          {
+            "id": "object-1",
+            "name": "관리 단말",
+            "assetId": "AST-1212",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1212-007",
+            "nodeName": "AST-1212-007",
+            "step": 0,
+            "x": 768.6034,
+            "y": 665.0891,
+            "inFront": true,
+            "renderers": 5,
+            "visibleRenderers": 0,
+            "colliders": 5
+          },
+          {
+            "id": "object-2",
+            "name": "케이블 트레이",
+            "assetId": "AST-1211",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1211-006",
+            "nodeName": "AST-1211-006",
+            "step": 1,
+            "x": 741.5,
+            "y": 343,
+            "inFront": true,
+            "renderers": 9,
+            "visibleRenderers": 9,
+            "colliders": 9
+          },
+          {
+            "id": "object-3",
+            "name": "서버 랙",
+            "assetId": "AST-1210",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1210-002",
+            "nodeName": "AST-1210-002",
+            "step": 2,
+            "x": 622.1326,
+            "y": 406.2957,
+            "inFront": true,
+            "renderers": 22,
+            "visibleRenderers": 0,
+            "colliders": 22
+          }
+        ],
+        "surfaces": [
+          {
+            "id": "work-1",
+            "kind": "form",
+            "completed": true,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [],
+              "fields": [
+                "고객목록",
+                "백업",
+                "22:00"
+              ],
+              "observed": [],
+              "draftRevision": 3,
+              "savedRevision": 3,
+              "savedRequestRevision": 1,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": true,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-2",
+            "kind": "assembly",
+            "completed": false,
+            "input": {
+              "tileX": [
+                0.17,
+                0.5,
+                0.83
+              ],
+              "tileY": [
+                0.3400001,
+                0.3400001,
+                0.3400001
+              ],
+              "settings": [],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 27,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-3",
+            "kind": "tune",
+            "completed": false,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [
+                3,
+                1
+              ],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 0,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          }
+        ],
+        "controls": [
+          {
+            "kind": "target",
+            "id": "t0",
+            "label": "데이터",
+            "x": 1099.007,
+            "y": 282.1252,
+            "left": 1050.681,
+            "top": 258.3646,
+            "width": 96.65332,
+            "height": 47.52124
+          },
+          {
+            "kind": "target",
+            "id": "t1",
+            "label": "백업",
+            "x": 1231.906,
+            "y": 282.1252,
+            "left": 1183.579,
+            "top": 258.3646,
+            "width": 96.65332,
+            "height": 47.52124
+          },
+          {
+            "kind": "target",
+            "id": "t2",
+            "label": "관리",
+            "x": 1364.804,
+            "y": 282.1252,
+            "left": 1316.477,
+            "top": 258.3646,
+            "width": 96.65332,
+            "height": 47.52124
+          },
+          {
+            "kind": "button",
+            "id": "tile-0",
+            "label": "선택 1",
+            "x": 1095.346,
+            "y": 441.1639,
+            "enabled": true
+          },
+          {
+            "kind": "tile",
+            "id": "t0",
+            "label": "DB07",
+            "x": 1099.007,
+            "y": 282.1252,
+            "normalizedX": 0.17,
+            "normalizedY": 0.3400001
+          },
+          {
+            "kind": "button",
+            "id": "tile-1",
+            "label": "선택 2",
+            "x": 1229.343,
+            "y": 441.1639,
+            "enabled": true
+          },
+          {
+            "kind": "tile",
+            "id": "t1",
+            "label": "BK02",
+            "x": 1231.906,
+            "y": 282.1252,
+            "normalizedX": 0.5,
+            "normalizedY": 0.3400001
+          },
+          {
+            "kind": "button",
+            "id": "tile-2",
+            "label": "선택 3",
+            "x": 1363.339,
+            "y": 441.1639,
+            "enabled": true
+          },
+          {
+            "kind": "tile",
+            "id": "t2",
+            "label": "MG01",
+            "x": 1364.804,
+            "y": 282.1252,
+            "normalizedX": 0.83,
+            "normalizedY": 0.3400001
+          },
+          {
+            "kind": "button",
+            "id": "submit",
+            "label": "작업 결과 저장·확정",
+            "x": 1233.736,
+            "y": 485.0972,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "close",
+            "label": "닫기 · Esc",
+            "x": 1083.63,
+            "y": 583.9472,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "help",
+            "label": "도움",
+            "x": 1217.261,
+            "y": 583.9472,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "pause-work",
+            "label": "일시정지",
+            "x": 1365.536,
+            "y": 583.9472,
+            "enabled": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "assembly_cards_saved",
+      "pass": true,
+      "state": {
+        "schema_version": 3,
+        "buildId": "career-suite-test-v006",
+        "roomId": "PAN-060",
+        "ready": true,
+        "scenarioId": "career-net-431-experience",
+        "scenarioVersion": "v003",
+        "experienceId": "f3ca1bb9-2dcd-4f7e-8c5a-5e335eb140fc",
+        "runId": "run-354ec2be70734176a4b94fb1023baa7f",
+        "panel": 1,
+        "transition": false,
+        "reducedMotion": false,
+        "paused": false,
+        "ended": false,
+        "complete": false,
+        "activeMs": 117347.003650852,
+        "feedback": "✓ 중간 결과가 작업면에 반영됐습니다. 마지막 물건에서 인계 내용을 확인하세요.\n닫기 → 서버 랙에서 업무 계속",
+        "camera": {
+          "position": [
+            -2.137526,
+            4.154163,
+            2.635812
+          ],
+          "rotation": [
+            0.0579829,
+            0.9398674,
+            -0.2029654,
+            0.2685002
+          ],
+          "fov": 42,
+          "rect": [
+            0.245,
+            0.16,
+            0.29,
+            0.64
+          ]
+        },
+        "visibleRenderers": 9,
+        "focusedControl": "",
+        "objects": [
+          {
+            "id": "object-1",
+            "name": "관리 단말",
+            "assetId": "AST-1212",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1212-007",
+            "nodeName": "AST-1212-007",
+            "step": 0,
+            "x": 768.6034,
+            "y": 665.0891,
+            "inFront": true,
+            "renderers": 5,
+            "visibleRenderers": 0,
+            "colliders": 5
+          },
+          {
+            "id": "object-2",
+            "name": "케이블 트레이",
+            "assetId": "AST-1211",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1211-006",
+            "nodeName": "AST-1211-006",
+            "step": 1,
+            "x": 741.5,
+            "y": 343,
+            "inFront": true,
+            "renderers": 9,
+            "visibleRenderers": 9,
+            "colliders": 9
+          },
+          {
+            "id": "object-3",
+            "name": "서버 랙",
+            "assetId": "AST-1210",
+            "assetVersion": "v001",
+            "instanceId": "Room_PAN-060/AST-1210-002",
+            "nodeName": "AST-1210-002",
+            "step": 2,
+            "x": 622.1326,
+            "y": 406.2957,
+            "inFront": true,
+            "renderers": 22,
+            "visibleRenderers": 0,
+            "colliders": 22
+          }
+        ],
+        "surfaces": [
+          {
+            "id": "work-1",
+            "kind": "form",
+            "completed": true,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [],
+              "fields": [
+                "고객목록",
+                "백업",
+                "22:00"
+              ],
+              "observed": [],
+              "draftRevision": 3,
+              "savedRevision": 3,
+              "savedRequestRevision": 1,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": true,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-2",
+            "kind": "assembly",
+            "completed": true,
+            "input": {
+              "tileX": [
+                0.17,
+                0.5,
+                0.83
+              ],
+              "tileY": [
+                0.3400001,
+                0.3400001,
+                0.3400001
+              ],
+              "settings": [],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 27,
+              "savedRevision": 27,
+              "savedRequestRevision": 1,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": true,
+              "running": false,
+              "artifact": null
+            }
+          },
+          {
+            "id": "work-3",
+            "kind": "tune",
+            "completed": false,
+            "input": {
+              "tileX": [],
+              "tileY": [],
+              "settings": [
+                3,
+                1
+              ],
+              "fields": [],
+              "observed": [],
+              "draftRevision": 0,
+              "savedRevision": 0,
+              "savedRequestRevision": 0,
+              "validationErrors": [],
+              "elapsed": 0,
+              "completed": false,
+              "running": false,
+              "artifact": null
+            }
+          }
+        ],
+        "controls": [
+          {
+            "kind": "target",
+            "id": "t0",
+            "label": "데이터",
+            "x": 1099.007,
+            "y": 282.1252,
+            "left": 1050.681,
+            "top": 258.3646,
+            "width": 96.65332,
+            "height": 47.52124
+          },
+          {
+            "kind": "target",
+            "id": "t1",
+            "label": "백업",
+            "x": 1231.906,
+            "y": 282.1252,
+            "left": 1183.579,
+            "top": 258.3646,
+            "width": 96.65332,
+            "height": 47.52124
+          },
+          {
+            "kind": "target",
+            "id": "t2",
+            "label": "관리",
+            "x": 1364.804,
+            "y": 282.1252,
+            "left": 1316.477,
+            "top": 258.3646,
+            "width": 96.65332,
+            "height": 47.52124
+          },
+          {
+            "kind": "button",
+            "id": "tile-0",
+            "label": "선택 1",
+            "x": 1095.346,
+            "y": 441.1639,
+            "enabled": false
+          },
+          {
+            "kind": "tile",
+            "id": "t0",
+            "label": "DB07",
+            "x": 1099.007,
+            "y": 282.1252,
+            "normalizedX": 0.17,
+            "normalizedY": 0.3400001
+          },
+          {
+            "kind": "button",
+            "id": "tile-1",
+            "label": "선택 2",
+            "x": 1229.343,
+            "y": 441.1639,
+            "enabled": false
+          },
+          {
+            "kind": "tile",
+            "id": "t1",
+            "label": "BK02",
+            "x": 1231.906,
+            "y": 282.1252,
+            "normalizedX": 0.5,
+            "normalizedY": 0.3400001
+          },
+          {
+            "kind": "button",
+            "id": "tile-2",
+            "label": "선택 3",
+            "x": 1363.339,
+            "y": 441.1639,
+            "enabled": false
+          },
+          {
+            "kind": "tile",
+            "id": "t2",
+            "label": "MG01",
+            "x": 1364.804,
+            "y": 282.1252,
+            "normalizedX": 0.83,
+            "normalizedY": 0.3400001
+          },
+          {
+            "kind": "button",
+            "id": "submit",
+            "label": "저장된 결과",
+            "x": 1233.736,
+            "y": 485.0972,
+            "enabled": false
+          },
+          {
+            "kind": "button",
+            "id": "close",
+            "label": "닫기 · Esc",
+            "x": 1083.63,
+            "y": 583.9472,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "help",
+            "label": "도움",
+            "x": 1217.261,
+            "y": 583.9472,
+            "enabled": true
+          },
+          {
+            "kind": "button",
+            "id": "pause-work",
+            "label": "일시정지",
+            "x": 1365.536,
+            "y": 583.9472,
+            "enabled": true
+          }
+        ]
+      }
+    }
+  ]
+}

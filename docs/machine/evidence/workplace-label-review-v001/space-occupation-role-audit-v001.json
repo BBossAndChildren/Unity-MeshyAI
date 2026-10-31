@@ -1,0 +1,4920 @@
+{
+  "schema_version": 3,
+  "recorded_at": "2026-10-31T11:43:32.495141+09:00",
+  "scope": "BoundednamefieldsandexplicitIDreferencesacross71spaces/552occupations; no fulltextstringkeywordscan ornewexternalfactverification.",
+  "status": "pass_id_reference_integrity",
+  "sources": [
+    {
+      "path": "docs/machine/catalog/panorama-prompts-v002.json",
+      "sha256": "a474e5194f528f2936533cdf4655d58ce5660f1e578ef999d8964f32bfdf9022"
+    },
+    {
+      "path": "docs/machine/catalog/panoramas.json",
+      "sha256": "28606271875bdca22967418c8e9c0844d77e500d857a8dd207a94e4d36d33685"
+    },
+    {
+      "path": "docs/machine/catalog/occupation-workplace-candidates.json",
+      "sha256": "1fbb52eb90160a9c6ad9b72f9a51691093b9fe80a1aed106400228d7dc894155"
+    },
+    {
+      "path": "docs/machine/catalog/career-experience-scenarios-v002.json",
+      "sha256": "5ed924efad538c6ff7de34b944514f1697e391be921a165f702c9157666ef148"
+    },
+    {
+      "path": "docs/machine/catalog/occupation-panorama-matches-v002.json",
+      "sha256": "a1a87c64ca52adfa2ec300fdda5d07173ba194c5dc58974878ae592a1aaea33c"
+    },
+    {
+      "path": "docs/machine/catalog/panorama-career-experience-layouts-v002.json",
+      "sha256": "6865187642831c3fdaebe6d8b61d622310d651603d5d562d672634359a8e64fc"
+    },
+    {
+      "path": "docs/machine/catalog/workplace-production-v001.json",
+      "sha256": "32490082c8aa4de16c6ac45e352d1d2e44b406c6fc9962d5b22da0ae658dd36d"
+    },
+    {
+      "path": "docs/machine/catalog/workplace-contexts.json",
+      "sha256": "ba52aa71fecbca0722c80492c4dd7215ebb1a99bad4cd0d2b9e83e358e6f6fb7"
+    },
+    {
+      "path": "unity/projects/OfficeAssistant-v001/Assets/Resources/workplace-registry.json",
+      "sha256": "711e39d340f7cf707d7236876937b78d4e88072a0864d263eb463be984de87ee"
+    }
+  ],
+  "checks": {
+    "spaces": 71,
+    "unique_panorama_pairs": 71,
+    "runtime_rooms": 71,
+    "unique_runtime_ids": 71,
+    "prompts": 71,
+    "unique_prompt_pairs": 71,
+    "canonical_occupations": 552,
+    "unique_occupation_ids": 552,
+    "duplicate_occupation_ids": [],
+    "baseline_scenarios": 552,
+    "unique_scenario_ids": 552,
+    "duplicate_scenario_ids": [],
+    "unique_scenario_occupation_ids": 552,
+    "bounded_reference_issues": 0,
+    "role_mixed_labels_by_layer": {
+      "prompts": 3,
+      "images": 3,
+      "production": 3,
+      "layout": 3
+    },
+    "version_note_labels_not_role": 5,
+    "exact_canonical_role_name_matches": {
+      "성직자": [
+        "career-net-384"
+      ],
+      "스님": [],
+      "목사": [],
+      "신부": [],
+      "신부님": [],
+      "승려": []
+    },
+    "needs_subject_selection_count": 1
+  },
+  "issues": [],
+  "name_separator_observations": [
+    {
+      "layer": "prompts",
+      "id": "PRM-064",
+      "name": "기독교(개신교) 예배실 — 목사",
+      "suffix": "목사",
+      "classification": "explicit_specialization_role"
+    },
+    {
+      "layer": "prompts",
+      "id": "PRM-070",
+      "name": "불교 법당 — 스님",
+      "suffix": "스님",
+      "classification": "explicit_specialization_role"
+    },
+    {
+      "layer": "prompts",
+      "id": "PRM-071",
+      "name": "천주교 성당 — 신부님",
+      "suffix": "신부님",
+      "classification": "explicit_specialization_role"
+    },
+    {
+      "layer": "images",
+      "id": "PAN-001",
+      "name": "A 일반 사무실 — 시안 v2",
+      "suffix": "시안 v2",
+      "classification": "version_or_other_note_not_a_role"
+    },
+    {
+      "layer": "images",
+      "id": "PAN-002",
+      "name": "B 협업 사무실 — 시안 v2",
+      "suffix": "시안 v2",
+      "classification": "version_or_other_note_not_a_role"
+    },
+    {
+      "layer": "images",
+      "id": "PAN-003",
+      "name": "C 행정 사무실 — 시안 v2",
+      "suffix": "시안 v2",
+      "classification": "version_or_other_note_not_a_role"
+    },
+    {
+      "layer": "images",
+      "id": "PAN-004",
+      "name": "D 민원 접수실 — 시안 v2",
+      "suffix": "시안 v2",
+      "classification": "version_or_other_note_not_a_role"
+    },
+    {
+      "layer": "images",
+      "id": "PAN-005",
+      "name": "E 전문 상담실 — 시안 v2",
+      "suffix": "시안 v2",
+      "classification": "version_or_other_note_not_a_role"
+    },
+    {
+      "layer": "images",
+      "id": "PAN-064",
+      "name": "기독교(개신교) 예배실 — 목사",
+      "suffix": "목사",
+      "classification": "explicit_specialization_role"
+    },
+    {
+      "layer": "images",
+      "id": "PAN-070",
+      "name": "불교 법당 — 스님",
+      "suffix": "스님",
+      "classification": "explicit_specialization_role"
+    },
+    {
+      "layer": "images",
+      "id": "PAN-071",
+      "name": "천주교 성당 — 신부님",
+      "suffix": "신부님",
+      "classification": "explicit_specialization_role"
+    },
+    {
+      "layer": "production",
+      "id": "PAN-064",
+      "name": "기독교(개신교) 예배실 — 목사",
+      "suffix": "목사",
+      "classification": "explicit_specialization_role"
+    },
+    {
+      "layer": "production",
+      "id": "PAN-070",
+      "name": "불교 법당 — 스님",
+      "suffix": "스님",
+      "classification": "explicit_specialization_role"
+    },
+    {
+      "layer": "production",
+      "id": "PAN-071",
+      "name": "천주교 성당 — 신부님",
+      "suffix": "신부님",
+      "classification": "explicit_specialization_role"
+    },
+    {
+      "layer": "layout",
+      "id": "PAN-064",
+      "name": "기독교(개신교) 예배실 — 목사",
+      "suffix": "목사",
+      "classification": "explicit_specialization_role"
+    },
+    {
+      "layer": "layout",
+      "id": "PAN-070",
+      "name": "불교 법당 — 스님",
+      "suffix": "스님",
+      "classification": "explicit_specialization_role"
+    },
+    {
+      "layer": "layout",
+      "id": "PAN-071",
+      "name": "천주교 성당 — 신부님",
+      "suffix": "신부님",
+      "classification": "explicit_specialization_role"
+    }
+  ],
+  "clergy_scenario": {
+    "scenario_id": "career-net-384-experience",
+    "version": "v001",
+    "occupation_id": "career-net-384",
+    "occupation_name": "성직자",
+    "planning_status": "pending_user_approval",
+    "selection_status": "needs_subject_selection",
+    "selected_scene_option": null,
+    "implementation_status": "not_implemented",
+    "primary_preview_panorama_ref": {
+      "catalog": "panoramas",
+      "image_id": "PAN-064",
+      "version": "v001"
+    },
+    "primary_preview_is_selected": false,
+    "options": [
+      {
+        "name": "기독교(개신교) 예배실 — 목사",
+        "prompt_ref": {
+          "catalog": "panorama-prompts-v002",
+          "prompt_id": "PRM-064",
+          "version": "v002"
+        },
+        "panorama_ref": {
+          "catalog": "panoramas",
+          "image_id": "PAN-064",
+          "version": "v001"
+        },
+        "has_option_id": false
+      },
+      {
+        "name": "불교 법당 — 스님",
+        "prompt_ref": {
+          "catalog": "panorama-prompts-v002",
+          "prompt_id": "PRM-070",
+          "version": "v001"
+        },
+        "panorama_ref": {
+          "catalog": "panoramas",
+          "image_id": "PAN-070",
+          "version": "v001"
+        },
+        "has_option_id": false
+      },
+      {
+        "name": "천주교 성당 — 신부님",
+        "prompt_ref": {
+          "catalog": "panorama-prompts-v002",
+          "prompt_id": "PRM-071",
+          "version": "v001"
+        },
+        "panorama_ref": {
+          "catalog": "panoramas",
+          "image_id": "PAN-071",
+          "version": "v001"
+        },
+        "has_option_id": false
+      }
+    ]
+  },
+  "spaces": [
+    {
+      "panorama_id": "PAN-001",
+      "image_version": "v001",
+      "image_historical_name": "A 일반 사무실 — 시안 v2",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-001",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "explicit_prompt_existing_panorama_reverse_ref",
+      "prompt_historical_name": "공용 업무 사무실",
+      "runtime_name_at_read": "공용 업무 사무실",
+      "production_name": "공용 업무 사무실",
+      "layout_name": "공용 업무 사무실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-203-experience",
+          "version": "v001",
+          "occupation_id": "career-net-203",
+          "occupation_name": "경제학연구원"
+        },
+        {
+          "scenario_id": "career-net-208-experience",
+          "version": "v001",
+          "occupation_id": "career-net-208",
+          "occupation_name": "국제무역사무원"
+        },
+        {
+          "scenario_id": "career-net-10118-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10118",
+          "occupation_name": "데이터 라벨러"
+        },
+        {
+          "scenario_id": "career-net-10051-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10051",
+          "occupation_name": "데이터마이너"
+        },
+        {
+          "scenario_id": "career-net-10076-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10076",
+          "occupation_name": "모바일앱개발자"
+        },
+        {
+          "scenario_id": "career-net-252-experience",
+          "version": "v001",
+          "occupation_id": "career-net-252",
+          "occupation_name": "법률사무원"
+        },
+        {
+          "scenario_id": "career-net-1432-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1432",
+          "occupation_name": "베타테스터"
+        },
+        {
+          "scenario_id": "career-net-10029-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10029",
+          "occupation_name": "블록체인 전문가"
+        },
+        {
+          "scenario_id": "career-net-10032-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10032",
+          "occupation_name": "빅 데이터 전문가"
+        },
+        {
+          "scenario_id": "career-net-253-office-documents",
+          "version": "v001",
+          "occupation_id": "career-net-253",
+          "occupation_name": "사무보조원"
+        },
+        {
+          "scenario_id": "career-net-10034-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10034",
+          "occupation_name": "사이버 평판 관리자"
+        },
+        {
+          "scenario_id": "career-net-462-experience",
+          "version": "v001",
+          "occupation_id": "career-net-462",
+          "occupation_name": "사이버교육운영자"
+        },
+        {
+          "scenario_id": "career-net-459-experience",
+          "version": "v001",
+          "occupation_id": "career-net-459",
+          "occupation_name": "속기사"
+        },
+        {
+          "scenario_id": "career-net-17-experience",
+          "version": "v001",
+          "occupation_id": "career-net-17",
+          "occupation_name": "수학연구원"
+        },
+        {
+          "scenario_id": "career-net-834-experience",
+          "version": "v001",
+          "occupation_id": "career-net-834",
+          "occupation_name": "시스템소프트웨어개발자"
+        },
+        {
+          "scenario_id": "career-net-230-experience",
+          "version": "v001",
+          "occupation_id": "career-net-230",
+          "occupation_name": "시장 및 여론조사전문가"
+        },
+        {
+          "scenario_id": "career-net-98-experience",
+          "version": "v001",
+          "occupation_id": "career-net-98",
+          "occupation_name": "신경회로망연구원"
+        },
+        {
+          "scenario_id": "career-net-20-experience",
+          "version": "v001",
+          "occupation_id": "career-net-20",
+          "occupation_name": "심리학연구원"
+        },
+        {
+          "scenario_id": "career-net-10110-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10110",
+          "occupation_name": "양자 컴퓨팅 기술자"
+        },
+        {
+          "scenario_id": "career-net-10052-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10052",
+          "occupation_name": "웹접근성컨설턴트"
+        },
+        {
+          "scenario_id": "career-net-1096-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1096",
+          "occupation_name": "웹프로듀서"
+        },
+        {
+          "scenario_id": "career-net-467-experience",
+          "version": "v001",
+          "occupation_id": "career-net-467",
+          "occupation_name": "의료정보시스템개발자"
+        },
+        {
+          "scenario_id": "career-net-10117-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10117",
+          "occupation_name": "인공지능 엔지니어"
+        },
+        {
+          "scenario_id": "career-net-378-experience",
+          "version": "v001",
+          "occupation_id": "career-net-378",
+          "occupation_name": "전문비서"
+        },
+        {
+          "scenario_id": "career-net-452-experience",
+          "version": "v001",
+          "occupation_id": "career-net-452",
+          "occupation_name": "정보중개인"
+        },
+        {
+          "scenario_id": "career-net-269-experience",
+          "version": "v001",
+          "occupation_id": "career-net-269",
+          "occupation_name": "정치학연구원"
+        },
+        {
+          "scenario_id": "career-net-926-experience",
+          "version": "v001",
+          "occupation_id": "career-net-926",
+          "occupation_name": "출판편집자"
+        },
+        {
+          "scenario_id": "career-net-258-experience",
+          "version": "v001",
+          "occupation_id": "career-net-258",
+          "occupation_name": "회계사무원"
+        },
+        {
+          "scenario_id": "career-net-1093-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1093",
+          "occupation_name": "가상현실전문가"
+        },
+        {
+          "scenario_id": "career-net-933-experience",
+          "version": "v001",
+          "occupation_id": "career-net-933",
+          "occupation_name": "사회학연구원"
+        },
+        {
+          "scenario_id": "career-net-10066-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10066",
+          "occupation_name": "스포츠기록분석연구원"
+        },
+        {
+          "scenario_id": "career-net-272-experience",
+          "version": "v001",
+          "occupation_id": "career-net-272",
+          "occupation_name": "언어학연구원"
+        },
+        {
+          "scenario_id": "career-net-273-experience",
+          "version": "v001",
+          "occupation_id": "career-net-273",
+          "occupation_name": "역사학연구원"
+        },
+        {
+          "scenario_id": "career-net-1104-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1104",
+          "occupation_name": "철학연구원"
+        },
+        {
+          "scenario_id": "career-net-36-experience",
+          "version": "v001",
+          "occupation_id": "career-net-36",
+          "occupation_name": "통계학연구원"
+        },
+        {
+          "scenario_id": "career-net-957-experience",
+          "version": "v001",
+          "occupation_id": "career-net-957",
+          "occupation_name": "평론가"
+        },
+        {
+          "scenario_id": "career-net-260-experience",
+          "version": "v001",
+          "occupation_id": "career-net-260",
+          "occupation_name": "구성작가"
+        },
+        {
+          "scenario_id": "career-net-261-experience",
+          "version": "v001",
+          "occupation_id": "career-net-261",
+          "occupation_name": "극작가"
+        },
+        {
+          "scenario_id": "career-net-266-experience",
+          "version": "v001",
+          "occupation_id": "career-net-266",
+          "occupation_name": "드라마작가"
+        },
+        {
+          "scenario_id": "career-net-973-experience",
+          "version": "v001",
+          "occupation_id": "career-net-973",
+          "occupation_name": "소설가"
+        },
+        {
+          "scenario_id": "career-net-968-experience",
+          "version": "v001",
+          "occupation_id": "career-net-968",
+          "occupation_name": "시인"
+        },
+        {
+          "scenario_id": "career-net-914-experience",
+          "version": "v001",
+          "occupation_id": "career-net-914",
+          "occupation_name": "영화시나리오작가"
+        },
+        {
+          "scenario_id": "career-net-1441-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1441",
+          "occupation_name": "작가"
+        },
+        {
+          "scenario_id": "career-net-457-experience",
+          "version": "v001",
+          "occupation_id": "career-net-457",
+          "occupation_name": "컴퓨터게임시나리오작가"
+        },
+        {
+          "scenario_id": "career-net-262-experience",
+          "version": "v001",
+          "occupation_id": "career-net-262",
+          "occupation_name": "기자"
+        },
+        {
+          "scenario_id": "career-net-1097-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1097",
+          "occupation_name": "프로게이머"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-002",
+      "image_version": "v001",
+      "image_historical_name": "B 협업 사무실 — 시안 v2",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-002",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "explicit_prompt_existing_panorama_reverse_ref",
+      "prompt_historical_name": "협업·기획 사무실",
+      "runtime_name_at_read": "협업·기획 사무실",
+      "production_name": "협업·기획 사무실",
+      "layout_name": "협업·기획 사무실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-10077-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10077",
+          "occupation_name": "SNS 마케터"
+        },
+        {
+          "scenario_id": "career-net-10043-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10043",
+          "occupation_name": "개인브랜드매니저"
+        },
+        {
+          "scenario_id": "career-net-923-experience",
+          "version": "v001",
+          "occupation_id": "career-net-923",
+          "occupation_name": "게임기획자"
+        },
+        {
+          "scenario_id": "career-net-10080-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10080",
+          "occupation_name": "공정무역전문가"
+        },
+        {
+          "scenario_id": "career-net-232-experience",
+          "version": "v001",
+          "occupation_id": "career-net-232",
+          "occupation_name": "광고 및 홍보전문가"
+        },
+        {
+          "scenario_id": "career-net-283-experience",
+          "version": "v001",
+          "occupation_id": "career-net-283",
+          "occupation_name": "광고기획자"
+        },
+        {
+          "scenario_id": "career-net-10078-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10078",
+          "occupation_name": "국제개발협력전문가"
+        },
+        {
+          "scenario_id": "career-net-209-experience",
+          "version": "v001",
+          "occupation_id": "career-net-209",
+          "occupation_name": "국제회의전문가"
+        },
+        {
+          "scenario_id": "career-net-247-experience",
+          "version": "v001",
+          "occupation_id": "career-net-247",
+          "occupation_name": "네이미스트"
+        },
+        {
+          "scenario_id": "career-net-10004-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10004",
+          "occupation_name": "도시 재생 전문가"
+        },
+        {
+          "scenario_id": "career-net-1068-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1068",
+          "occupation_name": "마케팅전문가"
+        },
+        {
+          "scenario_id": "career-net-10023-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10023",
+          "occupation_name": "문화 콘텐츠 전문가"
+        },
+        {
+          "scenario_id": "career-net-1088-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1088",
+          "occupation_name": "스포츠에이전트"
+        },
+        {
+          "scenario_id": "career-net-917-experience",
+          "version": "v001",
+          "occupation_id": "career-net-917",
+          "occupation_name": "음반기획자"
+        },
+        {
+          "scenario_id": "career-net-338-experience",
+          "version": "v001",
+          "occupation_id": "career-net-338",
+          "occupation_name": "출판물기획전문가"
+        },
+        {
+          "scenario_id": "career-net-278-experience",
+          "version": "v001",
+          "occupation_id": "career-net-278",
+          "occupation_name": "카피라이터"
+        },
+        {
+          "scenario_id": "career-net-242-experience",
+          "version": "v001",
+          "occupation_id": "career-net-242",
+          "occupation_name": "텔레마케터"
+        },
+        {
+          "scenario_id": "career-net-951-experience",
+          "version": "v001",
+          "occupation_id": "career-net-951",
+          "occupation_name": "행사기획자"
+        },
+        {
+          "scenario_id": "career-net-10038-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10038",
+          "occupation_name": "로봇 윤리학자"
+        },
+        {
+          "scenario_id": "career-net-10005-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10005",
+          "occupation_name": "스마트 도시 전문가"
+        },
+        {
+          "scenario_id": "career-net-920-experience",
+          "version": "v001",
+          "occupation_id": "career-net-920",
+          "occupation_name": "애니메이션기획자"
+        },
+        {
+          "scenario_id": "career-net-321-experience",
+          "version": "v001",
+          "occupation_id": "career-net-321",
+          "occupation_name": "연예인매니저"
+        },
+        {
+          "scenario_id": "career-net-323-experience",
+          "version": "v001",
+          "occupation_id": "career-net-323",
+          "occupation_name": "영화기획자"
+        },
+        {
+          "scenario_id": "career-net-1439-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1439",
+          "occupation_name": "캐스팅디렉터"
+        },
+        {
+          "scenario_id": "career-net-427-experience",
+          "version": "v001",
+          "occupation_id": "career-net-427",
+          "occupation_name": "웨딩플래너"
+        },
+        {
+          "scenario_id": "career-net-1276-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1276",
+          "occupation_name": "파티플래너"
+        },
+        {
+          "scenario_id": "career-net-415-experience",
+          "version": "v001",
+          "occupation_id": "career-net-415",
+          "occupation_name": "프로바둑기사"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-003",
+      "image_version": "v001",
+      "image_historical_name": "C 행정 사무실 — 시안 v2",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-003",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "explicit_prompt_existing_panorama_reverse_ref",
+      "prompt_historical_name": "행정·문서 처리 사무실",
+      "runtime_name_at_read": "행정·문서 처리 사무실",
+      "production_name": "행정·문서 처리 사무실",
+      "layout_name": "행정·문서 처리 사무실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-1061-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1061",
+          "occupation_name": "국회의원"
+        },
+        {
+          "scenario_id": "career-net-238-experience",
+          "version": "v001",
+          "occupation_id": "career-net-238",
+          "occupation_name": "기업고위임원"
+        },
+        {
+          "scenario_id": "career-net-362-experience",
+          "version": "v001",
+          "occupation_id": "career-net-362",
+          "occupation_name": "일반공무원"
+        },
+        {
+          "scenario_id": "career-net-1278-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1278",
+          "occupation_name": "행정부고위공무원"
+        },
+        {
+          "scenario_id": "career-net-934-experience",
+          "version": "v001",
+          "occupation_id": "career-net-934",
+          "occupation_name": "사회단체활동가"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-004",
+      "image_version": "v001",
+      "image_historical_name": "D 민원 접수실 — 시안 v2",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-004",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "explicit_prompt_existing_panorama_reverse_ref",
+      "prompt_historical_name": "민원·방문객 접수실",
+      "runtime_name_at_read": "민원·방문객 접수실",
+      "production_name": "민원·방문객 접수실",
+      "layout_name": "민원·방문객 접수실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-469-experience",
+          "version": "v001",
+          "occupation_id": "career-net-469",
+          "occupation_name": "고객관리시스템(CRM)전문가"
+        },
+        {
+          "scenario_id": "career-net-404-experience",
+          "version": "v001",
+          "occupation_id": "career-net-404",
+          "occupation_name": "전화교환원"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-005",
+      "image_version": "v001",
+      "image_historical_name": "E 전문 상담실 — 시안 v2",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-005",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "explicit_prompt_existing_panorama_reverse_ref",
+      "prompt_historical_name": "전문 상담 사무실",
+      "runtime_name_at_read": "전문 상담 사무실",
+      "production_name": "전문 상담 사무실",
+      "layout_name": "전문 상담 사무실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-198-experience",
+          "version": "v001",
+          "occupation_id": "career-net-198",
+          "occupation_name": "감정평가사"
+        },
+        {
+          "scenario_id": "career-net-202-experience",
+          "version": "v001",
+          "occupation_id": "career-net-202",
+          "occupation_name": "경영컨설턴트"
+        },
+        {
+          "scenario_id": "career-net-205-experience",
+          "version": "v001",
+          "occupation_id": "career-net-205",
+          "occupation_name": "노무사"
+        },
+        {
+          "scenario_id": "career-net-373-experience",
+          "version": "v001",
+          "occupation_id": "career-net-373",
+          "occupation_name": "법무사"
+        },
+        {
+          "scenario_id": "career-net-374-experience",
+          "version": "v001",
+          "occupation_id": "career-net-374",
+          "occupation_name": "변리사"
+        },
+        {
+          "scenario_id": "career-net-375-experience",
+          "version": "v001",
+          "occupation_id": "career-net-375",
+          "occupation_name": "변호사"
+        },
+        {
+          "scenario_id": "career-net-219-experience",
+          "version": "v001",
+          "occupation_id": "career-net-219",
+          "occupation_name": "부동산중개인"
+        },
+        {
+          "scenario_id": "career-net-224-experience",
+          "version": "v001",
+          "occupation_id": "career-net-224",
+          "occupation_name": "세무사"
+        },
+        {
+          "scenario_id": "career-net-10079-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10079",
+          "occupation_name": "창업컨설턴트"
+        },
+        {
+          "scenario_id": "career-net-206-experience",
+          "version": "v001",
+          "occupation_id": "career-net-206",
+          "occupation_name": "회계사"
+        },
+        {
+          "scenario_id": "career-net-450-experience",
+          "version": "v001",
+          "occupation_id": "career-net-450",
+          "occupation_name": "IT컨설턴트"
+        },
+        {
+          "scenario_id": "career-net-403-experience",
+          "version": "v001",
+          "occupation_id": "career-net-403",
+          "occupation_name": "장례지도사"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-006",
+      "image_version": "v001",
+      "image_historical_name": "실험실",
+      "prompt_ref": {
+        "version": "v001",
+        "prompt_id": "PRM-006",
+        "catalog": "panorama-prompts-v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "실험실",
+      "runtime_name_at_read": "실험실",
+      "production_name": "실험실",
+      "layout_name": "실험실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-162-experience",
+          "version": "v001",
+          "occupation_id": "career-net-162",
+          "occupation_name": "식품공학기술자"
+        },
+        {
+          "scenario_id": "career-net-24-experience",
+          "version": "v001",
+          "occupation_id": "career-net-24",
+          "occupation_name": "유전공학연구원"
+        },
+        {
+          "scenario_id": "career-net-40-experience",
+          "version": "v001",
+          "occupation_id": "career-net-40",
+          "occupation_name": "화학연구원"
+        },
+        {
+          "scenario_id": "career-net-10026-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10026",
+          "occupation_name": "기후변화 대응 전문가"
+        },
+        {
+          "scenario_id": "career-net-86-experience",
+          "version": "v001",
+          "occupation_id": "career-net-86",
+          "occupation_name": "생물공학연구원"
+        },
+        {
+          "scenario_id": "career-net-13-experience",
+          "version": "v001",
+          "occupation_id": "career-net-13",
+          "occupation_name": "생물학연구원"
+        },
+        {
+          "scenario_id": "career-net-10047-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10047",
+          "occupation_name": "식품융합엔지니어"
+        },
+        {
+          "scenario_id": "career-net-1436-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1436",
+          "occupation_name": "신약개발연구원"
+        },
+        {
+          "scenario_id": "career-net-10104-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10104",
+          "occupation_name": "유전자 재조합 식품 전문가"
+        },
+        {
+          "scenario_id": "career-net-334-experience",
+          "version": "v001",
+          "occupation_id": "career-net-334",
+          "occupation_name": "조향사"
+        },
+        {
+          "scenario_id": "career-net-38-experience",
+          "version": "v001",
+          "occupation_id": "career-net-38",
+          "occupation_name": "해부학연구원"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-007",
+      "image_version": "v001",
+      "image_historical_name": "분석실",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-007",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "분석실",
+      "runtime_name_at_read": "분석실",
+      "production_name": "분석실",
+      "layout_name": "분석실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-10115-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10115",
+          "occupation_name": "디지털 헬스케어 기기 개발자"
+        },
+        {
+          "scenario_id": "career-net-1134-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1134",
+          "occupation_name": "메카트로닉스공학기술자"
+        },
+        {
+          "scenario_id": "career-net-1433-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1433",
+          "occupation_name": "발명가"
+        },
+        {
+          "scenario_id": "career-net-10025-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10025",
+          "occupation_name": "스마트 그리드 엔지니어"
+        },
+        {
+          "scenario_id": "career-net-10116-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10116",
+          "occupation_name": "신소재 개발 연구원"
+        },
+        {
+          "scenario_id": "career-net-10027-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10027",
+          "occupation_name": "신재생에너지 전문가"
+        },
+        {
+          "scenario_id": "career-net-104-experience",
+          "version": "v001",
+          "occupation_id": "career-net-104",
+          "occupation_name": "원자력연구원"
+        },
+        {
+          "scenario_id": "career-net-1108-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1108",
+          "occupation_name": "위생사"
+        },
+        {
+          "scenario_id": "career-net-119-experience",
+          "version": "v001",
+          "occupation_id": "career-net-119",
+          "occupation_name": "전자공학기술자"
+        },
+        {
+          "scenario_id": "career-net-1105-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1105",
+          "occupation_name": "행정학연구원"
+        },
+        {
+          "scenario_id": "career-net-952-experience",
+          "version": "v001",
+          "occupation_id": "career-net-952",
+          "occupation_name": "화학공학기술자"
+        },
+        {
+          "scenario_id": "career-net-1009-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1009",
+          "occupation_name": "환경위생검사원"
+        },
+        {
+          "scenario_id": "career-net-10102-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10102",
+          "occupation_name": "감성인식기술전문가"
+        },
+        {
+          "scenario_id": "career-net-10103-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10103",
+          "occupation_name": "개인형 이동수단 개발자"
+        },
+        {
+          "scenario_id": "career-net-53-experience",
+          "version": "v001",
+          "occupation_id": "career-net-53",
+          "occupation_name": "금속공학기술자"
+        },
+        {
+          "scenario_id": "career-net-56-experience",
+          "version": "v001",
+          "occupation_id": "career-net-56",
+          "occupation_name": "기계공학 기술자ㆍ연구원"
+        },
+        {
+          "scenario_id": "career-net-1282-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1282",
+          "occupation_name": "대체에너지개발연구원"
+        },
+        {
+          "scenario_id": "career-net-66-experience",
+          "version": "v001",
+          "occupation_id": "career-net-66",
+          "occupation_name": "로봇연구원"
+        },
+        {
+          "scenario_id": "career-net-10049-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10049",
+          "occupation_name": "무인항공기시스템개발자"
+        },
+        {
+          "scenario_id": "career-net-8-experience",
+          "version": "v001",
+          "occupation_id": "career-net-8",
+          "occupation_name": "물리학연구원"
+        },
+        {
+          "scenario_id": "career-net-10035-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10035",
+          "occupation_name": "사물 인터넷 전문가"
+        },
+        {
+          "scenario_id": "career-net-10037-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10037",
+          "occupation_name": "생물 정보 분석가"
+        },
+        {
+          "scenario_id": "career-net-10036-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10036",
+          "occupation_name": "생체 인식 전문가"
+        },
+        {
+          "scenario_id": "career-net-57-experience",
+          "version": "v001",
+          "occupation_id": "career-net-57",
+          "occupation_name": "섬유공학기술자"
+        },
+        {
+          "scenario_id": "career-net-539-experience",
+          "version": "v001",
+          "occupation_id": "career-net-539",
+          "occupation_name": "소음진동기술자"
+        },
+        {
+          "scenario_id": "career-net-10009-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10009",
+          "occupation_name": "스마트 의류 개발자"
+        },
+        {
+          "scenario_id": "career-net-995-experience",
+          "version": "v001",
+          "occupation_id": "career-net-995",
+          "occupation_name": "에너지공학기술자"
+        },
+        {
+          "scenario_id": "career-net-10014-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10014",
+          "occupation_name": "의료 기기 개발 전문가"
+        },
+        {
+          "scenario_id": "career-net-107-experience",
+          "version": "v001",
+          "occupation_id": "career-net-107",
+          "occupation_name": "인공위성개발원"
+        },
+        {
+          "scenario_id": "career-net-1076-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1076",
+          "occupation_name": "자동차공학기술자"
+        },
+        {
+          "scenario_id": "career-net-1541-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1541",
+          "occupation_name": "자연과학연구원"
+        },
+        {
+          "scenario_id": "career-net-10113-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10113",
+          "occupation_name": "지능형 로봇개발자"
+        },
+        {
+          "scenario_id": "career-net-948-experience",
+          "version": "v001",
+          "occupation_id": "career-net-948",
+          "occupation_name": "컴퓨터하드웨어 기술자 및 연구원"
+        },
+        {
+          "scenario_id": "career-net-138-experience",
+          "version": "v001",
+          "occupation_id": "career-net-138",
+          "occupation_name": "통신공학 기술자 및 연구원"
+        },
+        {
+          "scenario_id": "career-net-151-experience",
+          "version": "v001",
+          "occupation_id": "career-net-151",
+          "occupation_name": "항공우주공학기술자"
+        },
+        {
+          "scenario_id": "career-net-10024-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10024",
+          "occupation_name": "해양 에너지 기술자"
+        },
+        {
+          "scenario_id": "career-net-10002-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10002",
+          "occupation_name": "홀로그램 전문가"
+        },
+        {
+          "scenario_id": "career-net-114-experience",
+          "version": "v001",
+          "occupation_id": "career-net-114",
+          "occupation_name": "전기공학기술자"
+        },
+        {
+          "scenario_id": "career-net-10109-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10109",
+          "occupation_name": "나노공학 기술자"
+        },
+        {
+          "scenario_id": "career-net-10107-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10107",
+          "occupation_name": "디스플레이 개발자"
+        },
+        {
+          "scenario_id": "career-net-476-experience",
+          "version": "v001",
+          "occupation_id": "career-net-476",
+          "occupation_name": "무선주파수(RF)엔지니어"
+        },
+        {
+          "scenario_id": "career-net-157-experience",
+          "version": "v001",
+          "occupation_id": "career-net-157",
+          "occupation_name": "반도체공학기술자"
+        },
+        {
+          "scenario_id": "career-net-10108-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10108",
+          "occupation_name": "배터리 기술자"
+        },
+        {
+          "scenario_id": "career-net-83-experience",
+          "version": "v001",
+          "occupation_id": "career-net-83",
+          "occupation_name": "산업공학기술자"
+        },
+        {
+          "scenario_id": "career-net-88-experience",
+          "version": "v001",
+          "occupation_id": "career-net-88",
+          "occupation_name": "석유화학기술자"
+        },
+        {
+          "scenario_id": "career-net-1150-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1150",
+          "occupation_name": "식품가공검사원"
+        },
+        {
+          "scenario_id": "career-net-1143-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1143",
+          "occupation_name": "의복제품검사원"
+        },
+        {
+          "scenario_id": "career-net-112-experience",
+          "version": "v001",
+          "occupation_id": "career-net-112",
+          "occupation_name": "재료공학기술자"
+        },
+        {
+          "scenario_id": "career-net-76-experience",
+          "version": "v001",
+          "occupation_id": "career-net-76",
+          "occupation_name": "보석감정사"
+        },
+        {
+          "scenario_id": "career-net-81-experience",
+          "version": "v001",
+          "occupation_id": "career-net-81",
+          "occupation_name": "비파괴검사원"
+        },
+        {
+          "scenario_id": "career-net-10105-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10105",
+          "occupation_name": "태양광발전연구 및 개발자"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-008",
+      "image_version": "v001",
+      "image_historical_name": "진료실",
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-008"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "진료실",
+      "runtime_name_at_read": "진료실",
+      "production_name": "진료실",
+      "layout_name": "진료실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-23-experience",
+          "version": "v001",
+          "occupation_id": "career-net-23",
+          "occupation_name": "약사 및 한약사"
+        },
+        {
+          "scenario_id": "career-net-37-experience",
+          "version": "v001",
+          "occupation_id": "career-net-37",
+          "occupation_name": "한의사"
+        },
+        {
+          "scenario_id": "career-net-21-experience",
+          "version": "v001",
+          "occupation_id": "career-net-21",
+          "occupation_name": "안경사"
+        },
+        {
+          "scenario_id": "career-net-1440-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1440",
+          "occupation_name": "일반의사"
+        },
+        {
+          "scenario_id": "career-net-25-experience",
+          "version": "v001",
+          "occupation_id": "career-net-25",
+          "occupation_name": "전문의사"
+        },
+        {
+          "scenario_id": "career-net-34-experience",
+          "version": "v001",
+          "occupation_id": "career-net-34",
+          "occupation_name": "치과의사"
+        },
+        {
+          "scenario_id": "career-net-10012-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10012",
+          "occupation_name": "헬스 케어 컨설턴트"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-009",
+      "image_version": "v001",
+      "image_historical_name": "처치실",
+      "prompt_ref": {
+        "version": "v001",
+        "prompt_id": "PRM-009",
+        "catalog": "panorama-prompts-v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "처치실",
+      "runtime_name_at_read": "처치실",
+      "production_name": "처치실",
+      "layout_name": "처치실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-941-experience",
+          "version": "v001",
+          "occupation_id": "career-net-941",
+          "occupation_name": "임상병리사"
+        },
+        {
+          "scenario_id": "career-net-10-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10",
+          "occupation_name": "방사선사"
+        },
+        {
+          "scenario_id": "career-net-397-experience",
+          "version": "v001",
+          "occupation_id": "career-net-397",
+          "occupation_name": "응급구조사"
+        },
+        {
+          "scenario_id": "career-net-33-experience",
+          "version": "v001",
+          "occupation_id": "career-net-33",
+          "occupation_name": "치과기공사"
+        },
+        {
+          "scenario_id": "career-net-411-experience",
+          "version": "v001",
+          "occupation_id": "career-net-411",
+          "occupation_name": "치과위생사"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-010",
+      "image_version": "v001",
+      "image_historical_name": "병실",
+      "prompt_ref": {
+        "prompt_id": "PRM-010",
+        "version": "v001",
+        "catalog": "panorama-prompts-v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "병실",
+      "runtime_name_at_read": "병실",
+      "production_name": "병실",
+      "layout_name": "병실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-354-experience",
+          "version": "v001",
+          "occupation_id": "career-net-354",
+          "occupation_name": "간호사"
+        },
+        {
+          "scenario_id": "career-net-355-experience",
+          "version": "v001",
+          "occupation_id": "career-net-355",
+          "occupation_name": "간호조무사"
+        },
+        {
+          "scenario_id": "career-net-10013-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10013",
+          "occupation_name": "노인 전문 간호사"
+        },
+        {
+          "scenario_id": "career-net-10062-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10062",
+          "occupation_name": "학습장애간호사"
+        },
+        {
+          "scenario_id": "career-net-428-experience",
+          "version": "v001",
+          "occupation_id": "career-net-428",
+          "occupation_name": "호스피스전문간호사"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-011",
+      "image_version": "v001",
+      "image_historical_name": "의료 접수실",
+      "prompt_ref": {
+        "prompt_id": "PRM-011",
+        "catalog": "panorama-prompts-v001",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "의료 접수실",
+      "runtime_name_at_read": "의료 접수실",
+      "production_name": "의료 접수실",
+      "layout_name": "의료 접수실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-1257-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1257",
+          "occupation_name": "병원코디네이터"
+        },
+        {
+          "scenario_id": "career-net-256-experience",
+          "version": "v001",
+          "occupation_id": "career-net-256",
+          "occupation_name": "보건의료정보관리사"
+        },
+        {
+          "scenario_id": "career-net-10010-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10010",
+          "occupation_name": "원격진료 코디네이터"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-012",
+      "image_version": "v001",
+      "image_historical_name": "교실",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-012",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "교실",
+      "runtime_name_at_read": "교실",
+      "production_name": "교실",
+      "layout_name": "교실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-376-experience",
+          "version": "v001",
+          "occupation_id": "career-net-376",
+          "occupation_name": "보육교사"
+        },
+        {
+          "scenario_id": "career-net-395-experience",
+          "version": "v001",
+          "occupation_id": "career-net-395",
+          "occupation_name": "유치원교사"
+        },
+        {
+          "scenario_id": "career-net-406-experience",
+          "version": "v001",
+          "occupation_id": "career-net-406",
+          "occupation_name": "인문계중등학교교사"
+        },
+        {
+          "scenario_id": "career-net-1089-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1089",
+          "occupation_name": "자연계중등학교교사"
+        },
+        {
+          "scenario_id": "career-net-410-experience",
+          "version": "v001",
+          "occupation_id": "career-net-410",
+          "occupation_name": "초등학교교사"
+        },
+        {
+          "scenario_id": "career-net-413-experience",
+          "version": "v001",
+          "occupation_id": "career-net-413",
+          "occupation_name": "특수교사"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-013",
+      "image_version": "v001",
+      "image_historical_name": "교육 실습실",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-013",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "교육 실습실",
+      "runtime_name_at_read": "교육 실습실",
+      "production_name": "교육 실습실",
+      "layout_name": "교육 실습실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-409-experience",
+          "version": "v001",
+          "occupation_id": "career-net-409",
+          "occupation_name": "직업능력개발훈련교사"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-014",
+      "image_version": "v001",
+      "image_historical_name": "강의실",
+      "prompt_ref": {
+        "version": "v001",
+        "prompt_id": "PRM-014",
+        "catalog": "panorama-prompts-v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "강의실",
+      "runtime_name_at_read": "강의실",
+      "production_name": "강의실",
+      "layout_name": "강의실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-1102-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1102",
+          "occupation_name": "장학사"
+        },
+        {
+          "scenario_id": "career-net-1103-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1103",
+          "occupation_name": "교육학연구원"
+        },
+        {
+          "scenario_id": "career-net-481-experience",
+          "version": "v001",
+          "occupation_id": "career-net-481",
+          "occupation_name": "교장"
+        },
+        {
+          "scenario_id": "career-net-364-experience",
+          "version": "v001",
+          "occupation_id": "career-net-364",
+          "occupation_name": "이공학계열교수"
+        },
+        {
+          "scenario_id": "career-net-988-experience",
+          "version": "v001",
+          "occupation_id": "career-net-988",
+          "occupation_name": "인문사회계열교수"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-015",
+      "image_version": "v001",
+      "image_historical_name": "복지·심리 상담실",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-015"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "복지·심리 상담실",
+      "runtime_name_at_read": "복지·심리 상담실",
+      "production_name": "복지·심리 상담실",
+      "layout_name": "복지·심리 상담실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-10054-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10054",
+          "occupation_name": "괴롭힘방지조언사"
+        },
+        {
+          "scenario_id": "career-net-10075-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10075",
+          "occupation_name": "다문화코디네이터"
+        },
+        {
+          "scenario_id": "career-net-10053-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10053",
+          "occupation_name": "산업카운슬러"
+        },
+        {
+          "scenario_id": "career-net-10015-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10015",
+          "occupation_name": "스포츠 심리 상담원"
+        },
+        {
+          "scenario_id": "career-net-10059-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10059",
+          "occupation_name": "평등관리사무원"
+        },
+        {
+          "scenario_id": "career-net-1279-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1279",
+          "occupation_name": "헤드헌터"
+        },
+        {
+          "scenario_id": "career-net-10061-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10061",
+          "occupation_name": "유전상담사"
+        },
+        {
+          "scenario_id": "career-net-10044-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10044",
+          "occupation_name": "개인관리컨설턴트"
+        },
+        {
+          "scenario_id": "career-net-10011-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10011",
+          "occupation_name": "노년 플래너"
+        },
+        {
+          "scenario_id": "career-net-398-experience",
+          "version": "v001",
+          "occupation_id": "career-net-398",
+          "occupation_name": "임상심리사"
+        },
+        {
+          "scenario_id": "career-net-10069-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10069",
+          "occupation_name": "목소리코치"
+        },
+        {
+          "scenario_id": "career-net-379-experience",
+          "version": "v001",
+          "occupation_id": "career-net-379",
+          "occupation_name": "사회복지사"
+        },
+        {
+          "scenario_id": "career-net-380-experience",
+          "version": "v001",
+          "occupation_id": "career-net-380",
+          "occupation_name": "상담전문가"
+        },
+        {
+          "scenario_id": "career-net-10056-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10056",
+          "occupation_name": "장애인잡코치"
+        },
+        {
+          "scenario_id": "career-net-408-experience",
+          "version": "v001",
+          "occupation_id": "career-net-408",
+          "occupation_name": "직업상담 및 취업알선원"
+        },
+        {
+          "scenario_id": "career-net-1256-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1256",
+          "occupation_name": "커플매니저"
+        },
+        {
+          "scenario_id": "career-net-10058-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10058",
+          "occupation_name": "케어매니저"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-016",
+      "image_version": "v001",
+      "image_historical_name": "복지 활동실",
+      "prompt_ref": {
+        "prompt_id": "PRM-016",
+        "version": "v001",
+        "catalog": "panorama-prompts-v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "복지 활동실",
+      "runtime_name_at_read": "복지 활동실",
+      "production_name": "복지 활동실",
+      "layout_name": "복지 활동실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-366-experience",
+          "version": "v001",
+          "occupation_id": "career-net-366",
+          "occupation_name": "레크리에이션지도자"
+        },
+        {
+          "scenario_id": "career-net-10055-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10055",
+          "occupation_name": "재능기부코디네이터"
+        },
+        {
+          "scenario_id": "career-net-10065-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10065",
+          "occupation_name": "야외활동지도사"
+        },
+        {
+          "scenario_id": "career-net-10042-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10042",
+          "occupation_name": "문화여가사"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-017",
+      "image_version": "v001",
+      "image_historical_name": "요양실",
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-017"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "요양실",
+      "runtime_name_at_read": "요양실",
+      "production_name": "요양실",
+      "layout_name": "요양실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-353-experience",
+          "version": "v001",
+          "occupation_id": "career-net-353",
+          "occupation_name": "간병인"
+        },
+        {
+          "scenario_id": "career-net-10057-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10057",
+          "occupation_name": "아동청소년시설보호사"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-018",
+      "image_version": "v001",
+      "image_historical_name": "생산 구역",
+      "prompt_ref": {
+        "version": "v001",
+        "prompt_id": "PRM-018",
+        "catalog": "panorama-prompts-v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "생산 구역",
+      "runtime_name_at_read": "생산 구역",
+      "production_name": "생산 구역",
+      "layout_name": "생산 구역",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-85-experience",
+          "version": "v001",
+          "occupation_id": "career-net-85",
+          "occupation_name": "상ㆍ하수도 처리장치 조작원"
+        },
+        {
+          "scenario_id": "career-net-10112-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10112",
+          "occupation_name": "스마트공장 기술자"
+        },
+        {
+          "scenario_id": "career-net-10045-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10045",
+          "occupation_name": "재활용코디네이터"
+        },
+        {
+          "scenario_id": "career-net-1145-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1145",
+          "occupation_name": "전기설비조작원"
+        },
+        {
+          "scenario_id": "career-net-122-experience",
+          "version": "v001",
+          "occupation_id": "career-net-122",
+          "occupation_name": "정밀기기제품제조원"
+        },
+        {
+          "scenario_id": "career-net-1010-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1010",
+          "occupation_name": "방사성폐기물관리원"
+        },
+        {
+          "scenario_id": "career-net-1140-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1140",
+          "occupation_name": "도장원"
+        },
+        {
+          "scenario_id": "career-net-1137-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1137",
+          "occupation_name": "제관원"
+        },
+        {
+          "scenario_id": "career-net-1135-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1135",
+          "occupation_name": "공구제조원"
+        },
+        {
+          "scenario_id": "career-net-48-experience",
+          "version": "v001",
+          "occupation_id": "career-net-48",
+          "occupation_name": "공작기계조작원"
+        },
+        {
+          "scenario_id": "career-net-52-experience",
+          "version": "v001",
+          "occupation_id": "career-net-52",
+          "occupation_name": "금속가공장치조작원"
+        },
+        {
+          "scenario_id": "career-net-54-experience",
+          "version": "v001",
+          "occupation_id": "career-net-54",
+          "occupation_name": "금형원"
+        },
+        {
+          "scenario_id": "career-net-126-experience",
+          "version": "v001",
+          "occupation_id": "career-net-126",
+          "occupation_name": "단순노무자"
+        },
+        {
+          "scenario_id": "career-net-1139-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1139",
+          "occupation_name": "단조원"
+        },
+        {
+          "scenario_id": "career-net-1141-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1141",
+          "occupation_name": "도금원"
+        },
+        {
+          "scenario_id": "career-net-69-experience",
+          "version": "v001",
+          "occupation_id": "career-net-69",
+          "occupation_name": "목재가공관련조작원"
+        },
+        {
+          "scenario_id": "career-net-1144-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1144",
+          "occupation_name": "발전장치조작원"
+        },
+        {
+          "scenario_id": "career-net-311-experience",
+          "version": "v001",
+          "occupation_id": "career-net-311",
+          "occupation_name": "사진인화 및 현상관련조작원"
+        },
+        {
+          "scenario_id": "career-net-73-experience",
+          "version": "v001",
+          "occupation_id": "career-net-73",
+          "occupation_name": "섬유제조원"
+        },
+        {
+          "scenario_id": "career-net-97-experience",
+          "version": "v001",
+          "occupation_id": "career-net-97",
+          "occupation_name": "시멘트제조원"
+        },
+        {
+          "scenario_id": "career-net-100-experience",
+          "version": "v001",
+          "occupation_id": "career-net-100",
+          "occupation_name": "압연원"
+        },
+        {
+          "scenario_id": "career-net-106-experience",
+          "version": "v001",
+          "occupation_id": "career-net-106",
+          "occupation_name": "유리제품제조원"
+        },
+        {
+          "scenario_id": "career-net-190-experience",
+          "version": "v001",
+          "occupation_id": "career-net-190",
+          "occupation_name": "유제품제조원"
+        },
+        {
+          "scenario_id": "career-net-1149-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1149",
+          "occupation_name": "음료제조관련조작원"
+        },
+        {
+          "scenario_id": "career-net-108-experience",
+          "version": "v001",
+          "occupation_id": "career-net-108",
+          "occupation_name": "인쇄기조작원"
+        },
+        {
+          "scenario_id": "career-net-145-experience",
+          "version": "v001",
+          "occupation_id": "career-net-145",
+          "occupation_name": "재활용 처리 및 소각로 조작원"
+        },
+        {
+          "scenario_id": "career-net-1146-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1146",
+          "occupation_name": "전기 부품 및 제품 생산직"
+        },
+        {
+          "scenario_id": "career-net-1087-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1087",
+          "occupation_name": "전자 부품 및 제품 생산직"
+        },
+        {
+          "scenario_id": "career-net-171-experience",
+          "version": "v001",
+          "occupation_id": "career-net-171",
+          "occupation_name": "전통식품제조원"
+        },
+        {
+          "scenario_id": "career-net-1151-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1151",
+          "occupation_name": "종이제품생산직(기계조작)"
+        },
+        {
+          "scenario_id": "career-net-127-experience",
+          "version": "v001",
+          "occupation_id": "career-net-127",
+          "occupation_name": "주조원"
+        },
+        {
+          "scenario_id": "career-net-129-experience",
+          "version": "v001",
+          "occupation_id": "career-net-129",
+          "occupation_name": "직조원"
+        },
+        {
+          "scenario_id": "career-net-47-experience",
+          "version": "v001",
+          "occupation_id": "career-net-47",
+          "occupation_name": "타이어 및 고무제품 생산직"
+        },
+        {
+          "scenario_id": "career-net-143-experience",
+          "version": "v001",
+          "occupation_id": "career-net-143",
+          "occupation_name": "판금원"
+        },
+        {
+          "scenario_id": "career-net-144-experience",
+          "version": "v001",
+          "occupation_id": "career-net-144",
+          "occupation_name": "펄프 및 종이 생산직"
+        },
+        {
+          "scenario_id": "career-net-147-experience",
+          "version": "v001",
+          "occupation_id": "career-net-147",
+          "occupation_name": "플라스틱제품제조원"
+        },
+        {
+          "scenario_id": "career-net-153-experience",
+          "version": "v001",
+          "occupation_id": "career-net-153",
+          "occupation_name": "화학제품제조원"
+        },
+        {
+          "scenario_id": "career-net-163-experience",
+          "version": "v001",
+          "occupation_id": "career-net-163",
+          "occupation_name": "도축원 및 육류가공원"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-019",
+      "image_version": "v001",
+      "image_historical_name": "조립 구역",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-019"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "조립 구역",
+      "runtime_name_at_read": "조립 구역",
+      "production_name": "조립 구역",
+      "layout_name": "조립 구역",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-1158-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1158",
+          "occupation_name": "자동조립라인 및 산업용로봇조작원"
+        },
+        {
+          "scenario_id": "career-net-1136-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1136",
+          "occupation_name": "항공기·선박조립 및 검사원"
+        },
+        {
+          "scenario_id": "career-net-10001-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10001",
+          "occupation_name": "3D 프린팅 전문가"
+        },
+        {
+          "scenario_id": "career-net-1152-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1152",
+          "occupation_name": "가구조립 및 검사원"
+        },
+        {
+          "scenario_id": "career-net-110-experience",
+          "version": "v001",
+          "occupation_id": "career-net-110",
+          "occupation_name": "자동차조립원"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-020",
+      "image_version": "v001",
+      "image_historical_name": "정비 구역",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-020"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "정비 구역",
+      "runtime_name_at_read": "정비 구역",
+      "production_name": "정비 구역",
+      "layout_name": "정비 구역",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-19-experience",
+          "version": "v001",
+          "occupation_id": "career-net-19",
+          "occupation_name": "의료장비기사"
+        },
+        {
+          "scenario_id": "career-net-985-experience",
+          "version": "v001",
+          "occupation_id": "career-net-985",
+          "occupation_name": "공업기계설치 및 정비원"
+        },
+        {
+          "scenario_id": "career-net-347-experience",
+          "version": "v001",
+          "occupation_id": "career-net-347",
+          "occupation_name": "악기수리원 및 조율사"
+        },
+        {
+          "scenario_id": "career-net-109-experience",
+          "version": "v001",
+          "occupation_id": "career-net-109",
+          "occupation_name": "자동차정비원"
+        },
+        {
+          "scenario_id": "career-net-133-experience",
+          "version": "v001",
+          "occupation_id": "career-net-133",
+          "occupation_name": "철도차량정비원"
+        },
+        {
+          "scenario_id": "career-net-149-experience",
+          "version": "v001",
+          "occupation_id": "career-net-149",
+          "occupation_name": "항공기정비원"
+        },
+        {
+          "scenario_id": "career-net-1147-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1147",
+          "occupation_name": "방송장비(H/W)설치 및 수리원"
+        },
+        {
+          "scenario_id": "career-net-978-experience",
+          "version": "v001",
+          "occupation_id": "career-net-978",
+          "occupation_name": "보일러공"
+        },
+        {
+          "scenario_id": "career-net-58-experience",
+          "version": "v001",
+          "occupation_id": "career-net-58",
+          "occupation_name": "냉동기사"
+        },
+        {
+          "scenario_id": "career-net-92-experience",
+          "version": "v001",
+          "occupation_id": "career-net-92",
+          "occupation_name": "선박정비원"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-021",
+      "image_version": "v001",
+      "image_historical_name": "소매점",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-021"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "소매점",
+      "runtime_name_at_read": "소매점",
+      "production_name": "소매점",
+      "layout_name": "소매점",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-474-experience",
+          "version": "v001",
+          "occupation_id": "career-net-474",
+          "occupation_name": "아이티(IT)기술영업원"
+        },
+        {
+          "scenario_id": "career-net-470-experience",
+          "version": "v001",
+          "occupation_id": "career-net-470",
+          "occupation_name": "전자상거래전문가"
+        },
+        {
+          "scenario_id": "career-net-214-experience",
+          "version": "v001",
+          "occupation_id": "career-net-214",
+          "occupation_name": "바이어(구매인)"
+        },
+        {
+          "scenario_id": "career-net-928-experience",
+          "version": "v001",
+          "occupation_id": "career-net-928",
+          "occupation_name": "영업원"
+        },
+        {
+          "scenario_id": "career-net-236-experience",
+          "version": "v001",
+          "occupation_id": "career-net-236",
+          "occupation_name": "자동차영업원"
+        },
+        {
+          "scenario_id": "career-net-1116-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1116",
+          "occupation_name": "계산원 및 매표원"
+        },
+        {
+          "scenario_id": "career-net-211-experience",
+          "version": "v001",
+          "occupation_id": "career-net-211",
+          "occupation_name": "농수산물중개인"
+        },
+        {
+          "scenario_id": "career-net-243-experience",
+          "version": "v001",
+          "occupation_id": "career-net-243",
+          "occupation_name": "상점판매원"
+        },
+        {
+          "scenario_id": "career-net-1114-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1114",
+          "occupation_name": "상품대여원"
+        },
+        {
+          "scenario_id": "career-net-201-experience",
+          "version": "v001",
+          "occupation_id": "career-net-201",
+          "occupation_name": "상품중개인"
+        },
+        {
+          "scenario_id": "career-net-10041-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10041",
+          "occupation_name": "소비생활어드바이저"
+        },
+        {
+          "scenario_id": "career-net-1115-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1115",
+          "occupation_name": "주유원"
+        },
+        {
+          "scenario_id": "career-net-946-experience",
+          "version": "v001",
+          "occupation_id": "career-net-946",
+          "occupation_name": "카지노딜러"
+        },
+        {
+          "scenario_id": "career-net-1113-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1113",
+          "occupation_name": "방문판매원"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-022",
+      "image_version": "v001",
+      "image_historical_name": "서비스 창구",
+      "prompt_ref": {
+        "prompt_id": "PRM-022",
+        "catalog": "panorama-prompts-v001",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "서비스 창구",
+      "runtime_name_at_read": "서비스 창구",
+      "production_name": "서비스 창구",
+      "layout_name": "서비스 창구",
+      "editorial_primary_candidates": [],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-023",
+      "image_version": "v001",
+      "image_historical_name": "미용실",
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-023"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "미용실",
+      "runtime_name_at_read": "미용실",
+      "production_name": "미용실",
+      "layout_name": "미용실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-325-experience",
+          "version": "v001",
+          "occupation_id": "career-net-325",
+          "occupation_name": "이미지컨설턴트"
+        },
+        {
+          "scenario_id": "career-net-179-experience",
+          "version": "v001",
+          "occupation_id": "career-net-179",
+          "occupation_name": "체형관리사"
+        },
+        {
+          "scenario_id": "career-net-416-experience",
+          "version": "v001",
+          "occupation_id": "career-net-416",
+          "occupation_name": "피부관리사"
+        },
+        {
+          "scenario_id": "career-net-288-experience",
+          "version": "v001",
+          "occupation_id": "career-net-288",
+          "occupation_name": "네일아티스트"
+        },
+        {
+          "scenario_id": "career-net-293-experience",
+          "version": "v001",
+          "occupation_id": "career-net-293",
+          "occupation_name": "메이크업아티스트"
+        },
+        {
+          "scenario_id": "career-net-1122-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1122",
+          "occupation_name": "미용사"
+        },
+        {
+          "scenario_id": "career-net-306-experience",
+          "version": "v001",
+          "occupation_id": "career-net-306",
+          "occupation_name": "분장사"
+        },
+        {
+          "scenario_id": "career-net-1121-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1121",
+          "occupation_name": "이용사"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-024",
+      "image_version": "v001",
+      "image_historical_name": "주방",
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-024"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "주방",
+      "runtime_name_at_read": "주방",
+      "production_name": "주방",
+      "layout_name": "주방",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-10006-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10006",
+          "occupation_name": "곤충 음식 개발자·조리사"
+        },
+        {
+          "scenario_id": "career-net-169-experience",
+          "version": "v001",
+          "occupation_id": "career-net-169",
+          "occupation_name": "영양사"
+        },
+        {
+          "scenario_id": "career-net-1128-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1128",
+          "occupation_name": "주방보조원"
+        },
+        {
+          "scenario_id": "career-net-180-experience",
+          "version": "v001",
+          "occupation_id": "career-net-180",
+          "occupation_name": "바리스타"
+        },
+        {
+          "scenario_id": "career-net-370-experience",
+          "version": "v001",
+          "occupation_id": "career-net-370",
+          "occupation_name": "바텐더"
+        },
+        {
+          "scenario_id": "career-net-167-experience",
+          "version": "v001",
+          "occupation_id": "career-net-167",
+          "occupation_name": "소믈리에"
+        },
+        {
+          "scenario_id": "career-net-173-experience",
+          "version": "v001",
+          "occupation_id": "career-net-173",
+          "occupation_name": "조리사 및 주방장"
+        },
+        {
+          "scenario_id": "career-net-177-experience",
+          "version": "v001",
+          "occupation_id": "career-net-177",
+          "occupation_name": "푸드스타일리스트"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-025",
+      "image_version": "v001",
+      "image_historical_name": "제과실",
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-025"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "제과실",
+      "runtime_name_at_read": "제과실",
+      "production_name": "제과실",
+      "layout_name": "제과실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-172-experience",
+          "version": "v001",
+          "occupation_id": "career-net-172",
+          "occupation_name": "제과사 및 제빵사"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-026",
+      "image_version": "v001",
+      "image_historical_name": "식당 홀",
+      "prompt_ref": {
+        "version": "v001",
+        "prompt_id": "PRM-026",
+        "catalog": "panorama-prompts-v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "식당 홀",
+      "runtime_name_at_read": "식당 홀",
+      "production_name": "식당 홀",
+      "layout_name": "식당 홀",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-1129-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1129",
+          "occupation_name": "요리배달원"
+        },
+        {
+          "scenario_id": "career-net-1127-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1127",
+          "occupation_name": "접객원"
+        },
+        {
+          "scenario_id": "career-net-795-experience",
+          "version": "v001",
+          "occupation_id": "career-net-795",
+          "occupation_name": "호텔지배인"
+        },
+        {
+          "scenario_id": "career-net-1124-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1124",
+          "occupation_name": "혼례종사원"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-027",
+      "image_version": "v001",
+      "image_historical_name": "디자인 작업실",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-027"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "디자인 작업실",
+      "runtime_name_at_read": "디자인 작업실",
+      "production_name": "디자인 작업실",
+      "layout_name": "디자인 작업실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-285-experience",
+          "version": "v001",
+          "occupation_id": "career-net-285",
+          "occupation_name": "광고디자이너"
+        },
+        {
+          "scenario_id": "career-net-10101-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10101",
+          "occupation_name": "메타버스 크리에이터"
+        },
+        {
+          "scenario_id": "career-net-10067-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10067",
+          "occupation_name": "비디오게임디자이너"
+        },
+        {
+          "scenario_id": "career-net-326-experience",
+          "version": "v001",
+          "occupation_id": "career-net-326",
+          "occupation_name": "인테리어디자이너"
+        },
+        {
+          "scenario_id": "career-net-125-experience",
+          "version": "v001",
+          "occupation_id": "career-net-125",
+          "occupation_name": "캐드원"
+        },
+        {
+          "scenario_id": "career-net-458-experience",
+          "version": "v001",
+          "occupation_id": "career-net-458",
+          "occupation_name": "컴퓨터그래픽디자이너"
+        },
+        {
+          "scenario_id": "career-net-443-experience",
+          "version": "v001",
+          "occupation_id": "career-net-443",
+          "occupation_name": "웹디자이너"
+        },
+        {
+          "scenario_id": "career-net-345-experience",
+          "version": "v001",
+          "occupation_id": "career-net-345",
+          "occupation_name": "패션코디네이터"
+        },
+        {
+          "scenario_id": "career-net-937-experience",
+          "version": "v001",
+          "occupation_id": "career-net-937",
+          "occupation_name": "시각디자이너"
+        },
+        {
+          "scenario_id": "career-net-10003-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10003",
+          "occupation_name": "UX 디자인 컨설턴트"
+        },
+        {
+          "scenario_id": "career-net-284-experience",
+          "version": "v001",
+          "occupation_id": "career-net-284",
+          "occupation_name": "간판제작원"
+        },
+        {
+          "scenario_id": "career-net-305-experience",
+          "version": "v001",
+          "occupation_id": "career-net-305",
+          "occupation_name": "보석디자이너"
+        },
+        {
+          "scenario_id": "career-net-927-experience",
+          "version": "v001",
+          "occupation_id": "career-net-927",
+          "occupation_name": "북디자이너"
+        },
+        {
+          "scenario_id": "career-net-922-experience",
+          "version": "v001",
+          "occupation_id": "career-net-922",
+          "occupation_name": "애니메이션작가"
+        },
+        {
+          "scenario_id": "career-net-10072-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10072",
+          "occupation_name": "웹툰작가"
+        },
+        {
+          "scenario_id": "career-net-332-experience",
+          "version": "v001",
+          "occupation_id": "career-net-332",
+          "occupation_name": "제품디자이너"
+        },
+        {
+          "scenario_id": "career-net-339-experience",
+          "version": "v001",
+          "occupation_id": "career-net-339",
+          "occupation_name": "캐릭터디자이너"
+        },
+        {
+          "scenario_id": "career-net-340-experience",
+          "version": "v001",
+          "occupation_id": "career-net-340",
+          "occupation_name": "컬러리스트"
+        },
+        {
+          "scenario_id": "career-net-344-experience",
+          "version": "v001",
+          "occupation_id": "career-net-344",
+          "occupation_name": "패션디자이너"
+        },
+        {
+          "scenario_id": "career-net-441-experience",
+          "version": "v001",
+          "occupation_id": "career-net-441",
+          "occupation_name": "애니메이터"
+        },
+        {
+          "scenario_id": "career-net-212-experience",
+          "version": "v001",
+          "occupation_id": "career-net-212",
+          "occupation_name": "도시 및 교통설계전문가"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-028",
+      "image_version": "v001",
+      "image_historical_name": "미술 작업실",
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-028"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "미술 작업실",
+      "runtime_name_at_read": "미술 작업실",
+      "production_name": "미술 작업실",
+      "layout_name": "미술 작업실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-327-experience",
+          "version": "v001",
+          "occupation_id": "career-net-327",
+          "occupation_name": "일러스트레이터"
+        },
+        {
+          "scenario_id": "career-net-291-experience",
+          "version": "v001",
+          "occupation_id": "career-net-291",
+          "occupation_name": "만화가"
+        },
+        {
+          "scenario_id": "career-net-349-experience",
+          "version": "v001",
+          "occupation_id": "career-net-349",
+          "occupation_name": "화가"
+        },
+        {
+          "scenario_id": "career-net-1109-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1109",
+          "occupation_name": "서예가"
+        },
+        {
+          "scenario_id": "career-net-333-experience",
+          "version": "v001",
+          "occupation_id": "career-net-333",
+          "occupation_name": "조각가"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-029",
+      "image_version": "v001",
+      "image_historical_name": "공예 작업실",
+      "prompt_ref": {
+        "version": "v001",
+        "prompt_id": "PRM-029",
+        "catalog": "panorama-prompts-v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "공예 작업실",
+      "runtime_name_at_read": "공예 작업실",
+      "production_name": "공예 작업실",
+      "layout_name": "공예 작업실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-1142-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1142",
+          "occupation_name": "의복수선원"
+        },
+        {
+          "scenario_id": "career-net-175-experience",
+          "version": "v001",
+          "occupation_id": "career-net-175",
+          "occupation_name": "한복사"
+        },
+        {
+          "scenario_id": "career-net-159-experience",
+          "version": "v001",
+          "occupation_id": "career-net-159",
+          "occupation_name": "가구제조,수리원"
+        },
+        {
+          "scenario_id": "career-net-740-experience",
+          "version": "v001",
+          "occupation_id": "career-net-740",
+          "occupation_name": "귀금속 및 보석세공원"
+        },
+        {
+          "scenario_id": "career-net-64-experience",
+          "version": "v001",
+          "occupation_id": "career-net-64",
+          "occupation_name": "도자기제조원"
+        },
+        {
+          "scenario_id": "career-net-68-experience",
+          "version": "v001",
+          "occupation_id": "career-net-68",
+          "occupation_name": "목공"
+        },
+        {
+          "scenario_id": "career-net-318-experience",
+          "version": "v001",
+          "occupation_id": "career-net-318",
+          "occupation_name": "악기제조원"
+        },
+        {
+          "scenario_id": "career-net-164-experience",
+          "version": "v001",
+          "occupation_id": "career-net-164",
+          "occupation_name": "양장사 및 양복사"
+        },
+        {
+          "scenario_id": "career-net-50-experience",
+          "version": "v001",
+          "occupation_id": "career-net-50",
+          "occupation_name": "제화원"
+        },
+        {
+          "scenario_id": "career-net-295-experience",
+          "version": "v001",
+          "occupation_id": "career-net-295",
+          "occupation_name": "패턴사"
+        },
+        {
+          "scenario_id": "career-net-1119-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1119",
+          "occupation_name": "구두미화원 및 수선원"
+        },
+        {
+          "scenario_id": "career-net-929-experience",
+          "version": "v001",
+          "occupation_id": "career-net-929",
+          "occupation_name": "공예원"
+        },
+        {
+          "scenario_id": "career-net-316-experience",
+          "version": "v001",
+          "occupation_id": "career-net-316",
+          "occupation_name": "플로리스트"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-030",
+      "image_version": "v001",
+      "image_historical_name": "촬영 스튜디오",
+      "prompt_ref": {
+        "prompt_id": "PRM-030",
+        "version": "v001",
+        "catalog": "panorama-prompts-v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "촬영 스튜디오",
+      "runtime_name_at_read": "촬영 스튜디오",
+      "production_name": "촬영 스튜디오",
+      "layout_name": "촬영 스튜디오",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-10022-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10022",
+          "occupation_name": "드론 콘텐츠 전문가"
+        },
+        {
+          "scenario_id": "career-net-976-experience",
+          "version": "v001",
+          "occupation_id": "career-net-976",
+          "occupation_name": "사진기자"
+        },
+        {
+          "scenario_id": "career-net-337-experience",
+          "version": "v001",
+          "occupation_id": "career-net-337",
+          "occupation_name": "촬영기사"
+        },
+        {
+          "scenario_id": "career-net-310-experience",
+          "version": "v001",
+          "occupation_id": "career-net-310",
+          "occupation_name": "사진작가"
+        },
+        {
+          "scenario_id": "career-net-10021-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10021",
+          "occupation_name": "개인미디어 콘텐츠제작자(크리에이터)"
+        },
+        {
+          "scenario_id": "career-net-10039-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10039",
+          "occupation_name": "드론 전문가"
+        },
+        {
+          "scenario_id": "career-net-10070-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10070",
+          "occupation_name": "무인항공촬영감독"
+        },
+        {
+          "scenario_id": "career-net-309-experience",
+          "version": "v001",
+          "occupation_id": "career-net-309",
+          "occupation_name": "비디오저널리스트(VJ)"
+        },
+        {
+          "scenario_id": "career-net-975-experience",
+          "version": "v001",
+          "occupation_id": "career-net-975",
+          "occupation_name": "사진사"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-031",
+      "image_version": "v001",
+      "image_historical_name": "방송 스튜디오",
+      "prompt_ref": {
+        "prompt_id": "PRM-031",
+        "version": "v001",
+        "catalog": "panorama-prompts-v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "방송 스튜디오",
+      "runtime_name_at_read": "방송 스튜디오",
+      "production_name": "방송 스튜디오",
+      "layout_name": "방송 스튜디오",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-10020-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10020",
+          "occupation_name": "게임 방송 프로듀서"
+        },
+        {
+          "scenario_id": "career-net-265-experience",
+          "version": "v001",
+          "occupation_id": "career-net-265",
+          "occupation_name": "리포터"
+        },
+        {
+          "scenario_id": "career-net-301-experience",
+          "version": "v001",
+          "occupation_id": "career-net-301",
+          "occupation_name": "방송연출가"
+        },
+        {
+          "scenario_id": "career-net-270-experience",
+          "version": "v001",
+          "occupation_id": "career-net-270",
+          "occupation_name": "성우"
+        },
+        {
+          "scenario_id": "career-net-178-experience",
+          "version": "v001",
+          "occupation_id": "career-net-178",
+          "occupation_name": "쇼핑호스트"
+        },
+        {
+          "scenario_id": "career-net-1437-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1437",
+          "occupation_name": "스포츠해설가"
+        },
+        {
+          "scenario_id": "career-net-271-experience",
+          "version": "v001",
+          "occupation_id": "career-net-271",
+          "occupation_name": "아나운서"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-032",
+      "image_version": "v001",
+      "image_historical_name": "영상 편집실",
+      "prompt_ref": {
+        "prompt_id": "PRM-032",
+        "version": "v001",
+        "catalog": "panorama-prompts-v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "영상 편집실",
+      "runtime_name_at_read": "영상 편집실",
+      "production_name": "영상 편집실",
+      "layout_name": "영상 편집실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-59-experience",
+          "version": "v001",
+          "occupation_id": "career-net-59",
+          "occupation_name": "녹음기사"
+        },
+        {
+          "scenario_id": "career-net-101-experience",
+          "version": "v001",
+          "occupation_id": "career-net-101",
+          "occupation_name": "영사기사"
+        },
+        {
+          "scenario_id": "career-net-322-experience",
+          "version": "v001",
+          "occupation_id": "career-net-322",
+          "occupation_name": "영화감독"
+        },
+        {
+          "scenario_id": "career-net-915-experience",
+          "version": "v001",
+          "occupation_id": "career-net-915",
+          "occupation_name": "음향기사"
+        },
+        {
+          "scenario_id": "career-net-916-experience",
+          "version": "v001",
+          "occupation_id": "career-net-916",
+          "occupation_name": "특수효과기술자"
+        },
+        {
+          "scenario_id": "career-net-346-experience",
+          "version": "v001",
+          "occupation_id": "career-net-346",
+          "occupation_name": "편집기사"
+        },
+        {
+          "scenario_id": "career-net-328-experience",
+          "version": "v001",
+          "occupation_id": "career-net-328",
+          "occupation_name": "작곡가"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-033",
+      "image_version": "v001",
+      "image_historical_name": "공연 무대",
+      "prompt_ref": {
+        "version": "v001",
+        "prompt_id": "PRM-033",
+        "catalog": "panorama-prompts-v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "공연 무대",
+      "runtime_name_at_read": "공연 무대",
+      "production_name": "공연 무대",
+      "layout_name": "공연 무대",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-1259-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1259",
+          "occupation_name": "마술사"
+        },
+        {
+          "scenario_id": "career-net-281-experience",
+          "version": "v001",
+          "occupation_id": "career-net-281",
+          "occupation_name": "개그맨"
+        },
+        {
+          "scenario_id": "career-net-966-experience",
+          "version": "v001",
+          "occupation_id": "career-net-966",
+          "occupation_name": "안무가"
+        },
+        {
+          "scenario_id": "career-net-303-experience",
+          "version": "v001",
+          "occupation_id": "career-net-303",
+          "occupation_name": "연기자"
+        },
+        {
+          "scenario_id": "career-net-911-experience",
+          "version": "v001",
+          "occupation_id": "career-net-911",
+          "occupation_name": "조명기사"
+        },
+        {
+          "scenario_id": "career-net-280-experience",
+          "version": "v001",
+          "occupation_id": "career-net-280",
+          "occupation_name": "가수"
+        },
+        {
+          "scenario_id": "career-net-286-experience",
+          "version": "v001",
+          "occupation_id": "career-net-286",
+          "occupation_name": "국악인"
+        },
+        {
+          "scenario_id": "career-net-294-experience",
+          "version": "v001",
+          "occupation_id": "career-net-294",
+          "occupation_name": "모델"
+        },
+        {
+          "scenario_id": "career-net-296-experience",
+          "version": "v001",
+          "occupation_id": "career-net-296",
+          "occupation_name": "무대감독"
+        },
+        {
+          "scenario_id": "career-net-298-experience",
+          "version": "v001",
+          "occupation_id": "career-net-298",
+          "occupation_name": "무용가"
+        },
+        {
+          "scenario_id": "career-net-304-experience",
+          "version": "v001",
+          "occupation_id": "career-net-304",
+          "occupation_name": "백댄서(백업댄서)"
+        },
+        {
+          "scenario_id": "career-net-313-experience",
+          "version": "v001",
+          "occupation_id": "career-net-313",
+          "occupation_name": "성악가"
+        },
+        {
+          "scenario_id": "career-net-314-experience",
+          "version": "v001",
+          "occupation_id": "career-net-314",
+          "occupation_name": "스턴트맨"
+        },
+        {
+          "scenario_id": "career-net-320-experience",
+          "version": "v001",
+          "occupation_id": "career-net-320",
+          "occupation_name": "연극연출가"
+        },
+        {
+          "scenario_id": "career-net-317-experience",
+          "version": "v001",
+          "occupation_id": "career-net-317",
+          "occupation_name": "연주가"
+        },
+        {
+          "scenario_id": "career-net-335-experience",
+          "version": "v001",
+          "occupation_id": "career-net-335",
+          "occupation_name": "지휘자"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-034",
+      "image_version": "v001",
+      "image_historical_name": "전시실",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-034",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "전시실",
+      "runtime_name_at_read": "전시실",
+      "production_name": "전시실",
+      "layout_name": "전시실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-10019-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10019",
+          "occupation_name": "디지털 큐레이터"
+        },
+        {
+          "scenario_id": "career-net-299-experience",
+          "version": "v001",
+          "occupation_id": "career-net-299",
+          "occupation_name": "문화재보존원"
+        },
+        {
+          "scenario_id": "career-net-348-experience",
+          "version": "v001",
+          "occupation_id": "career-net-348",
+          "occupation_name": "학예사(큐레이터)"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-035",
+      "image_version": "v001",
+      "image_historical_name": "문화 활동실",
+      "prompt_ref": {
+        "prompt_id": "PRM-035",
+        "catalog": "panorama-prompts-v001",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "문화 활동실",
+      "runtime_name_at_read": "문화 활동실",
+      "production_name": "문화 활동실",
+      "layout_name": "문화 활동실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-268-experience",
+          "version": "v001",
+          "occupation_id": "career-net-268",
+          "occupation_name": "사서"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-036",
+      "image_version": "v001",
+      "image_historical_name": "건축 작업 구역",
+      "prompt_ref": {
+        "prompt_id": "PRM-036",
+        "version": "v001",
+        "catalog": "panorama-prompts-v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "건축 작업 구역",
+      "runtime_name_at_read": "건축 작업 구역",
+      "production_name": "건축 작업 구역",
+      "layout_name": "건축 작업 구역",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-1277-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1277",
+          "occupation_name": "건축사"
+        },
+        {
+          "scenario_id": "career-net-1132-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1132",
+          "occupation_name": "단열원"
+        },
+        {
+          "scenario_id": "career-net-155-experience",
+          "version": "v001",
+          "occupation_id": "career-net-155",
+          "occupation_name": "바닥재시공원"
+        },
+        {
+          "scenario_id": "career-net-87-experience",
+          "version": "v001",
+          "occupation_id": "career-net-87",
+          "occupation_name": "석공"
+        },
+        {
+          "scenario_id": "career-net-1133-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1133",
+          "occupation_name": "유리부착원"
+        },
+        {
+          "scenario_id": "career-net-1131-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1131",
+          "occupation_name": "전통건축원"
+        },
+        {
+          "scenario_id": "career-net-131-experience",
+          "version": "v001",
+          "occupation_id": "career-net-131",
+          "occupation_name": "철골공"
+        },
+        {
+          "scenario_id": "career-net-1090-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1090",
+          "occupation_name": "콘크리트공"
+        },
+        {
+          "scenario_id": "career-net-42-experience",
+          "version": "v001",
+          "occupation_id": "career-net-42",
+          "occupation_name": "건설공사품질관리원"
+        },
+        {
+          "scenario_id": "career-net-1138-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1138",
+          "occupation_name": "새시원"
+        },
+        {
+          "scenario_id": "career-net-77-experience",
+          "version": "v001",
+          "occupation_id": "career-net-77",
+          "occupation_name": "건설기계운전원"
+        },
+        {
+          "scenario_id": "career-net-102-experience",
+          "version": "v001",
+          "occupation_id": "career-net-102",
+          "occupation_name": "용접원"
+        },
+        {
+          "scenario_id": "career-net-49-experience",
+          "version": "v001",
+          "occupation_id": "career-net-49",
+          "occupation_name": "광원 및 채석원"
+        },
+        {
+          "scenario_id": "career-net-70-experience",
+          "version": "v001",
+          "occupation_id": "career-net-70",
+          "occupation_name": "미장원"
+        },
+        {
+          "scenario_id": "career-net-65-experience",
+          "version": "v001",
+          "occupation_id": "career-net-65",
+          "occupation_name": "건물도장원"
+        },
+        {
+          "scenario_id": "career-net-1130-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1130",
+          "occupation_name": "건설견적원"
+        },
+        {
+          "scenario_id": "career-net-46-experience",
+          "version": "v001",
+          "occupation_id": "career-net-46",
+          "occupation_name": "건축공학기술자"
+        },
+        {
+          "scenario_id": "career-net-63-experience",
+          "version": "v001",
+          "occupation_id": "career-net-63",
+          "occupation_name": "도배원"
+        },
+        {
+          "scenario_id": "career-net-72-experience",
+          "version": "v001",
+          "occupation_id": "career-net-72",
+          "occupation_name": "방수원"
+        },
+        {
+          "scenario_id": "career-net-75-experience",
+          "version": "v001",
+          "occupation_id": "career-net-75",
+          "occupation_name": "조적공"
+        },
+        {
+          "scenario_id": "career-net-592-experience",
+          "version": "v001",
+          "occupation_id": "career-net-592",
+          "occupation_name": "크레인 및 호이스트운전원"
+        },
+        {
+          "scenario_id": "career-net-137-experience",
+          "version": "v001",
+          "occupation_id": "career-net-137",
+          "occupation_name": "토목공학기술자"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-037",
+      "image_version": "v001",
+      "image_historical_name": "설비 작업 구역",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-037",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "설비 작업 구역",
+      "runtime_name_at_read": "설비 작업 구역",
+      "production_name": "설비 작업 구역",
+      "layout_name": "설비 작업 구역",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-1004-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1004",
+          "occupation_name": "환경설비기술자"
+        },
+        {
+          "scenario_id": "career-net-84-experience",
+          "version": "v001",
+          "occupation_id": "career-net-84",
+          "occupation_name": "산업안전관리원"
+        },
+        {
+          "scenario_id": "career-net-113-experience",
+          "version": "v001",
+          "occupation_id": "career-net-113",
+          "occupation_name": "전공"
+        },
+        {
+          "scenario_id": "career-net-74-experience",
+          "version": "v001",
+          "occupation_id": "career-net-74",
+          "occupation_name": "배관원"
+        },
+        {
+          "scenario_id": "career-net-1007-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1007",
+          "occupation_name": "상수도기술자"
+        },
+        {
+          "scenario_id": "career-net-1-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1",
+          "occupation_name": "가스ㆍ수도ㆍ전기 계기 검침원 및 안전점검원"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-038",
+      "image_version": "v001",
+      "image_historical_name": "환경 조사 지점",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-038"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "환경 조사 지점",
+      "runtime_name_at_read": "환경 조사 지점",
+      "production_name": "환경 조사 지점",
+      "layout_name": "환경 조사 지점",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-1092-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1092",
+          "occupation_name": "GIS전문가"
+        },
+        {
+          "scenario_id": "career-net-193-experience",
+          "version": "v001",
+          "occupation_id": "career-net-193",
+          "occupation_name": "조경기술자"
+        },
+        {
+          "scenario_id": "career-net-10050-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10050",
+          "occupation_name": "지리정보시스템기사"
+        },
+        {
+          "scenario_id": "career-net-32-experience",
+          "version": "v001",
+          "occupation_id": "career-net-32",
+          "occupation_name": "측량사"
+        },
+        {
+          "scenario_id": "career-net-997-experience",
+          "version": "v001",
+          "occupation_id": "career-net-997",
+          "occupation_name": "토양환경기술자"
+        },
+        {
+          "scenario_id": "career-net-994-experience",
+          "version": "v001",
+          "occupation_id": "career-net-994",
+          "occupation_name": "환경컨설턴트"
+        },
+        {
+          "scenario_id": "career-net-61-experience",
+          "version": "v001",
+          "occupation_id": "career-net-61",
+          "occupation_name": "대기환경기술자"
+        },
+        {
+          "scenario_id": "career-net-1255-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1255",
+          "occupation_name": "수질환경연구원"
+        },
+        {
+          "scenario_id": "career-net-30-experience",
+          "version": "v001",
+          "occupation_id": "career-net-30",
+          "occupation_name": "지질학연구원"
+        },
+        {
+          "scenario_id": "career-net-1006-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1006",
+          "occupation_name": "해양환경기사"
+        },
+        {
+          "scenario_id": "career-net-1080-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1080",
+          "occupation_name": "환경공학기술자 및 연구원"
+        },
+        {
+          "scenario_id": "career-net-1281-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1281",
+          "occupation_name": "환경영향평가원"
+        },
+        {
+          "scenario_id": "career-net-192-experience",
+          "version": "v001",
+          "occupation_id": "career-net-192",
+          "occupation_name": "조경원"
+        },
+        {
+          "scenario_id": "career-net-1156-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1156",
+          "occupation_name": "조림 영림 및 벌목원"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-039",
+      "image_version": "v001",
+      "image_historical_name": "관측 지점",
+      "prompt_ref": {
+        "version": "v001",
+        "prompt_id": "PRM-039",
+        "catalog": "panorama-prompts-v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "관측 지점",
+      "runtime_name_at_read": "관측 지점",
+      "production_name": "관측 지점",
+      "layout_name": "관측 지점",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-39-experience",
+          "version": "v001",
+          "occupation_id": "career-net-39",
+          "occupation_name": "해양학연구원"
+        },
+        {
+          "scenario_id": "career-net-6-experience",
+          "version": "v001",
+          "occupation_id": "career-net-6",
+          "occupation_name": "기상연구원"
+        },
+        {
+          "scenario_id": "career-net-10114-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10114",
+          "occupation_name": "우주전파예보관"
+        },
+        {
+          "scenario_id": "career-net-5-experience",
+          "version": "v001",
+          "occupation_id": "career-net-5",
+          "occupation_name": "일기예보관"
+        },
+        {
+          "scenario_id": "career-net-29-experience",
+          "version": "v001",
+          "occupation_id": "career-net-29",
+          "occupation_name": "지리학연구원"
+        },
+        {
+          "scenario_id": "career-net-31-experience",
+          "version": "v001",
+          "occupation_id": "career-net-31",
+          "occupation_name": "천문학연구원"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-040",
+      "image_version": "v001",
+      "image_historical_name": "재배지",
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-040"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "재배지",
+      "runtime_name_at_read": "재배지",
+      "production_name": "재배지",
+      "layout_name": "재배지",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-183-experience",
+          "version": "v001",
+          "occupation_id": "career-net-183",
+          "occupation_name": "곡식작물재배자"
+        },
+        {
+          "scenario_id": "career-net-1155-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1155",
+          "occupation_name": "과수작물재배자"
+        },
+        {
+          "scenario_id": "career-net-1154-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1154",
+          "occupation_name": "채소 및 특용작물재배자"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-041",
+      "image_version": "v001",
+      "image_historical_name": "온실",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-041"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "온실",
+      "runtime_name_at_read": "온실",
+      "production_name": "온실",
+      "layout_name": "온실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-963-experience",
+          "version": "v001",
+          "occupation_id": "career-net-963",
+          "occupation_name": "원예기술자"
+        },
+        {
+          "scenario_id": "career-net-182-experience",
+          "version": "v001",
+          "occupation_id": "career-net-182",
+          "occupation_name": "농업기술자"
+        },
+        {
+          "scenario_id": "career-net-10008-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10008",
+          "occupation_name": "스마트 팜 구축가"
+        },
+        {
+          "scenario_id": "career-net-10106-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10106",
+          "occupation_name": "스마트팜 운영자"
+        },
+        {
+          "scenario_id": "career-net-10007-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10007",
+          "occupation_name": "정밀 농업기술자"
+        },
+        {
+          "scenario_id": "career-net-954-experience",
+          "version": "v001",
+          "occupation_id": "career-net-954",
+          "occupation_name": "화훼재배기술자"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-042",
+      "image_version": "v001",
+      "image_historical_name": "축사",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-042",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "축사",
+      "runtime_name_at_read": "축사",
+      "production_name": "축사",
+      "layout_name": "축사",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-174-experience",
+          "version": "v001",
+          "occupation_id": "career-net-174",
+          "occupation_name": "가축사육자"
+        },
+        {
+          "scenario_id": "career-net-187-experience",
+          "version": "v001",
+          "occupation_id": "career-net-187",
+          "occupation_name": "양식원"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-043",
+      "image_version": "v001",
+      "image_historical_name": "동물 관리실",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-043"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "동물 관리실",
+      "runtime_name_at_read": "동물 관리실",
+      "production_name": "동물 관리실",
+      "layout_name": "동물 관리실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-10046-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10046",
+          "occupation_name": "동물보호보안관"
+        },
+        {
+          "scenario_id": "career-net-10018-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10018",
+          "occupation_name": "반려동물 훈련·상담사"
+        },
+        {
+          "scenario_id": "career-net-15-experience",
+          "version": "v001",
+          "occupation_id": "career-net-15",
+          "occupation_name": "수의사"
+        },
+        {
+          "scenario_id": "career-net-319-experience",
+          "version": "v001",
+          "occupation_id": "career-net-319",
+          "occupation_name": "반려동물미용사"
+        },
+        {
+          "scenario_id": "career-net-10048-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10048",
+          "occupation_name": "수의테크니션"
+        },
+        {
+          "scenario_id": "career-net-10060-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10060",
+          "occupation_name": "애견테라피스트"
+        },
+        {
+          "scenario_id": "career-net-10071-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10071",
+          "occupation_name": "동물랭글러"
+        },
+        {
+          "scenario_id": "career-net-186-experience",
+          "version": "v001",
+          "occupation_id": "career-net-186",
+          "occupation_name": "동물조련사"
+        },
+        {
+          "scenario_id": "career-net-10073-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10073",
+          "occupation_name": "아쿠아리스트"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-044",
+      "image_version": "v001",
+      "image_historical_name": "선박 갑판",
+      "prompt_ref": {
+        "prompt_id": "PRM-044",
+        "catalog": "panorama-prompts-v001",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "선박 갑판",
+      "runtime_name_at_read": "선박 갑판",
+      "production_name": "선박 갑판",
+      "layout_name": "선박 갑판",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-10017-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10017",
+          "occupation_name": "해양 레저 전문가"
+        },
+        {
+          "scenario_id": "career-net-1112-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1112",
+          "occupation_name": "선박갑판원"
+        },
+        {
+          "scenario_id": "career-net-189-experience",
+          "version": "v001",
+          "occupation_id": "career-net-189",
+          "occupation_name": "연근해 어부 및 해녀"
+        },
+        {
+          "scenario_id": "career-net-1157-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1157",
+          "occupation_name": "원양어부"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-045",
+      "image_version": "v001",
+      "image_historical_name": "조타실",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-045",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "조타실",
+      "runtime_name_at_read": "조타실",
+      "production_name": "조타실",
+      "layout_name": "조타실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-1110-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1110",
+          "occupation_name": "도선사"
+        },
+        {
+          "scenario_id": "career-net-176-experience",
+          "version": "v001",
+          "occupation_id": "career-net-176",
+          "occupation_name": "선장 및 항해사"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-046",
+      "image_version": "v001",
+      "image_historical_name": "부두",
+      "prompt_ref": {
+        "prompt_id": "PRM-046",
+        "version": "v001",
+        "catalog": "panorama-prompts-v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "부두",
+      "runtime_name_at_read": "부두",
+      "production_name": "부두",
+      "layout_name": "부두",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-1081-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1081",
+          "occupation_name": "해양공학기술자"
+        },
+        {
+          "scenario_id": "career-net-90-experience",
+          "version": "v001",
+          "occupation_id": "career-net-90",
+          "occupation_name": "조선공학기술자"
+        },
+        {
+          "scenario_id": "career-net-195-experience",
+          "version": "v001",
+          "occupation_id": "career-net-195",
+          "occupation_name": "해양수산기술자"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-047",
+      "image_version": "v001",
+      "image_historical_name": "체육관",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-047",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "체육관",
+      "runtime_name_at_read": "체육관",
+      "production_name": "체육관",
+      "layout_name": "체육관",
+      "editorial_primary_candidates": [],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-048",
+      "image_version": "v001",
+      "image_historical_name": "운동 지도실",
+      "prompt_ref": {
+        "prompt_id": "PRM-048",
+        "version": "v001",
+        "catalog": "panorama-prompts-v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "운동 지도실",
+      "runtime_name_at_read": "운동 지도실",
+      "production_name": "운동 지도실",
+      "layout_name": "운동 지도실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-369-experience",
+          "version": "v001",
+          "occupation_id": "career-net-369",
+          "occupation_name": "물리치료사"
+        },
+        {
+          "scenario_id": "career-net-1107-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1107",
+          "occupation_name": "안마사"
+        },
+        {
+          "scenario_id": "career-net-386-experience",
+          "version": "v001",
+          "occupation_id": "career-net-386",
+          "occupation_name": "언어치료사"
+        },
+        {
+          "scenario_id": "career-net-401-experience",
+          "version": "v001",
+          "occupation_id": "career-net-401",
+          "occupation_name": "작업치료사"
+        },
+        {
+          "scenario_id": "career-net-421-experience",
+          "version": "v001",
+          "occupation_id": "career-net-421",
+          "occupation_name": "스포츠강사"
+        },
+        {
+          "scenario_id": "career-net-396-experience",
+          "version": "v001",
+          "occupation_id": "career-net-396",
+          "occupation_name": "음악치료사"
+        },
+        {
+          "scenario_id": "career-net-392-experience",
+          "version": "v001",
+          "occupation_id": "career-net-392",
+          "occupation_name": "스포츠트레이너"
+        },
+        {
+          "scenario_id": "career-net-400-experience",
+          "version": "v001",
+          "occupation_id": "career-net-400",
+          "occupation_name": "운동감독"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-049",
+      "image_version": "v001",
+      "image_historical_name": "경기 구역",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-049"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "경기 구역",
+      "runtime_name_at_read": "경기 구역",
+      "production_name": "경기 구역",
+      "layout_name": "경기 구역",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-391-experience",
+          "version": "v001",
+          "occupation_id": "career-net-391",
+          "occupation_name": "운동경기심판"
+        },
+        {
+          "scenario_id": "career-net-336-experience",
+          "version": "v001",
+          "occupation_id": "career-net-336",
+          "occupation_name": "운동선수"
+        },
+        {
+          "scenario_id": "career-net-1126-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1126",
+          "occupation_name": "치어리더"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-050",
+      "image_version": "v001",
+      "image_historical_name": "수사실",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-050"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "수사실",
+      "runtime_name_at_read": "수사실",
+      "production_name": "수사실",
+      "layout_name": "수사실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-359-experience",
+          "version": "v001",
+          "occupation_id": "career-net-359",
+          "occupation_name": "경찰관"
+        },
+        {
+          "scenario_id": "career-net-363-experience",
+          "version": "v001",
+          "occupation_id": "career-net-363",
+          "occupation_name": "교도관"
+        },
+        {
+          "scenario_id": "career-net-10074-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10074",
+          "occupation_name": "범죄심리분석관(프로파일러)"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-051",
+      "image_version": "v001",
+      "image_historical_name": "증거 분석실",
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-051"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "증거 분석실",
+      "runtime_name_at_read": "증거 분석실",
+      "production_name": "증거 분석실",
+      "layout_name": "증거 분석실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-10030-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10030",
+          "occupation_name": "디지털 포렌식 수사관"
+        },
+        {
+          "scenario_id": "career-net-10064-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10064",
+          "occupation_name": "범죄과학수사관"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-052",
+      "image_version": "v001",
+      "image_historical_name": "법정",
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-052"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "법정",
+      "runtime_name_at_read": "법정",
+      "production_name": "법정",
+      "layout_name": "법정",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-199-experience",
+          "version": "v001",
+          "occupation_id": "career-net-199",
+          "occupation_name": "검사"
+        },
+        {
+          "scenario_id": "career-net-414-experience",
+          "version": "v001",
+          "occupation_id": "career-net-414",
+          "occupation_name": "판사"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-053",
+      "image_version": "v001",
+      "image_historical_name": "물류 창고",
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-053"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "물류 창고",
+      "runtime_name_at_read": "물류 창고",
+      "production_name": "물류 창고",
+      "layout_name": "물류 창고",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-215-experience",
+          "version": "v001",
+          "occupation_id": "career-net-215",
+          "occupation_name": "물류관리사"
+        },
+        {
+          "scenario_id": "career-net-1153-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1153",
+          "occupation_name": "포장원"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-054",
+      "image_version": "v001",
+      "image_historical_name": "운송 조종 공간",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-054",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "운송 조종 공간",
+      "runtime_name_at_read": "운송 조종 공간",
+      "production_name": "운송 조종 공간",
+      "layout_name": "운송 조종 공간",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-372-experience",
+          "version": "v001",
+          "occupation_id": "career-net-372",
+          "occupation_name": "버스운전기사"
+        },
+        {
+          "scenario_id": "career-net-426-experience",
+          "version": "v001",
+          "occupation_id": "career-net-426",
+          "occupation_name": "택시운전기사"
+        },
+        {
+          "scenario_id": "career-net-1078-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1078",
+          "occupation_name": "대형트럭 및 특수차운전원"
+        },
+        {
+          "scenario_id": "career-net-1111-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1111",
+          "occupation_name": "지게차운전원"
+        },
+        {
+          "scenario_id": "career-net-1125-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1125",
+          "occupation_name": "선박 및 열차객실승무원"
+        },
+        {
+          "scenario_id": "career-net-1438-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1438",
+          "occupation_name": "카레이서"
+        },
+        {
+          "scenario_id": "career-net-418-experience",
+          "version": "v001",
+          "occupation_id": "career-net-418",
+          "occupation_name": "비행기승무원"
+        },
+        {
+          "scenario_id": "career-net-150-experience",
+          "version": "v001",
+          "occupation_id": "career-net-150",
+          "occupation_name": "비행기조종사"
+        },
+        {
+          "scenario_id": "career-net-390-experience",
+          "version": "v001",
+          "occupation_id": "career-net-390",
+          "occupation_name": "신호원 및 수송원"
+        },
+        {
+          "scenario_id": "career-net-132-experience",
+          "version": "v001",
+          "occupation_id": "career-net-132",
+          "occupation_name": "철도 및 지하철기관사"
+        },
+        {
+          "scenario_id": "career-net-142-experience",
+          "version": "v001",
+          "occupation_id": "career-net-142",
+          "occupation_name": "트럭운전기사"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-055",
+      "image_version": "v001",
+      "image_historical_name": "운송 거점",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-055",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "운송 거점",
+      "runtime_name_at_read": "운송 거점",
+      "production_name": "운송 거점",
+      "layout_name": "운송 거점",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-371-experience",
+          "version": "v001",
+          "occupation_id": "career-net-371",
+          "occupation_name": "택배원"
+        },
+        {
+          "scenario_id": "career-net-383-experience",
+          "version": "v001",
+          "occupation_id": "career-net-383",
+          "occupation_name": "우편물집배원"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-056",
+      "image_version": "v001",
+      "image_historical_name": "금융 창구",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-056",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "금융 창구",
+      "runtime_name_at_read": "금융 창구",
+      "production_name": "금융 창구",
+      "layout_name": "금융 창구",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-207-experience",
+          "version": "v001",
+          "occupation_id": "career-net-207",
+          "occupation_name": "관세사"
+        },
+        {
+          "scenario_id": "career-net-1101-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1101",
+          "occupation_name": "신용관련추심원"
+        },
+        {
+          "scenario_id": "career-net-231-experience",
+          "version": "v001",
+          "occupation_id": "career-net-231",
+          "occupation_name": "신용조사원"
+        },
+        {
+          "scenario_id": "career-net-255-experience",
+          "version": "v001",
+          "occupation_id": "career-net-255",
+          "occupation_name": "은행출납사무원"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-057",
+      "image_version": "v001",
+      "image_historical_name": "금융 상담실",
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-057"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "금융 상담실",
+      "runtime_name_at_read": "금융 상담실",
+      "production_name": "금융 상담실",
+      "layout_name": "금융 상담실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-223-experience",
+          "version": "v001",
+          "occupation_id": "career-net-223",
+          "occupation_name": "선물중개인"
+        },
+        {
+          "scenario_id": "career-net-226-experience",
+          "version": "v001",
+          "occupation_id": "career-net-226",
+          "occupation_name": "손해사정사"
+        },
+        {
+          "scenario_id": "career-net-239-experience",
+          "version": "v001",
+          "occupation_id": "career-net-239",
+          "occupation_name": "증권분석가"
+        },
+        {
+          "scenario_id": "career-net-950-experience",
+          "version": "v001",
+          "occupation_id": "career-net-950",
+          "occupation_name": "투자분석가(애널리스트)"
+        },
+        {
+          "scenario_id": "career-net-10111-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10111",
+          "occupation_name": "핀테크 전문가"
+        },
+        {
+          "scenario_id": "career-net-244-experience",
+          "version": "v001",
+          "occupation_id": "career-net-244",
+          "occupation_name": "금융자산운용가(펀드매니저)"
+        },
+        {
+          "scenario_id": "career-net-217-experience",
+          "version": "v001",
+          "occupation_id": "career-net-217",
+          "occupation_name": "보험계리인"
+        },
+        {
+          "scenario_id": "career-net-222-experience",
+          "version": "v001",
+          "occupation_id": "career-net-222",
+          "occupation_name": "생활설계사"
+        },
+        {
+          "scenario_id": "career-net-234-experience",
+          "version": "v001",
+          "occupation_id": "career-net-234",
+          "occupation_name": "외환딜러"
+        },
+        {
+          "scenario_id": "career-net-240-experience",
+          "version": "v001",
+          "occupation_id": "career-net-240",
+          "occupation_name": "증권중개인"
+        },
+        {
+          "scenario_id": "career-net-10033-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10033",
+          "occupation_name": "크라우드 펀딩 전문가"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-058",
+      "image_version": "v001",
+      "image_historical_name": "가정 수리 공간",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-058",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "가정 수리 공간",
+      "runtime_name_at_read": "가정 수리 공간",
+      "production_name": "가정 수리 공간",
+      "layout_name": "가정 수리 공간",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-466-experience",
+          "version": "v001",
+          "occupation_id": "career-net-466",
+          "occupation_name": "컴퓨터설치·수리원"
+        },
+        {
+          "scenario_id": "career-net-1148-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1148",
+          "occupation_name": "통신설비설치 및 수리원"
+        },
+        {
+          "scenario_id": "career-net-139-experience",
+          "version": "v001",
+          "occupation_id": "career-net-139",
+          "occupation_name": "통신케이블설치 및 수리원"
+        },
+        {
+          "scenario_id": "career-net-41-experience",
+          "version": "v001",
+          "occupation_id": "career-net-41",
+          "occupation_name": "가전제품 설치 및 수리원"
+        },
+        {
+          "scenario_id": "career-net-120-experience",
+          "version": "v001",
+          "occupation_id": "career-net-120",
+          "occupation_name": "전자장비설치 및 수리원"
+        },
+        {
+          "scenario_id": "career-net-121-experience",
+          "version": "v001",
+          "occupation_id": "career-net-121",
+          "occupation_name": "전화설치 및 수리원"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-059",
+      "image_version": "v001",
+      "image_historical_name": "방문 학습 공간",
+      "prompt_ref": {
+        "version": "v001",
+        "prompt_id": "PRM-059",
+        "catalog": "panorama-prompts-v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "방문 학습 공간",
+      "runtime_name_at_read": "방문 학습 공간",
+      "production_name": "방문 학습 공간",
+      "layout_name": "방문 학습 공간",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-475-experience",
+          "version": "v001",
+          "occupation_id": "career-net-475",
+          "occupation_name": "아이티(IT)교육강사"
+        },
+        {
+          "scenario_id": "career-net-365-experience",
+          "version": "v001",
+          "occupation_id": "career-net-365",
+          "occupation_name": "독서지도사"
+        },
+        {
+          "scenario_id": "career-net-1431-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1431",
+          "occupation_name": "음악강사"
+        },
+        {
+          "scenario_id": "career-net-1106-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1106",
+          "occupation_name": "학습지방문교사"
+        },
+        {
+          "scenario_id": "career-net-417-experience",
+          "version": "v001",
+          "occupation_id": "career-net-417",
+          "occupation_name": "학원강사"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-060",
+      "image_version": "v001",
+      "image_historical_name": "서버실",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "version": "v001",
+        "prompt_id": "PRM-060"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "서버실",
+      "runtime_name_at_read": "서버실",
+      "production_name": "서버실",
+      "layout_name": "서버실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-431-experience",
+          "version": "v001",
+          "occupation_id": "career-net-431",
+          "occupation_name": "데이터베이스관리자"
+        },
+        {
+          "scenario_id": "career-net-440-experience",
+          "version": "v001",
+          "occupation_id": "career-net-440",
+          "occupation_name": "시스템엔지니어"
+        },
+        {
+          "scenario_id": "career-net-444-experience",
+          "version": "v001",
+          "occupation_id": "career-net-444",
+          "occupation_name": "웹마스터"
+        },
+        {
+          "scenario_id": "career-net-435-experience",
+          "version": "v001",
+          "occupation_id": "career-net-435",
+          "occupation_name": "정보보호전문가"
+        },
+        {
+          "scenario_id": "career-net-938-experience",
+          "version": "v001",
+          "occupation_id": "career-net-938",
+          "occupation_name": "정보시스템운영자"
+        },
+        {
+          "scenario_id": "career-net-10031-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10031",
+          "occupation_name": "클라우드 시스템 엔지니어"
+        },
+        {
+          "scenario_id": "career-net-465-experience",
+          "version": "v001",
+          "occupation_id": "career-net-465",
+          "occupation_name": "통신망설계운영기술자"
+        },
+        {
+          "scenario_id": "career-net-429-experience",
+          "version": "v001",
+          "occupation_id": "career-net-429",
+          "occupation_name": "통신엔지니어"
+        },
+        {
+          "scenario_id": "career-net-430-experience",
+          "version": "v001",
+          "occupation_id": "career-net-430",
+          "occupation_name": "네트워크엔지니어"
+        },
+        {
+          "scenario_id": "career-net-140-experience",
+          "version": "v001",
+          "occupation_id": "career-net-140",
+          "occupation_name": "통신장비기사"
+        },
+        {
+          "scenario_id": "career-net-1118-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1118",
+          "occupation_name": "무인경비시스템종사원"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-061",
+      "image_version": "v001",
+      "image_historical_name": "관제실",
+      "prompt_ref": {
+        "prompt_id": "PRM-061",
+        "catalog": "panorama-prompts-v001",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "관제실",
+      "runtime_name_at_read": "관제실",
+      "production_name": "관제실",
+      "layout_name": "관제실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-358-experience",
+          "version": "v001",
+          "occupation_id": "career-net-358",
+          "occupation_name": "경비원"
+        },
+        {
+          "scenario_id": "career-net-10040-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10040",
+          "occupation_name": "손실방지전문가"
+        },
+        {
+          "scenario_id": "career-net-10028-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10028",
+          "occupation_name": "스마트 재난 관리 전문가"
+        },
+        {
+          "scenario_id": "career-net-1117-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1117",
+          "occupation_name": "청원경찰"
+        },
+        {
+          "scenario_id": "career-net-385-experience",
+          "version": "v001",
+          "occupation_id": "career-net-385",
+          "occupation_name": "소방관"
+        },
+        {
+          "scenario_id": "career-net-10068-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10068",
+          "occupation_name": "게임감시관 및 조사관"
+        },
+        {
+          "scenario_id": "career-net-360-experience",
+          "version": "v001",
+          "occupation_id": "career-net-360",
+          "occupation_name": "경호원"
+        },
+        {
+          "scenario_id": "career-net-148-experience",
+          "version": "v001",
+          "occupation_id": "career-net-148",
+          "occupation_name": "항공교통관제사"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-062",
+      "image_version": "v001",
+      "image_historical_name": "거실",
+      "prompt_ref": {
+        "prompt_id": "PRM-062",
+        "catalog": "panorama-prompts-v001",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "거실",
+      "runtime_name_at_read": "거실",
+      "production_name": "거실",
+      "layout_name": "거실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-352-experience",
+          "version": "v001",
+          "occupation_id": "career-net-352",
+          "occupation_name": "가사도우미"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-063",
+      "image_version": "v001",
+      "image_historical_name": "주택 관리 공간",
+      "prompt_ref": {
+        "prompt_id": "PRM-063",
+        "catalog": "panorama-prompts-v001",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "주택 관리 공간",
+      "runtime_name_at_read": "주택 관리 공간",
+      "production_name": "주택 관리 공간",
+      "layout_name": "주택 관리 공간",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-356-experience",
+          "version": "v001",
+          "occupation_id": "career-net-356",
+          "occupation_name": "청소원"
+        },
+        {
+          "scenario_id": "career-net-166-experience",
+          "version": "v001",
+          "occupation_id": "career-net-166",
+          "occupation_name": "세탁원"
+        },
+        {
+          "scenario_id": "career-net-405-experience",
+          "version": "v001",
+          "occupation_id": "career-net-405",
+          "occupation_name": "주택관리사"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-064",
+      "image_version": "v001",
+      "image_historical_name": "기독교(개신교) 예배실 — 목사",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "version": "v002",
+        "prompt_id": "PRM-064"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "기독교(개신교) 예배실 — 목사",
+      "runtime_name_at_read": "기독교(개신교) 예배실",
+      "production_name": "기독교(개신교) 예배실 — 목사",
+      "layout_name": "기독교(개신교) 예배실 — 목사",
+      "editorial_primary_candidates": [],
+      "unselected_option_candidates": [
+        {
+          "scenario_id": "career-net-384-experience",
+          "version": "v001",
+          "occupation_id": "career-net-384",
+          "occupation_name": "성직자"
+        }
+      ]
+    },
+    {
+      "panorama_id": "PAN-065",
+      "image_version": "v001",
+      "image_historical_name": "군 행정실",
+      "prompt_ref": {
+        "prompt_id": "PRM-065",
+        "catalog": "panorama-prompts-v001",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "군 행정실",
+      "runtime_name_at_read": "군 행정실",
+      "production_name": "군 행정실",
+      "layout_name": "군 행정실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-1100-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1100",
+          "occupation_name": "군무원"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-066",
+      "image_version": "v001",
+      "image_historical_name": "생활관",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-066",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "생활관",
+      "runtime_name_at_read": "생활관",
+      "production_name": "생활관",
+      "layout_name": "생활관",
+      "editorial_primary_candidates": [],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-067",
+      "image_version": "v001",
+      "image_historical_name": "장비 관리실",
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-067"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "장비 관리실",
+      "runtime_name_at_read": "장비 관리실",
+      "production_name": "장비 관리실",
+      "layout_name": "장비 관리실",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-407-experience",
+          "version": "v001",
+          "occupation_id": "career-net-407",
+          "occupation_name": "직업군인"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-068",
+      "image_version": "v001",
+      "image_historical_name": "출장 업무 공간",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-068",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "출장 업무 공간",
+      "runtime_name_at_read": "출장 업무 공간",
+      "production_name": "출장 업무 공간",
+      "layout_name": "출장 업무 공간",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-267-experience",
+          "version": "v001",
+          "occupation_id": "career-net-267",
+          "occupation_name": "번역가"
+        },
+        {
+          "scenario_id": "career-net-165-experience",
+          "version": "v001",
+          "occupation_id": "career-net-165",
+          "occupation_name": "설문조사원"
+        },
+        {
+          "scenario_id": "career-net-233-experience",
+          "version": "v001",
+          "occupation_id": "career-net-233",
+          "occupation_name": "외교관"
+        },
+        {
+          "scenario_id": "career-net-10063-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10063",
+          "occupation_name": "사설탐정"
+        },
+        {
+          "scenario_id": "career-net-264-experience",
+          "version": "v001",
+          "occupation_id": "career-net-264",
+          "occupation_name": "통역가"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-069",
+      "image_version": "v001",
+      "image_historical_name": "안내 집결 지점",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v001",
+        "prompt_id": "PRM-069",
+        "version": "v001"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "안내 집결 지점",
+      "runtime_name_at_read": "안내 집결 지점",
+      "production_name": "안내 집결 지점",
+      "layout_name": "안내 집결 지점",
+      "editorial_primary_candidates": [
+        {
+          "scenario_id": "career-net-10016-experience",
+          "version": "v001",
+          "occupation_id": "career-net-10016",
+          "occupation_name": "여행 기획자"
+        },
+        {
+          "scenario_id": "career-net-626-experience",
+          "version": "v001",
+          "occupation_id": "career-net-626",
+          "occupation_name": "여행상품개발원"
+        },
+        {
+          "scenario_id": "career-net-1120-experience",
+          "version": "v001",
+          "occupation_id": "career-net-1120",
+          "occupation_name": "주차관리원"
+        },
+        {
+          "scenario_id": "career-net-419-experience",
+          "version": "v001",
+          "occupation_id": "career-net-419",
+          "occupation_name": "홍보도우미"
+        },
+        {
+          "scenario_id": "career-net-412-experience",
+          "version": "v001",
+          "occupation_id": "career-net-412",
+          "occupation_name": "캐디"
+        },
+        {
+          "scenario_id": "career-net-388-experience",
+          "version": "v001",
+          "occupation_id": "career-net-388",
+          "occupation_name": "여행안내원"
+        }
+      ],
+      "unselected_option_candidates": []
+    },
+    {
+      "panorama_id": "PAN-070",
+      "image_version": "v001",
+      "image_historical_name": "불교 법당 — 스님",
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-070"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "불교 법당 — 스님",
+      "runtime_name_at_read": "불교 법당",
+      "production_name": "불교 법당 — 스님",
+      "layout_name": "불교 법당 — 스님",
+      "editorial_primary_candidates": [],
+      "unselected_option_candidates": [
+        {
+          "scenario_id": "career-net-384-experience",
+          "version": "v001",
+          "occupation_id": "career-net-384",
+          "occupation_name": "성직자"
+        }
+      ]
+    },
+    {
+      "panorama_id": "PAN-071",
+      "image_version": "v001",
+      "image_historical_name": "천주교 성당 — 신부님",
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "version": "v001",
+        "prompt_id": "PRM-071"
+      },
+      "prompt_ref_basis": "direct_image_prompt_ref",
+      "prompt_historical_name": "천주교 성당 — 신부님",
+      "runtime_name_at_read": "천주교 성당",
+      "production_name": "천주교 성당 — 신부님",
+      "layout_name": "천주교 성당 — 신부님",
+      "editorial_primary_candidates": [],
+      "unselected_option_candidates": [
+        {
+          "scenario_id": "career-net-384-experience",
+          "version": "v001",
+          "occupation_id": "career-net-384",
+          "occupation_name": "성직자"
+        }
+      ]
+    }
+  ],
+  "confidence_gaps": [
+    "Nameswithout explicitseparatorwere notsemanticallycertified asfreeofallroleambiguity.",
+    "Localcanonicalclassificationonly; nofreshprofessional/religiousworkplacefactverification.",
+    "PrimaryPAN064previewisnotaselectedscenario.",
+    "Versionnotesinfirst5historicalimagenamesarenotoccupations.",
+    "OldbuiltWebGLdata/ZIPsremainhistoricalsnapshotsuntilnewgallerybuildandretest."
+  ],
+  "amendment_package_reference_review": {
+    "scope": "All currently present scenario package top-level identity/occupation-name pairs only; historical duplicates across different packages are preserved, notaddedtooccupationcount.",
+    "packages": [
+      {
+        "path": "docs/machine/catalog/career-experience-scenarios-v001.json",
+        "sha256": "c6783f7b3a13a7ad56918de6f9f2ac415d3215d3c84496e98b858cbf6a4e8840",
+        "scenarios": 1,
+        "duplicate_pairs": [],
+        "invalid_or_name_mismatch_occupation_refs": []
+      },
+      {
+        "path": "docs/machine/catalog/career-experience-scenarios-v002.json",
+        "sha256": "5ed924efad538c6ff7de34b944514f1697e391be921a165f702c9157666ef148",
+        "scenarios": 552,
+        "duplicate_pairs": [],
+        "invalid_or_name_mismatch_occupation_refs": []
+      },
+      {
+        "path": "docs/machine/catalog/career-experience-scenarios-v003.json",
+        "sha256": "2d399308e337ea4fb2d16195eaed4d3c278e225d8007d49452a033ffe2aabf35",
+        "scenarios": 1,
+        "duplicate_pairs": [],
+        "invalid_or_name_mismatch_occupation_refs": []
+      },
+      {
+        "path": "docs/machine/catalog/career-experience-scenarios-v004.json",
+        "sha256": "860e8d32a402d323c18eb4fc1088d4c3806b1b8a9c5f71d21be5747dd024ff84",
+        "scenarios": 10,
+        "duplicate_pairs": [],
+        "invalid_or_name_mismatch_occupation_refs": []
+      },
+      {
+        "path": "docs/machine/catalog/career-experience-scenarios-v005.json",
+        "sha256": "3d20a18b6819746c136815e353fc23d4cd6931ebd91a426a911471a091dba858",
+        "scenarios": 10,
+        "duplicate_pairs": [],
+        "invalid_or_name_mismatch_occupation_refs": []
+      }
+    ],
+    "issues": [],
+    "clergy_entries": [
+      {
+        "package": "career-experience-scenarios-v002.json",
+        "scenario_id": "career-net-384-experience",
+        "version": "v001",
+        "occupation_id": "career-net-384",
+        "selection_status": "needs_subject_selection",
+        "selected_scene_option": null,
+        "implementation_status": "not_implemented"
+      }
+    ]
+  }
+}

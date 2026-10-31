@@ -1,0 +1,219 @@
+{
+  "schema_version": 3,
+  "handoffs": [
+    {
+      "schema_version": 3,
+      "handoff_id": "career-experience-frontend",
+      "version": "v001",
+      "kind": "frontend_protocol_handoff_not_webgl_build",
+      "status": "specification_only",
+      "document_path": "docs/human/integrations/frontend-protocol-v001.md",
+      "contract_types_path": "docs/machine/contracts/career-experience/v001/career-experience.types.ts",
+      "examples_path": "docs/machine/contracts/career-experience/v001/examples.json",
+      "artifact_path": "deliveries/frontend/career-experience-frontend-v001.zip",
+      "artifact_sha256": "c13e07bcfd5f8516d8ef822ded4bc73cca8ef32c3350c709c9d1089971d778f7",
+      "artifact_bytes": 25729,
+      "created_at": "2026-10-31T05:15:35.126087+09:00",
+      "source_refs": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "d7e21a113fff0ca4575a7d5f4e8498348178e176a0679102351917693d28755c"
+        }
+      ],
+      "implementation_status": {
+        "unity_bridge": "not_implemented",
+        "react_adapter": "not_implemented",
+        "unity_react_roundtrip": "unverified"
+      },
+      "validation": {
+        "json_examples": "pass_document_fixture_consistency",
+        "typescript_syntax": "pass_node_v24_type_stripping_parse",
+        "typescript_full_typecheck": "unverified",
+        "zip_integrity": "pass_crc_member_hashes_and_exported_examples",
+        "unity_react_runtime": "unverified"
+      }
+    },
+    {
+      "schema_version": 3,
+      "handoff_id": "career-experience-frontend",
+      "version": "v002",
+      "kind": "frontend_backend_realtime_specification",
+      "status": "specification_only",
+      "document_path": "docs/human/integrations/frontend-protocol-v002.md",
+      "registry_path": "docs/machine/catalog/career-integration-registry-v001.json",
+      "contract_path": "docs/machine/contracts/career-experience/v002/realtime-contract.json",
+      "artifact_path": "deliveries/frontend/career-experience-frontend-v002.zip",
+      "artifact_sha256": "952474d20483d861bdd5e728ce2cf23f9c1e0e6baa13cfc90607d0fc92cda3d3",
+      "artifact_bytes": 49845,
+      "source_refs": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "5e2168d012728c6a792a1dabdbd8db724f2700f39608a9b6afb9c9c554765a01"
+        }
+      ],
+      "validation": {
+        "json_and_ids": "pass",
+        "zip_bytes": "pass",
+        "new_realtime_runtime": "unverified"
+      }
+    },
+    {
+      "schema_version": 3,
+      "handoff_id": "career-experience-frontend",
+      "version": "v003",
+      "kind": "frontend_backend_missing_end_resolution_spec",
+      "status": "specification_only",
+      "document_path": "docs/human/integrations/frontend-protocol-v003.md",
+      "contract_path": "docs/machine/contracts/career-experience/v003/interruption-contract.json",
+      "artifact_path": "deliveries/frontend/career-experience-frontend-v003.zip",
+      "artifact_sha256": "9c93b0e44aca15c8d2026d22e82d03ab96cadf558e7a38cbaec78fdb1fd91df4",
+      "artifact_bytes": 57615,
+      "source_refs": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "e3b62910464f14e3095f90653c8c8feda638489012eb8d443031dbb5f0609629"
+        }
+      ],
+      "validation": {
+        "json": "pass",
+        "fixture_invariants": "pass",
+        "json_schema_validation": "unverified",
+        "unity_react_backend_runtime": "unverified",
+        "zip_integrity": "pass_crc_and_member_bytes"
+      }
+    },
+    {
+      "schema_version": 3,
+      "handoff_id": "career-integration-listing",
+      "version": "v003",
+      "kind": "frontend_backend_listing_not_webgl_build",
+      "status": "packaged_with_scoped_actual_evidence_not_full_goal_completion",
+      "document_path": "docs/human/integrations/career-integration-listing-v003.md",
+      "registry_path": "docs/machine/catalog/career-integration-registry-v004.json",
+      "target_path": "docs/machine/catalog/career-full-targets-v003.json",
+      "artifact_path": "unity/webgl/packages/career-integration-listing-v003.zip",
+      "artifact_sha256": "4143f706f45e96c8395c7d51b156f997bc9fbb37ba4bbd4302eb1a1c8fb73a92",
+      "artifact_bytes": 923372,
+      "created_at": "2026-10-31T07:36:36.969116+00:00",
+      "source_refs": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "e3b62910464f14e3095f90653c8c8feda638489012eb8d443031dbb5f0609629"
+        },
+        {
+          "path": "docs/machine/catalog/career-integration-registry-v004.json",
+          "sha256": "605067be88dab1d7c90a423f1fd2992c0e72c80173bbeb904f28f3d31d1dd3bd"
+        },
+        {
+          "path": "docs/machine/catalog/career-full-targets-v003.json",
+          "sha256": "c1c016df85cd27c572d6d019c2ffe3b1cec4f86241b0f369fc6b13c1b76e2a3d"
+        },
+        {
+          "path": "web/career-preview/v002/client.js",
+          "sha256": "7d264b6d35c9f61cec7c9a7cdc494f46478b1499b0942a3ce99e271a28f59316"
+        },
+        {
+          "path": "web/career-preview/v002/backend.js",
+          "sha256": "43d525e1c4b4e2db5d57e0cd15a146a39150cf464a08f163d60b79b7eaf9ec44"
+        }
+      ],
+      "validation": {
+        "json_csv_and_fixed_ids": "pass555",
+        "both_final_supported_manifests": "pass555_exact_tuple_match",
+        "frontend_bytes": "pass6critical_files_both_sites_and_listing",
+        "zip_integrity": "pass_crc_and_all115_member_bytes",
+        "typescript_full_typecheck": "unverified",
+        "real_backend": "unverified",
+        "original_full_workflow_and_special_branches": "incomplete_or_unverified"
+      },
+      "evidence_paths": [
+        "docs/machine/evidence/career-integration-listing-v003-zip-review.json"
+      ],
+      "related_build_ids": [
+        "career-suite-test-v006",
+        "career-suite-integration-v002"
+      ]
+    },
+    {
+      "schema_version": 3,
+      "handoff_id": "career-integration-listing",
+      "version": "v004",
+      "kind": "frontend_backend_listing_not_webgl_build",
+      "status": "packaged_with_scoped_actual_evidence_not_full_goal_completion",
+      "document_path": "docs/human/integrations/career-integration-listing-v004.md",
+      "registry_path": "docs/machine/catalog/career-integration-registry-v004.json",
+      "target_path": "docs/machine/catalog/career-full-targets-v003.json",
+      "description_path": "docs/machine/catalog/career-experience-descriptions-v001.json",
+      "audio_catalog_path": "docs/machine/catalog/career-audio-runtime-v002.json",
+      "artifact_path": "unity/webgl/packages/career-integration-listing-v004.zip",
+      "artifact_sha256": "ce0750ef66a01c7ece096de36f42c5b1690bea6c4d466781dbe7523b66126ac8",
+      "artifact_bytes": 4351947,
+      "created_at": "2026-10-31T08:18:06.195591+00:00",
+      "supersedes": {
+        "handoff_id": "career-integration-listing",
+        "version": "v003"
+      },
+      "source_refs": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "e3b62910464f14e3095f90653c8c8feda638489012eb8d443031dbb5f0609629"
+        },
+        {
+          "path": "docs/machine/catalog/career-integration-registry-v004.json",
+          "sha256": "605067be88dab1d7c90a423f1fd2992c0e72c80173bbeb904f28f3d31d1dd3bd"
+        },
+        {
+          "path": "docs/machine/catalog/career-full-targets-v003.json",
+          "sha256": "c1c016df85cd27c572d6d019c2ffe3b1cec4f86241b0f369fc6b13c1b76e2a3d"
+        },
+        {
+          "path": "docs/machine/catalog/career-experience-descriptions-v001.json",
+          "sha256": "91d8c007f77fb93eecd6c378ada4ca37b23bca8fa48736233994123b35320c06"
+        },
+        {
+          "path": "web/career-audio/v002/audio-manifest.json",
+          "sha256": "507b7e6dec3cc7eb719ab5db99fc02a6036593127cc0566cc2660dab4433db11"
+        },
+        {
+          "path": "docs/machine/catalog/career-audio-wiring-v001.json",
+          "sha256": "7c44ecb545629264960cd3cf34f9a133b35e88610e0059532d3fd2cd7651c57c"
+        },
+        {
+          "path": "docs/machine/catalog/career-suite-bridge-v003.json",
+          "sha256": "20ba08bbfd43e79c7ca2bc2756620d8dfc50702ef41280f355050699c9a232be"
+        },
+        {
+          "path": "docs/machine/catalog/career-asset-reuse-report-v003.json",
+          "sha256": "c7803b2b2b5ab27ad0fc477af9988255d8e751b5cf3b7680e2d20c743b2c6ee5"
+        }
+      ],
+      "validation": {
+        "json_csv_and_fixed_ids": "pass555",
+        "both_final_supported_manifests_and_AI_descriptions": "pass555_exact",
+        "audio_hashes": "pass34",
+        "frontend_bytes": "pass9critical_files_both_sites_and_listing",
+        "targeted_compile_source": "pass20files_both_final_snapshots",
+        "zip_integrity": "pass_crc_and_all221_member_bytes",
+        "all555_fullworkflow": "unverified",
+        "real_backend": "unverified",
+        "original_special_branches": "554notimplemented",
+        "primary_aliases": "pass4_each555finalbuildIds_and_canonicaljobsDescriptions"
+      },
+      "evidence_paths": [
+        "docs/machine/evidence/career-integration-listing-v004-zip-review.json",
+        "docs/machine/evidence/career-suite-test-v009/audio-pan050-ui/summary-v001.json",
+        "docs/machine/evidence/career-suite-integration-v005/react-audio/actual-react-audio-background.json",
+        "docs/machine/evidence/career-suite-integration-v005/react-extracted-zip/actual-react-iframe.json"
+      ],
+      "related_build_ids": [
+        "career-suite-test-v009",
+        "career-suite-integration-v005"
+      ],
+      "pre_review_preservation": {
+        "artifact_path": "unity/webgl/packages/career-integration-listing-v004-pre-review.zip",
+        "sha256": "fa4f401a0a6a7b2656c9fd95a10527301f02ba9f822fa91d877d0a0d87d92813",
+        "metadata_evidence": "docs/machine/evidence/career-integration-listing-v004-handoff-pre-review.json"
+      }
+    }
+  ]
+}

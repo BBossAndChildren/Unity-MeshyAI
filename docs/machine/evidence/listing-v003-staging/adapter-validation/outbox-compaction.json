@@ -1,0 +1,16 @@
+{
+  "schema_version": 3,
+  "checked_at": "2026-10-31T06:55:44.473Z",
+  "environment": "Node inline outbox persistence/reload execution",
+  "status": "pass",
+  "checks": [
+    "failed send preserves pending original",
+    "matching ACK compacts persistent storage",
+    "in-memory original retained",
+    "ACK references survive reload",
+    "reobserved original revalidated on backend",
+    "single stored identity after revalidation",
+    "live conflicting original rejected"
+  ],
+  "persisted_bytes": 172
+}

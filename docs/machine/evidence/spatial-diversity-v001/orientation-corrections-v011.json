@@ -1,0 +1,768 @@
+{
+  "schema_version": 3,
+  "checked_at": "2026-10-31T14:35:24.326428+09:00",
+  "source_build_id": "workplaces-v010",
+  "target_build_id": "workplaces-v011",
+  "status": "confirmed_recipe_not_applied_by_reviewer",
+  "scope": "Confirmed orientations verified from actual GLB nodes, recorded placements and final WebGL captures. No runtime pass inferred.",
+  "corrections": [
+    {
+      "room_id": "PAN-030",
+      "instance_id": "AST-1109-003",
+      "asset_ref": {
+        "asset_id": "AST-1109",
+        "version": "v001"
+      },
+      "source_assembly_ref": {
+        "asset_id": "AST-2030",
+        "version": "v003"
+      },
+      "source_placements_path": "meshy/models/blender/AST-2030/v003/placements.json",
+      "source_placements_sha256": "7bc60faec35966d485cf4b2f1bd9c924df5ae081fe37155375a42ac1dfa01065",
+      "position_blender_m": [
+        -0.4,
+        -1,
+        1.3477267751693727
+      ],
+      "previous_rotation_euler_blender_deg": [
+        0,
+        0,
+        0
+      ],
+      "rotation_euler_blender_deg": [
+        0,
+        0,
+        164.475889
+      ],
+      "target_instance_id": "AST-1112-006",
+      "target_position_blender_m": [
+        0.1,
+        0.8,
+        0.296
+      ],
+      "reason": "Camera optical front is local -Y. Current zero yaw points away from subject table; apply yaw toward actual table center and preserve base/tripod support height.",
+      "evidence": {
+        "images": [
+          "docs/machine/evidence/workplaces-v010/PAN-030-front.png",
+          "docs/machine/evidence/workplaces-v010/PAN-030-reduced.png"
+        ],
+        "helper_path": "meshy/models/blender/AST-1010/v001/processing/build_shared.py",
+        "helper_line": 324,
+        "component_glb_path": "meshy/models/blender/AST-1109/v001/exports/model.glb",
+        "gltf_node_centers": {
+          "Body": [
+            0,
+            0.1199999973,
+            0
+          ],
+          "Lens": [
+            0,
+            0.1199999973,
+            0.1099999994
+          ],
+          "Glass": [
+            0,
+            0.1199999973,
+            0.1800000072
+          ]
+        },
+        "gltf_to_blender": "[x,-z,y]",
+        "blender_local_front": [
+          0,
+          -1,
+          0
+        ],
+        "yaw_formula": "degrees(atan2(targetX-cameraX,-(targetY-cameraY)))",
+        "helper_sha256": "a4cf2dbcc7b4d60c4a1259264f46996849cb95749e103686df83bc557e081d20",
+        "component_glb_sha256": "5195823d8dfb78e6a06f1c46151bf0b6b598ffa314f44fcd4fcfa82668cb0df2"
+      },
+      "preserve": [
+        "position",
+        "scale",
+        "tripod transform",
+        "support contact",
+        "asset geometry"
+      ]
+    },
+    {
+      "room_id": "PAN-031",
+      "instance_id": "AST-1109-005",
+      "asset_ref": {
+        "asset_id": "AST-1109",
+        "version": "v001"
+      },
+      "source_assembly_ref": {
+        "asset_id": "AST-2031",
+        "version": "v005"
+      },
+      "source_placements_path": "meshy/models/blender/AST-2031/v005/placements.json",
+      "source_placements_sha256": "171269628c252a062d73965ed79e14af78b334a5754de798695c6705108ac8dd",
+      "position_blender_m": [
+        -1.8,
+        -1.1,
+        1.3477268657684327
+      ],
+      "previous_rotation_euler_blender_deg": [
+        0,
+        0,
+        0
+      ],
+      "rotation_euler_blender_deg": [
+        0,
+        0,
+        120.699723
+      ],
+      "target_instance_id": "AST-1115-002",
+      "target_position_blender_m": [
+        -0.2,
+        -0.15,
+        0.296
+      ],
+      "reason": "Camera optical front is local -Y; zero yaw faces outside front-left, away from actual broadcast desk. Apply horizontal yaw toward desk center.",
+      "evidence": {
+        "images": [
+          "docs/machine/evidence/workplaces-v010/PAN-031-front.png",
+          "docs/machine/evidence/workplaces-v010/PAN-031-reduced.png"
+        ],
+        "helper_path": "meshy/models/blender/AST-1010/v001/processing/build_shared.py",
+        "helper_line": 324,
+        "component_glb_path": "meshy/models/blender/AST-1109/v001/exports/model.glb",
+        "gltf_node_centers": {
+          "Body": [
+            0,
+            0.1199999973,
+            0
+          ],
+          "Glass": [
+            0,
+            0.1199999973,
+            0.1800000072
+          ]
+        },
+        "gltf_to_blender": "[x,-z,y]",
+        "blender_local_front": [
+          0,
+          -1,
+          0
+        ],
+        "yaw_formula": "degrees(atan2(targetX-cameraX,-(targetY-cameraY)))",
+        "helper_sha256": "a4cf2dbcc7b4d60c4a1259264f46996849cb95749e103686df83bc557e081d20",
+        "component_glb_sha256": "5195823d8dfb78e6a06f1c46151bf0b6b598ffa314f44fcd4fcfa82668cb0df2"
+      },
+      "preserve": [
+        "position",
+        "scale",
+        "tripod transform",
+        "support contact",
+        "asset geometry"
+      ]
+    },
+    {
+      "room_id": "PAN-034",
+      "instance_id": "AST-1127-008",
+      "asset_ref": {
+        "asset_id": "AST-1127",
+        "version": "v002"
+      },
+      "source_assembly_ref": {
+        "asset_id": "AST-2034",
+        "version": "v004"
+      },
+      "source_placements_path": "meshy/models/blender/AST-2034/v004/placements.json",
+      "source_placements_sha256": "9bbf2df19d2091fa6b3dfed714fefd3621e571c2125853b6545b59342906997e",
+      "position_blender_m": [
+        0,
+        -1.65,
+        0.27599995565414426
+      ],
+      "previous_rotation_euler_blender_deg": [
+        0,
+        0,
+        0
+      ],
+      "rotation_euler_blender_deg": [
+        0,
+        0,
+        180
+      ],
+      "target_instance_id": "AST-1124-002",
+      "target_position_blender_m": [
+        0,
+        -0.3,
+        0.296
+      ],
+      "reason": "Bench back lies on local +Y and sitting/front direction is local -Y. Zero yaw faces empty front edge, away from exhibit at +Y. Rotate 180 degrees.",
+      "evidence": {
+        "images": [
+          "docs/machine/evidence/workplaces-v010/PAN-034-front.png",
+          "docs/machine/evidence/workplaces-v010/PAN-034-reduced.png"
+        ],
+        "helper_path": "meshy/models/blender/AST-1010/v001/processing/build_shared.py",
+        "helper_line": 356,
+        "component_glb_path": "meshy/models/blender/AST-1127/v002/exports/model.glb",
+        "gltf_node_centers": {
+          "Back slat": [
+            0,
+            0.6800000072,
+            -0.2199999988
+          ],
+          "Front leg": [
+            -0.5799999833,
+            0.2250000089,
+            0.1800000072
+          ]
+        },
+        "gltf_to_blender": "[x,-z,y]",
+        "blender_local_front": [
+          0,
+          -1,
+          0
+        ],
+        "helper_sha256": "a4cf2dbcc7b4d60c4a1259264f46996849cb95749e103686df83bc557e081d20",
+        "component_glb_sha256": "a1a64731fdb8aefff8d482874c02cd28273b8c9de847459bb7a91a9ed9dc9487"
+      },
+      "preserve": [
+        "position",
+        "scale",
+        "asset geometry"
+      ]
+    },
+    {
+      "room_id": "PAN-030",
+      "instance_id": "AST-1111-004",
+      "status": "confirmed",
+      "asset_ref": {
+        "asset_id": "AST-1111",
+        "version": "v001"
+      },
+      "source_placements_path": "meshy/models/blender/AST-2030/v003/placements.json",
+      "source_placements_sha256": "7bc60faec35966d485cf4b2f1bd9c924df5ae081fe37155375a42ac1dfa01065",
+      "previous_rotation_euler_blender_deg": [
+        0,
+        0,
+        -35
+      ],
+      "rotation_euler_blender_deg": [
+        0,
+        0,
+        104.036243
+      ],
+      "reason": "Diffuser optical front is local -Y; rotate actual stand toward the subject table.",
+      "evidence": {
+        "component_glb_path": "meshy/models/blender/AST-1111/v001/exports/model.glb",
+        "component_glb_sha256": "a58a876d85541af5243e3b6c7078ea8db3c74c5beeb5403ea6d0f20dda1c4bc5",
+        "gltf_node_centers": {
+          "Diffuser": [
+            0,
+            1.649999976158142,
+            0.057999998331069946
+          ],
+          "Light panel": [
+            0,
+            1.649999976158142,
+            0
+          ],
+          "Pole": [
+            0,
+            0.8400000333786011,
+            0
+          ],
+          "Tripod leg": [
+            0.17499999701976776,
+            0.16750000417232513,
+            0
+          ],
+          "Tripod leg.001": [
+            -0.08749999850988388,
+            0.16750000417232513,
+            -0.15155445039272308
+          ],
+          "Tripod leg.002": [
+            -0.08749999850988388,
+            0.16750000417232513,
+            0.15155445039272308
+          ]
+        },
+        "blender_local_front": [
+          0,
+          -1,
+          0
+        ],
+        "gltf_to_blender": "[x,-z,y]",
+        "target_blender_m": [
+          0.1,
+          0.8
+        ],
+        "images": [
+          "docs/machine/evidence/workplaces-v010/PAN-030-front.png"
+        ]
+      }
+    },
+    {
+      "room_id": "PAN-030",
+      "instance_id": "AST-1111-005",
+      "status": "confirmed",
+      "asset_ref": {
+        "asset_id": "AST-1111",
+        "version": "v001"
+      },
+      "source_placements_path": "meshy/models/blender/AST-2030/v003/placements.json",
+      "source_placements_sha256": "7bc60faec35966d485cf4b2f1bd9c924df5ae081fe37155375a42ac1dfa01065",
+      "previous_rotation_euler_blender_deg": [
+        0,
+        0,
+        35
+      ],
+      "rotation_euler_blender_deg": [
+        0,
+        0,
+        -75.068583
+      ],
+      "reason": "Diffuser optical front is local -Y; rotate actual stand toward the subject table.",
+      "evidence": {
+        "component_glb_path": "meshy/models/blender/AST-1111/v001/exports/model.glb",
+        "component_glb_sha256": "a58a876d85541af5243e3b6c7078ea8db3c74c5beeb5403ea6d0f20dda1c4bc5",
+        "gltf_node_centers": {
+          "Diffuser": [
+            0,
+            1.649999976158142,
+            0.057999998331069946
+          ],
+          "Light panel": [
+            0,
+            1.649999976158142,
+            0
+          ],
+          "Pole": [
+            0,
+            0.8400000333786011,
+            0
+          ],
+          "Tripod leg": [
+            0.17499999701976776,
+            0.16750000417232513,
+            0
+          ],
+          "Tripod leg.001": [
+            -0.08749999850988388,
+            0.16750000417232513,
+            -0.15155445039272308
+          ],
+          "Tripod leg.002": [
+            -0.08749999850988388,
+            0.16750000417232513,
+            0.15155445039272308
+          ]
+        },
+        "blender_local_front": [
+          0,
+          -1,
+          0
+        ],
+        "gltf_to_blender": "[x,-z,y]",
+        "target_blender_m": [
+          0.1,
+          0.8
+        ],
+        "images": [
+          "docs/machine/evidence/workplaces-v010/PAN-030-front.png"
+        ]
+      }
+    },
+    {
+      "room_id": "PAN-045",
+      "instance_id": "AST-1173-005",
+      "status": "confirmed",
+      "asset_ref": {
+        "asset_id": "AST-1173",
+        "version": "v002"
+      },
+      "source_placements_path": "meshy/models/blender/AST-2045/v005/placements.json",
+      "source_placements_sha256": "67841d6250545a10ea6149d5906afe1b0ef22295ab682d8ed7d2c98ed3789bea",
+      "previous_rotation_euler_blender_deg": [
+        0,
+        0,
+        0
+      ],
+      "rotation_euler_blender_deg": [
+        0,
+        0,
+        180.0
+      ],
+      "reason": "Operating chair back is local +Y; seat must face midpoint of instrument consoles at +Y.",
+      "evidence": {
+        "component_glb_path": "meshy/models/blender/AST-1173/v002/exports/model.glb",
+        "component_glb_sha256": "3bbfc8d24f9013d0cfca56503efa7937a0e641ddea988d4456a738f79031d7a1",
+        "gltf_node_centers": {
+          "Arm": [
+            -0.33000001311302185,
+            0.7590000033378601,
+            -0.009999997913837433
+          ],
+          "Arm support": [
+            -0.3050000071525574,
+            0.6545000076293945,
+            0
+          ],
+          "Arm support.001": [
+            0.3050000071525574,
+            0.6545000076293945,
+            0
+          ],
+          "Arm.001": [
+            0.33000001311302185,
+            0.7590000033378601,
+            -0.009999997913837433
+          ],
+          "Back": [
+            0,
+            0.8910000324249268,
+            -0.23000000417232513
+          ],
+          "Base": [
+            0,
+            0.03849999979138374,
+            0
+          ],
+          "Footrest": [
+            0,
+            0.28599998354911804,
+            0.44999998807907104
+          ],
+          "Footrest support": [
+            0,
+            0.4235000014305115,
+            0.3149999976158142
+          ],
+          "Hydraulic post": [
+            0,
+            0.2750000059604645,
+            0
+          ],
+          "Seat": [
+            0,
+            0.550000011920929,
+            0
+          ]
+        },
+        "blender_local_front": [
+          0,
+          -1,
+          0
+        ],
+        "gltf_to_blender": "[x,-z,y]",
+        "target_blender_m": [
+          0,
+          0.9
+        ],
+        "images": [
+          "docs/machine/evidence/workplaces-v010/PAN-045-front.png"
+        ]
+      }
+    },
+    {
+      "room_id": "PAN-049",
+      "instance_id": "AST-1127-006",
+      "status": "confirmed",
+      "asset_ref": {
+        "asset_id": "AST-1127",
+        "version": "v002"
+      },
+      "source_placements_path": "meshy/models/blender/AST-2049/v003/placements.json",
+      "source_placements_sha256": "f166ff57fc7607431ea41bb9431be50940a4375b2715b1eed3d36f686e199b76",
+      "previous_rotation_euler_blender_deg": [
+        0,
+        0,
+        0
+      ],
+      "rotation_euler_blender_deg": [
+        0,
+        0,
+        180.0
+      ],
+      "reason": "Spectator bench front is local -Y; turn180 toward the sports court instead of away from it.",
+      "evidence": {
+        "component_glb_path": "meshy/models/blender/AST-1127/v002/exports/model.glb",
+        "component_glb_sha256": "a1a64731fdb8aefff8d482874c02cd28273b8c9de847459bb7a91a9ed9dc9487",
+        "gltf_node_centers": {
+          "Back slat": [
+            0,
+            0.6800000071525574,
+            -0.2199999988079071
+          ],
+          "Back slat.001": [
+            0,
+            0.8500000238418579,
+            -0.2199999988079071
+          ],
+          "Back support": [
+            -0.5799999833106995,
+            0.5199999809265137,
+            -0.20000000298023224
+          ],
+          "Back support.001": [
+            0.5799999833106995,
+            0.5199999809265137,
+            -0.20000000298023224
+          ],
+          "Front leg": [
+            -0.5799999833106995,
+            0.22500000894069672,
+            0.18000000715255737
+          ],
+          "Front leg.001": [
+            0.5799999833106995,
+            0.22500000894069672,
+            0.18000000715255737
+          ],
+          "Seat cross support": [
+            -0.5799999833106995,
+            0.4000000059604645,
+            -0.009999997913837433
+          ],
+          "Seat cross support.001": [
+            0.5799999833106995,
+            0.4000000059604645,
+            -0.009999997913837433
+          ],
+          "Seat slat": [
+            0,
+            0.44999998807907104,
+            0.14000000059604645
+          ],
+          "Seat slat.001": [
+            0,
+            0.44999998807907104,
+            0
+          ],
+          "Seat slat.002": [
+            0,
+            0.44999998807907104,
+            -0.14000000059604645
+          ]
+        },
+        "blender_local_front": [
+          0,
+          -1,
+          0
+        ],
+        "gltf_to_blender": "[x,-z,y]",
+        "target_blender_m": [
+          -1.0,
+          0.4
+        ],
+        "images": [
+          "docs/machine/evidence/workplaces-v010/PAN-049-front.png"
+        ]
+      }
+    },
+    {
+      "room_id": "PAN-049",
+      "instance_id": "AST-1127-007",
+      "status": "confirmed",
+      "asset_ref": {
+        "asset_id": "AST-1127",
+        "version": "v002"
+      },
+      "source_placements_path": "meshy/models/blender/AST-2049/v003/placements.json",
+      "source_placements_sha256": "f166ff57fc7607431ea41bb9431be50940a4375b2715b1eed3d36f686e199b76",
+      "previous_rotation_euler_blender_deg": [
+        0,
+        0,
+        0
+      ],
+      "rotation_euler_blender_deg": [
+        0,
+        0,
+        180.0
+      ],
+      "reason": "Spectator bench front is local -Y; turn180 toward the sports court instead of away from it.",
+      "evidence": {
+        "component_glb_path": "meshy/models/blender/AST-1127/v002/exports/model.glb",
+        "component_glb_sha256": "a1a64731fdb8aefff8d482874c02cd28273b8c9de847459bb7a91a9ed9dc9487",
+        "gltf_node_centers": {
+          "Back slat": [
+            0,
+            0.6800000071525574,
+            -0.2199999988079071
+          ],
+          "Back slat.001": [
+            0,
+            0.8500000238418579,
+            -0.2199999988079071
+          ],
+          "Back support": [
+            -0.5799999833106995,
+            0.5199999809265137,
+            -0.20000000298023224
+          ],
+          "Back support.001": [
+            0.5799999833106995,
+            0.5199999809265137,
+            -0.20000000298023224
+          ],
+          "Front leg": [
+            -0.5799999833106995,
+            0.22500000894069672,
+            0.18000000715255737
+          ],
+          "Front leg.001": [
+            0.5799999833106995,
+            0.22500000894069672,
+            0.18000000715255737
+          ],
+          "Seat cross support": [
+            -0.5799999833106995,
+            0.4000000059604645,
+            -0.009999997913837433
+          ],
+          "Seat cross support.001": [
+            0.5799999833106995,
+            0.4000000059604645,
+            -0.009999997913837433
+          ],
+          "Seat slat": [
+            0,
+            0.44999998807907104,
+            0.14000000059604645
+          ],
+          "Seat slat.001": [
+            0,
+            0.44999998807907104,
+            0
+          ],
+          "Seat slat.002": [
+            0,
+            0.44999998807907104,
+            -0.14000000059604645
+          ]
+        },
+        "blender_local_front": [
+          0,
+          -1,
+          0
+        ],
+        "gltf_to_blender": "[x,-z,y]",
+        "target_blender_m": [
+          1.0,
+          0.4
+        ],
+        "images": [
+          "docs/machine/evidence/workplaces-v010/PAN-049-front.png"
+        ]
+      }
+    },
+    {
+      "room_id": "PAN-054",
+      "instance_id": "AST-1202-002",
+      "status": "confirmed",
+      "asset_ref": {
+        "asset_id": "AST-1202",
+        "version": "v002"
+      },
+      "source_placements_path": "meshy/models/blender/AST-2054/v005/placements.json",
+      "source_placements_sha256": "f5e1cb3e2657b407136cc7b4fe02cbd46ba5ae56bae01e445b60db07350ef736",
+      "previous_rotation_euler_blender_deg": [
+        0,
+        0,
+        0
+      ],
+      "rotation_euler_blender_deg": [
+        0,
+        0,
+        180.0
+      ],
+      "reason": "Driver chair back is local +Y; turn the seat toward the actual operating console.",
+      "evidence": {
+        "component_glb_path": "meshy/models/blender/AST-1202/v002/exports/model.glb",
+        "component_glb_sha256": "f4264bbb750bcdfc7bdd79c642d56b36e375f4a4752852465751f8fd98dedc56",
+        "gltf_node_centers": {
+          "Arm": [
+            -0.3630000054836273,
+            0.828000009059906,
+            -0.010999998077750206
+          ],
+          "Arm support": [
+            -0.33550000190734863,
+            0.7139999866485596,
+            0
+          ],
+          "Arm support.001": [
+            0.33550000190734863,
+            0.7139999866485596,
+            0
+          ],
+          "Arm.001": [
+            0.3630000054836273,
+            0.828000009059906,
+            -0.010999998077750206
+          ],
+          "Back": [
+            0,
+            0.972000002861023,
+            -0.2529999911785126
+          ],
+          "Base": [
+            0,
+            0.041999999433755875,
+            0
+          ],
+          "Footrest": [
+            0,
+            0.31199997663497925,
+            0.4949999749660492
+          ],
+          "Footrest support": [
+            0,
+            0.4620000123977661,
+            0.3465000092983246
+          ],
+          "Hydraulic post": [
+            0,
+            0.30000001192092896,
+            0
+          ],
+          "Seat": [
+            0,
+            0.6000000238418579,
+            0
+          ]
+        },
+        "blender_local_front": [
+          0,
+          -1,
+          0
+        ],
+        "gltf_to_blender": "[x,-z,y]",
+        "target_blender_m": [
+          0,
+          0.8
+        ],
+        "images": [
+          "docs/machine/evidence/workplaces-v010/PAN-054-front.png"
+        ]
+      }
+    }
+  ],
+  "verification_after_apply": "Reopen corrected assemblies, confirm fronts toward named targets, support contacts and no new overlap; inspect actual v011 WebGL. This recipe is not an execution pass.",
+  "unapplied_followup": [
+    {
+      "room_id": "PAN-037",
+      "instance_id": "AST-1136-005",
+      "asset_ref": {
+        "asset_id": "AST-1136",
+        "version": "v001"
+      },
+      "status": "confirmed_unsupported_straight_ladder_needs_design",
+      "reason": "Native/reduced images show isolated vertical straight ladder; actual GLB has 2 Rail and 6 Rung nodes only, no rear support. Original ladder() helper also contains rails/rungs only. Current rotation [0,0,0].",
+      "evidence": [
+        "meshy/models/blender/AST-2037/v004/placements.json",
+        "meshy/models/blender/AST-1136/v001/exports/model.glb",
+        "meshy/models/blender/AST-1032/v001/processing/build_dedicated.py:324",
+        "docs/machine/evidence/workplaces-v010/PAN-037-front.png",
+        "docs/machine/evidence/workplaces-v010/PAN-037-reduced.png"
+      ],
+      "correction_not_included": "Requires validated backing contact or new A-frame geometry. No arbitrary placement/tilt proposed."
+    }
+  ]
+}

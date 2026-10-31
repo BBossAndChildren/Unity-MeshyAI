@@ -1,0 +1,90 @@
+{
+  "schema_version": 3,
+  "checkedAt": "2026-10-31T07:49:35.043Z",
+  "scope": "Inline mocked WebAudio/controller and presentation contract tests; not actual audio playback or new WebGL verification",
+  "passed": 20,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "trusted local gesture only; no locked cue replay",
+      "status": "pass"
+    },
+    {
+      "name": "generic manifest availability and missing keys remain silent",
+      "status": "pass"
+    },
+    {
+      "name": "duplicate ID and conflicting ID cannot replay or count gameplay",
+      "status": "pass"
+    },
+    {
+      "name": "cooldown and persisted mute-volume preferences",
+      "status": "pass"
+    },
+    {
+      "name": "four-voice and two-loop budgets; priorities and ducking",
+      "status": "pass"
+    },
+    {
+      "name": "pending loop stop prevents late decode and permits a new loop",
+      "status": "pass"
+    },
+    {
+      "name": "close cancels pending decode and active audio",
+      "status": "pass"
+    },
+    {
+      "name": "pause cancels pending decode and active audio",
+      "status": "pass"
+    },
+    {
+      "name": "scene cancels pending decode and active audio",
+      "status": "pass"
+    },
+    {
+      "name": "reset cancels pending decode and active audio",
+      "status": "pass"
+    },
+    {
+      "name": "ended cancels pending decode and active audio",
+      "status": "pass"
+    },
+    {
+      "name": "scope switch retires old run and prevents delayed foreign cues",
+      "status": "pass"
+    },
+    {
+      "name": "hidden page suppresses pending audio and never replays on return",
+      "status": "pass"
+    },
+    {
+      "name": "pause notification permitted but ordinary actions suppressed",
+      "status": "pass"
+    },
+    {
+      "name": "load error is recoverable; source-start failure cleans connections",
+      "status": "pass"
+    },
+    {
+      "name": "resume errors stay locked without fabricated playback",
+      "status": "pass"
+    },
+    {
+      "name": "late onended callback cannot remove later sources; dispose invalidates decode",
+      "status": "pass"
+    },
+    {
+      "name": "presentation pre-ready queue, strict RGB, trusted iframe origin/source, no process events",
+      "status": "pass"
+    },
+    {
+      "name": "disposed resume rejection emits nothing; preview performs no later fetch",
+      "status": "pass"
+    },
+    {
+      "name": "unsupported WebAudio and invalid manifest fail explicitly",
+      "status": "pass"
+    }
+  ],
+  "sourceSha256": "ec835d855257f1958998a6966c750ecc4cf0736e302096e5e1516887e3df451f"
+}

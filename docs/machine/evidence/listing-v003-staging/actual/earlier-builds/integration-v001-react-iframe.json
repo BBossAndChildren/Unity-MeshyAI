@@ -1,0 +1,1307 @@
+{
+  "schema_version": 3,
+  "checked_at": "2026-10-31T07:19:43.165Z",
+  "environment": "Actual React production bundle,Chrome iframe,compiled Unity WebGL,local fsync receiver;public API start/end plus explicit retransmission/mismatch control checks",
+  "status": "pass_scoped_bridge_only",
+  "normal_workflow_completion_verified": false,
+  "actual_service_backend_verified": false,
+  "acks": [
+    {
+      "duplicate": false,
+      "eventId": "evt-1d80e1ada36641ec952115072fbfcde3",
+      "producer": "local-test-receiver",
+      "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+      "storage": "fsynced-jsonl",
+      "stored": true
+    },
+    {
+      "duplicate": false,
+      "eventId": "evt-d1993026d25c40008eb6dc6321ba8997",
+      "producer": "local-test-receiver",
+      "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+      "storage": "fsynced-jsonl",
+      "stored": true
+    },
+    {
+      "duplicate": false,
+      "eventId": "evt-7195ba3836af4f84a666b53ab7e73547",
+      "producer": "local-test-receiver",
+      "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+      "storage": "fsynced-jsonl",
+      "stored": true
+    },
+    {
+      "duplicate": false,
+      "eventId": "evt-b641b4021f6a4ed1958209ce0e609ef9",
+      "producer": "local-test-receiver",
+      "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+      "storage": "fsynced-jsonl",
+      "stored": true
+    },
+    {
+      "duplicate": false,
+      "eventId": "evt-813c9b758ccc4a6890fa57ae9f8e7dbe",
+      "producer": "local-test-receiver",
+      "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+      "storage": "fsynced-jsonl",
+      "stored": true
+    }
+  ],
+  "buildId": "career-suite-integration-v001",
+  "duplicateStart": {
+    "eventId": "evt-d1993026d25c40008eb6dc6321ba8997",
+    "occurredAt": "2026-10-31T16:18:38.8280000+09:00",
+    "received": true,
+    "sameBody": true,
+    "sameEventId": true,
+    "sequence": 2
+  },
+  "ended": {
+    "action": "end_experience",
+    "assetId": null,
+    "assetVersion": null,
+    "attemptId": null,
+    "buildId": "career-suite-integration-v001",
+    "context": {
+      "assessmentCode": "TASK_INCOMPLETE",
+      "assessmentStatus": "evaluated",
+      "evidenceEventIds": [
+        "evt-1d80e1ada36641ec952115072fbfcde3",
+        "evt-d1993026d25c40008eb6dc6321ba8997",
+        "evt-7195ba3836af4f84a666b53ab7e73547",
+        "evt-b641b4021f6a4ed1958209ce0e609ef9"
+      ],
+      "interpretation": "가상 업무 0/3단계 완료. 기록된 제출·오류·안내를 기준으로 설명합니다.",
+      "limitations": [
+        "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+        "이 기록은 선택한 가상 시나리오 한 회의 수행이며 직업 적성·전문 자격 평가가 아닙니다."
+      ],
+      "reasonCodes": [
+        "USER_EXITED_BEFORE_START"
+      ],
+      "ruleVersion": "v001",
+      "termination": {
+        "code": "USER_EXITED_BEFORE_START",
+        "completedStepIds": [],
+        "inFlightActionIds": [],
+        "initiatedBy": "user",
+        "lastObjectId": null,
+        "lastState": "in_progress",
+        "lastStepId": null,
+        "remainingStepIds": [
+          "work-1",
+          "work-2",
+          "work-3"
+        ],
+        "terminationId": "termination-7a0f1b280c1647e3a9958469d4d2ddfd",
+        "workStarted": false
+      }
+    },
+    "data": {
+      "events": [
+        {
+          "action": "start_scenario",
+          "assetId": null,
+          "assetVersion": null,
+          "attemptId": null,
+          "buildId": "career-suite-integration-v001",
+          "context": {
+            "assessmentCode": null,
+            "assessmentStatus": "pending",
+            "evidenceEventIds": [],
+            "interpretation": null,
+            "limitations": [
+              "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+              "이 기록은 선택한 가상 시나리오 한 회의 수행이며 직업 적성·전문 자격 평가가 아닙니다."
+            ],
+            "reasonCodes": [],
+            "ruleVersion": "v001",
+            "termination": null
+          },
+          "data": {},
+          "documentRevision": null,
+          "eventId": "evt-1d80e1ada36641ec952115072fbfcde3",
+          "experienceId": "277e8523-70dd-4e7b-9d21-a13a92223490",
+          "instanceId": null,
+          "objectId": null,
+          "occurredAt": "2026-10-31T16:18:38.8240000+09:00",
+          "process": {
+            "attemptCount": 0,
+            "backtrackCount": 0,
+            "elapsedActiveMs": 0,
+            "guidanceUsed": false,
+            "helpRequestCount": 0,
+            "measurementNote": null,
+            "measurementStatus": "complete",
+            "mistakeCount": 0,
+            "navigationBackCount": 0,
+            "repeatedMistakeCount": 0,
+            "retryCount": 0,
+            "scope": "scenario"
+          },
+          "protocol": "career-experience",
+          "requestId": null,
+          "requestRevision": null,
+          "result": {
+            "completionCode": null,
+            "data": {},
+            "outcome": "pending",
+            "success": null
+          },
+          "roomId": "PAN-050",
+          "scenarioId": "career-net-359-experience",
+          "scenarioRunId": "run-05db4eadd108460ba585aecc4d03ecec",
+          "scenarioVersion": "v002",
+          "sceneId": "PAN-050",
+          "schemaVersion": 1,
+          "sequence": 1,
+          "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+          "stepId": null,
+          "type": "scenario.started",
+          "workItemId": null
+        },
+        {
+          "action": "start_experience",
+          "assetId": null,
+          "assetVersion": null,
+          "attemptId": null,
+          "buildId": "career-suite-integration-v001",
+          "context": {
+            "assessmentCode": null,
+            "assessmentStatus": "pending",
+            "evidenceEventIds": [],
+            "interpretation": null,
+            "limitations": [
+              "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+              "이 기록은 선택한 가상 시나리오 한 회의 수행이며 직업 적성·전문 자격 평가가 아닙니다."
+            ],
+            "reasonCodes": [],
+            "ruleVersion": "v001",
+            "termination": null
+          },
+          "data": {
+            "firstSequence": 1,
+            "ready": true
+          },
+          "documentRevision": null,
+          "eventId": "evt-d1993026d25c40008eb6dc6321ba8997",
+          "experienceId": "277e8523-70dd-4e7b-9d21-a13a92223490",
+          "instanceId": null,
+          "objectId": null,
+          "occurredAt": "2026-10-31T16:18:38.8280000+09:00",
+          "process": {
+            "attemptCount": 0,
+            "backtrackCount": 0,
+            "elapsedActiveMs": 0,
+            "guidanceUsed": false,
+            "helpRequestCount": 0,
+            "measurementNote": null,
+            "measurementStatus": "complete",
+            "mistakeCount": 0,
+            "navigationBackCount": 0,
+            "repeatedMistakeCount": 0,
+            "retryCount": 0,
+            "scope": "scenario"
+          },
+          "protocol": "career-experience",
+          "requestId": "bfd65484-aa6d-473b-8846-d8e49425539c",
+          "requestRevision": null,
+          "result": {
+            "completionCode": null,
+            "data": {},
+            "outcome": "pending",
+            "success": null
+          },
+          "roomId": "PAN-050",
+          "scenarioId": "career-net-359-experience",
+          "scenarioRunId": "run-05db4eadd108460ba585aecc4d03ecec",
+          "scenarioVersion": "v002",
+          "sceneId": "PAN-050",
+          "schemaVersion": 1,
+          "sequence": 2,
+          "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+          "stepId": null,
+          "type": "experience.started",
+          "workItemId": null
+        },
+        {
+          "action": "enter_room",
+          "assetId": null,
+          "assetVersion": null,
+          "attemptId": null,
+          "buildId": "career-suite-integration-v001",
+          "context": {
+            "assessmentCode": null,
+            "assessmentStatus": "pending",
+            "evidenceEventIds": [],
+            "interpretation": null,
+            "limitations": [
+              "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+              "이 기록은 선택한 가상 시나리오 한 회의 수행이며 직업 적성·전문 자격 평가가 아닙니다."
+            ],
+            "reasonCodes": [],
+            "ruleVersion": "v001",
+            "termination": null
+          },
+          "data": {
+            "navigationRoomId": "PAN-050"
+          },
+          "documentRevision": null,
+          "eventId": "evt-7195ba3836af4f84a666b53ab7e73547",
+          "experienceId": "277e8523-70dd-4e7b-9d21-a13a92223490",
+          "instanceId": null,
+          "objectId": null,
+          "occurredAt": "2026-10-31T16:18:38.8330000+09:00",
+          "process": {
+            "attemptCount": 0,
+            "backtrackCount": 0,
+            "elapsedActiveMs": 0,
+            "guidanceUsed": false,
+            "helpRequestCount": 0,
+            "measurementNote": null,
+            "measurementStatus": "complete",
+            "mistakeCount": 0,
+            "navigationBackCount": 0,
+            "repeatedMistakeCount": 0,
+            "retryCount": 0,
+            "scope": "scenario"
+          },
+          "protocol": "career-experience",
+          "requestId": null,
+          "requestRevision": null,
+          "result": {
+            "completionCode": null,
+            "data": {},
+            "outcome": "pending",
+            "success": null
+          },
+          "roomId": "PAN-050",
+          "scenarioId": "career-net-359-experience",
+          "scenarioRunId": "run-05db4eadd108460ba585aecc4d03ecec",
+          "scenarioVersion": "v002",
+          "sceneId": "PAN-050",
+          "schemaVersion": 1,
+          "sequence": 3,
+          "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+          "stepId": null,
+          "type": "scene.entered",
+          "workItemId": null
+        },
+        {
+          "action": "end_scenario",
+          "assetId": null,
+          "assetVersion": null,
+          "attemptId": null,
+          "buildId": "career-suite-integration-v001",
+          "context": {
+            "assessmentCode": "TASK_INCOMPLETE",
+            "assessmentStatus": "evaluated",
+            "evidenceEventIds": [
+              "evt-1d80e1ada36641ec952115072fbfcde3",
+              "evt-d1993026d25c40008eb6dc6321ba8997",
+              "evt-7195ba3836af4f84a666b53ab7e73547"
+            ],
+            "interpretation": "가상 업무 0/3단계 완료. 기록된 제출·오류·안내를 기준으로 설명합니다.",
+            "limitations": [
+              "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+              "이 기록은 선택한 가상 시나리오 한 회의 수행이며 직업 적성·전문 자격 평가가 아닙니다."
+            ],
+            "reasonCodes": [
+              "USER_EXITED_BEFORE_START"
+            ],
+            "ruleVersion": "v001",
+            "termination": {
+              "code": "USER_EXITED_BEFORE_START",
+              "completedStepIds": [],
+              "inFlightActionIds": [],
+              "initiatedBy": "user",
+              "lastObjectId": null,
+              "lastState": "in_progress",
+              "lastStepId": null,
+              "remainingStepIds": [
+                "work-1",
+                "work-2",
+                "work-3"
+              ],
+              "terminationId": "termination-7a0f1b280c1647e3a9958469d4d2ddfd",
+              "workStarted": false
+            }
+          },
+          "data": {
+            "partialResults": [
+              {
+                "completed": false,
+                "result": null,
+                "stepId": "work-1"
+              },
+              {
+                "completed": false,
+                "result": null,
+                "stepId": "work-2"
+              },
+              {
+                "completed": false,
+                "result": null,
+                "stepId": "work-3"
+              }
+            ]
+          },
+          "documentRevision": null,
+          "eventId": "evt-b641b4021f6a4ed1958209ce0e609ef9",
+          "experienceId": "277e8523-70dd-4e7b-9d21-a13a92223490",
+          "instanceId": null,
+          "objectId": null,
+          "occurredAt": "2026-10-31T16:19:36.1960000+09:00",
+          "process": {
+            "attemptCount": 0,
+            "backtrackCount": 0,
+            "elapsedActiveMs": 58340,
+            "guidanceUsed": false,
+            "helpRequestCount": 0,
+            "measurementNote": null,
+            "measurementStatus": "complete",
+            "mistakeCount": 0,
+            "navigationBackCount": 0,
+            "repeatedMistakeCount": 0,
+            "retryCount": 0,
+            "scope": "scenario"
+          },
+          "protocol": "career-experience",
+          "requestId": null,
+          "requestRevision": null,
+          "result": {
+            "completionCode": "USER_EXITED_BEFORE_START",
+            "data": {
+              "partialResults": [
+                {
+                  "completed": false,
+                  "result": null,
+                  "stepId": "work-1"
+                },
+                {
+                  "completed": false,
+                  "result": null,
+                  "stepId": "work-2"
+                },
+                {
+                  "completed": false,
+                  "result": null,
+                  "stepId": "work-3"
+                }
+              ]
+            },
+            "outcome": "aborted",
+            "success": false
+          },
+          "roomId": "PAN-050",
+          "scenarioId": "career-net-359-experience",
+          "scenarioRunId": "run-05db4eadd108460ba585aecc4d03ecec",
+          "scenarioVersion": "v002",
+          "sceneId": "PAN-050",
+          "schemaVersion": 1,
+          "sequence": 4,
+          "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+          "stepId": null,
+          "type": "scenario.aborted",
+          "workItemId": null
+        }
+      ],
+      "eventsComplete": true,
+      "partialResults": [
+        {
+          "completed": false,
+          "result": null,
+          "stepId": "work-1"
+        },
+        {
+          "completed": false,
+          "result": null,
+          "stepId": "work-2"
+        },
+        {
+          "completed": false,
+          "result": null,
+          "stepId": "work-3"
+        }
+      ],
+      "previousRuns": []
+    },
+    "documentRevision": null,
+    "eventId": "evt-813c9b758ccc4a6890fa57ae9f8e7dbe",
+    "experienceId": "277e8523-70dd-4e7b-9d21-a13a92223490",
+    "instanceId": null,
+    "objectId": null,
+    "occurredAt": "2026-10-31T16:19:36.1970000+09:00",
+    "process": {
+      "attemptCount": 0,
+      "backtrackCount": 0,
+      "elapsedActiveMs": 58340,
+      "guidanceUsed": false,
+      "helpRequestCount": 0,
+      "measurementNote": null,
+      "measurementStatus": "complete",
+      "mistakeCount": 0,
+      "navigationBackCount": 0,
+      "repeatedMistakeCount": 0,
+      "retryCount": 0,
+      "scope": "scenario"
+    },
+    "protocol": "career-experience",
+    "requestId": "2da8a56b-fd75-48bc-b0ea-b646e958ea8d",
+    "requestRevision": null,
+    "result": {
+      "completionCode": "USER_EXITED_BEFORE_START",
+      "data": {
+        "partialResults": [
+          {
+            "completed": false,
+            "result": null,
+            "stepId": "work-1"
+          },
+          {
+            "completed": false,
+            "result": null,
+            "stepId": "work-2"
+          },
+          {
+            "completed": false,
+            "result": null,
+            "stepId": "work-3"
+          }
+        ],
+        "scenarioComplete": false
+      },
+      "outcome": "aborted",
+      "success": false
+    },
+    "roomId": "PAN-050",
+    "scenarioId": "career-net-359-experience",
+    "scenarioRunId": "run-05db4eadd108460ba585aecc4d03ecec",
+    "scenarioVersion": "v002",
+    "sceneId": "PAN-050",
+    "schemaVersion": 1,
+    "sequence": 5,
+    "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+    "stepId": null,
+    "type": "experience.ended",
+    "workItemId": null
+  },
+  "events": [
+    {
+      "action": "start_scenario",
+      "assetId": null,
+      "assetVersion": null,
+      "attemptId": null,
+      "buildId": "career-suite-integration-v001",
+      "context": {
+        "assessmentCode": null,
+        "assessmentStatus": "pending",
+        "evidenceEventIds": [],
+        "interpretation": null,
+        "limitations": [
+          "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+          "이 기록은 선택한 가상 시나리오 한 회의 수행이며 직업 적성·전문 자격 평가가 아닙니다."
+        ],
+        "reasonCodes": [],
+        "ruleVersion": "v001",
+        "termination": null
+      },
+      "data": {},
+      "documentRevision": null,
+      "eventId": "evt-1d80e1ada36641ec952115072fbfcde3",
+      "experienceId": "277e8523-70dd-4e7b-9d21-a13a92223490",
+      "instanceId": null,
+      "objectId": null,
+      "occurredAt": "2026-10-31T16:18:38.8240000+09:00",
+      "process": {
+        "attemptCount": 0,
+        "backtrackCount": 0,
+        "elapsedActiveMs": 0,
+        "guidanceUsed": false,
+        "helpRequestCount": 0,
+        "measurementNote": null,
+        "measurementStatus": "complete",
+        "mistakeCount": 0,
+        "navigationBackCount": 0,
+        "repeatedMistakeCount": 0,
+        "retryCount": 0,
+        "scope": "scenario"
+      },
+      "protocol": "career-experience",
+      "requestId": null,
+      "requestRevision": null,
+      "result": {
+        "completionCode": null,
+        "data": {},
+        "outcome": "pending",
+        "success": null
+      },
+      "roomId": "PAN-050",
+      "scenarioId": "career-net-359-experience",
+      "scenarioRunId": "run-05db4eadd108460ba585aecc4d03ecec",
+      "scenarioVersion": "v002",
+      "sceneId": "PAN-050",
+      "schemaVersion": 1,
+      "sequence": 1,
+      "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+      "stepId": null,
+      "type": "scenario.started",
+      "workItemId": null
+    },
+    {
+      "action": "start_experience",
+      "assetId": null,
+      "assetVersion": null,
+      "attemptId": null,
+      "buildId": "career-suite-integration-v001",
+      "context": {
+        "assessmentCode": null,
+        "assessmentStatus": "pending",
+        "evidenceEventIds": [],
+        "interpretation": null,
+        "limitations": [
+          "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+          "이 기록은 선택한 가상 시나리오 한 회의 수행이며 직업 적성·전문 자격 평가가 아닙니다."
+        ],
+        "reasonCodes": [],
+        "ruleVersion": "v001",
+        "termination": null
+      },
+      "data": {
+        "firstSequence": 1,
+        "ready": true
+      },
+      "documentRevision": null,
+      "eventId": "evt-d1993026d25c40008eb6dc6321ba8997",
+      "experienceId": "277e8523-70dd-4e7b-9d21-a13a92223490",
+      "instanceId": null,
+      "objectId": null,
+      "occurredAt": "2026-10-31T16:18:38.8280000+09:00",
+      "process": {
+        "attemptCount": 0,
+        "backtrackCount": 0,
+        "elapsedActiveMs": 0,
+        "guidanceUsed": false,
+        "helpRequestCount": 0,
+        "measurementNote": null,
+        "measurementStatus": "complete",
+        "mistakeCount": 0,
+        "navigationBackCount": 0,
+        "repeatedMistakeCount": 0,
+        "retryCount": 0,
+        "scope": "scenario"
+      },
+      "protocol": "career-experience",
+      "requestId": "bfd65484-aa6d-473b-8846-d8e49425539c",
+      "requestRevision": null,
+      "result": {
+        "completionCode": null,
+        "data": {},
+        "outcome": "pending",
+        "success": null
+      },
+      "roomId": "PAN-050",
+      "scenarioId": "career-net-359-experience",
+      "scenarioRunId": "run-05db4eadd108460ba585aecc4d03ecec",
+      "scenarioVersion": "v002",
+      "sceneId": "PAN-050",
+      "schemaVersion": 1,
+      "sequence": 2,
+      "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+      "stepId": null,
+      "type": "experience.started",
+      "workItemId": null
+    },
+    {
+      "action": "enter_room",
+      "assetId": null,
+      "assetVersion": null,
+      "attemptId": null,
+      "buildId": "career-suite-integration-v001",
+      "context": {
+        "assessmentCode": null,
+        "assessmentStatus": "pending",
+        "evidenceEventIds": [],
+        "interpretation": null,
+        "limitations": [
+          "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+          "이 기록은 선택한 가상 시나리오 한 회의 수행이며 직업 적성·전문 자격 평가가 아닙니다."
+        ],
+        "reasonCodes": [],
+        "ruleVersion": "v001",
+        "termination": null
+      },
+      "data": {
+        "navigationRoomId": "PAN-050"
+      },
+      "documentRevision": null,
+      "eventId": "evt-7195ba3836af4f84a666b53ab7e73547",
+      "experienceId": "277e8523-70dd-4e7b-9d21-a13a92223490",
+      "instanceId": null,
+      "objectId": null,
+      "occurredAt": "2026-10-31T16:18:38.8330000+09:00",
+      "process": {
+        "attemptCount": 0,
+        "backtrackCount": 0,
+        "elapsedActiveMs": 0,
+        "guidanceUsed": false,
+        "helpRequestCount": 0,
+        "measurementNote": null,
+        "measurementStatus": "complete",
+        "mistakeCount": 0,
+        "navigationBackCount": 0,
+        "repeatedMistakeCount": 0,
+        "retryCount": 0,
+        "scope": "scenario"
+      },
+      "protocol": "career-experience",
+      "requestId": null,
+      "requestRevision": null,
+      "result": {
+        "completionCode": null,
+        "data": {},
+        "outcome": "pending",
+        "success": null
+      },
+      "roomId": "PAN-050",
+      "scenarioId": "career-net-359-experience",
+      "scenarioRunId": "run-05db4eadd108460ba585aecc4d03ecec",
+      "scenarioVersion": "v002",
+      "sceneId": "PAN-050",
+      "schemaVersion": 1,
+      "sequence": 3,
+      "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+      "stepId": null,
+      "type": "scene.entered",
+      "workItemId": null
+    },
+    {
+      "action": "end_scenario",
+      "assetId": null,
+      "assetVersion": null,
+      "attemptId": null,
+      "buildId": "career-suite-integration-v001",
+      "context": {
+        "assessmentCode": "TASK_INCOMPLETE",
+        "assessmentStatus": "evaluated",
+        "evidenceEventIds": [
+          "evt-1d80e1ada36641ec952115072fbfcde3",
+          "evt-d1993026d25c40008eb6dc6321ba8997",
+          "evt-7195ba3836af4f84a666b53ab7e73547"
+        ],
+        "interpretation": "가상 업무 0/3단계 완료. 기록된 제출·오류·안내를 기준으로 설명합니다.",
+        "limitations": [
+          "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+          "이 기록은 선택한 가상 시나리오 한 회의 수행이며 직업 적성·전문 자격 평가가 아닙니다."
+        ],
+        "reasonCodes": [
+          "USER_EXITED_BEFORE_START"
+        ],
+        "ruleVersion": "v001",
+        "termination": {
+          "code": "USER_EXITED_BEFORE_START",
+          "completedStepIds": [],
+          "inFlightActionIds": [],
+          "initiatedBy": "user",
+          "lastObjectId": null,
+          "lastState": "in_progress",
+          "lastStepId": null,
+          "remainingStepIds": [
+            "work-1",
+            "work-2",
+            "work-3"
+          ],
+          "terminationId": "termination-7a0f1b280c1647e3a9958469d4d2ddfd",
+          "workStarted": false
+        }
+      },
+      "data": {
+        "partialResults": [
+          {
+            "completed": false,
+            "result": null,
+            "stepId": "work-1"
+          },
+          {
+            "completed": false,
+            "result": null,
+            "stepId": "work-2"
+          },
+          {
+            "completed": false,
+            "result": null,
+            "stepId": "work-3"
+          }
+        ]
+      },
+      "documentRevision": null,
+      "eventId": "evt-b641b4021f6a4ed1958209ce0e609ef9",
+      "experienceId": "277e8523-70dd-4e7b-9d21-a13a92223490",
+      "instanceId": null,
+      "objectId": null,
+      "occurredAt": "2026-10-31T16:19:36.1960000+09:00",
+      "process": {
+        "attemptCount": 0,
+        "backtrackCount": 0,
+        "elapsedActiveMs": 58340,
+        "guidanceUsed": false,
+        "helpRequestCount": 0,
+        "measurementNote": null,
+        "measurementStatus": "complete",
+        "mistakeCount": 0,
+        "navigationBackCount": 0,
+        "repeatedMistakeCount": 0,
+        "retryCount": 0,
+        "scope": "scenario"
+      },
+      "protocol": "career-experience",
+      "requestId": null,
+      "requestRevision": null,
+      "result": {
+        "completionCode": "USER_EXITED_BEFORE_START",
+        "data": {
+          "partialResults": [
+            {
+              "completed": false,
+              "result": null,
+              "stepId": "work-1"
+            },
+            {
+              "completed": false,
+              "result": null,
+              "stepId": "work-2"
+            },
+            {
+              "completed": false,
+              "result": null,
+              "stepId": "work-3"
+            }
+          ]
+        },
+        "outcome": "aborted",
+        "success": false
+      },
+      "roomId": "PAN-050",
+      "scenarioId": "career-net-359-experience",
+      "scenarioRunId": "run-05db4eadd108460ba585aecc4d03ecec",
+      "scenarioVersion": "v002",
+      "sceneId": "PAN-050",
+      "schemaVersion": 1,
+      "sequence": 4,
+      "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+      "stepId": null,
+      "type": "scenario.aborted",
+      "workItemId": null
+    },
+    {
+      "action": "end_experience",
+      "assetId": null,
+      "assetVersion": null,
+      "attemptId": null,
+      "buildId": "career-suite-integration-v001",
+      "context": {
+        "assessmentCode": "TASK_INCOMPLETE",
+        "assessmentStatus": "evaluated",
+        "evidenceEventIds": [
+          "evt-1d80e1ada36641ec952115072fbfcde3",
+          "evt-d1993026d25c40008eb6dc6321ba8997",
+          "evt-7195ba3836af4f84a666b53ab7e73547",
+          "evt-b641b4021f6a4ed1958209ce0e609ef9"
+        ],
+        "interpretation": "가상 업무 0/3단계 완료. 기록된 제출·오류·안내를 기준으로 설명합니다.",
+        "limitations": [
+          "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+          "이 기록은 선택한 가상 시나리오 한 회의 수행이며 직업 적성·전문 자격 평가가 아닙니다."
+        ],
+        "reasonCodes": [
+          "USER_EXITED_BEFORE_START"
+        ],
+        "ruleVersion": "v001",
+        "termination": {
+          "code": "USER_EXITED_BEFORE_START",
+          "completedStepIds": [],
+          "inFlightActionIds": [],
+          "initiatedBy": "user",
+          "lastObjectId": null,
+          "lastState": "in_progress",
+          "lastStepId": null,
+          "remainingStepIds": [
+            "work-1",
+            "work-2",
+            "work-3"
+          ],
+          "terminationId": "termination-7a0f1b280c1647e3a9958469d4d2ddfd",
+          "workStarted": false
+        }
+      },
+      "data": {
+        "events": [
+          {
+            "action": "start_scenario",
+            "assetId": null,
+            "assetVersion": null,
+            "attemptId": null,
+            "buildId": "career-suite-integration-v001",
+            "context": {
+              "assessmentCode": null,
+              "assessmentStatus": "pending",
+              "evidenceEventIds": [],
+              "interpretation": null,
+              "limitations": [
+                "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+                "이 기록은 선택한 가상 시나리오 한 회의 수행이며 직업 적성·전문 자격 평가가 아닙니다."
+              ],
+              "reasonCodes": [],
+              "ruleVersion": "v001",
+              "termination": null
+            },
+            "data": {},
+            "documentRevision": null,
+            "eventId": "evt-1d80e1ada36641ec952115072fbfcde3",
+            "experienceId": "277e8523-70dd-4e7b-9d21-a13a92223490",
+            "instanceId": null,
+            "objectId": null,
+            "occurredAt": "2026-10-31T16:18:38.8240000+09:00",
+            "process": {
+              "attemptCount": 0,
+              "backtrackCount": 0,
+              "elapsedActiveMs": 0,
+              "guidanceUsed": false,
+              "helpRequestCount": 0,
+              "measurementNote": null,
+              "measurementStatus": "complete",
+              "mistakeCount": 0,
+              "navigationBackCount": 0,
+              "repeatedMistakeCount": 0,
+              "retryCount": 0,
+              "scope": "scenario"
+            },
+            "protocol": "career-experience",
+            "requestId": null,
+            "requestRevision": null,
+            "result": {
+              "completionCode": null,
+              "data": {},
+              "outcome": "pending",
+              "success": null
+            },
+            "roomId": "PAN-050",
+            "scenarioId": "career-net-359-experience",
+            "scenarioRunId": "run-05db4eadd108460ba585aecc4d03ecec",
+            "scenarioVersion": "v002",
+            "sceneId": "PAN-050",
+            "schemaVersion": 1,
+            "sequence": 1,
+            "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+            "stepId": null,
+            "type": "scenario.started",
+            "workItemId": null
+          },
+          {
+            "action": "start_experience",
+            "assetId": null,
+            "assetVersion": null,
+            "attemptId": null,
+            "buildId": "career-suite-integration-v001",
+            "context": {
+              "assessmentCode": null,
+              "assessmentStatus": "pending",
+              "evidenceEventIds": [],
+              "interpretation": null,
+              "limitations": [
+                "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+                "이 기록은 선택한 가상 시나리오 한 회의 수행이며 직업 적성·전문 자격 평가가 아닙니다."
+              ],
+              "reasonCodes": [],
+              "ruleVersion": "v001",
+              "termination": null
+            },
+            "data": {
+              "firstSequence": 1,
+              "ready": true
+            },
+            "documentRevision": null,
+            "eventId": "evt-d1993026d25c40008eb6dc6321ba8997",
+            "experienceId": "277e8523-70dd-4e7b-9d21-a13a92223490",
+            "instanceId": null,
+            "objectId": null,
+            "occurredAt": "2026-10-31T16:18:38.8280000+09:00",
+            "process": {
+              "attemptCount": 0,
+              "backtrackCount": 0,
+              "elapsedActiveMs": 0,
+              "guidanceUsed": false,
+              "helpRequestCount": 0,
+              "measurementNote": null,
+              "measurementStatus": "complete",
+              "mistakeCount": 0,
+              "navigationBackCount": 0,
+              "repeatedMistakeCount": 0,
+              "retryCount": 0,
+              "scope": "scenario"
+            },
+            "protocol": "career-experience",
+            "requestId": "bfd65484-aa6d-473b-8846-d8e49425539c",
+            "requestRevision": null,
+            "result": {
+              "completionCode": null,
+              "data": {},
+              "outcome": "pending",
+              "success": null
+            },
+            "roomId": "PAN-050",
+            "scenarioId": "career-net-359-experience",
+            "scenarioRunId": "run-05db4eadd108460ba585aecc4d03ecec",
+            "scenarioVersion": "v002",
+            "sceneId": "PAN-050",
+            "schemaVersion": 1,
+            "sequence": 2,
+            "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+            "stepId": null,
+            "type": "experience.started",
+            "workItemId": null
+          },
+          {
+            "action": "enter_room",
+            "assetId": null,
+            "assetVersion": null,
+            "attemptId": null,
+            "buildId": "career-suite-integration-v001",
+            "context": {
+              "assessmentCode": null,
+              "assessmentStatus": "pending",
+              "evidenceEventIds": [],
+              "interpretation": null,
+              "limitations": [
+                "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+                "이 기록은 선택한 가상 시나리오 한 회의 수행이며 직업 적성·전문 자격 평가가 아닙니다."
+              ],
+              "reasonCodes": [],
+              "ruleVersion": "v001",
+              "termination": null
+            },
+            "data": {
+              "navigationRoomId": "PAN-050"
+            },
+            "documentRevision": null,
+            "eventId": "evt-7195ba3836af4f84a666b53ab7e73547",
+            "experienceId": "277e8523-70dd-4e7b-9d21-a13a92223490",
+            "instanceId": null,
+            "objectId": null,
+            "occurredAt": "2026-10-31T16:18:38.8330000+09:00",
+            "process": {
+              "attemptCount": 0,
+              "backtrackCount": 0,
+              "elapsedActiveMs": 0,
+              "guidanceUsed": false,
+              "helpRequestCount": 0,
+              "measurementNote": null,
+              "measurementStatus": "complete",
+              "mistakeCount": 0,
+              "navigationBackCount": 0,
+              "repeatedMistakeCount": 0,
+              "retryCount": 0,
+              "scope": "scenario"
+            },
+            "protocol": "career-experience",
+            "requestId": null,
+            "requestRevision": null,
+            "result": {
+              "completionCode": null,
+              "data": {},
+              "outcome": "pending",
+              "success": null
+            },
+            "roomId": "PAN-050",
+            "scenarioId": "career-net-359-experience",
+            "scenarioRunId": "run-05db4eadd108460ba585aecc4d03ecec",
+            "scenarioVersion": "v002",
+            "sceneId": "PAN-050",
+            "schemaVersion": 1,
+            "sequence": 3,
+            "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+            "stepId": null,
+            "type": "scene.entered",
+            "workItemId": null
+          },
+          {
+            "action": "end_scenario",
+            "assetId": null,
+            "assetVersion": null,
+            "attemptId": null,
+            "buildId": "career-suite-integration-v001",
+            "context": {
+              "assessmentCode": "TASK_INCOMPLETE",
+              "assessmentStatus": "evaluated",
+              "evidenceEventIds": [
+                "evt-1d80e1ada36641ec952115072fbfcde3",
+                "evt-d1993026d25c40008eb6dc6321ba8997",
+                "evt-7195ba3836af4f84a666b53ab7e73547"
+              ],
+              "interpretation": "가상 업무 0/3단계 완료. 기록된 제출·오류·안내를 기준으로 설명합니다.",
+              "limitations": [
+                "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+                "이 기록은 선택한 가상 시나리오 한 회의 수행이며 직업 적성·전문 자격 평가가 아닙니다."
+              ],
+              "reasonCodes": [
+                "USER_EXITED_BEFORE_START"
+              ],
+              "ruleVersion": "v001",
+              "termination": {
+                "code": "USER_EXITED_BEFORE_START",
+                "completedStepIds": [],
+                "inFlightActionIds": [],
+                "initiatedBy": "user",
+                "lastObjectId": null,
+                "lastState": "in_progress",
+                "lastStepId": null,
+                "remainingStepIds": [
+                  "work-1",
+                  "work-2",
+                  "work-3"
+                ],
+                "terminationId": "termination-7a0f1b280c1647e3a9958469d4d2ddfd",
+                "workStarted": false
+              }
+            },
+            "data": {
+              "partialResults": [
+                {
+                  "completed": false,
+                  "result": null,
+                  "stepId": "work-1"
+                },
+                {
+                  "completed": false,
+                  "result": null,
+                  "stepId": "work-2"
+                },
+                {
+                  "completed": false,
+                  "result": null,
+                  "stepId": "work-3"
+                }
+              ]
+            },
+            "documentRevision": null,
+            "eventId": "evt-b641b4021f6a4ed1958209ce0e609ef9",
+            "experienceId": "277e8523-70dd-4e7b-9d21-a13a92223490",
+            "instanceId": null,
+            "objectId": null,
+            "occurredAt": "2026-10-31T16:19:36.1960000+09:00",
+            "process": {
+              "attemptCount": 0,
+              "backtrackCount": 0,
+              "elapsedActiveMs": 58340,
+              "guidanceUsed": false,
+              "helpRequestCount": 0,
+              "measurementNote": null,
+              "measurementStatus": "complete",
+              "mistakeCount": 0,
+              "navigationBackCount": 0,
+              "repeatedMistakeCount": 0,
+              "retryCount": 0,
+              "scope": "scenario"
+            },
+            "protocol": "career-experience",
+            "requestId": null,
+            "requestRevision": null,
+            "result": {
+              "completionCode": "USER_EXITED_BEFORE_START",
+              "data": {
+                "partialResults": [
+                  {
+                    "completed": false,
+                    "result": null,
+                    "stepId": "work-1"
+                  },
+                  {
+                    "completed": false,
+                    "result": null,
+                    "stepId": "work-2"
+                  },
+                  {
+                    "completed": false,
+                    "result": null,
+                    "stepId": "work-3"
+                  }
+                ]
+              },
+              "outcome": "aborted",
+              "success": false
+            },
+            "roomId": "PAN-050",
+            "scenarioId": "career-net-359-experience",
+            "scenarioRunId": "run-05db4eadd108460ba585aecc4d03ecec",
+            "scenarioVersion": "v002",
+            "sceneId": "PAN-050",
+            "schemaVersion": 1,
+            "sequence": 4,
+            "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+            "stepId": null,
+            "type": "scenario.aborted",
+            "workItemId": null
+          }
+        ],
+        "eventsComplete": true,
+        "partialResults": [
+          {
+            "completed": false,
+            "result": null,
+            "stepId": "work-1"
+          },
+          {
+            "completed": false,
+            "result": null,
+            "stepId": "work-2"
+          },
+          {
+            "completed": false,
+            "result": null,
+            "stepId": "work-3"
+          }
+        ],
+        "previousRuns": []
+      },
+      "documentRevision": null,
+      "eventId": "evt-813c9b758ccc4a6890fa57ae9f8e7dbe",
+      "experienceId": "277e8523-70dd-4e7b-9d21-a13a92223490",
+      "instanceId": null,
+      "objectId": null,
+      "occurredAt": "2026-10-31T16:19:36.1970000+09:00",
+      "process": {
+        "attemptCount": 0,
+        "backtrackCount": 0,
+        "elapsedActiveMs": 58340,
+        "guidanceUsed": false,
+        "helpRequestCount": 0,
+        "measurementNote": null,
+        "measurementStatus": "complete",
+        "mistakeCount": 0,
+        "navigationBackCount": 0,
+        "repeatedMistakeCount": 0,
+        "retryCount": 0,
+        "scope": "scenario"
+      },
+      "protocol": "career-experience",
+      "requestId": "2da8a56b-fd75-48bc-b0ea-b646e958ea8d",
+      "requestRevision": null,
+      "result": {
+        "completionCode": "USER_EXITED_BEFORE_START",
+        "data": {
+          "partialResults": [
+            {
+              "completed": false,
+              "result": null,
+              "stepId": "work-1"
+            },
+            {
+              "completed": false,
+              "result": null,
+              "stepId": "work-2"
+            },
+            {
+              "completed": false,
+              "result": null,
+              "stepId": "work-3"
+            }
+          ],
+          "scenarioComplete": false
+        },
+        "outcome": "aborted",
+        "success": false
+      },
+      "roomId": "PAN-050",
+      "scenarioId": "career-net-359-experience",
+      "scenarioRunId": "run-05db4eadd108460ba585aecc4d03ecec",
+      "scenarioVersion": "v002",
+      "sceneId": "PAN-050",
+      "schemaVersion": 1,
+      "sequence": 5,
+      "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+      "stepId": null,
+      "type": "experience.ended",
+      "workItemId": null
+    }
+  ],
+  "foreignRoomError": {
+    "error": {
+      "code": "EXPERIENCE_MISMATCH",
+      "message": "현재 실행과 요청이 다릅니다."
+    },
+    "experienceId": "277e8523-70dd-4e7b-9d21-a13a92223490",
+    "protocol": "career-experience",
+    "requestId": "edf24462-46ab-4d9e-a14d-44ab5d56f4ee",
+    "roomId": "PAN-051",
+    "schemaVersion": 1,
+    "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+    "type": "experience.error"
+  },
+  "iframeHtmlControls": 0,
+  "iframeMode": "integration",
+  "reactStatus": "연결: ended_received · React 원본 수신 5 · 로컬 저장 ACK 5 · 전송 대기 0",
+  "started": {
+    "action": "start_experience",
+    "assetId": null,
+    "assetVersion": null,
+    "attemptId": null,
+    "buildId": "career-suite-integration-v001",
+    "context": {
+      "assessmentCode": null,
+      "assessmentStatus": "pending",
+      "evidenceEventIds": [],
+      "interpretation": null,
+      "limitations": [
+        "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+        "이 기록은 선택한 가상 시나리오 한 회의 수행이며 직업 적성·전문 자격 평가가 아닙니다."
+      ],
+      "reasonCodes": [],
+      "ruleVersion": "v001",
+      "termination": null
+    },
+    "data": {
+      "firstSequence": 1,
+      "ready": true
+    },
+    "documentRevision": null,
+    "eventId": "evt-d1993026d25c40008eb6dc6321ba8997",
+    "experienceId": "277e8523-70dd-4e7b-9d21-a13a92223490",
+    "instanceId": null,
+    "objectId": null,
+    "occurredAt": "2026-10-31T16:18:38.8280000+09:00",
+    "process": {
+      "attemptCount": 0,
+      "backtrackCount": 0,
+      "elapsedActiveMs": 0,
+      "guidanceUsed": false,
+      "helpRequestCount": 0,
+      "measurementNote": null,
+      "measurementStatus": "complete",
+      "mistakeCount": 0,
+      "navigationBackCount": 0,
+      "repeatedMistakeCount": 0,
+      "retryCount": 0,
+      "scope": "scenario"
+    },
+    "protocol": "career-experience",
+    "requestId": "bfd65484-aa6d-473b-8846-d8e49425539c",
+    "requestRevision": null,
+    "result": {
+      "completionCode": null,
+      "data": {},
+      "outcome": "pending",
+      "success": null
+    },
+    "roomId": "PAN-050",
+    "scenarioId": "career-net-359-experience",
+    "scenarioRunId": "run-05db4eadd108460ba585aecc4d03ecec",
+    "scenarioVersion": "v002",
+    "sceneId": "PAN-050",
+    "schemaVersion": 1,
+    "sequence": 2,
+    "sessionId": "e1fdec4a-eebf-4f76-8954-10f34f69de3e",
+    "stepId": null,
+    "type": "experience.started",
+    "workItemId": null
+  }
+}

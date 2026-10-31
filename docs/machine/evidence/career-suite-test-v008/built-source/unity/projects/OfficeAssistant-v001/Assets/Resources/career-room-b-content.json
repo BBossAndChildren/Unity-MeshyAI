@@ -1,0 +1,1716 @@
+{
+  "schema_version": 3,
+  "package_id": "career-room-b-content",
+  "version": "v001",
+  "transitionSeconds": 0.45,
+  "careers": [
+    {
+      "scenarioId": "career-net-369-experience",
+      "version": "v002",
+      "occupationId": "career-net-369",
+      "name": "물리치료사",
+      "roomId": "PAN-048",
+      "title": "가상 동작 관찰과 연습 도구 준비",
+      "brief": "실제 환자 치료가 아닌 모형 관찰 연습입니다. 거울의 관찰 카드와 준비 요청에 따라 동작 순서와 도구 수량을 맞춥니다.",
+      "limitation": "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/142/data"
+      },
+      "source_basis": {
+        "work": "하는일\n물리치료사는 의사의 진단 및 처방에 따라 운동, 온열, 전기, 마사지 등 신체의 통증을 완화하고 회복시키는 일을 합니다.\n환자의 상태나 신체적인 기능을 평가하고 의사와 치료 방향에 대해 협의합니다.\n각종 치료 기구를 사용하여 온열치료, 전기치료, 운동치료, 약물치료 등을 합니다.\n신체적 손상이나 움직임을 더 원활하게 하기 위해 치료적 운동, 도수 치료 등의 방법을 사용하기도 하며, 보조 및 보호 기구와 장비를 사용하여 치료하며 환자 교육 등을 실시합니다.",
+        "selected_work_evidence": "신체적 손상이나 움직임을 더 원활하게 하기 위해 치료적 운동, 도수 치료 등의 방법을 사용하기도 하며, 보조 및 보호 기구와 장비를 사용하여 치료하며 환자 교육 등을 실시합니다.",
+        "core_competencies": [
+          "대인관계능력"
+        ],
+        "practice_connection": "원문 역량 대인관계능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/142/data/준비방법"
+      },
+      "fictionalization": {
+        "status": "educational_fiction",
+        "professional_review": "unreviewed",
+        "real_world_decisions": false
+      },
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "자세 확인용 독립 거울",
+          "candidateId": "CND-186",
+          "assetId": "AST-1186",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-048/AST-1186-006",
+          "nodeName": "AST-1186-006"
+        },
+        {
+          "id": "object-2",
+          "name": "낮은 스텝",
+          "candidateId": "CND-184",
+          "assetId": "AST-1184",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-048/AST-1184-004",
+          "nodeName": "AST-1184-004"
+        },
+        {
+          "id": "object-3",
+          "name": "소형 아령",
+          "candidateId": "CND-185",
+          "assetId": "AST-1185",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-048/AST-1185-005",
+          "nodeName": "AST-1185-005"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "inspect",
+          "title": "거울 · 동작 모형 관찰",
+          "instruction": "세 관찰 지점을 각각 열어 요청서와 모형의 차이를 확인하세요. 사람을 진단하거나 치료하는 과제가 아닙니다.",
+          "findings": [
+            {
+              "id": "finding0",
+              "label": "시선 표식",
+              "detail": "요청: 정면의 파란 원. 모형 시선은 표식을 향하고 있습니다."
+            },
+            {
+              "id": "finding1",
+              "label": "발 위치 표식",
+              "detail": "요청: 바닥의 좌·우 발자국. 모형의 두 발은 표시 안에 있습니다."
+            },
+            {
+              "id": "finding2",
+              "label": "손 지지 표식",
+              "detail": "요청: 손은 옆의 지지 표식에 둡니다. 이 가상 화면에서는 접촉이 확인됩니다."
+            }
+          ],
+          "successText": "세 관찰 지점이 기록되었습니다. 낮은 스텝에서 연습 순서를 준비하세요.",
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "369-item-1"
+        },
+        {
+          "kind": "sequence",
+          "title": "낮은 스텝 · 모형 연습 순서",
+          "instruction": "요청서의 순서는 준비 → 모형 동작 → 마무리입니다. 카드를 순서 칸에 직접 옮겨 준비하세요.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "준비 자세 확인",
+              "targetLabel": "1 준비",
+              "slotLabel": "1 준비",
+              "initialX": 0.13,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "모형 동작 관찰",
+              "targetLabel": "2 관찰",
+              "slotLabel": "2 관찰",
+              "initialX": 0.43,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "마무리 기록",
+              "targetLabel": "3 기록",
+              "slotLabel": "3 기록",
+              "initialX": 0.73,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            }
+          ],
+          "successText": "모형 관찰 순서가 배치되었습니다.",
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "369-item-2"
+        },
+        {
+          "kind": "tune",
+          "title": "소형 아령 · 도구 준비 수량",
+          "instruction": "가상 도구 준비 요청: 작은 아령 2개, 보관 트레이 1개. 실제 운동 강도나 환자의 치료 처방을 정하는 과제가 아닙니다.",
+          "values": [
+            {
+              "id": "value0",
+              "label": "아령 수량",
+              "unit": "개",
+              "min": 0,
+              "max": 4,
+              "initial": 1,
+              "target": 2,
+              "tolerance": 0
+            },
+            {
+              "id": "value1",
+              "label": "트레이 수량",
+              "unit": "개",
+              "min": 0,
+              "max": 3,
+              "initial": 0,
+              "target": 1,
+              "tolerance": 0
+            }
+          ],
+          "successText": "요청된 도구 수량이 준비되어 동작 관찰 업무를 인계합니다.",
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "369-item-3"
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-391-experience",
+      "version": "v002",
+      "occupationId": "career-net-391",
+      "name": "운동경기심판",
+      "roomId": "PAN-049",
+      "title": "미니 경기의 득점 기록 검증",
+      "brief": "이 경기의 가상 규칙은 공 전체가 골선을 통과하면 1점입니다. 주어진 장면을 확인하고 점수판을 수정합니다.",
+      "limitation": "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/323/data"
+      },
+      "source_basis": {
+        "work": "하는일\n운동경기심판은 각종 운동경기의 규칙을 적용하여 경기를 진행하는 일을 담당합니다.\n경기의 시작과 종료를 알리며, 경기 진행 중 선수들의 동작을 관찰하여 규칙 위반이 발견되면 이를 호루라기, 수신호, 깃발, 카드 등으로 알리고 벌칙 또는 벌점을 적용합니다.\n경기 도중 선수의 부상 등 예기치 못한 상황이 발생하면 경기를 일시 중단하거나 종료합니다.\n규칙으로 명시되어 있지 않은 상황이 생긴 경우 심판의 재량으로 판단하여 경기가 원활하게 진행될 수 있도록 합니다.",
+        "selected_work_evidence": "운동경기심판은 각종 운동경기의 규칙을 적용하여 경기를 진행하는 일을 담당합니다.",
+        "core_competencies": [
+          "신체·운동능력"
+        ],
+        "practice_connection": "원문 역량 신체·운동능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/323/data/준비방법"
+      },
+      "fictionalization": {
+        "status": "educational_fiction",
+        "professional_review": "unreviewed",
+        "real_world_decisions": false
+      },
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "공",
+          "candidateId": "CND-189",
+          "assetId": "AST-1189",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-049/AST-1189-004",
+          "nodeName": "AST-1189-004"
+        },
+        {
+          "id": "object-2",
+          "name": "작은 골대 한 쌍",
+          "candidateId": "CND-188",
+          "assetId": "AST-1188",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-049/AST-1188-003",
+          "nodeName": "AST-1188-003"
+        },
+        {
+          "id": "object-3",
+          "name": "빈 점수판",
+          "candidateId": "CND-190",
+          "assetId": "AST-1190",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-049/AST-1190-005",
+          "nodeName": "AST-1190-005"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "sequence",
+          "title": "공 · 경기 기록 순서",
+          "instruction": "경기 카드의 시각은 시작 00:00, 파랑 득점 02:10, 빨강 득점 04:20입니다. 기록 카드를 시간 순서로 놓으세요.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "시작 00:00",
+              "targetLabel": "1 시작",
+              "slotLabel": "1 시작",
+              "initialX": 0.13,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "파랑 득점 02:10",
+              "targetLabel": "2 득점",
+              "slotLabel": "2 득점",
+              "initialX": 0.43,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "빨강 득점 04:20",
+              "targetLabel": "3 득점",
+              "slotLabel": "3 득점",
+              "initialX": 0.73,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            }
+          ],
+          "successText": "시간 순서가 확인되었습니다. 골대의 판독 장면을 확인하세요.",
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "391-item-1"
+        },
+        {
+          "kind": "inspect",
+          "title": "골대 · 판독 장면",
+          "instruction": "골대에 귀속된 판독 카드 세 장을 열어 가상 규칙을 적용할 근거를 읽으세요.",
+          "findings": [
+            {
+              "id": "finding0",
+              "label": "장면 A",
+              "detail": "02:10 파랑팀의 공 전체가 골선 뒤에 있습니다. 가상 규칙상 1점입니다."
+            },
+            {
+              "id": "finding1",
+              "label": "장면 B",
+              "detail": "04:20 빨강팀의 공 전체가 골선 뒤에 있습니다. 가상 규칙상 1점입니다."
+            },
+            {
+              "id": "finding2",
+              "label": "장면 C",
+              "detail": "05:30 공이 골선 앞에서 멈췄습니다. 추가 득점이 아닙니다."
+            }
+          ],
+          "successText": "두 득점과 무득점 장면의 근거가 저장되었습니다.",
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "391-item-2"
+        },
+        {
+          "kind": "form",
+          "title": "점수판 · 최종 기록",
+          "instruction": "확인한 장면 A·B는 각각 1점, C는 무득점입니다. 팀별 점수와 확인한 마지막 장면 시각을 기록하세요.",
+          "fields": [
+            {
+              "id": "field0",
+              "label": "파랑팀 점수",
+              "initial": "0",
+              "target": "1"
+            },
+            {
+              "id": "field1",
+              "label": "빨강팀 점수",
+              "initial": "2",
+              "target": "1"
+            },
+            {
+              "id": "field2",
+              "label": "최종 장면 시각",
+              "initial": "",
+              "target": "05:30"
+            }
+          ],
+          "successText": "점수판이 파랑 1 : 빨강 1로 확정되었습니다.",
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "391-item-3"
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-359-experience",
+      "version": "v002",
+      "occupationId": "career-net-359",
+      "name": "경찰관",
+      "roomId": "PAN-050",
+      "title": "교통 신고 자료의 사실과 확인 요청 정리",
+      "brief": "가상 교차로 신고입니다. 진술과 확인된 기록을 구분하고 시간순으로 정리해 확인 요청서를 인계합니다. 법률적 책임이나 범인을 판단하지 않습니다.",
+      "limitation": "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/37/data"
+      },
+      "source_basis": {
+        "work": "하는일\n경찰관은 국민의 생명과 재산을 보호하는 역할을 합니다.\n범죄 수사를 통해 범인을 잡고, 범죄 예방을 위한 순찰 등 안전한 사회를 만들기 위해 노력합니다.\n해킹, 인터넷 사기, 사이버명예훼손 등 사이버 공간의 안전을 위협하는 사이버범죄를 수사합니다.\n교통을 단속하고 교통사고 예방을 위한 계획을 세우는 등 교통안전을 위한 일을 합니다.\n중요 인사의 경호, 비상 훈련 실시 등 국가 안전을 위한 업무를 수행합니다.",
+        "selected_work_evidence": "교통을 단속하고 교통사고 예방을 위한 계획을 세우는 등 교통안전을 위한 일을 합니다.",
+        "core_competencies": [
+          "신체·운동능력"
+        ],
+        "practice_connection": "원문 역량 신체·운동능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/37/data/준비방법"
+      },
+      "fictionalization": {
+        "status": "educational_fiction",
+        "professional_review": "unreviewed",
+        "real_world_decisions": false
+      },
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "서류 트레이",
+          "candidateId": "CND-049",
+          "assetId": "AST-1049",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-050/AST-1049-013",
+          "nodeName": "AST-1049-013"
+        },
+        {
+          "id": "object-2",
+          "name": "관계 보드",
+          "candidateId": "CND-191",
+          "assetId": "AST-1191",
+          "assetVersion": "v002",
+          "instanceId": "Room_PAN-050/AST-1191-006",
+          "nodeName": "AST-1191-006"
+        },
+        {
+          "id": "object-3",
+          "name": "모니터",
+          "candidateId": "CND-005",
+          "assetId": "AST-005",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-050/AST-005-004",
+          "nodeName": "AST-005-004"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "sort",
+          "title": "서류 트레이 · 자료 종류 분류",
+          "instruction": "접수 원문: 신호 로그는 확인된 기록, 운전자 메모는 진술, 미상 시각 사진은 추가 확인 자료입니다.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "신호 로그 원본",
+              "targetLabel": "확인된 기록",
+              "slotLabel": "확인된 기록",
+              "initialX": 0.13,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "운전자 메모",
+              "targetLabel": "진술",
+              "slotLabel": "진술",
+              "initialX": 0.43,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "시각 미상 사진",
+              "targetLabel": "추가 확인",
+              "slotLabel": "추가 확인",
+              "initialX": 0.73,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            }
+          ],
+          "successText": "자료가 사실·진술·추가 확인으로 구분되었습니다.",
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "359-item-1"
+        },
+        {
+          "kind": "sequence",
+          "title": "관계 보드 · 확인된 시간선",
+          "instruction": "검증된 로그: 09:12 신고 접수,09:15 담당 도착,09:18 현장 기록 저장. 사건의 책임을 추정하지 말고 기록 순서만 연결하세요.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "09:12 신고 접수",
+              "targetLabel": "1 접수",
+              "slotLabel": "1 접수",
+              "initialX": 0.13,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "09:15 담당 도착",
+              "targetLabel": "2 도착",
+              "slotLabel": "2 도착",
+              "initialX": 0.43,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "09:18 기록 저장",
+              "targetLabel": "3 저장",
+              "slotLabel": "3 저장",
+              "initialX": 0.73,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            }
+          ],
+          "successText": "확인된 시간선이 보드에 연결되었습니다.",
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "359-item-2"
+        },
+        {
+          "kind": "form",
+          "title": "모니터 · 추가 확인 요청",
+          "instruction": "인계 기준: 접수번호 TR-031, 위치 은행사거리, 미확인 항목 사진촬영시각. 확인하지 않은 내용을 사실로 채우지 마세요.",
+          "fields": [
+            {
+              "id": "field0",
+              "label": "접수번호",
+              "initial": "TR-013",
+              "target": "TR-031"
+            },
+            {
+              "id": "field1",
+              "label": "위치",
+              "initial": "",
+              "target": "은행사거리"
+            },
+            {
+              "id": "field2",
+              "label": "추가 확인 항목",
+              "initial": "",
+              "target": "사진촬영시각"
+            }
+          ],
+          "successText": "확인된 자료와 미확인 항목을 분리한 요청서가 저장되었습니다.",
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "359-item-3"
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-10064-experience",
+      "version": "v002",
+      "occupationId": "career-net-10064",
+      "name": "범죄과학수사관",
+      "roomId": "PAN-051",
+      "title": "가상 시료의 라벨 대조와 보관 인계",
+      "brief": "교육용 모형 시료 S-101·S-102·S-103을 라벨과 관찰 카드에 따라 보관합니다. 실제 증거 감정·수사 방법이나 유죄 판단을 대신하지 않습니다.",
+      "limitation": "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/166/data"
+      },
+      "source_basis": {
+        "work": "하는일\n지문, 글씨체, 문서, 통신, 의료, 생화학, 또는 금속 분야 등의 영역에서 전문가로서의 역할을 수행하거나 타 분야의 전문가와 협의하여 범죄 과정을 추리합니다.\n범죄 현장의 증거 수집 및 분석을 통해 범죄 현장을 재구성하고 조사 및 분석 기법 또는 분석 결과에 대해 법원에서 증언을 합니다.\n각종 범죄와 관련된 컴퓨터 메모리 하드디스크, USB 메모리 등에 대한 증거 수집, 증거 복구 및 분석을 통해 범죄 증거를 제시합니다.",
+        "selected_work_evidence": "범죄 현장의 증거 수집 및 분석을 통해 범죄 현장을 재구성하고 조사 및 분석 기법 또는 분석 결과에 대해 법원에서 증언을 합니다.",
+        "core_competencies": [
+          "수리·논리력"
+        ],
+        "practice_connection": "원문 역량 수리·논리력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/166/data/준비방법"
+      },
+      "fictionalization": {
+        "status": "educational_fiction",
+        "professional_review": "unreviewed",
+        "real_world_decisions": false
+      },
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "밀봉 시료 상자",
+          "candidateId": "CND-192",
+          "assetId": "AST-1192",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-051/AST-1192-005",
+          "nodeName": "AST-1192-005"
+        },
+        {
+          "id": "object-2",
+          "name": "현미경",
+          "candidateId": "CND-039",
+          "assetId": "AST-1039",
+          "assetVersion": "v003",
+          "instanceId": "Room_PAN-051/AST-1039-004",
+          "nodeName": "AST-1039-004"
+        },
+        {
+          "id": "object-3",
+          "name": "잠금 보관함",
+          "candidateId": "CND-193",
+          "assetId": "AST-1193",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-051/AST-1193-006",
+          "nodeName": "AST-1193-006"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "밀봉 시료 상자 · 접수 라벨",
+          "instruction": "운송장 원문: 사건 EDU-051, 봉인번호 SEAL-28, 시료수 3. 상자 접수 라벨을 원문과 같게 수정하고 저장하세요.",
+          "fields": [
+            {
+              "id": "field0",
+              "label": "사건번호",
+              "initial": "EDU-015",
+              "target": "EDU-051"
+            },
+            {
+              "id": "field1",
+              "label": "봉인번호",
+              "initial": "",
+              "target": "SEAL-28"
+            },
+            {
+              "id": "field2",
+              "label": "시료수",
+              "initial": "2",
+              "target": "3"
+            }
+          ],
+          "successText": "시료 상자의 접수 라벨이 원문과 일치합니다.",
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "10064-item-1"
+        },
+        {
+          "kind": "inspect",
+          "title": "현미경 · 모형 관찰 카드",
+          "instruction": "실제 현미경 영상이 아닌 교육용 비교 카드입니다. 세 시료의 표시를 각각 확인하여 보관 분류 근거를 수집하세요.",
+          "findings": [
+            {
+              "id": "finding0",
+              "label": "S-101 관찰",
+              "detail": "모형 섬유 카드입니다. 분류 라벨은 섬유입니다."
+            },
+            {
+              "id": "finding1",
+              "label": "S-102 관찰",
+              "detail": "모형 입자 카드입니다. 분류 라벨은 입자입니다."
+            },
+            {
+              "id": "finding2",
+              "label": "S-103 관찰",
+              "detail": "비교 자료가 부족합니다. 미확인 분류로 보존해야 합니다."
+            }
+          ],
+          "successText": "확인된 두 분류와 미확인 시료가 구분되었습니다.",
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "10064-item-2"
+        },
+        {
+          "kind": "sort",
+          "title": "잠금 보관함 · 시료 보관",
+          "instruction": "관찰 카드대로 S-101은 섬유칸,S-102는 입자칸,S-103은 미확인칸입니다. 각 시료 카드를 해당 보관칸에 옮겨 인계하세요.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "S-101 봉인 시료",
+              "targetLabel": "섬유칸",
+              "slotLabel": "섬유칸",
+              "initialX": 0.13,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "S-102 봉인 시료",
+              "targetLabel": "입자칸",
+              "slotLabel": "입자칸",
+              "initialX": 0.43,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "S-103 봉인 시료",
+              "targetLabel": "미확인칸",
+              "slotLabel": "미확인칸",
+              "initialX": 0.73,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            }
+          ],
+          "successText": "세 시료의 봉인번호·분류·보관처가 인계 기록에 저장되었습니다.",
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "10064-item-3"
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-199-experience",
+      "version": "v002",
+      "occupationId": "career-net-199",
+      "name": "검사",
+      "roomId": "PAN-052",
+      "title": "가상 사건 자료의 근거와 미확인 항목 구분",
+      "brief": "허구 사건 EDU-52의 문서를 정리하는 체험입니다. 사실 확인 자료와 진술을 구분하며 법률 적용이나 기소 정답을 임의로 판단하지 않습니다.",
+      "limitation": "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/30/data"
+      },
+      "source_basis": {
+        "work": "하는일\n검사는 법률적 지식을 바탕으로 범죄 사건을 수사하고, 범죄 여부를 판단하기 위해 범죄의 의심을 받는 사람인 피의자에게 법원의 심판을 구하는 일을 담당합니다.\n형사사건의 경우 사건의 제반 사항을 조사하고, 사건 관련 증거를 수집하며 이를 분석하고 사건에 적용할 규정이나 기타 법적 문제를 검토한 후 법원의 재판을 요구합니다.\n해당 사건에 관한 타당한 결정이나 방침, 규정, 기타 법적 문제를 검토한 후 공소를 제기하고 피고를 기소 또는 방면(붙잡아 가두어 두었던 사람을 놓아주기)하기 위한 증거를 제시하며, 법원에 정당한 법령의 적용을 청구합니다.\n민사사건에 관하여, 금치산·한정치산 선고의 신청권, 부재자의 재산관리 관여권, 회사의 해산명령 청구권, 외국회사 지점의 폐쇄명령 청구권 등을 행사하기도 합니다.\n국가를 당사자 또는 참가인으로 하는 소송을 진행하거나 행정소송의 진행을 지휘 및 감독합니다.",
+        "selected_work_evidence": "형사사건의 경우 사건의 제반 사항을 조사하고, 사건 관련 증거를 수집하며 이를 분석하고 사건에 적용할 규정이나 기타 법적 문제를 검토한 후 법원의 재판을 요구합니다.",
+        "core_competencies": [
+          "자기성찰능력",
+          "수리·논리력",
+          "언어능력"
+        ],
+        "practice_connection": "원문 역량 자기성찰능력, 수리·논리력, 언어능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/30/data/준비방법"
+      },
+      "fictionalization": {
+        "status": "educational_fiction",
+        "professional_review": "unreviewed",
+        "real_world_decisions": false
+      },
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "문서함",
+          "candidateId": "CND-198",
+          "assetId": "AST-1198",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-052/AST-1198-011",
+          "nodeName": "AST-1198-011"
+        },
+        {
+          "id": "object-2",
+          "name": "진술대",
+          "candidateId": "CND-195",
+          "assetId": "AST-1195",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-052/AST-1195-003",
+          "nodeName": "AST-1195-003"
+        },
+        {
+          "id": "object-3",
+          "name": "당사자 책상",
+          "candidateId": "CND-196",
+          "assetId": "AST-1196",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-052/AST-1196-004",
+          "nodeName": "AST-1196-004"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "sort",
+          "title": "문서함 · 사건 자료 구분",
+          "instruction": "자료목록: 출입대장은 확인 기록, 참고인 메모는 진술, 날짜 없는 영수증은 추가 확인입니다.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "출입대장 원본",
+              "targetLabel": "확인 기록",
+              "slotLabel": "확인 기록",
+              "initialX": 0.13,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "참고인 메모",
+              "targetLabel": "진술",
+              "slotLabel": "진술",
+              "initialX": 0.43,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "날짜 없는 영수증",
+              "targetLabel": "추가 확인",
+              "slotLabel": "추가 확인",
+              "initialX": 0.73,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            }
+          ],
+          "successText": "자료의 확인 상태가 문서함에 구분되었습니다.",
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "199-item-1"
+        },
+        {
+          "kind": "inspect",
+          "title": "진술대 · 원문 대조",
+          "instruction": "진술대에 놓인 발언·대장·영수증의 원문 카드를 확인하세요. 진술을 사실 확정으로 바꾸지 않습니다.",
+          "findings": [
+            {
+              "id": "finding0",
+              "label": "발언 원문",
+              "detail": "참고인은 도착 시각을 정확히 기억하지 못한다고 적었습니다."
+            },
+            {
+              "id": "finding1",
+              "label": "대장 원문",
+              "detail": "출입대장 기록 시각은 14:05입니다. 누구의 책임인지 말해 주지 않습니다."
+            },
+            {
+              "id": "finding2",
+              "label": "영수증 원문",
+              "detail": "날짜 항목이 비어 있습니다. 다른 자료의 날짜를 추정해서 채울 수 없습니다."
+            }
+          ],
+          "successText": "문서별 근거와 미확인 범위가 표시되었습니다.",
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "199-item-2"
+        },
+        {
+          "kind": "form",
+          "title": "당사자 책상 · 중립적 검토 메모",
+          "instruction": "검토 메모에 사건번호 EDU-52, 확인된 대장시각 14:05, 추가 확인 영수증날짜를 기록합니다. 법적 결론을 쓰는 과제가 아닙니다.",
+          "fields": [
+            {
+              "id": "field0",
+              "label": "사건번호",
+              "initial": "",
+              "target": "EDU-52"
+            },
+            {
+              "id": "field1",
+              "label": "확인된 대장시각",
+              "initial": "14:50",
+              "target": "14:05"
+            },
+            {
+              "id": "field2",
+              "label": "추가 확인",
+              "initial": "",
+              "target": "영수증날짜"
+            }
+          ],
+          "successText": "확인된 기록과 보완 요청을 구분한 검토 메모가 인계되었습니다.",
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "199-item-3"
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-372-experience",
+      "version": "v002",
+      "occupationId": "career-net-372",
+      "name": "버스운전기사",
+      "roomId": "PAN-054",
+      "title": "가상 버스 배차 확인과 운행 준비 인계",
+      "brief": "실제 운전 조작이 아닌 배차 자료 준비입니다. 차량 점검 카드와 정류장 일정을 확인하고 담당자에게 준비 상태를 전달합니다.",
+      "limitation": "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/164/data"
+      },
+      "source_basis": {
+        "work": "하는일\n버스운전기사는 시내버스, 시외버스, 고속버스 등 노선버스나 관광버스를 운전하거나 학교, 기업체 등의 비영업용 버스를 운전하여 승객을 운송하는 일을 담당합니다.\n버스 운행 시간과 정해진 버스노선 등에 따라 목적지까지 버스를 운전하며, 정차 신호에 따라 정해진 정류장이나 목적지까지 승객이나 물건을 실어 나릅니다.\n배차 계획에 따라 버스 차량을 배차받고 점검표에 따라 연료, 타이어 등 차량을 점검하고 이상이 발견되면 수리를 맡깁니다.\n운행이 종료되면 수입금을 정리하고, 출발 시간, 도착 시간, 주행거리 등에 대한 운행 일지를 작성합니다.\n차량의 청결을 유지하고, 교통법규를 준수합니다.",
+        "selected_work_evidence": "배차 계획에 따라 버스 차량을 배차받고 점검표에 따라 연료, 타이어 등 차량을 점검하고 이상이 발견되면 수리를 맡깁니다.",
+        "core_competencies": [
+          "신체·운동능력"
+        ],
+        "practice_connection": "원문 역량 신체·운동능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/164/data/준비방법"
+      },
+      "fictionalization": {
+        "status": "educational_fiction",
+        "professional_review": "unreviewed",
+        "real_world_decisions": false
+      },
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "모니터",
+          "candidateId": "CND-005",
+          "assetId": "AST-005",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-054/AST-005-009",
+          "nodeName": "AST-005-009"
+        },
+        {
+          "id": "object-2",
+          "name": "조작 콘솔",
+          "candidateId": "CND-203",
+          "assetId": "AST-1203",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-054/AST-1203-003",
+          "nodeName": "AST-1203-003"
+        },
+        {
+          "id": "object-3",
+          "name": "통신 기기",
+          "candidateId": "CND-175",
+          "assetId": "AST-1175",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-054/AST-1175-006",
+          "nodeName": "AST-1175-006"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "inspect",
+          "title": "모니터 · 배차 점검표",
+          "instruction": "가상 차량 BUS-12의 점검표 원문 세 항목을 각각 열어 확인하세요. 실제 차량 안전 판단을 대신하지 않습니다.",
+          "findings": [
+            {
+              "id": "finding0",
+              "label": "차량 배정",
+              "detail": "배정 차량 BUS-12, 노선 마을순환 3번입니다."
+            },
+            {
+              "id": "finding1",
+              "label": "점검 완료표",
+              "detail": "연료·타이어 항목은 정비 담당자가 확인 완료로 기록했습니다."
+            },
+            {
+              "id": "finding2",
+              "label": "일정 변경",
+              "detail": "출발 시각은 09:10으로 변경되었습니다. 이전 09:00 자료는 사용하지 않습니다."
+            }
+          ],
+          "successText": "최신 배차와 점검 기록을 확인했습니다.",
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "372-item-1"
+        },
+        {
+          "kind": "schedule",
+          "title": "조작 콘솔 · 운행 일정 배치",
+          "instruction": "최신 배차표의 순서는 차고지 09:10 → 중앙공원 09:20 → 도서관 09:35입니다. 일정 카드를 직접 배치하세요.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "차고지 09:10",
+              "targetLabel": "1 출발",
+              "slotLabel": "1 출발",
+              "initialX": 0.13,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "중앙공원 09:20",
+              "targetLabel": "2 정차",
+              "slotLabel": "2 정차",
+              "initialX": 0.43,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "도서관 09:35",
+              "targetLabel": "3 도착",
+              "slotLabel": "3 도착",
+              "initialX": 0.73,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            }
+          ],
+          "successText": "변경된 출발 시각에 맞춰 운행 일정이 편성되었습니다.",
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "372-item-2"
+        },
+        {
+          "kind": "form",
+          "title": "통신 기기 · 배차 인계",
+          "instruction": "관제 담당자에게 차량 BUS-12, 노선 마을순환3번, 출발시각 09:10을 정확히 전달하세요.",
+          "fields": [
+            {
+              "id": "field0",
+              "label": "차량",
+              "initial": "",
+              "target": "BUS-12"
+            },
+            {
+              "id": "field1",
+              "label": "노선",
+              "initial": "",
+              "target": "마을순환3번"
+            },
+            {
+              "id": "field2",
+              "label": "출발시각",
+              "initial": "09:00",
+              "target": "09:10"
+            }
+          ],
+          "successText": "관제 인계 기록이 최신 배차표와 일치합니다.",
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "372-item-3"
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-371-experience",
+      "version": "v002",
+      "occupationId": "career-net-371",
+      "name": "택배원",
+      "roomId": "PAN-055",
+      "title": "세 배송물의 목적지 분류와 적재 순서",
+      "brief": "가상의 세 배송물 D-11·D-12·D-13을 전산 목록과 대조하고 목적지별로 분류해 경로 순서대로 준비합니다.",
+      "limitation": "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/478/data"
+      },
+      "source_basis": {
+        "work": "하는일\n택배원은 고객이 주문한 상품이나 구매한 상품 등 각종 물품을 고객이 원하는 곳까지 운반하는 일을 합니다.\n고객이 주문하거나 구매한 상품을 받아 차량을 이용하여 고객이 원하는 장소에 배달합니다.\n물류 관련 사무원으로부터 배송물의 목록, 품목, 수량, 장소 등이 적힌 출고장과 배송장을 수령하고 전산시스템에 입력합니다.\n물품을 고객에게 전달하고, 배송장의 바코드를 이용하여 전산시스템에 배송 완료 내역을 입력합니다.\n차량 사고, 배달 지연, 물품 파손 등 배송 중 이상이 발생하게 된 경우 관련 규정에 따라 조치합니다.",
+        "selected_work_evidence": "택배원은 고객이 주문한 상품이나 구매한 상품 등 각종 물품을 고객이 원하는 곳까지 운반하는 일을 합니다.",
+        "core_competencies": [
+          "신체·운동능력"
+        ],
+        "practice_connection": "원문 역량 신체·운동능력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/478/data/준비방법"
+      },
+      "fictionalization": {
+        "status": "educational_fiction",
+        "professional_review": "unreviewed",
+        "real_world_decisions": false
+      },
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "안내판",
+          "candidateId": "CND-205",
+          "assetId": "AST-1205",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-055/AST-1205-007",
+          "nodeName": "AST-1205-007"
+        },
+        {
+          "id": "object-2",
+          "name": "보관 상자",
+          "candidateId": "CND-058",
+          "assetId": "AST-1058",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-055/AST-1058-003",
+          "nodeName": "AST-1058-003"
+        },
+        {
+          "id": "object-3",
+          "name": "운반 카트",
+          "candidateId": "CND-016",
+          "assetId": "AST-1016",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-055/AST-1016-005",
+          "nodeName": "AST-1016-005"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "안내판 · 배송 목록 확인",
+          "instruction": "출고장 원문: 경로 R-7, 배송물 3개, 첫 목적지 도서관. 안내판에 붙은 배송 목록을 수정·확정하세요.",
+          "fields": [
+            {
+              "id": "field0",
+              "label": "경로",
+              "initial": "R-1",
+              "target": "R-7"
+            },
+            {
+              "id": "field1",
+              "label": "배송물 수",
+              "initial": "2",
+              "target": "3"
+            },
+            {
+              "id": "field2",
+              "label": "첫 목적지",
+              "initial": "",
+              "target": "도서관"
+            }
+          ],
+          "successText": "전산 출고 목록이 원문과 일치합니다.",
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "371-item-1"
+        },
+        {
+          "kind": "sort",
+          "title": "보관 상자 · 배송물 분류",
+          "instruction": "송장: D-11 도서관,D-12 주민센터,D-13 문화회관. 송장 카드를 목적지 보관칸에 옮겨 주세요.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "D-11 도서관",
+              "targetLabel": "도서관칸",
+              "slotLabel": "도서관칸",
+              "initialX": 0.13,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "D-12 주민센터",
+              "targetLabel": "주민센터칸",
+              "slotLabel": "주민센터칸",
+              "initialX": 0.43,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "D-13 문화회관",
+              "targetLabel": "문화회관칸",
+              "slotLabel": "문화회관칸",
+              "initialX": 0.73,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            }
+          ],
+          "successText": "세 배송물의 목적지가 분류되었습니다.",
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "371-item-2"
+        },
+        {
+          "kind": "sequence",
+          "title": "운반 카트 · 인계 순서 준비",
+          "instruction": "경로표: 도서관 → 주민센터 → 문화회관. 카트의 꺼내기 순서 1·2·3에 해당 배송물을 놓습니다. 실제 배송 완료로 기록하지 않고 출고 준비만 인계합니다.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "D-11 도서관",
+              "targetLabel": "1 먼저 꺼낼 물품",
+              "slotLabel": "1 먼저 꺼낼 물품",
+              "initialX": 0.13,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "D-12 주민센터",
+              "targetLabel": "2 다음 물품",
+              "slotLabel": "2 다음 물품",
+              "initialX": 0.43,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "D-13 문화회관",
+              "targetLabel": "3 마지막 물품",
+              "slotLabel": "3 마지막 물품",
+              "initialX": 0.73,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            }
+          ],
+          "successText": "배송지·물품·출고 순서가 일치하여 출고 준비 인계가 완료되었습니다.",
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "371-item-3"
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-255-experience",
+      "version": "v002",
+      "occupationId": "career-net-255",
+      "name": "은행출납사무원",
+      "roomId": "PAN-056",
+      "title": "가상 입금 요청 확인과 전표 인계",
+      "brief": "모형 화폐와 허구 계좌를 사용하는 출납 연습입니다. 거래 구분·금액 기록·영수증 대조를 수행하며 실제 계좌 거래를 실행하지 않습니다.",
+      "limitation": "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/343/data"
+      },
+      "source_basis": {
+        "work": "하는일\n은행출납사무원은 경영, 회계에 대한 지식을 바탕으로 고객을 상대로 공과금의 수납, 금전의 예치, 환전 및 지불 등의 업무를 담당합니다.\n은행에서 고객이 맡긴 돈을 예치하고, 고객의 대출을 상담하는 등의 일을 수행하고. 계좌를 개설하고 개인이나 기업으로부터 단기 또는 장기의 자금을 보관하고 위탁합니다.\n예금 전표나 수표를 분류하고 철해둡니다.\n고객들의 거래에 대한 문의에 답하고 문제점이 있다면 해결합니다.\n손상되어 사용이 어려운 화폐를 교환해 주거나 위(변)조 화폐를 감별하고 처리합니다.",
+        "selected_work_evidence": "은행에서 고객이 맡긴 돈을 예치하고, 고객의 대출을 상담하는 등의 일을 수행하고. 계좌를 개설하고 개인이나 기업으로부터 단기 또는 장기의 자금을 보관하고 위탁합니다.",
+        "core_competencies": [
+          "수리·논리력"
+        ],
+        "practice_connection": "원문 역량 수리·논리력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/343/data/준비방법"
+      },
+      "fictionalization": {
+        "status": "educational_fiction",
+        "professional_review": "unreviewed",
+        "real_world_decisions": false
+      },
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "서류 트레이",
+          "candidateId": "CND-049",
+          "assetId": "AST-1049",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-056/AST-1049-010",
+          "nodeName": "AST-1049-010"
+        },
+        {
+          "id": "object-2",
+          "name": "모니터",
+          "candidateId": "CND-005",
+          "assetId": "AST-005",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-056/AST-005-004",
+          "nodeName": "AST-005-004"
+        },
+        {
+          "id": "object-3",
+          "name": "서비스 카운터",
+          "candidateId": "CND-023",
+          "assetId": "AST-1023",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-056/AST-1023-002",
+          "nodeName": "AST-1023-002"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "sort",
+          "title": "서류 트레이 · 요청 구분",
+          "instruction": "접수 서류는 예금전표,공과금 고지서,환전신청서 세 종류입니다. 각각 예금·공과금·환전 칸에 분류하세요.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "예금전표",
+              "targetLabel": "예금 접수",
+              "slotLabel": "예금 접수",
+              "initialX": 0.13,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "공과금 고지서",
+              "targetLabel": "공과금 접수",
+              "slotLabel": "공과금 접수",
+              "initialX": 0.43,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "환전신청서",
+              "targetLabel": "환전 접수",
+              "slotLabel": "환전 접수",
+              "initialX": 0.73,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            }
+          ],
+          "successText": "거래 종류가 혼동되지 않게 분류되었습니다.",
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "255-item-1"
+        },
+        {
+          "kind": "form",
+          "title": "모니터 · 모형 입금 전표",
+          "instruction": "교육용 계좌 EDU-255, 요청번호 DEP-18. 모형 만원권 3장과 천원권 3장 = 33000원입니다. 전표의 계좌·요청번호·금액을 수정하세요.",
+          "fields": [
+            {
+              "id": "field0",
+              "label": "교육용 계좌",
+              "initial": "",
+              "target": "EDU-255"
+            },
+            {
+              "id": "field1",
+              "label": "요청번호",
+              "initial": "DEP-81",
+              "target": "DEP-18"
+            },
+            {
+              "id": "field2",
+              "label": "금액",
+              "initial": "30000",
+              "target": "33000"
+            }
+          ],
+          "successText": "33000원 교육용 입금 전표가 저장되었습니다. 실제 금융 거래는 발생하지 않습니다.",
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "255-item-2"
+        },
+        {
+          "kind": "form",
+          "title": "서비스 카운터 · 영수증 인계",
+          "instruction": "저장된 전표와 대조하여 요청번호 DEP-18, 금액33000, 구분 모형입금을 영수증에 기록하고 전달하세요.",
+          "fields": [
+            {
+              "id": "field0",
+              "label": "요청번호",
+              "initial": "",
+              "target": "DEP-18"
+            },
+            {
+              "id": "field1",
+              "label": "금액",
+              "initial": "",
+              "target": "33000"
+            },
+            {
+              "id": "field2",
+              "label": "거래 구분",
+              "initial": "",
+              "target": "모형입금"
+            }
+          ],
+          "successText": "전표·영수증의 요청번호와 금액이 일치하여 모형 거래 인계가 완료되었습니다.",
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "255-item-3"
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-239-experience",
+      "version": "v002",
+      "occupationId": "career-net-239",
+      "name": "증권분석가",
+      "roomId": "PAN-057",
+      "title": "허구 기업의 자료 대조와 비율 계산",
+      "brief": "가상 기업 새봄의 교육용 수치만 사용합니다. 수익을 예측하거나 투자 추천을 하지 않고 자료와 계산 근거를 정확히 정리합니다.",
+      "limitation": "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/427/data"
+      },
+      "source_basis": {
+        "work": "하는일\n증권분석가는 통계학, 경제학의 지식을 바탕으로 경제 동향을 파악하여 기업의 재무 상태나 신용도 등의 정보를 토대로 어음, 수표, 채권, 주권, 상품권과 같은 유가증권을 분석합니다.\n기업의 실적 예상, 기업의 자금조달 형편의 조사 및 분석, 증권의 가격변동과 수익률 추세 분석 등에 대한 업무를 수행하며 고객에게 유용한 투자 정보를 제공합니다.\n주식, 채권 등 유가증권을 발행한 기업의 재무 상태, 유가증권의 가격변동, 수익률, 추세 등을 분석하는 업무를 수행합니다.\n위의 분석 결과와 다른 투자회사나 펀드매니저, 투자 고객과의 각종 정보 교환을 바탕으로 신시장 개척, 새로운 투자, 신기술 개발 등 미래에 실현될 증권 관련 사항들을 예측하고 전망합니다.\n기업 가치 평가 결과 등을 바탕으로 자산을 운용하거나 고객에게 투자 정보를 제공하고 투자 방향에 대해 자문합니다.",
+        "selected_work_evidence": "기업의 실적 예상, 기업의 자금조달 형편의 조사 및 분석, 증권의 가격변동과 수익률 추세 분석 등에 대한 업무를 수행하며 고객에게 유용한 투자 정보를 제공합니다.",
+        "core_competencies": [
+          "수리·논리력"
+        ],
+        "practice_connection": "원문 역량 수리·논리력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/427/data/준비방법"
+      },
+      "fictionalization": {
+        "status": "educational_fiction",
+        "professional_review": "unreviewed",
+        "real_world_decisions": false
+      },
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "서류 파일",
+          "candidateId": "CND-027",
+          "assetId": "AST-1027",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-057/AST-1027-006",
+          "nodeName": "AST-1027-006"
+        },
+        {
+          "id": "object-2",
+          "name": "작은 계산기",
+          "candidateId": "CND-206",
+          "assetId": "AST-1206",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-057/AST-1206-007",
+          "nodeName": "AST-1206-007"
+        },
+        {
+          "id": "object-3",
+          "name": "노트북",
+          "candidateId": "CND-012",
+          "assetId": "AST-1012",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-057/AST-1012-009",
+          "nodeName": "AST-1012-009"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "inspect",
+          "title": "서류 파일 · 재무 자료 읽기",
+          "instruction": "기업 새봄의 자료 카드 세 장을 각각 확인하세요. 단위는 백만원이며 모든 수치는 교육용 허구입니다.",
+          "findings": [
+            {
+              "id": "finding0",
+              "label": "매출 자료",
+              "detail": "2026년 매출은 1000백만원입니다."
+            },
+            {
+              "id": "finding1",
+              "label": "영업이익 자료",
+              "detail": "2026년 영업이익은 120백만원입니다."
+            },
+            {
+              "id": "finding2",
+              "label": "자산·부채 자료",
+              "detail": "자산은 800백만원, 부채는 200백만원입니다."
+            }
+          ],
+          "successText": "세 원본 수치와 단위가 확인되었습니다.",
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "239-item-1"
+        },
+        {
+          "kind": "tune",
+          "title": "계산기 · 비율 계산",
+          "instruction": "영업이익률=120÷1000×100=12%, 부채/자산=200÷800×100=25%. 계산기의 두 결과 값을 조절하여 소수점 1자리 허용오차0.1% 안에 맞추세요.",
+          "values": [
+            {
+              "id": "value0",
+              "label": "영업이익률",
+              "unit": "%",
+              "min": 0,
+              "max": 30,
+              "initial": 5,
+              "target": 12,
+              "tolerance": 0.1
+            },
+            {
+              "id": "value1",
+              "label": "부채/자산",
+              "unit": "%",
+              "min": 0,
+              "max": 60,
+              "initial": 10,
+              "target": 25,
+              "tolerance": 0.1
+            }
+          ],
+          "successText": "허구 자료의 두 계산 결과가 원본 수치와 일치합니다.",
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "239-item-2"
+        },
+        {
+          "kind": "form",
+          "title": "노트북 · 분석 메모 인계",
+          "instruction": "자료에 근거해 기업명 새봄, 영업이익률12, 부채/자산25를 입력합니다. 투자 추천이나 향후 가격 전망을 덧붙이지 않습니다.",
+          "fields": [
+            {
+              "id": "field0",
+              "label": "기업명",
+              "initial": "",
+              "target": "새봄"
+            },
+            {
+              "id": "field1",
+              "label": "영업이익률(%)",
+              "initial": "",
+              "target": "12"
+            },
+            {
+              "id": "field2",
+              "label": "부채/자산(%)",
+              "initial": "",
+              "target": "25"
+            }
+          ],
+          "successText": "수치·공식·단위를 확인한 교육용 분석 메모가 저장되었습니다.",
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "239-item-3"
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-466-experience",
+      "version": "v002",
+      "occupationId": "career-net-466",
+      "name": "컴퓨터설치·수리원",
+      "roomId": "PAN-058",
+      "title": "가상 주변기기의 연결 단서와 부품 준비",
+      "brief": "이 방의 단순 가전 모형을 교육용 주변기기의 외형 대용으로 사용합니다. 실제 분해·통전·전기 수리 작업 없이 모형 카드의 단서와 연결 순서를 확인합니다.",
+      "limitation": "원본 직업의 업무 문장은 근거로 보존합니다. 대화·수치·정답·분류는 교육용 허구이며 전문 검토 미완료입니다. 실제 임상·법률·금융·수리 판단이나 직업 적성을 판정하지 않습니다.",
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/469/data"
+      },
+      "source_basis": {
+        "work": "하는일\n컴퓨터설치ㆍ수리원은 고객의 요청에 따라 컴퓨터나 프린터 및 스캐너와 같은 주변기기를 설치하거나 컴퓨터의 고장 사항을 확인하고 수리하는 일을 합니다.\n고객의 가정이나 사무실을 방문하여 컴퓨터, 스캐너, 프린터기기 등을 설치하고 컴퓨터와 주변기기 사용 방법에 대해 설명합니다.\n고객센터로부터 접수된 컴퓨터 및 주변기기 사용의 불편 사항에 대하여 고객의 집이나 사무실을 방문하여 컴퓨터 및 주변기기의 고장 원인을 분석 및 파악하여 수리합니다.\n컴퓨터 및 주변기기의 성능을 높이는(업그레이드) 일을 하기도 하며, 고객에게 장애 발생을 예방하는 방법에 대해 설명하기도 합니다.\n프린터, 스캐너 등의 컴퓨터 주변기기 및 네트워크 장비, 서버 등의 장애를 처리하기도 합니다.",
+        "selected_work_evidence": "컴퓨터설치ㆍ수리원은 고객의 요청에 따라 컴퓨터나 프린터 및 스캐너와 같은 주변기기를 설치하거나 컴퓨터의 고장 사항을 확인하고 수리하는 일을 합니다.",
+        "core_competencies": [
+          "수리·논리력",
+          "공간지각력"
+        ],
+        "practice_connection": "원문 역량 수리·논리력, 공간지각력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+        "preparation_reference_pointer": "/items/469/data/준비방법"
+      },
+      "fictionalization": {
+        "status": "educational_fiction",
+        "professional_review": "unreviewed",
+        "real_world_decisions": false
+      },
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "간단한 가전제품",
+          "candidateId": "CND-207",
+          "assetId": "AST-1207",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-058/AST-1207-002",
+          "nodeName": "AST-1207-002"
+        },
+        {
+          "id": "object-2",
+          "name": "공구 가방",
+          "candidateId": "CND-208",
+          "assetId": "AST-1208",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-058/AST-1208-004",
+          "nodeName": "AST-1208-004"
+        },
+        {
+          "id": "object-3",
+          "name": "부품 트레이",
+          "candidateId": "CND-040",
+          "assetId": "AST-1040",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-058/AST-1040-005",
+          "nodeName": "AST-1040-005"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "inspect",
+          "title": "가전 모형 · 접수 단서 확인",
+          "instruction": "가상 주변기기 접수카드의 세 단서를 각각 확인하세요. 모델 외형은 주변기기 대용이며 실제 고장 진단 정답을 제시하지 않습니다.",
+          "findings": [
+            {
+              "id": "finding0",
+              "label": "요청 내용",
+              "detail": "교육용 프린터 DEMO-P가 컴퓨터 목록에 나타나지 않는다는 요청입니다."
+            },
+            {
+              "id": "finding1",
+              "label": "표시 카드",
+              "detail": "모형 상태 카드: 전원 표시 정상,데이터 연결 표시 미확인입니다."
+            },
+            {
+              "id": "finding2",
+              "label": "준비 지시",
+              "detail": "전원을 연결하지 않는 모형 보드에서 USB 연결 순서 카드만 준비합니다."
+            }
+          ],
+          "successText": "확인된 상태와 아직 확인하지 않은 연결 항목이 기록되었습니다.",
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "466-item-1"
+        },
+        {
+          "kind": "sort",
+          "title": "공구 가방 · 모형 준비물 분류",
+          "instruction": "준비목록은 데이터선·관찰카드·보관주머니입니다. 각각 연결 준비칸·확인 자료칸·보관칸에 옮깁니다. 실제 전기 공구 사용은 하지 않습니다.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "USB 모형선",
+              "targetLabel": "연결 준비칸",
+              "slotLabel": "연결 준비칸",
+              "initialX": 0.13,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "상태 관찰카드",
+              "targetLabel": "확인 자료칸",
+              "slotLabel": "확인 자료칸",
+              "initialX": 0.43,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "보관주머니",
+              "targetLabel": "보관칸",
+              "slotLabel": "보관칸",
+              "initialX": 0.73,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            }
+          ],
+          "successText": "모형 작업에 필요한 준비물과 자료가 구분되었습니다.",
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "466-item-2"
+        },
+        {
+          "kind": "assemble",
+          "title": "부품 트레이 · 연결 모형 조립",
+          "instruction": "통전하지 않는 그림 모형입니다. 컴퓨터 표식 → USB 모형선 → 주변기기 표식 순서의 결합점에 카드를 옮겨 연결 경로를 완성하고 인계하세요.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "컴퓨터 표식",
+              "targetLabel": "1 시작 단말",
+              "slotLabel": "1 시작 단말",
+              "initialX": 0.13,
+              "initialY": 0.84,
+              "targetX": 0.18,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "USB 모형선",
+              "targetLabel": "2 데이터 경로",
+              "slotLabel": "2 데이터 경로",
+              "initialX": 0.43,
+              "initialY": 0.84,
+              "targetX": 0.49,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "주변기기 표식",
+              "targetLabel": "3 도착 단말",
+              "slotLabel": "3 도착 단말",
+              "initialX": 0.73,
+              "initialY": 0.84,
+              "targetX": 0.8,
+              "targetY": 0.38,
+              "width": 0.22,
+              "height": 0.16,
+              "tolerance": 0.065
+            }
+          ],
+          "successText": "교육용 연결 경로가 완성되어 준비 결과가 인계되었습니다. 실제 기기 수리 완료를 뜻하지 않습니다.",
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "466-item-3"
+        }
+      ]
+    }
+  ]
+}

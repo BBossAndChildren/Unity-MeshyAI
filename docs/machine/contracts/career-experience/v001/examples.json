@@ -1,0 +1,479 @@
+{
+  "schema_version": 3,
+  "protocol": "career-experience",
+  "protocolVersion": "v001",
+  "status": "fictional_specification_examples_not_runtime_measurements",
+  "examples": [
+    {
+      "name": "01-start-experience",
+      "direction": "react_to_unity",
+      "message": {
+        "schemaVersion": 1,
+        "protocol": "career-experience",
+        "requestId": "req-start-001",
+        "action": "start_experience",
+        "sessionId": "session-example-001",
+        "experienceId": "experience-example-001",
+        "roomId": "office",
+        "scenarioId": "career-net-253-office-documents",
+        "scenarioVersion": "v001"
+      }
+    },
+    {
+      "name": "02-end-experience",
+      "direction": "react_to_unity",
+      "message": {
+        "schemaVersion": 1,
+        "protocol": "career-experience",
+        "requestId": "req-end-001",
+        "action": "end_experience",
+        "sessionId": "session-example-001",
+        "experienceId": "experience-example-001",
+        "roomId": "office",
+        "reason": "USER_REQUESTED_END"
+      }
+    },
+    {
+      "name": "03-started-response",
+      "direction": "unity_to_react",
+      "message": {
+        "schemaVersion": 1,
+        "protocol": "career-experience",
+        "eventId": "evt-started-001",
+        "sequence": 1,
+        "occurredAt": "2026-10-31T10:28:00+09:00",
+        "sessionId": "session-example-001",
+        "scenarioRunId": "run-example-001",
+        "buildId": "example-v001",
+        "sceneId": "office",
+        "scenarioId": "career-net-253-office-documents",
+        "scenarioVersion": "v001",
+        "objectId": null,
+        "instanceId": null,
+        "assetId": null,
+        "assetVersion": null,
+        "stepId": null,
+        "workItemId": null,
+        "attemptId": null,
+        "requestRevision": 1,
+        "documentRevision": 1,
+        "type": "experience.started",
+        "action": "start_experience",
+        "process": {
+          "scope": "scenario",
+          "measurementStatus": "complete",
+          "measurementNote": null,
+          "attemptCount": 0,
+          "navigationBackCount": 0,
+          "backtrackCount": 0,
+          "retryCount": 0,
+          "mistakeCount": 0,
+          "repeatedMistakeCount": 0,
+          "helpRequestCount": 0,
+          "guidanceUsed": false,
+          "elapsedActiveMs": 0
+        },
+        "result": {
+          "outcome": "pending",
+          "success": null,
+          "completionCode": null,
+          "data": {}
+        },
+        "context": {
+          "assessmentStatus": "pending",
+          "assessmentCode": null,
+          "ruleVersion": "v001",
+          "reasonCodes": [],
+          "evidenceEventIds": [],
+          "interpretation": null,
+          "limitations": [],
+          "termination": null
+        },
+        "data": {
+          "events": [],
+          "eventsComplete": false,
+          "previousRuns": []
+        },
+        "requestId": "req-start-001",
+        "roomId": "office",
+        "experienceId": "experience-example-001"
+      }
+    },
+    {
+      "name": "04-completed-response",
+      "direction": "unity_to_react",
+      "message": {
+        "schemaVersion": 1,
+        "protocol": "career-experience",
+        "eventId": "evt-020",
+        "sequence": 20,
+        "occurredAt": "2026-10-31T10:30:00+09:00",
+        "sessionId": "session-example-001",
+        "scenarioRunId": "run-example-001",
+        "buildId": "example-v001",
+        "sceneId": "office",
+        "scenarioId": "career-net-253-office-documents",
+        "scenarioVersion": "v001",
+        "objectId": null,
+        "instanceId": null,
+        "assetId": null,
+        "assetVersion": null,
+        "stepId": null,
+        "workItemId": null,
+        "attemptId": null,
+        "requestRevision": 1,
+        "documentRevision": 2,
+        "type": "experience.ended",
+        "action": "end_experience",
+        "process": {
+          "scope": "scenario",
+          "measurementStatus": "complete",
+          "measurementNote": null,
+          "attemptCount": 6,
+          "navigationBackCount": 3,
+          "backtrackCount": 1,
+          "retryCount": 1,
+          "mistakeCount": 1,
+          "repeatedMistakeCount": 0,
+          "helpRequestCount": 0,
+          "guidanceUsed": false,
+          "elapsedActiveMs": 95000
+        },
+        "result": {
+          "outcome": "completed",
+          "success": true,
+          "completionCode": "OFFICE_DOCUMENTS_HANDED_OFF",
+          "data": {
+            "documentId": "DOC-001",
+            "copies": 2,
+            "folder": "회의자료",
+            "handoffConfirmed": true
+          }
+        },
+        "context": {
+          "assessmentStatus": "evaluated",
+          "assessmentCode": "TASK_SELF_CORRECTED",
+          "ruleVersion": "v001",
+          "reasonCodes": [
+            "COPY_COUNT_MISMATCH",
+            "USER_RECHECK"
+          ],
+          "evidenceEventIds": [
+            "evt-012",
+            "evt-013",
+            "evt-019"
+          ],
+          "interpretation": "부수 오류 1회 후 요청을 재확인하고 수정하여 출력·보관·인계를 완료함",
+          "limitations": [
+            "가상 체험 한 회의 수행 기록이며 직업 적성·전반적 능력 진단이 아님",
+            "가상 전달 예시: 원본 근거 이벤트는 이 파일에 포함하지 않음"
+          ],
+          "termination": null
+        },
+        "data": {
+          "events": [],
+          "eventsComplete": false,
+          "previousRuns": []
+        },
+        "requestId": "req-end-001",
+        "roomId": "office",
+        "experienceId": "experience-example-001"
+      }
+    },
+    {
+      "name": "05-aborted-response",
+      "direction": "unity_to_react",
+      "message": {
+        "schemaVersion": 1,
+        "protocol": "career-experience",
+        "eventId": "evt-020",
+        "sequence": 20,
+        "occurredAt": "2026-10-31T10:30:00+09:00",
+        "sessionId": "session-example-001",
+        "scenarioRunId": "run-example-001",
+        "buildId": "example-v001",
+        "sceneId": "office",
+        "scenarioId": "career-net-253-office-documents",
+        "scenarioVersion": "v001",
+        "objectId": null,
+        "instanceId": null,
+        "assetId": null,
+        "assetVersion": null,
+        "stepId": null,
+        "workItemId": null,
+        "attemptId": null,
+        "requestRevision": 1,
+        "documentRevision": 2,
+        "type": "experience.ended",
+        "action": "end_experience",
+        "process": {
+          "scope": "scenario",
+          "measurementStatus": "complete",
+          "measurementNote": null,
+          "attemptCount": 4,
+          "navigationBackCount": 1,
+          "backtrackCount": 1,
+          "retryCount": 1,
+          "mistakeCount": 1,
+          "repeatedMistakeCount": 0,
+          "helpRequestCount": 0,
+          "guidanceUsed": false,
+          "elapsedActiveMs": 65000
+        },
+        "result": {
+          "outcome": "aborted",
+          "success": false,
+          "completionCode": "USER_ABORTED",
+          "data": {
+            "partialResults": {
+              "documentSaved": true,
+              "printedCopies": 0,
+              "handoffConfirmed": false
+            }
+          }
+        },
+        "context": {
+          "assessmentStatus": "evaluated",
+          "assessmentCode": "TASK_INCOMPLETE",
+          "ruleVersion": "v001",
+          "reasonCodes": [
+            "COPY_COUNT_MISMATCH",
+            "USER_ABORTED"
+          ],
+          "evidenceEventIds": [
+            "evt-work-started",
+            "evt-quit-confirmed"
+          ],
+          "interpretation": "부수 오류 후 수정했으나 출력 도중 사용자가 종료함. 보관·인계는 미완료",
+          "limitations": [
+            "종료 자체는 업무 실수나 적성 판단 근거가 아님",
+            "가상 전달 예시: 실제 플레이 측정값이 아님"
+          ],
+          "termination": {
+            "terminationId": "termination-example-001",
+            "code": "USER_ABORTED",
+            "initiatedBy": "user",
+            "workStarted": true,
+            "lastStepId": "print",
+            "lastObjectId": "copier",
+            "lastState": "printing",
+            "completedStepIds": [
+              "confirm",
+              "review"
+            ],
+            "remainingStepIds": [
+              "print",
+              "file"
+            ],
+            "inFlightActionIds": [
+              "print-job-example-001"
+            ]
+          }
+        },
+        "data": {
+          "events": [],
+          "eventsComplete": false,
+          "previousRuns": []
+        },
+        "requestId": "req-end-001",
+        "roomId": "office",
+        "experienceId": "experience-example-001"
+      }
+    },
+    {
+      "name": "06-failed-response",
+      "direction": "unity_to_react",
+      "message": {
+        "schemaVersion": 1,
+        "protocol": "career-experience",
+        "eventId": "evt-020",
+        "sequence": 20,
+        "occurredAt": "2026-10-31T10:30:00+09:00",
+        "sessionId": "session-example-001",
+        "scenarioRunId": "run-example-001",
+        "buildId": "example-v001",
+        "sceneId": "office",
+        "scenarioId": "career-net-253-office-documents",
+        "scenarioVersion": "v001",
+        "objectId": null,
+        "instanceId": null,
+        "assetId": null,
+        "assetVersion": null,
+        "stepId": null,
+        "workItemId": null,
+        "attemptId": null,
+        "requestRevision": 1,
+        "documentRevision": 2,
+        "type": "experience.ended",
+        "action": "end_experience",
+        "process": {
+          "scope": "scenario",
+          "measurementStatus": "complete",
+          "measurementNote": null,
+          "attemptCount": 6,
+          "navigationBackCount": 3,
+          "backtrackCount": 1,
+          "retryCount": 1,
+          "mistakeCount": 1,
+          "repeatedMistakeCount": 0,
+          "helpRequestCount": 0,
+          "guidanceUsed": false,
+          "elapsedActiveMs": 95000
+        },
+        "result": {
+          "outcome": "failed",
+          "success": false,
+          "completionCode": "SCENARIO_FAILED",
+          "data": {
+            "partialResults": {
+              "documentSaved": true,
+              "handoffConfirmed": false
+            }
+          }
+        },
+        "context": {
+          "assessmentStatus": "evaluated",
+          "assessmentCode": "TASK_INCOMPLETE",
+          "ruleVersion": "v001",
+          "reasonCodes": [
+            "MANDATORY_STEP_FAILED"
+          ],
+          "evidenceEventIds": [
+            "evt-example-final-failure"
+          ],
+          "interpretation": "명세의 필수 완료 조건을 충족하지 못하고 최종 실패로 종료함",
+          "limitations": [
+            "가상 체험 한 회의 수행 기록이며 직업 적성·전반적 능력 진단이 아님",
+            "가상 전달 예시: 원본 근거 이벤트는 이 파일에 포함하지 않음"
+          ],
+          "termination": null
+        },
+        "data": {
+          "events": [],
+          "eventsComplete": false,
+          "previousRuns": []
+        },
+        "requestId": "req-end-001",
+        "roomId": "office",
+        "experienceId": "experience-example-001"
+      }
+    },
+    {
+      "name": "07-partial-data-response",
+      "direction": "unity_to_react",
+      "message": {
+        "schemaVersion": 1,
+        "protocol": "career-experience",
+        "eventId": "evt-020",
+        "sequence": 20,
+        "occurredAt": "2026-10-31T10:30:00+09:00",
+        "sessionId": "session-example-001",
+        "scenarioRunId": "run-example-001",
+        "buildId": "example-v001",
+        "sceneId": "office",
+        "scenarioId": "career-net-253-office-documents",
+        "scenarioVersion": "v001",
+        "objectId": null,
+        "instanceId": null,
+        "assetId": null,
+        "assetVersion": null,
+        "stepId": null,
+        "workItemId": null,
+        "attemptId": null,
+        "requestRevision": 1,
+        "documentRevision": 2,
+        "type": "experience.ended",
+        "action": "end_experience",
+        "process": {
+          "scope": "scenario",
+          "measurementStatus": "partial",
+          "measurementNote": "일부 원본 이벤트가 누락되어 전체 횟수를 재현할 수 없음",
+          "attemptCount": null,
+          "navigationBackCount": null,
+          "backtrackCount": null,
+          "retryCount": null,
+          "mistakeCount": null,
+          "repeatedMistakeCount": null,
+          "helpRequestCount": null,
+          "guidanceUsed": null,
+          "elapsedActiveMs": null
+        },
+        "result": {
+          "outcome": "aborted",
+          "success": false,
+          "completionCode": "USER_ABORTED",
+          "data": {
+            "partialResults": {
+              "documentSaved": true,
+              "printedCopies": 0,
+              "handoffConfirmed": false
+            }
+          }
+        },
+        "context": {
+          "assessmentStatus": "unavailable",
+          "assessmentCode": null,
+          "ruleVersion": "v001",
+          "reasonCodes": [
+            "COPY_COUNT_MISMATCH",
+            "USER_ABORTED"
+          ],
+          "evidenceEventIds": [
+            "evt-quit-confirmed"
+          ],
+          "interpretation": "사용자 종료는 확인했으나 이전 과정 일부가 누락되어 수행 평가는 미확정",
+          "limitations": [
+            "종료 자체는 업무 실수나 적성 판단 근거가 아님",
+            "가상 전달 예시: 실제 플레이 측정값이 아님",
+            "누락된 과정의 횟수를 0으로 해석하지 않음"
+          ],
+          "termination": {
+            "terminationId": "termination-example-001",
+            "code": "USER_ABORTED",
+            "initiatedBy": "user",
+            "workStarted": true,
+            "lastStepId": "print",
+            "lastObjectId": "copier",
+            "lastState": "printing",
+            "completedStepIds": [
+              "confirm",
+              "review"
+            ],
+            "remainingStepIds": [
+              "print",
+              "file"
+            ],
+            "inFlightActionIds": [
+              "print-job-example-001"
+            ]
+          }
+        },
+        "data": {
+          "events": [],
+          "eventsComplete": false,
+          "previousRuns": []
+        },
+        "requestId": "req-end-001",
+        "roomId": "office",
+        "experienceId": "experience-example-001"
+      }
+    },
+    {
+      "name": "08-control-error-response",
+      "direction": "unity_to_react",
+      "message": {
+        "schemaVersion": 1,
+        "protocol": "career-experience",
+        "requestId": "req-start-invalid-001",
+        "sessionId": "session-example-001",
+        "experienceId": "experience-invalid-001",
+        "roomId": "unknown-room",
+        "type": "experience.error",
+        "error": {
+          "code": "UNKNOWN_ROOM",
+          "message": "등록되지 않은 roomId입니다."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+
+namespace CareerExperience
+{
+    public sealed class PilotLedger
+    {
+        public readonly PilotSession Session;
+        public readonly string SessionId,ExperienceId,BuildId;
+        public string EndSummary { get; private set; }
+        public string StartReceipt { get; private set; }
+        public string EndEventId { get; private set; }
+        readonly List<Record> records;
+        readonly List<object> previousRuns=new List<object>();
+        readonly Dictionary<int,string> timerAttempts=new Dictionary<int,string>();
+        readonly Func<string,long> nextSequence;
+        readonly Dictionary<int,Dictionary<string,object>> pendingProgress=new Dictionary<int,Dictionary<string,object>>();
+        DateTime nextProgressAt=DateTime.MinValue;
+        string lastObject,lastStep;int lastWorkedStep=-1;
+        sealed class Record
+        {
+            public string id,run,type,step,attempt,failure,key,json;
+            public string[] reasons=Array.Empty<string>();
+            public bool retry,assistance,isAttempt;public int revision;
+            public long sequence;
+            public Dictionary<string,object> envelope;
+        }
+        [DllImport("__Internal")] static extern void CareerPublish(string json);
+        [DllImport("__Internal")] static extern void CareerCheckpoint(string json);
+        public static string NewId(string prefix)=>prefix+Guid.NewGuid().ToString("N");
+        public static Dictionary<string,object> D(params object[] values)
+        {
+            var d=new Dictionary<string,object>();for(int i=0;i<values.Length;i+=2)d.Add((string)values[i],values[i+1]);return d;
+        }
+        public PilotLedger(PilotDefinition definition,string build,string session,string experience,Func<string,long> sequence)
+        {
+            Session=new PilotSession(definition);SessionId=session;ExperienceId=experience;BuildId=build;
+            nextSequence=sequence;records=new List<Record>();Session.Transition=OnTransition;
+        }
+        public void Start(string requestId)
+        {
+            Emit("scenario.started","start_scenario",-1,D());
+            if(requestId!=null)StartReceipt=Emit("experience.started","start_experience",-1,D("ready",true,"firstSequence",records[0].sequence),request:requestId);
+            Checkpoint();
+        }
+        IEnumerable<Record> Current=>records.Where(x=>x.run==Session.RunId);
+        string Key(int step)=>Session.Surfaces[step].id+"|"+Session.Surfaces[step].objectId+"|"+Session.Surfaces[step].workItemId+"|"+Session.RequestRevision;
+        void OnTransition(PilotTransition t)
+        {
+            if(t.runId!=Session.RunId||t.generation!=Session.Generation||Session.Ended)return;
+            string key=Key(t.step),attempt;bool continuation=t.action=="stop_timer"||t.action=="timer_timeout";
+            bool retry=false;
+            if(continuation)
+            {
+                if(!timerAttempts.TryGetValue(t.step,out attempt))return;
+                timerAttempts.Remove(t.step);
+            }
+            else
+            {
+                attempt=NewId("attempt-");var prior=Current.LastOrDefault(x=>x.key==key&&(x.isAttempt||x.failure!=null));retry=prior!=null&&prior.failure!=null;
+                if(retry)Emit("interaction.retry_requested",t.action,t.step,D("reasonCode","RESUBMIT_AFTER_FAILED_ATTEMPT"),attempt:attempt);
+                Emit("interaction.started",t.action,t.step,D("isAttempt",true,"isRetry",retry,"input",Input(t.step)),attempt:attempt,isAttempt:true,retry:retry);
+            }
+            lastWorkedStep=t.step;lastStep=Session.Surfaces[t.step].id;lastObject=Session.Surfaces[t.step].objectId;
+            if(t.pending)
+            {
+                timerAttempts[t.step]=attempt;
+                Emit("interaction.progress",t.action,t.step,D("state","running","elapsed",0),attempt:attempt);
+            }
+            else if(!t.success)
+            {
+                string failure=NewId("failure-");
+                Emit("interaction.validation_failed",t.action,t.step,D("failureId",failure,"reasonCodes",t.reasons,"faultSource","player","expected",Expected(t.step),"actual",Input(t.step)),attempt:attempt,failure:failure,reasons:t.reasons,outcome:"failed",completion:"VALIDATION_FAILED");
+            }
+            else
+            {
+                Emit("interaction.completed",t.action,t.step,D("result",Input(t.step)),attempt:attempt,outcome:"completed",completion:"WORK_ITEM_COMPLETED");
+                if(Session.Complete)Emit("scenario.completed","complete_scenario",-1,D("partialResults",Partial()),outcome:"completed",completion:"CAREER_TASK_COMPLETED");
+            }
+            Checkpoint();
+        }
+        public object Input(int step)
+        {
+            var d=Session.Drafts[step];return D("tileX",d.x.ToArray(),"tileY",d.y.ToArray(),"settings",d.values.ToArray(),"fields",d.fields.ToArray(),"observed",d.observed.ToArray(),"draftRevision",d.editRevision,"savedRevision",d.savedRevision,"savedRequestRevision",Session.HasRequestChange?(object)d.savedRequestRevision:null,"validationErrors",d.validationErrors.ToArray(),"elapsed",d.elapsed,"completed",d.completed,"running",d.running,"artifact",string.IsNullOrEmpty(d.artifactId)?null:D("id",d.artifactId,"filename",d.artifactName,"width",d.artifactWidth,"height",d.artifactHeight,"bytes",d.artifactBytes,"mediaType","image/png","source","actual_unity_3d_render"));
+        }
+        object Expected(int step)
+        {
+            var s=Session.Surfaces[step];return D("tileTargets",(s.tiles??Array.Empty<PilotTile>()).Select(t=>D("id",t.id,"x",t.targetX,"y",t.targetY,"tolerance",t.tolerance)).ToArray(),"settings",(s.values??Array.Empty<PilotValue>()).Select(v=>D("id",v.id,"target",v.target,"tolerance",v.tolerance)).ToArray(),"fields",(s.fields??Array.Empty<PilotField>()).Select(f=>D("id",f.id,"target",f.target)).ToArray(),"timerMin",s.kind=="timer"?(object)s.timerMin:null,"timerMax",s.kind=="timer"?(object)s.timerMax:null);
+        }
+        public object Partial()=>Session.Surfaces.Select((s,i)=>D("stepId",s.id,"completed",Session.Drafts[i].completed,"result",Session.Drafts[i].completed?Input(i):null)).ToArray();
+        public void Open(int step)
+        {
+            if(Session.Ended)return;
+            if(lastWorkedStep>step&&Session.Unlocked(step))
+                Emit("workflow.backtracked","recheck_previous_work",step,D("fromStepId",Session.Surfaces[lastWorkedStep].id,"toStepId",Session.Surfaces[step].id,"reasonCode","USER_RECHECK"));
+            lastObject=Session.Surfaces[step].objectId;lastStep=Session.Surfaces[step].id;
+            Emit("object.selected","select_object",step,D());Emit("interaction.opened","open_work_surface",step,D("draftPreserved",true));
+        }
+        public void Close(int step)
+        {
+            if(Session.Ended)return;Emit("interaction.closed","close_work_surface",step,D("draftPreserved",true));Emit("navigation.back","return_to_room",step,D("reasonCode","NORMAL_RETURN"));
+        }
+        public void Edit(int step,string control)
+        {
+            if(Session.Ended)return;lastWorkedStep=step;lastStep=Session.Surfaces[step].id;lastObject=Session.Surfaces[step].objectId;
+            pendingProgress[step]=D("controlId",control,"draft",true,"input",Input(step));
+            if(DateTime.UtcNow>=nextProgressAt)FlushProgress();
+        }
+        void FlushProgress()
+        {
+            if(pendingProgress.Count==0)return;
+            var pending=pendingProgress.ToArray();pendingProgress.Clear();nextProgressAt=DateTime.UtcNow.AddMilliseconds(200);
+            foreach(var item in pending)
+            {
+                string control=(string)item.Value["controlId"];
+                Emit("interaction.progress",control.StartsWith("question-")?"ask_request":control.StartsWith("field-")?"edit_field":control.StartsWith("finding-")?"inspect_point":control.StartsWith("slider-")||control.StartsWith("value")?"set_value":"move_tile",item.Key,item.Value);
+            }
+        }
+        public void Pause(bool value){if(!Session.Ended){Session.Paused=value;Emit(value?"scenario.paused":"scenario.resumed",value?"pause":"resume",-1,D());}}
+        public bool ChangeRequest()
+        {
+            if(!Session.HasRequestChange||Session.RequestChanged||Session.Ended||Session.Paused||Session.Complete)return false;
+            FlushProgress();
+            object previous=Partial();int revision=Session.RequestRevision;
+            foreach(var pair in timerAttempts.ToArray())Emit("interaction.aborted","invalidate_for_request_change",pair.Key,D("reasonCode","REQUEST_CHANGED"),attempt:pair.Value,outcome:"aborted",completion:"REQUEST_CHANGED",termination:Termination("REQUEST_CHANGED"));
+            if(!Session.ChangeRequest())return false;
+            timerAttempts.Clear();lastWorkedStep=-1;
+            Emit("request.changed","accept_changed_request",-1,D("reasonCode",Session.Definition.requestChangeReasonCode??"REQUEST_CHANGED","previousRequestRevision",revision,"requestRevision",Session.RequestRevision,"previousResults",previous,"draftPreserved",true,"requiresReconfirmation",true,"brief",Session.Definition.requestChangeBrief));
+            Checkpoint();return true;
+        }
+        public void Scene(string room,bool entered){if(!Session.Ended)Emit(entered?"scene.entered":"scene.exited",entered?"enter_room":"leave_room",-1,D("navigationRoomId",room));}
+        public void Help(int step)
+        {
+            if(Session.Ended)return;Emit("guidance.requested","request_help",step,D());Session.GuidanceUsed=true;
+            Emit("guidance.presented","show_help",step,D("isAssistance",true,"reasonCode","USER_REQUESTED_HINT","expected",Expected(step)),assistance:true);
+        }
+        Dictionary<string,object> Process(int step=-1)
+        {
+            var rows=Current.Where(x=>step<0||x.step==Session.Surfaces[step].id).ToArray();var failed=rows.Where(x=>x.failure!=null).ToArray();
+            int repeated=failed.Count(x=>failed.Any(p=>p.sequence<x.sequence&&p.key==x.key&&p.reasons.Intersect(x.reasons).Any()));
+            return D("scope",step<0?"scenario":"interaction","measurementStatus","complete","measurementNote",null,"attemptCount",rows.Count(x=>x.isAttempt),"navigationBackCount",rows.Count(x=>x.type=="navigation.back"),"backtrackCount",rows.Count(x=>x.type=="workflow.backtracked"),"retryCount",rows.Count(x=>x.isAttempt&&x.retry),"mistakeCount",failed.Select(x=>x.failure).Distinct().Count(),"repeatedMistakeCount",repeated,"helpRequestCount",rows.Count(x=>x.type=="guidance.requested"),"guidanceUsed",rows.Any(x=>x.assistance),"elapsedActiveMs",(long)(step<0?Session.ActiveMs:Session.WorkActiveMs[step]));
+        }
+        object Context(string outcome,object termination,int step=-1)
+        {
+            bool terminal=outcome!="pending";var p=Process(step);string code=!terminal?null:outcome!="completed"?"TASK_INCOMPLETE":(int)p["repeatedMistakeCount"]>0?"TASK_REPEATED_ERRORS":(bool)p["guidanceUsed"]?"TASK_GUIDED_COMPLETED":(int)p["mistakeCount"]>0?"TASK_SELF_CORRECTED":"TASK_SMOOTH";
+            var scoped=Current.Where(x=>step<0||x.step==Session.Surfaces[step].id).ToArray();var reasons=scoped.SelectMany(x=>x.reasons).Distinct().ToList();if(termination is Dictionary<string,object> t)reasons.Add((string)t["code"]);
+            return D("assessmentStatus",terminal?"evaluated":"pending","assessmentCode",code,"ruleVersion","v001","reasonCodes",terminal?reasons.Distinct().ToArray():Array.Empty<string>(),"evidenceEventIds",terminal?scoped.Where(x=>x.envelope!=null).Select(x=>x.id).ToArray():Array.Empty<string>(),"interpretation",terminal?"가상 업무 "+Session.Drafts.Count(x=>x.completed)+"/"+Session.Drafts.Length+"단계 완료. 기록된 제출·오류·안내를 기준으로 설명합니다.":null,"limitations",new[]{Session.Definition.limitation,"이 기록은 선택한 가상 시나리오 한 회의 수행이며 직업 적성·전문 자격 평가가 아닙니다."},"termination",termination);
+        }
+        object Termination(string code)
+        {
+            return D("terminationId",NewId("termination-"),"code",code,"initiatedBy","user","workStarted",Session.WorkStarted,"lastStepId",lastStep,"lastObjectId",lastObject,"lastState",Session.Complete?"completed":Session.Paused?"paused":Session.Drafts.Any(x=>x.running)?"process_running":"in_progress","completedStepIds",Session.Surfaces.Where((s,i)=>Session.Drafts[i].completed).Select(s=>s.id).ToArray(),"remainingStepIds",Session.Surfaces.Where((s,i)=>!Session.Drafts[i].completed).Select(s=>s.id).ToArray(),"inFlightActionIds",timerAttempts.Values.ToArray());
+        }
+        public string End(string requestId)
+        {
+            if(EndSummary!=null)return EndSummary;
+            FlushProgress();
+            string outcome=Session.Complete?"completed":"aborted",code=Session.Complete?"CAREER_TASK_COMPLETED":Session.WorkStarted?"USER_ABORTED":"USER_EXITED_BEFORE_START";object term=Session.Complete?null:Termination(code);
+            foreach(var pair in timerAttempts.ToArray())Emit("interaction.aborted","abort_inflight_work",pair.Key,D("partialResults",Input(pair.Key)),attempt:pair.Value,outcome:"aborted",completion:code,termination:term);
+            if(!Session.Complete)Emit("scenario.aborted","end_scenario",-1,D("partialResults",Partial()),outcome:outcome,completion:code,termination:term);
+            var original=Current.Select(x=>x.envelope).ToArray();
+            EndSummary=Emit("experience.ended","end_experience",-1,D("events",original,"eventsComplete",true,"previousRuns",previousRuns.ToArray(),"partialResults",Partial()),outcome:outcome,completion:code,request:requestId,termination:term);
+            EndEventId=records.Last().id;
+            Session.End();timerAttempts.Clear();Checkpoint();return EndSummary;
+        }
+        public void Reset()
+        {
+            if(Session.Ended)return;
+            object term=Session.Complete?null:Termination("USER_RESET");string outcome=Session.Complete?"completed":"aborted";
+            foreach(var pair in timerAttempts.ToArray())Emit("interaction.aborted","abort_inflight_for_reset",pair.Key,D("partialResults",Input(pair.Key)),attempt:pair.Value,outcome:"aborted",completion:"USER_RESET",termination:term);
+            if(!Session.Complete)Emit("scenario.aborted","reset_scenario",-1,D("partialResults",Partial()),outcome:outcome,completion:"USER_RESET",termination:term);
+            Emit("scenario.reset","reset_scenario",-1,D("partialResults",Partial()),outcome:outcome,completion:Session.Complete?"CAREER_TASK_COMPLETED":"USER_RESET",termination:term);
+            previousRuns.Add(D("scenarioRunId",Session.RunId,"process",Process(),"result",D("outcome",outcome,"partialResults",Partial()),"context",Context(outcome,term),"events",Current.Select(x=>x.envelope).ToArray()));
+            timerAttempts.Clear();Session.NewRun();lastObject=lastStep=null;lastWorkedStep=-1;Start(null);
+        }
+        string Emit(string type,string action,int step,Dictionary<string,object> data,string attempt=null,string failure=null,string[] reasons=null,bool isAttempt=false,bool retry=false,bool assistance=false,string outcome="pending",string completion=null,string request=null,object termination=null)
+        {
+            if(type!="interaction.progress")FlushProgress();
+            var surface=step<0?null:Session.Surfaces[step];var obj=surface==null?null:Session.Definition.objects.First(x=>x.id==surface.objectId);
+            var row=new Record{id=NewId("evt-"),run=Session.RunId,type=type,step=surface?.id,attempt=attempt,failure=failure,key=step<0?null:Key(step),revision=Session.RequestRevision,sequence=nextSequence(SessionId),reasons=reasons??Array.Empty<string>(),isAttempt=isAttempt,retry=retry,assistance=assistance};records.Add(row);
+            object resultData=outcome=="pending"?D():type=="experience.ended"?D("partialResults",Partial(),"scenarioComplete",Session.Complete):data;
+            row.envelope=D("schemaVersion",1,"protocol","career-experience","eventId",row.id,"sequence",row.sequence,"occurredAt",DateTimeOffset.Now.ToString("o"),"sessionId",SessionId,"scenarioRunId",Session.RunId,"buildId",BuildId,"sceneId",Session.Definition.roomId,"roomId",Session.Definition.roomId,"scenarioId",Session.Definition.scenarioId,"scenarioVersion",Session.Definition.version,"experienceId",ExperienceId,"requestId",request,"objectId",obj?.id,"instanceId",obj?.instanceId,"assetId",obj?.assetId,"assetVersion",obj?.assetVersion,"stepId",surface?.id,"workItemId",surface?.workItemId,"attemptId",attempt,"requestRevision",Session.HasRequestChange?(object)Session.RequestRevision:null,"documentRevision",step>=0&&Session.HasRequestChange?(object)Session.Drafts[step].editRevision:null,"type",type,"action",action,"process",Process(step),"result",D("outcome",outcome,"success",outcome=="pending"?(object)null:outcome=="completed","completionCode",completion,"data",resultData),"context",Context(outcome,termination,step),"data",data);
+            row.json=Json(row.envelope);Publish(row.json);return row.json;
+        }
+        public void Replay(){foreach(var row in records.OrderBy(x=>x.sequence))Publish(row.json);}
+        public void Checkpoint()
+        {
+            FlushProgress();
+            string json=Json(D("schemaVersion",1,"protocol","career-experience","sessionId",SessionId,"experienceId",ExperienceId,"scenarioRunId",Session.RunId,"roomId",Session.Definition.roomId,"ended",Session.Ended,"state",Session.Complete?"completed":Session.Paused?"paused":"in_progress","lastStepId",lastStep,"lastObjectId",lastObject,"process",Process(),"partialResults",Partial(),"inFlightActionIds",timerAttempts.Values.ToArray(),"inFlight",Session.Surfaces.Select((surface,i)=>new{surface,i}).Where(x=>Session.Drafts[x.i].running).Select(x=>D("stepId",x.surface.id,"input",Input(x.i))).ToArray(),"workStarted",Session.WorkStarted,"deliveryStatus","checkpoint_only_not_terminal","checkedAt",DateTimeOffset.Now.ToString("o")));
+#if UNITY_WEBGL && !UNITY_EDITOR
+            CareerCheckpoint(json);
+#endif
+        }
+        public static void Publish(string json)
+        {
+#if UNITY_WEBGL && !UNITY_EDITOR
+            CareerPublish(json);
+#else
+            UnityEngine.Debug.Log("CAREER_EVENT "+json);
+#endif
+        }
+        public static string Json(object value)
+        {
+            if(value==null)return "null";if(value is string s)return "\""+Escape(s)+"\"";if(value is bool b)return b?"true":"false";
+            if(value is IDictionary<string,object> d)return "{"+string.Join(",",d.Select(p=>Json(p.Key)+":"+Json(p.Value)))+"}";
+            if(value is IEnumerable list){var values=new List<string>();foreach(var item in list)values.Add(Json(item));return "["+string.Join(",",values)+"]";}
+            return Convert.ToString(value,CultureInfo.InvariantCulture);
+        }
+        static string Escape(string value)
+        {
+            var s=new StringBuilder();foreach(char c in value){if(c=='\\')s.Append("\\\\");else if(c=='\"')s.Append("\\\"");else if(c=='\n')s.Append("\\n");else if(c=='\r')s.Append("\\r");else if(c=='\t')s.Append("\\t");else if(c<32)s.Append("\\u"+((int)c).ToString("x4"));else s.Append(c);}return s.ToString();
+        }
+    }
+}

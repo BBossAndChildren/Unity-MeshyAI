@@ -1,0 +1,27 @@
+{
+  "schema_version": 3,
+  "build_id": "office-ten-v008",
+  "checked_at": "2026-10-31T06:00:19.278Z",
+  "status": "pass_observed_Chrome_input_changed_scope",
+  "observed_state_count": 7,
+  "independent_test_case_count": null,
+  "evidence_path": "docs/machine/evidence/office-ten-v008/browser/chrome-proof.json",
+  "screenshot_path": "docs/machine/evidence/office-ten-v008/browser/chrome-korean-preview.png",
+  "environment": "Actual Chrome compiled WebGL; CDP imeSetComposition and insertText",
+  "observed_scope": [
+    "Hangul composition start/update and committed text mirrored to session draft and monitor",
+    "Enter/Esc during composition kept work panel open",
+    "PR typing and cursor/backspace editing did not pause or reset run",
+    "Esc close restored30 model renderers and removed browser inputs",
+    "Reopen retained draft",
+    "Numeric fields50/12/600 and Tab focus returned to canvas"
+  ],
+  "limitations": [
+    "Seven recorded observed states, not seven independent test passes.",
+    "compositionstart/update trusted; observed compositionend untrusted; trustedStarts1/trustedEnds0.",
+    "CDP IME emulation, not physical OS keyboard or mobile IME certification.",
+    "ChatGPT/IAB-only input testing discontinued per user instruction; ordinary web Chrome is acceptance scope.",
+    "Last Enter submit was interrupted and remains unverified.",
+    "No fresh all10 workflow/common17, resize, or physical mobile test inferred."
+  ]
+}

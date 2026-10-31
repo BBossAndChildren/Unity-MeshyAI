@@ -1,0 +1,35 @@
+{
+  "schema_version": 3,
+  "status": "fixed_actual_v007_logistics_three_steps_pass",
+  "reported_stage": "User initially said2, corrected to1st sorting",
+  "observed_build": "career-pilot-v005",
+  "source": "Actual HTTP UI lower-half drops within visible targets",
+  "cause": "Rendered slot half-height0.10 but raw center validator accepts only0.065; no snapping on mouse release/tap. Logistics instructions name destinations, rendered labels are only numbered.",
+  "old_load_input_y": 0.5266343,
+  "old_load_target_y": 0.45,
+  "tolerance": 0.065,
+  "shown_half_height": 0.1,
+  "fix_scope": [
+    "PilotRuntime.cs",
+    "PilotSession.cs (optional UI slotLabel)",
+    "career-pilot-content.json (logistics UI instructions/labels)"
+  ],
+  "new_models": 0,
+  "meshy_calls": 0,
+  "meshy_credits": 0,
+  "conversation_tokens": null,
+  "sort_reproduction": "docs/machine/evidence/career-pilot-v005/logistics-sort-bug-before/pilot-http-acceptance.json",
+  "load_reproduction": "docs/machine/evidence/career-pilot-v005/logistics-load-bug-before/pilot-http-acceptance.json",
+  "old_sort_input_y": 0.4285714,
+  "old_sort_target_y": 0.35,
+  "fixed_build_id": "career-pilot-v007",
+  "checked_at": "2026-10-31T05:39:44.523Z",
+  "after_evidence": "docs/machine/evidence/career-pilot-v007/logistics-regression/pilot-http-acceptance.json",
+  "secondary_finding": "v006 explicit selection followed by occupied-slot tap selected occupant; v007 placementArmed gives explicit placement priority.",
+  "validation_limitations": [
+    "Chrome Windows SwiftShader and emulated touch; physical mobile and other browsers unverified.",
+    "No new Native GUI/Blender execution. Professional/optional task branches unchanged."
+  ],
+  "previous_qa_gap": "Previous tests dropped at exact target centers and did not cover visible slot edge or occupied-slot tap recovery.",
+  "delivery_evidence": "docs/machine/evidence/career-pilot-v007/final-contract-review.json"
+}

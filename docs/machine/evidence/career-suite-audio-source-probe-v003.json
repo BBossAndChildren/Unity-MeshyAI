@@ -1,0 +1,480 @@
+{
+  "schema_version": 3,
+  "checked_at": "2026-10-31T16:49:04.0992145+09:00",
+  "check_kind": "compiled_source_side_channel_probe_not_Unity_WebGL_execution",
+  "passed": true,
+  "compilation": {
+    "Editor_CSharp": "0 errors 1 existing editor-only unused-field warning",
+    "jslib": "syntax parsed",
+    "WebGL_CSharp": "0 errors 0 warnings"
+  },
+  "cases": [
+    "no idle printer sound",
+    "single printer start",
+    "two actual sheet boundaries exactly once",
+    "single running loop",
+    "pause blocks cues",
+    "input burst throttled",
+    "reset one-shot belongs to new run",
+    "end retires scope",
+    "old run cannot cancel new run",
+    "draft values absent from audio payload",
+    "semantic priorities UI20 loop10 hint60 validation80 mission90"
+  ],
+  "source_files": [
+    {
+      "path": "unity/projects/OfficeAssistant-v001/Assets/Scripts/CareerAudio.cs",
+      "sha256": "a3dfba34ab8a46d7f79be28390cf232f66e7b5ce20ce1dcdd678c7fb204e0bba"
+    },
+    {
+      "path": "unity/projects/OfficeAssistant-v001/Assets/Scripts/CareerPresentation.cs",
+      "sha256": "8bd6978d41b68516002c0de8426ce1f7758fae8b9ce5723077473650db53ef00"
+    },
+    {
+      "path": "unity/projects/OfficeAssistant-v001/Assets/Scripts/CareerProtocol.cs",
+      "sha256": "a8dd4414c2e5cb15cd7bab03c27c4f4cda8db74bf01e78296c7867e989fcc3a1"
+    },
+    {
+      "path": "unity/projects/OfficeAssistant-v001/Assets/Scripts/OfficeTenProtocol.cs",
+      "sha256": "0e54825e711c5aa4a1a1e39a3222021296d30aaa17a12f310880c938f9b34bb9"
+    },
+    {
+      "path": "unity/projects/OfficeAssistant-v001/Assets/Scripts/PilotLedger.cs",
+      "sha256": "314f12894bb0d18c14b9b4195ce443a2a9815cdd20671e0e0951a29ba36f1f60"
+    },
+    {
+      "path": "unity/projects/OfficeAssistant-v001/Assets/Scripts/PilotRuntime.cs",
+      "sha256": "698aafca1a42b523248b1263657fdbb662b493938ed009d262dfbefd4b6fa9b8"
+    },
+    {
+      "path": "unity/projects/OfficeAssistant-v001/Assets/Scripts/OfficeDirectExperience.cs",
+      "sha256": "3475db28c60133e97047618331e6409eb0d5872e5447143e5a707eb18863c1ba"
+    },
+    {
+      "path": "unity/projects/OfficeAssistant-v001/Assets/Scripts/OfficeTenExperience.cs",
+      "sha256": "66610a85b0622c8886f722c3dbdeb7bc99e77f7f2473b11e3d6c5e1d46ad309a"
+    }
+  ],
+  "events": [
+    {
+      "cueId": "event-test:start:",
+      "cueKey": null,
+      "clipKey": null,
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "run-a",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "start",
+      "operation": "cancel",
+      "loopId": null,
+      "stepId": null,
+      "objectId": null,
+      "priority": 10
+    },
+    {
+      "cueId": "audio-111fce8849e9413fa5008c84b0a6d952",
+      "cueKey": "printer_start",
+      "clipKey": "printer_start",
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "run-a",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "action",
+      "operation": "play",
+      "loopId": null,
+      "stepId": null,
+      "objectId": null,
+      "priority": 1
+    },
+    {
+      "cueId": "audio-800198ffe9a3405daf5c2898e3cf2c63",
+      "cueKey": "printer_run",
+      "clipKey": "printer_run",
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "run-a",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "run",
+      "operation": "loop_start",
+      "loopId": "job1",
+      "stepId": null,
+      "objectId": null,
+      "priority": 1
+    },
+    {
+      "cueId": "audio-b8db75d8098342dd8742990bbc44d481",
+      "cueKey": "printer_sheet",
+      "clipKey": "printer_sheet",
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "run-a",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "sheet",
+      "operation": "play",
+      "loopId": null,
+      "stepId": null,
+      "objectId": null,
+      "priority": 1
+    },
+    {
+      "cueId": "audio-9eeb01cec167490d8b722c6029aec422",
+      "cueKey": "printer_run",
+      "clipKey": "printer_run",
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "run-a",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "stop",
+      "operation": "loop_stop",
+      "loopId": "job1",
+      "stepId": null,
+      "objectId": null,
+      "priority": 1
+    },
+    {
+      "cueId": "audio-04bf366e60a147a7b8ce3b4329ec4462",
+      "cueKey": "printer_sheet",
+      "clipKey": "printer_sheet",
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "run-a",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "sheet",
+      "operation": "play",
+      "loopId": null,
+      "stepId": null,
+      "objectId": null,
+      "priority": 1
+    },
+    {
+      "cueId": "audio-dd09637b60754647b4eb93e73fa7ccb4",
+      "cueKey": "printer_stop",
+      "clipKey": "printer_stop",
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "run-a",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "action",
+      "operation": "play",
+      "loopId": null,
+      "stepId": null,
+      "objectId": null,
+      "priority": 1
+    },
+    {
+      "cueId": "audio-2b214609cc454ebcb2c0fbbce5fd1a00",
+      "cueKey": "pause",
+      "clipKey": "pause",
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "run-a",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "pause",
+      "operation": "cancel",
+      "loopId": null,
+      "stepId": null,
+      "objectId": null,
+      "priority": 10
+    },
+    {
+      "cueId": "event-test:resume:resume",
+      "cueKey": "resume",
+      "clipKey": "resume",
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "run-a",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "resume",
+      "operation": "play",
+      "loopId": null,
+      "stepId": null,
+      "objectId": null,
+      "priority": 1
+    },
+    {
+      "cueId": "audio-3f11c472f4b04d449cd6e3c7b9d225e9",
+      "cueKey": "field_edit",
+      "clipKey": "field_edit",
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "run-a",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "edit",
+      "operation": "play",
+      "loopId": null,
+      "stepId": null,
+      "objectId": null,
+      "priority": 1
+    },
+    {
+      "cueId": "audio-baa83b7fd7d449a0a95027ee41803af8",
+      "cueKey": null,
+      "clipKey": null,
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "run-a",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "reset",
+      "operation": "cancel",
+      "loopId": null,
+      "stepId": null,
+      "objectId": null,
+      "priority": 10
+    },
+    {
+      "cueId": "evt-b:start:",
+      "cueKey": null,
+      "clipKey": null,
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "run-b",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "start",
+      "operation": "cancel",
+      "loopId": null,
+      "stepId": null,
+      "objectId": null,
+      "priority": 10
+    },
+    {
+      "cueId": "audio-9a8f4c7cfc9645b298d45216c21f2e10",
+      "cueKey": "reset",
+      "clipKey": "reset",
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "run-b",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "action",
+      "operation": "play",
+      "loopId": null,
+      "stepId": null,
+      "objectId": null,
+      "priority": 1
+    },
+    {
+      "cueId": "audio-360b9e34bcc74e728d8e3d218ae96bae",
+      "cueKey": "exit",
+      "clipKey": "exit",
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "run-b",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "ended",
+      "operation": "cancel",
+      "loopId": null,
+      "stepId": null,
+      "objectId": null,
+      "priority": 10
+    },
+    {
+      "cueId": "event-test:start:",
+      "cueKey": null,
+      "clipKey": null,
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "run-c",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "start",
+      "operation": "cancel",
+      "loopId": null,
+      "stepId": null,
+      "objectId": null,
+      "priority": 10
+    }
+  ],
+  "priority_events": [
+    {
+      "cueId": "e-scenario.started:start:",
+      "cueKey": null,
+      "clipKey": null,
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "r-priority",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "start",
+      "operation": "cancel",
+      "loopId": null,
+      "stepId": null,
+      "objectId": null,
+      "priority": 50
+    },
+    {
+      "cueId": "audio-5ddd6a13ea48402e8b4ec714867ad0eb",
+      "cueKey": "ui_click",
+      "clipKey": "ui_click",
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "r-priority",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "button",
+      "operation": "play",
+      "loopId": null,
+      "stepId": "",
+      "objectId": "",
+      "priority": 20
+    },
+    {
+      "cueId": "audio-9a31dd766d70449d949421757ea0d80f",
+      "cueKey": "printer_run",
+      "clipKey": "printer_run",
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "r-priority",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "run",
+      "operation": "loop_start",
+      "loopId": "printer",
+      "stepId": null,
+      "objectId": null,
+      "priority": 10
+    },
+    {
+      "cueId": "e-guidance.presented:guidance.presented:hint",
+      "cueKey": "hint",
+      "clipKey": "hint",
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "r-priority",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "guidance.presented",
+      "operation": "play",
+      "loopId": null,
+      "stepId": null,
+      "objectId": null,
+      "priority": 60
+    },
+    {
+      "cueId": "e-interaction.validation_failed:interaction.validation_failed:validation",
+      "cueKey": "validation",
+      "clipKey": "validation",
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "r-priority",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "interaction.validation_failed",
+      "operation": "play",
+      "loopId": null,
+      "stepId": null,
+      "objectId": null,
+      "priority": 80
+    },
+    {
+      "cueId": "audio-d100eee70323416b969ffef89039f341",
+      "cueKey": null,
+      "clipKey": null,
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "r-priority",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "complete",
+      "operation": "cancel",
+      "loopId": null,
+      "stepId": null,
+      "objectId": null,
+      "priority": 50
+    },
+    {
+      "cueId": "e-scenario.completed:scenario.completed:mission_done",
+      "cueKey": "mission_done",
+      "clipKey": "mission_done",
+      "scope": {
+        "sessionId": "s",
+        "experienceId": "x",
+        "scenarioRunId": "r-priority",
+        "scenarioId": "test",
+        "scenarioVersion": "v001",
+        "roomId": "PAN-060"
+      },
+      "kind": "scenario.completed",
+      "operation": "play",
+      "loopId": null,
+      "stepId": null,
+      "objectId": null,
+      "priority": 90
+    }
+  ]
+}

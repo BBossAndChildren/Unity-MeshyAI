@@ -1,0 +1,10 @@
+{
+  "schema_version": 3,
+  "status": "confirmed_input_priority_bug",
+  "evidence": "docs/machine/evidence/career-pilot-v006/logistics-regression/pilot-http-acceptance.json",
+  "screenshot": "docs/machine/evidence/career-pilot-v006/logistics-regression/logistics-step-1-inside-edge-before-submit.png",
+  "finding": "Step0 edge drops succeed. In step1 after wrong placement, explicit Select-card then tap occupied destination selected its existing occupant instead of placing chosen card.",
+  "root_cause": "Card hit selection ran before explicit placement intent on occupied targets.",
+  "fix": "Explicit Select button arms one destination tap; normal card dragging retains hit selection. Wrong destinations still use same validator.",
+  "next_build": "career-pilot-v007"
+}

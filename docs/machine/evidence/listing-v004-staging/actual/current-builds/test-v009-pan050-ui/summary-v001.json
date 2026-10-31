@@ -1,0 +1,190 @@
+{
+  "schema_version": 3,
+  "checked_at": "2026-10-31T08:12:42.227Z",
+  "target": "build",
+  "build_id": "career-suite-test-v009",
+  "url": "http://127.0.0.1:8212/career-suite-test-v009/",
+  "tab_id": "1092177100",
+  "case": {
+    "roomId": "PAN-050",
+    "scenarioId": "career-net-359-experience",
+    "scenarioVersion": "v002",
+    "experienceId": "bba82574-527a-48a6-800c-9b98c9b0f6e3",
+    "scenarioRunId": "run-e807d69bba204f29b33b4b9fb995f458"
+  },
+  "status": "passed_actual_browser_UI",
+  "checks": {
+    "actual_three_model_clicks": true,
+    "mid_drag_all_spatial_targets_highlighted": true,
+    "hovered_target_stronger": true,
+    "persistent_spatial_badge": true,
+    "close_reopen_draft_and_badge_retained": true,
+    "all_six_cards_dragged": true,
+    "saved_heading_body_unclipped": true,
+    "guide_submit_no_overlap": true,
+    "pause_audio_active_zero": true,
+    "native_hangul_fields_accepted": true,
+    "three_steps_completed": true,
+    "end_audio_active_zero": true,
+    "end_audio_scope_retired": true,
+    "private_draft_absent_from_audio": true
+  },
+  "process": {
+    "scope": "scenario",
+    "measurementStatus": "complete",
+    "measurementNote": null,
+    "attemptCount": 3,
+    "navigationBackCount": 4,
+    "backtrackCount": 0,
+    "retryCount": 0,
+    "mistakeCount": 0,
+    "repeatedMistakeCount": 0,
+    "helpRequestCount": 0,
+    "guidanceUsed": false,
+    "elapsedActiveMs": 251966
+  },
+  "result": {
+    "outcome": "completed",
+    "success": true,
+    "completionCode": "CAREER_TASK_COMPLETED",
+    "data": {
+      "partialResults": [
+        {
+          "stepId": "work-1",
+          "completed": true,
+          "result": {
+            "tileX": [
+              0.18,
+              0.49,
+              0.8
+            ],
+            "tileY": [
+              0.38,
+              0.38,
+              0.38
+            ],
+            "settings": [],
+            "fields": [],
+            "observed": [],
+            "draftRevision": 18,
+            "savedRevision": 18,
+            "savedRequestRevision": null,
+            "validationErrors": [],
+            "elapsed": 0,
+            "completed": true,
+            "running": false,
+            "artifact": null
+          }
+        },
+        {
+          "stepId": "work-2",
+          "completed": true,
+          "result": {
+            "tileX": [
+              0.18,
+              0.49,
+              0.8
+            ],
+            "tileY": [
+              0.38,
+              0.38,
+              0.38
+            ],
+            "settings": [],
+            "fields": [],
+            "observed": [],
+            "draftRevision": 18,
+            "savedRevision": 18,
+            "savedRequestRevision": null,
+            "validationErrors": [],
+            "elapsed": 0,
+            "completed": true,
+            "running": false,
+            "artifact": null
+          }
+        },
+        {
+          "stepId": "work-3",
+          "completed": true,
+          "result": {
+            "tileX": [],
+            "tileY": [],
+            "settings": [],
+            "fields": [
+              "TR-031",
+              "은행사거리",
+              "사진촬영시각"
+            ],
+            "observed": [],
+            "draftRevision": 3,
+            "savedRevision": 3,
+            "savedRequestRevision": null,
+            "validationErrors": [],
+            "elapsed": 0,
+            "completed": true,
+            "running": false,
+            "artifact": null
+          }
+        }
+      ],
+      "scenarioComplete": true
+    }
+  },
+  "audio": {
+    "available": 34,
+    "pending": 74,
+    "counts": {
+      "requested": 42,
+      "started": 36,
+      "ended": 35,
+      "cancelled": 1,
+      "duplicate": 0,
+      "droppedLocked": 0,
+      "droppedCooldown": 0,
+      "droppedBudget": 0,
+      "missing": 3,
+      "stale": 6,
+      "errors": 0
+    },
+    "playedKeys": [
+      "object_select",
+      "view_open",
+      "drag_pick",
+      "snap",
+      "card_move",
+      "view_close",
+      "ui_click",
+      "resume",
+      "ui_focus",
+      "keyboard",
+      "mission_done"
+    ],
+    "lastError": null,
+    "verification": "actual WebAudio source.start diagnostics and rendered browser UI; subjective listening quality not asserted"
+  },
+  "screenshots": [
+    "01-mid-drag.png",
+    "02-placed.png",
+    "04-saved-result.png",
+    "06-completed.png",
+    "07-ended.png"
+  ],
+  "raw_evidence": [
+    "01-mid-drag.json",
+    "02-placed.json",
+    "03-reopen-preserved.json",
+    "04-saved-result.json",
+    "05-paused.json",
+    "06-completed.json",
+    "07-ended.json"
+  ],
+  "not_checked_in_this_run": [
+    "slider controls; this case has no gauge",
+    "printing loops; this case has no printer",
+    "reset control",
+    "all 555 combinations",
+    "subjective audio listening quality",
+    "production integration build; separate bridge QA"
+  ],
+  "note": "Read-only audio event recording was added to this retained test tab; no runtime session/draft was directly assigned."
+}

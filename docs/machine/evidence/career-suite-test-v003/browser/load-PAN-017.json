@@ -1,0 +1,98 @@
+{
+  "schema_version": 3,
+  "scope": "actual API launch and end, not fullworkflow",
+  "room": "PAN-017",
+  "objects": [
+    {
+      "id": "object-1",
+      "name": "보조 손잡이",
+      "assetId": "AST-1070",
+      "assetVersion": "v001",
+      "instanceId": "Room_PAN-017/AST-1070-006",
+      "nodeName": "AST-1070-006",
+      "step": 0,
+      "x": 772.6179,
+      "y": 309.2225,
+      "inFront": true,
+      "renderers": 5,
+      "visibleRenderers": 5,
+      "colliders": 5
+    },
+    {
+      "id": "object-2",
+      "name": "휠체어",
+      "assetId": "AST-1069",
+      "assetVersion": "v002",
+      "instanceId": "Room_PAN-017/AST-1069-005",
+      "nodeName": "AST-1069-005",
+      "step": 1,
+      "x": 763.0036,
+      "y": 384.4751,
+      "inFront": true,
+      "renderers": 20,
+      "visibleRenderers": 20,
+      "colliders": 20
+    },
+    {
+      "id": "object-3",
+      "name": "침대 옆 탁자",
+      "assetId": "AST-1045",
+      "assetVersion": "v001",
+      "instanceId": "Room_PAN-017/AST-1045-003",
+      "nodeName": "AST-1045-003",
+      "step": 2,
+      "x": 588.4009,
+      "y": 298.1028,
+      "inFront": true,
+      "renderers": 6,
+      "visibleRenderers": 6,
+      "colliders": 6
+    }
+  ],
+  "result": {
+    "type": "experience.ended",
+    "roomId": "PAN-017",
+    "experienceId": "821c3454-a4fe-4eb7-ab40-cd67d132196f",
+    "eventId": "evt-d3949320214c435d84ed2797e1916620",
+    "sequence": 20,
+    "result": {
+      "outcome": "aborted",
+      "success": false,
+      "completionCode": "USER_EXITED_BEFORE_START",
+      "data": {
+        "partialResults": [
+          {
+            "stepId": "work-1",
+            "completed": false,
+            "result": null
+          },
+          {
+            "stepId": "work-2",
+            "completed": false,
+            "result": null
+          },
+          {
+            "stepId": "work-3",
+            "completed": false,
+            "result": null
+          }
+        ],
+        "scenarioComplete": false
+      }
+    },
+    "process": {
+      "scope": "scenario",
+      "measurementStatus": "complete",
+      "measurementNote": null,
+      "attemptCount": 0,
+      "navigationBackCount": 0,
+      "backtrackCount": 0,
+      "retryCount": 0,
+      "mistakeCount": 0,
+      "repeatedMistakeCount": 0,
+      "helpRequestCount": 0,
+      "guidanceUsed": false,
+      "elapsedActiveMs": 1077
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-10-31T06:54:31.9154363Z",
+  "environment": "Actual HTTP final local fsync receiver with explicit fixtures; no Unity or actual service",
+  "source_sha256": "3a0fc82aa2b48417f2c2c322d7febc8e387e9956f2e97f18f218e32b778589e3",
+  "schema_version": 3,
+  "checks": [
+    "storage ACK",
+    "duplicate ACK",
+    "conflicting ID409 and conflict JSONL preservation",
+    "out-of-order latest snapshot preserved",
+    "nonpositive sequence400"
+  ],
+  "status": "pass",
+  "ack": {
+    "sessionId": "local-receiver-final-check",
+    "eventId": "receiver-final-1",
+    "stored": true,
+    "duplicate": false,
+    "producer": "local-test-receiver",
+    "storage": "fsynced-jsonl"
+  },
+  "actual_backend": false
+}

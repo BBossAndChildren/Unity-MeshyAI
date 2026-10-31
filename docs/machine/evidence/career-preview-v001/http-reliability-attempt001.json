@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "checked_at": "2026-10-31T06:39:43.679Z",
+  "environment": "Actual HTTP Chrome SwiftShader; Unity UI + public control API; local disk receiver only",
+  "cases": [
+    {
+      "name": "reject-four-unsupported-identifiers",
+      "status": "pass"
+    },
+    {
+      "name": "same-start-request-same-event",
+      "status": "pass"
+    },
+    {
+      "name": "duplicate-start-rejected",
+      "status": "pass"
+    },
+    {
+      "name": "reset-separates-old-run-and-end-counts",
+      "status": "pass"
+    },
+    {
+      "name": "end-retry-preserves-eventId",
+      "status": "pass"
+    },
+    {
+      "name": "already-ended-points-to-original",
+      "status": "pass"
+    },
+    {
+      "name": "explicit-abort-preserves-partial-context-and-no-extra-mistake",
+      "status": "pass"
+    },
+    {
+      "name": "network-failure-keeps-outbox",
+      "status": "pass"
+    },
+    {
+      "name": "retry-gets-local-disk-ack",
+      "status": "pass"
+    },
+    {
+      "name": "disk-receiver-dedup-conflict-out-of-order",
+      "status": "pass"
+    },
+    {
+      "name": "wrong-source-message-ignored",
+      "status": "pass"
+    },
+    {
+      "name": "execution",
+      "status": "fail",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'RESPONSE_UNCONFIRMED'\n\n    at [stdin]:32:265"
+    }
+  ]
+}

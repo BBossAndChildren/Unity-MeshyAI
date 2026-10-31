@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="icon" href="data:,"><title>직업 공간 탐색</title>
+<style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0e1a21;color:#eaf1f3;font:17px sans-serif}#unity-canvas{width:100%;height:100%;display:block;touch-action:none;outline:none}#loading{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:#0e1a21}progress{width:min(400px,75vw);accent-color:#42ba93}#error{color:#ffb7a8;white-space:pre-wrap;max-width:80vw}</style></head>
+<body><canvas id="unity-canvas" tabindex="0" aria-label="직업 3D 공간 탐색. 공간 목록에서 방을 선택하고 방향키로 카메라를 회전합니다."></canvas>
+<div id="loading"><strong>직업 공간 탐색</strong><span>3D 공간을 준비하고 있습니다.</span><progress id="progress" max="1" value="0"></progress><div id="error"></div></div>
+<script>
+const canvas=document.getElementById('unity-canvas');
+const config={dataUrl:'Build/{{{ DATA_FILENAME }}}',frameworkUrl:'Build/{{{ FRAMEWORK_FILENAME }}}',codeUrl:'Build/{{{ CODE_FILENAME }}}',streamingAssetsUrl:'StreamingAssets',companyName:{{{ JSON.stringify(COMPANY_NAME) }}},productName:{{{ JSON.stringify(PRODUCT_NAME) }}},productVersion:{{{ JSON.stringify(PRODUCT_VERSION) }}},showBanner:(message,type)=>{if(type==='error')document.getElementById('error').textContent=message;}};
+const script=document.createElement('script');script.src='Build/{{{ LOADER_FILENAME }}}';script.onload=()=>createUnityInstance(canvas,config,p=>document.getElementById('progress').value=p).then(instance=>{window.officeUnity=instance;document.getElementById('loading').style.display='none';canvas.focus();}).catch(e=>document.getElementById('error').textContent=String(e));script.onerror=()=>document.getElementById('error').textContent='Unity 로더를 불러오지 못했습니다. HTTP 서버로 실행했는지 확인하세요.';document.body.appendChild(script);
+</script></body></html>

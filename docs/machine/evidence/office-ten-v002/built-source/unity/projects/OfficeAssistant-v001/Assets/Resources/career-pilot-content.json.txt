@@ -1,0 +1,1473 @@
+{
+  "schema_version": 3,
+  "careers": [
+    {
+      "scenarioId": "career-net-951-experience",
+      "version": "v002",
+      "occupationId": "career-net-951",
+      "name": "행사기획자",
+      "roomId": "PAN-002",
+      "title": "주민 문화행사 준비",
+      "brief": "다목적실 행사: 안내09:00, 발표09:20, 체험10:00. 동시 사용 장소를 겹치지 않게 배치하고 담당자에게 인계합니다.",
+      "limitation": "원본 직업 업무를 참고한 가상 교육 사례. 현업 자격·안전 절차·적성을 판정하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "노트북",
+          "candidateId": "CND-012",
+          "assetId": "AST-1012",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-002/AST-1012-006",
+          "nodeName": "AST-1012-006"
+        },
+        {
+          "id": "object-2",
+          "name": "이동식 화이트보드",
+          "candidateId": "CND-013",
+          "assetId": "AST-1013",
+          "assetVersion": "v002",
+          "instanceId": "Room_PAN-002/AST-1013-008",
+          "nodeName": "AST-1013-008"
+        },
+        {
+          "id": "object-3",
+          "name": "메모",
+          "candidateId": "CND-014",
+          "assetId": "AST-1014",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-002/AST-1014-009",
+          "nodeName": "AST-1014-009"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "form",
+          "title": "행사 요청서",
+          "instruction": "메시지 원문: 행사명 마을 문화교실 / 날짜11월12일 / 예상인원24명. 수정한 요청서를 저장하세요.",
+          "fields": [
+            {
+              "id": "field0",
+              "label": "행사명",
+              "initial": "마을 체육대회",
+              "target": "마을 문화교실"
+            },
+            {
+              "id": "field1",
+              "label": "날짜",
+              "initial": "11월11일",
+              "target": "11월12일"
+            },
+            {
+              "id": "field2",
+              "label": "인원",
+              "initial": "20",
+              "target": "24"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "951-item-1",
+          "successText": "준비 결과를 저장했습니다."
+        },
+        {
+          "kind": "schedule",
+          "title": "시간표 편성",
+          "instruction": "보드의09:00·09:20·10:00 순서에 안내·발표·체험 카드를 배치하세요.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "안내09:00",
+              "initialX": 0.1,
+              "initialY": 0.86,
+              "targetX": 0.2,
+              "targetY": 0.4,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "발표09:20",
+              "initialX": 0.33,
+              "initialY": 0.86,
+              "targetX": 0.5,
+              "targetY": 0.4,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "체험10:00",
+              "initialX": 0.56,
+              "initialY": 0.86,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "951-item-2",
+          "successText": "작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "담당자 인계 메모",
+          "instruction": "완성된 시간표의 행사명·인원·시작 시간을 담당자에게 전달합니다.",
+          "fields": [
+            {
+              "id": "field0",
+              "label": "행사명",
+              "initial": "",
+              "target": "마을 문화교실"
+            },
+            {
+              "id": "field1",
+              "label": "인원",
+              "initial": "",
+              "target": "24"
+            },
+            {
+              "id": "field2",
+              "label": "시작",
+              "initial": "",
+              "target": "09:00"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "951-item-3",
+          "successText": "인계할 결과가 완성됐습니다."
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-1152-experience",
+      "version": "v002",
+      "occupationId": "career-net-1152",
+      "name": "가구조립 및 검사원",
+      "roomId": "PAN-019",
+      "title": "소형 선반 조립 검사",
+      "brief": "가상 조립도: 좌측판·선반판·우측판을 준비하고 표시된 연결부를 조립합니다. 실제 작업 공구 교육을 대신하지 않습니다.",
+      "limitation": "원본 직업 업무를 참고한 가상 교육 사례. 현업 자격·안전 절차·적성을 판정하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "부품 트레이",
+          "candidateId": "CND-040",
+          "assetId": "AST-1040",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-019/AST-1040-005",
+          "nodeName": "AST-1040-005"
+        },
+        {
+          "id": "object-2",
+          "name": "공구 거치대",
+          "candidateId": "CND-077",
+          "assetId": "AST-1077",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-019/AST-1077-003",
+          "nodeName": "AST-1077-003"
+        },
+        {
+          "id": "object-3",
+          "name": "조립 중인 단순 제품",
+          "candidateId": "CND-078",
+          "assetId": "AST-1078",
+          "assetVersion": "v002",
+          "instanceId": "Room_PAN-019/AST-1078-006",
+          "nodeName": "AST-1078-006"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "sort",
+          "title": "부품 준비",
+          "instruction": "좌측칸=측판,중앙칸=선반판,우측칸=연결부품. 라벨에 맞춰 준비하세요.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "측판",
+              "initialX": 0.1,
+              "initialY": 0.86,
+              "targetX": 0.2,
+              "targetY": 0.3,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "선반판",
+              "initialX": 0.33,
+              "initialY": 0.86,
+              "targetX": 0.5,
+              "targetY": 0.3,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "연결부품",
+              "initialX": 0.56,
+              "initialY": 0.86,
+              "targetX": 0.8,
+              "targetY": 0.3,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "1152-item-1",
+          "successText": "준비 결과를 저장했습니다."
+        },
+        {
+          "kind": "tune",
+          "title": "체결 조건",
+          "instruction": "교육용 조립도에서 가상 체결단계3,가이드폭20을 지정했습니다. 실제 토크 단위가 아닙니다.",
+          "values": [
+            {
+              "id": "value0",
+              "label": "체결단계",
+              "unit": "단계",
+              "min": 0,
+              "max": 5,
+              "initial": 0,
+              "target": 3,
+              "tolerance": 0.05
+            },
+            {
+              "id": "value1",
+              "label": "가이드폭",
+              "unit": "가상눈금",
+              "min": 0,
+              "max": 40,
+              "initial": 5,
+              "target": 20,
+              "tolerance": 0.2
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "1152-item-2",
+          "successText": "작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "assembly",
+          "title": "조립도 완성",
+          "instruction": "좌측판(좌)→선반판(중앙)→우측판(우) 연결점에 부품을 옮깁니다.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "좌측판",
+              "initialX": 0.1,
+              "initialY": 0.86,
+              "targetX": 0.2,
+              "targetY": 0.4,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "선반판",
+              "initialX": 0.33,
+              "initialY": 0.86,
+              "targetX": 0.5,
+              "targetY": 0.4,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "우측판",
+              "initialX": 0.56,
+              "initialY": 0.86,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "1152-item-3",
+          "successText": "인계할 결과가 완성됐습니다."
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-268-experience",
+      "version": "v002",
+      "occupationId": "career-net-268",
+      "name": "사서",
+      "roomId": "PAN-035",
+      "title": "이용자가 요청한 책 안내",
+      "brief": "이용자는 별 관측 입문책을 찾습니다. 서가표를 읽고 제목과 청구기호를 조회한 뒤 요청한 책을 안내합니다.",
+      "limitation": "원본 직업 업무를 참고한 가상 교육 사례. 현업 자격·안전 절차·적성을 판정하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "선반",
+          "candidateId": "CND-028",
+          "assetId": "AST-1028",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-035/AST-1028-008",
+          "nodeName": "AST-1028-008"
+        },
+        {
+          "id": "object-2",
+          "name": "이동식 화이트보드",
+          "candidateId": "CND-013",
+          "assetId": "AST-1013",
+          "assetVersion": "v002",
+          "instanceId": "Room_PAN-035/AST-1013-009",
+          "nodeName": "AST-1013-009"
+        },
+        {
+          "id": "object-3",
+          "name": "테이블",
+          "candidateId": "CND-010",
+          "assetId": "AST-1010",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-035/AST-1010-002",
+          "nodeName": "AST-1010-002"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "inspect",
+          "title": "서가·도서 확인",
+          "instruction": "세 도서의 제목과 청구기호를 직접 열어 확인하세요.",
+          "findings": [
+            {
+              "id": "point0",
+              "label": "별 관측 첫걸음",
+              "detail": "청구기호440-별 / 주제:천문 입문"
+            },
+            {
+              "id": "point1",
+              "label": "작은 화분 일기",
+              "detail": "청구기호525-화 / 주제:원예"
+            },
+            {
+              "id": "point2",
+              "label": "우리 동네 지도",
+              "detail": "청구기호980-지 / 주제:지리"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "268-item-1",
+          "successText": "준비 결과를 저장했습니다."
+        },
+        {
+          "kind": "dialogue",
+          "title": "요청 도서 조회",
+          "instruction": "이용자 요청: 별 관측 입문. 도서 확인 결과를 검색판에 입력하세요.",
+          "fields": [
+            {
+              "id": "field0",
+              "label": "책 제목",
+              "initial": "",
+              "target": "별 관측 첫걸음"
+            },
+            {
+              "id": "field1",
+              "label": "청구기호",
+              "initial": "",
+              "target": "440-별"
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "268-item-2",
+          "successText": "작업 결과를 확정했습니다.",
+          "findings": [
+            {
+              "id": "topic",
+              "label": "어떤 주제의 책인가요?",
+              "detail": "별 관측을 처음 배우는 책을 찾습니다."
+            },
+            {
+              "id": "level",
+              "label": "어느 정도 난이도인가요?",
+              "detail": "처음 읽는 사람을 위한 입문서가 좋습니다."
+            }
+          ]
+        },
+        {
+          "kind": "sort",
+          "title": "도서 안내 테이블",
+          "instruction": "왼쪽은요청도서,중앙은원예반납,오른쪽은지리반납입니다.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "별 관측 첫걸음",
+              "initialX": 0.1,
+              "initialY": 0.86,
+              "targetX": 0.2,
+              "targetY": 0.35,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "작은 화분 일기",
+              "initialX": 0.33,
+              "initialY": 0.86,
+              "targetX": 0.5,
+              "targetY": 0.35,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "우리 동네 지도",
+              "initialX": 0.56,
+              "initialY": 0.86,
+              "targetX": 0.8,
+              "targetY": 0.35,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "268-item-3",
+          "successText": "인계할 결과가 완성됐습니다."
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-285-experience",
+      "version": "v002",
+      "occupationId": "career-net-285",
+      "name": "광고디자이너",
+      "roomId": "PAN-027",
+      "title": "도서 교환 행사 포스터",
+      "brief": "가상 의뢰: 제목 도서 교환의 날,중앙 책 그림,하단 날짜11월12일. 시안의 정보 위계를 구성합니다.",
+      "limitation": "원본 직업 업무를 참고한 가상 교육 사례. 현업 자격·안전 절차·적성을 판정하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "시안 보드",
+          "candidateId": "CND-102",
+          "assetId": "AST-1102",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-027/AST-1102-006",
+          "nodeName": "AST-1102-006"
+        },
+        {
+          "id": "object-2",
+          "name": "펜 태블릿",
+          "candidateId": "CND-101",
+          "assetId": "AST-1101",
+          "assetVersion": "v003",
+          "instanceId": "Room_PAN-027/AST-1101-005",
+          "nodeName": "AST-1101-005"
+        },
+        {
+          "id": "object-3",
+          "name": "모니터",
+          "candidateId": "CND-005",
+          "assetId": "AST-005",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-027/AST-005-004",
+          "nodeName": "AST-005-004"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "inspect",
+          "title": "시안 의뢰 확인",
+          "instruction": "의뢰 보드의 세 항목을 열어 확인하세요.",
+          "findings": [
+            {
+              "id": "point0",
+              "label": "행사 제목",
+              "detail": "도서 교환의 날"
+            },
+            {
+              "id": "point1",
+              "label": "주요 그림",
+              "detail": "중앙에 책 그림 배치"
+            },
+            {
+              "id": "point2",
+              "label": "일시",
+              "detail": "11월12일 / 하단에 날짜 배치"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "285-item-1",
+          "successText": "준비 결과를 저장했습니다."
+        },
+        {
+          "kind": "poster",
+          "title": "포스터 시안 편집",
+          "instruction": "제목은상단,책그림은중앙,날짜는하단입니다. 요소를 직접 옮겨 시안을 만드세요.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "도서 교환의 날",
+              "initialX": 0.1,
+              "initialY": 0.86,
+              "targetX": 0.5,
+              "targetY": 0.2,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "책 그림",
+              "initialX": 0.33,
+              "initialY": 0.86,
+              "targetX": 0.5,
+              "targetY": 0.46,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "11월12일",
+              "initialX": 0.56,
+              "initialY": 0.86,
+              "targetX": 0.5,
+              "targetY": 0.69,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "285-item-2",
+          "successText": "작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "form",
+          "title": "검토·내보내기",
+          "instruction": "완성 시안의 정보를 확인하고 결과 파일명과 대체 설명을 입력합니다.",
+          "fields": [
+            {
+              "id": "field0",
+              "label": "파일명",
+              "initial": "",
+              "target": "book-exchange"
+            },
+            {
+              "id": "field1",
+              "label": "행사 제목",
+              "initial": "",
+              "target": "도서 교환의 날"
+            },
+            {
+              "id": "field2",
+              "label": "대체 설명",
+              "initial": "",
+              "target": "책 그림과 행사 날짜"
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "285-item-3",
+          "successText": "인계할 결과가 완성됐습니다."
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-215-experience",
+      "version": "v002",
+      "occupationId": "career-net-215",
+      "name": "물류관리사",
+      "roomId": "PAN-053",
+      "title": "주문 화물 준비와 배송 순서",
+      "brief": "가상 주문:A북부도서관/B동부학교/C남부센터. 화물라벨·적재구획·배송순서를 맞춥니다.",
+      "limitation": "원본 직업 업무를 참고한 가상 교육 사례. 현업 자격·안전 절차·적성을 판정하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "보관 상자",
+          "candidateId": "CND-058",
+          "assetId": "AST-1058",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-053/AST-1058-004",
+          "nodeName": "AST-1058-004"
+        },
+        {
+          "id": "object-2",
+          "name": "팔레트",
+          "candidateId": "CND-200",
+          "assetId": "AST-1200",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-053/AST-1200-007",
+          "nodeName": "AST-1200-007"
+        },
+        {
+          "id": "object-3",
+          "name": "수동 운반차",
+          "candidateId": "CND-201",
+          "assetId": "AST-1201",
+          "assetVersion": "v002",
+          "instanceId": "Room_PAN-053/AST-1201-009",
+          "nodeName": "AST-1201-009"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "sort",
+          "title": "화물 라벨 분류",
+          "instruction": "북부/동부/남부 칸에 각 주문 상자를 옮기세요.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "A북부도서관",
+              "initialX": 0.1,
+              "initialY": 0.86,
+              "targetX": 0.2,
+              "targetY": 0.35,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "B동부학교",
+              "initialX": 0.33,
+              "initialY": 0.86,
+              "targetX": 0.5,
+              "targetY": 0.35,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "C남부센터",
+              "initialX": 0.56,
+              "initialY": 0.86,
+              "targetX": 0.8,
+              "targetY": 0.35,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "215-item-1",
+          "successText": "준비 결과를 저장했습니다."
+        },
+        {
+          "kind": "load",
+          "title": "팔레트 적재",
+          "instruction": "가상 적재도:10kg상자A는좌측,6kg상자B는중앙,4kg상자C는우측. 지정구획에배치합니다.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "A10kg",
+              "initialX": 0.1,
+              "initialY": 0.86,
+              "targetX": 0.2,
+              "targetY": 0.45,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "B6kg",
+              "initialX": 0.33,
+              "initialY": 0.86,
+              "targetX": 0.5,
+              "targetY": 0.45,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "C4kg",
+              "initialX": 0.56,
+              "initialY": 0.86,
+              "targetX": 0.8,
+              "targetY": 0.45,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "215-item-2",
+          "successText": "작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "sequence",
+          "title": "배송 순서 계획",
+          "instruction": "출발지에서 북부→동부→남부 순으로 방문합니다. 카드를 경로순서대로 배치하세요.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "북부",
+              "initialX": 0.1,
+              "initialY": 0.86,
+              "targetX": 0.2,
+              "targetY": 0.35,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "동부",
+              "initialX": 0.33,
+              "initialY": 0.86,
+              "targetX": 0.5,
+              "targetY": 0.35,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "남부",
+              "initialX": 0.56,
+              "initialY": 0.86,
+              "targetX": 0.8,
+              "targetY": 0.35,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "215-item-3",
+          "successText": "인계할 결과가 완성됐습니다."
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-963-experience",
+      "version": "v002",
+      "occupationId": "career-net-963",
+      "name": "원예기술자",
+      "roomId": "PAN-041",
+      "title": "가상 모종 환경 맞추기",
+      "brief": "실제 작물 재배 처방이 아닌 교육용 설정입니다. 구획A/B/C의 모종을 배치하고 화면의 센서 목표를 맞춥니다.",
+      "limitation": "원본 직업 업무를 참고한 가상 교육 사례. 현업 자격·안전 절차·적성을 판정하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "모종 트레이",
+          "candidateId": "CND-154",
+          "assetId": "AST-1154",
+          "assetVersion": "v002",
+          "instanceId": "Room_PAN-041/AST-1154-004",
+          "nodeName": "AST-1154-004"
+        },
+        {
+          "id": "object-2",
+          "name": "환경 센서",
+          "candidateId": "CND-156",
+          "assetId": "AST-1156",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-041/AST-1156-007",
+          "nodeName": "AST-1156-007"
+        },
+        {
+          "id": "object-3",
+          "name": "관수 설비",
+          "candidateId": "CND-155",
+          "assetId": "AST-1155",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-041/AST-1155-006",
+          "nodeName": "AST-1155-006"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "plant",
+          "title": "모종 구획 배치",
+          "instruction": "A구획상추/B구획바질/C구획메리골드. 라벨을 확인하고 모종을 옮깁니다.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "상추A",
+              "initialX": 0.1,
+              "initialY": 0.86,
+              "targetX": 0.2,
+              "targetY": 0.35,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "바질B",
+              "initialX": 0.33,
+              "initialY": 0.86,
+              "targetX": 0.5,
+              "targetY": 0.35,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "메리골드C",
+              "initialX": 0.56,
+              "initialY": 0.86,
+              "targetX": 0.8,
+              "targetY": 0.35,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "963-item-1",
+          "successText": "준비 결과를 저장했습니다."
+        },
+        {
+          "kind": "tune",
+          "title": "환경 센서 목표",
+          "instruction": "이 교육 장면의 가상 목표:온도눈금22,광량눈금60. 센서 패널에서 조정하세요.",
+          "values": [
+            {
+              "id": "value0",
+              "label": "온도",
+              "unit": "가상눈금",
+              "min": 10,
+              "max": 30,
+              "initial": 15,
+              "target": 22,
+              "tolerance": 0.2
+            },
+            {
+              "id": "value1",
+              "label": "광량",
+              "unit": "가상눈금",
+              "min": 0,
+              "max": 100,
+              "initial": 20,
+              "target": 60,
+              "tolerance": 0.5
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "963-item-2",
+          "successText": "작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "timer",
+          "title": "가상 관수",
+          "instruction": "가상 관수를 시작하고4~6초 구간에서 멈추세요. 실제 관수시간 기준이 아닙니다.",
+          "timerMin": 4,
+          "timerMax": 6,
+          "timerLimit": 10,
+          "timerUnit": "가상 초",
+          "values": [],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "963-item-3",
+          "successText": "인계할 결과가 완성됐습니다."
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-172-experience",
+      "version": "v002",
+      "occupationId": "career-net-172",
+      "name": "제과사 및 제빵사",
+      "roomId": "PAN-025",
+      "title": "가상 반죽 배치와 굽기",
+      "brief": "게임용 배합·시간이며 실제 식품 제조법이 아닙니다. 배합 패널→트레이 간격→오븐 신호를 연결합니다.",
+      "limitation": "원본 직업 업무를 참고한 가상 교육 사례. 현업 자격·안전 절차·적성을 판정하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "믹서",
+          "candidateId": "CND-094",
+          "assetId": "AST-1094",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-025/AST-1094-003",
+          "nodeName": "AST-1094-003"
+        },
+        {
+          "id": "object-2",
+          "name": "베이킹 트레이",
+          "candidateId": "CND-096",
+          "assetId": "AST-1096",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-025/AST-1096-006",
+          "nodeName": "AST-1096-006"
+        },
+        {
+          "id": "object-3",
+          "name": "오븐",
+          "candidateId": "CND-095",
+          "assetId": "AST-1095",
+          "assetVersion": "v002",
+          "instanceId": "Room_PAN-025/AST-1095-005",
+          "nodeName": "AST-1095-005"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "tune",
+          "title": "가상 배합",
+          "instruction": "연습 레시피는재료A280단위/재료B120단위입니다. 두 양을 직접 조정합니다.",
+          "values": [
+            {
+              "id": "value0",
+              "label": "재료A",
+              "unit": "가상단위",
+              "min": 0,
+              "max": 400,
+              "initial": 100,
+              "target": 280,
+              "tolerance": 0.5
+            },
+            {
+              "id": "value1",
+              "label": "재료B",
+              "unit": "가상단위",
+              "min": 0,
+              "max": 200,
+              "initial": 50,
+              "target": 120,
+              "tolerance": 0.5
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "172-item-1",
+          "successText": "준비 결과를 저장했습니다."
+        },
+        {
+          "kind": "tray",
+          "title": "트레이 배치",
+          "instruction": "반죽세개를좌·중·우칸에 겹치지 않게 배치하세요.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "반죽1",
+              "initialX": 0.1,
+              "initialY": 0.86,
+              "targetX": 0.2,
+              "targetY": 0.4,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "반죽2",
+              "initialX": 0.33,
+              "initialY": 0.86,
+              "targetX": 0.5,
+              "targetY": 0.4,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "반죽3",
+              "initialX": 0.56,
+              "initialY": 0.86,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "172-item-2",
+          "successText": "작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "timer",
+          "title": "오븐 신호 확인",
+          "instruction": "가상 굽기 신호는8~10초입니다. 시작 후 신호 구간에서 종료하세요. 실제 굽기시간이 아닙니다.",
+          "timerMin": 8,
+          "timerMax": 10,
+          "timerLimit": 14,
+          "timerUnit": "가상 초",
+          "values": [],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "172-item-3",
+          "successText": "인계할 결과가 완성됐습니다."
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-310-experience",
+      "version": "v002",
+      "occupationId": "career-net-310",
+      "name": "사진작가",
+      "roomId": "PAN-030",
+      "title": "제품 사진 촬영 의뢰",
+      "brief": "교육용 구도:제품은중앙,반사판은왼쪽,배경판은뒤쪽. 조명과 프레임을 조절하고 촬영합니다.",
+      "limitation": "원본 직업 업무를 참고한 가상 교육 사례. 현업 자격·안전 절차·적성을 판정하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "작은 제품 촬영대",
+          "candidateId": "CND-112",
+          "assetId": "AST-1112",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-030/AST-1112-006",
+          "nodeName": "AST-1112-006"
+        },
+        {
+          "id": "object-2",
+          "name": "조명 스탠드",
+          "candidateId": "CND-111",
+          "assetId": "AST-1111",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-030/AST-1111-004",
+          "nodeName": "AST-1111-004"
+        },
+        {
+          "id": "object-3",
+          "name": "카메라",
+          "candidateId": "CND-109",
+          "assetId": "AST-1109",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-030/AST-1109-003",
+          "nodeName": "AST-1109-003"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "stage",
+          "title": "촬영대 구성",
+          "instruction": "중앙제품·왼쪽반사판·뒤쪽배경판으로 촬영대를 구성합니다.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "제품",
+              "initialX": 0.1,
+              "initialY": 0.86,
+              "targetX": 0.5,
+              "targetY": 0.5,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "반사판",
+              "initialX": 0.33,
+              "initialY": 0.86,
+              "targetX": 0.2,
+              "targetY": 0.5,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "배경판",
+              "initialX": 0.56,
+              "initialY": 0.86,
+              "targetX": 0.5,
+              "targetY": 0.2,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "310-item-1",
+          "successText": "준비 결과를 저장했습니다."
+        },
+        {
+          "kind": "tune",
+          "title": "조명 조절",
+          "instruction": "의뢰용 가상 세팅:주광70/보조광35. 패널에서 광량을 조절합니다.",
+          "values": [
+            {
+              "id": "value0",
+              "label": "주광",
+              "unit": "눈금",
+              "min": 0,
+              "max": 100,
+              "initial": 30,
+              "target": 70,
+              "tolerance": 0.5
+            },
+            {
+              "id": "value1",
+              "label": "보조광",
+              "unit": "눈금",
+              "min": 0,
+              "max": 100,
+              "initial": 70,
+              "target": 35,
+              "tolerance": 0.5
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "310-item-2",
+          "successText": "작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "camera",
+          "title": "카메라 프레이밍",
+          "instruction": "프레임 중심 표시를 제품 중앙으로,위·아래 여백 표시를 지정선에 맞춥니다.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "프레임중심",
+              "initialX": 0.1,
+              "initialY": 0.86,
+              "targetX": 0.5,
+              "targetY": 0.45,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "위여백",
+              "initialX": 0.33,
+              "initialY": 0.86,
+              "targetX": 0.5,
+              "targetY": 0.2,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "아래여백",
+              "initialX": 0.56,
+              "initialY": 0.86,
+              "targetX": 0.5,
+              "targetY": 0.7,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "310-item-3",
+          "successText": "인계할 결과가 완성됐습니다."
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-301-experience",
+      "version": "v002",
+      "occupationId": "career-net-301",
+      "name": "방송연출가",
+      "roomId": "PAN-031",
+      "title": "지역 소식 방송 시작",
+      "brief": "가상 방송:마이크 입력연결→입력레벨→오프닝 큐. 신호 구간을 확인하고 송출을 시작합니다.",
+      "limitation": "원본 직업 업무를 참고한 가상 교육 사례. 현업 자격·안전 절차·적성을 판정하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "마이크 암",
+          "candidateId": "CND-116",
+          "assetId": "AST-1116",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-031/AST-1116-003",
+          "nodeName": "AST-1116-003"
+        },
+        {
+          "id": "object-2",
+          "name": "소형 오디오 콘솔",
+          "candidateId": "CND-118",
+          "assetId": "AST-1118",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-031/AST-1118-007",
+          "nodeName": "AST-1118-007"
+        },
+        {
+          "id": "object-3",
+          "name": "카메라",
+          "candidateId": "CND-109",
+          "assetId": "AST-1109",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-031/AST-1109-005",
+          "nodeName": "AST-1109-005"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "cable",
+          "title": "입력 연결",
+          "instruction": "마이크→입력1,음악→입력2,모니터→출력으로 케이블 라벨을 연결합니다.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "마이크입력1",
+              "initialX": 0.1,
+              "initialY": 0.86,
+              "targetX": 0.2,
+              "targetY": 0.35,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "음악입력2",
+              "initialX": 0.33,
+              "initialY": 0.86,
+              "targetX": 0.5,
+              "targetY": 0.35,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "모니터출력",
+              "initialX": 0.56,
+              "initialY": 0.86,
+              "targetX": 0.8,
+              "targetY": 0.35,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "301-item-1",
+          "successText": "준비 결과를 저장했습니다."
+        },
+        {
+          "kind": "tune",
+          "title": "오디오 레벨",
+          "instruction": "가상 리허설 목표:음성65/음악25. 두 페이더를 조정합니다.",
+          "values": [
+            {
+              "id": "value0",
+              "label": "음성",
+              "unit": "눈금",
+              "min": 0,
+              "max": 100,
+              "initial": 20,
+              "target": 65,
+              "tolerance": 0.5
+            },
+            {
+              "id": "value1",
+              "label": "음악",
+              "unit": "눈금",
+              "min": 0,
+              "max": 100,
+              "initial": 60,
+              "target": 25,
+              "tolerance": 0.5
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "301-item-2",
+          "successText": "작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "timer",
+          "title": "오프닝 큐",
+          "instruction": "큐 타이머를 시작하고3~5초 신호 구간에서 송출을 시작합니다.",
+          "timerMin": 3,
+          "timerMax": 5,
+          "timerLimit": 9,
+          "timerUnit": "가상 초",
+          "values": [],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "301-item-3",
+          "successText": "인계할 결과가 완성됐습니다."
+        }
+      ]
+    },
+    {
+      "scenarioId": "career-net-1147-experience",
+      "version": "v002",
+      "occupationId": "career-net-1147",
+      "name": "방송장비(H/W)설치 및 수리원",
+      "roomId": "PAN-020",
+      "title": "가상 방송 장비 입력 복구",
+      "brief": "전원을 분리한 교육용 모형입니다. 관찰된 신호를 바탕으로 연결부품을 교환하고 분리된 부품을 정리합니다. 실제 전기 수리 지침이 아닙니다.",
+      "limitation": "원본 직업 업무를 참고한 가상 교육 사례. 현업 자격·안전 절차·적성을 판정하지 않습니다.",
+      "objects": [
+        {
+          "id": "object-1",
+          "name": "공구함",
+          "candidateId": "CND-080",
+          "assetId": "AST-1080",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-020/AST-1080-007",
+          "nodeName": "AST-1080-007"
+        },
+        {
+          "id": "object-2",
+          "name": "열린 기계 케이스",
+          "candidateId": "CND-081",
+          "assetId": "AST-1081",
+          "assetVersion": "v002",
+          "instanceId": "Room_PAN-020/AST-1081-006",
+          "nodeName": "AST-1081-006"
+        },
+        {
+          "id": "object-3",
+          "name": "부품 트레이",
+          "candidateId": "CND-040",
+          "assetId": "AST-1040",
+          "assetVersion": "v001",
+          "instanceId": "Room_PAN-020/AST-1040-005",
+          "nodeName": "AST-1040-005"
+        }
+      ],
+      "surfaces": [
+        {
+          "kind": "inspect",
+          "title": "테스트 지점 관찰",
+          "instruction": "가상 검사 지점을 열어 정상/이상 표시를 읽으세요.",
+          "findings": [
+            {
+              "id": "point0",
+              "label": "전원모형",
+              "detail": "표시정상 / 실제전압측정아님"
+            },
+            {
+              "id": "point1",
+              "label": "입력연결부",
+              "detail": "고정클립파손 / 교환대상"
+            },
+            {
+              "id": "point2",
+              "label": "출력모형",
+              "detail": "표시정상 / 실제전압측정아님"
+            }
+          ],
+          "id": "work-1",
+          "objectId": "object-1",
+          "workItemId": "1147-item-1",
+          "successText": "준비 결과를 저장했습니다."
+        },
+        {
+          "kind": "repair",
+          "title": "연결부 교환",
+          "instruction": "정상클립은중앙입력연결부,분리부품은왼쪽,덮개는오른쪽검사대에놓습니다.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "정상클립",
+              "initialX": 0.1,
+              "initialY": 0.86,
+              "targetX": 0.5,
+              "targetY": 0.35,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "분리부품",
+              "initialX": 0.33,
+              "initialY": 0.86,
+              "targetX": 0.2,
+              "targetY": 0.35,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "덮개",
+              "initialX": 0.56,
+              "initialY": 0.86,
+              "targetX": 0.8,
+              "targetY": 0.35,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-2",
+          "objectId": "object-2",
+          "workItemId": "1147-item-2",
+          "successText": "작업 결과를 확정했습니다."
+        },
+        {
+          "kind": "sort",
+          "title": "검사 후 부품 정리",
+          "instruction": "파손품→격리,남은정상품→보관,점검표→인계 칸으로 옮깁니다.",
+          "tiles": [
+            {
+              "id": "item0",
+              "label": "파손품격리",
+              "initialX": 0.1,
+              "initialY": 0.86,
+              "targetX": 0.2,
+              "targetY": 0.4,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item1",
+              "label": "정상품보관",
+              "initialX": 0.33,
+              "initialY": 0.86,
+              "targetX": 0.5,
+              "targetY": 0.4,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            },
+            {
+              "id": "item2",
+              "label": "점검표인계",
+              "initialX": 0.56,
+              "initialY": 0.86,
+              "targetX": 0.8,
+              "targetY": 0.4,
+              "width": 0.16,
+              "height": 0.13,
+              "tolerance": 0.065
+            }
+          ],
+          "id": "work-3",
+          "objectId": "object-3",
+          "workItemId": "1147-item-3",
+          "successText": "인계할 결과가 완성됐습니다."
+        }
+      ]
+    }
+  ],
+  "transitionSeconds": 0.45
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 3,
+  "kind": "independent_static_background_patch_review_not_actual_pixel_test",
+  "sourceRefs": [
+    {
+      "path": "unity/projects/OfficeAssistant-v001/Assets/Scripts/CareerPresentation.cs",
+      "sha256": "a322c4babb796e2c16a91a6bd176f4af628288edc49a561a42c624d23f954b3f"
+    },
+    {
+      "path": "unity/projects/OfficeAssistant-v001/Assets/Scripts/PilotRuntime.cs",
+      "sha256": "be166cd6c949104f1fb1af8994b511737510c9bd9bbe4ea50265746d994fe567"
+    },
+    {
+      "path": "unity/projects/OfficeAssistant-v001/Assets/Scripts/OfficeTenExperience.cs",
+      "sha256": "0691e2161c26fcd322720c47857b5470d98bdd5249fef63235a77cb5f11a003b"
+    }
+  ],
+  "checks": {
+    "existing_full_clear_camera": "mask0 onscreen cameras color updated withSolidColor; existingdepth-10 preserved so no stale darkoverride",
+    "main_camera": "same requested color; viewport/depth/culling unchanged",
+    "photo_RT": "excluded targetTexture!=null",
+    "lifecycle": "CareerProtocol.Update callsApply beforePilotlive return, includingroomchanges",
+    "opaque_panels": "PilotUiPanel fillsalpha1beforeGUI.Box; OfficeTen home/workalpha1",
+    "tile_layout": "tile submit650/40 retained, statusends648",
+    "saved_results": "CalcHeighttitle/body separation retained"
+  },
+  "actual_browser_full_canvas": "unverified; finalv009/v005 mustverify allcanvasregions",
+  "models_material_palette": "No model/palette paths edited by inspected3sourcefiles"
+}

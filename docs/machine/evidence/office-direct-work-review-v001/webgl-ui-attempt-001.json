@@ -1,0 +1,135 @@
+{
+  "schema_version": 3,
+  "build_id": "office-assistant-v005",
+  "checked_at": "2026-10-30T19:37:11.188Z",
+  "environment": "Chrome / Windows / actual Unity WebGL over HTTP; Playwright mouse, keyboard, emulated touch; SwiftShader",
+  "cases": [
+    {
+      "name": "actual_unity_scene",
+      "status": "pass",
+      "snapshot": {
+        "session": {
+          "state": "request_pending",
+          "message": "동료: 회의자료 출력을 부탁드려요. 모니터에서 빠진 요청을 먼저 확인하세요.",
+          "requestRevision": 1,
+          "confirmedRequestRevision": 0,
+          "documentRevision": 1,
+          "savedRevision": 1,
+          "expectedCopies": 2,
+          "printCompletions": 0,
+          "printedCopies": 0,
+          "printedDocumentRevision": 0,
+          "printedRequestRevision": 0,
+          "run": 1,
+          "paused": false,
+          "changed": false,
+          "complete": false,
+          "date": "11월 1일",
+          "title": "팀 회의자료",
+          "printedDocumentId": "",
+          "folder": ""
+        },
+        "panel": "",
+        "feedback": "",
+        "focusedObject": 0,
+        "targets": [
+          {
+            "id": "monitor",
+            "x": 401.6300354003906,
+            "y": 370.63916015625
+          },
+          {
+            "id": "copier",
+            "x": 333.393798828125,
+            "y": 375.43975830078125
+          },
+          {
+            "id": "cabinet",
+            "x": 578.3960571289062,
+            "y": 391.41290283203125
+          }
+        ],
+        "buttons": [
+          {
+            "label": "경로 변경 / 처음부터 연습",
+            "x": 1171,
+            "y": 492.5,
+            "enabled": true
+          }
+        ],
+        "triangles": 4308,
+        "interactiveObjects": 3,
+        "visibleRenderers": 30,
+        "unity": "6000.3.26f1",
+        "closeup": false,
+        "cameraDistance": 9.699999809265137
+      }
+    },
+    {
+      "name": "closeup_return_reference",
+      "status": "fail",
+      "error": "confirmed slot lost after close",
+      "snapshot": {
+        "session": {
+          "state": "request_pending",
+          "message": "동료: DOC-001 ‘팀 회의자료’입니다. 회의일은 11월 2일이에요.",
+          "requestRevision": 1,
+          "confirmedRequestRevision": 0,
+          "documentRevision": 1,
+          "savedRevision": 1,
+          "expectedCopies": 2,
+          "printCompletions": 0,
+          "printedCopies": 0,
+          "printedDocumentRevision": 0,
+          "printedRequestRevision": 0,
+          "run": 1,
+          "paused": false,
+          "changed": false,
+          "complete": false,
+          "date": "11월 1일",
+          "title": "팀 회의자료",
+          "printedDocumentId": "",
+          "folder": ""
+        },
+        "panel": "monitor",
+        "feedback": "",
+        "focusedObject": 0,
+        "targets": [
+          {
+            "id": "monitor",
+            "x": 230.73716735839844,
+            "y": 571.2640380859375
+          },
+          {
+            "id": "copier",
+            "x": 33.69011688232422,
+            "y": 617.3271484375
+          },
+          {
+            "id": "cabinet",
+            "x": 659.9993286132812,
+            "y": 613.2693481445312
+          }
+        ],
+        "buttons": [
+          {
+            "label": "경로 변경 / 처음부터 연습",
+            "x": 1171,
+            "y": 492.5,
+            "enabled": true
+          }
+        ],
+        "triangles": 4308,
+        "interactiveObjects": 3,
+        "visibleRenderers": 1,
+        "unity": "6000.3.26f1",
+        "closeup": true,
+        "cameraDistance": 3.2556886672973633
+      }
+    }
+  ],
+  "errors": [],
+  "status": "fail",
+  "failure": "Error: confirmed slot lost after close\n    at check (D:\\Codex\\MeshyAi\\outputs\\office-browser-tools\\verify-direct-work-reference.cjs:12:39)\n    at D:\\Codex\\MeshyAi\\outputs\\office-browser-tools\\verify-direct-work-reference.cjs:69:26\n    at async record (D:\\Codex\\MeshyAi\\outputs\\office-browser-tools\\verify-direct-work-reference.cjs:15:36)\n    at async D:\\Codex\\MeshyAi\\outputs\\office-browser-tools\\verify-direct-work-reference.cjs:63:3",
+  "finished_at": "2026-10-30T19:37:21.492Z"
+}

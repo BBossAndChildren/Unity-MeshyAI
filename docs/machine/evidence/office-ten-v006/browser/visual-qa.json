@@ -1,0 +1,30 @@
+{
+  "schema_version": 3,
+  "build_id": "office-ten-v006",
+  "checked_at": "2026-10-31T04:47:00.033Z",
+  "status": "pass",
+  "environment": "Actual compiled WebGL HTTP through CUA IAB",
+  "cases": [
+    {
+      "name": "two_chairs_facing_desks_and_home_memo_readability",
+      "status": "pass",
+      "evidence": "home.jpg"
+    },
+    {
+      "name": "physical_monitor_selection_and_translucent_document_memo_readability",
+      "status": "pass",
+      "evidence": "work.jpg"
+    },
+    {
+      "name": "Esc_restore_30_renderers",
+      "status": "pass"
+    }
+  ],
+  "limits": [
+    "Visual/placement smoke scope only;10 full workflows/common17 baseline remains separately proven onv003.",
+    "Physical mobile/native workflow GUI not retested."
+  ],
+  "harness_observations": [
+    "One initial raw framebuffer-coordinate click hit background at devicePixelRatio1.25; normalized CSS coordinates selected actual monitor. No player state injection."
+  ]
+}

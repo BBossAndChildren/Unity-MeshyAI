@@ -1,0 +1,275 @@
+{
+  "schema_version": 3,
+  "status": "proposed_not_applied_to_frozen_resources_or_builds",
+  "created_at": "2026-10-31T07:11:50.869672+00:00",
+  "source_ref": {
+    "path": "unity/projects/OfficeAssistant-v001/Assets/Resources/career-additional-a-content.json",
+    "sha256": "f7e6e10352bbb7a968f7445b2513fec8b65097a93ceee706acd6b5629e4f37be",
+    "scenarioId": "career-net-10001-experience",
+    "version": "v002"
+  },
+  "reason": "Keep real preparation/handoff actions in player UI. Implementation gaps remain metadata/docs, not a player text answer.",
+  "scenario_definition": {
+    "scenarioId": "career-net-10001-experience",
+    "version": "v003",
+    "occupationId": "career-net-10001",
+    "name": "3D 프린팅 전문가",
+    "roomId": "PAN-019",
+    "title": "3D 출력 전 설계·검수 준비",
+    "brief": "연필꽂이의 출력 요청을 확인하고 세 구성 요소를 검수한 뒤 출력 담당자에게 설계 자료를 인계합니다.",
+    "limitation": "가상 설계 요청의 출력 전 준비 업무를 연습합니다.",
+    "objects": [
+      {
+        "id": "object-1",
+        "name": "작업대",
+        "candidateId": "CND-055",
+        "assetId": "AST-1055",
+        "assetVersion": "v001",
+        "nodeName": "AST-1055-002",
+        "instanceId": "Room_PAN-019/AST-1055-002"
+      },
+      {
+        "id": "object-2",
+        "name": "부품 트레이",
+        "candidateId": "CND-040",
+        "assetId": "AST-1040",
+        "assetVersion": "v001",
+        "nodeName": "AST-1040-005",
+        "instanceId": "Room_PAN-019/AST-1040-005"
+      },
+      {
+        "id": "object-3",
+        "name": "조립 중인 단순 제품",
+        "candidateId": "CND-078",
+        "assetId": "AST-1078",
+        "assetVersion": "v002",
+        "nodeName": "AST-1078-006",
+        "instanceId": "Room_PAN-019/AST-1078-006"
+      }
+    ],
+    "surfaces": [
+      {
+        "kind": "form",
+        "title": "작업대 출력 전 요청 문서",
+        "instruction": "가상 출력 준비 요청: 형상 연필꽂이, 높이모형 12눈금, 필요수량 2개입니다. 설계 요청서의 세 필드를 수정하고 저장합니다.",
+        "fields": [
+          {
+            "id": "form",
+            "label": "형상",
+            "initial": "",
+            "target": "연필꽂이"
+          },
+          {
+            "id": "height",
+            "label": "높이모형",
+            "initial": "",
+            "target": "12"
+          },
+          {
+            "id": "quantity",
+            "label": "필요수량",
+            "initial": "",
+            "target": "2"
+          }
+        ],
+        "id": "work-1",
+        "objectId": "object-1",
+        "workItemId": "10001-preparation-1",
+        "successText": "출력 전 설계 요청을 저장했습니다."
+      },
+      {
+        "kind": "assembly",
+        "title": "트레이의 설계 구성 검수",
+        "instruction": "설계 구성표는 바닥판=기초, 옆면=벽체, 입구테두리=상부입니다. 형상카드를 대응 결합점에 옮겨 세 구성 요소를 검수합니다.",
+        "tiles": [
+          {
+            "id": "part0",
+            "label": "입구테두리",
+            "targetLabel": "상부",
+            "initialX": 0.08,
+            "initialY": 0.84,
+            "targetX": 0.8,
+            "targetY": 0.4,
+            "width": 0.2,
+            "height": 0.15,
+            "tolerance": 0.065
+          },
+          {
+            "id": "part1",
+            "label": "바닥판",
+            "targetLabel": "기초",
+            "initialX": 0.33,
+            "initialY": 0.84,
+            "targetX": 0.18,
+            "targetY": 0.4,
+            "width": 0.2,
+            "height": 0.15,
+            "tolerance": 0.065
+          },
+          {
+            "id": "part2",
+            "label": "옆면",
+            "targetLabel": "벽체",
+            "initialX": 0.58,
+            "initialY": 0.84,
+            "targetX": 0.49,
+            "targetY": 0.4,
+            "width": 0.2,
+            "height": 0.15,
+            "tolerance": 0.065
+          }
+        ],
+        "id": "work-2",
+        "objectId": "object-2",
+        "workItemId": "10001-preparation-2",
+        "successText": "설계 구성 카드를 검토했습니다."
+      },
+      {
+        "kind": "form",
+        "title": "출력 담당자 인계 기록",
+        "instruction": "구성 검수에서 바닥판이 기초 자리에 있는지 확인했습니다. 검수항목 바닥 확인, 형상 연필꽂이, 인계처 출력 담당으로 준비 자료를 전달합니다.",
+        "fields": [
+          {
+            "id": "inspection",
+            "label": "검수항목",
+            "initial": "",
+            "target": "바닥 확인"
+          },
+          {
+            "id": "shape",
+            "label": "형상",
+            "initial": "",
+            "target": "연필꽂이"
+          },
+          {
+            "id": "handoff",
+            "label": "인계처",
+            "initial": "",
+            "target": "출력 담당"
+          }
+        ],
+        "id": "work-3",
+        "objectId": "object-3",
+        "workItemId": "10001-preparation-3",
+        "successText": "검수한 연필꽂이 설계 자료를 출력 담당자에게 인계했습니다."
+      }
+    ],
+    "original_ref": {
+      "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+      "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+      "json_pointer": "/items/0/data"
+    },
+    "source_basis": {
+      "work": "하는일\n3D 프린팅 전문가는 소재를 쌓아 물체를 만드는 3D프린터를 이용해 고객의 요구에 따라 제품(미니어처, 액세서리, 일상용품, 개인 편의 제품, 기계 부품 등)을 만들어 냅니다.\n컴퓨터 프로그램을 활용하여 설계된 디자인대로 프린터를 조작하고 운영합니다.\n제품을 디자인하는 3D 모델링 과정, 설계된 데이터값을 입력하는 3D 프린팅 과정, 출력된 제품을 후처리하는 과정을 통해 최종 제품을 설계하고 제작하는 서비스를 제공하는 일을 합니다.",
+      "selected_work_evidence": "컴퓨터 프로그램을 활용하여 설계된 디자인대로 프린터를 조작하고 운영합니다.",
+      "core_competencies": [
+        "수리·논리력",
+        "공간지각력"
+      ],
+      "practice_connection": "원문 역량 수리·논리력, 공간지각력을 업무 자료 확인·판단·설명 과정과 연결하는 기획 제안. 개별 입력 점수로 역량·적성을 판정하지 않음.",
+      "preparation_reference_pointer": "/items/0/data/준비방법"
+    },
+    "original_interaction_objects": [
+      {
+        "object_id": "object-1",
+        "candidate_ref": {
+          "catalog": "workplace-asset-candidates-v003",
+          "candidate_id": "CND-005"
+        },
+        "name": "모니터",
+        "asset_reuse_ref": {
+          "asset_id": "AST-005",
+          "version": "v001"
+        },
+        "reuse_fit_status": "unverified_for_interaction",
+        "reuse_class": "common",
+        "scene_candidate_count": 14,
+        "binding_status": "planned",
+        "unity_binding": null,
+        "requirements": [
+          "3D 선택 콜라이더",
+          "선택·잠금·완료 상태 피드백",
+          "물건에 귀속된 UI",
+          "현재 단계와 입력 이벤트 바인딩"
+        ],
+        "mesh_animation_requirement": "메시 분리·움직임은 미확인. UI 기반 최소 구현과 실물 변형을 구분하며 파일 변경 시 새 버전.",
+        "specialized_variant_requirement": null,
+        "selected_scene_membership": "proposed_scenario_addition_not_registered",
+        "all_existing_scene_candidates_ref": {
+          "path": "docs/machine/catalog/workplace-asset-candidates-v003.json",
+          "json_pointer": "/candidates/4/full_scene_candidates"
+        }
+      },
+      {
+        "object_id": "object-2",
+        "candidate_ref": {
+          "catalog": "workplace-asset-candidates-v003",
+          "candidate_id": "CND-071"
+        },
+        "name": "소형 생산 기계",
+        "asset_reuse_ref": null,
+        "reuse_fit_status": "unverified_for_interaction",
+        "reuse_class": "noncommon",
+        "scene_candidate_count": 1,
+        "binding_status": "planned",
+        "unity_binding": null,
+        "requirements": [
+          "3D 선택 콜라이더",
+          "선택·잠금·완료 상태 피드백",
+          "물건에 귀속된 UI",
+          "현재 단계와 입력 이벤트 바인딩"
+        ],
+        "mesh_animation_requirement": "메시 분리·움직임은 미확인. UI 기반 최소 구현과 실물 변형을 구분하며 파일 변경 시 새 버전.",
+        "specialized_variant_requirement": "범용 생산 기계를 3D 프린터로 구별할 수 있는 별도 형상·부품 명세 필요",
+        "selected_scene_membership": "proposed_scenario_addition_not_registered",
+        "all_existing_scene_candidates_ref": {
+          "path": "docs/machine/catalog/workplace-asset-candidates-v003.json",
+          "json_pointer": "/candidates/70/full_scene_candidates"
+        }
+      },
+      {
+        "object_id": "object-3",
+        "candidate_ref": {
+          "catalog": "workplace-asset-candidates-v003",
+          "candidate_id": "CND-078"
+        },
+        "name": "조립 중인 단순 제품",
+        "asset_reuse_ref": null,
+        "reuse_fit_status": "unverified_for_interaction",
+        "reuse_class": "noncommon",
+        "scene_candidate_count": 1,
+        "binding_status": "planned",
+        "unity_binding": null,
+        "requirements": [
+          "3D 선택 콜라이더",
+          "선택·잠금·완료 상태 피드백",
+          "물건에 귀속된 UI",
+          "현재 단계와 입력 이벤트 바인딩"
+        ],
+        "mesh_animation_requirement": "메시 분리·움직임은 미확인. UI 기반 최소 구현과 실물 변형을 구분하며 파일 변경 시 새 버전.",
+        "specialized_variant_requirement": "사용자 요청 출력물의 형상·결함 상태 변형 필요",
+        "selected_scene_membership": "existing_candidate",
+        "all_existing_scene_candidates_ref": {
+          "path": "docs/machine/catalog/workplace-asset-candidates-v003.json",
+          "json_pointer": "/candidates/77/full_scene_candidates"
+        }
+      }
+    ],
+    "bindingEvidence": "docs/machine/evidence/career-pilot-v007/PAN-019-unity-scene.json",
+    "runtime_scene_path": "Assets/Scenes/Workplaces/PAN-019.unity",
+    "sourcePartition": "a",
+    "contentReviewStatus": "preparation_subset_only; professional_printer_operation_not_implemented",
+    "unimplemented_scope": [
+      "Actual 3D printer/control model and original printer-operation workflow",
+      "Actual geometry generation/printing/output inspection",
+      "Original required special variants"
+    ],
+    "currentBuildInclusion": false
+  },
+  "remaining_original_gaps": [
+    "Actual 3D printer/control model and original printer-operation workflow",
+    "Actual geometry generation/printing/output inspection",
+    "Original required special variants"
+  ],
+  "runtime_execution": "unverified; proposal only"
+}

@@ -1,0 +1,122 @@
+{
+    "schema_version": 3,
+    "status": "pass",
+    "checked_at": "2026-10-31T04:27:50.0190168+09:00",
+    "unity": "6000.3.26f1",
+    "environment": "Actual Unity Editor Play Mode, batchmode -nographics",
+    "error": "",
+    "state_machine": {
+        "schema_version": 3,
+        "scope": "Actual C# state machine execution; UI/input requires separate runtime checks",
+        "cases": [
+            {
+                "name": "base_success_2_copies",
+                "status": "pass",
+                "evidence": "Assertions executed against OfficeSession"
+            },
+            {
+                "name": "missing_request_slots_and_ack",
+                "status": "pass",
+                "evidence": "Assertions executed against OfficeSession"
+            },
+            {
+                "name": "date_and_title_error_and_unsaved_revision",
+                "status": "pass",
+                "evidence": "Assertions executed against OfficeSession"
+            },
+            {
+                "name": "wrong_copies_file_and_stale_document",
+                "status": "pass",
+                "evidence": "Assertions executed against OfficeSession"
+            },
+            {
+                "name": "wrong_classification_and_handoff",
+                "status": "pass",
+                "evidence": "Assertions executed against OfficeSession"
+            },
+            {
+                "name": "sequence_violation_and_wrong_object",
+                "status": "pass",
+                "evidence": "Assertions executed against OfficeSession"
+            },
+            {
+                "name": "request_change_3_copies_reconfirmation",
+                "status": "pass",
+                "evidence": "Assertions executed against OfficeSession"
+            },
+            {
+                "name": "printing_duplicate_and_pause",
+                "status": "pass",
+                "evidence": "Assertions executed against OfficeSession"
+            },
+            {
+                "name": "completed_reclick_is_idempotent",
+                "status": "pass",
+                "evidence": "Assertions executed against OfficeSession"
+            },
+            {
+                "name": "reset_during_print_and_after_complete",
+                "status": "pass",
+                "evidence": "Assertions executed against OfficeSession"
+            }
+        ],
+        "passed": 10,
+        "failed": 0
+    },
+    "completion": {
+        "state": "complete",
+        "message": "동료: 요청한 자료와 보관 위치를 확인했어요. 감사합니다! 요청 확인과 정확한 인계를 마쳤습니다.",
+        "requestRevision": 1,
+        "confirmedRequestRevision": 1,
+        "documentRevision": 2,
+        "savedRevision": 2,
+        "expectedCopies": 2,
+        "printCompletions": 1,
+        "printedCopies": 2,
+        "printedDocumentRevision": 2,
+        "printedRequestRevision": 1,
+        "run": 1,
+        "paused": false,
+        "changed": false,
+        "complete": true,
+        "date": "11월 2일",
+        "title": "팀 회의자료",
+        "printedDocumentId": "DOC-001",
+        "folder": "회의자료"
+    },
+    "reset": {
+        "state": "request_pending",
+        "message": "동료: 회의자료 출력을 부탁드려요. 모니터에서 빠진 요청을 먼저 확인하세요.",
+        "requestRevision": 1,
+        "confirmedRequestRevision": 0,
+        "documentRevision": 1,
+        "savedRevision": 1,
+        "expectedCopies": 2,
+        "printCompletions": 0,
+        "printedCopies": 0,
+        "printedDocumentRevision": 0,
+        "printedRequestRevision": 0,
+        "run": 2,
+        "paused": false,
+        "changed": false,
+        "complete": false,
+        "date": "11월 1일",
+        "title": "팀 회의자료",
+        "printedDocumentId": "",
+        "folder": ""
+    },
+    "mesh_ray_checks": [
+        {
+            "object_id": "monitor",
+            "visible_surface_hit": true
+        },
+        {
+            "object_id": "copier",
+            "visible_surface_hit": true
+        },
+        {
+            "object_id": "cabinet",
+            "visible_surface_hit": true
+        }
+    ]
+}

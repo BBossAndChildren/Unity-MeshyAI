@@ -1,0 +1,40 @@
+{
+  "schema_version": 3,
+  "build_id": "office-ten-v001",
+  "recorded_at": "2026-10-31T11:17:59.375277+09:00",
+  "observed_at": null,
+  "observation_time_note": "Exact probe timestamp notseparatelyrecorded; rawhostPTY10499 tool outputretainedinchat.",
+  "scenario_id": "career-net-462-experience",
+  "issue_code": "BOARD_DRAG_NOT_CAPTURED",
+  "classification": "confirmed_product_failure",
+  "input": {
+    "source_card": "questions",
+    "source_xy": [
+      195,
+      554
+    ],
+    "destination": "10:30",
+    "destination_xy": [
+      521,
+      555
+    ],
+    "pointer_down_hold_ms": 350,
+    "move_steps": 20,
+    "destination_hold_before_up_ms": 300,
+    "wait_after_up_ms": 600
+  },
+  "actual_result": {
+    "selectedItem_during_down": -1,
+    "placements_after": [
+      "10:00",
+      "",
+      ""
+    ],
+    "feedback": "배치 확인: 실시간강의 → 10:00. 남은 내용과 인계를 확인하세요."
+  },
+  "comparison": {
+    "actual_click_source_then_destination": "lecture card to10:00 succeeded andprecededthisprobe",
+    "independent_context_confirmation": "Root/runtimeagent confirmed held-drag failure separately."
+  },
+  "required_retest": "New office-ten-v002 actualdrag and all10 workflows, no passinheritance."
+}

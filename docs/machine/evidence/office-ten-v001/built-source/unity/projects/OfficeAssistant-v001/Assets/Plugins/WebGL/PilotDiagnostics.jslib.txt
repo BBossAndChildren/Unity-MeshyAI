@@ -1,0 +1,1 @@
+mergeInto(LibraryManager.library,{PublishPilotState:function(pointer){var state=JSON.parse(UTF8ToString(pointer));window.pilotState=state;window.dispatchEvent(new CustomEvent("pilot-state",{detail:state}));}});

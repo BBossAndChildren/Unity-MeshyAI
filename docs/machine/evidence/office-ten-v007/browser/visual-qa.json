@@ -1,0 +1,36 @@
+{
+  "schema_version": 3,
+  "build_id": "office-ten-v007",
+  "checked_at": "2026-10-31T05:22:44.787Z",
+  "status": "pass",
+  "cases": [
+    {
+      "name": "actual_physical_monitor_open_no_floating_document_overlay",
+      "status": "pass",
+      "evidence": "monitor-preview.jpg"
+    },
+    {
+      "name": "actual_hangul_entry_and_live_screen_wrapping",
+      "status": "pass",
+      "evidence": "korean-live.jpg"
+    },
+    {
+      "name": "actual_escape_hides_screen_text_and_restores_room",
+      "status": "pass"
+    },
+    {
+      "name": "actual_hangul_edit_and_reopen_preserves_observed_drafts",
+      "status": "pass",
+      "evidence": "korean-edited-reopened.jpg"
+    }
+  ],
+  "environment": "Actual HTTP compiled WebGL through CUA IAB, native typeText/keypress, read-only diagnostic inspection",
+  "harness_observations": [
+    "Raw CDP key event was unavailable; actual CUA native typeText used instead.",
+    "Short edited Hangul phrase was observed in unit-price field; close/reopen verification uses actual closed/reopened snapshots instead of assuming focus."
+  ],
+  "limits": [
+    "UI/preview/font tests only; no new all10 workflow/common17 pass inferred.",
+    "Precomposed Hangul text entry tested; physical OS/mobile IME composition not independently certified."
+  ]
+}

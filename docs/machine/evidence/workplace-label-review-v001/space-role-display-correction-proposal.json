@@ -1,0 +1,110 @@
+{
+  "schema_version": 3,
+  "status": "proposal_not_applied",
+  "corrections": [
+    {
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-064",
+        "version": "v001"
+      },
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "version": "v002",
+        "prompt_id": "PRM-064"
+      },
+      "historical_name": "기독교(개신교) 예배실 — 목사",
+      "current_runtime_name_at_read": "기독교(개신교) 예배실",
+      "space_display_name": "기독교(개신교) 예배실",
+      "canonical_occupation_ref": {
+        "catalog": "occupation-workplace-candidates",
+        "occupation_id": "career-net-384",
+        "name": "성직자"
+      },
+      "specialization_role_display": "목사",
+      "specialization_role_is_new_occupation_id": false,
+      "scenario_ref": {
+        "scenario_id": "career-net-384-experience",
+        "version": "v001"
+      },
+      "selection_status": "needs_subject_selection",
+      "selected_scene_option": null,
+      "implementation_status": "not_implemented",
+      "source_option_identification": "Fixed prompt_ref and panorama_ref; original has no separate option_id."
+    },
+    {
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-070",
+        "version": "v001"
+      },
+      "prompt_ref": {
+        "version": "v001",
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-070"
+      },
+      "historical_name": "불교 법당 — 스님",
+      "current_runtime_name_at_read": "불교 법당",
+      "space_display_name": "불교 법당",
+      "canonical_occupation_ref": {
+        "catalog": "occupation-workplace-candidates",
+        "occupation_id": "career-net-384",
+        "name": "성직자"
+      },
+      "specialization_role_display": "스님",
+      "specialization_role_is_new_occupation_id": false,
+      "scenario_ref": {
+        "scenario_id": "career-net-384-experience",
+        "version": "v001"
+      },
+      "selection_status": "needs_subject_selection",
+      "selected_scene_option": null,
+      "implementation_status": "not_implemented",
+      "source_option_identification": "Fixed prompt_ref and panorama_ref; original has no separate option_id."
+    },
+    {
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-071",
+        "version": "v001"
+      },
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "version": "v001",
+        "prompt_id": "PRM-071"
+      },
+      "historical_name": "천주교 성당 — 신부님",
+      "current_runtime_name_at_read": "천주교 성당",
+      "space_display_name": "천주교 성당",
+      "canonical_occupation_ref": {
+        "catalog": "occupation-workplace-candidates",
+        "occupation_id": "career-net-384",
+        "name": "성직자"
+      },
+      "specialization_role_display": "신부님",
+      "specialization_role_is_new_occupation_id": false,
+      "scenario_ref": {
+        "scenario_id": "career-net-384-experience",
+        "version": "v001"
+      },
+      "selection_status": "needs_subject_selection",
+      "selected_scene_option": null,
+      "implementation_status": "not_implemented",
+      "source_option_identification": "Fixed prompt_ref and panorama_ref; original has no separate option_id."
+    }
+  ],
+  "preserve": [
+    "Historicalsourceprompt/image/modelnames,IDs,versionsandhashes.",
+    "Canonical552occupationIDs,including384성직자.",
+    "Religiousscenarioselectionnull/unimplementedstate.",
+    "AlreadybuiltWebGLandZIPbytes."
+  ],
+  "apply_notes": [
+    "LocatecurrentrowsbyroomId,notstalearrayindexes.",
+    "CleanonlyfixedPAN064/070/071displaynames,nogenericseparatorstrip.",
+    "Placecolumn=space_display_name;occupationcolumn=성직자;rolecolumn=originalspecialization;experiencecolumn=주제선택대기.",
+    "NewC#JsonUtilityfieldsrequirematchingdeclarationsoraseparateversioneddisplayadapter.",
+    "No3newcareerIDsandnoreligiousscenarioproductionapproval.",
+    "Actualpublished/localWebGLdisplayrequiresnewgallerybuildandretest; sourceJSONeditisnotretroactive."
+  ]
+}

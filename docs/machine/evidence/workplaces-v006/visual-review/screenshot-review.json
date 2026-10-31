@@ -1,0 +1,3435 @@
+{
+  "schema_version": 3,
+  "build_id": "workplaces-v006",
+  "reviewed_at": "2026-10-31T07:24:28.831182+09:00",
+  "status": "pass_for_observed_target_visual_scope_with_nonblocking_limits",
+  "scope": "Fresh actual v006 HTTP front/reduced screenshots: all71 full-frame pairs manually reviewed; all71 native-pixel model crops from both sizes separately viewed for part-color regions, seams/bleed, layout, silhouette and visible support. No v005 visual verdict copied.",
+  "environment": "Actual Unity WebGL HTTP Chrome Windows SwiftShader; each room actually entered and captured",
+  "room_count": 71,
+  "source_image_count": 142,
+  "full_frame_contact_sheets": 18,
+  "native_pixel_color_pairs": 71,
+  "serious_visual_findings": [],
+  "minor_findings": [
+    {
+      "id": "VIS-001",
+      "severity": "minor",
+      "room_ids": [
+        "PAN-033",
+        "PAN-034",
+        "PAN-039",
+        "PAN-041"
+      ],
+      "finding": "Thin dark truss/wind-sensor strokes have low contrast against the dark background, especially at900x600. Their shapes remain visible; not missing meshes or palette bleed.",
+      "native_examples": [
+        "docs/machine/evidence/workplaces-v006/visual-review/PAN-033-native-color-pair.png",
+        "docs/machine/evidence/workplaces-v006/visual-review/PAN-041-native-color-pair.png"
+      ]
+    }
+  ],
+  "open_blocking_visual_issues": [],
+  "palette_and_material_evidence": {
+    "runtime_snapshots_path": "docs/machine/evidence/workplaces-v006/http-webgl-rooms.json",
+    "all71_runtime_material_count": 1,
+    "all71_runtime_texture_count": 1,
+    "all71_texture_size": [
+      2508,
+      2508
+    ],
+    "palette_import_path": "docs/machine/evidence/workplaces-v006/palette-import.json",
+    "pixels_identical": true,
+    "point_filtering": true,
+    "mipmaps_disabled": true,
+    "compression_disabled": true,
+    "npot_resizing_disabled": true,
+    "registered_material_path": "unity/projects/OfficeAssistant-v001/Assets/Shared/Materials/OfficePalette.mat",
+    "registered_material_sha256": "1e71a634fb9cb2ae0db94087a9acf46d0a40728739de9ceffdb272afffc27fe5",
+    "registered_material_tint": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "actual_successful_builder_path": "unity/projects/OfficeAssistant-v001/Assets/Editor/WorkplaceBuild.cs",
+    "builder_matches_build_snapshot": true,
+    "builder_assertion": "Actual successful v006 build executes shared material texture equality and Color.white assertion.",
+    "all319_current_glb_base_color_factors": [
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "model_evidence_reuse": {
+    "coverage_path": "docs/machine/evidence/workplaces-model-review-v001/current-final-319/coverage.json",
+    "current_refs": 319,
+    "component_refs": 248,
+    "new_component_refs": 231,
+    "reused_component_refs": 17,
+    "assembly_refs": 71,
+    "directional_images": 957,
+    "reduced_sheets": 30,
+    "all319_current_glb_hashes_reverified": true,
+    "placement_count": 805,
+    "support_subset_count": 476,
+    "historical_render_versions": 483,
+    "historical_noncurrent_versions": 164
+  },
+  "caption_fix": {
+    "status": "pass_observed",
+    "v005_issue": "Some COM IDs/Blender production-method suffixes appeared in selection captions.",
+    "v006_observation": "New v006 selected captions such as PAN003 바닥 표면, PAN032 회전 사무의자 and PAN069 바닥 표면 contain product names without the former implementation suffixes."
+  },
+  "office_panel_layout": {
+    "status": "pass_observed_at_both_sizes",
+    "observation": "New motion-reduction and route buttons fit in the office side panel; this screenshot inspection does not independently retest their events."
+  },
+  "limits": [
+    "This pass concerns visible regions at actual1440x900 and900x600 captures in Windows Chrome SwiftShader; arbitrary camera zoom/angles, physical GPUs and mobile devices are separate.",
+    "Small white-on-white vessels, tiny buttons/keys/labels/antennas and occluded rear/underside parts cannot each be distinguished in reduced browser frames; specific per-room limits are recorded. Component319 proof retains individual three-direction views.",
+    "No visible palette-cell bleed, unexpected saturated patch or material tint mismatch was found at the displayed scales. This is an observed target-display judgment, not a guarantee for every hidden surface or every possible filtering environment.",
+    "Thin strokes may alias or lose contrast at900px; this is retained as a nonblocking visibility observation rather than mislabeled palette bleed.",
+    "No specialist medical/industrial functionality or fine iconographic accuracy is certified.",
+    "Office functional acceptance, native Play results and performance belong to separate actual test evidence; this visual report does not replace those tests."
+  ],
+  "overview_path": "docs/machine/evidence/workplaces-v006/visual-review/actual-http-12-room-overview.jpg",
+  "rooms": [
+    {
+      "room_id": "PAN-001",
+      "name": "공용 업무 사무실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-020",
+        "version": "v006"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:09:35.075Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-001-http-front.png",
+          "sha256": "1b21fc0e0089bfb3195270008d9ef45115332e0bc07985d0433c44e580f63bf5",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-001-http-reduced.png",
+          "sha256": "8a31b8bb98a01e4996fb59aa5739e1fd412473dcebb10c7168819428aca540cf",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-001-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "3788f1c29812d63e368622ce2940fc38fd39c450683432e9cf7df95a992f4e3c",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-001-004.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan desk/chair surfaces, cream drawers/paper/platform, green partitions and foliage, dark screens/peripherals, gold desk lamps.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 4308
+    },
+    {
+      "room_id": "PAN-002",
+      "name": "협업·기획 사무실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2002",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:09:38.767Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-002-http-front.png",
+          "sha256": "7b5fce0e1f34c24f9aab1451ed2337fc91e6d6b4340db2f41ede19af82597e49",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-002-http-reduced.png",
+          "sha256": "df8542af9be5643eb55f1f72ec6d14cc573b5c90f0c1da18b0f3248e8fad8277",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-002-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "cc2e901c1eb9396bc156dad791d3ec2f3204163f41a62c80de3fc3019ba3c641",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-001-004.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Teal seats/cart, dark laptop frames, grey writing surface with purple frame, purple mat and intentional yellow beanbag.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 2552
+    },
+    {
+      "room_id": "PAN-003",
+      "name": "행정·문서 처리 사무실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2003",
+        "version": "v004"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:09:48.630Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-003-http-front.png",
+          "sha256": "4a9cf2a1484c991a9b55696b491c4d06ff0fd2ae43caab58adc513e28a798102",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-003-http-reduced.png",
+          "sha256": "149a3945b3d2ddcc3e02d9d1eb1356f37f7e0b9923d8b1525484423d3b0088e5",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-003-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "5b0bb2dc086ed9f62bd5f2ba393aea92ce9200aa032d4869d51f4596f051ac0b",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-001-004.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan desks/chair backs, dark monitors/PCs, green filing cabinet, cream printer, purple folder and pink eraser remain separate regions.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 3764
+    },
+    {
+      "room_id": "PAN-004",
+      "name": "민원·방문객 접수실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2004",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:10:32.913Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-004-http-front.png",
+          "sha256": "b014018ac8b56428bb85af0e6ee984454a6859f22166e75dc5f2155352a2fc64",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-004-http-reduced.png",
+          "sha256": "87f1e63c93789ec4588578a46d2af9c9a9936f069185b3cc57ab7b899e8d8592",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-004-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "d2a87a26322b90bc2049a9c342cbe32baa29ad97ed9b7b607217f669381fbcc1",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-001-004.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Teal counter/seats and brochure pockets, tan top, purple kiosk housing/seat legs, dark monitor and kiosk foot.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 2256
+    },
+    {
+      "room_id": "PAN-005",
+      "name": "전문 상담 사무실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2005",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:10:41.804Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-005-http-front.png",
+          "sha256": "a35dd8b1f40d65134de7473c08b6d19854d7f296af69fe10f280eba451f86e02",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-005-http-reduced.png",
+          "sha256": "66a869b872c4e6fe244f95411962a8c35021b1162d28795cbb0a44f74598bb45",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-005-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "d5a3b9a1d9a05f4f58389c16ef7ba9b116bf653a3030cdbccb68ecf180c96b77",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-005-008.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan tables/shelf, teal chairs, separate mint/purple/yellow book spines, pale-blue books, yellow balance pans.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1832
+    },
+    {
+      "room_id": "PAN-006",
+      "name": "실험실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2006",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:10:50.770Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-006-http-front.png",
+          "sha256": "9704bae2d47e6bbe2142a12415b1acd4160a62ebb2a46dc173cd80d9118787e3",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-006-http-reduced.png",
+          "sha256": "4ce77db450891f6150017729ceb5e2ecd6185ee94599e5cd44ca988850f74f06",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-006-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "bd4e2e26f41f27c4844049d5919aef6103fb4878c6e06e44d57f8e431b0f13c3",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-005-008.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Cream worktop/sink/cabinet tops, teal cabinet/cart bodies, dark equipment faces, pastel tube pieces and intentional yellow stool.",
+      "small_or_occluded_limits": "Individual tube caps/contents are very small in the reduced view.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1552
+    },
+    {
+      "room_id": "PAN-007",
+      "name": "분석실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2007",
+        "version": "v004"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:11:00.180Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-007-http-front.png",
+          "sha256": "f70cbf25f1c507f3ec5f63903077497b5e370f3e6e384823f7737fe4f01c3b5f",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-007-http-reduced.png",
+          "sha256": "455fb0b62b5b4261934e6553eaf05cfc59d7a17b91cd8e5051b39792290afdc4",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-007-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "30a111c43c5be04243b8590c9dd888f19affdf34f55ff66c851577e87bb2c869",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-005-008.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Cream/teal analysis cabinets, black microscope barrel and white foot, mint tray frame, dark computer frame/peripherals.",
+      "small_or_occluded_limits": "Microscope control details are tiny; exact part colors are supported by separate component views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1700
+    },
+    {
+      "room_id": "PAN-008",
+      "name": "진료실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2008",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:11:08.540Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-008-http-front.png",
+          "sha256": "ff62752506261730c63007eba84d660be8071b00a697365c4f2c799929b962c7",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-008-http-reduced.png",
+          "sha256": "fd3535412ff30bf7fc2e85768448dd0a8923e71ca398d349539c133234f01aab",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-008-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "6d6111f5644b9a35134ddb8b89aa66fa0b6de48901b8a457d5a09ad73124241f",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-005-008.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "White bed/pillow/lamp, teal bed frame/cart/cabinet, dark casters/screens, tan desk and teal visitor seat.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 2732
+    },
+    {
+      "room_id": "PAN-009",
+      "name": "처치실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2009",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:11:17.362Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-009-http-front.png",
+          "sha256": "a54e5e2ce5c1a6353991a90c07d26be780456bc8054720202feb21bb2aa8b875",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-009-http-reduced.png",
+          "sha256": "cf58609f60772b636d52f3bfd807b39f5f9351e2faaec1b499dbd0aba77bd847",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-009-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "2a4b48e014a30fc654ae40e5192bd7f612bae73d5dfb86d86689b736064f9ef8",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-009-012.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "White mattress/lamp/sink rims, teal bed frame/cabinets/carts, dark casters and cabinet handles.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1804
+    },
+    {
+      "room_id": "PAN-010",
+      "name": "병실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2010",
+        "version": "v004"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:11:26.605Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-010-http-front.png",
+          "sha256": "54817091f0302c12da1e27fbf8622608b575306be2c894a7dd08758cc6896558",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-010-http-reduced.png",
+          "sha256": "a4e49efaa38edb2145d143a0cdecc5dc78ff4e7b02f88323077f11ad50e3c569",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-010-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "e42b0ef4b39a0c61866e443b148db1fe1f41e6ae2afcaad07e1e06758c2741d9",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-009-012.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan head/footboards, white pillow/panel/monitor frame, purple mattress, teal monitor cart and green armchair.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1604
+    },
+    {
+      "room_id": "PAN-011",
+      "name": "의료 접수실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2011",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:11:36.283Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-011-http-front.png",
+          "sha256": "9383446c5891f858417613d2ebc4454af59aff173cb11f199e2d89521b7a8955",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-011-http-reduced.png",
+          "sha256": "dcc6228f93638313fc47a857c1543d6888ad8acbe9540764c3943cf8d384e278",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-011-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "2c7bb870b968a1b9b0878821284e5dac3f3e9b279fd4c0f59ef04ab4de4fbd62",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-009-012.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Teal counter and linked seats, tan top, purple tray/kiosk/seat legs, dark electronics and separate book-spine strips.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 2432
+    },
+    {
+      "room_id": "PAN-012",
+      "name": "교실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2012",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:11:45.128Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-012-http-front.png",
+          "sha256": "31ba5a81f56a0d5712ab66d206f7f0e51d187eb75f0fce3b4aa2ce70417bb51f",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-012-http-reduced.png",
+          "sha256": "331b4ed47d5278fc91bd7fa5de70cf8c3d2857a3c68584c109fabec0062ff543",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-012-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "f483b73e205dea448dacce3af35d1b7895c427f9924f8405a9ad108fe13f0e71",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-009-012.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Green chalkboard within wood frame, tan desks, teal chair backs/lockers, pale books and purple desk legs.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1872
+    },
+    {
+      "room_id": "PAN-013",
+      "name": "교육 실습실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2013",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:11:51.019Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-013-http-front.png",
+          "sha256": "d9b93bd26a6c08ca1a4350f5d3f64f2faf1e0fe1a15bcc7a4aa4c34bdf3569d0",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-013-http-reduced.png",
+          "sha256": "7e7b22f260b5258dc887a56128206ca3661a37ce85e2fb35ea67d33c78f9bcb6",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-013-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "ec8257371eb7b64f4f24cfbfb2cd2c9024f23261eda783f036914345c4a0b5e9",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-013-016.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan workbenches/shelf, teal lower shelves and kit bases, black legs, deliberate yellow stool seats and kit pieces.",
+      "small_or_occluded_limits": "Small kit pieces reduce to a few pixels.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1420
+    },
+    {
+      "room_id": "PAN-014",
+      "name": "강의실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2014",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:12:00.819Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-014-http-front.png",
+          "sha256": "3182bdb3cb7c3aad964a0494b4eb32c3826567472fa9d352bce5fb1367c7a759",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-014-http-reduced.png",
+          "sha256": "2b32992bae2dcc33623ff994725cb88ca0616748da92e3bad121ad35352af78e",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-014-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "0b78f3956b18708284a2c1ee36f820483d6cd667d1ae48331930dc9896d2f727",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-013-016.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Grey projection surface with dark stand, cream projector with dark lens, teal cart/seats, tan lectern/tables.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1780
+    },
+    {
+      "room_id": "PAN-015",
+      "name": "복지·심리 상담실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2015",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:12:10.625Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-015-http-front.png",
+          "sha256": "72dbf0ff06265cb7c933dcea7c78a0a959bbcdfa96d8f699dfaf51edd130f785",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-015-http-reduced.png",
+          "sha256": "4fcd11e56c3ee5c66385f2a11cba892149292a22881fe56815e591fd5917b675",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-015-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "f6aebb9ad4838b924c486a68214e11c04b6b4339ba5be607094d031f5dea05e5",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-013-016.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Green upholstered chairs, tan legs/table/shelf, purple rug, pale notebook/tissues and green plant.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1516
+    },
+    {
+      "room_id": "PAN-016",
+      "name": "복지 활동실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2016",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:12:20.275Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-016-http-front.png",
+          "sha256": "02e5619c86228ac3dd75dd6948b76c4d21752f7f12beb33d3f84daec75416949",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-016-http-reduced.png",
+          "sha256": "ffe79c8dab710bd5673140a7deb199c1e67850bba9483cd9460c4aae7c1df922",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-016-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "9f8061c6f1daa1437674097b5aca491f5fbc2426c0794d0683c598d357f99d63",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-013-016.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Purple board frame/mat, grey writing surface, teal chairs, green cabinet, tan furniture, intentionally mixed pastel activity pieces.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1396
+    },
+    {
+      "room_id": "PAN-017",
+      "name": "요양실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2017",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:12:25.289Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-017-http-front.png",
+          "sha256": "d1af45fbd84157fbc1a39541d9f15ee1003a7b761cfad1d1f18546c9a45f2c33",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-017-http-reduced.png",
+          "sha256": "ba898fd3cb3b1fdfcefab62c14226fdd62454bcc7725018cb0782e791cf86ba6",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-017-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "28e207a03dec1c62fcb81651bf97015d9aac71534989e2350f8bff8addb94dce",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-017-020.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan bed/rails, purple bedding/mat, white pillow, green cabinet, teal wheelchair seat, dark wheel frame and grey hubs.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1496
+    },
+    {
+      "room_id": "PAN-018",
+      "name": "생산 구역",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2018",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:12:38.518Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-018-http-front.png",
+          "sha256": "932ab8cae60dcae4e65266f3be7b90cc2c915f1a2ca08c1bbf81f864c7fee1ec",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-018-http-reduced.png",
+          "sha256": "38c87817c366eba4d51e9a65d0cdbe61e948c5700786a8344e23e4e10e8f691f",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-018-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "f40bbe9421ee28c6c358b5e1898b6ad2e748c24a9d1591b7fa9080a876f8cae7",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-017-020.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Cream machine body, dark access panel and conveyor rollers, teal controls/bin, yellow guard frames and warning cap.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1684
+    },
+    {
+      "room_id": "PAN-019",
+      "name": "조립 구역",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2019",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:12:44.263Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-019-http-front.png",
+          "sha256": "c1e069e30d623b11f690f01aa3c082e8a18ee41f0091c8864f6b8978d318f91f",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-019-http-reduced.png",
+          "sha256": "9f532a2566ebd8ba853de12f43c05784f458a8ee5ce4b1bd7166bbd3536c1304",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-019-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "92cd72aff5ce40c4813238d375a8511ed561703e99380cc40c3c27d66248e8d9",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-017-020.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan bench/pegboard/shelf, teal trays/car chassis/cart, dark wheels/vice/tool heads, yellow toy body and stool.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1680
+    },
+    {
+      "room_id": "PAN-020",
+      "name": "정비 구역",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2020",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:12:50.072Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-020-http-front.png",
+          "sha256": "72a980f3ce16bcfcacdcd552b8638dc0efc351f931a9aad05cb6581aa0a7baac",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-020-http-reduced.png",
+          "sha256": "c61baa07d6b313d083298304ef4da50ecf8416c949790ce9c1e6f574186d4977",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-020-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "5d33361b8d0d0dde479d5f0b5026572518c27514c2f0e5ae0e36f2561b2399c0",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-017-020.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan bench/pegboard/toolbox body, teal cart/tray/lower shelf, dark vice/open-case interior, cream lamp and case rim.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1540
+    },
+    {
+      "room_id": "PAN-021",
+      "name": "소매점",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2021",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:12:58.307Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-021-http-front.png",
+          "sha256": "26e40fbb261ad6282bd46e2312c2ce7ad6c205f7e69bc17ab8f56cc9df4aceed",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-021-http-reduced.png",
+          "sha256": "535083dd73f9a585c58e089b5507fd46d0d0be8e2376e82c33b1c557218b22c1",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-021-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "6d2e80809f5e0e33a0605eb22a497a1811d9928123fb2f58a555289bd9190b47",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-021-024.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan counter/shelves, grey shelf back, teal basket/counter/POS screen, green storage, ochre packages with pale labels.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1068
+    },
+    {
+      "room_id": "PAN-022",
+      "name": "서비스 창구",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2022",
+        "version": "v004"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:13:08.057Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-022-http-front.png",
+          "sha256": "2199417f77d1b938e83958098154a90907a37d39ac468af73182b14d218cc1ec",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-022-http-reduced.png",
+          "sha256": "3358bdb52e1e9b89917c6c8448e3e569a7c973b3396ab3bd26aa67156ceedd1d",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-022-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "6f0c0d699aa7c09198f13be2c4a7b673bfb48fb7dfee1fecce328cb7a2718e0c",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-021-024.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Teal counter/seats, tan top, purple paper tray, dark monitor/PC, green cabinet and separate mint/purple/yellow files.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1932
+    },
+    {
+      "room_id": "PAN-023",
+      "name": "미용실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2023",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:13:17.850Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-023-http-front.png",
+          "sha256": "9f275708d222b5f49affc99f0794b4a45e89b5b697183df9c226b3d3aa045ca6",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-023-http-reduced.png",
+          "sha256": "67ab22900d4a1cb10be4134f2521e7f73759f450afcd0079a4d3995f41400b5d",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-023-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "a87229b14f786a6a66683f6f1297d1fe193b12e9bd68ebf1d0edfa809de7ece4",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-021-024.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Pink salon chair, cream armrests, dark pedestal/basin interior, pale basin rim, teal cart and grey mirror within wood frame.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1532
+    },
+    {
+      "room_id": "PAN-024",
+      "name": "주방",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2024",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:13:30.910Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-024-http-front.png",
+          "sha256": "47f88f6662eb8ef4ca1c67da63c6ec0116c1535ee453eef842db67281b4f296b",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-024-http-reduced.png",
+          "sha256": "b2a4cb50998994dd7a2ef497f80558dff1832f44edfa2a4ff377f0c1233c1e51",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-024-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "e8512860976cb1bf2eaaa6b7fd9ebcd262ab61b64b3eb7c32a3569711272905e",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-021-024.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Cream worktops/dishes, teal cabinets, green refrigerator, dark burners/oven door, tan utensil rack with pale utensil heads.",
+      "small_or_occluded_limits": "White cups/plates on a pale worktop have limited separation at900px; their broad regions and rims are visible.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1448
+    },
+    {
+      "room_id": "PAN-025",
+      "name": "제과실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2025",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:13:37.272Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-025-http-front.png",
+          "sha256": "9481ad21d3d315be2b953af027f0defeaddcced1bf28677495175b14fbdcb34d",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-025-http-reduced.png",
+          "sha256": "a278966d4a85fe09d273e8abedc5478ee6f407c9f1a00cb7a79f6274b236918e",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-025-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "5626c739cdb8a4f0fa0588e2a98c948e87fd3dde9ae6481e8aa07a721ceca934",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-025-028.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Green mixer with cream bowl, dark oven face/burners, pale rack trays with dark posts/casters, tan shelf and teal tray/lower shelf.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1524
+    },
+    {
+      "room_id": "PAN-026",
+      "name": "식당 홀",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2026",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:13:47.027Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-026-http-front.png",
+          "sha256": "e43d9b2292d2baff637b8bbce0465777c59f4eca6fec51546aba9b3586d32892",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-026-http-reduced.png",
+          "sha256": "173fb743fca542d60380316fbf0e2f413b8a0b4e734452c7e51e0cc792a9e97c",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-026-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "8052b1e5991c748ae1a2848583f1efd5e6ecf5defc45471ddc608c41c7721b87",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-025-028.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan tables/lectern, teal seats/counter cabinets, cream buffet top and white dishes/cups, green plant in pale pot.",
+      "small_or_occluded_limits": "White vessels are small on pale tabletops.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1928
+    },
+    {
+      "room_id": "PAN-027",
+      "name": "디자인 작업실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2027",
+        "version": "v004"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:13:56.645Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-027-http-front.png",
+          "sha256": "3360d92f4e9ca92afcafae0c25ce02573c95090ac34d8a234f622598cbb2bfd1",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-027-http-reduced.png",
+          "sha256": "0f77f575942bbd4e4312cda3d7accd9c75b489249741931e06b7d75987414559",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-027-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "4f91419ef9fe468c11a1312cdf4596dabdbf988bedf380de6ed8f7823cbbd0b0",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-025-028.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Dark monitor/tablet frame, teal tablet face, white stylus, purple tray, mint/purple sample board and separate pale swatches.",
+      "small_or_occluded_limits": "Stylus and individual swatches are small in the reduced view.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1692
+    },
+    {
+      "room_id": "PAN-028",
+      "name": "미술 작업실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2028",
+        "version": "v004"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:14:06.658Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-028-http-front.png",
+          "sha256": "fcd6b01d28caa2e5f6cadc5d8f1209d6d733db4aa430ef68d565920bd4ac3aad",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-028-http-reduced.png",
+          "sha256": "e7a8623cf9d9cc77224dd82074008eb5d18bf789983b999ae8aeb97315eeaf0d",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-028-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "cf6f53ead77c7725f83abe43da942621e8c0da51a1fa9fd08c1839b171d0e543",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-025-028.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan easel/ledge, grey mounted and spare canvases, yellow stool, green plant, tan work surface and small pastel palette patches.",
+      "small_or_occluded_limits": "Palette dabs and the rear spare canvas are partially small/occluded.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1432
+    },
+    {
+      "room_id": "PAN-029",
+      "name": "공예 작업실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2029",
+        "version": "v001"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:14:15.988Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-029-http-front.png",
+          "sha256": "57887f0fe92f34fdb53c940b5e765460c2d63b44b17fcdcea53318da510e217d",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-029-http-reduced.png",
+          "sha256": "26f689d1cb81154a868a0ff068b5b1a4724991c2a708c78b4710855f41a0693e",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-029-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "9c8b43a9a55514fe57262a8092673a9307c29e18039098eebc36b8bfec85f251",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-029-032.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan bench/shelf/tool handles, dark vice/tool heads, teal cart/tray, cream lamp and ochre storage box.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1256
+    },
+    {
+      "room_id": "PAN-030",
+      "name": "촬영 스튜디오",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2030",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:14:29.162Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-030-http-front.png",
+          "sha256": "a38725ca34fa6f07159e38c310eeb4b0871056247b0fc87ebffa91f2e31d7db2",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-030-http-reduced.png",
+          "sha256": "4e5acefa3074bcd30328ea4463c18f264dc9ae0ddff0647ac67b5f273df99452",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-030-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "f5953c76dc008232869d7184626470626b866493b3d2f744038ec682f2f6a05c",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-029-032.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Dark camera/tripod/light stands/case, teal lens face, grey reflector/light faces, cream case catches and tan table.",
+      "small_or_occluded_limits": "Camera controls and case catches are too small for semantic assessment.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1216
+    },
+    {
+      "room_id": "PAN-031",
+      "name": "방송 스튜디오",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2031",
+        "version": "v004"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:14:34.795Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-031-http-front.png",
+          "sha256": "375127e600d044249ffc936cf29f974754bcb18541ad277cf3c865f2b71d1d15",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-031-http-reduced.png",
+          "sha256": "e90677ea15f3a3868498d47417231c54088ddae6cef5ce1406f43510121b38e8",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-031-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "479097e8ac3591b3ba2496849c2c2139d4b9ff7a25d715027722acc3f98f827c",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-029-032.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Teal counter and camera lens, tan top, dark microphone/headphones/camera/mixer, purple headphone band, grey light faces.",
+      "small_or_occluded_limits": "Mixer buttons and microphone details are small.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1624
+    },
+    {
+      "room_id": "PAN-032",
+      "name": "영상 편집실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2032",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:14:44.058Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-032-http-front.png",
+          "sha256": "04668b061866ed1797ae9f918d2c9618fec5d646bc7ee2b1c55b541f47e278f3",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-032-http-reduced.png",
+          "sha256": "3ed1108cc8f0e1f4d9550c1ee97d9fa61387e0a527abaecad6ac258d45612d1b",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-032-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "cf294e47c00dc723855a9281d414e00990ab998eab5de140c470e2c4c022e030",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-029-032.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Dark monitors/speakers/peripherals, grey speaker rings, purple headphone band, tan desk/chair/shelf.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 2428
+    },
+    {
+      "room_id": "PAN-033",
+      "name": "공연 무대",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2033",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:14:53.753Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-033-http-front.png",
+          "sha256": "2d08b19e85974d6ff196779a4874ba4810f83193ccc364b4464023358fd04e34",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-033-http-reduced.png",
+          "sha256": "a742728f5c8ccc1717b91f9b6d37195600e8e393314dac01bf73205a7e9aea53",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-033-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "b09ea6afc4fcaafe3fe0894e9832e0676d22c15a64df9e2796de87c92260d953",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-033-036.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan stage and teal audience seats, dark truss/microphone/speakers/light stands, grey light panels and speaker rings.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 2580
+    },
+    {
+      "room_id": "PAN-034",
+      "name": "전시실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2034",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:14:58.976Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-034-http-front.png",
+          "sha256": "eaccac91079e323b73e07907684e23d451244ba0afbced21d7060fcfe8342845",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-034-http-reduced.png",
+          "sha256": "1f7feb452c716ce8f7f0fce2b5f14cfde93fe7e2977db56575949dcb7ec7bae1",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-034-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "49004d6dc5caec8473d22c994374826730ac5ead2faf262279591c6275e55315",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-033-036.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Purple sculptures with teal upper facets on cream plinths, grey display boards within tan frames, tan bench and dark truss.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1212
+    },
+    {
+      "room_id": "PAN-035",
+      "name": "문화 활동실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2035",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:15:07.910Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-035-http-front.png",
+          "sha256": "5702f9727f9f09519ffb7b763a35d2d58b12fefc49e8eaa1de2acca549f5dbc3",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-035-http-reduced.png",
+          "sha256": "4494353cab45ca0a1670c5aee32723be4b1bf1eb445931fdd504a12363ba8b2c",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-035-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "62047029b93a2837fe89791be7beee8bdd2786bb72d5f2d0ccb1a042ab7e923d",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-033-036.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Grey board/purple frame, teal chairs, tan table/shelf, separated pale palette dabs and dark tool tips.",
+      "small_or_occluded_limits": "Palette patches/tool tips are only a few pixels in the reduced view.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1700
+    },
+    {
+      "room_id": "PAN-036",
+      "name": "건축 작업 구역",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2036",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:15:16.631Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-036-http-front.png",
+          "sha256": "70ddfd846361c8eadec487175705385bfba9ca3d2e81f0c5c335c9a31018fffc",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-036-http-reduced.png",
+          "sha256": "5e528c7785ee79a12578445679a39c3d7e2d17552f74ddc233a1b99e6103c41d",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-036-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "2c76ee2796b9345a6ecae9ec98f0556e025ef3aa386c473edc29f9f9141192ad",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-033-036.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan scaffold decks/brick forms/timber/toolbox, pale scaffold uprights, teal handcart, yellow safety rail and dark bars/toolbox lid.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1452
+    },
+    {
+      "room_id": "PAN-037",
+      "name": "설비 작업 구역",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2037",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:15:22.422Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-037-http-front.png",
+          "sha256": "8c67c1d5ea2c32b100f94c63df1e331b0787f5b2cbfc14a65431ac53fb9566f1",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-037-http-reduced.png",
+          "sha256": "02930e0ee71b8bda9f6ba6179aa78e031650e1731f8e46e8e2f4e9571d9d9711",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-037-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "1aa1a8ec12d71a19942c645c9b36e5c044f60f867a2da0742de7466e15aa1951",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-037-040.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Pale vertical pipes and ladder, teal connecting pipe/cabinet/tray, tan valve/bench/pegboard, dark tool heads.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1376
+    },
+    {
+      "room_id": "PAN-038",
+      "name": "환경 조사 지점",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2038",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:15:32.210Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-038-http-front.png",
+          "sha256": "ccf5b39f65166397ad2bbe6734fe6656a4aa163afa4c00a89c8a023c067f39f1",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-038-http-reduced.png",
+          "sha256": "1424beed0f3d33f1b5856a5d4d6b1acc47613cca26c367b09b9c4525680781a9",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-038-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "62be2c90c953601640cd69117a3267fc4471511f63e33a0936a0322e2125f295",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-037-040.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Soft green terrain/foliage, tan table and bag, teal lower shelf, small yellow meter, pale vial and ochre box.",
+      "small_or_occluded_limits": "Meter/vial details are very small.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1068
+    },
+    {
+      "room_id": "PAN-039",
+      "name": "관측 지점",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2039",
+        "version": "v004"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:15:41.151Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-039-http-front.png",
+          "sha256": "ca723eb688e4f697c17cae48ad2c218fb6b478cd6c09e5e8a12b187e5b5440a3",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-039-http-reduced.png",
+          "sha256": "63cc78bc317666d6ddba1081deb46c6b64fdaa53faacfe54f95fc4c07be7c331",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-039-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "c2891b1968e797c2535d93bb534dc4c2b9610259a63e514db9fc861f193aaec9",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-037-040.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Yellow sensor housing on dark tripod, white weather collars/pale mast with dark wind arms, tan bench/table, teal laptop face, dark case.",
+      "small_or_occluded_limits": "Thin wind-sensor strokes have limited background contrast.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1648
+    },
+    {
+      "room_id": "PAN-040",
+      "name": "재배지",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2040",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:15:51.131Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-040-http-front.png",
+          "sha256": "01be7714a27d0727b110c6fcccef6745b937668628420e1d57e1b17a00f2acb4",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-040-http-reduced.png",
+          "sha256": "84033a9665db2511a4bd5f6e6267546a72931bd6b89160021ae860447e206086",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-040-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "f478adf260804849b6b559aac4cb84ae8a4aae9d2c7b79124c1c06c41d4bb7e5",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-037-040.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Green crops/watering can, brown soil and wood planter walls, teal tub, dark irrigation/spade/rake heads and tan handles.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 2736
+    },
+    {
+      "room_id": "PAN-041",
+      "name": "온실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2041",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:16:00.612Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-041-http-front.png",
+          "sha256": "addff04e16b490688e57c377ca261a4349f052eeba6bc3f5790107f9528c8eb7",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-041-http-reduced.png",
+          "sha256": "b91387d236ce8a74f23a21cf27c50141082e4348a5e62fd959df5fd3df55c697",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-041-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "16232d36aff9760d4c462f0d73dec3814f69a9446cb8e748de7ba8d7c384ab1a",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-041-044.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Cream greenhouse frame, teal tank/cart, green seedlings in dark trays, tan benches with purple legs and pale weather sensor collars.",
+      "small_or_occluded_limits": "Seedling leaves and wind-sensor strokes are small.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 2588
+    },
+    {
+      "room_id": "PAN-042",
+      "name": "축사",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2042",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:16:13.694Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-042-http-front.png",
+          "sha256": "1e0da504ab12e75a4769b1dda68f1461a1c8d269e6a2de215eeae9992f0f70b5",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-042-http-reduced.png",
+          "sha256": "46625a1b3ce166f50d095a8dd0222cdb642e0b976922b4bcda823658d8ae23a5",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-042-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "43aa73ef9c220a69ca607a7a1ddd5d9de54bb0a2628942fc9e6f6801818850de",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-041-044.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan pen rails, intentional yellow bedding pads, teal trough/tank/bucket, cream silo and pale cleaning-tool heads.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1152
+    },
+    {
+      "room_id": "PAN-043",
+      "name": "동물 관리실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2043",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:16:20.037Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-043-http-front.png",
+          "sha256": "0726b713df282d43f437048c2d069641566835af9b6014b316c63d08f745154a",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-043-http-reduced.png",
+          "sha256": "bfa7ca498d8284daeaa41671216eb454c3b1b2333c8aedb9d73cd463d0659a0a",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-043-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "4c102918b54107aae7e8c26833c50477fbfc981e5cf8042767436f594414b2fc",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-041-044.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Cream sink/cage frames, dark cage bars and bowl interiors, teal lower shelf/bowl/tray, yellow bowl rim and purple mat.",
+      "small_or_occluded_limits": "Some cage bars occlude the interior; no interior-use accuracy is asserted.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1568
+    },
+    {
+      "room_id": "PAN-044",
+      "name": "선박 갑판",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2044",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:16:29.633Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-044-http-front.png",
+          "sha256": "3bca4f087d48a8be3e731ad68568a53bfa676dc72798cf29f1011092d6b4455f",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-044-http-reduced.png",
+          "sha256": "f9b65a9c24d787a6321864685b251df00ea641a6c1ceeb5c293ecd6de91520dc",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-044-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "c7861f63fe4aa30e3ac7ab7f9632200b5b6665f24e7d632331a0b657a35f0bad",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-041-044.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Pale railings and deck, tan ring/rope, dark capstans, green storage and ochre box; no water-color patch on deck.",
+      "small_or_occluded_limits": "Fine rope-coil stroke is small against the pale deck.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1456
+    },
+    {
+      "room_id": "PAN-045",
+      "name": "조타실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2045",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:16:34.698Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-045-http-front.png",
+          "sha256": "3a8df4bce1265fb55fd91ed231e183fcbf7d4d395161a93d026893bce353d2fb",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-045-http-reduced.png",
+          "sha256": "12283b2e90989c93136e85ea963af064473b533a4852a4c878f6c31e5a02e04b",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-045-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "118a1deea9991bacab14b5d4245d33ecebee124b9caae4aed167ad3a812f71c9",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-045-048.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Pink helm chair, dark base/readout borders/radio, teal readouts, cream monitor frame, tan wheel and pale bedside top.",
+      "small_or_occluded_limits": "Radio and console readout details are small.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1236
+    },
+    {
+      "room_id": "PAN-046",
+      "name": "부두",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2046",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:16:44.320Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-046-http-front.png",
+          "sha256": "6bad9a0d59cf6e45c8f2ad3b01ce916ce3c44d5f47069a00f544d2eafd25eb17",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-046-http-reduced.png",
+          "sha256": "8494b3d4eecea5f1468d285e4fa12660e7ca9134721bdd9cea1bc3d916219d9e",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-046-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "b7db34c76b1614f8ad82de0eaf3528ab9bec28ddb667fa277ece122a16be0739",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-045-048.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Deliberate cyan water strip, pale dock slab, tan life ring/rope, dark bollards with yellow caps, teal cart and ochre boxes.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1280
+    },
+    {
+      "room_id": "PAN-047",
+      "name": "체육관",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2047",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:16:54.679Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-047-http-front.png",
+          "sha256": "60983e2a7d4a6b1301986304f6395640b407e5c8cfaa846065d1c8c313e089f8",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-047-http-reduced.png",
+          "sha256": "a1ce833143222bd6d238ec7a00ef2fa79a09489cafc6ba56c06a62791eaa704f",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-047-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "a949725cb2d495a5e821c65cf96af7d340b19bdb556b2c46fe1d426e19ec90bc",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-045-048.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Dark ball rack/bench top, orange balls, tan bench, cyan mat and teal bottles with dark caps.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1392
+    },
+    {
+      "room_id": "PAN-048",
+      "name": "운동 지도실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2048",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:17:06.768Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-048-http-front.png",
+          "sha256": "c1fb7b86f101b804a5b1ca680fd8e9b319b7fc5f749ea76b802b23abb9b0d6b2",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-048-http-reduced.png",
+          "sha256": "b2fc50c1d33324afbf5e09715864d31dd22e9add968d38039b44439616cc3d35",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-048-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "3bcc69df8048c50b1815868c44122e1037027e99ad573367e63ea3821b85683f",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-045-048.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Grey mirror with tan frame, dark dumbbells, cyan mat/step, tan exercise bar and teal bottles with dark caps.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 908
+    },
+    {
+      "room_id": "PAN-049",
+      "name": "경기 구역",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2049",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:17:13.480Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-049-http-front.png",
+          "sha256": "9feeed6fc8e03c2bdf81dc96425d64cd9419b11f216627296cb44224fdaa8595",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-049-http-reduced.png",
+          "sha256": "46659dc2b13ec31afcf591df02a0452bf19ef7f5fb6510c64ef722d5597b3593",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-049-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "1589337d1736b549d7f65050cbede751a724e9d4785f541377a545c92cff811b",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-049-052.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Green court with white lines/goals/ball, tan benches, teal scoreboard face, purple support and dark scoreboard base.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1388
+    },
+    {
+      "room_id": "PAN-050",
+      "name": "수사실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2050",
+        "version": "v004"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:17:22.758Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-050-http-front.png",
+          "sha256": "116b3d9921ece856b3b0191a0549d2961583e0cc08b15ba8843679ba96d95a7c",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-050-http-reduced.png",
+          "sha256": "9f18b68e1560d89eaa0a8e383586da5d6192cb9d9fe95793aaa4ab2039fd07da",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-050-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "5198acef1c7d0e8f0e59a210a531649ca188dad1edf603621bf77e31c5975841",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-049-052.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Green cabinet, purple board/tray, grey board face, dark monitor/PC/peripherals, tan desk and distinct colored files.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 2104
+    },
+    {
+      "room_id": "PAN-051",
+      "name": "증거 분석실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2051",
+        "version": "v004"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:17:28.496Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-051-http-front.png",
+          "sha256": "6fb0fe6c74d0340d8329cdb73a3460eff2faed795f937ffeeab908098bed1cea",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-051-http-reduced.png",
+          "sha256": "e840f052ece1c2de0e5f195cbcd49915c2e1d1c9818ad4a4f16d3e32042f5b8f",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-051-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "27f0a43234ac3f2ce5b4d6c910051eb4f69cf608125b5cce6fea3160f080c3e1",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-049-052.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Cream laboratory tops, teal cabinets/cart/tray, dark microscope/monitor/PC/case, pale catches and mint screen/tray areas.",
+      "small_or_occluded_limits": "Microscope controls and case details are small.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1508
+    },
+    {
+      "room_id": "PAN-052",
+      "name": "법정",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2052",
+        "version": "v001"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:17:37.814Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-052-http-front.png",
+          "sha256": "242888fff8581a29eff80a6f153abdfc65039eea8034ad0d7946ff1085787af3",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-052-http-reduced.png",
+          "sha256": "a726cceeb132a8f75635adaa328bc98c6ad9594444388cc6ef550ab46562f263",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-052-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "dfa3f5133b5b52b8668c103dcdce09a009d00be070ae57581854e0a2a2f229c8",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-049-052.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan judge bench/platform/desks, teal seats, purple desk legs and cream drawers with dark handles.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1560
+    },
+    {
+      "room_id": "PAN-053",
+      "name": "물류 창고",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2053",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:17:47.421Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-053-http-front.png",
+          "sha256": "c1863eee1d536332717117434c35a1036b6c7d3abdf570a6bfff6c16322cb3a9",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-053-http-reduced.png",
+          "sha256": "652621254e798c9c71b16d5376d6767afdf669ac30fe9f9ff9e59917078c1b9b",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-053-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "8944fbeb46f46516b3f7fef7f747e0ee6f02dc8a8e92c62cb8adf46bf119aa82",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-053-056.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan shelves/pallet/bench, ochre boxes with pale labels, teal lower shelf and intentional yellow pallet-jack forks with dark handle.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1132
+    },
+    {
+      "room_id": "PAN-054",
+      "name": "운송 조종 공간",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2054",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:17:55.938Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-054-http-front.png",
+          "sha256": "4ed30b35f63a1f2bf7e81820dbd8b5c6633fefebc19fbce70623fbea820c4bdf",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-054-http-reduced.png",
+          "sha256": "24f9172e90701e18daba783174db357ca08bedfec98655e0d4b34c6c80f5d478",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-054-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "89abfde8315e5bd377bb1d5e7d338888ccb3dbac9b68f2207c7a1e133fba4f3a",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-053-056.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Pink driver seat, dark monitor/readout borders/radio, teal readouts and passenger chair, cream monitor housings and tan/cream support.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1260
+    },
+    {
+      "room_id": "PAN-055",
+      "name": "운송 거점",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2055",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:18:02.180Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-055-http-front.png",
+          "sha256": "1fdd501df80721a59e20325b2bc01f688b5893438db48a637b717b823aae625e",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-055-http-reduced.png",
+          "sha256": "d46556203c27aa5ec7ef3b4090281ec4e2bf3ebb11705147098fa2037d6c986b",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-055-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "e576255ec79bc0d0f41afb3df889469678a1712bc60fbfad75a7772e9e4ff7b6",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-053-056.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Teal counter/seats/cart/sign face, tan top/bench/shelf, ochre parcel boxes, purple sign/seat supports and dark bench legs.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1852
+    },
+    {
+      "room_id": "PAN-056",
+      "name": "금융 창구",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2056",
+        "version": "v004"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:18:12.035Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-056-http-front.png",
+          "sha256": "dcf350511799024470b31e04b7a33347cf587d6fc5bfc573b1e58cf5e5ae150f",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-056-http-reduced.png",
+          "sha256": "8fcc24444656ec8b035bd9f75fb13fe10bc871333f6d163810b4143ef143c5c9",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-056-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "d72c3a3842b1611f90ba0cf3018d6df535581036c199d0d85e91ea34d0408cc3",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-053-056.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Teal counters/seats, tan tops/chair backs, dark electronics, purple tray/kiosk/seat supports; tray edge and monitor remain separate.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 3140
+    },
+    {
+      "room_id": "PAN-057",
+      "name": "금융 상담실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2057",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:18:18.477Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-057-http-front.png",
+          "sha256": "d8483d85dee367300b6fc0ffb1851c8cda1dac57e8a72a491c347962e69029c6",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-057-http-reduced.png",
+          "sha256": "5d8a7ce4bd601c04d038934dcd6a29a2a547fde612f6d623569f2fda75b84b48",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-057-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "8cd5a834286e8fb8da92ad503e449fb72078d1374de2a26037ab82d2e49d9caa",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-057-060.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Teal chairs/laptop face, tan table, green cabinet, dark calculator/laptop frame and separate mint/purple/yellow file spines.",
+      "small_or_occluded_limits": "Calculator keys are tiny.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1376
+    },
+    {
+      "room_id": "PAN-058",
+      "name": "가정 수리 공간",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2058",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:18:26.570Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-058-http-front.png",
+          "sha256": "46c463656eaa81436aae4b5437b0a9c41d84db449db381b8072e830c77533ce9",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-058-http-reduced.png",
+          "sha256": "98f0d977f17847403a8316539c5c3aa710ecf67572fefb5027b47784b3c6a550",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-058-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "49a1a07fc98ea0eb34830c233ef96cf19cafffd675fb3fdd18038cc0744c1223",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-057-060.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Purple repair mat, teal washer door/cart/tray, cream washer casing, dark tool heads and toolbox lid, green cabinet.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1224
+    },
+    {
+      "room_id": "PAN-059",
+      "name": "방문 학습 공간",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2059",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:18:36.001Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-059-http-front.png",
+          "sha256": "cb6157d1501091d486e1d7665de9bc265e3c2bb35dbbc5fef743b3fb79f1ca47",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-059-http-reduced.png",
+          "sha256": "03e91bfe2ede3372170e9db60af1a52f996020ce40ed9edb60e369b487e2c67c",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-059-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "6e0637e098a08351c89fec1c89d4284e725f6fad88a16c9d9d4b5d680e6e94b4",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-057-060.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan table/shelf/bag, teal chairs/book cover, dark pen and cream notebook page edges.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 960
+    },
+    {
+      "room_id": "PAN-060",
+      "name": "서버실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2060",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:18:48.127Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-060-http-front.png",
+          "sha256": "a83b3fe0beda76237cc53040c9874887682d91af3c32fa1804a669355504bc77",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-060-http-reduced.png",
+          "sha256": "aa27a1cfa0d41eba26779217f6eebfcc77d0d2db07af8ee6591868162ae38948",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-060-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "599821af666ee31d5b8319e4ff316749e111a76e77df0b2d2bd89c1042481d32",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-057-060.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Dark rack faces and cases, teal tiny indicators/laptop/cart/cabinet, grey rack surfaces and intentional yellow/teal cable lines.",
+      "small_or_occluded_limits": "Small rack status lights/cable strokes are visible but not text-legible.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 2252
+    },
+    {
+      "room_id": "PAN-061",
+      "name": "관제실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2061",
+        "version": "v004"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:18:54.803Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-061-http-front.png",
+          "sha256": "7f8d59540a46051736fd14667fffcd381e56136a642216a0dfdd074dde458dcb",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-061-http-reduced.png",
+          "sha256": "bee743c5a8abf905914e3acf71f694217c56b5689cf16191af0165664aeb068e",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-061-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "741c261f4c13420a3568e632c1ea5c7e05cb7a0e77136e74e68ebca2a0a6eac4",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-061-064.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Cream console/terminal housings and support tops, dark monitor/radio/readout borders, teal readouts and tan office chair.",
+      "small_or_occluded_limits": "Terminal readouts and radio antenna are small.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 2076
+    },
+    {
+      "room_id": "PAN-062",
+      "name": "거실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2062",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:19:04.035Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-062-http-front.png",
+          "sha256": "f02a00a3a8117ab8c126f58b06a278324637609b4839989205951add4ee2dc13",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-062-http-reduced.png",
+          "sha256": "4a4f5d8ebeadfda7ae24c48e439dab937fdeb3e4573ccd19a83a166250055936",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-062-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "78c560c9d62708e21bed53dc84bd5b16921ebba354186d58d14293c2e8b939ee",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-061-064.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Cream sofa with tan feet, purple rug, tan coffee table, dark TV, green cabinet and plant.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1272
+    },
+    {
+      "room_id": "PAN-063",
+      "name": "주택 관리 공간",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2063",
+        "version": "v004"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:19:09.627Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-063-http-front.png",
+          "sha256": "a193cc023ac601977859d6928e9a51da93a4e64c38fc5fcea33c48e3626a5143",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-063-http-reduced.png",
+          "sha256": "006c1551cffa9a058e4a4d065d1f5a84412f4f43e9075f0362ef6d6fb0af93af",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-063-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "b9b924fe5dd70502d5ecf1dde9ab5c67ae4ac4abe7f2afe67a6e1967d4af893f",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-061-064.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Grey board with purple frame, teal cabinet/tray/bucket, green storage, tan work surfaces, dark monitor/toolbox lid.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1396
+    },
+    {
+      "room_id": "PAN-064",
+      "name": "기독교(개신교) 예배실 — 목사",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2064",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:19:18.238Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-064-http-front.png",
+          "sha256": "3d97ad1f4fb07d3e6930b3ab4ce6e41e8afcfb64e2049157907dcebe6bfa999d",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-064-http-reduced.png",
+          "sha256": "eb1633c8ce6a99359de80f30040297ff4cb45f52bad75f467731b56779c1f743",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-064-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "46bd3982fc6adb8b84e1377a20f27c287470a10a1cb57487cb6e7818bf137650",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-061-064.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan pews/pulpit/cross, white book pages, pale inset cross on pulpit, dark keyboard frame with separate white/black keys.",
+      "small_or_occluded_limits": "Open pages/keyboard key details are small; textual legibility is not asserted.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1532
+    },
+    {
+      "room_id": "PAN-065",
+      "name": "군 행정실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2065",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:19:31.552Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-065-http-front.png",
+          "sha256": "2ac9febc06c1253d628a139766fd9238db7ef0b926595186e126fd63b496cb42",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-065-http-reduced.png",
+          "sha256": "7f82abc8a1c883474f50511c1822ad2a72deee1827b94f7c77bbe8ed858930d8",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-065-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "5194c6fd28db1ee22dae2276a6498d9672f4be8f24fe68ac6fd9f4696e8095cd",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-065-068.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan desk/chair, teal visitor chair/board face, purple board frame, green cabinet, dark monitor/radio/PC and pale handles.",
+      "small_or_occluded_limits": "Radio antenna is a thin low-contrast stroke.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 2060
+    },
+    {
+      "room_id": "PAN-066",
+      "name": "생활관",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2066",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:19:38.521Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-066-http-front.png",
+          "sha256": "27048fdbd6be6a38232e5b2080c49ff48c3427185cbb3d3e05ce4e13439851cc",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-066-http-reduced.png",
+          "sha256": "dbd67bfa9c9d3374c62bcc49079f7d59e9f35e94dacfbf3d8f8daba5b48c6205",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-066-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "b341a05db20551a7986c659a1377b182547ce07d75a7324aaad07092b8820bed",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-065-068.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan bed frames/benches, purple bedding/luggage, white pillows, teal lockers/chair and cream bedside surface.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1616
+    },
+    {
+      "room_id": "PAN-067",
+      "name": "장비 관리실",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2067",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:19:48.351Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-067-http-front.png",
+          "sha256": "4d9794990b6fef7ce63a383f80819525d406dc41e1a25631c158a09de71f39b9",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-067-http-reduced.png",
+          "sha256": "e30e5db3a3b32e14818a2d103cf3aec46f883a100ceb057f5f639a39d64f337b",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-067-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "451c2976e04a522d70b0fd05bb6a1b0f818cb821e1b92db5490d5a5d58d2e2bc",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-065-068.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan shelf/pegboard/bench/toolbox body, teal cart/lower shelf, dark equipment cases/tool heads and pale handles/catches.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1584
+    },
+    {
+      "room_id": "PAN-068",
+      "name": "출장 업무 공간",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2068",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:19:58.461Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-068-http-front.png",
+          "sha256": "8d86ff0171e51d0f350b223f4d46d371ff24468f76b7f5594db333b1ba68e3c4",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-068-http-reduced.png",
+          "sha256": "73cadd38b2ef69a1db0c40928cd962d5d109585b31038409126a90c61c4b0238",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-068-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "d79befa2a53db7874798edf0f43fa27d6bd570e0dc0129a559803ce1a8825e6d",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-065-068.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Purple luggage with teal strips, dark laptop/case, teal screen/phone/chair, tan table/bag and cream paper stack.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1136
+    },
+    {
+      "room_id": "PAN-069",
+      "name": "안내 집결 지점",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2069",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:20:07.596Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-069-http-front.png",
+          "sha256": "0c80aa9a2749bd5d5e3682f58930eb43931e1c0358a8903dadcf353a37175269",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-069-http-reduced.png",
+          "sha256": "e21652a4addb7f9c926ab6d944ea8cd652d6bb9d4ae2fa6f7d7cff69f28ec670",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-069-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "33490bfcec1c6b63f2d5809754f72d325b1b358a5c72f2e4f83531d03e4645ee",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-069-071.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan rope-barrier posts/bench/board frame/bag, pale ropes, grey board, teal sign, purple sign support/luggage and green foliage.",
+      "small_or_occluded_limits": "Rear/underside faces are not exposed by these two browser states; separate component directional proofs cover other visible views.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1468
+    },
+    {
+      "room_id": "PAN-070",
+      "name": "불교 법당 — 스님",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2070",
+        "version": "v003"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:20:17.198Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-070-http-front.png",
+          "sha256": "a7ed99711967390671ded5869f78e1d9e82a70db8b8f2608ece7f82ec912d329",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-070-http-reduced.png",
+          "sha256": "242690ec1182d82e52c25e0ec2351e5bd5513b78f98ad0dac6366853d9cd0509",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-070-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "0ff8b96a8033d039491a7765d2b6c0e6b6814f97a2b8b6a32970d4ead1071481",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-069-071.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Gold Buddha on tan altar, deliberate pink cushions/lotus, cream incense bowl, tan drum/mallet and pale book rest.",
+      "small_or_occluded_limits": "Incense sticks, lotus center and mallet are very small.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1164
+    },
+    {
+      "room_id": "PAN-071",
+      "name": "천주교 성당 — 신부님",
+      "assembly_asset_ref": {
+        "asset_id": "AST-2071",
+        "version": "v002"
+      },
+      "status": "pass_for_observed_target_visual_scope",
+      "http_capture_checked_at": "2026-10-30T22:20:26.269Z",
+      "images": [
+        {
+          "mode": "front",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-071-http-front.png",
+          "sha256": "b8fac2c0fc46002f4e1233d0977c47c52dc74662611971cf7c335a49e2f01b4d",
+          "viewport": [
+            1440,
+            900
+          ]
+        },
+        {
+          "mode": "reduced",
+          "path": "docs/machine/evidence/workplaces-v006/PAN-071-http-reduced.png",
+          "sha256": "af214a9aac49a7ebd3b5aa930f4045ae8d73f71628bba0698c55fc77943b8be3",
+          "viewport": [
+            900,
+            600
+          ]
+        }
+      ],
+      "native_pixel_color_pair_path": "docs/machine/evidence/workplaces-v006/visual-review/PAN-071-native-color-pair.png",
+      "native_pixel_color_pair_sha256": "1c970b2c539b5cdf2a1586d3c3026a2b5ea2506226cfdc892848bef6e21c09c4",
+      "review_sheet_path": "docs/machine/evidence/workplaces-v006/visual-review/http-pairs-069-071.jpg",
+      "checks": {
+        "major_scene_presence": "pass",
+        "observed_palette_regions": "pass",
+        "observed_color_boundary_bleed": "pass",
+        "visible_layout_silhouette": "pass",
+        "viewport_and_ui_clipping": "pass",
+        "major_visible_support": "pass",
+        "shared_material_texture": "pass"
+      },
+      "visible_color_observations": "Tan pews/pulpit/altar/cross, white altar cloth, gold chalice/candlesticks, pale figure on cross and teal book cover.",
+      "small_or_occluded_limits": "Chalice stem and crucifix figure details are small; specialist iconographic accuracy is not asserted.",
+      "runtime_material_count": 1,
+      "runtime_texture_count": 1,
+      "runtime_measured_triangles": 1760
+    }
+  ]
+}

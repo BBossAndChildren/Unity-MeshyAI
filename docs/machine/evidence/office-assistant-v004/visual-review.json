@@ -1,0 +1,12 @@
+{
+  "schema_version": 3,
+  "checked_at": "2026-10-31T04:26:15.691381+09:00",
+  "status": "fail",
+  "scope": "Visual review only. The 16 functional UI cases passed separately.",
+  "finding": "Pixels outside the reduced closeup camera viewport retain parts of the prior office frame.",
+  "evidence": [
+    "docs/machine/evidence/office-assistant-v004/monitor-questions.png",
+    "docs/machine/evidence/office-assistant-v004/copier-printing-paper.png"
+  ],
+  "resolution": "Separate full-frame background clear camera added for v005; v004 kept as intermediate build."
+}

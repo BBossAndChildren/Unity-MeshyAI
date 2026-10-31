@@ -1,0 +1,163 @@
+{
+  "schema_version": 3,
+  "recorded_at": "2026-10-31T06:42:18.221303+09:00",
+  "production_script": "meshy/models/blender/AST-1101/v003/processing/finish_floor_and_stylus.py",
+  "prop_replacements": [
+    {
+      "asset_ref": {
+        "asset_id": "AST-1101",
+        "version": "v003"
+      },
+      "supersedes": {
+        "asset_id": "AST-1101",
+        "version": "v002"
+      },
+      "reason": "Stylus moved 40 mm sideways clear of tablet edge, retaining actual table contact.",
+      "triangles": 76
+    }
+  ],
+  "rooms": [
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-027",
+        "version": "v001"
+      },
+      "name": "디자인 작업실",
+      "asset_ref": {
+        "asset_id": "AST-2027",
+        "version": "v004"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1101-005",
+          "kind": "structural_asset_replacement",
+          "before": "v002",
+          "after": "v003"
+        }
+      ],
+      "scene_triangles": 1692
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-042",
+        "version": "v001"
+      },
+      "name": "축사",
+      "asset_ref": {
+        "asset_id": "AST-2042",
+        "version": "v002"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1161-006",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1161",
+            "version": "v001",
+            "candidate_id": "CND-161",
+            "instance_id": "AST-1161-006",
+            "position_blender_m": [
+              -0.9,
+              -0.3,
+              0.306
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 1
+          },
+          "after": {
+            "asset_id": "AST-1161",
+            "version": "v001",
+            "candidate_id": "CND-161",
+            "instance_id": "AST-1161-006",
+            "position_blender_m": [
+              -0.9,
+              -0.3,
+              0.2960000057220459
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 1
+          },
+          "reason": "Fence post actual mesh vertices lowered 10 mm onto floor."
+        },
+        {
+          "instance_id": "AST-1161-007",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1161",
+            "version": "v001",
+            "candidate_id": "CND-161",
+            "instance_id": "AST-1161-007",
+            "position_blender_m": [
+              0.8,
+              -0.3,
+              0.306
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 1
+          },
+          "after": {
+            "asset_id": "AST-1161",
+            "version": "v001",
+            "candidate_id": "CND-161",
+            "instance_id": "AST-1161-007",
+            "position_blender_m": [
+              0.8,
+              -0.3,
+              0.2960000057220459
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 1
+          },
+          "reason": "Fence post actual mesh vertices lowered 10 mm onto floor."
+        }
+      ],
+      "scene_triangles": 1152
+    }
+  ],
+  "changed_prop_count": 1,
+  "changed_room_count": 2,
+  "paid_calls": 0,
+  "meshy_credits_used": 0
+}

@@ -1,0 +1,86 @@
+{
+  "schema_version": 3,
+  "version": "v001",
+  "checked_at": "2026-10-31T07:50:03.866534+00:00",
+  "inspection_kind": "read_only_source_binding_inventory_not_actual_playback",
+  "source_refs": [
+    {
+      "path": "web/career-audio/v002/audio-manifest.json",
+      "sha256": "dec1fbf0f314e803e30d1dd150419065a95d827cfa409da0aa6361215dbba8f6"
+    },
+    {
+      "path": "docs/machine/evidence/career-suite-audio-source-probe-v003.json",
+      "sha256": "0c119c2aaeb9f71ef57bf665aeadbb5b8f3b64c3d9d7a705247a1104b467d939"
+    }
+  ],
+  "counts": {
+    "catalog_candidates": 108,
+    "available_files": 34,
+    "runtime_semantic_keys": 40,
+    "runtime_keys_with_files": 30,
+    "runtime_keys_without_files": 10,
+    "available_without_gameplay_binding": 4
+  },
+  "runtime_keys_with_files": [
+    "card_move",
+    "drag_drop",
+    "drag_pick",
+    "drawer_close",
+    "drawer_open",
+    "field_edit",
+    "file_place",
+    "hint",
+    "keyboard",
+    "mission_done",
+    "object_select",
+    "part_fit",
+    "part_pick",
+    "part_remove",
+    "phone_pick",
+    "printer_run",
+    "printer_sheet",
+    "printer_start",
+    "printer_stop",
+    "radio",
+    "reset",
+    "resume",
+    "slider_tick",
+    "snap",
+    "toggle",
+    "ui_click",
+    "ui_focus",
+    "view_close",
+    "view_open",
+    "writing"
+  ],
+  "runtime_keys_without_files": [
+    "exit",
+    "handoff_send",
+    "pause",
+    "request_change",
+    "retry",
+    "save",
+    "shutter",
+    "step_done",
+    "timer_done",
+    "validation"
+  ],
+  "available_without_gameplay_binding": [
+    "mouse",
+    "phone_ring",
+    "rotate_tick",
+    "tab_switch"
+  ],
+  "scope": [
+    "Pilot544",
+    "OfficeDirect1",
+    "OfficeTen10"
+  ],
+  "limitations": [
+    "Runtime source inventory is not proof of actual WebGL playback or every control path.",
+    "Only original available clips are used; unavailable clips are skipped without a replacement or generation.",
+    "All 34 available clips can be previewed in the frontend library; four have no gameplay trigger.",
+    "No narrator/TTS, no forced ambience or irrelevant device sounds.",
+    "A sound enabled after a loop cue was suppressed may need reopening the work surface to issue a fresh loop cue."
+  ]
+}

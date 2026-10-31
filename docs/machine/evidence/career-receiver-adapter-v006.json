@@ -1,0 +1,36 @@
+{
+  "schema_version": 3,
+  "checked_at": "2026-10-30T21:37:28.339Z",
+  "environment": "Node controlled-delivery checks of actual dist-v006 bundled receiver factory; fixture transport only, not Unity/WebGL/React UI execution",
+  "artifact_path": "web/career-receiver/dist-v006/assets/index-E8Keu6qz.js",
+  "artifact_sha256": "527775377a561163738a419e1dc2de600ae8a00adbe9efa3e788a527215cc6b5",
+  "cases": [
+    {
+      "name": "v006_suspend_listen_replay_recovery_and_idempotent_resume",
+      "status": "pass",
+      "retained_event_ids": [
+        "fixture-1",
+        "fixture-2",
+        "fixture-3"
+      ]
+    },
+    {
+      "name": "v006_conflicting_event_id_preserves_original",
+      "status": "pass"
+    },
+    {
+      "name": "v006_out_of_order_gap_detection_and_closure",
+      "status": "pass"
+    },
+    {
+      "name": "v006_suspended_terminal_and_missing_history_recovery",
+      "status": "pass",
+      "terminal_event_id": "fixture-8",
+      "retained_unique_events": 8
+    }
+  ],
+  "limitations": [
+    "All events are deliberate adapter fixtures; their outcomes/counters are not gameplay measurements.",
+    "This evidence must not be registered as Unity or WebGL execution pass."
+  ]
+}

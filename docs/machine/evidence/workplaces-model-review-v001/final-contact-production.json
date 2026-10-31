@@ -1,0 +1,1938 @@
+{
+  "schema_version": 3,
+  "recorded_at": "2026-10-31T06:39:42.031708+09:00",
+  "production_script": "meshy/models/blender/AST-1039/v003/processing/finish_support_contacts.py",
+  "prop_replacements": [
+    {
+      "asset_ref": {
+        "asset_id": "AST-1039",
+        "version": "v003"
+      },
+      "supersedes": {
+        "asset_id": "AST-1039",
+        "version": "v002"
+      },
+      "reason": "Focus knob now overlaps the actual hexagonal arm, closing remaining 6 mm AABB gap.",
+      "triangles": 144
+    },
+    {
+      "asset_ref": {
+        "asset_id": "AST-1098",
+        "version": "v002"
+      },
+      "supersedes": {
+        "asset_id": "AST-1098",
+        "version": "v001"
+      },
+      "reason": "Independent plates lowered to same actual tabletop contact as cup.",
+      "triangles": 124
+    },
+    {
+      "asset_ref": {
+        "asset_id": "AST-1101",
+        "version": "v002"
+      },
+      "supersedes": {
+        "asset_id": "AST-1101",
+        "version": "v001"
+      },
+      "reason": "Independent stylus lowered 37 mm to supporting table.",
+      "triangles": 76
+    },
+    {
+      "asset_ref": {
+        "asset_id": "AST-1144",
+        "version": "v003"
+      },
+      "supersedes": {
+        "asset_id": "AST-1144",
+        "version": "v002"
+      },
+      "reason": "Probe moved 35 mm sideways into mounted sensor housing.",
+      "triangles": 184
+    },
+    {
+      "asset_ref": {
+        "asset_id": "AST-1150",
+        "version": "v002"
+      },
+      "supersedes": {
+        "asset_id": "AST-1150",
+        "version": "v001"
+      },
+      "reason": "Independent rake lowered 110 mm so its teeth reach floor beside spade.",
+      "triangles": 172
+    },
+    {
+      "asset_ref": {
+        "asset_id": "AST-1254",
+        "version": "v002"
+      },
+      "supersedes": {
+        "asset_id": "AST-1254",
+        "version": "v001"
+      },
+      "reason": "Independent mallet lowered 22 mm to support plane.",
+      "triangles": 40
+    }
+  ],
+  "rooms": [
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-001",
+        "version": "v001"
+      },
+      "name": "공용 업무 사무실",
+      "asset_ref": {
+        "asset_id": "AST-020",
+        "version": "v006"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-010-1",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-010",
+            "version": "v001",
+            "instance_id": "AST-010-1",
+            "position_blender_m": [
+              1.0,
+              1.6,
+              1.288
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "after": {
+            "asset_id": "AST-010",
+            "version": "v001",
+            "instance_id": "AST-010-1",
+            "position_blender_m": [
+              1.0,
+              1.6,
+              1.2960000123977662
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "rotation_z_rad": 0.0,
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ]
+          },
+          "reason": "Plant pot bottom contacts actual cabinet top; remove 8 mm penetration."
+        }
+      ],
+      "scene_triangles": 4308
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-002",
+        "version": "v001"
+      },
+      "name": "협업·기획 사무실",
+      "asset_ref": {
+        "asset_id": "AST-2002",
+        "version": "v003"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1053-015",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1053",
+            "version": "v001",
+            "candidate_id": "CND-053",
+            "instance_id": "AST-1053-015",
+            "position_blender_m": [
+              0.25,
+              -0.3,
+              1.096
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 4
+          },
+          "after": {
+            "asset_id": "AST-1053",
+            "version": "v001",
+            "candidate_id": "CND-053",
+            "instance_id": "AST-1053-015",
+            "position_blender_m": [
+              0,
+              -0.4,
+              1.093000018119812
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 4
+          },
+          "reason": "Notebook moved between laptop footprints and onto table."
+        }
+      ],
+      "scene_triangles": 2552
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-003",
+        "version": "v001"
+      },
+      "name": "행정·문서 처리 사무실",
+      "asset_ref": {
+        "asset_id": "AST-2003",
+        "version": "v004"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1022-018",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1022",
+            "version": "v001",
+            "candidate_id": "CND-022",
+            "instance_id": "AST-1022-018",
+            "position_blender_m": [
+              1.45,
+              0.5,
+              1.091
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 3
+          },
+          "after": {
+            "asset_id": "AST-1022",
+            "version": "v001",
+            "candidate_id": "CND-022",
+            "instance_id": "AST-1022-018",
+            "position_blender_m": [
+              1.52,
+              0.83,
+              1.0960000343322753
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 3
+          },
+          "reason": "Folder clear of mouse and inside desk footprint."
+        }
+      ],
+      "scene_triangles": 3764
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-007",
+        "version": "v001"
+      },
+      "name": "분석실",
+      "asset_ref": {
+        "asset_id": "AST-2007",
+        "version": "v004"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1039-008",
+          "kind": "structural_asset_replacement",
+          "before": "v002",
+          "after": "v003"
+        }
+      ],
+      "scene_triangles": 1700
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-016",
+        "version": "v001"
+      },
+      "name": "복지 활동실",
+      "asset_ref": {
+        "asset_id": "AST-2016",
+        "version": "v003"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1011-003",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1011",
+            "version": "v001",
+            "candidate_id": "CND-011",
+            "instance_id": "AST-1011-003",
+            "position_blender_m": [
+              -1.7,
+              -0.7,
+              0.296
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              -90
+            ],
+            "rotation_z_rad": -1.5707963267948966,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 6
+          },
+          "after": {
+            "asset_id": "AST-1011",
+            "version": "v001",
+            "candidate_id": "CND-011",
+            "instance_id": "AST-1011-003",
+            "position_blender_m": [
+              -1.95,
+              -0.7,
+              0.296
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              -90
+            ],
+            "rotation_z_rad": -1.5707963267948966,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 6
+          },
+          "reason": "Chair back clears table edge."
+        },
+        {
+          "instance_id": "AST-1011-004",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1011",
+            "version": "v001",
+            "candidate_id": "CND-011",
+            "instance_id": "AST-1011-004",
+            "position_blender_m": [
+              0.1,
+              -0.7,
+              0.296
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              90
+            ],
+            "rotation_z_rad": 1.5707963267948966,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 6
+          },
+          "after": {
+            "asset_id": "AST-1011",
+            "version": "v001",
+            "candidate_id": "CND-011",
+            "instance_id": "AST-1011-004",
+            "position_blender_m": [
+              0.35,
+              -0.7,
+              0.296
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              90
+            ],
+            "rotation_z_rad": 1.5707963267948966,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 6
+          },
+          "reason": "Chair back clears table edge."
+        }
+      ],
+      "scene_triangles": 1396
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-018",
+        "version": "v001"
+      },
+      "name": "생산 구역",
+      "asset_ref": {
+        "asset_id": "AST-2018",
+        "version": "v003"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1074-006",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1074",
+            "version": "v001",
+            "candidate_id": "CND-074",
+            "instance_id": "AST-1074-006",
+            "position_blender_m": [
+              1.6,
+              1.3,
+              0.296
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 3
+          },
+          "after": {
+            "asset_id": "AST-1074",
+            "version": "v001",
+            "candidate_id": "CND-074",
+            "instance_id": "AST-1074-006",
+            "position_blender_m": [
+              1.95,
+              1.3,
+              0.296
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 3
+          },
+          "reason": "Toolbox clears safety railing."
+        }
+      ],
+      "scene_triangles": 1684
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-022",
+        "version": "v001"
+      },
+      "name": "서비스 창구",
+      "asset_ref": {
+        "asset_id": "AST-2022",
+        "version": "v004"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1027-007",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1027",
+            "version": "v001",
+            "candidate_id": "CND-027",
+            "instance_id": "AST-1027-007",
+            "position_blender_m": [
+              0.55,
+              0.15,
+              1.361
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 6
+          },
+          "after": {
+            "asset_id": "AST-1027",
+            "version": "v001",
+            "candidate_id": "CND-027",
+            "instance_id": "AST-1027-007",
+            "position_blender_m": [
+              0.7,
+              0.27,
+              1.3560000581741334
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 6
+          },
+          "reason": "File row clear of monitor, keyboard and mouse, within counter."
+        }
+      ],
+      "scene_triangles": 1932
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-024",
+        "version": "v001"
+      },
+      "name": "주방",
+      "asset_ref": {
+        "asset_id": "AST-2024",
+        "version": "v003"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1098-008",
+          "kind": "structural_asset_replacement",
+          "before": "v001",
+          "after": "v002"
+        }
+      ],
+      "scene_triangles": 1448
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-026",
+        "version": "v001"
+      },
+      "name": "식당 홀",
+      "asset_ref": {
+        "asset_id": "AST-2026",
+        "version": "v002"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1098-008",
+          "kind": "structural_asset_replacement",
+          "before": "v001",
+          "after": "v002"
+        },
+        {
+          "instance_id": "AST-1098-009",
+          "kind": "structural_asset_replacement",
+          "before": "v001",
+          "after": "v002"
+        },
+        {
+          "instance_id": "AST-1098-008",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1098",
+            "version": "v002",
+            "candidate_id": "CND-098",
+            "instance_id": "AST-1098-008",
+            "position_blender_m": [
+              -1.15,
+              -0.9,
+              1.096
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 3
+          },
+          "after": {
+            "asset_id": "AST-1098",
+            "version": "v002",
+            "candidate_id": "CND-098",
+            "instance_id": "AST-1098-008",
+            "position_blender_m": [
+              -1.15,
+              -0.9,
+              1.0910000438690186
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 3
+          },
+          "reason": "Cup and plates share actual table support plane."
+        },
+        {
+          "instance_id": "AST-1098-009",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1098",
+            "version": "v002",
+            "candidate_id": "CND-098",
+            "instance_id": "AST-1098-009",
+            "position_blender_m": [
+              1.15,
+              -0.9,
+              1.096
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 3
+          },
+          "after": {
+            "asset_id": "AST-1098",
+            "version": "v002",
+            "candidate_id": "CND-098",
+            "instance_id": "AST-1098-009",
+            "position_blender_m": [
+              1.15,
+              -0.9,
+              1.0910000438690186
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 3
+          },
+          "reason": "Cup and plates share actual table support plane."
+        },
+        {
+          "instance_id": "AST-010-012",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-010",
+            "version": "v001",
+            "candidate_id": "CND-065",
+            "instance_id": "AST-010-012",
+            "position_blender_m": [
+              1.8,
+              1.7,
+              0.296
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 1
+          },
+          "after": {
+            "asset_id": "AST-010",
+            "version": "v001",
+            "candidate_id": "CND-065",
+            "instance_id": "AST-010-012",
+            "position_blender_m": [
+              2.15,
+              1.6,
+              0.296
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 1
+          },
+          "reason": "Plant pot moved clear of buffet cabinet."
+        }
+      ],
+      "scene_triangles": 1928
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-027",
+        "version": "v001"
+      },
+      "name": "디자인 작업실",
+      "asset_ref": {
+        "asset_id": "AST-2027",
+        "version": "v003"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1101-005",
+          "kind": "structural_asset_replacement",
+          "before": "v001",
+          "after": "v002"
+        }
+      ],
+      "scene_triangles": 1692
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-028",
+        "version": "v001"
+      },
+      "name": "미술 작업실",
+      "asset_ref": {
+        "asset_id": "AST-2028",
+        "version": "v004"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1105-003",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1105",
+            "version": "v001",
+            "candidate_id": "CND-105",
+            "instance_id": "AST-1105-003",
+            "position_blender_m": [
+              1.3,
+              1.08,
+              0.296
+            ],
+            "rotation_euler_blender_deg": [
+              -10,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 1
+          },
+          "after": {
+            "asset_id": "AST-1105",
+            "version": "v001",
+            "candidate_id": "CND-105",
+            "instance_id": "AST-1105-003",
+            "position_blender_m": [
+              1.3,
+              1.08,
+              0.2963490707874298
+            ],
+            "rotation_euler_blender_deg": [
+              -1,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 1
+          },
+          "reason": "Spare canvas almost upright, floor contact, no shelf penetration."
+        },
+        {
+          "instance_id": "AST-1105-003",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1105",
+            "version": "v001",
+            "candidate_id": "CND-105",
+            "instance_id": "AST-1105-003",
+            "position_blender_m": [
+              1.3,
+              1.08,
+              0.2963490707874298
+            ],
+            "rotation_euler_blender_deg": [
+              -1,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 1
+          },
+          "after": {
+            "asset_id": "AST-1105",
+            "version": "v001",
+            "candidate_id": "CND-105",
+            "instance_id": "AST-1105-003",
+            "position_blender_m": [
+              1.3,
+              1.166041088104248,
+              0.2963490707874298
+            ],
+            "rotation_euler_blender_deg": [
+              -1,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 1
+          },
+          "reason": "Spare canvas rear upper edge touches shelf front, <=4 mm separation at middle shelf."
+        }
+      ],
+      "scene_triangles": 1432
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-031",
+        "version": "v001"
+      },
+      "name": "방송 스튜디오",
+      "asset_ref": {
+        "asset_id": "AST-2031",
+        "version": "v004"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1119-010",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1119",
+            "version": "v001",
+            "candidate_id": "CND-119",
+            "instance_id": "AST-1119-010",
+            "position_blender_m": [
+              1.6,
+              1.6,
+              0.2715397102832794
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 6
+          },
+          "after": {
+            "asset_id": "AST-1119",
+            "version": "v001",
+            "candidate_id": "CND-119",
+            "instance_id": "AST-1119-010",
+            "position_blender_m": [
+              2.25,
+              1.6,
+              0.2715397102832794
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 6
+          },
+          "reason": "Light stand leg clears side work desk."
+        }
+      ],
+      "scene_triangles": 1624
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-036",
+        "version": "v001"
+      },
+      "name": "건축 작업 구역",
+      "asset_ref": {
+        "asset_id": "AST-2036",
+        "version": "v003"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1131-004",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1131",
+            "version": "v002",
+            "candidate_id": "CND-131",
+            "instance_id": "AST-1131-004",
+            "position_blender_m": [
+              0.4,
+              0.9,
+              0.296
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              90
+            ],
+            "rotation_z_rad": 1.5707963267948966,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 16
+          },
+          "after": {
+            "asset_id": "AST-1131",
+            "version": "v002",
+            "candidate_id": "CND-131",
+            "instance_id": "AST-1131-004",
+            "position_blender_m": [
+              0.635,
+              0.9,
+              0.296
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              90
+            ],
+            "rotation_z_rad": 1.5707963267948966,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 16
+          },
+          "reason": "Wall branches meet at faces rather than duplicated intersecting bricks."
+        },
+        {
+          "instance_id": "AST-1080-008",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1080",
+            "version": "v001",
+            "candidate_id": "CND-080",
+            "instance_id": "AST-1080-008",
+            "position_blender_m": [
+              1.8,
+              -1.5,
+              0.296
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 7
+          },
+          "after": {
+            "asset_id": "AST-1080",
+            "version": "v001",
+            "candidate_id": "CND-080",
+            "instance_id": "AST-1080-008",
+            "position_blender_m": [
+              1.35,
+              -1.6,
+              0.296
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 7
+          },
+          "reason": "Toolbox clear of railing post and lower rail."
+        }
+      ],
+      "scene_triangles": 1452
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-039",
+        "version": "v001"
+      },
+      "name": "관측 지점",
+      "asset_ref": {
+        "asset_id": "AST-2039",
+        "version": "v004"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1144-003",
+          "kind": "structural_asset_replacement",
+          "before": "v002",
+          "after": "v003"
+        }
+      ],
+      "scene_triangles": 1648
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-040",
+        "version": "v001"
+      },
+      "name": "재배지",
+      "asset_ref": {
+        "asset_id": "AST-2040",
+        "version": "v003"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1150-009",
+          "kind": "structural_asset_replacement",
+          "before": "v001",
+          "after": "v002"
+        }
+      ],
+      "scene_triangles": 2736
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-044",
+        "version": "v001"
+      },
+      "name": "선박 갑판",
+      "asset_ref": {
+        "asset_id": "AST-2044",
+        "version": "v003"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1168-006",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1168",
+            "version": "v001",
+            "candidate_id": "CND-168",
+            "instance_id": "AST-1168-006",
+            "position_blender_m": [
+              -1.8,
+              -0.7,
+              0.7710000009536743
+            ],
+            "rotation_euler_blender_deg": [
+              90,
+              0,
+              90
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 1
+          },
+          "after": {
+            "asset_id": "AST-1168",
+            "version": "v001",
+            "candidate_id": "CND-168",
+            "instance_id": "AST-1168-006",
+            "position_blender_m": [
+              -1.785708357810974,
+              -0.7,
+              0.7710000009536743
+            ],
+            "rotation_euler_blender_deg": [
+              90,
+              0,
+              90
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 1
+          },
+          "reason": "Ring clears stanchion face while resting on deck."
+        },
+        {
+          "instance_id": "AST-1170-009",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1170",
+            "version": "v001",
+            "candidate_id": "CND-170",
+            "instance_id": "AST-1170-009",
+            "position_blender_m": [
+              -1,
+              1.2,
+              0.476
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 4
+          },
+          "after": {
+            "asset_id": "AST-1170",
+            "version": "v001",
+            "candidate_id": "CND-170",
+            "instance_id": "AST-1170-009",
+            "position_blender_m": [
+              -0.45,
+              1.2,
+              0.476
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 4
+          },
+          "reason": "Capstan clears adjacent cabinet."
+        }
+      ],
+      "scene_triangles": 1456
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-046",
+        "version": "v001"
+      },
+      "name": "부두",
+      "asset_ref": {
+        "asset_id": "AST-2046",
+        "version": "v003"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1169-007",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1169",
+            "version": "v001",
+            "candidate_id": "CND-169",
+            "instance_id": "AST-1169-007",
+            "position_blender_m": [
+              -1.9,
+              -0.6,
+              0.296
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 3
+          },
+          "after": {
+            "asset_id": "AST-1169",
+            "version": "v001",
+            "candidate_id": "CND-169",
+            "instance_id": "AST-1169-007",
+            "position_blender_m": [
+              -1.9,
+              -0.4,
+              0.3430000050067901
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 3
+          },
+          "reason": "Dock props sit on actual 50 mm paving rather than penetrate it."
+        },
+        {
+          "instance_id": "AST-1133-008",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1133",
+            "version": "v001",
+            "candidate_id": "CND-133",
+            "instance_id": "AST-1133-008",
+            "position_blender_m": [
+              1.3,
+              0.5,
+              0.296
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 8
+          },
+          "after": {
+            "asset_id": "AST-1133",
+            "version": "v001",
+            "candidate_id": "CND-133",
+            "instance_id": "AST-1133-008",
+            "position_blender_m": [
+              1.3,
+              0.5,
+              0.3460000259876251
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 8
+          },
+          "reason": "Dock props sit on actual 50 mm paving rather than penetrate it."
+        },
+        {
+          "instance_id": "AST-1058-009",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1058",
+            "version": "v001",
+            "candidate_id": "CND-058",
+            "instance_id": "AST-1058-009",
+            "position_blender_m": [
+              -0.7,
+              1.2,
+              0.296
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 3
+          },
+          "after": {
+            "asset_id": "AST-1058",
+            "version": "v001",
+            "candidate_id": "CND-058",
+            "instance_id": "AST-1058-009",
+            "position_blender_m": [
+              -0.7,
+              1.2,
+              0.3459999961853027
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 3
+          },
+          "reason": "Dock props sit on actual 50 mm paving rather than penetrate it."
+        },
+        {
+          "instance_id": "AST-1058-010",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1058",
+            "version": "v001",
+            "candidate_id": "CND-058",
+            "instance_id": "AST-1058-010",
+            "position_blender_m": [
+              0.1,
+              1.2,
+              0.296
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 3
+          },
+          "after": {
+            "asset_id": "AST-1058",
+            "version": "v001",
+            "candidate_id": "CND-058",
+            "instance_id": "AST-1058-010",
+            "position_blender_m": [
+              0.1,
+              1.2,
+              0.3459999961853027
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 3
+          },
+          "reason": "Dock props sit on actual 50 mm paving rather than penetrate it."
+        }
+      ],
+      "scene_triangles": 1280
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-050",
+        "version": "v001"
+      },
+      "name": "수사실",
+      "asset_ref": {
+        "asset_id": "AST-2050",
+        "version": "v004"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1027-007",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1027",
+            "version": "v001",
+            "candidate_id": "CND-027",
+            "instance_id": "AST-1027-007",
+            "position_blender_m": [
+              -1,
+              -0.5,
+              1.091
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 6
+          },
+          "after": {
+            "asset_id": "AST-1027",
+            "version": "v001",
+            "candidate_id": "CND-027",
+            "instance_id": "AST-1027-007",
+            "position_blender_m": [
+              1.7,
+              0.7,
+              1.296000039100647
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 6
+          },
+          "reason": "File row moved onto adjacent cabinet; tray remains on desk."
+        }
+      ],
+      "scene_triangles": 2104
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-051",
+        "version": "v001"
+      },
+      "name": "증거 분석실",
+      "asset_ref": {
+        "asset_id": "AST-2051",
+        "version": "v004"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1039-004",
+          "kind": "structural_asset_replacement",
+          "before": "v002",
+          "after": "v003"
+        }
+      ],
+      "scene_triangles": 1508
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-056",
+        "version": "v001"
+      },
+      "name": "금융 창구",
+      "asset_ref": {
+        "asset_id": "AST-2056",
+        "version": "v004"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1049-010",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1049",
+            "version": "v001",
+            "candidate_id": "CND-049",
+            "instance_id": "AST-1049-010",
+            "position_blender_m": [
+              -0.6,
+              0.6,
+              1.361
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 7
+          },
+          "after": {
+            "asset_id": "AST-1049",
+            "version": "v001",
+            "candidate_id": "CND-049",
+            "instance_id": "AST-1049-010",
+            "position_blender_m": [
+              -1.48,
+              0.55,
+              1.3560000581741334
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 7
+          },
+          "reason": "Paper tray clear of monitor and mouse, within counter."
+        }
+      ],
+      "scene_triangles": 3140
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-060",
+        "version": "v001"
+      },
+      "name": "서버실",
+      "asset_ref": {
+        "asset_id": "AST-2060",
+        "version": "v003"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1212-007",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1212",
+            "version": "v001",
+            "candidate_id": "CND-212",
+            "instance_id": "AST-1212-007",
+            "position_blender_m": [
+              1.2,
+              -0.8,
+              1.1629500408172606
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 5
+          },
+          "after": {
+            "asset_id": "AST-1212",
+            "version": "v001",
+            "candidate_id": "CND-212",
+            "instance_id": "AST-1212-007",
+            "position_blender_m": [
+              1.2,
+              -0.86,
+              1.1629500408172606
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 5
+          },
+          "reason": "Open display clears rear cart handle."
+        }
+      ],
+      "scene_triangles": 2252
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-061",
+        "version": "v001"
+      },
+      "name": "관제실",
+      "asset_ref": {
+        "asset_id": "AST-2061",
+        "version": "v004"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-005-009",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-005",
+            "version": "v001",
+            "candidate_id": "CND-005",
+            "instance_id": "AST-005-009",
+            "position_blender_m": [
+              0.7,
+              0.6,
+              1.3175000000000001
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 1
+          },
+          "after": {
+            "asset_id": "AST-005",
+            "version": "v001",
+            "candidate_id": "CND-005",
+            "instance_id": "AST-005-009",
+            "position_blender_m": [
+              0.35,
+              0.55,
+              1.3175000000000001
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 1
+          },
+          "reason": "Extra monitor base within console work surface; clear of integrated rear screen support."
+        }
+      ],
+      "scene_triangles": 2076
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-063",
+        "version": "v001"
+      },
+      "name": "주택 관리 공간",
+      "asset_ref": {
+        "asset_id": "AST-2063",
+        "version": "v004"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1218-005",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1218",
+            "version": "v002",
+            "candidate_id": "CND-218",
+            "instance_id": "AST-1218-005",
+            "position_blender_m": [
+              1.5,
+              1.5,
+              0.3015000147819519
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 14
+          },
+          "after": {
+            "asset_id": "AST-1218",
+            "version": "v002",
+            "candidate_id": "CND-218",
+            "instance_id": "AST-1218-005",
+            "position_blender_m": [
+              1.5,
+              1.2,
+              0.3015000147819519
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 14
+          },
+          "reason": "Display board wheels clear adjacent shelf."
+        }
+      ],
+      "scene_triangles": 1396
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-070",
+        "version": "v001"
+      },
+      "name": "불교 법당 — 스님",
+      "asset_ref": {
+        "asset_id": "AST-2070",
+        "version": "v003"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1254-011",
+          "kind": "structural_asset_replacement",
+          "before": "v001",
+          "after": "v002"
+        }
+      ],
+      "scene_triangles": 1164
+    },
+    {
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-067",
+        "version": "v001"
+      },
+      "name": "장비 관리실",
+      "asset_ref": {
+        "asset_id": "AST-2067",
+        "version": "v003"
+      },
+      "changes": [
+        {
+          "instance_id": "AST-1077-005",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1077",
+            "version": "v001",
+            "candidate_id": "CND-077",
+            "instance_id": "AST-1077-005",
+            "position_blender_m": [
+              0.1,
+              1.5,
+              0.24600004386901853
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 13
+          },
+          "after": {
+            "asset_id": "AST-1077",
+            "version": "v001",
+            "candidate_id": "CND-077",
+            "instance_id": "AST-1077-005",
+            "position_blender_m": [
+              0,
+              1.5,
+              0.24600004386901853
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 13
+          },
+          "reason": "Pegboard fits between shelves without edge penetration."
+        },
+        {
+          "instance_id": "AST-1114-007",
+          "kind": "final_contact",
+          "before": {
+            "asset_id": "AST-1114",
+            "version": "v001",
+            "candidate_id": "CND-114",
+            "instance_id": "AST-1114-007",
+            "position_blender_m": [
+              -1.4,
+              -1.1,
+              0.9034999961853027
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 6
+          },
+          "after": {
+            "asset_id": "AST-1114",
+            "version": "v001",
+            "candidate_id": "CND-114",
+            "instance_id": "AST-1114-007",
+            "position_blender_m": [
+              -1.4,
+              -1.1,
+              0.295999975681305
+            ],
+            "rotation_euler_blender_deg": [
+              0,
+              0,
+              0
+            ],
+            "rotation_z_rad": 0.0,
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "component_mesh_count": 6
+          },
+          "reason": "Foreground case is a floor placement; only rear case uses shelf top."
+        }
+      ],
+      "scene_triangles": 1584
+    }
+  ],
+  "changed_prop_count": 6,
+  "changed_room_count": 25,
+  "paid_calls": 0,
+  "meshy_credits_used": 0
+}
