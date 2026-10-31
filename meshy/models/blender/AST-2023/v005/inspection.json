@@ -1,0 +1,195 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-2023",
+  "version": "v005",
+  "kind": "diorama",
+  "target_web_environment": "Actual Unity WebGL / HTTP / Windows Chrome Intel UHD630 D3D11 / 1440x900 and 900x600",
+  "props": [
+    {
+      "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-001",
+        "version": "v002"
+      },
+      "triangles_per_instance": 220,
+      "instance_count": 1,
+      "total_triangles": 220
+    },
+    {
+      "name": "바닥 표면 — rose",
+      "asset_ref": {
+        "asset_id": "AST-002",
+        "version": "v011"
+      },
+      "triangles_per_instance": 108,
+      "instance_count": 1,
+      "total_triangles": 108
+    },
+    {
+      "name": "미용 의자",
+      "asset_ref": {
+        "asset_id": "AST-1085",
+        "version": "v002"
+      },
+      "triangles_per_instance": 264,
+      "instance_count": 1,
+      "total_triangles": 264
+    },
+    {
+      "name": "독립형 거울",
+      "asset_ref": {
+        "asset_id": "AST-1086",
+        "version": "v001"
+      },
+      "triangles_per_instance": 100,
+      "instance_count": 1,
+      "total_triangles": 100
+    },
+    {
+      "name": "세발대",
+      "asset_ref": {
+        "asset_id": "AST-1087",
+        "version": "v001"
+      },
+      "triangles_per_instance": 120,
+      "instance_count": 1,
+      "total_triangles": 120
+    },
+    {
+      "name": "운반 카트",
+      "asset_ref": {
+        "asset_id": "AST-1016",
+        "version": "v001"
+      },
+      "triangles_per_instance": 344,
+      "instance_count": 1,
+      "total_triangles": 344
+    },
+    {
+      "name": "스툴",
+      "asset_ref": {
+        "asset_id": "AST-1056",
+        "version": "v001"
+      },
+      "triangles_per_instance": 124,
+      "instance_count": 1,
+      "total_triangles": 124
+    },
+    {
+      "name": "고정형 의자 — rose",
+      "asset_ref": {
+        "asset_id": "AST-1011",
+        "version": "v005"
+      },
+      "triangles_per_instance": 168,
+      "instance_count": 1,
+      "total_triangles": 168
+    },
+    {
+      "name": "선반",
+      "asset_ref": {
+        "asset_id": "AST-1028",
+        "version": "v001"
+      },
+      "triangles_per_instance": 84,
+      "instance_count": 1,
+      "total_triangles": 84
+    },
+    {
+      "name": "바닥 무늬 — squares",
+      "asset_ref": {
+        "asset_id": "AST-3180",
+        "version": "v013"
+      },
+      "triangles_per_instance": 240,
+      "instance_count": 1,
+      "total_triangles": 240
+    },
+    {
+      "name": "입체 기하 액자",
+      "asset_ref": {
+        "asset_id": "AST-3102",
+        "version": "v001"
+      },
+      "triangles_per_instance": 84,
+      "instance_count": 1,
+      "total_triangles": 84
+    },
+    {
+      "name": "용기 트레이 — 지지대 포함",
+      "asset_ref": {
+        "asset_id": "AST-3107",
+        "version": "v002"
+      },
+      "triangles_per_instance": 264,
+      "instance_count": 1,
+      "total_triangles": 264
+    }
+  ],
+  "scene_triangles": 2120,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3492144,
+  "dimensions_m": [
+    6.0,
+    5.199999809265137,
+    2.1484999656677246
+  ],
+  "bounds_blender_m": {
+    "min": [
+      -3.0,
+      -2.5999999046325684,
+      0.0
+    ],
+    "max": [
+      3.0,
+      2.5999999046325684,
+      2.1484999656677246
+    ]
+  },
+  "checks": {
+    "scene_budget": {
+      "status": "pass",
+      "evidence": "Actual final GLB Blender reimport, repeated instances once",
+      "reason": null
+    },
+    "component_budget": {
+      "status": "pass",
+      "evidence": "Component fixed final GLB counts",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Exact original palette cell centers",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "One model material and one shared palette PNG",
+      "reason": null
+    },
+    "visual_layout": {
+      "status": "pass",
+      "evidence": [
+        "docs/machine/evidence/workplaces-v011/visual-review.json",
+        "docs/machine/evidence/workplaces-v011/PAN-023-front.png"
+      ],
+      "reason": "Actual final native/reduced room review."
+    },
+    "web_display": {
+      "status": "pass",
+      "evidence": [
+        "docs/machine/evidence/workplaces-v011/http-spatial.json",
+        "docs/machine/evidence/workplaces-v011/PAN-023-front.png"
+      ],
+      "reason": "Actual new Unity WebGL, same fixed geometry and shared palette."
+    }
+  },
+  "remaining_issues": [
+    "Editor Play Mode, other devices/browsers, complete career work/protocol regression unverified."
+  ]
+}

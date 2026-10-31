@@ -1,0 +1,173 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-2056",
+  "version": "v002",
+  "kind": "diorama",
+  "target_web_environment": "Unity WebGL room browser, HTTP execution pending",
+  "props": [
+    {
+      "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-001",
+        "version": "v002"
+      },
+      "triangles_per_instance": 220,
+      "instance_count": 1,
+      "total_triangles": 220
+    },
+    {
+      "name": "COM-02 바닥 표면 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-002",
+        "version": "v001"
+      },
+      "triangles_per_instance": 108,
+      "instance_count": 1,
+      "total_triangles": 108
+    },
+    {
+      "name": "서비스 카운터",
+      "asset_ref": {
+        "asset_id": "AST-1023",
+        "version": "v001"
+      },
+      "triangles_per_instance": 68,
+      "instance_count": 2,
+      "total_triangles": 136
+    },
+    {
+      "name": "모니터",
+      "asset_ref": {
+        "asset_id": "AST-005",
+        "version": "v001"
+      },
+      "triangles_per_instance": 48,
+      "instance_count": 2,
+      "total_triangles": 96
+    },
+    {
+      "name": "COM-04 회전 사무의자 — blender_direct",
+      "asset_ref": {
+        "asset_id": "AST-003",
+        "version": "v001"
+      },
+      "triangles_per_instance": 792,
+      "instance_count": 2,
+      "total_triangles": 1584
+    },
+    {
+      "name": "번호표 발급기",
+      "asset_ref": {
+        "asset_id": "AST-1024",
+        "version": "v001"
+      },
+      "triangles_per_instance": 124,
+      "instance_count": 1,
+      "total_triangles": 124
+    },
+    {
+      "name": "연결 대기석",
+      "asset_ref": {
+        "asset_id": "AST-1025",
+        "version": "v001"
+      },
+      "triangles_per_instance": 364,
+      "instance_count": 1,
+      "total_triangles": 364
+    },
+    {
+      "name": "서류 트레이",
+      "asset_ref": {
+        "asset_id": "AST-1049",
+        "version": "v001"
+      },
+      "triangles_per_instance": 84,
+      "instance_count": 1,
+      "total_triangles": 84
+    },
+    {
+      "name": "키보드",
+      "asset_ref": {
+        "asset_id": "AST-006",
+        "version": "v001"
+      },
+      "triangles_per_instance": 12,
+      "instance_count": 2,
+      "total_triangles": 24
+    },
+    {
+      "name": "고정형 의자",
+      "asset_ref": {
+        "asset_id": "AST-1011",
+        "version": "v001"
+      },
+      "triangles_per_instance": 168,
+      "instance_count": 1,
+      "total_triangles": 168
+    },
+    {
+      "name": "PC 본체",
+      "asset_ref": {
+        "asset_id": "AST-1017",
+        "version": "v001"
+      },
+      "triangles_per_instance": 120,
+      "instance_count": 1,
+      "total_triangles": 120
+    },
+    {
+      "name": "마우스",
+      "asset_ref": {
+        "asset_id": "AST-007",
+        "version": "v001"
+      },
+      "triangles_per_instance": 12,
+      "instance_count": 1,
+      "total_triangles": 12
+    }
+  ],
+  "scene_triangles": 3040,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3530632,
+  "checks": {
+    "scene_budget": {
+      "status": "pass",
+      "evidence": "Actual final GLB Blender reimport; every repeated placement included",
+      "reason": null
+    },
+    "component_budget": {
+      "status": "pass",
+      "evidence": "Component final GLB measurements",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Every final GLB UV matches shared mapping",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "Final GLB nodes",
+      "reason": null
+    },
+    "visual_layout": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Preview produced; detailed silhouette, part-color and collision review pending"
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Unity HTTP runtime pending"
+    }
+  },
+  "remaining_issues": [
+    "Space assembly produced; visual/runtime verification and interaction are separate.",
+    "Unapproved scenario drafts not automatically selected."
+  ]
+}

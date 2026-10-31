@@ -1,0 +1,200 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-2068",
+  "version": "v003",
+  "kind": "diorama",
+  "target_web_environment": "New Unity WebGL spatial revision; runtime pending",
+  "props": [
+    {
+      "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-001",
+        "version": "v002"
+      },
+      "triangles_per_instance": 220,
+      "instance_count": 1,
+      "total_triangles": 220
+    },
+    {
+      "name": "바닥 표면 — blue",
+      "asset_ref": {
+        "asset_id": "AST-002",
+        "version": "v008"
+      },
+      "triangles_per_instance": 108,
+      "instance_count": 1,
+      "total_triangles": 108
+    },
+    {
+      "name": "테이블",
+      "asset_ref": {
+        "asset_id": "AST-1010",
+        "version": "v001"
+      },
+      "triangles_per_instance": 124,
+      "instance_count": 1,
+      "total_triangles": 124
+    },
+    {
+      "name": "고정형 의자 — navy",
+      "asset_ref": {
+        "asset_id": "AST-1011",
+        "version": "v003"
+      },
+      "triangles_per_instance": 168,
+      "instance_count": 1,
+      "total_triangles": 168
+    },
+    {
+      "name": "노트북",
+      "asset_ref": {
+        "asset_id": "AST-1012",
+        "version": "v001"
+      },
+      "triangles_per_instance": 124,
+      "instance_count": 1,
+      "total_triangles": 124
+    },
+    {
+      "name": "휴대 전화",
+      "asset_ref": {
+        "asset_id": "AST-1222",
+        "version": "v001"
+      },
+      "triangles_per_instance": 56,
+      "instance_count": 1,
+      "total_triangles": 56
+    },
+    {
+      "name": "문서 파우치",
+      "asset_ref": {
+        "asset_id": "AST-1223",
+        "version": "v001"
+      },
+      "triangles_per_instance": 56,
+      "instance_count": 1,
+      "total_triangles": 56
+    },
+    {
+      "name": "여행 가방",
+      "asset_ref": {
+        "asset_id": "AST-1221",
+        "version": "v001"
+      },
+      "triangles_per_instance": 196,
+      "instance_count": 1,
+      "total_triangles": 196
+    },
+    {
+      "name": "업무용 가방",
+      "asset_ref": {
+        "asset_id": "AST-017",
+        "version": "v001"
+      },
+      "triangles_per_instance": 84,
+      "instance_count": 1,
+      "total_triangles": 84
+    },
+    {
+      "name": "바닥 무늬 — grid",
+      "asset_ref": {
+        "asset_id": "AST-3180",
+        "version": "v002"
+      },
+      "triangles_per_instance": 192,
+      "instance_count": 1,
+      "total_triangles": 192
+    },
+    {
+      "name": "공간 디테일 — papers",
+      "asset_ref": {
+        "asset_id": "AST-3140",
+        "version": "v001"
+      },
+      "triangles_per_instance": 96,
+      "instance_count": 1,
+      "total_triangles": 96
+    },
+    {
+      "name": "공간 디테일 — cases",
+      "asset_ref": {
+        "asset_id": "AST-3110",
+        "version": "v001"
+      },
+      "triangles_per_instance": 168,
+      "instance_count": 1,
+      "total_triangles": 168
+    },
+    {
+      "name": "가지 장식 꽃병",
+      "asset_ref": {
+        "asset_id": "AST-3010",
+        "version": "v001"
+      },
+      "triangles_per_instance": 606,
+      "instance_count": 1,
+      "total_triangles": 606
+    }
+  ],
+  "scene_triangles": 2198,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3461224,
+  "dimensions_m": [
+    6.0,
+    5.199999809265137,
+    1.350476622581482
+  ],
+  "bounds_blender_m": {
+    "min": [
+      -3.0,
+      -2.5999999046325684,
+      0.0
+    ],
+    "max": [
+      3.0,
+      2.5999999046325684,
+      1.350476622581482
+    ]
+  },
+  "checks": {
+    "scene_budget": {
+      "status": "pass",
+      "evidence": "Actual final GLB Blender reimport, repeated instances once",
+      "reason": null
+    },
+    "component_budget": {
+      "status": "pass",
+      "evidence": "Component fixed final GLB counts",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Exact original palette cell centers",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "One model material and one shared palette PNG",
+      "reason": null
+    },
+    "visual_layout": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Actual final Unity WebGL visual review pending"
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "No runtime pass inherited"
+    }
+  },
+  "remaining_issues": [
+    "Actual new Unity/WebGL, screenshot review and gameplay binding smoke pending.",
+    "Intermediate or unused fixed version preserved; not included in this runtime deployment."
+  ]
+}

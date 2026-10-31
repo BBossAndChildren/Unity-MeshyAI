@@ -1,0 +1,195 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-2040",
+  "version": "v004",
+  "kind": "diorama",
+  "target_web_environment": "Actual Unity WebGL / HTTP / Windows Chrome Intel UHD630 D3D11 / 1440x900 and 900x600",
+  "props": [
+    {
+      "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-001",
+        "version": "v002"
+      },
+      "triangles_per_instance": 220,
+      "instance_count": 1,
+      "total_triangles": 220
+    },
+    {
+      "name": "바닥 표면 — soil",
+      "asset_ref": {
+        "asset_id": "AST-002",
+        "version": "v022"
+      },
+      "triangles_per_instance": 108,
+      "instance_count": 1,
+      "total_triangles": 108
+    },
+    {
+      "name": "작은 재배 베드",
+      "asset_ref": {
+        "asset_id": "AST-1147",
+        "version": "v001"
+      },
+      "triangles_per_instance": 60,
+      "instance_count": 3,
+      "total_triangles": 180
+    },
+    {
+      "name": "농작물",
+      "asset_ref": {
+        "asset_id": "AST-1148",
+        "version": "v002"
+      },
+      "triangles_per_instance": 600,
+      "instance_count": 3,
+      "total_triangles": 1800
+    },
+    {
+      "name": "물뿌리개",
+      "asset_ref": {
+        "asset_id": "AST-1149",
+        "version": "v002"
+      },
+      "triangles_per_instance": 116,
+      "instance_count": 1,
+      "total_triangles": 116
+    },
+    {
+      "name": "농기구",
+      "asset_ref": {
+        "asset_id": "AST-1150",
+        "version": "v002"
+      },
+      "triangles_per_instance": 172,
+      "instance_count": 1,
+      "total_triangles": 172
+    },
+    {
+      "name": "수확 상자",
+      "asset_ref": {
+        "asset_id": "AST-1151",
+        "version": "v001"
+      },
+      "triangles_per_instance": 60,
+      "instance_count": 1,
+      "total_triangles": 60
+    },
+    {
+      "name": "관수 관",
+      "asset_ref": {
+        "asset_id": "AST-1152",
+        "version": "v001"
+      },
+      "triangles_per_instance": 80,
+      "instance_count": 1,
+      "total_triangles": 80
+    },
+    {
+      "name": "바닥 무늬 — path",
+      "asset_ref": {
+        "asset_id": "AST-3180",
+        "version": "v005"
+      },
+      "triangles_per_instance": 352,
+      "instance_count": 1,
+      "total_triangles": 352
+    },
+    {
+      "name": "잎이 넓은 작은 나무",
+      "asset_ref": {
+        "asset_id": "AST-3161",
+        "version": "v001"
+      },
+      "triangles_per_instance": 469,
+      "instance_count": 1,
+      "total_triangles": 469
+    },
+    {
+      "name": "공간 디테일 — crates",
+      "asset_ref": {
+        "asset_id": "AST-3115",
+        "version": "v001"
+      },
+      "triangles_per_instance": 168,
+      "instance_count": 1,
+      "total_triangles": 168
+    },
+    {
+      "name": "넓은 잎 풀 포기",
+      "asset_ref": {
+        "asset_id": "AST-3164",
+        "version": "v001"
+      },
+      "triangles_per_instance": 447,
+      "instance_count": 1,
+      "total_triangles": 447
+    }
+  ],
+  "scene_triangles": 4172,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3679264,
+  "dimensions_m": [
+    6.0,
+    5.199999809265137,
+    1.6550559997558594
+  ],
+  "bounds_blender_m": {
+    "min": [
+      -3.0,
+      -2.5999999046325684,
+      0.0
+    ],
+    "max": [
+      3.0,
+      2.5999999046325684,
+      1.6550559997558594
+    ]
+  },
+  "checks": {
+    "scene_budget": {
+      "status": "pass",
+      "evidence": "Actual final GLB Blender reimport, repeated instances once",
+      "reason": null
+    },
+    "component_budget": {
+      "status": "pass",
+      "evidence": "Component fixed final GLB counts",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Exact original palette cell centers",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "One model material and one shared palette PNG",
+      "reason": null
+    },
+    "visual_layout": {
+      "status": "pass",
+      "evidence": [
+        "docs/machine/evidence/workplaces-v011/visual-review.json",
+        "docs/machine/evidence/workplaces-v011/PAN-040-front.png"
+      ],
+      "reason": "Actual final native/reduced room review."
+    },
+    "web_display": {
+      "status": "pass",
+      "evidence": [
+        "docs/machine/evidence/workplaces-v011/http-spatial.json",
+        "docs/machine/evidence/workplaces-v011/PAN-040-front.png"
+      ],
+      "reason": "Actual new Unity WebGL, same fixed geometry and shared palette."
+    }
+  },
+  "remaining_issues": [
+    "Editor Play Mode, other devices/browsers, complete career work/protocol regression unverified."
+  ]
+}

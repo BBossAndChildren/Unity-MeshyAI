@@ -1,0 +1,205 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-2024",
+  "version": "v006",
+  "kind": "diorama",
+  "target_web_environment": "Actual Unity WebGL / HTTP / Windows Chrome Intel UHD630 D3D11 / 1440x900 and 900x600",
+  "props": [
+    {
+      "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-001",
+        "version": "v002"
+      },
+      "triangles_per_instance": 220,
+      "instance_count": 1,
+      "total_triangles": 220
+    },
+    {
+      "name": "바닥 표면 — kitchen",
+      "asset_ref": {
+        "asset_id": "AST-002",
+        "version": "v012"
+      },
+      "triangles_per_instance": 108,
+      "instance_count": 1,
+      "total_triangles": 108
+    },
+    {
+      "name": "조리대",
+      "asset_ref": {
+        "asset_id": "AST-1088",
+        "version": "v001"
+      },
+      "triangles_per_instance": 84,
+      "instance_count": 1,
+      "total_triangles": 84
+    },
+    {
+      "name": "가열 기구",
+      "asset_ref": {
+        "asset_id": "AST-1089",
+        "version": "v002"
+      },
+      "triangles_per_instance": 264,
+      "instance_count": 1,
+      "total_triangles": 264
+    },
+    {
+      "name": "냉장고",
+      "asset_ref": {
+        "asset_id": "AST-1090",
+        "version": "v001"
+      },
+      "triangles_per_instance": 156,
+      "instance_count": 1,
+      "total_triangles": 156
+    },
+    {
+      "name": "세척대",
+      "asset_ref": {
+        "asset_id": "AST-1036",
+        "version": "v001"
+      },
+      "triangles_per_instance": 124,
+      "instance_count": 1,
+      "total_triangles": 124
+    },
+    {
+      "name": "조리도구 거치대",
+      "asset_ref": {
+        "asset_id": "AST-1091",
+        "version": "v002"
+      },
+      "triangles_per_instance": 284,
+      "instance_count": 1,
+      "total_triangles": 284
+    },
+    {
+      "name": "접시 선반",
+      "asset_ref": {
+        "asset_id": "AST-1092",
+        "version": "v001"
+      },
+      "triangles_per_instance": 84,
+      "instance_count": 1,
+      "total_triangles": 84
+    },
+    {
+      "name": "식기",
+      "asset_ref": {
+        "asset_id": "AST-1098",
+        "version": "v002"
+      },
+      "triangles_per_instance": 124,
+      "instance_count": 1,
+      "total_triangles": 124
+    },
+    {
+      "name": "바닥 무늬 — grid",
+      "asset_ref": {
+        "asset_id": "AST-3180",
+        "version": "v010"
+      },
+      "triangles_per_instance": 192,
+      "instance_count": 1,
+      "total_triangles": 192
+    },
+    {
+      "name": "조리실 후드 패널",
+      "asset_ref": {
+        "asset_id": "AST-3128",
+        "version": "v001"
+      },
+      "triangles_per_instance": 60,
+      "instance_count": 1,
+      "total_triangles": 60
+    },
+    {
+      "name": "보관 용기 묶음",
+      "asset_ref": {
+        "asset_id": "AST-3127",
+        "version": "v001"
+      },
+      "triangles_per_instance": 288,
+      "instance_count": 1,
+      "total_triangles": 288
+    },
+    {
+      "name": "식재료 보관통",
+      "asset_ref": {
+        "asset_id": "AST-3121",
+        "version": "v001"
+      },
+      "triangles_per_instance": 132,
+      "instance_count": 1,
+      "total_triangles": 132
+    }
+  ],
+  "scene_triangles": 2120,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3483816,
+  "dimensions_m": [
+    6.0,
+    5.199999809265137,
+    2.0959999561309814
+  ],
+  "bounds_blender_m": {
+    "min": [
+      -3.0,
+      -2.5999999046325684,
+      0.0
+    ],
+    "max": [
+      3.0,
+      2.5999999046325684,
+      2.0959999561309814
+    ]
+  },
+  "checks": {
+    "scene_budget": {
+      "status": "pass",
+      "evidence": "Actual final GLB Blender reimport, repeated instances once",
+      "reason": null
+    },
+    "component_budget": {
+      "status": "pass",
+      "evidence": "Component fixed final GLB counts",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Exact original palette cell centers",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "One model material and one shared palette PNG",
+      "reason": null
+    },
+    "visual_layout": {
+      "status": "pass",
+      "evidence": [
+        "docs/machine/evidence/workplaces-v011/visual-review.json",
+        "docs/machine/evidence/workplaces-v011/PAN-024-front.png"
+      ],
+      "reason": "Actual final native/reduced room review."
+    },
+    "web_display": {
+      "status": "pass",
+      "evidence": [
+        "docs/machine/evidence/workplaces-v011/http-spatial.json",
+        "docs/machine/evidence/workplaces-v011/PAN-024-front.png"
+      ],
+      "reason": "Actual new Unity WebGL, same fixed geometry and shared palette."
+    }
+  },
+  "remaining_issues": [
+    "Editor Play Mode, other devices/browsers, complete career work/protocol regression unverified."
+  ]
+}

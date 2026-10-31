@@ -1,0 +1,143 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-2037",
+  "version": "v001",
+  "kind": "diorama",
+  "target_web_environment": "Unity WebGL room browser, HTTP execution pending",
+  "props": [
+    {
+      "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-001",
+        "version": "v002"
+      },
+      "triangles_per_instance": 220,
+      "instance_count": 1,
+      "total_triangles": 220
+    },
+    {
+      "name": "COM-02 바닥 표면 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-002",
+        "version": "v001"
+      },
+      "triangles_per_instance": 108,
+      "instance_count": 1,
+      "total_triangles": 108
+    },
+    {
+      "name": "작업대",
+      "asset_ref": {
+        "asset_id": "AST-1055",
+        "version": "v001"
+      },
+      "triangles_per_instance": 136,
+      "instance_count": 1,
+      "total_triangles": 136
+    },
+    {
+      "name": "노출 배관 모형",
+      "asset_ref": {
+        "asset_id": "AST-1135",
+        "version": "v001"
+      },
+      "triangles_per_instance": 164,
+      "instance_count": 1,
+      "total_triangles": 164
+    },
+    {
+      "name": "공구 거치대",
+      "asset_ref": {
+        "asset_id": "AST-1077",
+        "version": "v001"
+      },
+      "triangles_per_instance": 212,
+      "instance_count": 1,
+      "total_triangles": 212
+    },
+    {
+      "name": "짧은 사다리",
+      "asset_ref": {
+        "asset_id": "AST-1136",
+        "version": "v001"
+      },
+      "triangles_per_instance": 160,
+      "instance_count": 1,
+      "total_triangles": 160
+    },
+    {
+      "name": "부품 상자",
+      "asset_ref": {
+        "asset_id": "AST-1137",
+        "version": "v001"
+      },
+      "triangles_per_instance": 60,
+      "instance_count": 1,
+      "total_triangles": 60
+    },
+    {
+      "name": "제어함",
+      "asset_ref": {
+        "asset_id": "AST-1138",
+        "version": "v001"
+      },
+      "triangles_per_instance": 176,
+      "instance_count": 1,
+      "total_triangles": 176
+    },
+    {
+      "name": "공구함",
+      "asset_ref": {
+        "asset_id": "AST-1080",
+        "version": "v001"
+      },
+      "triangles_per_instance": 140,
+      "instance_count": 1,
+      "total_triangles": 140
+    }
+  ],
+  "scene_triangles": 1376,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3413368,
+  "checks": {
+    "scene_budget": {
+      "status": "pass",
+      "evidence": "Actual final GLB Blender reimport; every repeated placement included",
+      "reason": null
+    },
+    "component_budget": {
+      "status": "pass",
+      "evidence": "Component final GLB measurements",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Every final GLB UV matches shared mapping",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "Final GLB nodes",
+      "reason": null
+    },
+    "visual_layout": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Preview produced; detailed silhouette, part-color and collision review pending"
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Unity HTTP runtime pending"
+    }
+  },
+  "remaining_issues": [
+    "Space assembly produced; visual/runtime verification and interaction are separate.",
+    "Unapproved scenario drafts not automatically selected."
+  ]
+}

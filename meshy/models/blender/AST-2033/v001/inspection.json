@@ -1,0 +1,133 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-2033",
+  "version": "v001",
+  "kind": "diorama",
+  "target_web_environment": "Unity WebGL room browser, HTTP execution pending",
+  "props": [
+    {
+      "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-001",
+        "version": "v002"
+      },
+      "triangles_per_instance": 220,
+      "instance_count": 1,
+      "total_triangles": 220
+    },
+    {
+      "name": "COM-02 바닥 표면 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-002",
+        "version": "v001"
+      },
+      "triangles_per_instance": 108,
+      "instance_count": 1,
+      "total_triangles": 108
+    },
+    {
+      "name": "낮은 무대판",
+      "asset_ref": {
+        "asset_id": "AST-1122",
+        "version": "v001"
+      },
+      "triangles_per_instance": 44,
+      "instance_count": 1,
+      "total_triangles": 44
+    },
+    {
+      "name": "마이크 스탠드",
+      "asset_ref": {
+        "asset_id": "AST-1123",
+        "version": "v001"
+      },
+      "triangles_per_instance": 104,
+      "instance_count": 1,
+      "total_triangles": 104
+    },
+    {
+      "name": "스피커",
+      "asset_ref": {
+        "asset_id": "AST-1120",
+        "version": "v001"
+      },
+      "triangles_per_instance": 372,
+      "instance_count": 2,
+      "total_triangles": 744
+    },
+    {
+      "name": "전시 조명",
+      "asset_ref": {
+        "asset_id": "AST-1128",
+        "version": "v001"
+      },
+      "triangles_per_instance": 144,
+      "instance_count": 1,
+      "total_triangles": 144
+    },
+    {
+      "name": "고정형 의자",
+      "asset_ref": {
+        "asset_id": "AST-1011",
+        "version": "v001"
+      },
+      "triangles_per_instance": 168,
+      "instance_count": 6,
+      "total_triangles": 1008
+    },
+    {
+      "name": "조명 스탠드",
+      "asset_ref": {
+        "asset_id": "AST-1111",
+        "version": "v001"
+      },
+      "triangles_per_instance": 104,
+      "instance_count": 2,
+      "total_triangles": 208
+    }
+  ],
+  "scene_triangles": 2580,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3484424,
+  "checks": {
+    "scene_budget": {
+      "status": "pass",
+      "evidence": "Actual final GLB Blender reimport; every repeated placement included",
+      "reason": null
+    },
+    "component_budget": {
+      "status": "pass",
+      "evidence": "Component final GLB measurements",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Every final GLB UV matches shared mapping",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "Final GLB nodes",
+      "reason": null
+    },
+    "visual_layout": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Preview produced; detailed silhouette, part-color and collision review pending"
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Unity HTTP runtime pending"
+    }
+  },
+  "remaining_issues": [
+    "Space assembly produced; visual/runtime verification and interaction are separate.",
+    "Unapproved scenario drafts not automatically selected."
+  ]
+}

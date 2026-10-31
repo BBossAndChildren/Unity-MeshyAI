@@ -1,0 +1,200 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-2016",
+  "version": "v005",
+  "kind": "diorama",
+  "target_web_environment": "New Unity WebGL spatial revision; runtime pending",
+  "props": [
+    {
+      "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-001",
+        "version": "v002"
+      },
+      "triangles_per_instance": 220,
+      "instance_count": 1,
+      "total_triangles": 220
+    },
+    {
+      "name": "바닥 표면 — sunny",
+      "asset_ref": {
+        "asset_id": "AST-002",
+        "version": "v009"
+      },
+      "triangles_per_instance": 108,
+      "instance_count": 1,
+      "total_triangles": 108
+    },
+    {
+      "name": "테이블",
+      "asset_ref": {
+        "asset_id": "AST-1010",
+        "version": "v001"
+      },
+      "triangles_per_instance": 124,
+      "instance_count": 1,
+      "total_triangles": 124
+    },
+    {
+      "name": "고정형 의자 — ochre",
+      "asset_ref": {
+        "asset_id": "AST-1011",
+        "version": "v004"
+      },
+      "triangles_per_instance": 168,
+      "instance_count": 2,
+      "total_triangles": 336
+    },
+    {
+      "name": "활동 교구",
+      "asset_ref": {
+        "asset_id": "AST-1066",
+        "version": "v001"
+      },
+      "triangles_per_instance": 156,
+      "instance_count": 1,
+      "total_triangles": 156
+    },
+    {
+      "name": "러그·바닥 매트",
+      "asset_ref": {
+        "asset_id": "AST-1067",
+        "version": "v001"
+      },
+      "triangles_per_instance": 44,
+      "instance_count": 1,
+      "total_triangles": 44
+    },
+    {
+      "name": "선반",
+      "asset_ref": {
+        "asset_id": "AST-1028",
+        "version": "v001"
+      },
+      "triangles_per_instance": 84,
+      "instance_count": 1,
+      "total_triangles": 84
+    },
+    {
+      "name": "이동식 화이트보드",
+      "asset_ref": {
+        "asset_id": "AST-1013",
+        "version": "v002"
+      },
+      "triangles_per_instance": 264,
+      "instance_count": 1,
+      "total_triangles": 264
+    },
+    {
+      "name": "뒤쪽 수납장",
+      "asset_ref": {
+        "asset_id": "AST-015",
+        "version": "v001"
+      },
+      "triangles_per_instance": 60,
+      "instance_count": 1,
+      "total_triangles": 60
+    },
+    {
+      "name": "바닥 무늬 — squares",
+      "asset_ref": {
+        "asset_id": "AST-3180",
+        "version": "v008"
+      },
+      "triangles_per_instance": 240,
+      "instance_count": 1,
+      "total_triangles": 240
+    },
+    {
+      "name": "공간 디테일 — learning",
+      "asset_ref": {
+        "asset_id": "AST-3133",
+        "version": "v001"
+      },
+      "triangles_per_instance": 108,
+      "instance_count": 1,
+      "total_triangles": 108
+    },
+    {
+      "name": "공간 디테일 — cubby",
+      "asset_ref": {
+        "asset_id": "AST-3116",
+        "version": "v001"
+      },
+      "triangles_per_instance": 168,
+      "instance_count": 1,
+      "total_triangles": 168
+    },
+    {
+      "name": "공간 디테일 — coatrack",
+      "asset_ref": {
+        "asset_id": "AST-3113",
+        "version": "v001"
+      },
+      "triangles_per_instance": 252,
+      "instance_count": 1,
+      "total_triangles": 252
+    }
+  ],
+  "scene_triangles": 2164,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3507244,
+  "dimensions_m": [
+    6.0,
+    5.199999809265137,
+    2.0434999465942383
+  ],
+  "bounds_blender_m": {
+    "min": [
+      -3.0,
+      -2.5999999046325684,
+      0.0
+    ],
+    "max": [
+      3.0,
+      2.5999999046325684,
+      2.0434999465942383
+    ]
+  },
+  "checks": {
+    "scene_budget": {
+      "status": "pass",
+      "evidence": "Actual final GLB Blender reimport, repeated instances once",
+      "reason": null
+    },
+    "component_budget": {
+      "status": "pass",
+      "evidence": "Component fixed final GLB counts",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Exact original palette cell centers",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "One model material and one shared palette PNG",
+      "reason": null
+    },
+    "visual_layout": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Actual final Unity WebGL visual review pending"
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "No runtime pass inherited"
+    }
+  },
+  "remaining_issues": [
+    "Actual new Unity/WebGL, screenshot review and gameplay binding smoke pending.",
+    "Intermediate or unused fixed version preserved; not included in this runtime deployment."
+  ]
+}

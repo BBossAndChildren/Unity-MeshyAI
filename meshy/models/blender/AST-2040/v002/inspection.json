@@ -1,0 +1,137 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-2040",
+  "version": "v002",
+  "kind": "diorama",
+  "target_web_environment": "New Unity WebGL build; execution pending",
+  "props": [
+    {
+      "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-001",
+        "version": "v002"
+      },
+      "triangles_per_instance": 220,
+      "instance_count": 1,
+      "total_triangles": 220
+    },
+    {
+      "name": "COM-02 바닥 표면 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-002",
+        "version": "v001"
+      },
+      "triangles_per_instance": 108,
+      "instance_count": 1,
+      "total_triangles": 108
+    },
+    {
+      "name": "작은 재배 베드",
+      "asset_ref": {
+        "asset_id": "AST-1147",
+        "version": "v001"
+      },
+      "triangles_per_instance": 60,
+      "instance_count": 3,
+      "total_triangles": 180
+    },
+    {
+      "name": "농작물",
+      "asset_ref": {
+        "asset_id": "AST-1148",
+        "version": "v002"
+      },
+      "triangles_per_instance": 600,
+      "instance_count": 3,
+      "total_triangles": 1800
+    },
+    {
+      "name": "물뿌리개",
+      "asset_ref": {
+        "asset_id": "AST-1149",
+        "version": "v002"
+      },
+      "triangles_per_instance": 116,
+      "instance_count": 1,
+      "total_triangles": 116
+    },
+    {
+      "name": "농기구",
+      "asset_ref": {
+        "asset_id": "AST-1150",
+        "version": "v001"
+      },
+      "triangles_per_instance": 172,
+      "instance_count": 1,
+      "total_triangles": 172
+    },
+    {
+      "name": "수확 상자",
+      "asset_ref": {
+        "asset_id": "AST-1151",
+        "version": "v001"
+      },
+      "triangles_per_instance": 60,
+      "instance_count": 1,
+      "total_triangles": 60
+    },
+    {
+      "name": "관수 관",
+      "asset_ref": {
+        "asset_id": "AST-1152",
+        "version": "v001"
+      },
+      "triangles_per_instance": 80,
+      "instance_count": 1,
+      "total_triangles": 80
+    }
+  ],
+  "scene_triangles": 2736,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3607044,
+  "checks": {
+    "triangle_budget": {
+      "status": "pass",
+      "evidence": "Actual final GLB Blender reimport, every instance included",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "All final GLB UV loops match the unchanged fixed palette",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "Final GLB one material and one image",
+      "reason": null
+    },
+    "support_production": {
+      "status": "pass",
+      "evidence": "Explicit physical support production; transformed floor/surface gaps recorded in support-changes.json",
+      "reason": null
+    },
+    "visual_front_side_back": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "New versions require additive directional view review"
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "New build must be executed independently"
+    }
+  },
+  "remaining_issues": [
+    "New version needs directional and target-WebGL verification; no ready promotion."
+  ],
+  "dimensions_m": [
+    6.0,
+    5.199999809265137,
+    1.3960000276565552
+  ]
+}

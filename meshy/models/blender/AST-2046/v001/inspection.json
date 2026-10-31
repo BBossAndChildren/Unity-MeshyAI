@@ -1,0 +1,143 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-2046",
+  "version": "v001",
+  "kind": "diorama",
+  "target_web_environment": "Unity WebGL room browser, HTTP execution pending",
+  "props": [
+    {
+      "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-001",
+        "version": "v002"
+      },
+      "triangles_per_instance": 220,
+      "instance_count": 1,
+      "total_triangles": 220
+    },
+    {
+      "name": "COM-02 바닥 표면 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-002",
+        "version": "v001"
+      },
+      "triangles_per_instance": 108,
+      "instance_count": 1,
+      "total_triangles": 108
+    },
+    {
+      "name": "부두 바닥",
+      "asset_ref": {
+        "asset_id": "AST-1176",
+        "version": "v001"
+      },
+      "triangles_per_instance": 12,
+      "instance_count": 1,
+      "total_triangles": 12
+    },
+    {
+      "name": "작은 수면 가장자리",
+      "asset_ref": {
+        "asset_id": "AST-1177",
+        "version": "v001"
+      },
+      "triangles_per_instance": 12,
+      "instance_count": 1,
+      "total_triangles": 12
+    },
+    {
+      "name": "계류 기둥",
+      "asset_ref": {
+        "asset_id": "AST-1178",
+        "version": "v001"
+      },
+      "triangles_per_instance": 72,
+      "instance_count": 2,
+      "total_triangles": 144
+    },
+    {
+      "name": "구명환",
+      "asset_ref": {
+        "asset_id": "AST-1168",
+        "version": "v001"
+      },
+      "triangles_per_instance": 192,
+      "instance_count": 1,
+      "total_triangles": 192
+    },
+    {
+      "name": "밧줄 코일",
+      "asset_ref": {
+        "asset_id": "AST-1169",
+        "version": "v001"
+      },
+      "triangles_per_instance": 288,
+      "instance_count": 1,
+      "total_triangles": 288
+    },
+    {
+      "name": "손수레",
+      "asset_ref": {
+        "asset_id": "AST-1133",
+        "version": "v001"
+      },
+      "triangles_per_instance": 168,
+      "instance_count": 1,
+      "total_triangles": 168
+    },
+    {
+      "name": "보관 상자",
+      "asset_ref": {
+        "asset_id": "AST-1058",
+        "version": "v001"
+      },
+      "triangles_per_instance": 68,
+      "instance_count": 2,
+      "total_triangles": 136
+    }
+  ],
+  "scene_triangles": 1280,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3388544,
+  "checks": {
+    "scene_budget": {
+      "status": "pass",
+      "evidence": "Actual final GLB Blender reimport; every repeated placement included",
+      "reason": null
+    },
+    "component_budget": {
+      "status": "pass",
+      "evidence": "Component final GLB measurements",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Every final GLB UV matches shared mapping",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "Final GLB nodes",
+      "reason": null
+    },
+    "visual_layout": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Preview produced; detailed silhouette, part-color and collision review pending"
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Unity HTTP runtime pending"
+    }
+  },
+  "remaining_issues": [
+    "Space assembly produced; visual/runtime verification and interaction are separate.",
+    "Unapproved scenario drafts not automatically selected."
+  ]
+}

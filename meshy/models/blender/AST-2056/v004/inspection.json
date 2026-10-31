@@ -1,0 +1,215 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-2056",
+  "version": "v004",
+  "kind": "diorama",
+  "target_web_environment": "Actual workplaces-v006 Unity WebGL HTTP on Windows Chrome SwiftShader,1440x900 and900x600; native Play batchmode-nographics separately recorded.",
+  "props": [
+    {
+      "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-001",
+        "version": "v002"
+      },
+      "triangles_per_instance": 220,
+      "instance_count": 1,
+      "total_triangles": 220
+    },
+    {
+      "name": "COM-02 바닥 표면 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-002",
+        "version": "v001"
+      },
+      "triangles_per_instance": 108,
+      "instance_count": 1,
+      "total_triangles": 108
+    },
+    {
+      "name": "서비스 카운터",
+      "asset_ref": {
+        "asset_id": "AST-1023",
+        "version": "v001"
+      },
+      "triangles_per_instance": 68,
+      "instance_count": 2,
+      "total_triangles": 136
+    },
+    {
+      "name": "모니터",
+      "asset_ref": {
+        "asset_id": "AST-005",
+        "version": "v001"
+      },
+      "triangles_per_instance": 48,
+      "instance_count": 2,
+      "total_triangles": 96
+    },
+    {
+      "name": "COM-04 회전 사무의자 — blender_direct",
+      "asset_ref": {
+        "asset_id": "AST-003",
+        "version": "v001"
+      },
+      "triangles_per_instance": 792,
+      "instance_count": 2,
+      "total_triangles": 1584
+    },
+    {
+      "name": "번호표 발급기",
+      "asset_ref": {
+        "asset_id": "AST-1024",
+        "version": "v001"
+      },
+      "triangles_per_instance": 124,
+      "instance_count": 1,
+      "total_triangles": 124
+    },
+    {
+      "name": "연결 대기석",
+      "asset_ref": {
+        "asset_id": "AST-1025",
+        "version": "v002"
+      },
+      "triangles_per_instance": 464,
+      "instance_count": 1,
+      "total_triangles": 464
+    },
+    {
+      "name": "서류 트레이",
+      "asset_ref": {
+        "asset_id": "AST-1049",
+        "version": "v001"
+      },
+      "triangles_per_instance": 84,
+      "instance_count": 1,
+      "total_triangles": 84
+    },
+    {
+      "name": "키보드",
+      "asset_ref": {
+        "asset_id": "AST-006",
+        "version": "v001"
+      },
+      "triangles_per_instance": 12,
+      "instance_count": 2,
+      "total_triangles": 24
+    },
+    {
+      "name": "고정형 의자",
+      "asset_ref": {
+        "asset_id": "AST-1011",
+        "version": "v001"
+      },
+      "triangles_per_instance": 168,
+      "instance_count": 1,
+      "total_triangles": 168
+    },
+    {
+      "name": "PC 본체",
+      "asset_ref": {
+        "asset_id": "AST-1017",
+        "version": "v002"
+      },
+      "triangles_per_instance": 120,
+      "instance_count": 1,
+      "total_triangles": 120
+    },
+    {
+      "name": "마우스",
+      "asset_ref": {
+        "asset_id": "AST-007",
+        "version": "v001"
+      },
+      "triangles_per_instance": 12,
+      "instance_count": 1,
+      "total_triangles": 12
+    }
+  ],
+  "scene_triangles": 3140,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3540680,
+  "checks": {
+    "triangle_budget": {
+      "status": "pass",
+      "evidence": "Actual final GLB Blender reimport, every instance included",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "All final GLB UV loops match the unchanged fixed palette",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "Final GLB one material and one image",
+      "reason": null
+    },
+    "support_production": {
+      "status": "pass",
+      "evidence": "Explicit physical support production; transformed floor/surface gaps recorded in support-changes.json",
+      "reason": null
+    },
+    "visual_front_side_back": {
+      "status": "pass",
+      "evidence": [
+        "docs/machine/evidence/workplaces-model-review-v001/current-final-319/coverage.json",
+        "docs/machine/evidence/workplaces-model-review-v001/views/AST-2056/v004/render-evidence.json",
+        "docs/machine/evidence/workplaces-model-review-v001/views/AST-2056/v004/front.png",
+        "docs/machine/evidence/workplaces-model-review-v001/views/AST-2056/v004/side.png",
+        "docs/machine/evidence/workplaces-model-review-v001/views/AST-2056/v004/back.png"
+      ],
+      "reason": "Exact current GLB fixed-version directional and reduced-scale review; major form/support/visibility scope, not specialist semantic certification or unrestricted filtering/performance proof."
+    },
+    "web_display": {
+      "status": "pass",
+      "evidence": [
+        "docs/machine/evidence/workplaces-v006/http-webgl-rooms.json",
+        "docs/machine/evidence/workplaces-v006/visual-review/screenshot-review.json"
+      ],
+      "reason": "Fresh v006 actual room load/display and full/reduced native-pixel color review; target-visible scope, limits and one nonblocking thin-line contrast observation retained in visual report."
+    },
+    "physical_support_overview": {
+      "status": "pass",
+      "evidence": "docs/machine/evidence/workplaces-model-review-v001/support-summary-v003.json; transformed actual mesh vertices, explicit support exceptions, manual views",
+      "reason": null
+    },
+    "unity": {
+      "status": "pass",
+      "evidence": [
+        "docs/machine/evidence/workplaces-v006/component-imports.json",
+        "docs/machine/evidence/workplaces-v006/unity-editor-play-rooms.json"
+      ],
+      "reason": "Actual v006 imported model versions and71 native Play rooms; nographics, visual/WebGL checks separate."
+    }
+  },
+  "remaining_issues": [],
+  "dimensions_m": [
+    6.0,
+    5.199999809265137,
+    1.8734999895095825
+  ],
+  "verification_scope": {
+    "build_id": "workplaces-v006",
+    "verified_at": "2026-10-31T07:26:24.197305+09:00",
+    "scope": "Required low-poly model production and observed target WebGL display. Career workflow acceptance belongs to one implemented office scenario; other551 drafts remain unimplemented.",
+    "visual_report_path": "docs/machine/evidence/workplaces-v006/visual-review/screenshot-review.json",
+    "limits": [
+      "This pass concerns visible regions at actual1440x900 and900x600 captures in Windows Chrome SwiftShader; arbitrary camera zoom/angles, physical GPUs and mobile devices are separate.",
+      "Small white-on-white vessels, tiny buttons/keys/labels/antennas and occluded rear/underside parts cannot each be distinguished in reduced browser frames; specific per-room limits are recorded. Component319 proof retains individual three-direction views.",
+      "No visible palette-cell bleed, unexpected saturated patch or material tint mismatch was found at the displayed scales. This is an observed target-display judgment, not a guarantee for every hidden surface or every possible filtering environment.",
+      "Thin strokes may alias or lose contrast at900px; this is retained as a nonblocking visibility observation rather than mislabeled palette bleed.",
+      "No specialist medical/industrial functionality or fine iconographic accuracy is certified.",
+      "Office functional acceptance, native Play results and performance belong to separate actual test evidence; this visual report does not replace those tests."
+    ],
+    "historical_results_inherited": false,
+    "global_visual_report_nonblocking_observation_ids": [
+      "VIS-001"
+    ]
+  }
+}

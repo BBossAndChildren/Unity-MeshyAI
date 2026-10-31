@@ -1,0 +1,190 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-2033",
+  "version": "v003",
+  "kind": "diorama",
+  "target_web_environment": "New Unity WebGL spatial revision; runtime pending",
+  "props": [
+    {
+      "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-001",
+        "version": "v002"
+      },
+      "triangles_per_instance": 220,
+      "instance_count": 1,
+      "total_triangles": 220
+    },
+    {
+      "name": "바닥 표면 — stage",
+      "asset_ref": {
+        "asset_id": "AST-002",
+        "version": "v017"
+      },
+      "triangles_per_instance": 108,
+      "instance_count": 1,
+      "total_triangles": 108
+    },
+    {
+      "name": "낮은 무대판",
+      "asset_ref": {
+        "asset_id": "AST-1122",
+        "version": "v001"
+      },
+      "triangles_per_instance": 44,
+      "instance_count": 1,
+      "total_triangles": 44
+    },
+    {
+      "name": "마이크 스탠드",
+      "asset_ref": {
+        "asset_id": "AST-1123",
+        "version": "v001"
+      },
+      "triangles_per_instance": 104,
+      "instance_count": 1,
+      "total_triangles": 104
+    },
+    {
+      "name": "스피커",
+      "asset_ref": {
+        "asset_id": "AST-1120",
+        "version": "v001"
+      },
+      "triangles_per_instance": 372,
+      "instance_count": 2,
+      "total_triangles": 744
+    },
+    {
+      "name": "전시 조명",
+      "asset_ref": {
+        "asset_id": "AST-1128",
+        "version": "v001"
+      },
+      "triangles_per_instance": 144,
+      "instance_count": 1,
+      "total_triangles": 144
+    },
+    {
+      "name": "고정형 의자 — burgundy",
+      "asset_ref": {
+        "asset_id": "AST-1011",
+        "version": "v002"
+      },
+      "triangles_per_instance": 168,
+      "instance_count": 6,
+      "total_triangles": 1008
+    },
+    {
+      "name": "조명 스탠드",
+      "asset_ref": {
+        "asset_id": "AST-1111",
+        "version": "v001"
+      },
+      "triangles_per_instance": 104,
+      "instance_count": 2,
+      "total_triangles": 208
+    },
+    {
+      "name": "바닥 무늬 — planks",
+      "asset_ref": {
+        "asset_id": "AST-3180",
+        "version": "v007"
+      },
+      "triangles_per_instance": 180,
+      "instance_count": 1,
+      "total_triangles": 180
+    },
+    {
+      "name": "공간 디테일 — stagecurtain",
+      "asset_ref": {
+        "asset_id": "AST-3147",
+        "version": "v001"
+      },
+      "triangles_per_instance": 216,
+      "instance_count": 1,
+      "total_triangles": 216
+    },
+    {
+      "name": "공간 디테일 — signal",
+      "asset_ref": {
+        "asset_id": "AST-3146",
+        "version": "v001"
+      },
+      "triangles_per_instance": 120,
+      "instance_count": 1,
+      "total_triangles": 120
+    },
+    {
+      "name": "공간 디테일 — cases",
+      "asset_ref": {
+        "asset_id": "AST-3110",
+        "version": "v001"
+      },
+      "triangles_per_instance": 168,
+      "instance_count": 1,
+      "total_triangles": 168
+    }
+  ],
+  "scene_triangles": 3264,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3558444,
+  "dimensions_m": [
+    6.0,
+    5.199999809265137,
+    2.19100022315979
+  ],
+  "bounds_blender_m": {
+    "min": [
+      -3.0,
+      -2.5999999046325684,
+      0.0
+    ],
+    "max": [
+      3.0,
+      2.5999999046325684,
+      2.19100022315979
+    ]
+  },
+  "checks": {
+    "scene_budget": {
+      "status": "pass",
+      "evidence": "Actual final GLB Blender reimport, repeated instances once",
+      "reason": null
+    },
+    "component_budget": {
+      "status": "pass",
+      "evidence": "Component fixed final GLB counts",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Exact original palette cell centers",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "One model material and one shared palette PNG",
+      "reason": null
+    },
+    "visual_layout": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Actual final Unity WebGL visual review pending"
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "No runtime pass inherited"
+    }
+  },
+  "remaining_issues": [
+    "Actual new Unity/WebGL, screenshot review and gameplay binding smoke pending.",
+    "Intermediate or unused fixed version preserved; not included in this runtime deployment."
+  ]
+}

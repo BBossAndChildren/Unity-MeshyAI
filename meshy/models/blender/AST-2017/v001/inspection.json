@@ -1,0 +1,143 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-2017",
+  "version": "v001",
+  "kind": "diorama",
+  "target_web_environment": "Unity WebGL room browser, HTTP execution pending",
+  "props": [
+    {
+      "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-001",
+        "version": "v002"
+      },
+      "triangles_per_instance": 220,
+      "instance_count": 1,
+      "total_triangles": 220
+    },
+    {
+      "name": "COM-02 바닥 표면 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-002",
+        "version": "v001"
+      },
+      "triangles_per_instance": 108,
+      "instance_count": 1,
+      "total_triangles": 108
+    },
+    {
+      "name": "생활 침대",
+      "asset_ref": {
+        "asset_id": "AST-1044",
+        "version": "v001"
+      },
+      "triangles_per_instance": 136,
+      "instance_count": 1,
+      "total_triangles": 136
+    },
+    {
+      "name": "침대 옆 탁자",
+      "asset_ref": {
+        "asset_id": "AST-1045",
+        "version": "v001"
+      },
+      "triangles_per_instance": 72,
+      "instance_count": 1,
+      "total_triangles": 72
+    },
+    {
+      "name": "이동 보조 의자",
+      "asset_ref": {
+        "asset_id": "AST-1068",
+        "version": "v001"
+      },
+      "triangles_per_instance": 140,
+      "instance_count": 1,
+      "total_triangles": 140
+    },
+    {
+      "name": "휠체어",
+      "asset_ref": {
+        "asset_id": "AST-1069",
+        "version": "v001"
+      },
+      "triangles_per_instance": 452,
+      "instance_count": 1,
+      "total_triangles": 452
+    },
+    {
+      "name": "보조 손잡이",
+      "asset_ref": {
+        "asset_id": "AST-1070",
+        "version": "v001"
+      },
+      "triangles_per_instance": 116,
+      "instance_count": 1,
+      "total_triangles": 116
+    },
+    {
+      "name": "뒤쪽 수납장",
+      "asset_ref": {
+        "asset_id": "AST-015",
+        "version": "v001"
+      },
+      "triangles_per_instance": 60,
+      "instance_count": 1,
+      "total_triangles": 60
+    },
+    {
+      "name": "러그·바닥 매트",
+      "asset_ref": {
+        "asset_id": "AST-1067",
+        "version": "v001"
+      },
+      "triangles_per_instance": 44,
+      "instance_count": 1,
+      "total_triangles": 44
+    }
+  ],
+  "scene_triangles": 1348,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3404568,
+  "checks": {
+    "scene_budget": {
+      "status": "pass",
+      "evidence": "Actual final GLB Blender reimport; every repeated placement included",
+      "reason": null
+    },
+    "component_budget": {
+      "status": "pass",
+      "evidence": "Component final GLB measurements",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Every final GLB UV matches shared mapping",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "Final GLB nodes",
+      "reason": null
+    },
+    "visual_layout": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Preview produced; detailed silhouette, part-color and collision review pending"
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Unity HTTP runtime pending"
+    }
+  },
+  "remaining_issues": [
+    "Space assembly produced; visual/runtime verification and interaction are separate.",
+    "Unapproved scenario drafts not automatically selected."
+  ]
+}

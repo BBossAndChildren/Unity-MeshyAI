@@ -1,0 +1,163 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-2027",
+  "version": "v002",
+  "kind": "diorama",
+  "target_web_environment": "Unity WebGL room browser, HTTP execution pending",
+  "props": [
+    {
+      "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-001",
+        "version": "v002"
+      },
+      "triangles_per_instance": 220,
+      "instance_count": 1,
+      "total_triangles": 220
+    },
+    {
+      "name": "COM-02 바닥 표면 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-002",
+        "version": "v001"
+      },
+      "triangles_per_instance": 108,
+      "instance_count": 1,
+      "total_triangles": 108
+    },
+    {
+      "name": "업무 책상",
+      "asset_ref": {
+        "asset_id": "AST-004",
+        "version": "v001"
+      },
+      "triangles_per_instance": 60,
+      "instance_count": 1,
+      "total_triangles": 60
+    },
+    {
+      "name": "COM-04 회전 사무의자 — blender_direct",
+      "asset_ref": {
+        "asset_id": "AST-003",
+        "version": "v001"
+      },
+      "triangles_per_instance": 792,
+      "instance_count": 1,
+      "total_triangles": 792
+    },
+    {
+      "name": "모니터",
+      "asset_ref": {
+        "asset_id": "AST-005",
+        "version": "v001"
+      },
+      "triangles_per_instance": 48,
+      "instance_count": 1,
+      "total_triangles": 48
+    },
+    {
+      "name": "펜 태블릿",
+      "asset_ref": {
+        "asset_id": "AST-1101",
+        "version": "v001"
+      },
+      "triangles_per_instance": 76,
+      "instance_count": 1,
+      "total_triangles": 76
+    },
+    {
+      "name": "시안 보드",
+      "asset_ref": {
+        "asset_id": "AST-1102",
+        "version": "v001"
+      },
+      "triangles_per_instance": 36,
+      "instance_count": 1,
+      "total_triangles": 36
+    },
+    {
+      "name": "재료 샘플",
+      "asset_ref": {
+        "asset_id": "AST-1103",
+        "version": "v001"
+      },
+      "triangles_per_instance": 48,
+      "instance_count": 1,
+      "total_triangles": 48
+    },
+    {
+      "name": "작업대",
+      "asset_ref": {
+        "asset_id": "AST-1055",
+        "version": "v001"
+      },
+      "triangles_per_instance": 136,
+      "instance_count": 1,
+      "total_triangles": 136
+    },
+    {
+      "name": "선반",
+      "asset_ref": {
+        "asset_id": "AST-1028",
+        "version": "v001"
+      },
+      "triangles_per_instance": 84,
+      "instance_count": 1,
+      "total_triangles": 84
+    },
+    {
+      "name": "서류 트레이",
+      "asset_ref": {
+        "asset_id": "AST-1049",
+        "version": "v001"
+      },
+      "triangles_per_instance": 84,
+      "instance_count": 1,
+      "total_triangles": 84
+    }
+  ],
+  "scene_triangles": 1692,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3428592,
+  "checks": {
+    "scene_budget": {
+      "status": "pass",
+      "evidence": "Actual final GLB Blender reimport; every repeated placement included",
+      "reason": null
+    },
+    "component_budget": {
+      "status": "pass",
+      "evidence": "Component final GLB measurements",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Every final GLB UV matches shared mapping",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "Final GLB nodes",
+      "reason": null
+    },
+    "visual_layout": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Preview produced; detailed silhouette, part-color and collision review pending"
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Unity HTTP runtime pending"
+    }
+  },
+  "remaining_issues": [
+    "Space assembly produced; visual/runtime verification and interaction are separate.",
+    "Unapproved scenario drafts not automatically selected."
+  ]
+}

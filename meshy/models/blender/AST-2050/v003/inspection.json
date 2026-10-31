@@ -1,0 +1,197 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-2050",
+  "version": "v003",
+  "kind": "diorama",
+  "target_web_environment": "New Unity WebGL build; execution pending",
+  "props": [
+    {
+      "name": "COM-01 둥근 모서리 바닥판 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-001",
+        "version": "v002"
+      },
+      "triangles_per_instance": 220,
+      "instance_count": 1,
+      "total_triangles": 220
+    },
+    {
+      "name": "COM-02 바닥 표면 — Blender 직접 제작",
+      "asset_ref": {
+        "asset_id": "AST-002",
+        "version": "v001"
+      },
+      "triangles_per_instance": 108,
+      "instance_count": 1,
+      "total_triangles": 108
+    },
+    {
+      "name": "업무 책상",
+      "asset_ref": {
+        "asset_id": "AST-004",
+        "version": "v001"
+      },
+      "triangles_per_instance": 60,
+      "instance_count": 1,
+      "total_triangles": 60
+    },
+    {
+      "name": "COM-04 회전 사무의자 — blender_direct",
+      "asset_ref": {
+        "asset_id": "AST-003",
+        "version": "v001"
+      },
+      "triangles_per_instance": 792,
+      "instance_count": 1,
+      "total_triangles": 792
+    },
+    {
+      "name": "모니터",
+      "asset_ref": {
+        "asset_id": "AST-005",
+        "version": "v001"
+      },
+      "triangles_per_instance": 48,
+      "instance_count": 1,
+      "total_triangles": 48
+    },
+    {
+      "name": "키보드",
+      "asset_ref": {
+        "asset_id": "AST-006",
+        "version": "v001"
+      },
+      "triangles_per_instance": 12,
+      "instance_count": 1,
+      "total_triangles": 12
+    },
+    {
+      "name": "관계 보드",
+      "asset_ref": {
+        "asset_id": "AST-1191",
+        "version": "v002"
+      },
+      "triangles_per_instance": 264,
+      "instance_count": 1,
+      "total_triangles": 264
+    },
+    {
+      "name": "서류 파일",
+      "asset_ref": {
+        "asset_id": "AST-1027",
+        "version": "v001"
+      },
+      "triangles_per_instance": 72,
+      "instance_count": 1,
+      "total_triangles": 72
+    },
+    {
+      "name": "뒤쪽 수납장",
+      "asset_ref": {
+        "asset_id": "AST-015",
+        "version": "v001"
+      },
+      "triangles_per_instance": 60,
+      "instance_count": 1,
+      "total_triangles": 60
+    },
+    {
+      "name": "선반",
+      "asset_ref": {
+        "asset_id": "AST-1028",
+        "version": "v001"
+      },
+      "triangles_per_instance": 84,
+      "instance_count": 1,
+      "total_triangles": 84
+    },
+    {
+      "name": "고정형 의자",
+      "asset_ref": {
+        "asset_id": "AST-1011",
+        "version": "v001"
+      },
+      "triangles_per_instance": 168,
+      "instance_count": 1,
+      "total_triangles": 168
+    },
+    {
+      "name": "PC 본체",
+      "asset_ref": {
+        "asset_id": "AST-1017",
+        "version": "v002"
+      },
+      "triangles_per_instance": 120,
+      "instance_count": 1,
+      "total_triangles": 120
+    },
+    {
+      "name": "마우스",
+      "asset_ref": {
+        "asset_id": "AST-007",
+        "version": "v001"
+      },
+      "triangles_per_instance": 12,
+      "instance_count": 1,
+      "total_triangles": 12
+    },
+    {
+      "name": "서류 트레이",
+      "asset_ref": {
+        "asset_id": "AST-1049",
+        "version": "v001"
+      },
+      "triangles_per_instance": 84,
+      "instance_count": 1,
+      "total_triangles": 84
+    }
+  ],
+  "scene_triangles": 2104,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3470144,
+  "checks": {
+    "triangle_budget": {
+      "status": "pass",
+      "evidence": "Actual final GLB Blender reimport, every instance included",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "All final GLB UV loops match the unchanged fixed palette",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "Final GLB one material and one image",
+      "reason": null
+    },
+    "support_production": {
+      "status": "pass",
+      "evidence": "Explicit physical support production; transformed floor/surface gaps recorded in support-changes.json",
+      "reason": null
+    },
+    "visual_front_side_back": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "New versions require additive directional view review"
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "New build must be executed independently"
+    }
+  },
+  "remaining_issues": [
+    "New version needs directional and target-WebGL verification; no ready promotion."
+  ],
+  "dimensions_m": [
+    6.0,
+    5.199999809265137,
+    1.956125020980835
+  ]
+}
