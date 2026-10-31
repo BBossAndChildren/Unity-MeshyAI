@@ -1,0 +1,67 @@
+{
+  "schema_version": 3,
+  "sound_id": "SFX-001",
+  "version": "v001",
+  "candidate_ref": {
+    "path": "docs/machine/catalog/sound-effects-candidates-v001.json",
+    "candidate_id": "SFX-CND-001"
+  },
+  "key": "ui_click",
+  "name": "버튼 클릭",
+  "category": "공통 UI",
+  "provider": "ElevenLabs",
+  "model_id": "eleven_text_to_sound_v2",
+  "flow_id": "cqhiqr5xhqK1tFjd2AbD",
+  "node_id": "b5xvhVTDjGxHJEYpvANq",
+  "generation_id": "U9f3LwBbpWdDvZmIn8Ta",
+  "prompt": "A single soft rounded UI button click, warm tiny tactile pop with a clean short decay under 150 milliseconds, friendly educational game interface. One isolated sound at the beginning, silence after. Dry close recording, no voice, no music, no background noise.",
+  "requested_duration_seconds": 0.5,
+  "loop": false,
+  "source_path": "audio/sound-effects/original/SFX-001/v001/source.mp3",
+  "source_sha256": "b66858df42cedd30542e28b2afd33759c875ff47faf2472fae02cb632e520d19",
+  "source_bytes": 25946,
+  "source_decoded_duration_seconds": 0.48,
+  "source_peak": 0.002716064453125,
+  "source_rms": 0.00024019025667402114,
+  "runtime_wav_path": "audio/sound-effects/processed/SFX-001/v001/exports/ui_click.wav",
+  "runtime_mp3_path": "audio/sound-effects/processed/SFX-001/v001/exports/ui_click.mp3",
+  "runtime_wav_sha256": "b615f97e6a4fb135d356792525660a767acaa0cc7ca5ff2ecdde3c3c90eab610",
+  "runtime_mp3_sha256": "a706c3255e5a801e777a2f6b028ddabcc9f8fe8f804d52c91cb9aba81f265e8e",
+  "runtime_wav_bytes": 3348,
+  "runtime_mp3_bytes": 1714,
+  "runtime_duration_seconds": 0.03746031746031746,
+  "sample_rate": 44100,
+  "channels": 1,
+  "peak_dbfs": -8.999999999999998,
+  "processing": {
+    "trim_start_samples": 0,
+    "trim_end_samples": 19516,
+    "loop_crossfade_samples": 0,
+    "gain_multiplier": 130.63511391467193,
+    "target_peak_dbfs": -9,
+    "loop_boundary_jump": null
+  },
+  "price_reported": {
+    "credits": 5,
+    "price_cents": 0.05,
+    "cost_fiat_currency": "usd"
+  },
+  "checked_at": "2026-10-31T13:48:10.006750+09:00",
+  "status": "generated_processed_static_checks_pass",
+  "checks": {
+    "decode_original": "pass",
+    "decode_wav": "pass",
+    "decode_mp3": "pass",
+    "not_silent": "pass",
+    "sample_clipping": "pass",
+    "subjective_listening": "unverified",
+    "unity_webgl_playback": "unverified",
+    "loop_audition": "not_applicable"
+  },
+  "actual_usage_refs": [],
+  "metadata_correction": {
+    "previous_prompt_recorded": "One soft rounded UI button click, tiny warm tactile pop, very short clean decay. One isolated cue, clean short natural decay, silence after. Friendly low-intensity educational game sound. No speech, no music, no unrelated sound.",
+    "reason": "Use actual prompt returned by ElevenLabs node settings; audio bytes unchanged.",
+    "corrected_at": "2026-10-31T13:51:23.359395+09:00"
+  }
+}
