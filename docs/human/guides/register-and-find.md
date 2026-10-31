@@ -13,3 +13,5 @@
 조회: 빌드 → 에셋 ID·버전 → 원본·Blender·GLB·검수 기록 → 팔레트 버전 → 원본 색상·UV 대응표.
 
 재사용 작업에서는 [분류·변형·사용 이력 안내](asset-reuse-and-history.md)를 함께 확인합니다. 공간의 기존 occupation_groups·panorama_ref·asset_slots 연결을 먼저 조회하고, 직접 참고 이미지는 source_images로 구분합니다. 적용 가능한 공간과 실제 배치는 별도로 기록하며 색상 UV 파일 변경은 새 에셋 버전으로 보존합니다. 실제 배치·빌드 포함·실행 검증은 근거가 생긴 단계만 기록합니다.
+
+직업체험 설계를 수정할 때는 [물건 확대·직접 작업 적용 안내](object-closeup-direct-work.md)를 확인합니다. 필수 동작과 `interaction_flow`·`closeup`·`work_surface` 계약은 AGENTS.md에서 관리합니다. 기존 작성 시나리오부터 조사·수정하고, 설계 변경만으로 실제 사용·빌드·실행 상태를 변경하지 않습니다.

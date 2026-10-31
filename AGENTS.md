@@ -6,6 +6,14 @@
 
 - 모든 모델에 Meshy를 사용할 필요는 없습니다. 제작 도구는 복잡도보다 형태의 특성을 우선해 선택합니다. 반복·대칭 구조, 정확한 치수, 명확한 부품 구성이 중요하면 Blender를, 유기적 형태·불규칙한 실루엣·자유로운 곡면이 중요하면 Meshy를 우선합니다. 복잡해 보여도 기본 도형과 반복 구조로 표현할 수 있으면 Blender를 우선합니다. 스크립트 재사용 가능성과 예상 수정 부담도 함께 고려합니다.
 
+## 에이전트 모델·추론 강도 선택
+
+- 기본 선택은 `gpt-6.1-sol / high`입니다.
+- 작업 난이도와 문제의 복잡성에 따라 `high`, `xhigh`, `max` 중에서 선택합니다.
+- 동일 문제에 대한 오류 수정·재검증이 현재 단계에서 연속 2회 실패하면 `high → xhigh → max` 순서로 한 단계 상향합니다. 상향 후에는 해당 단계에서의 연속 실패 횟수를 새로 집계합니다.
+- `max`에서는 더 높은 단계를 임의로 만들지 않고 실패 원인과 접근 방법을 재검토합니다.
+- 이 규칙은 실행 환경의 모델·추론 강도를 자동으로 변경하는 설정이 아닙니다. 변경 수단이 없으면 필요한 설정 변경을 알리고, 실제로 변경하지 않은 상태를 상향 완료로 보고하지 않습니다.
+
 ## 1. 작업 순서
 1. 기존 문서와 JSON 목록, 대상 파일을 확인합니다.
 2. 원본을 보존하면서 요청한 자료를 수정하고 목록·설명을 함께 갱신합니다.
@@ -244,6 +252,64 @@ checks는 아래 완료 조건별로 status(pass/fail/unverified/not_applicable)
 색상 변형 mint-top은 기준 AST-900 v001, 팔레트 v009의 cell_ref {"texture_id":"color1","row":3,"column":5}를 상판 부위에 적용하는 레시피입니다. planned이면 result_asset_ref:null, 실제 UV 변경 파일을 등록했다면 예를 들어 AST-900 v002를 result_asset_ref로 참조합니다. 이 ID·버전·색상 칸은 설명용이며 실재 여부나 적합성을 주장하지 않습니다.
 프리팹 정의 1건과 그 프리팹을 사용한 장면 인스턴스 4개가 있으면 실제 배치 수량은 4이며 5가 아닙니다. 사용 예정 4개, 실제 배치 4개, 빌드 포함 4개, 실행 검증 통과는 각각 근거가 다른 기록입니다.
 
+### 파노라마 기반 직업체험·상호작용 명세
+- 파노라마 기준으로 필요한 에셋을 공통·비공통으로 명세하고 해당 공간의 형태·배치·의미에 맞게 장면을 구성한다. 직업체험은 그 장소 안에서 직업별 업무·핵심역량에 근거한 상호작용으로 수행한다. 동일 장소·형상은 재사용하며, 시나리오를 장소와 무관한 별도 물건 목록으로 관리하지 않는다.
+- 직업은 기존 occupation catalog만 기준으로 한다. 원본 업무·역량과 게임용 각색을 구별한다. 원본의 설명·준비방법을 실제 근무지 검증이나 자격·능력 판정으로 승격하지 않는다.
+- 한 미션은 상호작용 물건 3개와 연결된 업무 흐름을 갖는다. 여러 단계에서 같은 물건을 다시 사용할 수 있다. 배경 물건·화면 UI와 조작 물건을 구별하되 배경까지 장면 예산에 포함한다.
+- 전체 고정 공간 후보에서 서로 다른 prompt_id/version 2개 이상에 연결된 후보를 common, 1개를 noncommon으로 파생 분류한다. 분류는 특정 목록 버전과 계산 근거를 고정하며 실제 사용 원장을 대체하지 않는다. 전체 적용 공간 이름·ID·버전은 기존 full_scene_candidates로 빠짐없이 조회한다.
+- career-minigame-types-vNNN.json: schema_version:3, package_id, version, planning_status, document_path, counts, types. types는 고유 type_id/version, kind(core/special_modifier), name, implementation_status, input_description, player_action, success_rule, recovery_rule, required_configuration_fields, states, events, accessibility, asset_policy를 포함한다. MG-001~010은 공통 유형, EX-001~010은 특수 상황 분기이며 모든 직업에 20종 전부를 강제하지 않는다. 명세 작성은 구현 완료가 아니다.
+- career-experience-scenarios-vNNN.json: schema_version:3, package_id, version, document_path, source_refs(path/sha256), scope, scenarios, remaining_occupation_ids, usage_measurement. scenarios는 scenario_id/version, occupation_id/name, title, planning_status, production_status, implementation_status, runtime_checks, document_path, implementation_prompt_path, original_ref(path/sha256/json_pointer), source_basis, fictionalization, panorama_ref, prompt_ref, context_ref(미등록이면 null), scene_basis_ref(없으면 null), interaction_objects(정확히 3개), base_game_refs, steps, special_variants, feedback, acceptance_cases, actual_usage_refs, actual_usage_status를 포함한다. 추가 시나리오 데이터 필드는 명세에 설명한다.
+- interaction_objects는 object_id(시나리오 내 유일), candidate_ref(기존 고정 catalog/candidate_id), name, asset_reuse_ref(기존 asset_id/version 또는 null), reuse_fit_status, reuse_class, scene_candidate_count, binding_status, unity_binding(미정 null), requirements, mesh_animation_requirement를 포함한다. 재사용 참조는 실제 배치를 뜻하지 않으며 동작·분리 부품·콜라이더·상태 표현을 확인한다. 실제 파일 변경은 기존 버전 보존 규칙을 따른다.
+- steps는 step_id, object_id, type_refs, action, from_state, to_state, success_predicate, on_error, configuration을 포함한다. special_variants에는 type_id/version, mode, trigger, required_outcome을 기록한다. 단계·분기의 상태, 입력, 정답 데이터, 선행 조건, 중복 입력 방지와 초기화를 구체화한다. 성공·오류 조건을 미정 문구만으로 채워 구현 완료로 표시하지 않는다.
+- panorama-career-experience-layouts-vNNN.json: schema_version:3, package_id, version, document_path, source_refs, classification_basis, scenes. scenes는 prompt_ref, panorama_ref, name, common_asset_candidates, noncommon_asset_candidates, scenario_refs, scenario_coverage, implementation_status를 포함한다. 후보 항목은 candidate_ref, name, reuse_class, full_scene_candidates, asset_ref(미정 null), quantity(미정 null), placement_state:planning_only를 기록한다. 파생 명세의 제작 전 null은 기존 실물 모델이 없다는 단정이 아니다.
+- 전체 시나리오 확장 시 source_basis.selected_work_evidence는 원본의 완전한 업무 문장을 보존하고, scene_selection은 method, relation_to_existing_mapping, reason, original_mapping_ref, verification_status로 기존 명시 연결·분류 안 제안·분류 밖 제안을 구별한다. review_status/review_issues 및 problem_data_level로 초안·전문 검토·공통 엔진 연습 데이터의 한계를 명시한다. 실제 전문 정답이나 구현 상태를 자동 확정하지 않는다.
+- 미선택 주제가 있는 시나리오는 selection_status:needs_subject_selection, selected_scene_option:null과 scene_options를 기록한다. 각 대안은 고정 prompt_ref/panorama_ref, 정확히 3개의 interaction_objects, steps, base_game_refs, special_variants를 갖는다. 기본 필드의 첫 대안은 미리보기일 뿐 선택·실제 배치를 뜻하지 않는다.
+- 공간 역조회 확장 필드 scenario_specific_asset_additions는 기존 필수 후보 밖의 추가 제안이며 원본 후보 목록 자동 갱신이 아니다. interaction_object_reverse_index는 후보별 기존 전체 공간과 모든 시나리오·미선택 대안의 참조를 빠짐없이 제공하며 실제 사용 원장이 아니다. 버전 갱신은 supersedes로 연결하고 과거 명세를 보존한다.
+- 계획 승인·모델 제작·시나리오 구현·실제 배치·Unity/WebGL 실행 검증은 각각 구분한다. 기존 actual usages와 assemblies를 참조하고 새로운 상호작용 사용을 근거 없이 placed로 등록하지 않는다. 미구현 유형·시나리오는 명시하며 전체 직업 완료를 주장하지 않는다.
+
+### 물건 확대·직접 작업형 직업체험 — 필수 동작과 명세 계약
+
+#### 적용 범위와 기준 사례
+- 직업체험은 **실제 3D 물건 선택 → 부드러운 확대 → 물건에 맞는 작업 화면에서 직접 조작 → 즉시 결과 표시 → 원래 공간으로 복귀 → 다음 물건에서 업무 계속** 흐름으로 설계한다. 파노라마는 공간 구성 기준이며, 평면 그림 위 버튼만으로 완료하는 화면을 실제 3D 체험으로 간주하지 않는다.
+- 작업 시작 시 등록된 모든 시나리오 패키지의 ID·버전·상태를 대조해 기존 작성 범위를 확정한다. 중복 시나리오는 최신 설계와 실제 구현 기록을 구별하여 조회한다. 직업 catalog에 있다는 사실만으로 시나리오가 작성됐다고 간주하지 않는다. 기존 작성 시나리오의 설계를 먼저 수정하고, 새 직업의 대량 생성·구현은 수정 기준과 대표 사례를 사용자에게 보여준 뒤 명시적으로 요청된 범위에서 진행한다.
+- 기준 사례는 office-assistant-v005의 실제 물건 확대·종이 팝업이다. docs/human/builds/office-assistant-v005.md, 해당 Unity 소스·시나리오 데이터·사용 이력·실행 근거를 직접 확인한다. 이 사례의 확대·복귀를 재사용하되, 기존 선택지 버튼 조작까지 모든 직업의 완성 기준으로 복제하지 않는다. 새로 요구되는 필드 편집·드래그 등의 미구현 동작과 기존 검증 범위를 분리한다.
+- 물건의 사용 방식이 느껴지는 작업을 우선한다. 단순히 설명을 읽고 '정답 선택/완료' 버튼을 누르는 것으로 문서 편집·조립·측정·분류를 대신하지 않는다. 질문 선택·요청 전송·저장·인쇄·확정처럼 실제 업무에서 의미가 있는 버튼은 허용한다. 같은 조작 틀을 재사용해도 직업별 업무 자료·도구 역할·판정 근거가 달라야 한다.
+
+#### 선택·확대·복귀의 정확한 동작
+- 실제 에셋의 콜라이더 또는 검증된 선택 영역을 클릭·터치해 물건을 선택한다. 카메라 드래그와 선택을 포인터 누름·이동·놓음으로 구별한다. 기본 이동 임계값은 표시 좌표 기준 8px이며 확대율·기기에 맞춰 설정 가능하게 한다. 임계값을 넘은 드래그의 놓음으로 물건이 열리지 않아야 한다.
+- 확대 전에 카메라 위치·회전·FOV 또는 직교 크기·뷰포트, 입력 모드, 배경 렌더러별 표시 상태와 선택 초점을 저장한다. 확대는 기본 0.45초, ease-in-out 보간으로 수행하고 값은 데이터로 조정한다. 선택 물건의 실제 bounds와 작업 면을 기준으로 프레이밍하며, 모든 물건에 같은 월드 좌표나 각도를 적용하지 않는다. 확대 중 중복 선택·다른 물건 열기를 잠그고, 모션 감소 설정에서는 즉시 전환할 수 있게 한다.
+- 확대 시점은 물건마다 정한다. 문서·모니터·기기 패널은 읽고 조작할 면을 정면에서, 트레이·조립대·분류함은 작업 면과 투입 위치가 보이는 시점에서 보여준다. 선택 물건을 복제하거나 원본 메시·재질·색을 바꿔 확대를 흉내 내지 않는다. 배경을 숨기거나 어둡게 할 경우 처리 방식과 원래 상태 복원을 명시한다.
+- 작업 화면이 열린 동안 뒤쪽 공간의 선택·회전·줌 입력을 차단한다. 화면 밖으로 나간 포인터·취소된 터치·다중 터치·앱 초점 상실 시 진행 중 제스처만 취소하고 유효하지 않은 드롭이나 완료 이벤트를 발생시키지 않는다.
+- 닫기와 Esc는 작업 화면을 닫고 저장한 카메라·뷰포트·배경 표시 상태로 부드럽게 복귀시킨다. 카메라를 기본 시작 위치로 초기화하지 않는다. 기존 메시가 사라지거나 이전 프레임 잔상이 남지 않도록 전체 화면 지우기·뷰포트 복원을 실제 화면으로 확인한다.
+- 닫기는 작업 취소·단계 초기화·세션 초기화가 아니다. 입력 중인 문서 초안, 미저장 표시, 선택한 파일·revision·부수, 분류 진행, 질문·응답·인계 내용과 단계 상태를 세션에 유지하고 다시 열면 같은 작업 위치를 복원한다. 조작 중이던 드래그의 임시 그림자만 취소한다. 저장된 업무 결과와 미저장 초안은 구분한다.
+- 출력 같은 비동기 작업은 화면을 닫아도 한 번 시작한 작업을 계속하되, 일시정지 시에는 진행 시간을 멈춘다. 같은 작업의 완료는 한 번만 처리한다. 화면을 다시 열었다고 출력·타이머를 재시작하거나 완료 수량을 늘리지 않는다. 다른 비동기 작업도 닫힘·일시정지 정책을 명세한다.
+
+#### 물건별 작업 화면과 직접 조작
+- 모니터: 받은 메시지와 대화를 열어 누락 요청을 질문하고 요약 확인한다. 문서는 제목·날짜·내용 등 편집할 필드를 실제 문서 형태로 표시하고, 플레이어가 해당 필드를 선택해 수정·저장한다. 요청 원문과 비교하고 미저장·저장 revision 및 오류 위치를 표시한다. 날짜의 정답을 고르는 두 버튼만으로 문서 편집을 대체하지 않는다.
+- 복합기: 기기 패널에서 문서·버전 목록, 부수 입력·증감, 미리보기를 조작하고 인쇄한다. 최신 요청·저장본과 대조한 뒤 시작하며, 작업 중 설정·중복 인쇄를 잠근다. 진행률과 요청 부수의 용지가 나오는 UI, 완료된 묶음을 즉시 보여준다. 용지는 해당 기기의 UI이며 별도 네 번째 3D 조작 물건이 아니다.
+- 수납장: 문서 묶음과 읽을 수 있는 분류함을 표시한다. 묶음을 알맞은 칸에 드롭하거나 같은 의미의 선택·이동 조작으로 보관한다. 오분류는 확정하지 않고 되돌림·이유를 보여준다. 보관 후 묶음의 위치·라벨·수량을 표시하고 결과·보관처를 인계한다. 단순한 '정답 칸' 버튼 선택만으로 분류를 완료하지 않는다.
+- 관찰·검사: 물체·문서의 회전·확대·비교·검사 지점 표시·필드 수정 중 대상에 적합한 조작을 제공한다. 분류·선별: 직접 옮길 물품과 구분할 칸을 제공한다. 순서·절차: 물품·도구를 사용하는 단계나 순서 카드를 직접 배열한다. 측정·조절: 눈금·다이얼·슬라이더·계기 값을 조절한다. 조립·배치: 부품을 결합점에 이동·회전·스냅한다.
+- 진단·해결은 단서와 가설·대응을 연결하고, 제작·표현은 문서·타임라인·구성판·작품 면에서 결과를 편집하며, 계획·배분은 일정·자원 칸에 항목을 배치한다. 타이밍·추적은 신호와 입력·경로를 연결한다. 대화·응대는 상황에 맞는 질문·응답·요약 확인으로 구현한다. 모듈 이름만 붙이고 동일한 버튼 퀴즈를 모든 물건에 적용하지 않는다.
+- 드래그가 적합한 작업에는 드래그를 제공하고 클릭/터치로 항목 선택 후 목적지 선택, 키보드 초점 이동·Enter/Space 확정·Esc 취소 등 동등한 대체 조작을 제공한다. 드래그·대체 조작은 같은 업무 명령·판정 함수를 호출하고 정답·제약·피드백이 같아야 한다. 색·소리만으로 상태를 구별하지 않는다. 입력 필드에 타이핑하는 P/R/숫자/화살표를 전역 단축키로 오인하지 않도록 입력 초점을 처리한다.
+
+#### 시나리오·단계의 필수 추가 명세
+- 기존 schema_version:3과 ID를 유지한다. 새 설계는 패키지·변경 시나리오 버전을 올려 보존하고 supersedes 또는 이전 항목 참조로 연결한다. 기존 항목을 근거 없이 일괄 보완하거나 구현·검증 상태를 승격하지 않는다. 아래 선택 확장은 신규/수정하는 직접 작업형 설계에서는 모두 작성하며, 기존 누락은 '아직 이 기준으로 명세하지 않음'이다.
+- 시나리오에 interaction_flow를 추가한다. 내부 필수 필드는 mode(object_closeup_direct_work), view_states, transition_seconds, easing, drag_threshold_px, reduced_motion, camera_restore_fields, input_lock_policy, close_policy, pause_policy, reset_policy, persistence_scope다. view_states는 exploring/focusing/working/returning/paused를 구별하며 업무 단계 상태와 별도로 관리한다. persistence_scope는 최소 session을 명시한다. 앱 재실행·새로고침까지 보존을 구현하지 않았다면 이를 지원한다고 기록하지 않는다.
+- 각 interaction_objects 항목에 closeup을 추가한다. 내부 필수 필드는 asset_ref(실제 ID·버전 또는 미연결 null), binding_status, work_face, camera_preset, framing, background_policy, restore_policy, calibration_status다. 기계·문서 UI만 있어 실제 에셋이 없으면 미연결 사유를 기록한다. 계산·실측하지 않은 카메라 좌표·bounds·콜라이더를 실측값으로 등록하지 않는다. camera_preset과 framing은 설계값이며 실제 Unity 바인딩 검증과 구별한다.
+- 각 steps 항목에 work_surface를 추가한다. 내부 필수 필드는 surface_kind, layout, controls, manipulands, initial_data, target_data, prerequisites, commands, success_rules, error_feedback, retry_policy, visual_result, draft_persistence, next_object, request_change, handoff, reset, implementation_status, verification다. 기존 object_id·type_refs·상태·판정과 모순되지 않게 연결한다. 해당 없음인 객체는 null과 구체적인 사유를 남기며 아무 설명 없는 빈 객체로 대체하지 않는다.
+- controls는 control_id, kind, data_binding, pointer_action, touch_action, keyboard_action, command를 갖는 배열이다. manipulands는 직접 조작하는 항목의 ID·표시 내용·허용 목적지/조절 범위/결합점 등을 기록한다. commands는 이름·입력 payload·선행 조건·업무 상태 변화·중복 방지 키를 정의한다. 화면 표현은 명령을 전달하고, 상태·판정 코드는 정답·원본 데이터와 분리한다. 판정식 문자열을 임의 코드 실행으로 평가하지 않는다.
+- initial_data와 target_data에는 실제 가상 요청·문서 내용·초깃값·정답 값·분류 규칙·허용 오차를 재현할 수 있게 기록한다. 단순 A/B·0~100 같은 엔진 연습 데이터만 있으면 engine_fixture_only로 표시하고 직업별 문제 데이터 완성으로 간주하지 않는다. 원본의 업무·역량 근거와 게임용 수치·대화·정답은 구별한다.
+- success_rules는 제출값·현재 요청 revision·문서 저장 revision·선행 단계·단위/허용 범위·완료 횟수 등 적용 조건을 정확히 명시한다. error_feedback에는 잘못된 조작별 메시지·원위치 복귀/수정 유지·상태 불변 여부를 기록한다. visual_result에는 저장 표시·출력 용지·분류함 안 묶음·스냅 결합·변경된 계기 등 성공 직후 눈으로 확인할 결과를 적는다. 설명문이나 버튼 라벨 변화만으로 모든 결과를 대신하지 않는다.
+- next_object는 다음 업무와 물건, 열림 조건, 이전 완료 물건의 재열기 허용·읽기 전용 정책을 명시한다. 완료 물건을 다시 열어도 업무 상태·수량이 바뀌거나 보상이 중복되지 않는다. request_change는 변경 필드·발생 시점·revision 증가·무효화되는 확인/저장/출력 결과·재확인 경로를 정한다. handoff는 전달할 필드·상대 확인·오류 복구를 정한다.
+- reset은 확인 후 초안·진행·출력·분류·인계·일시정지·UI 초점·카메라 상태를 일관되게 초기화한다. 세션 generation 또는 취소 토큰으로 이전 세션의 비동기 완료·전환 콜백을 무효화한다. 닫기·재시도·전체 초기화를 서로 다른 동작으로 구현하고 기록한다.
+
+#### 구현·기록·검증의 경계
+- 판정·상태 코드, 시나리오 데이터, 물건별 화면 표현을 분리한다. 공통 미니게임 10종·특수 상황 10종은 재사용 설계 목록이며 해당 시나리오에 필요한 모듈만 적용한다. 특수 분기도 동일한 물건 3개와 UI를 재사용한다. 하나의 사례가 통과해도 다른 직업·유형·미구현 분기에 pass를 승계하지 않는다.
+- 문서·용지·대화·기기 패널·분류함 표현은 해당 물건에 귀속된 UI로 제공한다. 별도 NPC·네 번째 조작 물건을 임의로 추가하지 않는다. 기존 모델·배치·스크립트와 공용 PNG 한 장·공용 재질을 우선 재사용한다. 문서 글자를 모델용 이미지 텍스처에 굽지 않는다. 이 직접 작업형 전환 범위에서는 유료 Meshy·이미지 생성 호출을 하지 않는다.
+- 대표 사례 검수는 실제 Unity와 HTTP에서 실행한 WebGL로 수행한다. 3D 표면 선택/키보드 대체, 확대·원래 카메라/배경 복귀, 팝업 닫기, 카메라 드래그와 선택 구별, 미저장 초안과 설정의 닫기·재열기 유지, 단계 잠금, 잘못된 물건 선택, 드래그·동등 대체 조작, 오답·재시도, 중복 입력, 출력 중 닫기·일시정지·초기화, 요청 변경, 인계, 완료 후 재클릭을 확인한다. 확대·복귀 중 입력·터치 취소·작은 화면의 잘림·잔상도 검수한다.
+- 각 검수 항목은 구현 여부, 실행 환경·일시·대상 빌드·근거, pass/fail/미검증을 구별한다. 소스 조사·기존 v005 실행 기록·정적 명세 검토·이번 실제 실행을 구별한다. 기존 구현을 참고했다는 이유로 새 직접 조작 기능을 구현 완료로 보고하지 않는다.
+- 실제 바뀐 범위에 맞춰 catalog·사람용 문서·사용 이력·빌드·전달 문서를 함께 갱신한다. 지침/설계만 바꿨을 때 가짜 배치·새 빌드·실행 성공·ZIP을 등록하지 않는다. 실제 구현·전달 단계에서는 기존 모델·빌드·ZIP을 덮어쓰지 않고 고유 버전으로 보존하며 실행 가능한 WebGL ZIP과 실행 안내·manifest를 제공한다.
+
 ## 5. Unity와 WebGL 전달
 - Unity 프로젝트는 unity/projects/, WebGL 출력은 unity/webgl/builds/로 분리합니다.
 - Unity 프로젝트의 Assets/, Packages/, ProjectSettings/ 및 .meta 파일을 관리합니다.
@@ -256,7 +322,239 @@ checks는 아래 완료 조건별로 status(pass/fail/unverified/not_applicable)
 - WebGL은 웹 서버에서 실행 확인합니다. index.html 더블클릭만으로 검증하지 않습니다.
 - 로컬 빌드와 ZIP은 Git에서 제외합니다.
 
+### Unity ↔ React 공통 응답·과정·결과·해석 컨텍스트 규격 v001
+
+#### 적용 범위와 구현 상태
+
+- 앞으로 새로 작성하거나 수정하는 모든 직업체험 시나리오와 Unity/WebGL 구현은 이 공통 규격을 적용한다. 통합 빌드·여러 장면·여러 물건도 같은 이벤트 이름과 봉투 형식을 사용하고 작업별 차이는 `data`에 둔다. 규칙의 기준은 이 AGENTS.md이며 별도 규칙 폴더·자동 훅·검사 스크립트를 만들지 않는다.
+- 규격 정의, Unity 송신 구현, React 수신 구현, 실제 통합 실행 검증은 서로 다른 상태다. 기존 빌드에 소급하여 연동 완료를 표시하거나, `window.officeState` 같은 진단 스냅샷을 공통 결과 이벤트 구현으로 간주하지 않는다. 이번 지침 추가 자체는 기존 게임·빌드·catalog의 구현/실행 상태를 변경하지 않는다.
+- 런타임 이벤트는 UTF-8 JSON과 아래 camelCase 필드를 사용한다. `schemaVersion:1`은 **통신 봉투의 버전**이며 catalog의 `schema_version:3`을 대체하지 않는다. 이벤트를 저장소 JSON 파일로 보존할 때에는 `{ "schema_version": 3, "protocol": "career-experience", "protocolVersion": "v001", "events": [] }` 봉투 안에 원본 이벤트를 넣는다. 버전 불일치는 명시적으로 처리하고 누락 필드를 추정으로 채우지 않는다.
+
+#### 프론트 방별 호출·체험 종료 응답 프로필
+
+- 프론트의 기본 연동은 `start_experience`로 방별 체험을 시작하고 `end_experience`를 호출하면 `experience.ended`로 그동안의 과정·결과·해석 컨텍스트를 묶어 받는 방식이다. 개별 행동 이벤트는 Unity 내부 원장에 보존하며 프론트가 실시간으로 모든 행동을 구독해야만 종료 응답을 받을 수 있게 만들지 않는다. 신규·수정 구현에서는 아래 실시간 전달 프로필 v002를 필수로 적용한다. 수신자가 실시간 구독을 하지 않아도 종료 요약은 독립적으로 받을 수 있어야 한다.
+- 호출 JSON의 공통 필수 필드는 `schemaVersion:1`, `protocol:career-experience`, `requestId`, `action`, `sessionId`, `experienceId`, `roomId`다. 시작 호출에는 `scenarioId`, `scenarioVersion`, 종료 호출에는 `reason:USER_REQUESTED_END`를 추가한다. reason은 사용자의 종료 요청 의도이며 완료/중단 판정을 프론트가 강제로 지정하는 값이 아니다.
+- `roomId`는 프론트가 구별하는 논리 방 ID이며 기존 sceneId와의 고정 매핑을 명세한다. 한 방에 여러 시나리오가 있으면 시작 요청의 scenarioId/version으로 선택하며 임의로 첫 시나리오를 실행하지 않는다. 알 수 없는 방·시나리오 또는 실제 실행과 다른 roomId/experienceId의 요청은 명시적인 제어 오류로 처리하고 다른 체험에 적용하지 않는다.
+- `experienceId`는 방을 새로 열어 체험을 시작할 때마다 프론트가 생성하는 고유 실행 묶음 ID다. sessionId는 통합 플레이 동안 유지한다. 같은 방을 다시 시작하면 새 experienceId를 사용한다. 내부 전체 초기화는 같은 experienceId 안에서 새 scenarioRunId로 구별하며 이전 run 이력을 보존한다.
+- 프론트 프로필의 응답은 기존 공통 이벤트 봉투에 `roomId`, `experienceId`, `requestId`를 필수로 추가한다. 응답의 requestId는 처리한 호출의 ID이며 시작 준비가 끝났을 때 `experience.started`, 종료 처리가 확정됐을 때 `experience.ended`로 응답한다. 내부 자동 행동 이벤트에서 직접 대응하는 호출이 없으면 requestId null을 허용한다. 기존 내부 이벤트 예시는 이 추가 프로필 없이도 유효하다.
+- `experience.ended`의 type은 정상 완료·중도 종료·최종 실패 모두 동일하다. 실제 업무 완료 조건에 따라 result.outcome을 completed/aborted/failed로 결정하며, 종료 버튼을 눌렀다는 이유만으로 이미 완료한 업무를 aborted로 바꾸지 않는다. 중도 종료의 partialResults와 context.termination은 아래 기준을 그대로 따른다. 시작/제어 오류 응답은 `experience.error`로 구별하며 오류를 업무 실수나 완료 결과로 집계하지 않는다. 제어 오류 봉투는 schemaVersion/protocol/requestId/sessionId/experienceId/roomId/type 및 `error:{code,message}`를 사용한다.
+- 하나의 experience는 선택한 시나리오의 현재 run 종료 요약을 기본 process/result/context로 반환한다. 같은 experience에서 초기화한 과거 run은 선택 확장 `data.previousRuns`에 분리해 보존하며 최종 run과 횟수를 합산하지 않는다. 해당 범위의 근거 원본 이벤트를 부모 응답 자신을 제외한 `data.events` 배열로 함께 전달할 수 있다. events는 시간순 원장의 조회 결과이며 새 행동으로 다시 집계하지 않는다. 전량 전달 여부는 `data.eventsComplete`로 명시하고, 근거 이벤트가 생략되면 실제 구현한 보존/조회 경로를 전달 문서에 적는다. 종료 응답만 있어도 카운트·결과·해석은 읽을 수 있어야 한다.
+- 같은 requestId의 전달 재시도는 같은 응답과 eventId로 처리한다. 종료 확정은 experienceId당 한 번이며 새 requestId로 이미 끝난 experience를 다시 종료하려 하면 `ALREADY_ENDED` 제어 오류와 원본 종료 eventId를 안내하고 새 업무 결과·카운트를 만들지 않는다. React는 roomId/experienceId/requestId를 확인해 해당 호출에 연결하고 eventId로 중복을 제거한다. 종료 응답을 수신·보존한 다음 Unity 화면을 제거한다. 수신 전 제거·타임아웃·강제 종료는 정상 응답을 받은 것처럼 꾸미지 않는다.
+- 프론트 전달 ZIP은 실행 WebGL ZIP과 구별한 명세·타입·가상 예시 패키지로 만들 수 있다. 규칙의 원본은 이 AGENTS.md이며 전달 문서는 해당 절에서 생성한 버전 고정 스냅샷임을 명시한다. 기준 출처와 해시·미구현 상태를 남기고 독립 규칙 원장으로 수정하지 않는다. 스냅샷을 갱신할 때 새 패키지 버전을 사용한다. 명세 전달만으로 Unity 브리지·React 연동·종료 결과 수신의 실행 pass를 등록하지 않는다.
+
+#### 실시간 전달·고정 ID 레지스트리 프로필 v002
+
+- 신규·수정 시나리오는 상태 확정 시 공통 봉투 그대로 실시간 발행한다. 선택/열기/닫기/뒤로가기, 제출/오류/재시도, 요청 변경, 도움, 실제 완료, 일시정지/복귀/초기화/중단을 기존 고정 type으로 전송한다. 종료 응답도 유지한다. 프레임·키 입력마다 업무 이벤트를 만들지 않는다.
+- process는 해당 범위의 현재 누적 스냅샷이다. 백엔드와 React는 이를 더하지 않고 범위(sessionId, experienceId, scenarioRunId, process.scope, interaction이면 stepId/objectId/workItemId)별 최신 sequence로 갱신한다. 원본 이벤트는 별도로 보존한다.
+- 진행 중 result는 pending, success/completionCode는 null이며 context는 pending이다. interaction 완료는 해당 작업만 평가할 수 있으나 scenario 전체 평가는 scenario terminal 상태에서만 확정한다. 정상 진행을 TASK_INCOMPLETE로 표시하지 않는다. 종료·중단 자체는 실수에 가산하지 않는다.
+- 상태 전이 이벤트는 전이 확정 직후 발행하고 지연된 네트워크 저장과 구별한다. interaction.progress는 변경된 진행률/상태만 최대 초당 5회로 합칠 수 있다. 오류·완료·중단·revision 변경 이벤트는 합치거나 버리지 않는다. 밀리초 단위 도착 보장은 하지 않는다.
+- 프론트는 시작 호출 전에 career-experience:event 리스너를 등록한다. 이벤트에 대응 호출이 없으면 requestId:null이다. 동일 페이지 CustomEvent와 iframe의 origin/source 검증 규칙은 기존 규격을 따른다. 백엔드 전송 성공은 별도 저장 ACK이며 Unity 이벤트 발생 자체를 서버 저장 완료로 간주하지 않는다.
+- 재전송은 원본 eventId/sequence/occurredAt/내용을 유지한다. 수신자는 (sessionId,eventId)로 중복 제거하며 같은 ID의 다른 내용은 충돌 오류로 보존한다. 순서 역전 이벤트도 원장에 저장하되 오래된 스냅샷으로 최신 상태를 덮지 않는다. 누락은 누락으로 기록하고 종료 data.events와 대조한다. 미구현 replay/ACK API를 지원한다고 명세하지 않는다.
+- 고정 식별자는 docs/machine/catalog/career-integration-registry-v001.json의 버전 고정 참조를 따른다. roomId/scenarioId/scenarioVersion/occupationId를 정확히 대조한다. experienceId는 프론트가 생성하는 실행 ID이므로 고정 직업 목록에 넣거나 재사용하지 않는다. 예시 office를 실제 PAN-001 별칭으로 자동 수용하지 않는다.
+- 레지스트리의 공간 존재·설계 시나리오·소스 실행 설정·특정 빌드 실행 검증은 별개다. 배포는 검증한 buildId+roomId+scenarioId+scenarioVersion 허용 목록으로 선택한다. 알 수 없는 ID/버전, 선택 미정 대안, 미지원 빌드는 명시적 오류로 거부한다. 최신 파일명만으로 모든 시나리오가 한 빌드에서 지원된다고 추정하지 않는다.
+- 전달물은 JSON 규격·ID 목록·가상 예시와 사람용 안내를 함께 갱신하고 새 ZIP 버전으로 보존한다. 이번 명세 변경만으로 기존 Unity 코드·빌드·실시간 통신 실행 상태를 승격하지 않는다.
+
+#### 공통 이벤트 봉투
+
+아래 필드는 모든 이벤트에서 유지한다. null은 해당 없음 또는 명시된 미측정에만 사용하며 해당 사유를 남긴다.
+
+| 필드 | 계약 |
+|---|---|
+| `schemaVersion`, `protocol` | 각각 `1`, `career-experience`로 고정한다. |
+| `eventId`, `sequence`, `occurredAt` | 이벤트 고유 ID, session 내 1부터 증가하는 정수 순번, 시간대가 포함된 ISO 8601 발생 시각. 재전송 시 세 값과 내용이 바뀌지 않는다. |
+| `sessionId`, `scenarioRunId` | 통합 플레이 세션 ID와 시나리오 한 번의 실행 ID. 장면 전환·팝업 닫기는 session을 초기화하지 않는다. 전체 재시작은 새 scenarioRunId로 시작하고 이전 기록을 보존한다. |
+| `buildId`, `sceneId`, `scenarioId`, `scenarioVersion` | 실제 빌드 ID, 명세에 고정한 논리 장면 ID, 시나리오 ID·고정 버전. 에셋 ID를 장면 ID로 사용하지 않는다. |
+| `objectId`, `instanceId`, `assetId`, `assetVersion` | 논리 물건 ID, 실제 장면 인스턴스 식별자, 실제 에셋 ID·버전. 같은 에셋의 반복 배치를 구별한다. 물건에 귀속되지 않는 장면/시나리오 이벤트에서는 네 값 모두 null을 허용한다. |
+| `stepId`, `workItemId`, `attemptId` | 업무 단계 ID, 처리할 문서/부품 등 작업 항목 ID, 실제 제출 시도 ID. 해당 없는 선택·장면 이벤트는 null을 허용한다. 새 제출은 새 attemptId이며 전달 재시도는 같은 ID다. |
+| `requestRevision`, `documentRevision` | 해당 시나리오의 실제 요청·문서 revision. 사용하지 않는 시나리오는 null이며 임의의 1로 채우지 않는다. 요청 변경을 새 플레이나 실수로 취급하지 않는다. |
+| `type`, `action` | 아래 공통 이벤트 종류와 시나리오에 정의한 고정 행동 코드(예: `print`). UI 표시 문장을 코드 ID로 쓰지 않는다. |
+| `process`, `result`, `context`, `data` | 각각 아래 공통 구조와 작업별 입력·변경·결과 상세 객체. 아직 발생하지 않은 결과를 성공으로 채우지 않는다. |
+
+최소 공통 이벤트 종류:
+
+- 생명주기: `scene.entered`, `scene.exited`, `scenario.started`, `scenario.paused`, `scenario.resumed`, `scenario.reset`, `scenario.completed`, `scenario.failed`, `scenario.aborted`.
+- 물건·화면: `object.selected`, `interaction.opened`, `interaction.closed`, `navigation.back`.
+- 업무 과정: `interaction.started`, `interaction.progress`, `interaction.validation_failed`, `interaction.retry_requested`, `workflow.backtracked`, `request.changed`, `guidance.requested`, `guidance.presented`.
+- 작업 결과: `interaction.completed`, `interaction.failed`, `interaction.aborted`.
+
+`interaction.failed`는 한 작업 시도의 실패이며 전체 시나리오 실패를 자동 의미하지 않는다. `interaction.progress`는 상태 스냅샷·진행률 용도이며 프레임마다 같은 이벤트를 새 행동처럼 만들지 않는다. 성공 결과는 실제 업무 완료 전이가 확정된 때 한 번 발행한다. 비동기 출력의 시작을 출력 완료로 보고하지 않는다. 인계가 완료 조건이면 출력·보관만으로 `scenario.completed`를 발행하지 않는다.
+
+#### 과정 기록과 카운트
+
+- 과정의 원장은 고유 이벤트 이력이다. 누적 횟수는 이 이력에서 도출한 조회용 요약이며 React와 Unity가 각각 별도로 증가시키지 않는다. Unity의 실제 상태·판정 확정 지점에서 하나의 공통 모듈이 발행하고 집계한다. React는 이를 수신·표시·저장한다.
+- `process.scope`는 `interaction` 또는 `scenario`다. interaction 요약은 현재 scenarioRunId의 해당 stepId·objectId·workItemId, scenario 요약은 현재 scenarioRunId 전체를 집계한다. 요청 revision은 각 원본 이벤트에 보존하며 요청 변경만으로 기존 실행 기록·누적 횟수를 지우지 않는다. 서로 다른 범위의 요약을 더해 중복 합산하지 않는다.
+- `measurementStatus`는 `complete`, `partial`, `unavailable`이다. 신뢰할 수 없는 횟수·시간은 null과 `measurementNote` 사유로 표시하며 미측정을 0으로 쓰지 않는다. `complete`의 횟수·활성 시간은 측정된 0 이상의 정수이고 guidanceUsed는 boolean이다. 미측정 guidanceUsed도 false가 아닌 null로 표시한다. measurementNote는 complete이면 null, partial/unavailable이면 구체적 사유 문자열이다. 공통 필드는 `attemptCount`, `navigationBackCount`, `backtrackCount`, `retryCount`, `mistakeCount`, `repeatedMistakeCount`, `helpRequestCount`, `guidanceUsed`, `elapsedActiveMs`다.
+- `attemptCount`: 실제 업무 판정에 제출한 시도 수. 입력 글자 수정·마우스 이동·카메라 회전·팝업 열기를 제출로 세지 않는다. 동일 비동기 작업 중 잠긴 반복 입력은 새 attempt가 아니다.
+- `navigationBackCount`: 사용자가 팝업 닫기·사무실 복귀 등 명시적인 뒤로가기를 실행한 횟수. 이는 UI 사용 기록이며 그 자체로 실수나 업무상 되돌아감이 아니다.
+- `backtrackCount`: 이미 진행한 업무 단계에서 이전 업무 단계로 사용자가 실제 돌아가 재확인·수정한 횟수. `workflow.backtracked`의 `data`에 `fromStepId`, `toStepId`, `reasonCode`를 기록한다. 자발적인 재확인도 업무상 되돌아감에는 포함할 수 있지만 실수로 자동 판정하지 않는다. 정상적인 연결 업무·팝업 복귀·시스템의 필수 재확인·변경 요청 대응은 이 카운트에서 제외한다.
+- `retryCount`: 실패하거나 중단된 동일 업무 시도 이후 새 attemptId로 실제 다시 제출한 횟수. `interaction.retry_requested` 버튼만 누르고 제출하지 않은 경우는 의도만 기록하고 횟수를 증가시키지 않는다. 새 작업 항목·새 요청 조건에 대한 첫 제출은 재시도가 아니다. 개별 시도의 재시작과 전체 시나리오 초기화를 구별한다.
+- `mistakeCount`: 시나리오에 미리 정의한 업무 판정에서 플레이어 입력이 실제 조건을 위반한 고유 failureId 수. `data`에 `failureId`, `reasonCodes`, `faultSource`(`player`/`system`/`none`), `expected`, `actual`을 기록한다. 입력 1회가 여러 조건을 위반해도 failureId 1개로 세고, `validation_failed`와 `failed`가 같은 failureId를 가리키면 한 번만 센다. reasonCode는 고정 시나리오 사전의 코드(예: `COPY_COUNT_MISMATCH`, `DATE_MISMATCH`, `WRONG_CLASSIFICATION`, `SEQUENCE_VIOLATION`)를 사용한다.
+- `repeatedMistakeCount`: 같은 scenarioRunId 안에서 `stepId + objectId + workItemId + requestRevision + reasonCode` 조합이 이미 실수로 기록된 뒤 다시 발생한 추가 failureId 수. 같은 실수가 3회면 mistakeCount 3, repeatedMistakeCount 2다. 하나의 failureId에 여러 코드가 있어도 반복 카운트는 최대 1 증가한다. 첫 발생부터 반복 횟수에 포함하지 않는다.
+- `helpRequestCount`는 사용자의 명시적 도움 요청 수다. `guidanceUsed`는 선택적 힌트·단계별 정답 안내를 실제로 제시한 경우 true이며 단순 요청만으로 true로 만들지 않는다. 오류 이후 자동으로 제시한 추가 안내도 포함하되, 기본 조작법·일반 오류 설명·필수 동료 대화와 확인 질문은 포함하지 않는다. `guidance.presented`에 `data.isAssistance`와 `reasonCode`를 명시한다.
+- `elapsedActiveMs`는 로딩·일시정지를 제외한 해당 범위의 활성 시간이다. 오래 걸림·되돌아감·추가 확인만으로 실수를 만들지 않는다. 중복 전송·출력 잠금 반복 클릭·브라우저/통신 오류·게임 자체 오류는 플레이어 실수에서 제외하고 원인 코드와 별도로 보존한다. 배경 물건 클릭도 명세의 업무 위반 판정이 없으면 실수로 세지 않는다.
+- 요청 변경으로 돌아가는 경우 `REQUEST_CHANGED` 또는 `EXPECTED_RECONFIRMATION` 등 고정 원인을 남긴다. 시스템이 요구한 재확인은 backtrack/mistake 증가 없이 기록한다. 명세에 원인이 없거나 확인할 수 없으면 알 수 없음으로 기록하며 추측으로 실수 원인을 붙이지 않는다.
+
+#### 결과와 해석 컨텍스트
+
+- `result`의 필수 필드는 `outcome`(`pending`/`completed`/`failed`/`aborted`), `success`(true/false/null), `completionCode`(고정 코드 또는 null), `data`(작업별 최종 결과 객체)다. 진행 중에는 pending/null/null/{}을 사용한다. completed는 모든 해당 범위 완료 조건을 충족한 경우 true, failed/aborted는 false다. 시나리오의 인계 등 필수 조건 누락을 작업 한 건의 성공으로 덮지 않는다.
+- 공통 집계와 판정은 시나리오·범위가 다르면 분리한다. 예를 들어 출력 interaction 완료 평가와 보관·인계까지의 scenario 완료 평가는 별도 이벤트이며 서로 덮어쓰지 않는다. 실패한 개별 제출의 결과·원인도 최종 성공 후 삭제하지 않는다.
+- `context`의 필수 필드는 `assessmentStatus`(`pending`/`evaluated`/`unavailable`), `assessmentCode`(아래 고정 코드 또는 null), `ruleVersion`(`v001`), `reasonCodes`(중복 없는 고정 코드 배열), `evidenceEventIds`(근거 원본 eventId 배열), `interpretation`(문자열 또는 null), `limitations`(한계·미측정 사유 배열)이다. 진행 중에는 assessmentStatus pending, assessmentCode/interpretation null이다.
+- 수집 누락·미측정·근거 부족으로 같은 입력에서 판정을 재현할 수 없으면 unavailable/null로 남긴다. 이때 불완전한 기록을 실수 없음·실패·`TASK_INCOMPLETE`로 임의 변환하지 않는다. 평가 가능한 terminal 결과에서만 아래 순서를 위에서 아래로 적용해 **하나의 주 평가 코드**를 정한다. 선택된 코드에 가려진 완료·실수·반복·도움 사실은 process/result와 reasonCodes에 그대로 남긴다.
+
+| 판정 순서 | assessmentCode | 결정 조건·의미 |
+|---|---|---|
+| 1 | `TASK_INCOMPLETE` | 해당 범위의 최종 outcome이 failed 또는 aborted. 미완료·실패·중단 이유를 completionCode/reasonCodes로 구별한다. 사용자 도중 종료는 `USER_ABORTED` 컨텍스트를 함께 남기며 종료 자체를 실수로 세지 않는다. |
+| 2 | `TASK_REPEATED_ERRORS` | 최종 completed이고 repeatedMistakeCount가 1 이상. 반복 오류 뒤 완료했다는 사실과 도움 여부를 함께 남긴다. |
+| 3 | `TASK_GUIDED_COMPLETED` | 최종 completed, 반복 오류 없음, guidanceUsed true. 선택적 안내를 받아 완료. |
+| 4 | `TASK_SELF_CORRECTED` | 최종 completed, 반복 오류 없음, guidanceUsed false, mistakeCount가 1 이상. 기록된 실수를 스스로 수정해 완료. |
+| 5 | `TASK_SMOOTH` | 최종 completed, mistakeCount 0, guidanceUsed false. 기록된 실수 없이 완료. 재확인·정상 복귀가 0이었다는 뜻은 아니다. |
+
+- 이 코드들은 이번 가상 업무 수행의 설명용 범주이며 숫자 서열·직업 적성·지능·개인의 전반적 능력 점수가 아니다. 직업마다 임의의 기준으로 같은 코드의 의미를 바꾸지 않는다. 정책·코드 의미·집계 기준을 바꾸면 ruleVersion을 올리고 이전 결과의 버전·원본 이력을 보존한다.
+- 해석은 관찰 사실과 근거에서만 만든다. 예: “부수 오류 1회 후 요청을 재확인하고 수정하여 출력 완료.” 횟수만으로 “실제 업무 능력이 낮음”, “이 직업에 부적합함”을 결론내리지 않는다. 추가 설명·추론이 있으면 한계와 근거를 표시하고 관찰 데이터를 덮어쓰지 않는다.
+
+#### 도중 종료·하다가 중단한 경우의 컨텍스트
+
+- 사용자가 명시적으로 ‘작업 그만하기/체험 종료’를 확정하여 미완료 작업을 끝내면 `interaction.aborted`, 전체 시나리오를 끝내면 `scenario.aborted`를 발행한다. 전체 종료 시 진행 중인 개별 작업도 종료한다면 두 이벤트의 범위를 구별하고 같은 terminationId로 연결한다. 두 이벤트를 사용자 종료 2회 또는 실수 2회로 세지 않는다. 팝업 닫기·Esc로 사무실 복귀·일시정지·잠깐 다른 탭 보기·초점 상실은 종료로 처리하지 않는다.
+- 실제 업무 행동이 시작된 뒤 사용자가 종료했다는 근거가 있으면 `result.outcome:aborted`, `success:false`, `completionCode:USER_ABORTED`와 `context.reasonCodes`의 `USER_ABORTED`를 사용한다. 이는 “중간에 하다가 그만둠”이라는 완료 상태 컨텍스트이며 업무 오답 판정이 아니다. 작업 시작 전 종료는 `USER_EXITED_BEFORE_START`로 구별한다. 이 추가 정보는 기존 평가 코드의 의미를 바꾸지 않는 선택 확장이므로 schemaVersion 1/ruleVersion v001을 유지한다.
+- `context.termination`은 종료된 범위에서 필수이며 그 외에는 null 또는 생략을 허용한다. 내부 필수 필드는 `terminationId`, `code`, `initiatedBy`(`user`/`system`/`unknown`), `workStarted`(boolean 또는 미측정 null), `lastStepId`, `lastObjectId`, `lastState`, `completedStepIds`, `remainingStepIds`, `inFlightActionIds`다. 마지막 단계·물건·상태는 실제 마지막 유효 기록으로 채우고 없거나 알 수 없으면 null로 표시한다. 단계/비동기 작업 배열도 알 수 없으면 []가 아닌 null과 limitations의 사유를 사용한다. 사용자에게 이유를 직접 받은 경우에만 선택 필드 `userProvidedReason`에 보존하고 흥미 저하·능력 부족 등의 이유를 추측하지 않는다.
+- 종료 응답의 `process`는 종료 직전까지의 실제 누적 기록을 유지하고 `result.data.partialResults`에 이미 완료한 결과만 보존한다. 미출력·미보관·미인계 결과를 완료로 채우지 않는다. 시간·횟수·이전 실수는 초기화하지 않으며 종료 동작 자체로 mistakeCount/repeatedMistakeCount/retryCount를 증가시키지 않는다. 평가 근거가 충분하면 assessmentCode는 `TASK_INCOMPLETE`, 해석은 “문서 수정·저장 후 출력 도중 사용자 종료. 출력·보관·인계는 미완료”처럼 완료한 범위와 남은 범위를 구별한다. 근거가 불완전하면 assessmentStatus unavailable/assessmentCode null을 유지하면서 확인된 종료 사실과 한계만 제공한다.
+- 의도적인 종료·초기화가 확정되면 진행 중 비동기 작업의 취소/분리 정책을 적용하고 닫힌 범위의 늦은 완료 콜백이 새 실행에 반영되거나 aborted를 completed로 덮어쓰지 않게 한다. 완료가 먼저 확정된 작업의 completed 결과는 이후 전체 시나리오 종료로 aborted로 바꾸지 않는다. 초기화로 중단한 경우에는 `USER_RESET` 원인을 구별하고 기존 run을 보존한 뒤 새 run을 시작한다.
+- React의 명시적 화면 종료·Unity 제거는 가능한 경우 Unity에 종료를 요청하고 종료 요약을 수신·보존한 다음 수행한다. 브라우저 탭 닫기·강제 종료·통신 단절에서는 마지막 이벤트 전달이 보장되지 않으므로 종료 전 상태를 주기적으로 보존하고 재접속 시 대조한다. 마지막 기록만 있고 사용자 종료 확정 근거가 없으면 `SESSION_INTERRUPTED`/initiatedBy unknown과 측정 한계를 남긴다. 미관측 중단을 사용자 포기로 확정하거나 정상 일시정지를 임의의 시간 초과로 사용자 종료에 바꾸지 않는다. 이력 보완·전달 재시도도 eventId/terminationId로 중복을 제거한다.
+
+복붙용 **도중 종료 부분 양식**은 아래와 같다. 가상 예시이며 기존 공통 봉투의 ID·시각·sequence·process 등 나머지 필드를 유지한 채 병합한다. 정상 완료 예시와 동시에 한 이벤트의 결과로 적용하지 않는다.
+
+```json
+{
+  "type": "scenario.aborted",
+  "action": "quit_scenario",
+  "result": {
+    "outcome": "aborted",
+    "success": false,
+    "completionCode": "USER_ABORTED",
+    "data": {
+      "partialResults": {
+        "documentSaved": true,
+        "printedCopies": 0,
+        "handoffConfirmed": false
+      }
+    }
+  },
+  "context": {
+    "assessmentStatus": "evaluated",
+    "assessmentCode": "TASK_INCOMPLETE",
+    "ruleVersion": "v001",
+    "reasonCodes": ["USER_ABORTED"],
+    "evidenceEventIds": ["evt-work-started", "evt-quit-confirmed"],
+    "interpretation": "문서 수정·저장 후 출력 도중 사용자가 종료함. 출력·보관·인계는 미완료",
+    "limitations": ["종료 자체는 업무 실수나 적성 판단 근거가 아님"],
+    "termination": {
+      "terminationId": "termination-example-001",
+      "code": "USER_ABORTED",
+      "initiatedBy": "user",
+      "workStarted": true,
+      "lastStepId": "print",
+      "lastObjectId": "copier",
+      "lastState": "printing",
+      "completedStepIds": ["confirm", "review"],
+      "remainingStepIds": ["print", "file"],
+      "inFlightActionIds": ["print-job-example-001"]
+    }
+  }
+}
+```
+
+#### 종료 응답 미수신 정산 프로필 v003 — 백엔드 판정
+
+- 명시적 종료 요청 후 응답 대기 시간 초과, 탭 닫힘, 연결 단절은 먼저 미확정(pending_reconciliation)으로 보존한다. USER_ABORTED·업무 실패·TASK_INCOMPLETE로 추정하지 않는다. end_experience 재전송은 동일 requestId/내용으로 하며 실제 experience.ended만 Unity 종료 원장에 넣는다.
+- 다음 플레이를 새로 시작하려는 명시적 요청에서 인증된 동일 소유자의 이전 체험을 서버가 대조한다. 단순 로그인·새 탭·기존 체험 재연결만으로 종료하지 않는다. 기존 체험이 살아 있으면 deferred_active, 생존 여부를 확인할 수 없으면 pending_reconciliation을 유지한다. 클라이언트가 보낸 대상 ID만으로 다른 사용자의 체험을 변경하지 않는다.
+- 배포 기본값은 종료 응답 대기 5초(사용자 대기 UI), 소유권 lease heartbeat 30초, 만료 120초다. 이 기능들은 구현 요구이며 현재 제공되는 API가 아니다. heartbeat가 멈췄다는 이유만으로 종료하지 않는다. 명시적 새 시작 요청과 서버 lease 만료가 함께 확인된 경우에만 이전 소유권을 원자적으로 fence한 뒤 중단 정산한다. 일시정지·숨겨진 탭의 timer throttling은 사용자 포기 근거가 아니다. 기존 살아 있는 탭은 lease 상실 시 쓰기를 중지하고 재연결/새 시작 선택을 안내해야 한다. 서버는 갱신·정산 경합을 직렬화한다.
+- 최종 종료 응답이 없고 위 조건을 만족하면 운영 상태를 interrupted로 확정한다. 코드는 END_RESPONSE_MISSING_ON_RESTART, 화면 문구는 '종료 응답을 받지 못해 이전 체험을 중단 처리했습니다'다. 사용자 포기라는 해석은 금지한다. 시작 요청만 있고 실제 시작 근거가 없으면 not_started로 정산하며 실제 체험 시작을 꾸미지 않는다.
+- 서버 정산은 protocol:career-experience-resolution, type:experience.reconciled의 별도 응답이다. Unity experience.ended나 Unity eventId/sequence/occurredAt을 생성하지 않는다. schemaVersion:1은 별도 서버 봉투 버전이다. resolutionId/revision/resolvedAt/producer:backend/policyVersion:v003/source/evidence로 출처를 명시한다. 동일 reconcileRequestId/내용은 동일 응답, 같은 ID 다른 내용은 충돌 오류다. 클라이언트는 종료 Unity 이벤트와 서버 정산 두 종류를 모두 처리한다.
+- lifecycleStatus와 업무 result를 분리한다. 종료 미수신 상태 자체로 result.outcome:aborted를 만들지 않는다. 마지막 검증된 scenario terminal 근거가 없으면 result:null, context.assessmentStatus:unavailable, assessmentCode:null이다. 기존 scenario.completed/failed/aborted 근거가 있으면 해당 범위 결과를 보존하되 experience.ended 수신 여부와 구별한다. 작업 하나의 완료를 시나리오 완료로 승격하지 않는다.
+- 미수신 이후 최종 횟수·시간은 알 수 없으므로 최상위 process는 null이다. 마지막 수신 스냅샷은 lastObserved.process와 observedAt/sourceEventId에 그대로 보존하며 최종 전체 카운트로 사용하지 않는다. lastObserved.partialResults·단계·실행 중 작업도 확인한 항목만 기록하고 불명은 null이다. 카운트 증분은 전부 0이며 기존 실수 기록을 삭제하지 않는다. 정산은 추가 실수·재시도·사용자 중단 행동을 생성하지 않는다.
+- 소유권 fence 전에 실제 발행된 늦은 experience.ended가 도착하면 인증·빌드·방·체험·run 귀속·이벤트 중복/충돌·lease 귀속을 검증한다. 수신 시각이 늦다는 이유만으로 버리지 않는다. 검증된 원본은 보존하고 같은 resolutionId의 revision을 증가시켜 ended로 정정한다. 이전 interrupted revision은 이력으로 남기고 새 체험은 변경하지 않는다. fence 후 무효 소유권의 신규 행동은 격리하며, 발행 시점/귀속을 검증할 수 없으면 검토 대기로 보존한다. 단순 클라이언트 시각만으로 검증 완료 처리하지 않는다.
+- 백엔드 응답의 revision이 오래되면 저장 이력만 추가하고 최신 표시를 덮지 않는다. 정산·종료 이벤트의 이중 집계를 금지한다. 실제 종료 응답 수신 직후에는 ended가 우선하고 정산 중 도착하면 원자적 비교·갱신으로 중단 판정의 덮어쓰기를 막는다. 다시 접속하지 않는 사용자는 자동 사용자 포기로 확정하지 않고 별도 보존 정책 전까지 미확정으로 남는다.
+- 프론트/백엔드 담당자는 v003 JSON 계약·예시·수용 사례를 기준으로 구현한다. 이번 전달은 정책/명세이며 서버 endpoint, lease, 재정산, Unity/React 실제 왕복 구현·실행 pass를 뜻하지 않는다. 기존 일부 브리지 코드 존재와 이번 신규 요구의 미검증을 구별한다.
+
+#### 장면 공통 전달·보존
+
+- 공통 통신 모듈은 장면 전환 중에도 유지하고 세션·실행 ID와 이력을 장면마다 새로 초기화하지 않는다. 완료 이벤트는 상태 확정 후 발행하고 동일 완료 전이의 재클릭은 추가 완료·출력·실수를 만들지 않는다.
+- Unity → 같은 페이지의 React 전달 이름은 `career-experience:event`로 고정하고 이벤트 detail에 공통 JSON 객체를 넣는다. 렌더링 라이브러리별 코드는 이 규격으로 연결하는 어댑터에만 둔다. iframe이면 `{ "channel": "career-experience", "event": <공통 이벤트> }` 형태로 부모에 전달한다. 송신 targetOrigin을 명시하고 수신 origin·source·버전·ID를 확인한다.
+- 전송 재시도는 같은 eventId를 사용하고 수신 측은 중복을 제거한다. 순서가 바뀌면 sequence로 복원하며, 누락 감지 시 원본 이벤트 재전달/조회로 복구한다. 숫자 간격을 추정 이벤트로 채우지 않는다. 리스너가 늦게 연결되거나 장면이 바뀌어도 상태 전이·오류·terminal 이벤트를 잃지 않도록 준비 신호, 보존 이력과 재전달 방식을 구현·전달 문서에 명시한다. 여러 전달 경로를 동시에 듣는 경우에도 같은 eventId를 한 번만 처리한다.
+- `scenario.reset`은 초기화 직전의 이전 scenarioRunId와 최종 과정 요약을 보존한다. 미완료 실행은 해당 사용자의 중단/초기화 원인을 기록하고 scenario.aborted로 종료한 뒤 새 scenarioRunId의 scenario.started를 발행한다. 이미 완료된 실행은 completed를 aborted로 바꾸지 않는다. 새 실행의 카운트만 0부터 시작하며 과거 실행과 합산하지 않는다.
+- 시나리오 명세에 단계·행동 코드, 물건/실제 인스턴스/에셋 연결, 작업 항목, 이벤트 발생 지점, reasonCode 사전, 정상 복귀·되돌아감·재시도·실수·도움 판정 기준, 작업별 result.data 구조, revision 변경·초기화 규칙을 구체화한다. 전달 문서에는 실제 지원 규격 버전·이벤트와 React 수신 예시·해당 빌드에서 검증한 범위를 적는다. 지침 양식을 실제 측정 결과로 catalog에 등록하지 않는다.
+
+#### 복붙용 공통 응답 예시
+
+아래는 **가상의 시나리오 범위 완료 요약**이다. 물건 이벤트에서는 objectId/instanceId/assetId/assetVersion/stepId/workItemId/attemptId를 해당 실제 값으로 채운다. 아래 evidenceEventIds가 가리키는 원본 과정 이벤트도 함께 보존해야 하며, 이 예시만으로 실제 실행 근거를 만들지 않는다.
+
+```json
+{
+  "schemaVersion": 1,
+  "protocol": "career-experience",
+  "eventId": "evt-020",
+  "sequence": 20,
+  "occurredAt": "2026-10-31T10:30:00+09:00",
+  "sessionId": "session-example-001",
+  "scenarioRunId": "run-example-001",
+  "buildId": "example-v001",
+  "sceneId": "office",
+  "scenarioId": "career-net-253-office-documents",
+  "scenarioVersion": "v001",
+  "objectId": null,
+  "instanceId": null,
+  "assetId": null,
+  "assetVersion": null,
+  "stepId": null,
+  "workItemId": null,
+  "attemptId": null,
+  "requestRevision": 1,
+  "documentRevision": 2,
+  "type": "scenario.completed",
+  "action": "complete_scenario",
+  "process": {
+    "scope": "scenario",
+    "measurementStatus": "complete",
+    "measurementNote": null,
+    "attemptCount": 6,
+    "navigationBackCount": 3,
+    "backtrackCount": 1,
+    "retryCount": 1,
+    "mistakeCount": 1,
+    "repeatedMistakeCount": 0,
+    "helpRequestCount": 0,
+    "guidanceUsed": false,
+    "elapsedActiveMs": 95000
+  },
+  "result": {
+    "outcome": "completed",
+    "success": true,
+    "completionCode": "OFFICE_DOCUMENTS_HANDED_OFF",
+    "data": {
+      "documentId": "DOC-001",
+      "copies": 2,
+      "folder": "회의자료",
+      "handoffConfirmed": true
+    }
+  },
+  "context": {
+    "assessmentStatus": "evaluated",
+    "assessmentCode": "TASK_SELF_CORRECTED",
+    "ruleVersion": "v001",
+    "reasonCodes": ["COPY_COUNT_MISMATCH", "USER_RECHECK"],
+    "evidenceEventIds": ["evt-012", "evt-013", "evt-019"],
+    "interpretation": "부수 오류 1회 후 요청을 재확인하고 수정하여 출력·보관·인계를 완료함",
+    "limitations": ["가상 체험 한 회의 수행 기록이며 직업 적성·전반적 능력 진단이 아님"]
+  },
+  "data": {}
+}
+```
+
 ## 6. 완료 전 검토
+- 직접 작업형 체험은 물건별 closeup·단계별 work_surface 명세, 실제 조작/동등 대체 입력·정답 데이터·시각 결과, 닫기/초안 유지/복귀·변경 요청/인계/초기화와 비동기 중복 방지의 구체성을 확인한다. 설계만 수정한 경우 실행·사용·빌드 상태를 변경하지 않는다.
+- 직업체험의 기존 직업 ID·원본 위치·역량 표기·파노라마·후보·모델·유형 참조, 정확히 3개 조작 물건, 상태 전이·성공/오류·변경·초기화 조건, 전체 공간 후보와 공통/비공통 분류를 확인한다. 명세·구현·실행 검증과 전체 직업 작성 범위를 구별한다.
+- 공통 응답 규격을 구현/수정한 경우 여러 장면에서 동일 봉투·이벤트를 수신하는지, 실제 인스턴스·작업 항목·revision·run 귀속이 정확한지 확인한다. 정상 복귀/요청 변경은 실수에서 제외하고, 단일 오류·동일 오류 반복·독립 오류 여러 건·힌트 요청과 제시·자력 복구·미완료·미측정의 카운트와 평가 우선순위를 확인한다. 중복/지연/순서 역전/리스너 지연·장면 전환·비동기 중복 입력·완료 후 재클릭·전체 초기화 후 이전 기록 보존을 실제 Unity → React 실행으로 확인하고 미구현·미검증을 구분한다. 지침만 수정한 경우에는 문서·예시 일관성 검토만 보고하며 통신 구현·실행 pass를 추가하지 않는다.
+- 도중 종료 규격을 구현/수정한 경우 개별 작업 중단/전체 시나리오 중단, 시작 전 종료/작업 도중 종료, 정상 팝업 복귀·일시정지와의 구별, 마지막 단계·누적 기록·부분 결과·남은 업무 보존, 종료로 인한 실수 비가산, 같은 terminationId의 중복 방지, 늦은 비동기 완료 차단을 확인한다. 브라우저 강제 종료·통신 단절의 미전달/미확인 상태를 사용자 포기로 오인하지 않는지 확인한다.
 - JSON 구문·schema_version·필수 필드·ID 유일성 확인.
 - 이미지 파일·해시·실제 크기·분류 경로 및 모델 source_images 참조의 ID·버전 존재 여부 확인. 원본 이미지 폴더에 목록 미등록 파일이 남지 않도록 확인합니다.
 - 원본·Blender·실제 사용본·미리보기·Unity·문서 경로 존재 여부 확인.
