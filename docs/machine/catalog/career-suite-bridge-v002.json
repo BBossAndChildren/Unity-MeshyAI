@@ -1,0 +1,61 @@
+{
+  "schema_version": 3,
+  "package_id": "career-suite-bridge",
+  "version": "v002",
+  "document_path": "docs/human/integrations/career-suite-bridge-v002.md",
+  "source_path": "web/career-preview/v002",
+  "supersedes_source_path": "web/career-preview/v001",
+  "protocol_versions": [
+    "v001",
+    "v002",
+    "v003"
+  ],
+  "envelope_schema_version": 1,
+  "status": "source_implemented_build_runtime_checks_separate",
+  "templates": [
+    "CareerSuiteTest",
+    "CareerSuiteIntegration"
+  ],
+  "react_bundle_path": "web/career-preview/v002/dist/integration-example.html",
+  "source_files": [
+    "web/career-preview/v002/client.js",
+    "web/career-preview/v002/client.d.ts",
+    "web/career-preview/v002/backend.js",
+    "web/career-preview/v002/backend.d.ts",
+    "web/career-preview/v002/Experience.jsx",
+    "web/career-preview/v002/suite-host.js",
+    "web/career-preview/v002/integration-example.jsx",
+    "web/career-preview/v002/server.mjs"
+  ],
+  "checks": [
+    {
+      "kind": "node_simulated_unity_transport",
+      "status": "pass",
+      "evidence": "docs/machine/evidence/career-suite-bridge-v002/adapter-execution.json"
+    },
+    {
+      "kind": "local_http_fixture_receiver",
+      "status": "pass",
+      "evidence": "docs/machine/evidence/career-suite-bridge-v002/local-receiver-http.json"
+    },
+    {
+      "kind": "actual_service_backend_auth_lease_fence_reconciliation",
+      "status": "unverified",
+      "reason": "Actual external service endpoints and authentication/ownership contracts are unavailable; adapters do not create backend authority."
+    },
+    {
+      "build_id": "career-suite-integration-v001",
+      "scenario_id": "career-net-359-experience",
+      "kind": "actual_react_unity_local_receiver_roundtrip",
+      "evidence": "docs/machine/evidence/career-suite-integration-v001/react-smoke/actual-react-iframe.json",
+      "status": "pass_start_realtime_end_beforework_only",
+      "scenario_version": "v002",
+      "normal_workflow_completion_verified": false,
+      "room_id": "PAN-050",
+      "actual_service_backend_verified": false
+    }
+  ],
+  "paid_generation_calls": 0,
+  "measured_token_usage": null,
+  "measurement_note": "Per-subtask input/output token usage is not exposed by the execution tools."
+}

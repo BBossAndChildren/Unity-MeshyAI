@@ -1,0 +1,84 @@
+{
+  "schema_version": 3,
+  "package_id": "career-suite-bridge",
+  "version": "v003",
+  "document_path": "docs/human/integrations/career-suite-bridge-v003.md",
+  "source_path": "web/career-preview/v003",
+  "protocol_versions": [
+    "v001",
+    "v002",
+    "v003"
+  ],
+  "envelope_schema_version": 1,
+  "status": "source_implemented_build_runtime_checks_separate",
+  "templates": [
+    "CareerSuiteTest",
+    "CareerSuiteIntegration"
+  ],
+  "react_bundle_path": "web/career-preview/v003/dist/integration-example.html",
+  "paid_generation_calls": 0,
+  "measured_token_usage": null,
+  "measurement_note": "Per-subtask input/output token usage is not exposed by the execution tools.",
+  "supersedes_source_path": "web/career-preview/v002",
+  "source_files": [
+    "web/career-preview/v003/client.js",
+    "web/career-preview/v003/client.d.ts",
+    "web/career-preview/v003/backend.js",
+    "web/career-preview/v003/backend.d.ts",
+    "web/career-preview/v003/Experience.jsx",
+    "web/career-preview/v003/suite-host.js",
+    "web/career-preview/v003/integration-example.jsx",
+    "web/career-preview/v003/server.mjs",
+    "web/career-preview/v003/audio.js",
+    "web/career-preview/v003/audio.d.ts",
+    "web/career-preview/v003/audio-ui.js",
+    "web/career-preview/v003/audio-ui.css"
+  ],
+  "checks": [
+    {
+      "kind": "isolated_audio_controller",
+      "status": "pass",
+      "evidence": "docs/machine/evidence/career-audio-controller-v001/inline-controller-tests.json"
+    },
+    {
+      "kind": "actual_service_backend_auth_lease_fence_reconciliation",
+      "status": "unverified",
+      "reason": "Actual service contracts unavailable; local adapter is not backend authority."
+    },
+    {
+      "kind": "actual_web_audio_library_decode_start_ended",
+      "status": "pass",
+      "build_id": "career-suite-integration-v003",
+      "available_count": 34,
+      "evidence": "docs/machine/evidence/career-suite-integration-v003/react-audio/actual-react-audio-background.json",
+      "scope": "Historical intermediate build; same controller and clip bytes verified in final builds. Full background visual failed in this intermediate build."
+    },
+    {
+      "kind": "actual_final_react_background_audio_end",
+      "status": "pass",
+      "build_id": "career-suite-integration-v005",
+      "evidence": "docs/machine/evidence/career-suite-integration-v005/react-audio/actual-react-audio-background.json"
+    },
+    {
+      "kind": "actual_final_extracted_zip_react_local_receiver",
+      "status": "pass",
+      "build_id": "career-suite-integration-v005",
+      "evidence": "docs/machine/evidence/career-suite-integration-v005/react-extracted-zip/actual-react-iframe.json",
+      "scope": "Before-work start/end; 3 object bindings; 5 originals/5 local ACK; no full workflow or production backend claim."
+    }
+  ],
+  "audio": {
+    "manifest_path": "web/career-audio/v002/audio-manifest.json",
+    "available_count": 34,
+    "requested_count": 108,
+    "missing_count": 74,
+    "source_wired_available_count": 30,
+    "library_only_count": 4,
+    "wiring_catalog_path": "docs/machine/catalog/career-audio-wiring-v001.json"
+  },
+  "presentation": {
+    "backgroundColor": "opaque #RRGGBB",
+    "process_event": false
+  },
+  "description_catalog_path": "docs/machine/catalog/career-experience-descriptions-v001.json"
+}

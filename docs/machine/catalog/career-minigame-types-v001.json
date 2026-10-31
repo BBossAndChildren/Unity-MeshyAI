@@ -1,0 +1,1204 @@
+{
+  "schema_version": 3,
+  "package_id": "career-minigame-types",
+  "version": "v001",
+  "planning_status": "pending_user_approval",
+  "document_path": "docs/human/jobs/panorama-career-experience-spec-v001.md",
+  "counts": {
+    "core": 10,
+    "special_modifiers": 10
+  },
+  "types": [
+    {
+      "type_id": "MG-001",
+      "version": "v001",
+      "kind": "core",
+      "name": "분류·선별",
+      "implementation_status": "implemented_scoped_subsets_verified",
+      "input_description": "조건별 항목·분류함",
+      "player_action": "선택 또는 드래그",
+      "success_rule": "각 항목이 조건에 맞는 분류에 들어감",
+      "recovery_rule": "잘못 분류한 이유 표시 후 되돌리기",
+      "required_configuration_fields": [
+        "items",
+        "target_classes",
+        "predicate"
+      ],
+      "states": [
+        "inactive",
+        "available",
+        "active",
+        "retry",
+        "completed"
+      ],
+      "events": [
+        "activate",
+        "input",
+        "submit",
+        "retry",
+        "reset"
+      ],
+      "accessibility": [
+        "마우스·터치·키보드 대체",
+        "색상만으로 정답 구분하지 않음",
+        "시간 압박 없는 연습"
+      ],
+      "asset_policy": "시나리오 물건 3개에 바인딩. 특수 상황은 기본 유형에 추가하며 새 조작 물건을 자동 추가하지 않음.",
+      "implementation_scope": "Existing office subset plus explicitly listed10pilot authored base-work configurations only. Abstract contract unchanged; not all possible configurations or special branches.",
+      "implementation_evidence": [
+        "unity/projects/OfficeAssistant-v001/Assets/Scripts/CareerRules.cs",
+        "unity/projects/OfficeAssistant-v001/Assets/Scripts/OfficeExperience.cs",
+        "docs/machine/evidence/office-assistant-v001/webgl-ui-acceptance.json"
+      ],
+      "legacy_implementation_scope": "career-net-253-office-documents only; not a claim that all possible configurations of this design type are implemented",
+      "implementation_records": [
+        {
+          "build_id": "career-pilot-v004",
+          "scenario_refs": [
+            {
+              "scenario_id": "career-net-1152-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-268-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-215-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-1147-experience",
+              "version": "v002"
+            }
+          ],
+          "source": "unity/projects/CareerPilotTen-v001/Assets/Scripts/PilotSession.cs",
+          "evidence": "docs/machine/evidence/career-pilot-v004/http-base/pilot-http-acceptance.json",
+          "limitations": "Typed authored parameters and UI surfaces; no professional capability assessment or universal predicate interpreter."
+        },
+        {
+          "build_id": "career-pilot-v005",
+          "scenario_refs": [
+            {
+              "scenario_id": "career-net-1152-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-268-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-215-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-1147-experience",
+              "version": "v002"
+            }
+          ],
+          "source": "unity/projects/CareerPilotTen-v001/Assets/Scripts/PilotSession.cs",
+          "evidence": "docs/machine/evidence/career-pilot-v005/http-career-base.json",
+          "limitations": "Typed authored parameters and UI surfaces; no professional capability assessment or universal predicate interpreter."
+        }
+      ]
+    },
+    {
+      "type_id": "MG-002",
+      "version": "v001",
+      "kind": "core",
+      "name": "조립·배치",
+      "implementation_status": "implemented_scoped_subsets_verified",
+      "input_description": "부품·결합 지점",
+      "player_action": "이동·회전·스냅",
+      "success_rule": "부품 ID와 위치·방향 조건이 모두 일치",
+      "recovery_rule": "틀린 결합을 해제하고 방향 힌트",
+      "required_configuration_fields": [
+        "parts",
+        "sockets",
+        "position_tolerance",
+        "rotation_tolerance"
+      ],
+      "states": [
+        "inactive",
+        "available",
+        "active",
+        "retry",
+        "completed"
+      ],
+      "events": [
+        "activate",
+        "input",
+        "submit",
+        "retry",
+        "reset"
+      ],
+      "accessibility": [
+        "마우스·터치·키보드 대체",
+        "색상만으로 정답 구분하지 않음",
+        "시간 압박 없는 연습"
+      ],
+      "asset_policy": "시나리오 물건 3개에 바인딩. 특수 상황은 기본 유형에 추가하며 새 조작 물건을 자동 추가하지 않음.",
+      "legacy_implementation_scope": null,
+      "implementation_scope": "Existing office subset plus explicitly listed10pilot authored base-work configurations only. Abstract contract unchanged; not all possible configurations or special branches.",
+      "implementation_records": [
+        {
+          "build_id": "career-pilot-v004",
+          "scenario_refs": [
+            {
+              "scenario_id": "career-net-1152-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-963-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-172-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-310-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-301-experience",
+              "version": "v002"
+            }
+          ],
+          "source": "unity/projects/CareerPilotTen-v001/Assets/Scripts/PilotSession.cs",
+          "evidence": "docs/machine/evidence/career-pilot-v004/http-base/pilot-http-acceptance.json",
+          "limitations": "Typed authored parameters and UI surfaces; no professional capability assessment or universal predicate interpreter."
+        },
+        {
+          "build_id": "career-pilot-v005",
+          "scenario_refs": [
+            {
+              "scenario_id": "career-net-1152-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-963-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-172-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-310-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-301-experience",
+              "version": "v002"
+            }
+          ],
+          "source": "unity/projects/CareerPilotTen-v001/Assets/Scripts/PilotSession.cs",
+          "evidence": "docs/machine/evidence/career-pilot-v005/http-career-base.json",
+          "limitations": "Typed authored parameters and UI surfaces; no professional capability assessment or universal predicate interpreter."
+        }
+      ]
+    },
+    {
+      "type_id": "MG-003",
+      "version": "v001",
+      "kind": "core",
+      "name": "순서·절차",
+      "implementation_status": "implemented_scoped_subsets_verified",
+      "input_description": "작업 단계·선후관계",
+      "player_action": "선택·실행",
+      "success_rule": "필수 선행 조건을 만족하며 모든 단계 수행",
+      "recovery_rule": "순서 위반 시 상태 유지와 선행 단계 안내",
+      "required_configuration_fields": [
+        "steps",
+        "dependencies",
+        "guards"
+      ],
+      "states": [
+        "inactive",
+        "available",
+        "active",
+        "retry",
+        "completed"
+      ],
+      "events": [
+        "activate",
+        "input",
+        "submit",
+        "retry",
+        "reset"
+      ],
+      "accessibility": [
+        "마우스·터치·키보드 대체",
+        "색상만으로 정답 구분하지 않음",
+        "시간 압박 없는 연습"
+      ],
+      "asset_policy": "시나리오 물건 3개에 바인딩. 특수 상황은 기본 유형에 추가하며 새 조작 물건을 자동 추가하지 않음.",
+      "implementation_scope": "Existing office subset plus explicitly listed10pilot authored base-work configurations only. Abstract contract unchanged; not all possible configurations or special branches.",
+      "implementation_evidence": [
+        "unity/projects/OfficeAssistant-v001/Assets/Scripts/CareerRules.cs",
+        "unity/projects/OfficeAssistant-v001/Assets/Scripts/OfficeExperience.cs",
+        "docs/machine/evidence/office-assistant-v001/webgl-ui-acceptance.json"
+      ],
+      "legacy_implementation_scope": "career-net-253-office-documents only; not a claim that all possible configurations of this design type are implemented",
+      "implementation_records": [
+        {
+          "build_id": "career-pilot-v004",
+          "scenario_refs": [
+            {
+              "scenario_id": "career-net-215-experience",
+              "version": "v002"
+            }
+          ],
+          "source": "unity/projects/CareerPilotTen-v001/Assets/Scripts/PilotSession.cs",
+          "evidence": "docs/machine/evidence/career-pilot-v004/http-base/pilot-http-acceptance.json",
+          "limitations": "Typed authored parameters and UI surfaces; no professional capability assessment or universal predicate interpreter."
+        },
+        {
+          "build_id": "career-pilot-v005",
+          "scenario_refs": [
+            {
+              "scenario_id": "career-net-215-experience",
+              "version": "v002"
+            }
+          ],
+          "source": "unity/projects/CareerPilotTen-v001/Assets/Scripts/PilotSession.cs",
+          "evidence": "docs/machine/evidence/career-pilot-v005/http-career-base.json",
+          "limitations": "Typed authored parameters and UI surfaces; no professional capability assessment or universal predicate interpreter."
+        }
+      ]
+    },
+    {
+      "type_id": "MG-004",
+      "version": "v001",
+      "kind": "core",
+      "name": "측정·조절",
+      "implementation_status": "implemented_scoped_subsets_verified",
+      "input_description": "가상 값·목표 범위",
+      "player_action": "슬라이더·회전·증감",
+      "success_rule": "값이 허용 범위에 지정 시간 유지",
+      "recovery_rule": "범위 초과 방향 안내와 재조절",
+      "required_configuration_fields": [
+        "unit",
+        "target_min",
+        "target_max",
+        "hold_seconds"
+      ],
+      "states": [
+        "inactive",
+        "available",
+        "active",
+        "retry",
+        "completed"
+      ],
+      "events": [
+        "activate",
+        "input",
+        "submit",
+        "retry",
+        "reset"
+      ],
+      "accessibility": [
+        "마우스·터치·키보드 대체",
+        "색상만으로 정답 구분하지 않음",
+        "시간 압박 없는 연습"
+      ],
+      "asset_policy": "시나리오 물건 3개에 바인딩. 특수 상황은 기본 유형에 추가하며 새 조작 물건을 자동 추가하지 않음.",
+      "legacy_implementation_scope": null,
+      "implementation_scope": "Existing office subset plus explicitly listed10pilot authored base-work configurations only. Abstract contract unchanged; not all possible configurations or special branches.",
+      "implementation_records": [
+        {
+          "build_id": "career-pilot-v004",
+          "scenario_refs": [
+            {
+              "scenario_id": "career-net-1152-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-963-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-172-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-310-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-301-experience",
+              "version": "v002"
+            }
+          ],
+          "source": "unity/projects/CareerPilotTen-v001/Assets/Scripts/PilotSession.cs",
+          "evidence": "docs/machine/evidence/career-pilot-v004/http-base/pilot-http-acceptance.json",
+          "limitations": "Typed authored parameters and UI surfaces; no professional capability assessment or universal predicate interpreter."
+        },
+        {
+          "build_id": "career-pilot-v005",
+          "scenario_refs": [
+            {
+              "scenario_id": "career-net-1152-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-963-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-172-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-310-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-301-experience",
+              "version": "v002"
+            }
+          ],
+          "source": "unity/projects/CareerPilotTen-v001/Assets/Scripts/PilotSession.cs",
+          "evidence": "docs/machine/evidence/career-pilot-v005/http-career-base.json",
+          "limitations": "Typed authored parameters and UI surfaces; no professional capability assessment or universal predicate interpreter."
+        }
+      ]
+    },
+    {
+      "type_id": "MG-005",
+      "version": "v001",
+      "kind": "core",
+      "name": "관찰·검사",
+      "implementation_status": "implemented_scoped_subsets_verified",
+      "input_description": "비교 자료·오류 지점",
+      "player_action": "회전·확대·지점 선택",
+      "success_rule": "정해진 오류 지점을 모두 찾고 수정 확인",
+      "recovery_rule": "오탐 이유 표시·다시 관찰",
+      "required_configuration_fields": [
+        "reference",
+        "defects",
+        "correction_rules"
+      ],
+      "states": [
+        "inactive",
+        "available",
+        "active",
+        "retry",
+        "completed"
+      ],
+      "events": [
+        "activate",
+        "input",
+        "submit",
+        "retry",
+        "reset"
+      ],
+      "accessibility": [
+        "마우스·터치·키보드 대체",
+        "색상만으로 정답 구분하지 않음",
+        "시간 압박 없는 연습"
+      ],
+      "asset_policy": "시나리오 물건 3개에 바인딩. 특수 상황은 기본 유형에 추가하며 새 조작 물건을 자동 추가하지 않음.",
+      "implementation_scope": "Existing office subset plus explicitly listed10pilot authored base-work configurations only. Abstract contract unchanged; not all possible configurations or special branches.",
+      "implementation_evidence": [
+        "unity/projects/OfficeAssistant-v001/Assets/Scripts/CareerRules.cs",
+        "unity/projects/OfficeAssistant-v001/Assets/Scripts/OfficeExperience.cs",
+        "docs/machine/evidence/office-assistant-v001/webgl-ui-acceptance.json"
+      ],
+      "legacy_implementation_scope": "career-net-253-office-documents only; not a claim that all possible configurations of this design type are implemented",
+      "implementation_records": [
+        {
+          "build_id": "career-pilot-v004",
+          "scenario_refs": [
+            {
+              "scenario_id": "career-net-951-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-268-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-285-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-1147-experience",
+              "version": "v002"
+            }
+          ],
+          "source": "unity/projects/CareerPilotTen-v001/Assets/Scripts/PilotSession.cs",
+          "evidence": "docs/machine/evidence/career-pilot-v004/http-base/pilot-http-acceptance.json",
+          "limitations": "Typed authored parameters and UI surfaces; no professional capability assessment or universal predicate interpreter."
+        },
+        {
+          "build_id": "career-pilot-v005",
+          "scenario_refs": [
+            {
+              "scenario_id": "career-net-951-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-268-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-285-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-1147-experience",
+              "version": "v002"
+            }
+          ],
+          "source": "unity/projects/CareerPilotTen-v001/Assets/Scripts/PilotSession.cs",
+          "evidence": "docs/machine/evidence/career-pilot-v005/http-career-base.json",
+          "limitations": "Typed authored parameters and UI surfaces; no professional capability assessment or universal predicate interpreter."
+        }
+      ]
+    },
+    {
+      "type_id": "MG-006",
+      "version": "v001",
+      "kind": "core",
+      "name": "진단·해결",
+      "implementation_status": "implemented_scoped_subsets_verified",
+      "input_description": "가상 단서·원인·대응 후보",
+      "player_action": "단서 연결·대응 선택",
+      "success_rule": "충분한 근거를 확보하고 모순 없는 대응 선택",
+      "recovery_rule": "부족한 단서를 명시하고 판단 보류",
+      "required_configuration_fields": [
+        "clues",
+        "hypotheses",
+        "evidence_rules",
+        "responses"
+      ],
+      "states": [
+        "inactive",
+        "available",
+        "active",
+        "retry",
+        "completed"
+      ],
+      "events": [
+        "activate",
+        "input",
+        "submit",
+        "retry",
+        "reset"
+      ],
+      "accessibility": [
+        "마우스·터치·키보드 대체",
+        "색상만으로 정답 구분하지 않음",
+        "시간 압박 없는 연습"
+      ],
+      "asset_policy": "시나리오 물건 3개에 바인딩. 특수 상황은 기본 유형에 추가하며 새 조작 물건을 자동 추가하지 않음.",
+      "legacy_implementation_scope": null,
+      "implementation_scope": "Existing office subset plus explicitly listed10pilot authored base-work configurations only. Abstract contract unchanged; not all possible configurations or special branches.",
+      "implementation_records": [
+        {
+          "build_id": "career-pilot-v004",
+          "scenario_refs": [
+            {
+              "scenario_id": "career-net-1147-experience",
+              "version": "v002"
+            }
+          ],
+          "source": "unity/projects/CareerPilotTen-v001/Assets/Scripts/PilotSession.cs",
+          "evidence": "docs/machine/evidence/career-pilot-v004/http-base/pilot-http-acceptance.json",
+          "limitations": "Typed authored parameters and UI surfaces; no professional capability assessment or universal predicate interpreter."
+        },
+        {
+          "build_id": "career-pilot-v005",
+          "scenario_refs": [
+            {
+              "scenario_id": "career-net-1147-experience",
+              "version": "v002"
+            }
+          ],
+          "source": "unity/projects/CareerPilotTen-v001/Assets/Scripts/PilotSession.cs",
+          "evidence": "docs/machine/evidence/career-pilot-v005/http-career-base.json",
+          "limitations": "Typed authored parameters and UI surfaces; no professional capability assessment or universal predicate interpreter."
+        }
+      ]
+    },
+    {
+      "type_id": "MG-007",
+      "version": "v001",
+      "kind": "core",
+      "name": "제작·표현",
+      "implementation_status": "implemented_scoped_subsets_verified",
+      "input_description": "재료·형태·요구 조건",
+      "player_action": "편집·배치·미리보기",
+      "success_rule": "필수 제약 충족·선택 이유 설명",
+      "recovery_rule": "미충족 조건만 안내하고 자유 수정",
+      "required_configuration_fields": [
+        "materials",
+        "constraints",
+        "editable_parts",
+        "rubric"
+      ],
+      "states": [
+        "inactive",
+        "available",
+        "active",
+        "retry",
+        "completed"
+      ],
+      "events": [
+        "activate",
+        "input",
+        "submit",
+        "retry",
+        "reset"
+      ],
+      "accessibility": [
+        "마우스·터치·키보드 대체",
+        "색상만으로 정답 구분하지 않음",
+        "시간 압박 없는 연습"
+      ],
+      "asset_policy": "시나리오 물건 3개에 바인딩. 특수 상황은 기본 유형에 추가하며 새 조작 물건을 자동 추가하지 않음.",
+      "legacy_implementation_scope": null,
+      "implementation_scope": "Existing office subset plus explicitly listed10pilot authored base-work configurations only. Abstract contract unchanged; not all possible configurations or special branches.",
+      "implementation_records": [
+        {
+          "build_id": "career-pilot-v004",
+          "scenario_refs": [
+            {
+              "scenario_id": "career-net-285-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-310-experience",
+              "version": "v002"
+            }
+          ],
+          "source": "unity/projects/CareerPilotTen-v001/Assets/Scripts/PilotSession.cs",
+          "evidence": "docs/machine/evidence/career-pilot-v004/http-base/pilot-http-acceptance.json",
+          "limitations": "Typed authored parameters and UI surfaces; no professional capability assessment or universal predicate interpreter."
+        },
+        {
+          "build_id": "career-pilot-v005",
+          "scenario_refs": [
+            {
+              "scenario_id": "career-net-285-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-310-experience",
+              "version": "v002"
+            }
+          ],
+          "source": "unity/projects/CareerPilotTen-v001/Assets/Scripts/PilotSession.cs",
+          "evidence": "docs/machine/evidence/career-pilot-v005/http-career-base.json",
+          "limitations": "Typed authored parameters and UI surfaces; no professional capability assessment or universal predicate interpreter."
+        }
+      ]
+    },
+    {
+      "type_id": "MG-008",
+      "version": "v001",
+      "kind": "core",
+      "name": "대화·응대",
+      "implementation_status": "implemented_scoped_subsets_verified",
+      "input_description": "가상 요청·빠진 정보",
+      "player_action": "질문·응답·요약 확인",
+      "success_rule": "필수 정보 확인과 상대 확인 응답",
+      "recovery_rule": "추측 대신 확인 질문으로 복귀",
+      "required_configuration_fields": [
+        "dialogue_nodes",
+        "required_slots",
+        "confirmation"
+      ],
+      "states": [
+        "inactive",
+        "available",
+        "active",
+        "retry",
+        "completed"
+      ],
+      "events": [
+        "activate",
+        "input",
+        "submit",
+        "retry",
+        "reset"
+      ],
+      "accessibility": [
+        "마우스·터치·키보드 대체",
+        "색상만으로 정답 구분하지 않음",
+        "시간 압박 없는 연습"
+      ],
+      "asset_policy": "시나리오 물건 3개에 바인딩. 특수 상황은 기본 유형에 추가하며 새 조작 물건을 자동 추가하지 않음.",
+      "implementation_scope": "Existing office subset plus explicitly listed10pilot authored base-work configurations only. Abstract contract unchanged; not all possible configurations or special branches.",
+      "implementation_evidence": [
+        "unity/projects/OfficeAssistant-v001/Assets/Scripts/CareerRules.cs",
+        "unity/projects/OfficeAssistant-v001/Assets/Scripts/OfficeExperience.cs",
+        "docs/machine/evidence/office-assistant-v001/webgl-ui-acceptance.json"
+      ],
+      "legacy_implementation_scope": "career-net-253-office-documents only; not a claim that all possible configurations of this design type are implemented",
+      "implementation_records": [
+        {
+          "build_id": "career-pilot-v004",
+          "scenario_refs": [
+            {
+              "scenario_id": "career-net-268-experience",
+              "version": "v002"
+            }
+          ],
+          "source": "unity/projects/CareerPilotTen-v001/Assets/Scripts/PilotSession.cs",
+          "evidence": "docs/machine/evidence/career-pilot-v004/http-base/pilot-http-acceptance.json",
+          "limitations": "Typed authored parameters and UI surfaces; no professional capability assessment or universal predicate interpreter."
+        },
+        {
+          "build_id": "career-pilot-v005",
+          "scenario_refs": [
+            {
+              "scenario_id": "career-net-268-experience",
+              "version": "v002"
+            }
+          ],
+          "source": "unity/projects/CareerPilotTen-v001/Assets/Scripts/PilotSession.cs",
+          "evidence": "docs/machine/evidence/career-pilot-v005/http-career-base.json",
+          "limitations": "Typed authored parameters and UI surfaces; no professional capability assessment or universal predicate interpreter."
+        }
+      ]
+    },
+    {
+      "type_id": "MG-009",
+      "version": "v001",
+      "kind": "core",
+      "name": "계획·배분",
+      "implementation_status": "implemented_scoped_subsets_verified",
+      "input_description": "일정·자원·제약",
+      "player_action": "카드 이동·자원 배정",
+      "success_rule": "자원·일정 충돌 없이 필수 목표 달성",
+      "recovery_rule": "충돌 항목 표시·배분 재시도",
+      "required_configuration_fields": [
+        "resources",
+        "tasks",
+        "budget",
+        "constraints"
+      ],
+      "states": [
+        "inactive",
+        "available",
+        "active",
+        "retry",
+        "completed"
+      ],
+      "events": [
+        "activate",
+        "input",
+        "submit",
+        "retry",
+        "reset"
+      ],
+      "accessibility": [
+        "마우스·터치·키보드 대체",
+        "색상만으로 정답 구분하지 않음",
+        "시간 압박 없는 연습"
+      ],
+      "asset_policy": "시나리오 물건 3개에 바인딩. 특수 상황은 기본 유형에 추가하며 새 조작 물건을 자동 추가하지 않음.",
+      "legacy_implementation_scope": null,
+      "implementation_scope": "Existing office subset plus explicitly listed10pilot authored base-work configurations only. Abstract contract unchanged; not all possible configurations or special branches.",
+      "implementation_records": [
+        {
+          "build_id": "career-pilot-v004",
+          "scenario_refs": [
+            {
+              "scenario_id": "career-net-951-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-215-experience",
+              "version": "v002"
+            }
+          ],
+          "source": "unity/projects/CareerPilotTen-v001/Assets/Scripts/PilotSession.cs",
+          "evidence": "docs/machine/evidence/career-pilot-v004/http-base/pilot-http-acceptance.json",
+          "limitations": "Typed authored parameters and UI surfaces; no professional capability assessment or universal predicate interpreter."
+        },
+        {
+          "build_id": "career-pilot-v005",
+          "scenario_refs": [
+            {
+              "scenario_id": "career-net-951-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-215-experience",
+              "version": "v002"
+            }
+          ],
+          "source": "unity/projects/CareerPilotTen-v001/Assets/Scripts/PilotSession.cs",
+          "evidence": "docs/machine/evidence/career-pilot-v005/http-career-base.json",
+          "limitations": "Typed authored parameters and UI surfaces; no professional capability assessment or universal predicate interpreter."
+        }
+      ]
+    },
+    {
+      "type_id": "MG-010",
+      "version": "v001",
+      "kind": "core",
+      "name": "타이밍·추적",
+      "implementation_status": "implemented_scoped_subsets_verified",
+      "input_description": "가상 신호·경로",
+      "player_action": "신호에 맞춘 입력·추적",
+      "success_rule": "설정 오차 범위와 완료 조건 충족",
+      "recovery_rule": "느린 연습·키보드 대체·재시도",
+      "required_configuration_fields": [
+        "signals",
+        "path",
+        "tolerance",
+        "practice_speed"
+      ],
+      "states": [
+        "inactive",
+        "available",
+        "active",
+        "retry",
+        "completed"
+      ],
+      "events": [
+        "activate",
+        "input",
+        "submit",
+        "retry",
+        "reset"
+      ],
+      "accessibility": [
+        "마우스·터치·키보드 대체",
+        "색상만으로 정답 구분하지 않음",
+        "시간 압박 없는 연습"
+      ],
+      "asset_policy": "시나리오 물건 3개에 바인딩. 특수 상황은 기본 유형에 추가하며 새 조작 물건을 자동 추가하지 않음.",
+      "legacy_implementation_scope": null,
+      "implementation_scope": "Existing office subset plus explicitly listed10pilot authored base-work configurations only. Abstract contract unchanged; not all possible configurations or special branches.",
+      "implementation_records": [
+        {
+          "build_id": "career-pilot-v004",
+          "scenario_refs": [
+            {
+              "scenario_id": "career-net-963-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-172-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-301-experience",
+              "version": "v002"
+            }
+          ],
+          "source": "unity/projects/CareerPilotTen-v001/Assets/Scripts/PilotSession.cs",
+          "evidence": "docs/machine/evidence/career-pilot-v004/http-base/pilot-http-acceptance.json",
+          "limitations": "Typed authored parameters and UI surfaces; no professional capability assessment or universal predicate interpreter."
+        },
+        {
+          "build_id": "career-pilot-v005",
+          "scenario_refs": [
+            {
+              "scenario_id": "career-net-963-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-172-experience",
+              "version": "v002"
+            },
+            {
+              "scenario_id": "career-net-301-experience",
+              "version": "v002"
+            }
+          ],
+          "source": "unity/projects/CareerPilotTen-v001/Assets/Scripts/PilotSession.cs",
+          "evidence": "docs/machine/evidence/career-pilot-v005/http-career-base.json",
+          "limitations": "Typed authored parameters and UI surfaces; no professional capability assessment or universal predicate interpreter."
+        }
+      ]
+    },
+    {
+      "type_id": "EX-001",
+      "version": "v001",
+      "kind": "special_modifier",
+      "name": "긴급 대응",
+      "implementation_status": "not_implemented",
+      "input_description": "가상 사고·기한 발생",
+      "player_action": "우선순위 대응 선택",
+      "success_rule": "필수 대응을 기한 안에 수행",
+      "recovery_rule": "시간 압박 없는 연습으로 다시 시작",
+      "required_configuration_fields": [
+        "trigger",
+        "deadline",
+        "priority_rules"
+      ],
+      "states": [
+        "inactive",
+        "available",
+        "active",
+        "retry",
+        "completed"
+      ],
+      "events": [
+        "activate",
+        "input",
+        "submit",
+        "retry",
+        "reset"
+      ],
+      "accessibility": [
+        "마우스·터치·키보드 대체",
+        "색상만으로 정답 구분하지 않음",
+        "시간 압박 없는 연습"
+      ],
+      "asset_policy": "시나리오 물건 3개에 바인딩. 특수 상황은 기본 유형에 추가하며 새 조작 물건을 자동 추가하지 않음."
+    },
+    {
+      "type_id": "EX-002",
+      "version": "v001",
+      "kind": "special_modifier",
+      "name": "안전 확보",
+      "implementation_status": "not_implemented",
+      "input_description": "차단되지 않은 위험 표시",
+      "player_action": "위험 위치 확인·작업 잠금 해제",
+      "success_rule": "정의된 안전 조건 충족 후 작업 진행",
+      "recovery_rule": "위험 원인과 필요한 선행 조치 표시",
+      "required_configuration_fields": [
+        "trigger",
+        "hazards",
+        "lock_guards"
+      ],
+      "states": [
+        "inactive",
+        "available",
+        "active",
+        "retry",
+        "completed"
+      ],
+      "events": [
+        "activate",
+        "input",
+        "submit",
+        "retry",
+        "reset"
+      ],
+      "accessibility": [
+        "마우스·터치·키보드 대체",
+        "색상만으로 정답 구분하지 않음",
+        "시간 압박 없는 연습"
+      ],
+      "asset_policy": "시나리오 물건 3개에 바인딩. 특수 상황은 기본 유형에 추가하며 새 조작 물건을 자동 추가하지 않음."
+    },
+    {
+      "type_id": "EX-003",
+      "version": "v001",
+      "kind": "special_modifier",
+      "name": "교차접촉 방지",
+      "implementation_status": "not_implemented",
+      "input_description": "구역·도구 상태 변화",
+      "player_action": "전용 도구·구역 선택",
+      "success_rule": "가상의 청결·구역 구분 규칙 위반 없음",
+      "recovery_rule": "구역 오염 상태를 되돌리고 재선택",
+      "required_configuration_fields": [
+        "trigger",
+        "zones",
+        "item_states",
+        "contact_rules"
+      ],
+      "states": [
+        "inactive",
+        "available",
+        "active",
+        "retry",
+        "completed"
+      ],
+      "events": [
+        "activate",
+        "input",
+        "submit",
+        "retry",
+        "reset"
+      ],
+      "accessibility": [
+        "마우스·터치·키보드 대체",
+        "색상만으로 정답 구분하지 않음",
+        "시간 압박 없는 연습"
+      ],
+      "asset_policy": "시나리오 물건 3개에 바인딩. 특수 상황은 기본 유형에 추가하며 새 조작 물건을 자동 추가하지 않음."
+    },
+    {
+      "type_id": "EX-004",
+      "version": "v001",
+      "kind": "special_modifier",
+      "name": "이상 신호 감시",
+      "implementation_status": "not_implemented",
+      "input_description": "시간에 따른 상태 변화",
+      "player_action": "신호 비교·알림 확인",
+      "success_rule": "정해진 이상을 놓치지 않고 오탐 구분",
+      "recovery_rule": "놓친 구간을 재생해 재검토",
+      "required_configuration_fields": [
+        "trigger",
+        "signal_stream",
+        "alert_rules"
+      ],
+      "states": [
+        "inactive",
+        "available",
+        "active",
+        "retry",
+        "completed"
+      ],
+      "events": [
+        "activate",
+        "input",
+        "submit",
+        "retry",
+        "reset"
+      ],
+      "accessibility": [
+        "마우스·터치·키보드 대체",
+        "색상만으로 정답 구분하지 않음",
+        "시간 압박 없는 연습"
+      ],
+      "asset_policy": "시나리오 물건 3개에 바인딩. 특수 상황은 기본 유형에 추가하며 새 조작 물건을 자동 추가하지 않음."
+    },
+    {
+      "type_id": "EX-005",
+      "version": "v001",
+      "kind": "special_modifier",
+      "name": "정보 부족 조사",
+      "implementation_status": "not_implemented",
+      "input_description": "판단에 필요한 정보 누락",
+      "player_action": "단서 요청·조사",
+      "success_rule": "필수 근거 확보 전 판단하지 않음",
+      "recovery_rule": "빠진 근거를 알려주고 추가 조사",
+      "required_configuration_fields": [
+        "trigger",
+        "missing_evidence",
+        "investigation_options"
+      ],
+      "states": [
+        "inactive",
+        "available",
+        "active",
+        "retry",
+        "completed"
+      ],
+      "events": [
+        "activate",
+        "input",
+        "submit",
+        "retry",
+        "reset"
+      ],
+      "accessibility": [
+        "마우스·터치·키보드 대체",
+        "색상만으로 정답 구분하지 않음",
+        "시간 압박 없는 연습"
+      ],
+      "asset_policy": "시나리오 물건 3개에 바인딩. 특수 상황은 기본 유형에 추가하며 새 조작 물건을 자동 추가하지 않음."
+    },
+    {
+      "type_id": "EX-006",
+      "version": "v001",
+      "kind": "special_modifier",
+      "name": "상충 요구 조정",
+      "implementation_status": "not_implemented",
+      "input_description": "동시에 충족 불가능한 요구",
+      "player_action": "우선순위·대안 설명",
+      "success_rule": "명시된 필수 조건 보존과 절충 이유 확인",
+      "recovery_rule": "충돌을 보여주고 대안 재선택",
+      "required_configuration_fields": [
+        "trigger",
+        "requests",
+        "hard_constraints",
+        "tradeoffs"
+      ],
+      "states": [
+        "inactive",
+        "available",
+        "active",
+        "retry",
+        "completed"
+      ],
+      "events": [
+        "activate",
+        "input",
+        "submit",
+        "retry",
+        "reset"
+      ],
+      "accessibility": [
+        "마우스·터치·키보드 대체",
+        "색상만으로 정답 구분하지 않음",
+        "시간 압박 없는 연습"
+      ],
+      "asset_policy": "시나리오 물건 3개에 바인딩. 특수 상황은 기본 유형에 추가하며 새 조작 물건을 자동 추가하지 않음."
+    },
+    {
+      "type_id": "EX-007",
+      "version": "v001",
+      "kind": "special_modifier",
+      "name": "돌발 변경 대응",
+      "implementation_status": "implemented_office_subset_verified",
+      "input_description": "진행 중 요청 revision 증가",
+      "player_action": "변경 재확인·작업 갱신",
+      "success_rule": "최신 요청 revision에 맞는 결과",
+      "recovery_rule": "이전 목표 결과를 최종 완료로 인정하지 않음",
+      "required_configuration_fields": [
+        "trigger",
+        "changed_fields",
+        "request_revision",
+        "invalidation"
+      ],
+      "states": [
+        "inactive",
+        "available",
+        "active",
+        "retry",
+        "completed"
+      ],
+      "events": [
+        "activate",
+        "input",
+        "submit",
+        "retry",
+        "reset"
+      ],
+      "accessibility": [
+        "마우스·터치·키보드 대체",
+        "색상만으로 정답 구분하지 않음",
+        "시간 압박 없는 연습"
+      ],
+      "asset_policy": "시나리오 물건 3개에 바인딩. 특수 상황은 기본 유형에 추가하며 새 조작 물건을 자동 추가하지 않음.",
+      "implementation_scope": "career-net-253-office-documents only; not a claim that all possible configurations of this design type are implemented",
+      "implementation_evidence": [
+        "unity/projects/OfficeAssistant-v001/Assets/Scripts/CareerRules.cs",
+        "unity/projects/OfficeAssistant-v001/Assets/Scripts/OfficeExperience.cs",
+        "docs/machine/evidence/office-assistant-v001/webgl-ui-acceptance.json"
+      ]
+    },
+    {
+      "type_id": "EX-008",
+      "version": "v001",
+      "kind": "special_modifier",
+      "name": "협업·인계",
+      "implementation_status": "implemented_office_subset_verified",
+      "input_description": "담당자 간 결과 전달 시점",
+      "player_action": "상태 요약·상대 확인",
+      "success_rule": "필수 항목 전달과 수신 확인",
+      "recovery_rule": "누락 항목을 보완해 재전달",
+      "required_configuration_fields": [
+        "trigger",
+        "handoff_fields",
+        "receiver_ack"
+      ],
+      "states": [
+        "inactive",
+        "available",
+        "active",
+        "retry",
+        "completed"
+      ],
+      "events": [
+        "activate",
+        "input",
+        "submit",
+        "retry",
+        "reset"
+      ],
+      "accessibility": [
+        "마우스·터치·키보드 대체",
+        "색상만으로 정답 구분하지 않음",
+        "시간 압박 없는 연습"
+      ],
+      "asset_policy": "시나리오 물건 3개에 바인딩. 특수 상황은 기본 유형에 추가하며 새 조작 물건을 자동 추가하지 않음.",
+      "implementation_scope": "career-net-253-office-documents only; not a claim that all possible configurations of this design type are implemented",
+      "implementation_evidence": [
+        "unity/projects/OfficeAssistant-v001/Assets/Scripts/CareerRules.cs",
+        "unity/projects/OfficeAssistant-v001/Assets/Scripts/OfficeExperience.cs",
+        "docs/machine/evidence/office-assistant-v001/webgl-ui-acceptance.json"
+      ]
+    },
+    {
+      "type_id": "EX-009",
+      "version": "v001",
+      "kind": "special_modifier",
+      "name": "개별 맞춤",
+      "implementation_status": "not_implemented",
+      "input_description": "이용자 조건 변경",
+      "player_action": "표현·도구·진행 방법 선택",
+      "success_rule": "설정된 이용자 조건과 목표 함께 충족",
+      "recovery_rule": "차별적 단정 대신 구체 조건 재확인",
+      "required_configuration_fields": [
+        "trigger",
+        "user_needs",
+        "adaptation_options"
+      ],
+      "states": [
+        "inactive",
+        "available",
+        "active",
+        "retry",
+        "completed"
+      ],
+      "events": [
+        "activate",
+        "input",
+        "submit",
+        "retry",
+        "reset"
+      ],
+      "accessibility": [
+        "마우스·터치·키보드 대체",
+        "색상만으로 정답 구분하지 않음",
+        "시간 압박 없는 연습"
+      ],
+      "asset_policy": "시나리오 물건 3개에 바인딩. 특수 상황은 기본 유형에 추가하며 새 조작 물건을 자동 추가하지 않음."
+    },
+    {
+      "type_id": "EX-010",
+      "version": "v001",
+      "kind": "special_modifier",
+      "name": "기록·추적·복구",
+      "implementation_status": "not_implemented",
+      "input_description": "오류 또는 변경 발견",
+      "player_action": "이력 비교·이전 상태 복구",
+      "success_rule": "올바른 근거 상태로 복구하고 새 revision 보존",
+      "recovery_rule": "삭제·덮어쓰기 대신 이력 유지",
+      "required_configuration_fields": [
+        "trigger",
+        "history",
+        "restore_rules",
+        "new_revision"
+      ],
+      "states": [
+        "inactive",
+        "available",
+        "active",
+        "retry",
+        "completed"
+      ],
+      "events": [
+        "activate",
+        "input",
+        "submit",
+        "retry",
+        "reset"
+      ],
+      "accessibility": [
+        "마우스·터치·키보드 대체",
+        "색상만으로 정답 구분하지 않음",
+        "시간 압박 없는 연습"
+      ],
+      "asset_policy": "시나리오 물건 3개에 바인딩. 특수 상황은 기본 유형에 추가하며 새 조작 물건을 자동 추가하지 않음."
+    }
+  ],
+  "implementation_summary": {
+    "office_subset_implemented": 6,
+    "remaining_not_implemented": 14,
+    "complete_general_purpose_types": 0
+  }
+}

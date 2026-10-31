@@ -1,0 +1,1917 @@
+{
+  "schema_version": 3,
+  "package_id": "career-experience-scenarios",
+  "version": "v003",
+  "supersedes": {
+    "catalog": "career-experience-scenarios-v002",
+    "version": "v002"
+  },
+  "document_path": "docs/human/jobs/office-assistant-direct-work-v002.md",
+  "source_refs": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "d7e21a113fff0ca4575a7d5f4e8498348178e176a0679102351917693d28755c"
+    },
+    {
+      "path": "docs/machine/catalog/career-experience-scenarios-v002.json",
+      "sha256": "5ed924efad538c6ff7de34b944514f1697e391be921a165f702c9157666ef148"
+    },
+    {
+      "path": "unity/projects/OfficeAssistant-v001/Assets/Scripts/OfficeDirectExperience.cs",
+      "sha256": "bb0f6559060478b322636aef9b97090f22c1f9ddc0948efbef71886b1f36d085"
+    },
+    {
+      "path": "unity/projects/OfficeAssistant-v001/Assets/Scripts/CareerProtocol.cs",
+      "sha256": "81b473547ca7c5a4406f808531f707326da61bc25099f9fcab16cb9bde292165"
+    }
+  ],
+  "scope": "Single existing office scenario direct-work amendment. Other 551 occupation drafts and unselected alternatives remain unchanged in v002; this package is not full-catalog replacement or blanket approval.",
+  "scenarios": [
+    {
+      "scenario_id": "career-net-253-office-documents",
+      "version": "v002",
+      "occupation_id": "career-net-253",
+      "occupation_name": "사무보조원",
+      "title": "요청에 맞는 문서 출력·보관",
+      "planning_status": "pending_user_approval",
+      "production_status": "implemented",
+      "implementation_status": "implemented_verified_scope",
+      "runtime_checks": {
+        "unity_editor": "scene_load_pass_workflow_ui_unverified",
+        "webgl": "pass",
+        "unity_react_protocol": "pass"
+      },
+      "document_path": "docs/human/jobs/office-assistant-direct-work-v002.md",
+      "implementation_prompt_path": "docs/human/jobs/office-assistant-direct-work-v002.md",
+      "original_ref": {
+        "path": "docs/human/jobs/sources/job-things-list/v001/Job_things_list.txt",
+        "sha256": "18f2823d16933080ace4d08ca55f3f965efdaba834c4d536fe16971df516a09d",
+        "json_pointer": "/items/190/data"
+      },
+      "source_basis": {
+        "work": "문서 수발·정리·복사·자료 입력과 오류 수정",
+        "core_competencies": [
+          "대인관계능력"
+        ],
+        "practice_connection": "확인 질문으로 동료 요청 파악 후 정확한 인계. 적성·능력 진단으로 평가하지 않음."
+      },
+      "fictionalization": "문서 제목·날짜·부수·대화·오류는 게임 각색이며 원문 업무 사실·실제 업무 규정이 아님.",
+      "panorama_ref": {
+        "catalog": "panoramas",
+        "image_id": "PAN-001",
+        "version": "v001"
+      },
+      "prompt_ref": {
+        "catalog": "panorama-prompts-v002",
+        "prompt_id": "PRM-001",
+        "version": "v001"
+      },
+      "context_ref": {
+        "context_id": "office-shared-work",
+        "version": "v001"
+      },
+      "scene_basis_ref": {
+        "assembly_id": "pan-001-office",
+        "revision": 5,
+        "asset_ref": {
+          "asset_id": "AST-020",
+          "version": "v006"
+        },
+        "placements_path": "meshy/models/blender/AST-020/v006/placements.json",
+        "inspection_path": "meshy/models/blender/AST-020/v006/inspection.json"
+      },
+      "interaction_objects": [
+        {
+          "object_id": "monitor",
+          "candidate_ref": {
+            "catalog": "workplace-asset-candidates-v003",
+            "candidate_id": "CND-005"
+          },
+          "name": "모니터",
+          "asset_reuse_ref": {
+            "asset_id": "AST-005",
+            "version": "v001"
+          },
+          "reuse_fit_status": "unverified_for_interaction",
+          "reuse_class": "common",
+          "scene_candidate_count": 14,
+          "binding_status": "bound_in_unity_and_http_webgl_verified",
+          "unity_binding": {
+            "project_path": "unity/projects/OfficeAssistant-v001",
+            "scene_path": "unity/projects/OfficeAssistant-v001/Assets/Scenes/OfficeAssistantDirect.unity",
+            "component": "OfficeExperience/OfficeDirectExperience",
+            "binding_id": "monitor",
+            "instance_id": "AST-005-0",
+            "hierarchy": "Office_AST-020_v006/AST-005-0",
+            "asset_ref": {
+              "asset_id": "AST-005",
+              "version": "v001"
+            },
+            "evidence": [
+              "docs/machine/evidence/workplaces-v006/PAN-001-unity-scene.json",
+              "docs/machine/evidence/workplaces-v006/office-completed-events.json"
+            ]
+          },
+          "requirements": [
+            "정확한 3D 선택 콜라이더",
+            "선택·비활성·완료 피드백",
+            "해당 물건에 귀속된 UI"
+          ],
+          "mesh_animation_requirement": "최소 구현은 메시 변경 불필요. 분리 부품 사용 시 실재 확인 및 새 버전 보존.",
+          "closeup": {
+            "asset_ref": {
+              "asset_id": "AST-005",
+              "version": "v001"
+            },
+            "binding_status": "bound_in_unity_and_http_webgl_verified",
+            "work_face": "front display",
+            "camera_preset": {
+              "euler_deg": [
+                10,
+                164,
+                0
+              ],
+              "fov_deg": 36,
+              "purpose": "Implemented Euler/FOV preset; renderer-bounds framing exercised in actual v006 WebGL. Values are configuration, not claimed measured bounds."
+            },
+            "framing": "Renderer bounds width/height and paper viewport aspect determine distance, margin1.55. Actual v006 WebGL exercised monitor/copier/cabinet closeup and original-camera/background restore; raw bounds not separately recorded here.",
+            "background_policy": "Hide other room renderers during closeup; full-frame clear camera remains; do not duplicate geometry or tint materials.",
+            "restore_policy": "Per-open renderer flags, camera position/rotation/FOV/viewport and selected object restored; persistent drafts and settings retained.",
+            "calibration_status": "http_webgl_verified_workplaces_v006"
+          }
+        },
+        {
+          "object_id": "copier",
+          "candidate_ref": {
+            "catalog": "workplace-asset-candidates-v003",
+            "candidate_id": "CND-008"
+          },
+          "name": "복합기",
+          "asset_reuse_ref": {
+            "asset_id": "AST-009",
+            "version": "v001"
+          },
+          "reuse_fit_status": "unverified_for_interaction",
+          "reuse_class": "noncommon",
+          "scene_candidate_count": 1,
+          "binding_status": "bound_in_unity_and_http_webgl_verified",
+          "unity_binding": {
+            "project_path": "unity/projects/OfficeAssistant-v001",
+            "scene_path": "unity/projects/OfficeAssistant-v001/Assets/Scenes/OfficeAssistantDirect.unity",
+            "component": "OfficeExperience/OfficeDirectExperience",
+            "binding_id": "copier",
+            "instance_id": "AST-009-0",
+            "hierarchy": "Office_AST-020_v006/AST-009-0",
+            "asset_ref": {
+              "asset_id": "AST-009",
+              "version": "v001"
+            },
+            "evidence": [
+              "docs/machine/evidence/workplaces-v006/PAN-001-unity-scene.json",
+              "docs/machine/evidence/workplaces-v006/office-completed-events.json"
+            ]
+          },
+          "requirements": [
+            "정확한 3D 선택 콜라이더",
+            "선택·비활성·완료 피드백",
+            "해당 물건에 귀속된 UI"
+          ],
+          "mesh_animation_requirement": "최소 구현은 메시 변경 불필요. 분리 부품 사용 시 실재 확인 및 새 버전 보존.",
+          "closeup": {
+            "asset_ref": {
+              "asset_id": "AST-009",
+              "version": "v001"
+            },
+            "binding_status": "bound_in_unity_and_http_webgl_verified",
+            "work_face": "front control panel and output tray",
+            "camera_preset": {
+              "euler_deg": [
+                22,
+                164,
+                0
+              ],
+              "fov_deg": 36,
+              "purpose": "Implemented Euler/FOV preset; renderer-bounds framing exercised in actual v006 WebGL. Values are configuration, not claimed measured bounds."
+            },
+            "framing": "Renderer bounds width/height and paper viewport aspect determine distance, margin1.55. Actual v006 WebGL exercised monitor/copier/cabinet closeup and original-camera/background restore; raw bounds not separately recorded here.",
+            "background_policy": "Hide other room renderers during closeup; full-frame clear camera remains; do not duplicate geometry or tint materials.",
+            "restore_policy": "Per-open renderer flags, camera position/rotation/FOV/viewport and selected object restored; persistent drafts and settings retained.",
+            "calibration_status": "http_webgl_verified_workplaces_v006"
+          }
+        },
+        {
+          "object_id": "cabinet",
+          "candidate_ref": {
+            "catalog": "workplace-asset-candidates-v003",
+            "candidate_id": "CND-009"
+          },
+          "name": "수납장",
+          "asset_reuse_ref": {
+            "asset_id": "AST-015",
+            "version": "v001"
+          },
+          "reuse_fit_status": "unverified_for_interaction",
+          "reuse_class": "common",
+          "scene_candidate_count": 13,
+          "binding_status": "bound_in_unity_and_http_webgl_verified",
+          "unity_binding": {
+            "project_path": "unity/projects/OfficeAssistant-v001",
+            "scene_path": "unity/projects/OfficeAssistant-v001/Assets/Scenes/OfficeAssistantDirect.unity",
+            "component": "OfficeExperience/OfficeDirectExperience",
+            "binding_id": "cabinet",
+            "instance_id": "AST-015-0",
+            "hierarchy": "Office_AST-020_v006/AST-015-0",
+            "asset_ref": {
+              "asset_id": "AST-015",
+              "version": "v001"
+            },
+            "evidence": [
+              "docs/machine/evidence/workplaces-v006/PAN-001-unity-scene.json",
+              "docs/machine/evidence/workplaces-v006/office-completed-events.json"
+            ]
+          },
+          "requirements": [
+            "정확한 3D 선택 콜라이더",
+            "선택·비활성·완료 피드백",
+            "해당 물건에 귀속된 UI"
+          ],
+          "mesh_animation_requirement": "최소 구현은 메시 변경 불필요. 분리 부품 사용 시 실재 확인 및 새 버전 보존.",
+          "closeup": {
+            "asset_ref": {
+              "asset_id": "AST-015",
+              "version": "v001"
+            },
+            "binding_status": "bound_in_unity_and_http_webgl_verified",
+            "work_face": "front storage work surface",
+            "camera_preset": {
+              "euler_deg": [
+                22,
+                164,
+                0
+              ],
+              "fov_deg": 36,
+              "purpose": "Implemented Euler/FOV preset; renderer-bounds framing exercised in actual v006 WebGL. Values are configuration, not claimed measured bounds."
+            },
+            "framing": "Renderer bounds width/height and paper viewport aspect determine distance, margin1.55. Actual v006 WebGL exercised monitor/copier/cabinet closeup and original-camera/background restore; raw bounds not separately recorded here.",
+            "background_policy": "Hide other room renderers during closeup; full-frame clear camera remains; do not duplicate geometry or tint materials.",
+            "restore_policy": "Per-open renderer flags, camera position/rotation/FOV/viewport and selected object restored; persistent drafts and settings retained.",
+            "calibration_status": "http_webgl_verified_workplaces_v006"
+          }
+        }
+      ],
+      "background_policy": "배경은 3개 상호작용 물건에 포함하지 않음. 조립 부모·자식 중복 렌더·삼각형 집계 금지.",
+      "ui_policy": "요청·문서·대화는 물건에서 여는 UI. 추가 3D 조작 물건·새 재질 이미지 없음.",
+      "fixture": {
+        "request_id": "REQ-001",
+        "document_id": "DOC-001",
+        "document_title": "팀 회의자료",
+        "initial_date": "11월 1일",
+        "expected_date": "11월 2일",
+        "base_copies": 2,
+        "changed_copies": 3,
+        "expected_folder": "회의자료"
+      },
+      "state_sequence": [
+        "request_pending",
+        "request_confirmed",
+        "document_saved",
+        "printing",
+        "print_ready",
+        "filed",
+        "complete"
+      ],
+      "base_game_refs": [
+        {
+          "type_id": "MG-008",
+          "version": "v001"
+        },
+        {
+          "type_id": "MG-005",
+          "version": "v001"
+        },
+        {
+          "type_id": "MG-003",
+          "version": "v001"
+        },
+        {
+          "type_id": "MG-001",
+          "version": "v001"
+        }
+      ],
+      "steps": [
+        {
+          "step_id": "confirm",
+          "object_id": "monitor",
+          "type_refs": [
+            "MG-008"
+          ],
+          "action": "자료 ID·부수·보관처를 질문하고 요약 확인",
+          "from_state": "request_pending",
+          "to_state": "request_confirmed",
+          "success_predicate": "all_request_slots_confirmed && receiver_ack",
+          "on_error": "빠진 요청 필드 안내. 상태 유지.",
+          "configuration": {
+            "required_slots": [
+              "document_id",
+              "copies",
+              "folder"
+            ],
+            "confirmation_required": true
+          },
+          "work_surface": {
+            "surface_kind": "message_and_request_summary",
+            "layout": "Three question actions, obtained replies, current request revision and summary acknowledgement.",
+            "controls": [
+              {
+                "control_id": "ask-document",
+                "kind": "business_button",
+                "data_binding": "knownSlots.document_id",
+                "pointer_action": "click or edit",
+                "touch_action": "tap or edit",
+                "keyboard_action": "Tab focus, type, Enter/Space action",
+                "command": "ask_document"
+              },
+              {
+                "control_id": "ask-copies",
+                "kind": "business_button",
+                "data_binding": "knownSlots.copies",
+                "pointer_action": "click or edit",
+                "touch_action": "tap or edit",
+                "keyboard_action": "Tab focus, type, Enter/Space action",
+                "command": "ask_copies"
+              },
+              {
+                "control_id": "ask-folder",
+                "kind": "business_button",
+                "data_binding": "knownSlots.folder",
+                "pointer_action": "click or edit",
+                "touch_action": "tap or edit",
+                "keyboard_action": "Tab focus, type, Enter/Space action",
+                "command": "ask_folder"
+              },
+              {
+                "control_id": "confirm-request",
+                "kind": "business_button",
+                "data_binding": "confirmedRequestRevision",
+                "pointer_action": "click or edit",
+                "touch_action": "tap or edit",
+                "keyboard_action": "Tab focus, type, Enter/Space action",
+                "command": "confirm"
+              }
+            ],
+            "manipulands": [
+              {
+                "item_id": "REQ-001",
+                "content": "Ask which meeting material/date, number of copies and storage location.",
+                "required_slots": [
+                  "document_id",
+                  "copies",
+                  "folder"
+                ]
+              }
+            ],
+            "initial_data": {
+              "known_slots": [],
+              "request_revision": 1,
+              "message": "회의자료를 출력해 주세요."
+            },
+            "target_data": {
+              "document_id": "DOC-001",
+              "date": "11월 2일",
+              "copies": 2,
+              "folder": "회의자료",
+              "acknowledgement": true
+            },
+            "commands": [
+              {
+                "name": "ask_document",
+                "input_payload": {},
+                "prerequisites": [
+                  "request_pending"
+                ],
+                "business_state_change": "known slot document_id",
+                "idempotency_key": "set membership"
+              },
+              {
+                "name": "ask_copies",
+                "input_payload": {},
+                "prerequisites": [
+                  "request_pending"
+                ],
+                "business_state_change": "known slot copies",
+                "idempotency_key": "set membership"
+              },
+              {
+                "name": "ask_folder",
+                "input_payload": {},
+                "prerequisites": [
+                  "request_pending"
+                ],
+                "business_state_change": "known slot folder",
+                "idempotency_key": "set membership"
+              },
+              {
+                "name": "confirm",
+                "input_payload": {
+                  "acknowledgement": true
+                },
+                "prerequisites": [
+                  "all three known slots"
+                ],
+                "business_state_change": "confirmed current request revision",
+                "idempotency_key": "run+request_revision+confirm"
+              }
+            ],
+            "success_rules": [
+              "Required slots all known and explicit summary acknowledgement."
+            ],
+            "error_feedback": {
+              "missing_fields": "Explain missing request fields; do not advance stage."
+            },
+            "visual_result": "Answered slots gain check marks and summary shows actual current values; confirmed revision is visible.",
+            "next_object": {
+              "object_id": "monitor",
+              "step_id": "review",
+              "condition": "Current request confirmed"
+            },
+            "prerequisites": [
+              "request_pending"
+            ],
+            "retry_policy": "Correct retained values and resubmit; retry_count only on a new actual submission after preceding failed attempt under same request revision.",
+            "draft_persistence": "Session, including close/reopen and in-memory room navigation; not playable refresh recovery.",
+            "request_change": {
+              "trigger": "First successful save in changed-request practice only",
+              "fields": {
+                "copies": 3
+              },
+              "revision": "requestRevision increments once; previous confirmation invalidated",
+              "reconfirm": "Ask document/copies/folder and confirm current request. Existing correct saved document remains saved. First submission under new request is not a retry or mistake."
+            },
+            "handoff": {
+              "required_step": "handoff",
+              "object_id": "cabinet",
+              "fields": [
+                "title",
+                "date",
+                "copies",
+                "folder"
+              ],
+              "receiver_ack": true
+            },
+            "reset": {
+              "confirmed": true,
+              "cancel_previous_print": true,
+              "new_run_id": true,
+              "preserve_previous_ledger": true,
+              "reset_drafts_and_settings": true,
+              "late_completion_policy": "Ended blocks Tick; Reset clears prior elapsed printing state before next Tick, preventing old job completion in the fresh run."
+            },
+            "implementation_status": "implemented_verified_scope",
+            "verification": {
+              "status": "pass",
+              "build_id": "workplaces-v006",
+              "checked_at": "2026-10-30T22:23:41.705Z",
+              "environment": "Actual HTTP Unity WebGL Chrome Windows SwiftShader",
+              "evidence": "docs/machine/evidence/workplaces-v006/office-direct-http-acceptance.json",
+              "cases": [
+                "priority_900x600_Tab_bounds_reduced_motion_instant",
+                "locked_object_missing_confirmation_and_transition_input_lock"
+              ],
+              "native_editor_workflow_ui": "unverified"
+            }
+          }
+        },
+        {
+          "step_id": "review",
+          "object_id": "monitor",
+          "type_refs": [
+            "MG-005"
+          ],
+          "action": "요청의 날짜와 문서 날짜를 비교해 11월 2일로 수정·저장",
+          "from_state": "request_confirmed",
+          "to_state": "document_saved",
+          "success_predicate": "date == expected_date && saved_revision == current_document_revision",
+          "on_error": "오류 위치·미저장 안내.",
+          "configuration": {
+            "defects": [
+              "date_mismatch"
+            ],
+            "correction_rules": {
+              "date": "11월 2일"
+            }
+          },
+          "work_surface": {
+            "surface_kind": "editable_document",
+            "layout": "Request reference, document ID/revisions, actual title/date text fields, save status and revision history.",
+            "controls": [
+              {
+                "control_id": "document-title",
+                "kind": "text_input",
+                "data_binding": "draftTitle",
+                "pointer_action": "click or edit",
+                "touch_action": "tap or edit",
+                "keyboard_action": "Tab focus, type, Enter/Space action",
+                "command": "edit_document"
+              },
+              {
+                "control_id": "document-date",
+                "kind": "text_input",
+                "data_binding": "draftDate",
+                "pointer_action": "click or edit",
+                "touch_action": "tap or edit",
+                "keyboard_action": "Tab focus, type, Enter/Space action",
+                "command": "edit_document"
+              },
+              {
+                "control_id": "save",
+                "kind": "business_button",
+                "data_binding": "savedRevision",
+                "pointer_action": "click or edit",
+                "touch_action": "tap or edit",
+                "keyboard_action": "Tab focus, type, Enter/Space action",
+                "command": "save"
+              }
+            ],
+            "manipulands": [
+              {
+                "item_id": "DOC-001",
+                "editable_fields": [
+                  "title",
+                  "date"
+                ],
+                "content": {
+                  "title": "팀 회의자료",
+                  "date": "11월 1일"
+                }
+              }
+            ],
+            "initial_data": {
+              "title": "팀 회의자료",
+              "date": "11월 1일",
+              "document_revision": 1,
+              "saved_revision": 1
+            },
+            "target_data": {
+              "title": "팀 회의자료",
+              "date": "11월 2일"
+            },
+            "commands": [
+              {
+                "name": "edit_document",
+                "input_payload": {
+                  "title": "string",
+                  "date": "string"
+                },
+                "prerequisites": [
+                  "confirmed request",
+                  "before print"
+                ],
+                "business_state_change": "new unsaved document revision only when content changed",
+                "idempotency_key": "run+content_revision"
+              },
+              {
+                "name": "save",
+                "input_payload": {},
+                "prerequisites": [
+                  "title/date match current request",
+                  "request_confirmed"
+                ],
+                "business_state_change": "saved revision, document_saved or changed request pending",
+                "idempotency_key": "run+document_revision+save"
+              }
+            ],
+            "success_rules": [
+              "Exact requested title and date, actual saved revision equals document revision.",
+              "Unchanged already saved document cannot produce a second save attempt."
+            ],
+            "error_feedback": {
+              "TITLE_MISMATCH": "Retain entered draft and show title mismatch.",
+              "DATE_MISMATCH": "Retain entered draft and show expected date.",
+              "state": "No save completion on validation error."
+            },
+            "visual_result": "Unsaved marker, saved revision, and history change immediately; fields contain the actual edited text.",
+            "next_object": {
+              "object_id": "copier",
+              "step_id": "print",
+              "condition": "Current request confirmed and correct document saved; saved monitor reopens read-only after print."
+            },
+            "prerequisites": [
+              "request_confirmed"
+            ],
+            "retry_policy": "Correct retained values and resubmit; retry_count only on a new actual submission after preceding failed attempt under same request revision.",
+            "draft_persistence": "Session, including close/reopen and in-memory room navigation; not playable refresh recovery.",
+            "request_change": {
+              "trigger": "First successful save in changed-request practice only",
+              "fields": {
+                "copies": 3
+              },
+              "revision": "requestRevision increments once; previous confirmation invalidated",
+              "reconfirm": "Ask document/copies/folder and confirm current request. Existing correct saved document remains saved. First submission under new request is not a retry or mistake."
+            },
+            "handoff": {
+              "required_step": "handoff",
+              "object_id": "cabinet",
+              "fields": [
+                "title",
+                "date",
+                "copies",
+                "folder"
+              ],
+              "receiver_ack": true
+            },
+            "reset": {
+              "confirmed": true,
+              "cancel_previous_print": true,
+              "new_run_id": true,
+              "preserve_previous_ledger": true,
+              "reset_drafts_and_settings": true,
+              "late_completion_policy": "Ended blocks Tick; Reset clears prior elapsed printing state before next Tick, preventing old job completion in the fresh run."
+            },
+            "implementation_status": "implemented_verified_scope",
+            "verification": {
+              "status": "pass",
+              "build_id": "workplaces-v006",
+              "checked_at": "2026-10-30T22:23:41.705Z",
+              "environment": "Actual HTTP Unity WebGL Chrome Windows SwiftShader",
+              "evidence": "docs/machine/evidence/workplaces-v006/office-direct-http-acceptance.json",
+              "cases": [
+                "priority_900x600_Tab_bounds_reduced_motion_instant",
+                "large_keyboard_cycle_retries_typing_shortcuts_and_camera_restore"
+              ],
+              "native_editor_workflow_ui": "unverified"
+            }
+          }
+        },
+        {
+          "step_id": "print",
+          "object_id": "copier",
+          "type_refs": [
+            "MG-003"
+          ],
+          "action": "요청과 일치하는 최신 저장본을 정확한 부수로 출력",
+          "from_state": "document_saved",
+          "to_state": "print_ready",
+          "intermediate_state": "printing",
+          "success_predicate": "document_id_matches && copies_match && confirmed_request_revision == current_request_revision && saved_revision == current_document_revision && print_completed_once",
+          "on_error": "출력 전 차이를 설명. printing 중 중복 입력 무시.",
+          "configuration": {
+            "dependencies": [
+              "confirm",
+              "review"
+            ],
+            "idempotency_key": "request_id+request_revision+document_revision"
+          },
+          "work_surface": {
+            "surface_kind": "device_panel_and_output",
+            "layout": "Document ID and revision selection, actual numeric copies field with plus/minus, request reference, print progress, output paper UI.",
+            "controls": [
+              {
+                "control_id": "document",
+                "kind": "business_button",
+                "data_binding": "selectedFile",
+                "pointer_action": "click or edit",
+                "touch_action": "tap or edit",
+                "keyboard_action": "Tab focus, type, Enter/Space action",
+                "command": "set_document"
+              },
+              {
+                "control_id": "revision",
+                "kind": "business_button",
+                "data_binding": "selectedRevision",
+                "pointer_action": "click or edit",
+                "touch_action": "tap or edit",
+                "keyboard_action": "Tab focus, type, Enter/Space action",
+                "command": "set_revision"
+              },
+              {
+                "control_id": "print-copies",
+                "kind": "numeric_text_input",
+                "data_binding": "copiesInput",
+                "pointer_action": "click or edit",
+                "touch_action": "tap or edit",
+                "keyboard_action": "Tab focus, type, Enter/Space action",
+                "command": "set_copies"
+              },
+              {
+                "control_id": "copies-minus",
+                "kind": "increment_button",
+                "data_binding": "copiesInput",
+                "pointer_action": "click or edit",
+                "touch_action": "tap or edit",
+                "keyboard_action": "Tab focus, type, Enter/Space action",
+                "command": "set_copies"
+              },
+              {
+                "control_id": "copies-plus",
+                "kind": "increment_button",
+                "data_binding": "copiesInput",
+                "pointer_action": "click or edit",
+                "touch_action": "tap or edit",
+                "keyboard_action": "Tab focus, type, Enter/Space action",
+                "command": "set_copies"
+              },
+              {
+                "control_id": "print",
+                "kind": "business_button",
+                "data_binding": "printJob",
+                "pointer_action": "click or edit",
+                "touch_action": "tap or edit",
+                "keyboard_action": "Tab focus, type, Enter/Space action",
+                "command": "print"
+              }
+            ],
+            "manipulands": [
+              {
+                "item_id": "DOC-001",
+                "allowed_documents": [
+                  "DOC-001",
+                  "DOC-OLD"
+                ],
+                "allowed_revisions": "latest saved or initial revision 1",
+                "copies_input": "integer 1..99 controls; invalid text fails validation"
+              }
+            ],
+            "initial_data": {
+              "selected_document": "DOC-001",
+              "selected_revision": "latest saved on first opening",
+              "copies": "1"
+            },
+            "target_data": {
+              "document_id": "DOC-001",
+              "revision": "current saved revision",
+              "copies": "current request copies 2 or changed 3"
+            },
+            "commands": [
+              {
+                "name": "print",
+                "input_payload": {
+                  "document_id": "string",
+                  "revision": "integer",
+                  "copies": "integer"
+                },
+                "prerequisites": [
+                  "document_saved",
+                  "confirmed current request",
+                  "saved current document"
+                ],
+                "business_state_change": "printing -> print_ready after 2.5 active seconds, one completed bundle",
+                "idempotency_key": "run+request_revision+document_revision+print_job"
+              }
+            ],
+            "success_rules": [
+              "Correct document, latest saved revision, exact current request copies.",
+              "Start is not completion; print_ready is emitted only at actual timer completion.",
+              "While printing controls are locked; close/reopen does not restart the timer or increment output."
+            ],
+            "error_feedback": {
+              "DOCUMENT_REVISION_MISMATCH": "Do not begin print; retain settings and explain mismatch.",
+              "COPY_COUNT_MISMATCH": "Do not begin print; retain copies and show current requested copies."
+            },
+            "visual_result": "Actual print progress reveals distinct offset paper sheets in the left copier presentation. After completion, 2 or 3 separate sheets retain individual page markers and actual count; no completion is claimed before the print state transition.",
+            "next_object": {
+              "object_id": "cabinet",
+              "step_id": "file",
+              "condition": "Actual print completed once; completed copier reopens without further print attempts."
+            },
+            "prerequisites": [
+              "document_saved"
+            ],
+            "retry_policy": "Correct retained values and resubmit; retry_count only on a new actual submission after preceding failed attempt under same request revision.",
+            "draft_persistence": "Session, including close/reopen and in-memory room navigation; not playable refresh recovery.",
+            "request_change": {
+              "trigger": "First successful save in changed-request practice only",
+              "fields": {
+                "copies": 3
+              },
+              "revision": "requestRevision increments once; previous confirmation invalidated",
+              "reconfirm": "Ask document/copies/folder and confirm current request. Existing correct saved document remains saved. First submission under new request is not a retry or mistake."
+            },
+            "handoff": {
+              "required_step": "handoff",
+              "object_id": "cabinet",
+              "fields": [
+                "title",
+                "date",
+                "copies",
+                "folder"
+              ],
+              "receiver_ack": true
+            },
+            "reset": {
+              "confirmed": true,
+              "cancel_previous_print": true,
+              "new_run_id": true,
+              "preserve_previous_ledger": true,
+              "reset_drafts_and_settings": true,
+              "late_completion_policy": "Ended blocks Tick; Reset clears prior elapsed printing state before next Tick, preventing old job completion in the fresh run."
+            },
+            "implementation_status": "implemented_verified_scope",
+            "verification": {
+              "status": "pass",
+              "build_id": "workplaces-v006",
+              "checked_at": "2026-10-30T22:23:41.705Z",
+              "environment": "Actual HTTP Unity WebGL Chrome Windows SwiftShader",
+              "evidence": "docs/machine/evidence/workplaces-v006/office-direct-http-acceptance.json",
+              "cases": [
+                "print_error_retry_P_pause_close_and_two_distinct_sheets",
+                "copier_settings_retained_and_print_room_leave_freezes_time",
+                "midprint_header_pause_reset_old_run_and_stale_completion",
+                "midprint_end_partial_no_late_output"
+              ],
+              "native_editor_workflow_ui": "unverified"
+            }
+          }
+        },
+        {
+          "step_id": "file",
+          "object_id": "cabinet",
+          "type_refs": [
+            "MG-001",
+            "EX-008"
+          ],
+          "action": "문서 묶음을 실제 분류함으로 이동",
+          "from_state": "print_ready",
+          "to_state": "filed",
+          "success_predicate": "expected_folder && actual_print_ready",
+          "on_error": "잘못된 칸은 보관 확정 안 함. 인계 누락 보완.",
+          "configuration": {
+            "target_classes": [
+              "회의자료",
+              "인사자료",
+              "회계자료"
+            ],
+            "handoff_fields": [
+              "title",
+              "date",
+              "copies",
+              "folder"
+            ],
+            "receiver_ack": true
+          },
+          "work_surface": {
+            "surface_kind": "spatial_document_sorting",
+            "layout": "Selectable/dragged document bundle on left; three readable destination bins on right.",
+            "controls": [
+              {
+                "control_id": "document-bundle",
+                "kind": "draggable_item",
+                "data_binding": "bundleSelected",
+                "pointer_action": "press and drag bundle or click to select",
+                "touch_action": "touch drag or tap to select",
+                "keyboard_action": "Enter/Space selects bundle",
+                "command": "select_bundle"
+              },
+              {
+                "control_id": "classification-bins",
+                "kind": "drop_targets",
+                "data_binding": "folder",
+                "pointer_action": "drop bundle or click destination after selection",
+                "touch_action": "drop or tap destination after selection",
+                "keyboard_action": "Arrows/Tab choose bin, Enter/Space moves selected bundle, Esc cancels selection",
+                "command": "file"
+              }
+            ],
+            "manipulands": [
+              {
+                "item_id": "printed-DOC-001",
+                "content": "팀 회의자료 + actual printed copies",
+                "allowed_destinations": [
+                  "회의자료",
+                  "인사자료",
+                  "회계자료"
+                ]
+              }
+            ],
+            "initial_data": {
+              "bundle_location": "source",
+              "folder": null
+            },
+            "target_data": {
+              "bundle_location": "회의자료",
+              "folder": "회의자료"
+            },
+            "commands": [
+              {
+                "name": "file",
+                "input_payload": {
+                  "folder": "string"
+                },
+                "prerequisites": [
+                  "print_ready"
+                ],
+                "business_state_change": "filed on correct destination only",
+                "idempotency_key": "run+printed_bundle+file"
+              }
+            ],
+            "success_rules": [
+              "Same File command and classification predicate for drag, click/touch alternative and keyboard.",
+              "Only expected folder may commit; one submitted wrong drop is one failureId."
+            ],
+            "error_feedback": {
+              "WRONG_CLASSIFICATION": "Do not commit folder; return bundle to source, clear transient selection, explain expected classification."
+            },
+            "visual_result": "Three labeled bins are shown in the left cabinet presentation. The bundle remains at the source before storage, then appears physically inside the bin matching actual Session.Folder with its saved title/count. The right work form and handoff continue on the same cabinet.",
+            "next_object": {
+              "object_id": "cabinet",
+              "step_id": "handoff",
+              "condition": "Bundle committed to the correct bin; cabinet remains same third object."
+            },
+            "prerequisites": [
+              "print_ready"
+            ],
+            "retry_policy": "Correct retained values and resubmit; retry_count only on a new actual submission after preceding failed attempt under same request revision.",
+            "draft_persistence": "Session, including close/reopen and in-memory room navigation; not playable refresh recovery.",
+            "request_change": {
+              "trigger": "First successful save in changed-request practice only",
+              "fields": {
+                "copies": 3
+              },
+              "revision": "requestRevision increments once; previous confirmation invalidated",
+              "reconfirm": "Ask document/copies/folder and confirm current request. Existing correct saved document remains saved. First submission under new request is not a retry or mistake."
+            },
+            "handoff": {
+              "required_step": "handoff",
+              "object_id": "cabinet",
+              "fields": [
+                "title",
+                "date",
+                "copies",
+                "folder"
+              ],
+              "receiver_ack": true
+            },
+            "reset": {
+              "confirmed": true,
+              "cancel_previous_print": true,
+              "new_run_id": true,
+              "preserve_previous_ledger": true,
+              "reset_drafts_and_settings": true,
+              "late_completion_policy": "Ended blocks Tick; Reset clears prior elapsed printing state before next Tick, preventing old job completion in the fresh run."
+            },
+            "implementation_status": "implemented_verified_scope",
+            "verification": {
+              "status": "pass",
+              "build_id": "workplaces-v006",
+              "checked_at": "2026-10-30T22:23:41.705Z",
+              "environment": "Actual HTTP Unity WebGL Chrome Windows SwiftShader",
+              "evidence": "docs/machine/evidence/workplaces-v006/office-direct-http-acceptance.json",
+              "cases": [
+                "drag_Escape_pause_cancel_wrong_drop_and_keyboard_storage",
+                "correct_mouse_drag_three_copy_handoff_and_guided_context",
+                "touch_cancel_equivalent_storage_and_post_file_partial_end"
+              ],
+              "native_editor_workflow_ui": "unverified"
+            }
+          }
+        },
+        {
+          "step_id": "handoff",
+          "object_id": "cabinet",
+          "type_refs": [
+            "EX-008"
+          ],
+          "action": "문서 처리 결과를 직접 입력하고 동료에게 인계",
+          "from_state": "filed",
+          "to_state": "complete",
+          "success_predicate": "all_handoff_fields_current && receiver_ack",
+          "on_error": "입력값 유지, 인계 오류 안내",
+          "configuration": {
+            "required_fields": [
+              "title",
+              "date",
+              "copies",
+              "folder"
+            ],
+            "receiver_ack": true
+          },
+          "work_surface": {
+            "surface_kind": "handoff_card",
+            "layout": "Stored bundle summary and actual title/date/copies/folder input fields with send-and-acknowledge business action.",
+            "controls": [
+              {
+                "control_id": "handoff-title",
+                "kind": "text_input",
+                "data_binding": "handoffTitle",
+                "pointer_action": "click or edit",
+                "touch_action": "tap or edit",
+                "keyboard_action": "Tab focus, type, Enter/Space action",
+                "command": "set_handoff"
+              },
+              {
+                "control_id": "handoff-date",
+                "kind": "text_input",
+                "data_binding": "handoffDate",
+                "pointer_action": "click or edit",
+                "touch_action": "tap or edit",
+                "keyboard_action": "Tab focus, type, Enter/Space action",
+                "command": "set_handoff"
+              },
+              {
+                "control_id": "handoff-copies",
+                "kind": "numeric_text_input",
+                "data_binding": "handoffCopiesInput",
+                "pointer_action": "click or edit",
+                "touch_action": "tap or edit",
+                "keyboard_action": "Tab focus, type, Enter/Space action",
+                "command": "set_handoff"
+              },
+              {
+                "control_id": "handoff-folder",
+                "kind": "text_input",
+                "data_binding": "handoffFolder",
+                "pointer_action": "click or edit",
+                "touch_action": "tap or edit",
+                "keyboard_action": "Tab focus, type, Enter/Space action",
+                "command": "set_handoff"
+              },
+              {
+                "control_id": "send-handoff",
+                "kind": "business_button",
+                "data_binding": "acknowledgement",
+                "pointer_action": "click or edit",
+                "touch_action": "tap or edit",
+                "keyboard_action": "Tab focus, type, Enter/Space action",
+                "command": "handoff"
+              }
+            ],
+            "manipulands": [
+              {
+                "item_id": "handoff-DOC-001",
+                "required_fields": [
+                  "title",
+                  "date",
+                  "copies",
+                  "folder",
+                  "receiver_ack"
+                ]
+              }
+            ],
+            "initial_data": {
+              "title": "팀 회의자료",
+              "date": "11월 1일",
+              "copies": "1",
+              "folder": "인사자료"
+            },
+            "target_data": {
+              "title": "팀 회의자료",
+              "date": "11월 2일",
+              "copies": "current request 2 or changed 3",
+              "folder": "회의자료",
+              "receiver_ack": true
+            },
+            "commands": [
+              {
+                "name": "handoff",
+                "input_payload": {
+                  "title": "string",
+                  "date": "string",
+                  "copies": "integer",
+                  "folder": "string",
+                  "acknowledgement": true
+                },
+                "prerequisites": [
+                  "filed",
+                  "printed document/request revision current"
+                ],
+                "business_state_change": "complete only after all summary fields and receiver acknowledgement",
+                "idempotency_key": "run+handoff"
+              }
+            ],
+            "success_rules": [
+              "All four summary fields exact, correct actual printed ID/revisions/count and explicit simulated receiver acknowledgement.",
+              "Completion is emitted once; reopening complete objects is read-only."
+            ],
+            "error_feedback": {
+              "HANDOFF_MISMATCH": "Retain all entered fields and show missing/mismatched summary; do not complete scenario."
+            },
+            "visual_result": "Receiver acknowledgement and five completed workflow checks visible; one scenario.completed event.",
+            "next_object": null,
+            "prerequisites": [
+              "filed"
+            ],
+            "retry_policy": "Correct retained values and resubmit; retry_count only on a new actual submission after preceding failed attempt under same request revision.",
+            "draft_persistence": "Session, including close/reopen and in-memory room navigation; not playable refresh recovery.",
+            "request_change": {
+              "trigger": "First successful save in changed-request practice only",
+              "fields": {
+                "copies": 3
+              },
+              "revision": "requestRevision increments once; previous confirmation invalidated",
+              "reconfirm": "Ask document/copies/folder and confirm current request. Existing correct saved document remains saved. First submission under new request is not a retry or mistake."
+            },
+            "handoff": {
+              "required_step": "handoff",
+              "object_id": "cabinet",
+              "fields": [
+                "title",
+                "date",
+                "copies",
+                "folder"
+              ],
+              "receiver_ack": true
+            },
+            "reset": {
+              "confirmed": true,
+              "cancel_previous_print": true,
+              "new_run_id": true,
+              "preserve_previous_ledger": true,
+              "reset_drafts_and_settings": true,
+              "late_completion_policy": "Ended blocks Tick; Reset clears prior elapsed printing state before next Tick, preventing old job completion in the fresh run."
+            },
+            "implementation_status": "implemented_verified_scope",
+            "verification": {
+              "status": "pass",
+              "build_id": "workplaces-v006",
+              "checked_at": "2026-10-30T22:23:41.705Z",
+              "environment": "Actual HTTP Unity WebGL Chrome Windows SwiftShader",
+              "evidence": "docs/machine/evidence/workplaces-v006/office-direct-http-acceptance.json",
+              "cases": [
+                "actual_handoff_fields_and_completion_reopen_idempotence",
+                "correct_mouse_drag_three_copy_handoff_and_guided_context"
+              ],
+              "native_editor_workflow_ui": "unverified"
+            }
+          }
+        }
+      ],
+      "special_variants": [
+        {
+          "type_id": "EX-008",
+          "version": "v001",
+          "mode": "base_required",
+          "trigger": "보관 뒤 전달",
+          "required_outcome": "인계 필드와 상대 확인 충족"
+        },
+        {
+          "type_id": "EX-007",
+          "version": "v001",
+          "mode": "optional_branch_required_in_first_implementation",
+          "trigger": "document_saved 상태에서 출력 전 1회 요청 변경",
+          "change": {
+            "copies": 3,
+            "request_revision_increment": 1
+          },
+          "invalidates": [
+            "request_confirmation",
+            "previous_print_intent"
+          ],
+          "required_outcome": "모니터에서 재확인 뒤 최신 revision 3부 출력"
+        },
+        {
+          "type_id": "EX-010",
+          "version": "v001",
+          "mode": "optional_practice_not_required_for_first_implementation",
+          "trigger": "출력 전 잘못 수정한 문서 발견",
+          "required_outcome": "올바른 이력 상태를 새 revision으로 복원",
+          "implementation_status": "not_implemented"
+        }
+      ],
+      "feedback": [
+        "요청 확인",
+        "문서 정확성",
+        "출력 조건",
+        "분류·인계"
+      ],
+      "acceptance_cases": [
+        "정상 2부 경로",
+        "날짜 오류",
+        "잘못된 부수",
+        "잘못된 분류",
+        "순서 위반",
+        "요청 변경 후 3부",
+        "출력 중 반복 클릭",
+        "완료 후 반복 클릭",
+        "전체 초기화"
+      ],
+      "actual_usage_refs": [
+        {
+          "catalog": "asset-usages",
+          "usage_id": "use-workplaces-pan-001-ast-005-v001-scene",
+          "revision": 9,
+          "asset_ref": {
+            "asset_id": "AST-005",
+            "version": "v001"
+          },
+          "interactive_instance_id": "Office_AST-020_v006/AST-005-0",
+          "note": "Scene has2monitor instances; only AST-005-0 is interactive, AST-005-1 remains background."
+        },
+        {
+          "catalog": "asset-usages",
+          "usage_id": "use-workplaces-pan-001-ast-009-v001-scene",
+          "revision": 9,
+          "asset_ref": {
+            "asset_id": "AST-009",
+            "version": "v001"
+          },
+          "interactive_instance_id": "Office_AST-020_v006/AST-009-0",
+          "note": "One scene instance bound to this interaction."
+        },
+        {
+          "catalog": "asset-usages",
+          "usage_id": "use-workplaces-pan-001-ast-015-v001-scene",
+          "revision": 9,
+          "asset_ref": {
+            "asset_id": "AST-015",
+            "version": "v001"
+          },
+          "interactive_instance_id": "Office_AST-020_v006/AST-015-0",
+          "note": "One scene instance bound to this interaction."
+        }
+      ],
+      "actual_usage_status": "existing_ledger_refs_bound_and_http_webgl_verified",
+      "supersedes": {
+        "catalog": "career-experience-scenarios-v002",
+        "scenario_id": "career-net-253-office-documents",
+        "version": "v001"
+      },
+      "review_note": "Original pending_user_approval semantic review preserved. User 71-room production delegation explicitly includes improving the existing office representative; no other occupation or alternative is approved.",
+      "interaction_flow": {
+        "mode": "object_closeup_direct_work",
+        "view_states": [
+          "exploring",
+          "focusing",
+          "working",
+          "returning",
+          "paused"
+        ],
+        "transition_seconds": 0.45,
+        "easing": "ease_in_out_smoothstep",
+        "drag_threshold_px": 8,
+        "reduced_motion": "Inspector reducedMotion or in-game intro/pause button 화면 움직임 줄이기: 켜짐/꺼짐; when enabled the original selection/restore transition completes immediately. Kept across same-run room leave/return.",
+        "camera_restore_fields": [
+          "position",
+          "rotation",
+          "fieldOfView",
+          "viewport",
+          "renderer_visibility",
+          "input_mode",
+          "selected_object"
+        ],
+        "input_lock_policy": "Block room pick/orbit/zoom while surface open and all work commands while transition/paused/ended. Field typing does not activate global P/R/digits/arrows.",
+        "close_policy": "Esc/close retains unsaved document draft, selected file/revision, copies, classification, handoff draft; cancel transient gesture only; restore original camera/background.",
+        "pause_policy": "Explicit pause freezes printing and active-time measurement. Work-surface close/Esc inside PAN-001 keeps the started print timer running. Navigating from PAN-001 to another room suspends the office run and its print timer; returning to PAN-001 resumes the same in-memory run from the retained elapsed print time. Focus loss cancels transient gestures and excludes active measurement, without creating termination.",
+        "reset_policy": "Confirm path reset, terminalize unfinished prior run with USER_RESET, preserve ledger/summary, reset Session printing state, assign a fresh scenarioRunId, clear UI drafts/camera/focus. After an ended experience, new local practice creates a new experienceId.",
+        "persistence_scope": "session; in-memory across room changes. Refresh retains original received records/checkpoint only, not playable workflow restoration.",
+        "transition_configuration": {
+          "storage": "Serialized Unity component data",
+          "component": "OfficeDirectExperience",
+          "field": "transitionSeconds",
+          "default_seconds": 0.45,
+          "invalid_value_fallback_seconds": 0.45,
+          "clamp_seconds": [
+            0.05,
+            5
+          ],
+          "inspector_path": "Assets/Scenes/OfficeAssistantDirect.unity / OfficeExperience / OfficeDirectExperience / Transition Seconds"
+        },
+        "scene_leave_policy": {
+          "from_room_id": "PAN-001",
+          "when_navigating_elsewhere": "Pause OfficeSession and print timer; retain elapsed print time, drafts/settings, run ID and reduced-motion preference.",
+          "when_returning": "Resume same in-memory run and continue retained print timer.",
+          "different_from_work_surface_close": "Closing the monitor/copier/cabinet work surface while staying in the office keeps printing active.",
+          "verification": {
+            "path": "docs/machine/evidence/workplaces-v006/office-direct-http-acceptance.json",
+            "case": "copier_settings_retained_and_print_room_leave_freezes_time"
+          }
+        }
+      },
+      "protocol": {
+        "version": "v001",
+        "room_id": "PAN-001",
+        "scene_id": "PAN-001",
+        "supported_controls": [
+          "start_experience",
+          "end_experience"
+        ],
+        "transport_event": "career-experience:event",
+        "iframe_channel": "career-experience",
+        "scenario_version": "v002",
+        "actions": [
+          "ask_document",
+          "ask_copies",
+          "ask_folder",
+          "confirm",
+          "edit_document",
+          "save",
+          "print",
+          "file",
+          "handoff"
+        ],
+        "reason_codes": [
+          "TITLE_MISMATCH",
+          "DATE_MISMATCH",
+          "DOCUMENT_REVISION_MISMATCH",
+          "COPY_COUNT_MISMATCH",
+          "WRONG_CLASSIFICATION",
+          "HANDOFF_MISMATCH",
+          "MISSING_REQUEST_INFORMATION",
+          "SEQUENCE_VIOLATION",
+          "REQUEST_CHANGED",
+          "USER_RECHECK",
+          "USER_ABORTED",
+          "USER_EXITED_BEFORE_START",
+          "USER_RESET"
+        ],
+        "terminal_scope": "interaction completion differs from scenario completion; end aggregates current run and retains prior resets separately.",
+        "run_history": "unique events; counters derived once in Unity; reset preserves previous run; replay same event IDs; request retry same cached response.",
+        "interruption": "checkpoint and original received history retained; unknown forced/disconnected exits not fabricated as user abort."
+      },
+      "runtime_verification": {
+        "build_id": "workplaces-v006",
+        "checked_at": "2026-10-30T22:23:41.705Z",
+        "environment": "Actual Unity WebGL HTTP Chrome Windows SwiftShader + bundled React dist-v006; real mouse/keyboard/Unicode char/touch events",
+        "status": "pass_verified_scope",
+        "actual_pass_cases": 19,
+        "product_failures": 0,
+        "harness_observations": 3,
+        "raw_failed_records_preserved": true,
+        "evidence": [
+          "docs/machine/evidence/workplaces-v006/office-direct-http-acceptance.json",
+          "docs/machine/evidence/workplaces-v006/office-completed-events.json",
+          "docs/machine/evidence/workplaces-v006/office-changed-guided-events.json",
+          "docs/machine/evidence/workplaces-v006/reset-during-print-events.json",
+          "docs/machine/evidence/workplaces-v006/office-aborted-events.json",
+          "docs/machine/evidence/workplaces-v006/receiver-unconfirmed-retry-events.json",
+          "docs/machine/evidence/workplaces-v006/receiver-reload-interruption.json"
+        ],
+        "unity_editor_scope": {
+          "status": "scene_load_pass_workflow_ui_unverified",
+          "evidence": "docs/machine/evidence/workplaces-v006/unity-editor-play-rooms.json",
+          "note": "Native actual71 scene loads/geometry/colliders/texture passed; direct workflow GUI not exercised natively in this evidence."
+        },
+        "excluded_optional": [
+          {
+            "type_id": "EX-010",
+            "mode": "optional_practice_not_required_for_first_implementation",
+            "implementation_status": "not_implemented"
+          }
+        ],
+        "limitations": [
+          "Chrome Windows SwiftShader actual HTTP, not physical mobile hardware or Firefox/Safari.",
+          "Nondefault Inspector transition durations and OS-level focus loss not separately exercised; default.45, normal focusing and visible reduced-motion instant path tested.",
+          "Reload restores records/checkpoint only, not playable workflow."
+        ]
+      }
+    }
+  ],
+  "remaining_occupation_ids": [
+    "career-net-1092",
+    "career-net-10077",
+    "career-net-354",
+    "career-net-198",
+    "career-net-10043",
+    "career-net-1277",
+    "career-net-10020",
+    "career-net-923",
+    "career-net-358",
+    "career-net-202",
+    "career-net-203",
+    "career-net-469",
+    "career-net-10080",
+    "career-net-207",
+    "career-net-232",
+    "career-net-283",
+    "career-net-285",
+    "career-net-10054",
+    "career-net-10078",
+    "career-net-208",
+    "career-net-209",
+    "career-net-1061",
+    "career-net-238",
+    "career-net-247",
+    "career-net-205",
+    "career-net-59",
+    "career-net-10075",
+    "career-net-1132",
+    "career-net-10118",
+    "career-net-10051",
+    "career-net-431",
+    "career-net-10004",
+    "career-net-10046",
+    "career-net-10022",
+    "career-net-10019",
+    "career-net-10115",
+    "career-net-366",
+    "career-net-1068",
+    "career-net-1134",
+    "career-net-10101",
+    "career-net-10076",
+    "career-net-10023",
+    "career-net-215",
+    "career-net-155",
+    "career-net-10018",
+    "career-net-1433",
+    "career-net-372",
+    "career-net-267",
+    "career-net-252",
+    "career-net-373",
+    "career-net-1432",
+    "career-net-374",
+    "career-net-375",
+    "career-net-219",
+    "career-net-10029",
+    "career-net-10067",
+    "career-net-10032",
+    "career-net-10034",
+    "career-net-462",
+    "career-net-976",
+    "career-net-10053",
+    "career-net-85",
+    "career-net-87",
+    "career-net-223",
+    "career-net-165",
+    "career-net-224",
+    "career-net-459",
+    "career-net-10040",
+    "career-net-226",
+    "career-net-17",
+    "career-net-10025",
+    "career-net-10028",
+    "career-net-10112",
+    "career-net-10015",
+    "career-net-1088",
+    "career-net-834",
+    "career-net-440",
+    "career-net-230",
+    "career-net-162",
+    "career-net-98",
+    "career-net-10116",
+    "career-net-1101",
+    "career-net-231",
+    "career-net-10027",
+    "career-net-20",
+    "career-net-475",
+    "career-net-474",
+    "career-net-23",
+    "career-net-10110",
+    "career-net-10016",
+    "career-net-626",
+    "career-net-101",
+    "career-net-233",
+    "career-net-104",
+    "career-net-444",
+    "career-net-10052",
+    "career-net-1096",
+    "career-net-1108",
+    "career-net-1133",
+    "career-net-24",
+    "career-net-255",
+    "career-net-917",
+    "career-net-467",
+    "career-net-325",
+    "career-net-10117",
+    "career-net-326",
+    "career-net-362",
+    "career-net-1158",
+    "career-net-1102",
+    "career-net-10055",
+    "career-net-10045",
+    "career-net-1145",
+    "career-net-378",
+    "career-net-119",
+    "career-net-470",
+    "career-net-1131",
+    "career-net-404",
+    "career-net-122",
+    "career-net-435",
+    "career-net-938",
+    "career-net-452",
+    "career-net-269",
+    "career-net-193",
+    "career-net-1120",
+    "career-net-239",
+    "career-net-10050",
+    "career-net-409",
+    "career-net-10079",
+    "career-net-131",
+    "career-net-356",
+    "career-net-1117",
+    "career-net-338",
+    "career-net-926",
+    "career-net-32",
+    "career-net-278",
+    "career-net-125",
+    "career-net-458",
+    "career-net-466",
+    "career-net-1090",
+    "career-net-10031",
+    "career-net-371",
+    "career-net-426",
+    "career-net-242",
+    "career-net-997",
+    "career-net-950",
+    "career-net-10059",
+    "career-net-10111",
+    "career-net-37",
+    "career-net-10017",
+    "career-net-1081",
+    "career-net-39",
+    "career-net-951",
+    "career-net-1278",
+    "career-net-1105",
+    "career-net-1279",
+    "career-net-952",
+    "career-net-40",
+    "career-net-1004",
+    "career-net-1009",
+    "career-net-994",
+    "career-net-206",
+    "career-net-258",
+    "career-net-450",
+    "career-net-1093",
+    "career-net-10102",
+    "career-net-10103",
+    "career-net-42",
+    "career-net-10006",
+    "career-net-1103",
+    "career-net-53",
+    "career-net-56",
+    "career-net-6",
+    "career-net-10026",
+    "career-net-61",
+    "career-net-1282",
+    "career-net-10030",
+    "career-net-10038",
+    "career-net-66",
+    "career-net-10049",
+    "career-net-299",
+    "career-net-8",
+    "career-net-1010",
+    "career-net-10035",
+    "career-net-934",
+    "career-net-933",
+    "career-net-10037",
+    "career-net-86",
+    "career-net-13",
+    "career-net-10036",
+    "career-net-57",
+    "career-net-539",
+    "career-net-15",
+    "career-net-1255",
+    "career-net-10005",
+    "career-net-10009",
+    "career-net-10066",
+    "career-net-10047",
+    "career-net-1436",
+    "career-net-272",
+    "career-net-995",
+    "career-net-273",
+    "career-net-169",
+    "career-net-10114",
+    "career-net-963",
+    "career-net-10061",
+    "career-net-10104",
+    "career-net-10014",
+    "career-net-19",
+    "career-net-107",
+    "career-net-5",
+    "career-net-941",
+    "career-net-1076",
+    "career-net-1541",
+    "career-net-90",
+    "career-net-334",
+    "career-net-10113",
+    "career-net-29",
+    "career-net-30",
+    "career-net-31",
+    "career-net-1104",
+    "career-net-948",
+    "career-net-36",
+    "career-net-138",
+    "career-net-465",
+    "career-net-429",
+    "career-net-151",
+    "career-net-38",
+    "career-net-10024",
+    "career-net-195",
+    "career-net-1006",
+    "career-net-10002",
+    "career-net-1080",
+    "career-net-1281",
+    "career-net-353",
+    "career-net-355",
+    "career-net-10044",
+    "career-net-10011",
+    "career-net-10013",
+    "career-net-369",
+    "career-net-319",
+    "career-net-10",
+    "career-net-1257",
+    "career-net-256",
+    "career-net-166",
+    "career-net-385",
+    "career-net-10048",
+    "career-net-21",
+    "career-net-1107",
+    "career-net-10060",
+    "career-net-386",
+    "career-net-10010",
+    "career-net-397",
+    "career-net-1440",
+    "career-net-398",
+    "career-net-401",
+    "career-net-403",
+    "career-net-25",
+    "career-net-1128",
+    "career-net-179",
+    "career-net-33",
+    "career-net-411",
+    "career-net-34",
+    "career-net-416",
+    "career-net-10062",
+    "career-net-10012",
+    "career-net-428",
+    "career-net-481",
+    "career-net-1140",
+    "career-net-365",
+    "career-net-1259",
+    "career-net-376",
+    "career-net-1138",
+    "career-net-421",
+    "career-net-10065",
+    "career-net-322",
+    "career-net-443",
+    "career-net-395",
+    "career-net-1431",
+    "career-net-1142",
+    "career-net-364",
+    "career-net-406",
+    "career-net-988",
+    "career-net-327",
+    "career-net-1089",
+    "career-net-114",
+    "career-net-1137",
+    "career-net-410",
+    "career-net-337",
+    "career-net-413",
+    "career-net-345",
+    "career-net-957",
+    "career-net-1106",
+    "career-net-417",
+    "career-net-175",
+    "career-net-1136",
+    "career-net-10069",
+    "career-net-10042",
+    "career-net-379",
+    "career-net-380",
+    "career-net-396",
+    "career-net-10056",
+    "career-net-408",
+    "career-net-1256",
+    "career-net-10058",
+    "career-net-10001",
+    "career-net-159",
+    "career-net-1152",
+    "career-net-77",
+    "career-net-1135",
+    "career-net-985",
+    "career-net-48",
+    "career-net-740",
+    "career-net-52",
+    "career-net-54",
+    "career-net-10109",
+    "career-net-430",
+    "career-net-126",
+    "career-net-1139",
+    "career-net-1078",
+    "career-net-1141",
+    "career-net-64",
+    "career-net-10107",
+    "career-net-68",
+    "career-net-69",
+    "career-net-476",
+    "career-net-214",
+    "career-net-157",
+    "career-net-1144",
+    "career-net-10108",
+    "career-net-311",
+    "career-net-83",
+    "career-net-84",
+    "career-net-88",
+    "career-net-73",
+    "career-net-937",
+    "career-net-97",
+    "career-net-1150",
+    "career-net-347",
+    "career-net-318",
+    "career-net-100",
+    "career-net-164",
+    "career-net-928",
+    "career-net-102",
+    "career-net-106",
+    "career-net-190",
+    "career-net-1149",
+    "career-net-1143",
+    "career-net-108",
+    "career-net-236",
+    "career-net-109",
+    "career-net-110",
+    "career-net-112",
+    "career-net-145",
+    "career-net-113",
+    "career-net-1146",
+    "career-net-1087",
+    "career-net-171",
+    "career-net-50",
+    "career-net-1151",
+    "career-net-127",
+    "career-net-1111",
+    "career-net-129",
+    "career-net-133",
+    "career-net-47",
+    "career-net-143",
+    "career-net-295",
+    "career-net-144",
+    "career-net-1153",
+    "career-net-147",
+    "career-net-149",
+    "career-net-153",
+    "career-net-10068",
+    "career-net-1116",
+    "career-net-183",
+    "career-net-49",
+    "career-net-1119",
+    "career-net-288",
+    "career-net-211",
+    "career-net-163",
+    "career-net-70",
+    "career-net-76",
+    "career-net-243",
+    "career-net-1114",
+    "career-net-201",
+    "career-net-10041",
+    "career-net-1115",
+    "career-net-946",
+    "career-net-419",
+    "career-net-180",
+    "career-net-370",
+    "career-net-167",
+    "career-net-1129",
+    "career-net-1127",
+    "career-net-172",
+    "career-net-173",
+    "career-net-177",
+    "career-net-795",
+    "career-net-10003",
+    "career-net-284",
+    "career-net-929",
+    "career-net-260",
+    "career-net-261",
+    "career-net-266",
+    "career-net-291",
+    "career-net-305",
+    "career-net-927",
+    "career-net-310",
+    "career-net-973",
+    "career-net-968",
+    "career-net-922",
+    "career-net-914",
+    "career-net-10072",
+    "career-net-1441",
+    "career-net-332",
+    "career-net-339",
+    "career-net-340",
+    "career-net-457",
+    "career-net-344",
+    "career-net-316",
+    "career-net-349",
+    "career-net-281",
+    "career-net-10021",
+    "career-net-262",
+    "career-net-10071",
+    "career-net-10039",
+    "career-net-265",
+    "career-net-293",
+    "career-net-10070",
+    "career-net-1122",
+    "career-net-301",
+    "career-net-1147",
+    "career-net-306",
+    "career-net-309",
+    "career-net-975",
+    "career-net-270",
+    "career-net-178",
+    "career-net-1437",
+    "career-net-271",
+    "career-net-966",
+    "career-net-920",
+    "career-net-441",
+    "career-net-303",
+    "career-net-321",
+    "career-net-323",
+    "career-net-915",
+    "career-net-1121",
+    "career-net-911",
+    "career-net-1439",
+    "career-net-1148",
+    "career-net-139",
+    "career-net-916",
+    "career-net-346",
+    "career-net-280",
+    "career-net-286",
+    "career-net-294",
+    "career-net-296",
+    "career-net-298",
+    "career-net-304",
+    "career-net-268",
+    "career-net-1109",
+    "career-net-313",
+    "career-net-314",
+    "career-net-320",
+    "career-net-317",
+    "career-net-427",
+    "career-net-328",
+    "career-net-333",
+    "career-net-335",
+    "career-net-1276",
+    "career-net-348",
+    "career-net-1124",
+    "career-net-65",
+    "career-net-1130",
+    "career-net-46",
+    "career-net-63",
+    "career-net-212",
+    "career-net-72",
+    "career-net-74",
+    "career-net-978",
+    "career-net-1007",
+    "career-net-192",
+    "career-net-75",
+    "career-net-592",
+    "career-net-137",
+    "career-net-140",
+    "career-net-1",
+    "career-net-360",
+    "career-net-1118",
+    "career-net-81",
+    "career-net-383",
+    "career-net-1156",
+    "career-net-10105",
+    "career-net-174",
+    "career-net-1155",
+    "career-net-182",
+    "career-net-186",
+    "career-net-10008",
+    "career-net-10106",
+    "career-net-10073",
+    "career-net-187",
+    "career-net-10007",
+    "career-net-1154",
+    "career-net-954",
+    "career-net-58",
+    "career-net-1110",
+    "career-net-1125",
+    "career-net-1112",
+    "career-net-92",
+    "career-net-176",
+    "career-net-189",
+    "career-net-1157",
+    "career-net-392",
+    "career-net-400",
+    "career-net-391",
+    "career-net-336",
+    "career-net-1126",
+    "career-net-1438",
+    "career-net-412",
+    "career-net-1097",
+    "career-net-415",
+    "career-net-199",
+    "career-net-359",
+    "career-net-363",
+    "career-net-10064",
+    "career-net-10074",
+    "career-net-10057",
+    "career-net-414",
+    "career-net-418",
+    "career-net-150",
+    "career-net-390",
+    "career-net-132",
+    "career-net-142",
+    "career-net-244",
+    "career-net-217",
+    "career-net-222",
+    "career-net-234",
+    "career-net-240",
+    "career-net-10033",
+    "career-net-41",
+    "career-net-148",
+    "career-net-352",
+    "career-net-1113",
+    "career-net-120",
+    "career-net-121",
+    "career-net-405",
+    "career-net-384",
+    "career-net-1100",
+    "career-net-407",
+    "career-net-10063",
+    "career-net-388",
+    "career-net-264"
+  ],
+  "usage_measurement": {
+    "mesh_calls": 0,
+    "meshy_credits_used": 0,
+    "image_generation_calls": 0,
+    "tokens": null,
+    "tokens_note": "Runtime does not expose task token measurements."
+  }
+}

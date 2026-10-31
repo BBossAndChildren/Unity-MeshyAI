@@ -1,0 +1,6011 @@
+{
+  "schema_version": 3,
+  "package_id": "career-additional-b-casework",
+  "version": "v001",
+  "document_path": "docs/human/jobs/career-additional-b-casework-v001.md",
+  "runtime_source_path": "unity/projects/OfficeAssistant-v001/Assets/Resources/career-additional-b-content.json",
+  "status": "source_authored_professional_review_pending",
+  "cases": [
+    {
+      "id": "1140",
+      "title": "도장 의뢰의 도막 시편 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "시편",
+          "initial": "",
+          "target": "철제명판"
+        },
+        {
+          "id": "field1",
+          "label": "요청색",
+          "initial": "",
+          "target": "청록"
+        },
+        {
+          "id": "field2",
+          "label": "수량",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "표면 확인>1 준비;모형 도장>2 적용;도막 기록>3 확인",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "완성시편",
+          "initial": "",
+          "target": "3"
+        },
+        {
+          "id": "field1",
+          "label": "검사항목",
+          "initial": "",
+          "target": "색상일치"
+        }
+      ]
+    },
+    {
+      "id": "1141",
+      "title": "도금 시편의 접수·검사 분류",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "시편",
+          "initial": "",
+          "target": "황동고리"
+        },
+        {
+          "id": "field1",
+          "label": "요청표면",
+          "initial": "",
+          "target": "은색모형"
+        },
+        {
+          "id": "field2",
+          "label": "수량",
+          "initial": "",
+          "target": "6"
+        }
+      ],
+      "kind": "sort",
+      "operation": "표면 균일 시편>완료칸;표면 얼룩 시편>재확인칸;라벨 없는 시편>보류칸",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "완료기준",
+          "initial": "",
+          "target": "표면균일"
+        },
+        {
+          "id": "field1",
+          "label": "보류항목",
+          "initial": "",
+          "target": "라벨없음"
+        }
+      ]
+    },
+    {
+      "id": "1142",
+      "title": "소매 길이 수선 요청",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "의뢰품",
+          "initial": "",
+          "target": "셔츠"
+        },
+        {
+          "id": "field1",
+          "label": "수선부위",
+          "initial": "",
+          "target": "소매"
+        },
+        {
+          "id": "field2",
+          "label": "완성길이",
+          "initial": "",
+          "target": "58"
+        }
+      ],
+      "kind": "tune",
+      "operation": "소매길이,cm,40,70,65,58,0.1;좌우차이,cm,0,5,3,0,0.1",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "완성길이",
+          "initial": "",
+          "target": "58"
+        },
+        {
+          "id": "field1",
+          "label": "대조항목",
+          "initial": "",
+          "target": "좌우일치"
+        }
+      ]
+    },
+    {
+      "id": "1143",
+      "title": "의복 봉제 검사표",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "제품",
+          "initial": "",
+          "target": "자켓"
+        },
+        {
+          "id": "field1",
+          "label": "검사로트",
+          "initial": "",
+          "target": "J-23"
+        },
+        {
+          "id": "field2",
+          "label": "검사수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "솔기 정상>정상칸;단추 누락>보완칸;치수표 없음>확인대기칸",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "결함항목",
+          "initial": "",
+          "target": "단추누락"
+        },
+        {
+          "id": "field1",
+          "label": "보류사유",
+          "initial": "",
+          "target": "치수표없음"
+        }
+      ]
+    },
+    {
+      "id": "1144",
+      "title": "발전 모형 계기 대조",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "모형설비",
+          "initial": "",
+          "target": "발전기G2"
+        },
+        {
+          "id": "field1",
+          "label": "기록주기",
+          "initial": "",
+          "target": "10"
+        },
+        {
+          "id": "field2",
+          "label": "기록횟수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "tune",
+      "operation": "모형출력눈금,칸,0,10,1,6,0;기록간격,초,1,20,3,10,0",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "대조눈금",
+          "initial": "",
+          "target": "6"
+        },
+        {
+          "id": "field1",
+          "label": "기록간격",
+          "initial": "",
+          "target": "10"
+        }
+      ]
+    },
+    {
+      "id": "1145",
+      "title": "설비 작업 표시판 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "작업구역",
+          "initial": "",
+          "target": "분전반모형2"
+        },
+        {
+          "id": "field1",
+          "label": "상태",
+          "initial": "",
+          "target": "작업대기"
+        },
+        {
+          "id": "field2",
+          "label": "담당반",
+          "initial": "",
+          "target": "보전반"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "담당 확인>1 접수;상태표 대조>2 확인;모형 표지 부착>3 표시",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "표지문구",
+          "initial": "",
+          "target": "작업대기"
+        },
+        {
+          "id": "field1",
+          "label": "인계대상",
+          "initial": "",
+          "target": "보전반"
+        }
+      ]
+    },
+    {
+      "id": "1146",
+      "title": "전기 부품 생산 수량 대조",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "제품",
+          "initial": "",
+          "target": "스위치모형"
+        },
+        {
+          "id": "field1",
+          "label": "로트",
+          "initial": "",
+          "target": "SW-18"
+        },
+        {
+          "id": "field2",
+          "label": "요청수",
+          "initial": "",
+          "target": "12"
+        }
+      ],
+      "kind": "sort",
+      "operation": "라벨일치 부품>조립대기;라벨불일치 부품>재확인;외형파손 모형>격리칸",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "요청수",
+          "initial": "",
+          "target": "12"
+        },
+        {
+          "id": "field1",
+          "label": "격리기준",
+          "initial": "",
+          "target": "외형파손"
+        }
+      ]
+    },
+    {
+      "id": "1148",
+      "title": "통신장비 설치 위치도",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "장비",
+          "initial": "",
+          "target": "중계기모형"
+        },
+        {
+          "id": "field1",
+          "label": "설치위치",
+          "initial": "",
+          "target": "북측선반"
+        },
+        {
+          "id": "field2",
+          "label": "연결포트",
+          "initial": "",
+          "target": "P3"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "중계기 표식>북측선반;연결선 표식>P3포트;라벨 표식>장비식별칸",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "장비위치",
+          "initial": "",
+          "target": "북측선반"
+        },
+        {
+          "id": "field1",
+          "label": "포트",
+          "initial": "",
+          "target": "P3"
+        }
+      ]
+    },
+    {
+      "id": "1149",
+      "title": "음료 생산 로트 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "제품",
+          "initial": "",
+          "target": "사과음료모형"
+        },
+        {
+          "id": "field1",
+          "label": "배치",
+          "initial": "",
+          "target": "DR-07"
+        },
+        {
+          "id": "field2",
+          "label": "병수",
+          "initial": "",
+          "target": "24"
+        }
+      ],
+      "kind": "tune",
+      "operation": "모형충전눈금,칸,0,10,1,7,0;생산병수,개,0,30,10,24,0",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "생산병수",
+          "initial": "",
+          "target": "24"
+        },
+        {
+          "id": "field1",
+          "label": "로트",
+          "initial": "",
+          "target": "DR-07"
+        }
+      ]
+    },
+    {
+      "id": "1150",
+      "title": "가공식품 표시 검사",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "제품",
+          "initial": "",
+          "target": "곡물바"
+        },
+        {
+          "id": "field1",
+          "label": "표시버전",
+          "initial": "",
+          "target": "R3"
+        },
+        {
+          "id": "field2",
+          "label": "검사수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "R3표시 제품>정상칸;R2표시 제품>표시수정;날짜없는 제품>확인대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "사용표시",
+          "initial": "",
+          "target": "R3"
+        },
+        {
+          "id": "field1",
+          "label": "보류사유",
+          "initial": "",
+          "target": "날짜없음"
+        }
+      ]
+    },
+    {
+      "id": "1151",
+      "title": "종이 상자 규격 생산",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "품목",
+          "initial": "",
+          "target": "소형상자"
+        },
+        {
+          "id": "field1",
+          "label": "도면",
+          "initial": "",
+          "target": "BX-6"
+        },
+        {
+          "id": "field2",
+          "label": "길이",
+          "initial": "",
+          "target": "18"
+        }
+      ],
+      "kind": "tune",
+      "operation": "모형재단길이,cm,10,30,25,18,0.1;접는선위치,cm,1,10,8,4,0.1",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "도면",
+          "initial": "",
+          "target": "BX-6"
+        },
+        {
+          "id": "field1",
+          "label": "완성길이",
+          "initial": "",
+          "target": "18"
+        }
+      ]
+    },
+    {
+      "id": "1153",
+      "title": "출고 상자 포장 순서",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "주문",
+          "initial": "",
+          "target": "PK-41"
+        },
+        {
+          "id": "field1",
+          "label": "품목",
+          "initial": "",
+          "target": "유리모형컵"
+        },
+        {
+          "id": "field2",
+          "label": "수량",
+          "initial": "",
+          "target": "2"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "완충재 준비>1 바닥보호;컵모형 배치>2 물품배치;수량라벨 부착>3 마감",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "수량",
+          "initial": "",
+          "target": "2"
+        },
+        {
+          "id": "field1",
+          "label": "라벨",
+          "initial": "",
+          "target": "PK-41"
+        }
+      ]
+    },
+    {
+      "id": "1154",
+      "title": "채소 파종 구획 계획",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "작물",
+          "initial": "",
+          "target": "상추"
+        },
+        {
+          "id": "field1",
+          "label": "구획",
+          "initial": "",
+          "target": "동쪽밭"
+        },
+        {
+          "id": "field2",
+          "label": "모종수",
+          "initial": "",
+          "target": "12"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "상추모종4>첫째줄;상추모종4>둘째줄;상추모종4>셋째줄",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "구획",
+          "initial": "",
+          "target": "동쪽밭"
+        },
+        {
+          "id": "field1",
+          "label": "총모종수",
+          "initial": "",
+          "target": "12"
+        }
+      ]
+    },
+    {
+      "id": "1155",
+      "title": "과수 수확물 선별",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "작물",
+          "initial": "",
+          "target": "사과"
+        },
+        {
+          "id": "field1",
+          "label": "작업일",
+          "initial": "",
+          "target": "11월3일"
+        },
+        {
+          "id": "field2",
+          "label": "상자수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "표시규격 사과>출하칸;상처모형 사과>별도확인;라벨없는 상자>표시대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "출하기준",
+          "initial": "",
+          "target": "표시규격"
+        },
+        {
+          "id": "field1",
+          "label": "별도확인",
+          "initial": "",
+          "target": "상처모형"
+        }
+      ]
+    },
+    {
+      "id": "1156",
+      "title": "산림 조사 구획 기록",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "조사구획",
+          "initial": "",
+          "target": "숲3구역"
+        },
+        {
+          "id": "field1",
+          "label": "조사목",
+          "initial": "",
+          "target": "참나무"
+        },
+        {
+          "id": "field2",
+          "label": "표본수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "표식있는 나무>조사완료;표식없는 나무>추가조사;경계밖 나무>범위외",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "조사구획",
+          "initial": "",
+          "target": "숲3구역"
+        },
+        {
+          "id": "field1",
+          "label": "추가확인",
+          "initial": "",
+          "target": "표식없음"
+        }
+      ]
+    },
+    {
+      "id": "1157",
+      "title": "어획물 모형 분류",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "어획로트",
+          "initial": "",
+          "target": "F-27"
+        },
+        {
+          "id": "field1",
+          "label": "분류기준",
+          "initial": "",
+          "target": "종류표"
+        },
+        {
+          "id": "field2",
+          "label": "상자수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "고등어모형>고등어칸;오징어모형>오징어칸;미확인모형>확인대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "로트",
+          "initial": "",
+          "target": "F-27"
+        },
+        {
+          "id": "field1",
+          "label": "미확인처리",
+          "initial": "",
+          "target": "확인대기"
+        }
+      ]
+    },
+    {
+      "id": "1158",
+      "title": "로봇 조립 모형 순서",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "작업도면",
+          "initial": "",
+          "target": "RB-03"
+        },
+        {
+          "id": "field1",
+          "label": "완성품",
+          "initial": "",
+          "target": "연필받침"
+        },
+        {
+          "id": "field2",
+          "label": "부품수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "받침판>기준결합점;세로판>중앙결합점;마개>상단결합점",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "도면",
+          "initial": "",
+          "target": "RB-03"
+        },
+        {
+          "id": "field1",
+          "label": "부품수",
+          "initial": "",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "id": "120",
+      "title": "전자장비 점검 자료 대조",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "장비",
+          "initial": "",
+          "target": "계측기모형E5"
+        },
+        {
+          "id": "field1",
+          "label": "신고",
+          "initial": "",
+          "target": "표시불안정"
+        },
+        {
+          "id": "field2",
+          "label": "접수번호",
+          "initial": "",
+          "target": "E-15"
+        }
+      ],
+      "kind": "sort",
+      "operation": "회로도R2>참고자료;점검기록E5>현장기록;기종다른 부품표>재확인",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "사용회로도",
+          "initial": "",
+          "target": "R2"
+        },
+        {
+          "id": "field1",
+          "label": "추가확인",
+          "initial": "",
+          "target": "표시불안정"
+        }
+      ]
+    },
+    {
+      "id": "121",
+      "title": "전화 이전 설치 의뢰",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "접수",
+          "initial": "",
+          "target": "TEL-31"
+        },
+        {
+          "id": "field1",
+          "label": "이전장소",
+          "initial": "",
+          "target": "회의실B"
+        },
+        {
+          "id": "field2",
+          "label": "내선",
+          "initial": "",
+          "target": "207"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "전화모형>회의실B;통신선표식>207단자;이름표>회의실B표시",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "내선",
+          "initial": "",
+          "target": "207"
+        },
+        {
+          "id": "field1",
+          "label": "이전장소",
+          "initial": "",
+          "target": "회의실B"
+        }
+      ]
+    },
+    {
+      "id": "122",
+      "title": "정밀 부품 조립 모형",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "제품",
+          "initial": "",
+          "target": "기계식타이머모형"
+        },
+        {
+          "id": "field1",
+          "label": "도면",
+          "initial": "",
+          "target": "TM-4"
+        },
+        {
+          "id": "field2",
+          "label": "부품수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "기준축>중앙결합점;톱니모형>좌측결합점;표시판>전면결합점",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "도면",
+          "initial": "",
+          "target": "TM-4"
+        },
+        {
+          "id": "field1",
+          "label": "검사항목",
+          "initial": "",
+          "target": "표시판방향"
+        }
+      ]
+    },
+    {
+      "id": "125",
+      "title": "캐드 도면 치수 대조",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "도면",
+          "initial": "",
+          "target": "선반평면"
+        },
+        {
+          "id": "field1",
+          "label": "단위",
+          "initial": "",
+          "target": "mm"
+        },
+        {
+          "id": "field2",
+          "label": "개정",
+          "initial": "",
+          "target": "R2"
+        }
+      ],
+      "kind": "tune",
+      "operation": "가로치수,mm,100,500,250,400,0;세로치수,mm,100,400,200,300,0",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "가로",
+          "initial": "",
+          "target": "400"
+        },
+        {
+          "id": "field1",
+          "label": "세로",
+          "initial": "",
+          "target": "300"
+        }
+      ]
+    },
+    {
+      "id": "1255",
+      "title": "하천 시료의 기록 분류",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "조사지점",
+          "initial": "",
+          "target": "북천다리"
+        },
+        {
+          "id": "field1",
+          "label": "시료로트",
+          "initial": "",
+          "target": "W-12"
+        },
+        {
+          "id": "field2",
+          "label": "채취시각",
+          "initial": "",
+          "target": "10:20"
+        }
+      ],
+      "kind": "sort",
+      "operation": "W12상류시료>상류칸;W12하류시료>하류칸;라벨없는 시료>재확인",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "채취시각",
+          "initial": "",
+          "target": "10:20"
+        },
+        {
+          "id": "field1",
+          "label": "미확인항목",
+          "initial": "",
+          "target": "라벨"
+        }
+      ]
+    },
+    {
+      "id": "1256",
+      "title": "가상 만남 일정 조율",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "접수",
+          "initial": "",
+          "target": "MEET-8"
+        },
+        {
+          "id": "field1",
+          "label": "희망장소",
+          "initial": "",
+          "target": "북카페"
+        },
+        {
+          "id": "field2",
+          "label": "희망시각",
+          "initial": "",
+          "target": "14:00"
+        }
+      ],
+      "kind": "schedule",
+      "operation": "상담확인13:00>1 상담;일정확인13:30>2 조율;만남예약14:00>3 예약",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "예약장소",
+          "initial": "",
+          "target": "북카페"
+        },
+        {
+          "id": "field1",
+          "label": "예약시각",
+          "initial": "",
+          "target": "14:00"
+        }
+      ]
+    },
+    {
+      "id": "1259",
+      "title": "소도구 마술 공연 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "공연",
+          "initial": "",
+          "target": "카드이야기"
+        },
+        {
+          "id": "field1",
+          "label": "소도구",
+          "initial": "",
+          "target": "모형카드"
+        },
+        {
+          "id": "field2",
+          "label": "공연시각",
+          "initial": "",
+          "target": "15:00"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "도구수량 확인>1 준비;입장동선 점검>2 리허설;시작큐 대기>3 공연준비",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "소도구",
+          "initial": "",
+          "target": "모형카드"
+        },
+        {
+          "id": "field1",
+          "label": "시작큐",
+          "initial": "",
+          "target": "15:00"
+        }
+      ]
+    },
+    {
+      "id": "126",
+      "title": "작업장 물품 운반 분류",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "이동지",
+          "initial": "",
+          "target": "동측보관대"
+        },
+        {
+          "id": "field1",
+          "label": "상자수",
+          "initial": "",
+          "target": "3"
+        },
+        {
+          "id": "field2",
+          "label": "작업표",
+          "initial": "",
+          "target": "MV-04"
+        }
+      ],
+      "kind": "sort",
+      "operation": "공구상자>공구칸;자재상자>자재칸;빈상자>회수칸",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "작업표",
+          "initial": "",
+          "target": "MV-04"
+        },
+        {
+          "id": "field1",
+          "label": "도착지",
+          "initial": "",
+          "target": "동측보관대"
+        }
+      ]
+    },
+    {
+      "id": "127",
+      "title": "주조 모형의 형틀 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "모형제품",
+          "initial": "",
+          "target": "손잡이"
+        },
+        {
+          "id": "field1",
+          "label": "형틀",
+          "initial": "",
+          "target": "MD-6"
+        },
+        {
+          "id": "field2",
+          "label": "수량",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "형틀왼쪽>좌측결합점;형틀오른쪽>우측결합점;제품표시>중앙표시점",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "형틀",
+          "initial": "",
+          "target": "MD-6"
+        },
+        {
+          "id": "field1",
+          "label": "수량",
+          "initial": "",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "id": "1276",
+      "title": "생일 파티 운영 시간표",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "행사",
+          "initial": "",
+          "target": "책친구파티"
+        },
+        {
+          "id": "field1",
+          "label": "참가자",
+          "initial": "",
+          "target": "12"
+        },
+        {
+          "id": "field2",
+          "label": "시작",
+          "initial": "",
+          "target": "16:00"
+        }
+      ],
+      "kind": "schedule",
+      "operation": "맞이16:00>1 입장;책놀이16:20>2 활동;마무리17:00>3 정리",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "행사",
+          "initial": "",
+          "target": "책친구파티"
+        },
+        {
+          "id": "field1",
+          "label": "종료",
+          "initial": "",
+          "target": "17:00"
+        }
+      ]
+    },
+    {
+      "id": "1278",
+      "title": "지역 사업 집행 일정",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "사업",
+          "initial": "",
+          "target": "공원안내판개선"
+        },
+        {
+          "id": "field1",
+          "label": "접수부서",
+          "initial": "",
+          "target": "녹지과"
+        },
+        {
+          "id": "field2",
+          "label": "검토일",
+          "initial": "",
+          "target": "11월8일"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "현황자료 확인>1 조사;부서의견 대조>2 협의;집행안 인계>3 보고",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "담당부서",
+          "initial": "",
+          "target": "녹지과"
+        },
+        {
+          "id": "field1",
+          "label": "검토일",
+          "initial": "",
+          "target": "11월8일"
+        }
+      ]
+    },
+    {
+      "id": "1279",
+      "title": "가상 채용 의뢰 자료 정리",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "의뢰직무",
+          "initial": "",
+          "target": "도서관리"
+        },
+        {
+          "id": "field1",
+          "label": "필수조건",
+          "initial": "",
+          "target": "분류경험"
+        },
+        {
+          "id": "field2",
+          "label": "제출일",
+          "initial": "",
+          "target": "11월9일"
+        }
+      ],
+      "kind": "sort",
+      "operation": "직무경험자료>경력근거;직무요구문서>의뢰조건;확인안된 소문>사용보류",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "추천자료범위",
+          "initial": "",
+          "target": "직무경험"
+        },
+        {
+          "id": "field1",
+          "label": "사용보류",
+          "initial": "",
+          "target": "미확인소문"
+        }
+      ]
+    },
+    {
+      "id": "1281",
+      "title": "공원 공사 영향 자료",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "사업",
+          "initial": "",
+          "target": "산책로정비"
+        },
+        {
+          "id": "field1",
+          "label": "조사지점",
+          "initial": "",
+          "target": "하천변"
+        },
+        {
+          "id": "field2",
+          "label": "조사항목",
+          "initial": "",
+          "target": "소음"
+        }
+      ],
+      "kind": "sort",
+      "operation": "현장소음기록>관측자료;주민설명메모>의견자료;출처없는 수치>확인대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "관측항목",
+          "initial": "",
+          "target": "소음"
+        },
+        {
+          "id": "field1",
+          "label": "확인대기",
+          "initial": "",
+          "target": "출처없는수치"
+        }
+      ]
+    },
+    {
+      "id": "1282",
+      "title": "대체에너지 모형 비교",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "비교대상",
+          "initial": "",
+          "target": "태양광모형"
+        },
+        {
+          "id": "field1",
+          "label": "시험번호",
+          "initial": "",
+          "target": "SOL-7"
+        },
+        {
+          "id": "field2",
+          "label": "측정횟수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "tune",
+      "operation": "모형각도,도,0,90,15,45,1;기록간격,초,1,20,2,10,0",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "모형각도",
+          "initial": "",
+          "target": "45"
+        },
+        {
+          "id": "field1",
+          "label": "기록횟수",
+          "initial": "",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "id": "129",
+      "title": "직물 패턴 생산 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "직물",
+          "initial": "",
+          "target": "줄무늬면"
+        },
+        {
+          "id": "field1",
+          "label": "패턴",
+          "initial": "",
+          "target": "청백청"
+        },
+        {
+          "id": "field2",
+          "label": "샘플수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "청색실표식>첫째줄;백색실표식>둘째줄;청색실표식>셋째줄",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "패턴",
+          "initial": "",
+          "target": "청백청"
+        },
+        {
+          "id": "field1",
+          "label": "샘플수",
+          "initial": "",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "title": "생물 관찰 표본 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "관찰대상",
+          "initial": "",
+          "target": "강낭콩새싹"
+        },
+        {
+          "id": "field1",
+          "label": "표본",
+          "initial": "",
+          "target": "SP-13"
+        },
+        {
+          "id": "field2",
+          "label": "관찰일",
+          "initial": "",
+          "target": "3일차"
+        }
+      ],
+      "kind": "sort",
+      "operation": "뿌리관찰카드>뿌리자료;줄기관찰카드>줄기자료;잎관찰카드>잎자료",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "표본",
+          "initial": "",
+          "target": "SP-13"
+        },
+        {
+          "id": "field1",
+          "label": "관찰일",
+          "initial": "",
+          "target": "3일차"
+        }
+      ]
+    },
+    {
+      "id": "131",
+      "title": "철골 모형 부품 배치",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "도면",
+          "initial": "",
+          "target": "프레임F2"
+        },
+        {
+          "id": "field1",
+          "label": "주기둥수",
+          "initial": "",
+          "target": "2"
+        },
+        {
+          "id": "field2",
+          "label": "가로보수",
+          "initial": "",
+          "target": "1"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "왼기둥>왼쪽기준점;오른기둥>오른쪽기준점;가로보>상단연결점",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "주기둥수",
+          "initial": "",
+          "target": "2"
+        },
+        {
+          "id": "field1",
+          "label": "가로보수",
+          "initial": "",
+          "target": "1"
+        }
+      ]
+    },
+    {
+      "id": "132",
+      "title": "열차 운행 공지 대조",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "열차",
+          "initial": "",
+          "target": "DEMO-12"
+        },
+        {
+          "id": "field1",
+          "label": "출발",
+          "initial": "",
+          "target": "08:40"
+        },
+        {
+          "id": "field2",
+          "label": "주의구간",
+          "initial": "",
+          "target": "공사표시구간"
+        }
+      ],
+      "kind": "schedule",
+      "operation": "승무확인08:20>1 준비;공지확인08:30>2 대조;출발준비08:40>3 인계",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "열차",
+          "initial": "",
+          "target": "DEMO-12"
+        },
+        {
+          "id": "field1",
+          "label": "출발",
+          "initial": "",
+          "target": "08:40"
+        }
+      ]
+    },
+    {
+      "id": "133",
+      "title": "철도차량 정비 자료",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "차량",
+          "initial": "",
+          "target": "CAR-22"
+        },
+        {
+          "id": "field1",
+          "label": "점검항목",
+          "initial": "",
+          "target": "출입문모형"
+        },
+        {
+          "id": "field2",
+          "label": "정비표",
+          "initial": "",
+          "target": "R4"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "접수기록 대조>1 확인;모형부품 점검>2 관찰;시험기록 인계>3 보고",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "차량",
+          "initial": "",
+          "target": "CAR-22"
+        },
+        {
+          "id": "field1",
+          "label": "사용정비표",
+          "initial": "",
+          "target": "R4"
+        }
+      ]
+    },
+    {
+      "id": "137",
+      "title": "토목 공사 검사 자료",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "공사",
+          "initial": "",
+          "target": "보행교모형"
+        },
+        {
+          "id": "field1",
+          "label": "검사도면",
+          "initial": "",
+          "target": "BR-2"
+        },
+        {
+          "id": "field2",
+          "label": "검사단계",
+          "initial": "",
+          "target": "중간검사"
+        }
+      ],
+      "kind": "sort",
+      "operation": "치수대조표>검사근거;설계변경메모>변경자료;구버전도면>사용보류",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "검사도면",
+          "initial": "",
+          "target": "BR-2"
+        },
+        {
+          "id": "field1",
+          "label": "검사단계",
+          "initial": "",
+          "target": "중간검사"
+        }
+      ]
+    },
+    {
+      "id": "138",
+      "title": "통신 시험 모형 설정",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "시험",
+          "initial": "",
+          "target": "위성링크모형"
+        },
+        {
+          "id": "field1",
+          "label": "채널",
+          "initial": "",
+          "target": "3"
+        },
+        {
+          "id": "field2",
+          "label": "기록주기",
+          "initial": "",
+          "target": "5"
+        }
+      ],
+      "kind": "tune",
+      "operation": "모형채널,번,1,8,1,3,0;기록주기,초,1,10,2,5,0",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "모형채널",
+          "initial": "",
+          "target": "3"
+        },
+        {
+          "id": "field1",
+          "label": "기록주기",
+          "initial": "",
+          "target": "5"
+        }
+      ]
+    },
+    {
+      "id": "139",
+      "title": "통신 선로 모형 경로",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "의뢰",
+          "initial": "",
+          "target": "LINE-14"
+        },
+        {
+          "id": "field1",
+          "label": "출발단자",
+          "initial": "",
+          "target": "A2"
+        },
+        {
+          "id": "field2",
+          "label": "도착단자",
+          "initial": "",
+          "target": "B4"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "출발단자표식>A2시작점;모형선로>중앙경로;도착단자표식>B4종점",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "출발단자",
+          "initial": "",
+          "target": "A2"
+        },
+        {
+          "id": "field1",
+          "label": "도착단자",
+          "initial": "",
+          "target": "B4"
+        }
+      ]
+    },
+    {
+      "id": "140",
+      "title": "중계 장비 장애 자료",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "장비",
+          "initial": "",
+          "target": "통신모형R7"
+        },
+        {
+          "id": "field1",
+          "label": "증상",
+          "initial": "",
+          "target": "연결표시없음"
+        },
+        {
+          "id": "field2",
+          "label": "접수",
+          "initial": "",
+          "target": "NET-24"
+        }
+      ],
+      "kind": "sort",
+      "operation": "장비R7상태표>현장자료;배선도R7>참고자료;다른장비상태표>재확인",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "장비",
+          "initial": "",
+          "target": "통신모형R7"
+        },
+        {
+          "id": "field1",
+          "label": "증상",
+          "initial": "",
+          "target": "연결표시없음"
+        }
+      ]
+    },
+    {
+      "id": "142",
+      "title": "화물 운행 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "차량",
+          "initial": "",
+          "target": "TR-4"
+        },
+        {
+          "id": "field1",
+          "label": "화물",
+          "initial": "",
+          "target": "도서상자"
+        },
+        {
+          "id": "field2",
+          "label": "목적지",
+          "initial": "",
+          "target": "서부도서관"
+        }
+      ],
+      "kind": "schedule",
+      "operation": "화물확인09:00>1 접수;차량기록09:15>2 점검;출발인계09:30>3 인계",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "차량",
+          "initial": "",
+          "target": "TR-4"
+        },
+        {
+          "id": "field1",
+          "label": "목적지",
+          "initial": "",
+          "target": "서부도서관"
+        }
+      ]
+    },
+    {
+      "id": "143",
+      "title": "판금 모형 치수 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "도면",
+          "initial": "",
+          "target": "커버C8"
+        },
+        {
+          "id": "field1",
+          "label": "소재",
+          "initial": "",
+          "target": "모형판"
+        },
+        {
+          "id": "field2",
+          "label": "완성폭",
+          "initial": "",
+          "target": "32"
+        }
+      ],
+      "kind": "tune",
+      "operation": "폭눈금,cm,10,50,20,32,0.1;접는선,cm,1,10,8,4,0.1",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "완성폭",
+          "initial": "",
+          "target": "32"
+        },
+        {
+          "id": "field1",
+          "label": "접는선",
+          "initial": "",
+          "target": "4"
+        }
+      ]
+    },
+    {
+      "id": "1431",
+      "title": "리듬 학습 자료 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "수업",
+          "initial": "",
+          "target": "세박자리듬"
+        },
+        {
+          "id": "field1",
+          "label": "학습자수",
+          "initial": "",
+          "target": "4"
+        },
+        {
+          "id": "field2",
+          "label": "박자",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "박자표 읽기>1 도입;리듬카드 배열>2 연습;함께읽기 인계>3 확인",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "박자",
+          "initial": "",
+          "target": "3"
+        },
+        {
+          "id": "field1",
+          "label": "학습자수",
+          "initial": "",
+          "target": "4"
+        }
+      ]
+    },
+    {
+      "id": "1433",
+      "title": "발명 시제품 구성안",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "아이디어",
+          "initial": "",
+          "target": "접이식책받침"
+        },
+        {
+          "id": "field1",
+          "label": "모형도면",
+          "initial": "",
+          "target": "IN-3"
+        },
+        {
+          "id": "field2",
+          "label": "부품수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "받침판>기준면;지지대>뒤쪽연결점;각도고정판>옆쪽연결점",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "시제품",
+          "initial": "",
+          "target": "접이식책받침"
+        },
+        {
+          "id": "field1",
+          "label": "부품수",
+          "initial": "",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "id": "1436",
+      "title": "신약 연구 문헌 정리",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "연구주제",
+          "initial": "",
+          "target": "가상물질N7"
+        },
+        {
+          "id": "field1",
+          "label": "검색기간",
+          "initial": "",
+          "target": "2026년"
+        },
+        {
+          "id": "field2",
+          "label": "자료수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "시험계획문서>계획자료;관찰결과문서>결과자료;출처없는요약>확인대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "연구주제",
+          "initial": "",
+          "target": "가상물질N7"
+        },
+        {
+          "id": "field1",
+          "label": "제외기준",
+          "initial": "",
+          "target": "출처없음"
+        }
+      ]
+    },
+    {
+      "id": "1437",
+      "title": "경기 해설 자료 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "경기",
+          "initial": "",
+          "target": "교육리그결승"
+        },
+        {
+          "id": "field1",
+          "label": "팀",
+          "initial": "",
+          "target": "파랑대초록"
+        },
+        {
+          "id": "field2",
+          "label": "시작",
+          "initial": "",
+          "target": "18:00"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "선수자료 확인>1 사전조사;경기기록 대조>2 기록정리;중계메모 인계>3 방송준비",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "경기",
+          "initial": "",
+          "target": "교육리그결승"
+        },
+        {
+          "id": "field1",
+          "label": "확인상태",
+          "initial": "",
+          "target": "기록대조완료"
+        }
+      ]
+    },
+    {
+      "id": "1438",
+      "title": "모형 경주 전략 자료",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "경기장",
+          "initial": "",
+          "target": "가상서킷C"
+        },
+        {
+          "id": "field1",
+          "label": "출발",
+          "initial": "",
+          "target": "14:00"
+        },
+        {
+          "id": "field2",
+          "label": "조사구간",
+          "initial": "",
+          "target": "남쪽곡선"
+        }
+      ],
+      "kind": "sort",
+      "operation": "서킷배치도>코스자료;연습주행기록>기록자료;확인안된소문>사용보류",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "조사구간",
+          "initial": "",
+          "target": "남쪽곡선"
+        },
+        {
+          "id": "field1",
+          "label": "사용자료",
+          "initial": "",
+          "target": "연습주행기록"
+        }
+      ]
+    },
+    {
+      "id": "144",
+      "title": "종이 원료 배합 모형",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "제품",
+          "initial": "",
+          "target": "재생노트지"
+        },
+        {
+          "id": "field1",
+          "label": "배치",
+          "initial": "",
+          "target": "P-15"
+        },
+        {
+          "id": "field2",
+          "label": "모형원료수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "종이원료카드>원료칸;첨가표시카드>배합자료;검사표카드>검사자료",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "배치",
+          "initial": "",
+          "target": "P-15"
+        },
+        {
+          "id": "field1",
+          "label": "검사자료",
+          "initial": "",
+          "target": "검사표"
+        }
+      ]
+    },
+    {
+      "id": "1441",
+      "title": "단편 원고의 장면 구성",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "작품",
+          "initial": "",
+          "target": "우산을빌린날"
+        },
+        {
+          "id": "field1",
+          "label": "주인공",
+          "initial": "",
+          "target": "지우"
+        },
+        {
+          "id": "field2",
+          "label": "장소",
+          "initial": "",
+          "target": "버스정류장"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "비가오는장면>1 시작;우산을빌리는장면>2 전개;감사를전하는장면>3 마무리",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "주인공",
+          "initial": "",
+          "target": "지우"
+        },
+        {
+          "id": "field1",
+          "label": "마지막장면",
+          "initial": "",
+          "target": "감사인사"
+        }
+      ]
+    },
+    {
+      "id": "145",
+      "title": "재활용 반입물 분류",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "반입일",
+          "initial": "",
+          "target": "11월4일"
+        },
+        {
+          "id": "field1",
+          "label": "반입표",
+          "initial": "",
+          "target": "RC-09"
+        },
+        {
+          "id": "field2",
+          "label": "분류기준",
+          "initial": "",
+          "target": "재질표"
+        }
+      ],
+      "kind": "sort",
+      "operation": "종이모형>종이칸;금속모형>금속칸;재질미상모형>확인대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "반입표",
+          "initial": "",
+          "target": "RC-09"
+        },
+        {
+          "id": "field1",
+          "label": "미상처리",
+          "initial": "",
+          "target": "확인대기"
+        }
+      ]
+    },
+    {
+      "id": "147",
+      "title": "플라스틱 모형 생산",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "제품",
+          "initial": "",
+          "target": "연필캡모형"
+        },
+        {
+          "id": "field1",
+          "label": "도면",
+          "initial": "",
+          "target": "PL-2"
+        },
+        {
+          "id": "field2",
+          "label": "수량",
+          "initial": "",
+          "target": "8"
+        }
+      ],
+      "kind": "tune",
+      "operation": "모형성형눈금,칸,0,10,2,5,0;생산수량,개,0,12,3,8,0",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "도면",
+          "initial": "",
+          "target": "PL-2"
+        },
+        {
+          "id": "field1",
+          "label": "완성수량",
+          "initial": "",
+          "target": "8"
+        }
+      ]
+    },
+    {
+      "id": "148",
+      "title": "항공 관제 신고 자료",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "항공편",
+          "initial": "",
+          "target": "EDU-18"
+        },
+        {
+          "id": "field1",
+          "label": "신고시각",
+          "initial": "",
+          "target": "10:30"
+        },
+        {
+          "id": "field2",
+          "label": "활주로모형",
+          "initial": "",
+          "target": "2"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "신고서 대조>1 접수;기상기록 대조>2 관측확인;담당관제 인계>3 전달",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "항공편",
+          "initial": "",
+          "target": "EDU-18"
+        },
+        {
+          "id": "field1",
+          "label": "신고시각",
+          "initial": "",
+          "target": "10:30"
+        }
+      ]
+    },
+    {
+      "id": "149",
+      "title": "항공기 정비 모형 기록",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "기체모형",
+          "initial": "",
+          "target": "AIR-3"
+        },
+        {
+          "id": "field1",
+          "label": "점검부위",
+          "initial": "",
+          "target": "외부덮개"
+        },
+        {
+          "id": "field2",
+          "label": "정비문서",
+          "initial": "",
+          "target": "M2"
+        }
+      ],
+      "kind": "sort",
+      "operation": "M2정비표>사용자료;덮개점검기록>검사자료;다른기체도면>사용보류",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "정비문서",
+          "initial": "",
+          "target": "M2"
+        },
+        {
+          "id": "field1",
+          "label": "점검부위",
+          "initial": "",
+          "target": "외부덮개"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "title": "동물 진료 접수 자료",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "동물모형",
+          "initial": "",
+          "target": "강아지누리"
+        },
+        {
+          "id": "field1",
+          "label": "보호자요청",
+          "initial": "",
+          "target": "검진예약"
+        },
+        {
+          "id": "field2",
+          "label": "예약",
+          "initial": "",
+          "target": "11:20"
+        }
+      ],
+      "kind": "sort",
+      "operation": "예약신청서>접수자료;지난방문기록>참고자료;미확인정보>추가질문",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "예약",
+          "initial": "",
+          "target": "11:20"
+        },
+        {
+          "id": "field1",
+          "label": "요청범위",
+          "initial": "",
+          "target": "검진예약"
+        }
+      ]
+    },
+    {
+      "id": "150",
+      "title": "비행 일지 자료 인계",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "항공편",
+          "initial": "",
+          "target": "EDU-27"
+        },
+        {
+          "id": "field1",
+          "label": "운항일",
+          "initial": "",
+          "target": "11월5일"
+        },
+        {
+          "id": "field2",
+          "label": "기록상태",
+          "initial": "",
+          "target": "검토대기"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "운항자료 접수>1 접수;설비보고 분리>2 대조;담당자에게 인계>3 보고",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "항공편",
+          "initial": "",
+          "target": "EDU-27"
+        },
+        {
+          "id": "field1",
+          "label": "이상보고처리",
+          "initial": "",
+          "target": "담당자확인"
+        }
+      ]
+    },
+    {
+      "id": "151",
+      "title": "비행체 모형 설계",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "설계",
+          "initial": "",
+          "target": "글라이더모형"
+        },
+        {
+          "id": "field1",
+          "label": "날개폭",
+          "initial": "",
+          "target": "48"
+        },
+        {
+          "id": "field2",
+          "label": "몸체길이",
+          "initial": "",
+          "target": "36"
+        }
+      ],
+      "kind": "tune",
+      "operation": "날개폭,cm,20,60,25,48,0.1;몸체길이,cm,20,50,25,36,0.1",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "날개폭",
+          "initial": "",
+          "target": "48"
+        },
+        {
+          "id": "field1",
+          "label": "몸체길이",
+          "initial": "",
+          "target": "36"
+        }
+      ]
+    },
+    {
+      "id": "153",
+      "title": "화학 제품 생산 기록",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "교육배치",
+          "initial": "",
+          "target": "CHEM-8"
+        },
+        {
+          "id": "field1",
+          "label": "품목",
+          "initial": "",
+          "target": "비활성모형"
+        },
+        {
+          "id": "field2",
+          "label": "기록횟수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "공정기록표>생산자료;검사기록표>검사자료;출처없는수치>확인대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "교육배치",
+          "initial": "",
+          "target": "CHEM-8"
+        },
+        {
+          "id": "field1",
+          "label": "미확인처리",
+          "initial": "",
+          "target": "확인대기"
+        }
+      ]
+    },
+    {
+      "id": "1541",
+      "title": "자연 현상 관찰 자료",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "주제",
+          "initial": "",
+          "target": "그림자변화"
+        },
+        {
+          "id": "field1",
+          "label": "관측일",
+          "initial": "",
+          "target": "11월6일"
+        },
+        {
+          "id": "field2",
+          "label": "관측수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "09시관찰카드>1 오전;12시관찰카드>2 정오;15시관찰카드>3 오후",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "관측순서",
+          "initial": "",
+          "target": "09시12시15시"
+        },
+        {
+          "id": "field1",
+          "label": "주제",
+          "initial": "",
+          "target": "그림자변화"
+        }
+      ]
+    },
+    {
+      "id": "155",
+      "title": "바닥 타일 모형 배치",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "의뢰",
+          "initial": "",
+          "target": "현관모형"
+        },
+        {
+          "id": "field1",
+          "label": "패턴",
+          "initial": "",
+          "target": "흰회흰"
+        },
+        {
+          "id": "field2",
+          "label": "타일수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "흰타일>왼쪽칸;회색타일>가운데칸;흰타일>오른쪽칸",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "패턴",
+          "initial": "",
+          "target": "흰회흰"
+        },
+        {
+          "id": "field1",
+          "label": "타일수",
+          "initial": "",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "id": "157",
+      "title": "반도체 검사 모형 자료",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "모형기판",
+          "initial": "",
+          "target": "SC-12"
+        },
+        {
+          "id": "field1",
+          "label": "검사표",
+          "initial": "",
+          "target": "TEST-R3"
+        },
+        {
+          "id": "field2",
+          "label": "측정점",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "정상표시기판>검사완료;표시불일치기판>재확인;식별없는기판>확인대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "검사표",
+          "initial": "",
+          "target": "TEST-R3"
+        },
+        {
+          "id": "field1",
+          "label": "미확인기판",
+          "initial": "",
+          "target": "식별없음"
+        }
+      ]
+    },
+    {
+      "id": "159",
+      "title": "의자 수리 모형 구성",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "의뢰품",
+          "initial": "",
+          "target": "의자모형"
+        },
+        {
+          "id": "field1",
+          "label": "수리부위",
+          "initial": "",
+          "target": "등받이"
+        },
+        {
+          "id": "field2",
+          "label": "도면",
+          "initial": "",
+          "target": "CH-2"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "의자좌판>기준면;등받이모형>뒤쪽결합점;고정표식>연결확인점",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "수리부위",
+          "initial": "",
+          "target": "등받이"
+        },
+        {
+          "id": "field1",
+          "label": "사용도면",
+          "initial": "",
+          "target": "CH-2"
+        }
+      ]
+    },
+    {
+      "id": "163",
+      "title": "육류 가공 표시 자료",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "모형제품",
+          "initial": "",
+          "target": "포장식재료"
+        },
+        {
+          "id": "field1",
+          "label": "로트",
+          "initial": "",
+          "target": "MEAT-8"
+        },
+        {
+          "id": "field2",
+          "label": "표시수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "부위표시카드>부위자료;수량표시카드>포장자료;식별없는카드>확인대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "로트",
+          "initial": "",
+          "target": "MEAT-8"
+        },
+        {
+          "id": "field1",
+          "label": "확인대기",
+          "initial": "",
+          "target": "식별없음"
+        }
+      ]
+    },
+    {
+      "id": "164",
+      "title": "맞춤 의복 치수표",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "의뢰품",
+          "initial": "",
+          "target": "조끼"
+        },
+        {
+          "id": "field1",
+          "label": "고객모형",
+          "initial": "",
+          "target": "EDU-5"
+        },
+        {
+          "id": "field2",
+          "label": "완성길이",
+          "initial": "",
+          "target": "60"
+        }
+      ],
+      "kind": "tune",
+      "operation": "조끼길이,cm,40,80,50,60,0.1;등판폭,cm,25,55,30,42,0.1",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "길이",
+          "initial": "",
+          "target": "60"
+        },
+        {
+          "id": "field1",
+          "label": "등판폭",
+          "initial": "",
+          "target": "42"
+        }
+      ]
+    },
+    {
+      "id": "165",
+      "title": "공원 이용 설문 자료",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "조사",
+          "initial": "",
+          "target": "공원만족도"
+        },
+        {
+          "id": "field1",
+          "label": "문항버전",
+          "initial": "",
+          "target": "Q2"
+        },
+        {
+          "id": "field2",
+          "label": "대상시간",
+          "initial": "",
+          "target": "오후"
+        }
+      ],
+      "kind": "sort",
+      "operation": "동의확인응답>입력대기;중복접수응답>중복확인;미동의응답>수집제외",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "문항버전",
+          "initial": "",
+          "target": "Q2"
+        },
+        {
+          "id": "field1",
+          "label": "제외기준",
+          "initial": "",
+          "target": "미동의"
+        }
+      ]
+    },
+    {
+      "id": "166",
+      "title": "세탁물 관리 표시 분류",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "접수",
+          "initial": "",
+          "target": "LAUNDRY-4"
+        },
+        {
+          "id": "field1",
+          "label": "세탁물",
+          "initial": "",
+          "target": "모형의류"
+        },
+        {
+          "id": "field2",
+          "label": "수량",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "손세탁표시옷>손세탁분류;드라이표시옷>전문처리분류;표시없는옷>확인대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "접수",
+          "initial": "",
+          "target": "LAUNDRY-4"
+        },
+        {
+          "id": "field1",
+          "label": "확인대기",
+          "initial": "",
+          "target": "관리표시없음"
+        }
+      ]
+    },
+    {
+      "id": "167",
+      "title": "음료 목록과 보관표",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "행사",
+          "initial": "",
+          "target": "교육용시음전시"
+        },
+        {
+          "id": "field1",
+          "label": "목록",
+          "initial": "",
+          "target": "WL-3"
+        },
+        {
+          "id": "field2",
+          "label": "품목수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "청포도음료카드>청포도자료;적포도음료카드>적포도자료;무알코올음료카드>무알코올자료",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "목록",
+          "initial": "",
+          "target": "WL-3"
+        },
+        {
+          "id": "field1",
+          "label": "품목수",
+          "initial": "",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "id": "169",
+      "title": "가상 식단 자료 분류",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "대상",
+          "initial": "",
+          "target": "교육용식단표"
+        },
+        {
+          "id": "field1",
+          "label": "주제",
+          "initial": "",
+          "target": "균형메뉴"
+        },
+        {
+          "id": "field2",
+          "label": "메뉴수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "곡류메뉴카드>곡류자료;채소메뉴카드>채소자료;콩류메뉴카드>콩류자료",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "주제",
+          "initial": "",
+          "target": "균형메뉴"
+        },
+        {
+          "id": "field1",
+          "label": "미검토사항",
+          "initial": "",
+          "target": "개인별처방"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "title": "수학 모형 규칙 검토",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "수열",
+          "initial": "",
+          "target": "2씩증가"
+        },
+        {
+          "id": "field1",
+          "label": "시작값",
+          "initial": "",
+          "target": "4"
+        },
+        {
+          "id": "field2",
+          "label": "항수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "tune",
+      "operation": "둘째항,값,0,20,5,6,0;셋째항,값,0,20,7,8,0",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "둘째항",
+          "initial": "",
+          "target": "6"
+        },
+        {
+          "id": "field1",
+          "label": "셋째항",
+          "initial": "",
+          "target": "8"
+        }
+      ]
+    },
+    {
+      "id": "171",
+      "title": "전통식품 제조 표지",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "교육품목",
+          "initial": "",
+          "target": "떡모형"
+        },
+        {
+          "id": "field1",
+          "label": "배치",
+          "initial": "",
+          "target": "TR-5"
+        },
+        {
+          "id": "field2",
+          "label": "포장수",
+          "initial": "",
+          "target": "6"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "원료표 확인>1 준비;공정카드 대조>2 모형작업;포장표 부착>3 기록",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "배치",
+          "initial": "",
+          "target": "TR-5"
+        },
+        {
+          "id": "field1",
+          "label": "포장수",
+          "initial": "",
+          "target": "6"
+        }
+      ]
+    },
+    {
+      "id": "175",
+      "title": "한복 모형 치수 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "의뢰품",
+          "initial": "",
+          "target": "아동한복모형"
+        },
+        {
+          "id": "field1",
+          "label": "도면",
+          "initial": "",
+          "target": "HB-4"
+        },
+        {
+          "id": "field2",
+          "label": "저고리길이",
+          "initial": "",
+          "target": "38"
+        }
+      ],
+      "kind": "tune",
+      "operation": "저고리길이,cm,20,50,25,38,0.1;치마길이,cm,30,70,40,55,0.1",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "저고리길이",
+          "initial": "",
+          "target": "38"
+        },
+        {
+          "id": "field1",
+          "label": "치마길이",
+          "initial": "",
+          "target": "55"
+        }
+      ]
+    },
+    {
+      "id": "178",
+      "title": "상품 방송 정보 대조",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "방송상품",
+          "initial": "",
+          "target": "접이식수납함"
+        },
+        {
+          "id": "field1",
+          "label": "방송시작",
+          "initial": "",
+          "target": "17:00"
+        },
+        {
+          "id": "field2",
+          "label": "상품수",
+          "initial": "",
+          "target": "2"
+        }
+      ],
+      "kind": "sort",
+      "operation": "치수검증자료>설명가능;실물사용기록>시연자료;확인안된효능>설명보류",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "방송시작",
+          "initial": "",
+          "target": "17:00"
+        },
+        {
+          "id": "field1",
+          "label": "설명보류",
+          "initial": "",
+          "target": "미확인효능"
+        }
+      ]
+    },
+    {
+      "id": "179",
+      "title": "체형관리 상담 예약",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "접수",
+          "initial": "",
+          "target": "BODY-6"
+        },
+        {
+          "id": "field1",
+          "label": "요청",
+          "initial": "",
+          "target": "일반상담"
+        },
+        {
+          "id": "field2",
+          "label": "예약",
+          "initial": "",
+          "target": "15:20"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "요청내용 확인>1 접수;안내범위 확인>2 상담준비;예약내용 인계>3 전달",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "요청",
+          "initial": "",
+          "target": "일반상담"
+        },
+        {
+          "id": "field1",
+          "label": "예약",
+          "initial": "",
+          "target": "15:20"
+        }
+      ]
+    },
+    {
+      "id": "180",
+      "title": "원두 재고와 주문 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "원두",
+          "initial": "",
+          "target": "새봄블렌드"
+        },
+        {
+          "id": "field1",
+          "label": "입고",
+          "initial": "",
+          "target": "11월2일"
+        },
+        {
+          "id": "field2",
+          "label": "요청봉수",
+          "initial": "",
+          "target": "4"
+        }
+      ],
+      "kind": "sort",
+      "operation": "입고표있는봉투>사용대기;날짜없는봉투>확인대기;빈포장봉투>회수칸",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "원두",
+          "initial": "",
+          "target": "새봄블렌드"
+        },
+        {
+          "id": "field1",
+          "label": "요청봉수",
+          "initial": "",
+          "target": "4"
+        }
+      ]
+    },
+    {
+      "id": "182",
+      "title": "농업 교육 실습 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "교육",
+          "initial": "",
+          "target": "모종옮겨심기"
+        },
+        {
+          "id": "field1",
+          "label": "참가수",
+          "initial": "",
+          "target": "6"
+        },
+        {
+          "id": "field2",
+          "label": "장소",
+          "initial": "",
+          "target": "온실B"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "교육자료카드>설명자료칸;모종모형>시범칸;관찰기록지>기록칸",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "교육",
+          "initial": "",
+          "target": "모종옮겨심기"
+        },
+        {
+          "id": "field1",
+          "label": "참가수",
+          "initial": "",
+          "target": "6"
+        }
+      ]
+    },
+    {
+      "id": "186",
+      "title": "동물 모형 훈련 관찰",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "동물모형",
+          "initial": "",
+          "target": "안내견루루"
+        },
+        {
+          "id": "field1",
+          "label": "과제",
+          "initial": "",
+          "target": "표식따라가기"
+        },
+        {
+          "id": "field2",
+          "label": "관찰수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "시작표식 확인>1 준비;중간표식 확인>2 관찰;도착표식 기록>3 확인",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "과제",
+          "initial": "",
+          "target": "표식따라가기"
+        },
+        {
+          "id": "field1",
+          "label": "관찰수",
+          "initial": "",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "id": "187",
+      "title": "양식장 관찰 자료",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "양식모형",
+          "initial": "",
+          "target": "광어수조"
+        },
+        {
+          "id": "field1",
+          "label": "관찰구역",
+          "initial": "",
+          "target": "수조2"
+        },
+        {
+          "id": "field2",
+          "label": "기록수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "먹이공급기록>급이자료;성장관찰기록>성장자료;미확인증상메모>추가확인",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "관찰구역",
+          "initial": "",
+          "target": "수조2"
+        },
+        {
+          "id": "field1",
+          "label": "추가확인",
+          "initial": "",
+          "target": "미확인증상"
+        }
+      ]
+    },
+    {
+      "id": "189",
+      "title": "수산물 모형의 종류 분류",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "교육장소",
+          "initial": "",
+          "target": "연안모형"
+        },
+        {
+          "id": "field1",
+          "label": "관찰일",
+          "initial": "",
+          "target": "11월7일"
+        },
+        {
+          "id": "field2",
+          "label": "분류수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "조개모형>조개자료;해조류모형>해조류자료;미확인모형>확인대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "관찰일",
+          "initial": "",
+          "target": "11월7일"
+        },
+        {
+          "id": "field1",
+          "label": "미확인처리",
+          "initial": "",
+          "target": "확인대기"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "title": "의료장비 설치 기록",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "장비모형",
+          "initial": "",
+          "target": "모니터M3"
+        },
+        {
+          "id": "field1",
+          "label": "설치위치",
+          "initial": "",
+          "target": "교육실"
+        },
+        {
+          "id": "field2",
+          "label": "관리표",
+          "initial": "",
+          "target": "MD-2"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "장비표식>교육실기준점;관리표카드>관리기록칸;인계카드>사용자안내칸",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "장비모형",
+          "initial": "",
+          "target": "모니터M3"
+        },
+        {
+          "id": "field1",
+          "label": "관리표",
+          "initial": "",
+          "target": "MD-2"
+        }
+      ]
+    },
+    {
+      "id": "190",
+      "title": "유제품 모형 로트 관리",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "품목",
+          "initial": "",
+          "target": "요거트모형"
+        },
+        {
+          "id": "field1",
+          "label": "배치",
+          "initial": "",
+          "target": "ML-6"
+        },
+        {
+          "id": "field2",
+          "label": "포장수",
+          "initial": "",
+          "target": "9"
+        }
+      ],
+      "kind": "sort",
+      "operation": "배치일치용기>포장대기;라벨불일치용기>수정대기;식별없는용기>확인대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "배치",
+          "initial": "",
+          "target": "ML-6"
+        },
+        {
+          "id": "field1",
+          "label": "포장수",
+          "initial": "",
+          "target": "9"
+        }
+      ]
+    },
+    {
+      "id": "192",
+      "title": "조경 자재 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "작업",
+          "initial": "",
+          "target": "화단모형배치"
+        },
+        {
+          "id": "field1",
+          "label": "자재표",
+          "initial": "",
+          "target": "GD-3"
+        },
+        {
+          "id": "field2",
+          "label": "모종수",
+          "initial": "",
+          "target": "6"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "키큰모종표식>뒤쪽칸;낮은모종표식>앞쪽칸;안내표식>입구칸",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "자재표",
+          "initial": "",
+          "target": "GD-3"
+        },
+        {
+          "id": "field1",
+          "label": "모종수",
+          "initial": "",
+          "target": "6"
+        }
+      ]
+    },
+    {
+      "id": "193",
+      "title": "공원 동선 모형 설계",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "설계",
+          "initial": "",
+          "target": "쉼터정원"
+        },
+        {
+          "id": "field1",
+          "label": "입구",
+          "initial": "",
+          "target": "남쪽"
+        },
+        {
+          "id": "field2",
+          "label": "휴게위치",
+          "initial": "",
+          "target": "북쪽"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "입구표식>남쪽시작점;보행로표식>중앙경로;벤치표식>북쪽쉼터",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "입구",
+          "initial": "",
+          "target": "남쪽"
+        },
+        {
+          "id": "field1",
+          "label": "휴게위치",
+          "initial": "",
+          "target": "북쪽"
+        }
+      ]
+    },
+    {
+      "id": "195",
+      "title": "수산 자원 조사 자료",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "조사지점",
+          "initial": "",
+          "target": "동측항만"
+        },
+        {
+          "id": "field1",
+          "label": "조사종",
+          "initial": "",
+          "target": "해조류"
+        },
+        {
+          "id": "field2",
+          "label": "시료수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "분포관찰표>현장자료;표본라벨>시료자료;출처없는추정치>확인대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "조사종",
+          "initial": "",
+          "target": "해조류"
+        },
+        {
+          "id": "field1",
+          "label": "시료수",
+          "initial": "",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "id": "198",
+      "title": "가상 부동산 현황 조사",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "대상",
+          "initial": "",
+          "target": "교육용상가"
+        },
+        {
+          "id": "field1",
+          "label": "위치",
+          "initial": "",
+          "target": "새봄길2"
+        },
+        {
+          "id": "field2",
+          "label": "용도",
+          "initial": "",
+          "target": "근린상가"
+        }
+      ],
+      "kind": "sort",
+      "operation": "현장면적기록>관측자료;주변시설목록>입지자료;확인안된가격>사용보류",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "용도",
+          "initial": "",
+          "target": "근린상가"
+        },
+        {
+          "id": "field1",
+          "label": "보류자료",
+          "initial": "",
+          "target": "미확인가격"
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "title": "행동 연구 자료 익명 분류",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "연구",
+          "initial": "",
+          "target": "색카드분류"
+        },
+        {
+          "id": "field1",
+          "label": "자료형태",
+          "initial": "",
+          "target": "익명기록"
+        },
+        {
+          "id": "field2",
+          "label": "표본수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "동의확인기록>분석대기;식별정보포함기록>비식별검토;중복기록>중복확인",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "연구",
+          "initial": "",
+          "target": "색카드분류"
+        },
+        {
+          "id": "field1",
+          "label": "개인평가",
+          "initial": "",
+          "target": "실시안함"
+        }
+      ]
+    },
+    {
+      "id": "201",
+      "title": "모형 상품 거래 자료",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "상품",
+          "initial": "",
+          "target": "수납상자"
+        },
+        {
+          "id": "field1",
+          "label": "요청수",
+          "initial": "",
+          "target": "20"
+        },
+        {
+          "id": "field2",
+          "label": "납기",
+          "initial": "",
+          "target": "11월12일"
+        }
+      ],
+      "kind": "sort",
+      "operation": "검증된규격서>상품자료;확정주문서>주문자료;출처없는가격표>확인대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "요청수",
+          "initial": "",
+          "target": "20"
+        },
+        {
+          "id": "field1",
+          "label": "납기",
+          "initial": "",
+          "target": "11월12일"
+        }
+      ]
+    },
+    {
+      "id": "203",
+      "title": "지역 경제 자료 비교",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "주제",
+          "initial": "",
+          "target": "가상도서판매"
+        },
+        {
+          "id": "field1",
+          "label": "기준월",
+          "initial": "",
+          "target": "10월"
+        },
+        {
+          "id": "field2",
+          "label": "단위",
+          "initial": "",
+          "target": "권"
+        }
+      ],
+      "kind": "tune",
+      "operation": "9월판매량,권,0,200,50,100,0;10월판매량,권,0,200,70,120,0",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "증가량",
+          "initial": "",
+          "target": "20"
+        },
+        {
+          "id": "field1",
+          "label": "해석범위",
+          "initial": "",
+          "target": "관측자료"
+        }
+      ]
+    },
+    {
+      "id": "205",
+      "title": "노사 상담 자료 정리",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "의뢰",
+          "initial": "",
+          "target": "교육용근무표상담"
+        },
+        {
+          "id": "field1",
+          "label": "문서버전",
+          "initial": "",
+          "target": "R2"
+        },
+        {
+          "id": "field2",
+          "label": "상담일",
+          "initial": "",
+          "target": "11월8일"
+        }
+      ],
+      "kind": "sort",
+      "operation": "합의문서>확인자료;상담자메모>진술자료;출처없는주장>추가확인",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "문서버전",
+          "initial": "",
+          "target": "R2"
+        },
+        {
+          "id": "field1",
+          "label": "추가확인",
+          "initial": "",
+          "target": "출처없는주장"
+        }
+      ]
+    },
+    {
+      "id": "206",
+      "title": "가상 회계 장부 대조",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "업체",
+          "initial": "",
+          "target": "새봄공방"
+        },
+        {
+          "id": "field1",
+          "label": "거래일",
+          "initial": "",
+          "target": "11월3일"
+        },
+        {
+          "id": "field2",
+          "label": "거래건수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "form",
+      "operation": "수입합계=30000;지출합계=18000",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "차액",
+          "initial": "",
+          "target": "12000"
+        },
+        {
+          "id": "field1",
+          "label": "거래건수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "operation_evidence": "체험비 수입30000원,재료비 지출10000원,장소비 지출8000원"
+    },
+    {
+      "id": "207",
+      "title": "수출입 물품 자료 분류",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "신고",
+          "initial": "",
+          "target": "EDU-C7"
+        },
+        {
+          "id": "field1",
+          "label": "물품",
+          "initial": "",
+          "target": "노트상자"
+        },
+        {
+          "id": "field2",
+          "label": "수량",
+          "initial": "",
+          "target": "40"
+        }
+      ],
+      "kind": "sort",
+      "operation": "물품명세서>물품자료;수량확인서>수량자료;미확정세율표>전문확인대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "수량",
+          "initial": "",
+          "target": "40"
+        },
+        {
+          "id": "field1",
+          "label": "미정항목",
+          "initial": "",
+          "target": "실제세율"
+        }
+      ]
+    },
+    {
+      "id": "209",
+      "title": "국제회의 운영 일정",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "회의",
+          "initial": "",
+          "target": "도시숲포럼"
+        },
+        {
+          "id": "field1",
+          "label": "참가수",
+          "initial": "",
+          "target": "30"
+        },
+        {
+          "id": "field2",
+          "label": "시작",
+          "initial": "",
+          "target": "09:30"
+        }
+      ],
+      "kind": "schedule",
+      "operation": "등록09:00>1 등록;발표09:30>2 발표;토론10:20>3 토론",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "회의",
+          "initial": "",
+          "target": "도시숲포럼"
+        },
+        {
+          "id": "field1",
+          "label": "토론시작",
+          "initial": "",
+          "target": "10:20"
+        }
+      ]
+    },
+    {
+      "id": "211",
+      "title": "농산물 샘플 대조",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "상품",
+          "initial": "",
+          "target": "배모형상자"
+        },
+        {
+          "id": "field1",
+          "label": "규격",
+          "initial": "",
+          "target": "교육규격B"
+        },
+        {
+          "id": "field2",
+          "label": "수량",
+          "initial": "",
+          "target": "12"
+        }
+      ],
+      "kind": "sort",
+      "operation": "규격B샘플>요청일치;다른규격샘플>재확인;표시없는상자>표시대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "규격",
+          "initial": "",
+          "target": "교육규격B"
+        },
+        {
+          "id": "field1",
+          "label": "수량",
+          "initial": "",
+          "target": "12"
+        }
+      ]
+    },
+    {
+      "id": "212",
+      "title": "도시 보행 동선 모형",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "구역",
+          "initial": "",
+          "target": "가상역앞"
+        },
+        {
+          "id": "field1",
+          "label": "목적",
+          "initial": "",
+          "target": "보행연결"
+        },
+        {
+          "id": "field2",
+          "label": "입구",
+          "initial": "",
+          "target": "동쪽"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "역출입구표식>동쪽칸;횡단경로표식>중앙칸;공원표식>서쪽칸",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "연결목적",
+          "initial": "",
+          "target": "보행연결"
+        },
+        {
+          "id": "field1",
+          "label": "시작점",
+          "initial": "",
+          "target": "동쪽"
+        }
+      ]
+    },
+    {
+      "id": "214",
+      "title": "구매 요청서 대조",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "품목",
+          "initial": "",
+          "target": "친환경파일"
+        },
+        {
+          "id": "field1",
+          "label": "수량",
+          "initial": "",
+          "target": "50"
+        },
+        {
+          "id": "field2",
+          "label": "납품일",
+          "initial": "",
+          "target": "11월15일"
+        }
+      ],
+      "kind": "sort",
+      "operation": "규격일치견적>비교대기;수량누락견적>보완요청;마감지난견적>접수보류",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "요청수량",
+          "initial": "",
+          "target": "50"
+        },
+        {
+          "id": "field1",
+          "label": "납품일",
+          "initial": "",
+          "target": "11월15일"
+        }
+      ]
+    },
+    {
+      "id": "217",
+      "title": "보험 교육 통계 계산",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "자료",
+          "initial": "",
+          "target": "모형관찰표"
+        },
+        {
+          "id": "field1",
+          "label": "관찰수",
+          "initial": "",
+          "target": "100"
+        },
+        {
+          "id": "field2",
+          "label": "발생건수",
+          "initial": "",
+          "target": "4"
+        }
+      ],
+      "kind": "tune",
+      "operation": "관찰수,건,0,150,50,100,0;발생건수,건,0,10,1,4,0",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "관측비율",
+          "initial": "",
+          "target": "4"
+        },
+        {
+          "id": "field1",
+          "label": "판단범위",
+          "initial": "",
+          "target": "교육통계"
+        }
+      ]
+    },
+    {
+      "id": "219",
+      "title": "가상 매물 조건 대조",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "매물",
+          "initial": "",
+          "target": "교육용사무실"
+        },
+        {
+          "id": "field1",
+          "label": "희망면적",
+          "initial": "",
+          "target": "30"
+        },
+        {
+          "id": "field2",
+          "label": "방문일",
+          "initial": "",
+          "target": "11월10일"
+        }
+      ],
+      "kind": "sort",
+      "operation": "확인된면적표>기본자료;방문예약표>일정자료;권리미확인메모>전문확인대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "희망면적",
+          "initial": "",
+          "target": "30"
+        },
+        {
+          "id": "field1",
+          "label": "방문일",
+          "initial": "",
+          "target": "11월10일"
+        }
+      ]
+    },
+    {
+      "id": "222",
+      "title": "보험 상담 요청 정리",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "접수",
+          "initial": "",
+          "target": "PLAN-4"
+        },
+        {
+          "id": "field1",
+          "label": "요청",
+          "initial": "",
+          "target": "상품설명"
+        },
+        {
+          "id": "field2",
+          "label": "예약",
+          "initial": "",
+          "target": "13:30"
+        }
+      ],
+      "kind": "sort",
+      "operation": "약관원문>설명근거;고객질문메모>확인질문;미확인혜택문구>설명보류",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "예약",
+          "initial": "",
+          "target": "13:30"
+        },
+        {
+          "id": "field1",
+          "label": "보류내용",
+          "initial": "",
+          "target": "미확인혜택"
+        }
+      ]
+    },
+    {
+      "id": "223",
+      "title": "모형 시장 정보 대조",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "시장",
+          "initial": "",
+          "target": "교육용선물자료"
+        },
+        {
+          "id": "field1",
+          "label": "기준일",
+          "initial": "",
+          "target": "11월6일"
+        },
+        {
+          "id": "field2",
+          "label": "자료시각",
+          "initial": "",
+          "target": "10:00"
+        }
+      ],
+      "kind": "sort",
+      "operation": "시각표시시세>관측자료;시장공지원문>공지자료;무출처예측>사용보류",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "자료시각",
+          "initial": "",
+          "target": "10:00"
+        },
+        {
+          "id": "field1",
+          "label": "투자추천",
+          "initial": "",
+          "target": "실시안함"
+        }
+      ]
+    },
+    {
+      "id": "224",
+      "title": "가상 세무 서류 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "의뢰",
+          "initial": "",
+          "target": "교육용지출정리"
+        },
+        {
+          "id": "field1",
+          "label": "증빙월",
+          "initial": "",
+          "target": "10월"
+        },
+        {
+          "id": "field2",
+          "label": "증빙수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "날짜있는영수증>증빙자료;거래내역서>대조자료;날짜없는영수증>확인대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "증빙월",
+          "initial": "",
+          "target": "10월"
+        },
+        {
+          "id": "field1",
+          "label": "미정항목",
+          "initial": "",
+          "target": "실제세액"
+        }
+      ]
+    },
+    {
+      "id": "226",
+      "title": "가상 손해 자료 확인",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "접수",
+          "initial": "",
+          "target": "CLAIM-8"
+        },
+        {
+          "id": "field1",
+          "label": "사고일",
+          "initial": "",
+          "target": "11월2일"
+        },
+        {
+          "id": "field2",
+          "label": "자료수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "확인된사진>현장자료;접수자진술>진술자료;금액근거없는견적>보완요청",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "사고일",
+          "initial": "",
+          "target": "11월2일"
+        },
+        {
+          "id": "field1",
+          "label": "미정항목",
+          "initial": "",
+          "target": "보상판단"
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "title": "약국 상담 접수 자료",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "접수",
+          "initial": "",
+          "target": "PHARM-4"
+        },
+        {
+          "id": "field1",
+          "label": "요청",
+          "initial": "",
+          "target": "복약상담예약"
+        },
+        {
+          "id": "field2",
+          "label": "방문",
+          "initial": "",
+          "target": "10:40"
+        }
+      ],
+      "kind": "sort",
+      "operation": "처방원문모형>전문검토대기;문의메모>상담질문;출처없는복용법>사용보류",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "방문",
+          "initial": "",
+          "target": "10:40"
+        },
+        {
+          "id": "field1",
+          "label": "판단담당",
+          "initial": "",
+          "target": "전문약사"
+        }
+      ]
+    },
+    {
+      "id": "231",
+      "title": "허구 기업 신용자료 정리",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "대상",
+          "initial": "",
+          "target": "교육용공방"
+        },
+        {
+          "id": "field1",
+          "label": "기준연도",
+          "initial": "",
+          "target": "2026"
+        },
+        {
+          "id": "field2",
+          "label": "보고서",
+          "initial": "",
+          "target": "CR-3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "검증된재무표>분석자료;공식등록자료>기본자료;미확인평가>사용보류",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "보고서",
+          "initial": "",
+          "target": "CR-3"
+        },
+        {
+          "id": "field1",
+          "label": "등급판정",
+          "initial": "",
+          "target": "실시안함"
+        }
+      ]
+    },
+    {
+      "id": "232",
+      "title": "공익 광고 제작 방향",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "광고",
+          "initial": "",
+          "target": "도서나눔"
+        },
+        {
+          "id": "field1",
+          "label": "대상",
+          "initial": "",
+          "target": "지역주민"
+        },
+        {
+          "id": "field2",
+          "label": "게시",
+          "initial": "",
+          "target": "11월12일"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "도서사진표식>상단사진칸;참여안내문>중앙문구칸;문의정보표식>하단정보칸",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "광고",
+          "initial": "",
+          "target": "도서나눔"
+        },
+        {
+          "id": "field1",
+          "label": "게시일",
+          "initial": "",
+          "target": "11월12일"
+        }
+      ]
+    },
+    {
+      "id": "233",
+      "title": "가상 해외 동향 보고",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "지역",
+          "initial": "",
+          "target": "교육도시A"
+        },
+        {
+          "id": "field1",
+          "label": "주제",
+          "initial": "",
+          "target": "문화교류"
+        },
+        {
+          "id": "field2",
+          "label": "보고일",
+          "initial": "",
+          "target": "11월6일"
+        }
+      ],
+      "kind": "sort",
+      "operation": "공식행사공지>확인자료;현지인터뷰>진술자료;출처없는소문>확인대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "주제",
+          "initial": "",
+          "target": "문화교류"
+        },
+        {
+          "id": "field1",
+          "label": "보고일",
+          "initial": "",
+          "target": "11월6일"
+        }
+      ]
+    },
+    {
+      "id": "234",
+      "title": "환율 관측 자료 대조",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "자료",
+          "initial": "",
+          "target": "교육환율표"
+        },
+        {
+          "id": "field1",
+          "label": "기준시각",
+          "initial": "",
+          "target": "09:00"
+        },
+        {
+          "id": "field2",
+          "label": "통화쌍",
+          "initial": "",
+          "target": "가상A대B"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "09시표 확인>1 시각대조;10시표 확인>2 변화기록;원본링크 인계>3 보고",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "통화쌍",
+          "initial": "",
+          "target": "가상A대B"
+        },
+        {
+          "id": "field1",
+          "label": "거래실행",
+          "initial": "",
+          "target": "없음"
+        }
+      ]
+    },
+    {
+      "id": "236",
+      "title": "모형 차량 상담 요청",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "차종",
+          "initial": "",
+          "target": "교육용소형차"
+        },
+        {
+          "id": "field1",
+          "label": "요청",
+          "initial": "",
+          "target": "적재공간확인"
+        },
+        {
+          "id": "field2",
+          "label": "방문",
+          "initial": "",
+          "target": "14:30"
+        }
+      ],
+      "kind": "sort",
+      "operation": "공식치수표>설명자료;방문요청표>고객요청;미확인성능문구>설명보류",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "방문",
+          "initial": "",
+          "target": "14:30"
+        },
+        {
+          "id": "field1",
+          "label": "설명범위",
+          "initial": "",
+          "target": "공식치수"
+        }
+      ]
+    },
+    {
+      "id": "238",
+      "title": "가상 사업 운영 자료",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "사업",
+          "initial": "",
+          "target": "공방체험운영"
+        },
+        {
+          "id": "field1",
+          "label": "검토월",
+          "initial": "",
+          "target": "10월"
+        },
+        {
+          "id": "field2",
+          "label": "안건",
+          "initial": "",
+          "target": "운영시간"
+        }
+      ],
+      "kind": "sort",
+      "operation": "실제이용기록>운영자료;팀제안서>검토안건;미확인수요예측>추가확인",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "안건",
+          "initial": "",
+          "target": "운영시간"
+        },
+        {
+          "id": "field1",
+          "label": "결정상태",
+          "initial": "",
+          "target": "검토대기"
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "title": "유전 연구 모형 자료",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "연구",
+          "initial": "",
+          "target": "강낭콩형질모형"
+        },
+        {
+          "id": "field1",
+          "label": "표본군",
+          "initial": "",
+          "target": "G2"
+        },
+        {
+          "id": "field2",
+          "label": "기록수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "표본관찰표>관찰자료;분석계획표>계획자료;미확인추론>검토대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "표본군",
+          "initial": "",
+          "target": "G2"
+        },
+        {
+          "id": "field1",
+          "label": "결과범위",
+          "initial": "",
+          "target": "교육모형"
+        }
+      ]
+    },
+    {
+      "id": "240",
+      "title": "증권 정보 제공 자료",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "기업",
+          "initial": "",
+          "target": "교육용새솔"
+        },
+        {
+          "id": "field1",
+          "label": "보고기간",
+          "initial": "",
+          "target": "3분기"
+        },
+        {
+          "id": "field2",
+          "label": "자료수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "기업공시모형>확인자료;시장자료모형>관측자료;출처없는추천>사용보류",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "보고기간",
+          "initial": "",
+          "target": "3분기"
+        },
+        {
+          "id": "field1",
+          "label": "추천행위",
+          "initial": "",
+          "target": "실시안함"
+        }
+      ]
+    },
+    {
+      "id": "242",
+      "title": "전화 문의 요약",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "접수",
+          "initial": "",
+          "target": "CALL-9"
+        },
+        {
+          "id": "field1",
+          "label": "상품",
+          "initial": "",
+          "target": "도서정기배송"
+        },
+        {
+          "id": "field2",
+          "label": "요청",
+          "initial": "",
+          "target": "안내자료발송"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "수신의사 확인>1 동의확인;질문요약 확인>2 요청확인;자료발송 인계>3 전달",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "요청",
+          "initial": "",
+          "target": "안내자료발송"
+        },
+        {
+          "id": "field1",
+          "label": "동의확인",
+          "initial": "",
+          "target": "필수"
+        }
+      ]
+    },
+    {
+      "id": "244",
+      "title": "가상 펀드 자료 정리",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "자료",
+          "initial": "",
+          "target": "교육용자산표"
+        },
+        {
+          "id": "field1",
+          "label": "기준월",
+          "initial": "",
+          "target": "10월"
+        },
+        {
+          "id": "field2",
+          "label": "대조항목",
+          "initial": "",
+          "target": "보유수량"
+        }
+      ],
+      "kind": "tune",
+      "operation": "가상주식수량,개,0,100,20,40,0;가상채권수량,개,0,100,30,60,0",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "총수량",
+          "initial": "",
+          "target": "100"
+        },
+        {
+          "id": "field1",
+          "label": "운용지시",
+          "initial": "",
+          "target": "실시안함"
+        }
+      ]
+    },
+    {
+      "id": "247",
+      "title": "신규 서비스 이름 시안",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "서비스",
+          "initial": "",
+          "target": "동네책교환"
+        },
+        {
+          "id": "field1",
+          "label": "대상",
+          "initial": "",
+          "target": "주민"
+        },
+        {
+          "id": "field2",
+          "label": "금지어",
+          "initial": "",
+          "target": "무료보장"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "책모양표식>서비스상징칸;책마중문구>이름시안칸;이웃연결문구>의미설명칸",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "이름시안",
+          "initial": "",
+          "target": "책마중"
+        },
+        {
+          "id": "field1",
+          "label": "금지어사용",
+          "initial": "",
+          "target": "없음"
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "title": "전문 진료 의뢰 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "접수",
+          "initial": "",
+          "target": "CLINIC-7"
+        },
+        {
+          "id": "field1",
+          "label": "요청",
+          "initial": "",
+          "target": "전문상담"
+        },
+        {
+          "id": "field2",
+          "label": "예약",
+          "initial": "",
+          "target": "16:10"
+        }
+      ],
+      "kind": "sort",
+      "operation": "의뢰서모형>전문검토대기;검사기록모형>참고자료;출처없는진단>사용보류",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "예약",
+          "initial": "",
+          "target": "16:10"
+        },
+        {
+          "id": "field1",
+          "label": "진단판정",
+          "initial": "",
+          "target": "실시안함"
+        }
+      ]
+    },
+    {
+      "id": "260",
+      "title": "교양 방송 구성안",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "프로그램",
+          "initial": "",
+          "target": "동네책방"
+        },
+        {
+          "id": "field1",
+          "label": "분량",
+          "initial": "",
+          "target": "3장면"
+        },
+        {
+          "id": "field2",
+          "label": "주제",
+          "initial": "",
+          "target": "책나눔"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "책방소개>1 도입;운영자인터뷰>2 본문;참여방법안내>3 마무리",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "주제",
+          "initial": "",
+          "target": "책나눔"
+        },
+        {
+          "id": "field1",
+          "label": "장면수",
+          "initial": "",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "id": "261",
+      "title": "연극 줄거리 구성",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "작품",
+          "initial": "",
+          "target": "늦은편지"
+        },
+        {
+          "id": "field1",
+          "label": "주인공",
+          "initial": "",
+          "target": "하늘"
+        },
+        {
+          "id": "field2",
+          "label": "배경",
+          "initial": "",
+          "target": "우체국"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "편지발견>1 발단;주인찾기>2 전개;편지전달>3 결말",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "주인공",
+          "initial": "",
+          "target": "하늘"
+        },
+        {
+          "id": "field1",
+          "label": "결말",
+          "initial": "",
+          "target": "편지전달"
+        }
+      ]
+    },
+    {
+      "id": "262",
+      "title": "가상 행사 취재 메모",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "취재",
+          "initial": "",
+          "target": "마을도서축제"
+        },
+        {
+          "id": "field1",
+          "label": "행사일",
+          "initial": "",
+          "target": "11월9일"
+        },
+        {
+          "id": "field2",
+          "label": "장소",
+          "initial": "",
+          "target": "시민공원"
+        }
+      ],
+      "kind": "sort",
+      "operation": "공식일정표>확인사실;참가자인터뷰>인용자료;미확인소문>추가취재",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "행사일",
+          "initial": "",
+          "target": "11월9일"
+        },
+        {
+          "id": "field1",
+          "label": "장소",
+          "initial": "",
+          "target": "시민공원"
+        }
+      ]
+    },
+    {
+      "id": "264",
+      "title": "순차 통역 메모 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "행사",
+          "initial": "",
+          "target": "교육교류회의"
+        },
+        {
+          "id": "field1",
+          "label": "원문",
+          "initial": "",
+          "target": "Welcome"
+        },
+        {
+          "id": "field2",
+          "label": "전달문",
+          "initial": "",
+          "target": "환영합니다"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "원문듣기>1 수신;핵심메모>2 기록;환영합니다전달>3 발화준비",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "전달문",
+          "initial": "",
+          "target": "환영합니다"
+        },
+        {
+          "id": "field1",
+          "label": "방식",
+          "initial": "",
+          "target": "순차통역"
+        }
+      ]
+    },
+    {
+      "id": "265",
+      "title": "현장 리포트 구성",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "주제",
+          "initial": "",
+          "target": "공원새단장"
+        },
+        {
+          "id": "field1",
+          "label": "현장",
+          "initial": "",
+          "target": "새봄공원"
+        },
+        {
+          "id": "field2",
+          "label": "방송",
+          "initial": "",
+          "target": "12:00"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "현장소개>1 시작;담당자인터뷰>2 취재;이용안내>3 마무리",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "현장",
+          "initial": "",
+          "target": "새봄공원"
+        },
+        {
+          "id": "field1",
+          "label": "방송",
+          "initial": "",
+          "target": "12:00"
+        }
+      ]
+    },
+    {
+      "id": "266",
+      "title": "드라마 장면 계획",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "작품",
+          "initial": "",
+          "target": "새로운우산"
+        },
+        {
+          "id": "field1",
+          "label": "주인공",
+          "initial": "",
+          "target": "윤서"
+        },
+        {
+          "id": "field2",
+          "label": "배경",
+          "initial": "",
+          "target": "학교"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "우산분실>1 시작;친구와대화>2 갈등;우산공유>3 해결",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "주인공",
+          "initial": "",
+          "target": "윤서"
+        },
+        {
+          "id": "field1",
+          "label": "마지막장면",
+          "initial": "",
+          "target": "우산공유"
+        }
+      ]
+    },
+    {
+      "id": "269",
+      "title": "가상 정책 자료 분석",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "주제",
+          "initial": "",
+          "target": "공원운영시간"
+        },
+        {
+          "id": "field1",
+          "label": "자료연도",
+          "initial": "",
+          "target": "2026"
+        },
+        {
+          "id": "field2",
+          "label": "비교대상",
+          "initial": "",
+          "target": "두지역"
+        }
+      ],
+      "kind": "sort",
+      "operation": "운영규정원문>제도자료;주민설문결과>관측자료;출처없는평가>검토대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "주제",
+          "initial": "",
+          "target": "공원운영시간"
+        },
+        {
+          "id": "field1",
+          "label": "판단범위",
+          "initial": "",
+          "target": "자료대조"
+        }
+      ]
+    },
+    {
+      "id": "270",
+      "title": "안내 음성 녹음 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "대본",
+          "initial": "",
+          "target": "도서관안내"
+        },
+        {
+          "id": "field1",
+          "label": "첫문장",
+          "initial": "",
+          "target": "어서오세요"
+        },
+        {
+          "id": "field2",
+          "label": "녹음순서",
+          "initial": "",
+          "target": "3구간"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "어서오세요>1 도입;이용안내>2 본문;감사합니다>3 마무리",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "첫문장",
+          "initial": "",
+          "target": "어서오세요"
+        },
+        {
+          "id": "field1",
+          "label": "대본",
+          "initial": "",
+          "target": "도서관안내"
+        }
+      ]
+    },
+    {
+      "id": "271",
+      "title": "뉴스 진행 원고 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "프로그램",
+          "initial": "",
+          "target": "교육뉴스"
+        },
+        {
+          "id": "field1",
+          "label": "방송시각",
+          "initial": "",
+          "target": "18:00"
+        },
+        {
+          "id": "field2",
+          "label": "첫소식",
+          "initial": "",
+          "target": "도서축제"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "시작인사>1 오프닝;도서축제안내>2 소식;마침인사>3 클로징",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "첫소식",
+          "initial": "",
+          "target": "도서축제"
+        },
+        {
+          "id": "field1",
+          "label": "방송시각",
+          "initial": "",
+          "target": "18:00"
+        }
+      ]
+    },
+    {
+      "id": "272",
+      "title": "언어 자료의 형태 분류",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "연구",
+          "initial": "",
+          "target": "인사말비교"
+        },
+        {
+          "id": "field1",
+          "label": "대상",
+          "initial": "",
+          "target": "교육문장"
+        },
+        {
+          "id": "field2",
+          "label": "표본수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "안녕하세요문장>인사표현;감사합니다문장>감사표현;잘가세요문장>작별표현",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "연구",
+          "initial": "",
+          "target": "인사말비교"
+        },
+        {
+          "id": "field1",
+          "label": "표본수",
+          "initial": "",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "id": "273",
+      "title": "역사 전시 연표 구성",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "주제",
+          "initial": "",
+          "target": "가상마을도서관"
+        },
+        {
+          "id": "field1",
+          "label": "자료",
+          "initial": "",
+          "target": "기록사진"
+        },
+        {
+          "id": "field2",
+          "label": "사건수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "2001설립기록>1 설립;2010이전기록>2 이전;2026확장기록>3 확장",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "주제",
+          "initial": "",
+          "target": "가상마을도서관"
+        },
+        {
+          "id": "field1",
+          "label": "최근사건",
+          "initial": "",
+          "target": "2026확장"
+        }
+      ]
+    },
+    {
+      "id": "278",
+      "title": "공익 광고 문구 편집",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "주제",
+          "initial": "",
+          "target": "책나눔"
+        },
+        {
+          "id": "field1",
+          "label": "대상",
+          "initial": "",
+          "target": "이웃"
+        },
+        {
+          "id": "field2",
+          "label": "요청문구",
+          "initial": "",
+          "target": "책으로만나요"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "책사진표식>그림칸;책으로만나요>주문구칸;토요일책방앞>참여안내칸",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "주문구",
+          "initial": "",
+          "target": "책으로만나요"
+        },
+        {
+          "id": "field1",
+          "label": "참여장소",
+          "initial": "",
+          "target": "책방앞"
+        }
+      ]
+    },
+    {
+      "id": "280",
+      "title": "노래 공연 자료 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "곡명",
+          "initial": "",
+          "target": "새봄노래"
+        },
+        {
+          "id": "field1",
+          "label": "반주",
+          "initial": "",
+          "target": "R2"
+        },
+        {
+          "id": "field2",
+          "label": "공연",
+          "initial": "",
+          "target": "19:00"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "반주R2확인>1 준비;리듬표대조>2 연습;시작큐확인>3 공연대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "반주",
+          "initial": "",
+          "target": "R2"
+        },
+        {
+          "id": "field1",
+          "label": "공연",
+          "initial": "",
+          "target": "19:00"
+        }
+      ]
+    },
+    {
+      "id": "281",
+      "title": "코미디 장면 순서",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "공연",
+          "initial": "",
+          "target": "잃어버린모자"
+        },
+        {
+          "id": "field1",
+          "label": "인물",
+          "initial": "",
+          "target": "두친구"
+        },
+        {
+          "id": "field2",
+          "label": "장면수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "모자찾기시작>1 도입;서로바꿔쓴모자>2 전개;함께웃는마무리>3 결말",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "공연",
+          "initial": "",
+          "target": "잃어버린모자"
+        },
+        {
+          "id": "field1",
+          "label": "장면수",
+          "initial": "",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "id": "283",
+      "title": "광고 매체 일정 계획",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "광고",
+          "initial": "",
+          "target": "도서교환전"
+        },
+        {
+          "id": "field1",
+          "label": "대상",
+          "initial": "",
+          "target": "지역주민"
+        },
+        {
+          "id": "field2",
+          "label": "게시",
+          "initial": "",
+          "target": "11월10일"
+        }
+      ],
+      "kind": "schedule",
+      "operation": "시안확인11월8일>1 검토;게시준비11월9일>2 준비;게시11월10일>3 공개",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "게시일",
+          "initial": "",
+          "target": "11월10일"
+        },
+        {
+          "id": "field1",
+          "label": "대상",
+          "initial": "",
+          "target": "지역주민"
+        }
+      ]
+    },
+    {
+      "id": "284",
+      "title": "가게 간판 모형 배치",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "간판",
+          "initial": "",
+          "target": "새봄서점"
+        },
+        {
+          "id": "field1",
+          "label": "글자위치",
+          "initial": "",
+          "target": "중앙"
+        },
+        {
+          "id": "field2",
+          "label": "문의번호",
+          "initial": "",
+          "target": "교육용000"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "책표식>왼쪽그림칸;새봄서점글자>중앙이름칸;교육용000>오른쪽문의칸",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "간판문구",
+          "initial": "",
+          "target": "새봄서점"
+        },
+        {
+          "id": "field1",
+          "label": "글자위치",
+          "initial": "",
+          "target": "중앙"
+        }
+      ]
+    },
+    {
+      "id": "286",
+      "title": "국악 공연 준비 자료",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "곡목",
+          "initial": "",
+          "target": "교육용민요"
+        },
+        {
+          "id": "field1",
+          "label": "악기",
+          "initial": "",
+          "target": "가야금모형"
+        },
+        {
+          "id": "field2",
+          "label": "공연",
+          "initial": "",
+          "target": "14:00"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "악보확인>1 자료준비;장단카드대조>2 연습준비;무대큐확인>3 공연대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "악기",
+          "initial": "",
+          "target": "가야금모형"
+        },
+        {
+          "id": "field1",
+          "label": "공연",
+          "initial": "",
+          "target": "14:00"
+        }
+      ]
+    },
+    {
+      "id": "288",
+      "title": "네일 디자인 요청",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "의뢰",
+          "initial": "",
+          "target": "색배치연습"
+        },
+        {
+          "id": "field1",
+          "label": "바탕",
+          "initial": "",
+          "target": "분홍"
+        },
+        {
+          "id": "field2",
+          "label": "포인트",
+          "initial": "",
+          "target": "노랑"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "분홍바탕카드>바탕칸;노랑포인트카드>장식칸;디자인기록카드>기록칸",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "바탕",
+          "initial": "",
+          "target": "분홍"
+        },
+        {
+          "id": "field1",
+          "label": "포인트",
+          "initial": "",
+          "target": "노랑"
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "title": "지역 분포 관찰 자료",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "주제",
+          "initial": "",
+          "target": "가상마을시설"
+        },
+        {
+          "id": "field1",
+          "label": "구역",
+          "initial": "",
+          "target": "서부"
+        },
+        {
+          "id": "field2",
+          "label": "자료수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "학교표식>북쪽구역;공원표식>중앙구역;도서관표식>남쪽구역",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "구역",
+          "initial": "",
+          "target": "서부"
+        },
+        {
+          "id": "field1",
+          "label": "시설수",
+          "initial": "",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "id": "291",
+      "title": "만화 콘티 구성",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "작품",
+          "initial": "",
+          "target": "고양이우체부"
+        },
+        {
+          "id": "field1",
+          "label": "주인공",
+          "initial": "",
+          "target": "나비"
+        },
+        {
+          "id": "field2",
+          "label": "칸수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "편지받는장면>1 시작;골목걷는장면>2 전개;편지전달장면>3 마무리",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "주인공",
+          "initial": "",
+          "target": "나비"
+        },
+        {
+          "id": "field1",
+          "label": "칸수",
+          "initial": "",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "id": "293",
+      "title": "행사 메이크업 시안",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "행사",
+          "initial": "",
+          "target": "교육용촬영"
+        },
+        {
+          "id": "field1",
+          "label": "요청느낌",
+          "initial": "",
+          "target": "차분함"
+        },
+        {
+          "id": "field2",
+          "label": "포인트색",
+          "initial": "",
+          "target": "살구"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "바탕시안카드>바탕칸;살구색표식>포인트칸;조명확인카드>확인칸",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "요청느낌",
+          "initial": "",
+          "target": "차분함"
+        },
+        {
+          "id": "field1",
+          "label": "포인트색",
+          "initial": "",
+          "target": "살구"
+        }
+      ]
+    },
+    {
+      "id": "294",
+      "title": "상품 촬영 포즈 계획",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "상품",
+          "initial": "",
+          "target": "교육용가방"
+        },
+        {
+          "id": "field1",
+          "label": "촬영",
+          "initial": "",
+          "target": "정면측면후면"
+        },
+        {
+          "id": "field2",
+          "label": "장면수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "정면가방표시>1 정면;측면끈표시>2 측면;후면수납표시>3 후면",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "상품",
+          "initial": "",
+          "target": "교육용가방"
+        },
+        {
+          "id": "field1",
+          "label": "장면수",
+          "initial": "",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "id": "295",
+      "title": "의복 패턴 치수",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "도면",
+          "initial": "",
+          "target": "조끼패턴"
+        },
+        {
+          "id": "field1",
+          "label": "단위",
+          "initial": "",
+          "target": "cm"
+        },
+        {
+          "id": "field2",
+          "label": "패턴버전",
+          "initial": "",
+          "target": "P2"
+        }
+      ],
+      "kind": "tune",
+      "operation": "앞판길이,cm,30,70,40,55,0.1;등판길이,cm,30,70,45,56,0.1",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "앞판길이",
+          "initial": "",
+          "target": "55"
+        },
+        {
+          "id": "field1",
+          "label": "등판길이",
+          "initial": "",
+          "target": "56"
+        }
+      ]
+    },
+    {
+      "id": "298",
+      "title": "무용 리허설 동선",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "공연",
+          "initial": "",
+          "target": "바람의길"
+        },
+        {
+          "id": "field1",
+          "label": "시작위치",
+          "initial": "",
+          "target": "왼쪽"
+        },
+        {
+          "id": "field2",
+          "label": "장면수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "도입동작카드>왼쪽시작점;이동동작카드>중앙지점;마무리동작카드>오른쪽끝점",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "시작위치",
+          "initial": "",
+          "target": "왼쪽"
+        },
+        {
+          "id": "field1",
+          "label": "마지막위치",
+          "initial": "",
+          "target": "오른쪽"
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "title": "지질 조사 표본 기록",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "조사",
+          "initial": "",
+          "target": "모형암석분포"
+        },
+        {
+          "id": "field1",
+          "label": "구역",
+          "initial": "",
+          "target": "지점C"
+        },
+        {
+          "id": "field2",
+          "label": "표본수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sort",
+      "operation": "층리표식암석>관찰자료1;입자표식암석>관찰자료2;미확인암석>확인대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "조사구역",
+          "initial": "",
+          "target": "지점C"
+        },
+        {
+          "id": "field1",
+          "label": "표본수",
+          "initial": "",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "id": "303",
+      "title": "연기 대본 장면 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "작품",
+          "initial": "",
+          "target": "작은약속"
+        },
+        {
+          "id": "field1",
+          "label": "배역",
+          "initial": "",
+          "target": "도서관친구"
+        },
+        {
+          "id": "field2",
+          "label": "장면수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "약속하는장면>1 시작;갈등하는장면>2 전개;약속지키는장면>3 해결",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "배역",
+          "initial": "",
+          "target": "도서관친구"
+        },
+        {
+          "id": "field1",
+          "label": "마지막장면",
+          "initial": "",
+          "target": "약속지키기"
+        }
+      ]
+    },
+    {
+      "id": "304",
+      "title": "백업 댄스 무대 동선",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "곡명",
+          "initial": "",
+          "target": "교육용리듬"
+        },
+        {
+          "id": "field1",
+          "label": "위치",
+          "initial": "",
+          "target": "후열"
+        },
+        {
+          "id": "field2",
+          "label": "동작구간",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "도입동작카드>후열왼쪽;반복동작카드>후열중앙;마무리동작카드>후열오른쪽",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "위치",
+          "initial": "",
+          "target": "후열"
+        },
+        {
+          "id": "field1",
+          "label": "동작구간",
+          "initial": "",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "id": "305",
+      "title": "장식품 시안 구성",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "제품",
+          "initial": "",
+          "target": "별모양브로치"
+        },
+        {
+          "id": "field1",
+          "label": "재료",
+          "initial": "",
+          "target": "모형종이"
+        },
+        {
+          "id": "field2",
+          "label": "부품수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "별모양표식>중앙장식점;원형받침표식>받침점;뒷면고정표식>후면점",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "제품",
+          "initial": "",
+          "target": "별모양브로치"
+        },
+        {
+          "id": "field1",
+          "label": "부품수",
+          "initial": "",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "id": "306",
+      "title": "연극 분장 자료 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "작품",
+          "initial": "",
+          "target": "숲의우편함"
+        },
+        {
+          "id": "field1",
+          "label": "배역",
+          "initial": "",
+          "target": "숲지기"
+        },
+        {
+          "id": "field2",
+          "label": "요청색",
+          "initial": "",
+          "target": "초록"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "배역참고카드>참고칸;초록시안카드>색배치칸;조명대조카드>검토칸",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "배역",
+          "initial": "",
+          "target": "숲지기"
+        },
+        {
+          "id": "field1",
+          "label": "요청색",
+          "initial": "",
+          "target": "초록"
+        }
+      ]
+    },
+    {
+      "id": "309",
+      "title": "짧은 현장 영상 구성",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "제목",
+          "initial": "",
+          "target": "우리동네책방"
+        },
+        {
+          "id": "field1",
+          "label": "촬영방향",
+          "initial": "",
+          "target": "입구내부인터뷰"
+        },
+        {
+          "id": "field2",
+          "label": "구간수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "책방입구장면>1 도입;서가내부장면>2 소개;운영자인터뷰>3 전달",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "제목",
+          "initial": "",
+          "target": "우리동네책방"
+        },
+        {
+          "id": "field1",
+          "label": "구간수",
+          "initial": "",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "id": "311",
+      "title": "사진 출력 모형 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "파일",
+          "initial": "",
+          "target": "공원전경"
+        },
+        {
+          "id": "field1",
+          "label": "출력크기",
+          "initial": "",
+          "target": "10x15"
+        },
+        {
+          "id": "field2",
+          "label": "부수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "tune",
+      "operation": "출력가로,cm,5,20,8,10,0.1;출력세로,cm,5,25,10,15,0.1",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "부수",
+          "initial": "",
+          "target": "3"
+        },
+        {
+          "id": "field1",
+          "label": "출력크기",
+          "initial": "",
+          "target": "10x15"
+        }
+      ]
+    },
+    {
+      "id": "313",
+      "title": "성악 공연 순서",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "곡명",
+          "initial": "",
+          "target": "교육용봄노래"
+        },
+        {
+          "id": "field1",
+          "label": "반주",
+          "initial": "",
+          "target": "피아노"
+        },
+        {
+          "id": "field2",
+          "label": "공연",
+          "initial": "",
+          "target": "16:00"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "악보대조>1 자료확인;반주큐확인>2 연습;무대인계>3 공연대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "반주",
+          "initial": "",
+          "target": "피아노"
+        },
+        {
+          "id": "field1",
+          "label": "공연",
+          "initial": "",
+          "target": "16:00"
+        }
+      ]
+    },
+    {
+      "id": "314",
+      "title": "스턴트 장면 자료 분류",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "작품",
+          "initial": "",
+          "target": "교육용모험극"
+        },
+        {
+          "id": "field1",
+          "label": "장면",
+          "initial": "",
+          "target": "인형모형이동"
+        },
+        {
+          "id": "field2",
+          "label": "실행범위",
+          "initial": "",
+          "target": "카드준비"
+        }
+      ],
+      "kind": "sort",
+      "operation": "전문가승인기록>전문검토자료;인형모형동선도>모형자료;미승인행동카드>실행보류",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "실행범위",
+          "initial": "",
+          "target": "카드준비"
+        },
+        {
+          "id": "field1",
+          "label": "실제위험동작",
+          "initial": "",
+          "target": "실시안함"
+        }
+      ]
+    },
+    {
+      "id": "317",
+      "title": "악기 연주 자료 준비",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "곡명",
+          "initial": "",
+          "target": "교육용행진"
+        },
+        {
+          "id": "field1",
+          "label": "악기",
+          "initial": "",
+          "target": "바이올린모형"
+        },
+        {
+          "id": "field2",
+          "label": "순서",
+          "initial": "",
+          "target": "3구간"
+        }
+      ],
+      "kind": "sequence",
+      "operation": "악보확인>1 준비;조율기록대조>2 확인;시작큐인계>3 대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "악기",
+          "initial": "",
+          "target": "바이올린모형"
+        },
+        {
+          "id": "field1",
+          "label": "순서",
+          "initial": "",
+          "target": "3구간"
+        }
+      ]
+    },
+    {
+      "id": "318",
+      "title": "악기 제작 모형 조립",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "제품",
+          "initial": "",
+          "target": "모형소고"
+        },
+        {
+          "id": "field1",
+          "label": "도면",
+          "initial": "",
+          "target": "DRUM-3"
+        },
+        {
+          "id": "field2",
+          "label": "부품수",
+          "initial": "",
+          "target": "3"
+        }
+      ],
+      "kind": "assemble",
+      "operation": "원형테두리>기준결합점;울림판모형>전면결합점;손잡이모형>아래결합점",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "도면",
+          "initial": "",
+          "target": "DRUM-3"
+        },
+        {
+          "id": "field1",
+          "label": "부품수",
+          "initial": "",
+          "target": "3"
+        }
+      ]
+    },
+    {
+      "id": "319",
+      "title": "반려동물 미용 요청",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "동물모형",
+          "initial": "",
+          "target": "강아지보리"
+        },
+        {
+          "id": "field1",
+          "label": "요청",
+          "initial": "",
+          "target": "털상태상담"
+        },
+        {
+          "id": "field2",
+          "label": "예약",
+          "initial": "",
+          "target": "14:20"
+        }
+      ],
+      "kind": "sort",
+      "operation": "보호자요청메모>상담자료;털모형관찰표>관찰자료;확인안된증상>전문확인대기",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "요청",
+          "initial": "",
+          "target": "털상태상담"
+        },
+        {
+          "id": "field1",
+          "label": "예약",
+          "initial": "",
+          "target": "14:20"
+        }
+      ]
+    },
+    {
+      "id": "320",
+      "title": "연극 리허설 큐 계획",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "작품",
+          "initial": "",
+          "target": "마을의편지"
+        },
+        {
+          "id": "field1",
+          "label": "장면수",
+          "initial": "",
+          "target": "3"
+        },
+        {
+          "id": "field2",
+          "label": "시작",
+          "initial": "",
+          "target": "18:30"
+        }
+      ],
+      "kind": "schedule",
+      "operation": "입장18:30>1 도입;대화18:40>2 전개;인사18:50>3 마무리",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "작품",
+          "initial": "",
+          "target": "마을의편지"
+        },
+        {
+          "id": "field1",
+          "label": "마무리",
+          "initial": "",
+          "target": "18:50"
+        }
+      ]
+    },
+    {
+      "id": "321",
+      "title": "방송 출연 일정 관리",
+      "requestFields": [
+        {
+          "id": "field0",
+          "label": "출연자",
+          "initial": "",
+          "target": "교육용배우나래"
+        },
+        {
+          "id": "field1",
+          "label": "날짜",
+          "initial": "",
+          "target": "11월11일"
+        },
+        {
+          "id": "field2",
+          "label": "첫일정",
+          "initial": "",
+          "target": "10:00"
+        }
+      ],
+      "kind": "schedule",
+      "operation": "의상확인10:00>1 준비;리허설11:00>2 연습;방송13:00>3 출연",
+      "handoffFields": [
+        {
+          "id": "field0",
+          "label": "날짜",
+          "initial": "",
+          "target": "11월11일"
+        },
+        {
+          "id": "field1",
+          "label": "방송",
+          "initial": "",
+          "target": "13:00"
+        }
+      ]
+    }
+  ]
+}
