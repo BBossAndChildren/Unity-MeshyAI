@@ -1,0 +1,173 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-1069",
+  "version": "v001",
+  "kind": "prop",
+  "target_web_environment": "Unity room browser; per-room HTTP execution pending",
+  "props": [
+    {
+      "name": "휠체어",
+      "triangles_per_instance": 452,
+      "instance_count": 1,
+      "total_triangles": 452
+    }
+  ],
+  "scene_triangles": 452,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3326208,
+  "dimensions_m": [
+    0.7599999904632568,
+    0.929999977350235,
+    0.9737499962151347
+  ],
+  "part_regions": [
+    {
+      "part_id": "Seat",
+      "triangles": 44,
+      "palette_source": "color1",
+      "row": 7,
+      "column": 8
+    },
+    {
+      "part_id": "Backrest",
+      "triangles": 44,
+      "palette_source": "color1",
+      "row": 7,
+      "column": 8
+    },
+    {
+      "part_id": "Leg",
+      "triangles": 20,
+      "palette_source": "color1",
+      "row": 13,
+      "column": 0
+    },
+    {
+      "part_id": "Leg.001",
+      "triangles": 20,
+      "palette_source": "color1",
+      "row": 13,
+      "column": 0
+    },
+    {
+      "part_id": "Leg.002",
+      "triangles": 20,
+      "palette_source": "color1",
+      "row": 13,
+      "column": 0
+    },
+    {
+      "part_id": "Leg.003",
+      "triangles": 20,
+      "palette_source": "color1",
+      "row": 13,
+      "column": 0
+    },
+    {
+      "part_id": "Rear wheel",
+      "triangles": 44,
+      "palette_source": "color1",
+      "row": 15,
+      "column": 12
+    },
+    {
+      "part_id": "Push rim",
+      "triangles": 44,
+      "palette_source": "color1",
+      "row": 13,
+      "column": 0
+    },
+    {
+      "part_id": "Wheel",
+      "triangles": 28,
+      "palette_source": "color1",
+      "row": 15,
+      "column": 12
+    },
+    {
+      "part_id": "Armrest",
+      "triangles": 20,
+      "palette_source": "color1",
+      "row": 15,
+      "column": 12
+    },
+    {
+      "part_id": "Rear wheel.001",
+      "triangles": 44,
+      "palette_source": "color1",
+      "row": 15,
+      "column": 12
+    },
+    {
+      "part_id": "Push rim.001",
+      "triangles": 44,
+      "palette_source": "color1",
+      "row": 13,
+      "column": 0
+    },
+    {
+      "part_id": "Wheel.001",
+      "triangles": 28,
+      "palette_source": "color1",
+      "row": 15,
+      "column": 12
+    },
+    {
+      "part_id": "Armrest.001",
+      "triangles": 20,
+      "palette_source": "color1",
+      "row": 15,
+      "column": 12
+    },
+    {
+      "part_id": "Footplate",
+      "triangles": 12,
+      "palette_source": "color1",
+      "row": 15,
+      "column": 12
+    }
+  ],
+  "checks": {
+    "prop_budget": {
+      "status": "pass",
+      "evidence": "Final GLB reopened in Blender",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Every reimported UV loop matches a color1 source cell center",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "Final GLB material/image nodes",
+      "reason": null
+    },
+    "visual_front_side_back": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Preview produced; explicit front/side/back review pending"
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "HTTP runtime display pending"
+    },
+    "unity": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Not imported into Unity yet"
+    }
+  },
+  "remaining_issues": [
+    "Per-part visual color/layout review pending.",
+    "Unity, WebGL, reduced display and actual mobile execution not yet checked."
+  ],
+  "generation_method": "blender_direct",
+  "meshy_credits_used": 0
+}

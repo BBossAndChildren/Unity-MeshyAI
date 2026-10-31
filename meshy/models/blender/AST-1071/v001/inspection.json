@@ -1,0 +1,103 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-1071",
+  "version": "v001",
+  "kind": "prop",
+  "target_web_environment": "Unity room browser; per-room HTTP execution pending",
+  "props": [
+    {
+      "name": "소형 생산 기계",
+      "triangles_per_instance": 108,
+      "instance_count": 1,
+      "total_triangles": 108
+    }
+  ],
+  "scene_triangles": 108,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3297488,
+  "dimensions_m": [
+    1.100000023841858,
+    0.8700000047683716,
+    1.5600000619888306
+  ],
+  "part_regions": [
+    {
+      "part_id": "Machine",
+      "triangles": 44,
+      "palette_source": "color1",
+      "row": 13,
+      "column": 0
+    },
+    {
+      "part_id": "Cabinet window",
+      "triangles": 12,
+      "palette_source": "color1",
+      "row": 15,
+      "column": 12
+    },
+    {
+      "part_id": "Workpiece",
+      "triangles": 12,
+      "palette_source": "color1",
+      "row": 7,
+      "column": 8
+    },
+    {
+      "part_id": "Control panel",
+      "triangles": 12,
+      "palette_source": "color1",
+      "row": 7,
+      "column": 8
+    },
+    {
+      "part_id": "Warning lamp",
+      "triangles": 28,
+      "palette_source": "color1",
+      "row": 4,
+      "column": 7
+    }
+  ],
+  "checks": {
+    "prop_budget": {
+      "status": "pass",
+      "evidence": "Final GLB reopened in Blender",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Every reimported UV loop matches a color1 source cell center",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "Final GLB material/image nodes",
+      "reason": null
+    },
+    "visual_front_side_back": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Preview produced; explicit front/side/back review pending"
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "HTTP runtime display pending"
+    },
+    "unity": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Not imported into Unity yet"
+    }
+  },
+  "remaining_issues": [
+    "Per-part visual color/layout review pending.",
+    "Unity, WebGL, reduced display and actual mobile execution not yet checked."
+  ],
+  "generation_method": "blender_direct",
+  "meshy_credits_used": 0
+}

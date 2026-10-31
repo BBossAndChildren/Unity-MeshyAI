@@ -1,0 +1,183 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-1101",
+  "version": "v002",
+  "kind": "prop",
+  "target_web_environment": "New Unity WebGL build; execution pending",
+  "props": [
+    {
+      "name": "펜 태블릿",
+      "triangles_per_instance": 76,
+      "instance_count": 1,
+      "total_triangles": 76
+    }
+  ],
+  "scene_triangles": 76,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3294084,
+  "dimensions_m": [
+    0.3400000035762787,
+    0.25,
+    0.03600001520319829
+  ],
+  "part_regions": [
+    {
+      "name": "Drawing area",
+      "triangles": 12,
+      "palette_regions": [
+        {
+          "texture_id": "color1",
+          "row": 7,
+          "column": 8,
+          "source_rect_px": [
+            627,
+            549,
+            78,
+            78
+          ],
+          "source_sample_px": [
+            666,
+            588
+          ],
+          "target_rect_px": [
+            627,
+            549,
+            78,
+            78
+          ],
+          "uv_center": [
+            0.26574960127591707,
+            0.7653508771929824
+          ],
+          "rgb": [
+            140,
+            232,
+            211
+          ]
+        }
+      ],
+      "source": "Actual final GLB parts and UV loops"
+    },
+    {
+      "name": "Pen",
+      "triangles": 20,
+      "palette_regions": [
+        {
+          "texture_id": "color1",
+          "row": 13,
+          "column": 0,
+          "source_rect_px": [
+            0,
+            1019,
+            78,
+            78
+          ],
+          "source_sample_px": [
+            39,
+            1058
+          ],
+          "target_rect_px": [
+            0,
+            1019,
+            78,
+            78
+          ],
+          "uv_center": [
+            0.015749601275917065,
+            0.5779505582137161
+          ],
+          "rgb": [
+            243,
+            231,
+            208
+          ]
+        }
+      ],
+      "source": "Actual final GLB parts and UV loops"
+    },
+    {
+      "name": "Tablet",
+      "triangles": 44,
+      "palette_regions": [
+        {
+          "texture_id": "color1",
+          "row": 15,
+          "column": 12,
+          "source_rect_px": [
+            940,
+            1176,
+            79,
+            78
+          ],
+          "source_sample_px": [
+            979,
+            1215
+          ],
+          "target_rect_px": [
+            940,
+            1176,
+            79,
+            78
+          ],
+          "uv_center": [
+            0.39055023923444976,
+            0.5153508771929824
+          ],
+          "rgb": [
+            67,
+            67,
+            67
+          ]
+        }
+      ],
+      "source": "Actual final GLB parts and UV loops"
+    }
+  ],
+  "checks": {
+    "triangle_budget": {
+      "status": "pass",
+      "evidence": "Actual final GLB Blender reimport, every instance included",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "All final GLB UV loops match the unchanged fixed palette",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "Final GLB one material and one image",
+      "reason": null
+    },
+    "support_production": {
+      "status": "pass",
+      "evidence": "Explicit physical support production; transformed floor/surface gaps recorded in support-changes.json",
+      "reason": null
+    },
+    "visual_front_side_back": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "New versions require additive directional view review"
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "New build must be executed independently"
+    },
+    "parts_inventory": {
+      "status": "pass",
+      "evidence": "Actual final GLB mesh parts, UV loops and current palette cells",
+      "reason": null
+    }
+  },
+  "remaining_issues": [
+    "New version needs directional and target-WebGL verification; no ready promotion."
+  ],
+  "generation_method": "blender_direct",
+  "meshy_credits_used": 0
+}

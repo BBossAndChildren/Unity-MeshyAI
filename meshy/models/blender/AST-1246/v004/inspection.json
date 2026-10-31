@@ -1,0 +1,62 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-1246",
+  "version": "v004",
+  "kind": "prop",
+  "target_web_environment": "Actual Unity WebGL over HTTP / Chrome Windows / SwiftShader / workplaces-v009",
+  "props": [
+    {
+      "name": "단순한 십자가",
+      "triangles_per_instance": 132,
+      "instance_count": 1,
+      "total_triangles": 132
+    }
+  ],
+  "scene_triangles": 132,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3296644,
+  "dimensions_m": [
+    1.0199999809265137,
+    0.36000001430511475,
+    2.0999999046325684
+  ],
+  "checks": {
+    "scene_budget": {
+      "status": "pass",
+      "evidence": "Final GLB reopened in actual Blender; repeated instances included",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Every loop matches original shared palette cell center",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "Final GLB material/texture inspection",
+      "reason": null
+    },
+    "visual_layout": {
+      "status": "pass",
+      "evidence": [
+        "docs/machine/evidence/workplaces-v009/PAN-064-front.png",
+        "docs/machine/evidence/workplaces-v009/PAN-064-opposite.png",
+        "docs/machine/evidence/workplaces-v009/PAN-064-reduced.png"
+      ],
+      "reason": "Actual final HTTP screenshots manually inspected for silhouette, support, seat orientation and spatial character."
+    },
+    "web_display": {
+      "status": "pass",
+      "evidence": "docs/machine/evidence/workplaces-v009/http-worship.json",
+      "reason": "Actual final build only; no earlier pass inherited."
+    }
+  },
+  "remaining_issues": [
+    "Actual Editor Play Mode, other devices/browsers and per-career work/protocol not reverified in this change."
+  ]
+}

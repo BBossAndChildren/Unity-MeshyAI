@@ -1,0 +1,124 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-1138",
+  "version": "v001",
+  "kind": "prop",
+  "target_web_environment": "Unity room browser; per-room HTTP execution pending",
+  "props": [
+    {
+      "name": "제어함",
+      "triangles_per_instance": 176,
+      "instance_count": 1,
+      "total_triangles": 176
+    }
+  ],
+  "scene_triangles": 176,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3304080,
+  "dimensions_m": [
+    0.5199999809265137,
+    0.35849998891353607,
+    1.2999999523162842
+  ],
+  "part_regions": [
+    {
+      "part_id": "Equipment case",
+      "triangles": 44,
+      "palette_source": "color1",
+      "row": 13,
+      "column": 0
+    },
+    {
+      "part_id": "Door",
+      "triangles": 12,
+      "palette_source": "color1",
+      "row": 7,
+      "column": 8
+    },
+    {
+      "part_id": "Handle",
+      "triangles": 12,
+      "palette_source": "color1",
+      "row": 15,
+      "column": 12
+    },
+    {
+      "part_id": "Door.001",
+      "triangles": 12,
+      "palette_source": "color1",
+      "row": 7,
+      "column": 8
+    },
+    {
+      "part_id": "Handle.001",
+      "triangles": 12,
+      "palette_source": "color1",
+      "row": 15,
+      "column": 12
+    },
+    {
+      "part_id": "Indicator",
+      "triangles": 28,
+      "palette_source": "color1",
+      "row": 4,
+      "column": 7
+    },
+    {
+      "part_id": "Indicator.001",
+      "triangles": 28,
+      "palette_source": "color1",
+      "row": 4,
+      "column": 7
+    },
+    {
+      "part_id": "Indicator.002",
+      "triangles": 28,
+      "palette_source": "color1",
+      "row": 4,
+      "column": 7
+    }
+  ],
+  "checks": {
+    "prop_budget": {
+      "status": "pass",
+      "evidence": "Final GLB reopened in Blender",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Every reimported UV loop matches a color1 source cell center",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "Final GLB material/image nodes",
+      "reason": null
+    },
+    "visual_front_side_back": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Preview produced; explicit front/side/back review pending"
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "HTTP runtime display pending"
+    },
+    "unity": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Not imported into Unity yet"
+    }
+  },
+  "remaining_issues": [
+    "Per-part visual color/layout review pending.",
+    "Unity, WebGL, reduced display and actual mobile execution not yet checked."
+  ],
+  "generation_method": "blender_direct",
+  "meshy_credits_used": 0
+}

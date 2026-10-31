@@ -1,0 +1,166 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-1013",
+  "version": "v001",
+  "kind": "prop",
+  "target_web_environment": "Unity room browser; per-room HTTP execution pending",
+  "props": [
+    {
+      "name": "이동식 화이트보드",
+      "triangles_per_instance": 264,
+      "instance_count": 1,
+      "total_triangles": 264
+    }
+  ],
+  "scene_triangles": 264,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3313540,
+  "dimensions_m": [
+    1.6349999904632568,
+    0.47999998927116394,
+    1.7475000629723367
+  ],
+  "part_regions": [
+    {
+      "part_id": "Writing surface",
+      "triangles": 44,
+      "palette_source": "color1",
+      "row": 15,
+      "column": 0
+    },
+    {
+      "part_id": "Frame upright",
+      "triangles": 12,
+      "palette_source": "color1",
+      "row": 10,
+      "column": 8
+    },
+    {
+      "part_id": "Frame upright.001",
+      "triangles": 12,
+      "palette_source": "color1",
+      "row": 10,
+      "column": 8
+    },
+    {
+      "part_id": "Frame rail",
+      "triangles": 12,
+      "palette_source": "color1",
+      "row": 10,
+      "column": 8
+    },
+    {
+      "part_id": "Frame rail.001",
+      "triangles": 12,
+      "palette_source": "color1",
+      "row": 10,
+      "column": 8
+    },
+    {
+      "part_id": "Stand",
+      "triangles": 12,
+      "palette_source": "color1",
+      "row": 10,
+      "column": 8
+    },
+    {
+      "part_id": "Caster beam",
+      "triangles": 12,
+      "palette_source": "color1",
+      "row": 10,
+      "column": 8
+    },
+    {
+      "part_id": "Wheel",
+      "triangles": 28,
+      "palette_source": "color1",
+      "row": 15,
+      "column": 12
+    },
+    {
+      "part_id": "Wheel.001",
+      "triangles": 28,
+      "palette_source": "color1",
+      "row": 15,
+      "column": 12
+    },
+    {
+      "part_id": "Stand.001",
+      "triangles": 12,
+      "palette_source": "color1",
+      "row": 10,
+      "column": 8
+    },
+    {
+      "part_id": "Caster beam.001",
+      "triangles": 12,
+      "palette_source": "color1",
+      "row": 10,
+      "column": 8
+    },
+    {
+      "part_id": "Wheel.002",
+      "triangles": 28,
+      "palette_source": "color1",
+      "row": 15,
+      "column": 12
+    },
+    {
+      "part_id": "Wheel.003",
+      "triangles": 28,
+      "palette_source": "color1",
+      "row": 15,
+      "column": 12
+    },
+    {
+      "part_id": "Marker ledge",
+      "triangles": 12,
+      "palette_source": "color1",
+      "row": 10,
+      "column": 8
+    }
+  ],
+  "checks": {
+    "prop_budget": {
+      "status": "pass",
+      "evidence": "Final GLB reopened in Blender",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Every reimported UV loop matches a color1 source cell center",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "Final GLB material/image nodes",
+      "reason": null
+    },
+    "visual_front_side_back": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Preview produced; explicit front/side/back review pending"
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "HTTP runtime display pending"
+    },
+    "unity": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Not imported into Unity yet"
+    }
+  },
+  "remaining_issues": [
+    "Per-part visual color/layout review pending.",
+    "Unity, WebGL, reduced display and actual mobile execution not yet checked."
+  ],
+  "generation_method": "blender_direct",
+  "meshy_credits_used": 0
+}
