@@ -1,0 +1,76 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-3122",
+  "version": "v001",
+  "kind": "prop",
+  "target_web_environment": "New Unity WebGL spatial revision; runtime pending",
+  "props": [
+    {
+      "name": "공간 디테일 — galleryart",
+      "triangles_per_instance": 84,
+      "instance_count": 1,
+      "total_triangles": 84
+    }
+  ],
+  "scene_triangles": 84,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3296836,
+  "dimensions_m": [
+    1.0499999523162842,
+    0.4000000059604645,
+    1.4800000190734863
+  ],
+  "bounds_blender_m": {
+    "min": [
+      -0.5249999761581421,
+      -0.20000000298023224,
+      0.0
+    ],
+    "max": [
+      0.5249999761581421,
+      0.20000000298023224,
+      1.4800000190734863
+    ]
+  },
+  "checks": {
+    "scene_budget": {
+      "status": "pass",
+      "evidence": "Actual final GLB Blender reimport, repeated instances once",
+      "reason": null
+    },
+    "component_budget": {
+      "status": "pass",
+      "evidence": "Component fixed final GLB counts",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Exact original palette cell centers",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "One model material and one shared palette PNG",
+      "reason": null
+    },
+    "visual_layout": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Actual final Unity WebGL visual review pending"
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "No runtime pass inherited"
+    }
+  },
+  "remaining_issues": [
+    "Actual new Unity/WebGL, screenshot review and gameplay binding smoke pending.",
+    "Intermediate or unused fixed version preserved; not included in this runtime deployment."
+  ]
+}

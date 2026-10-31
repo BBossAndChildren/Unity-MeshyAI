@@ -1,0 +1,59 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-3011",
+  "version": "v001",
+  "kind": "prop",
+  "target_web_environment": "Unity WebGL workplaces-v007; execution pending",
+  "props": [
+    {
+      "name": "고리형 조형 소품",
+      "triangles_per_instance": 508,
+      "instance_count": 1,
+      "total_triangles": 508
+    }
+  ],
+  "scene_triangles": 508,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3297940,
+  "dimensions_m": [
+    0.37445394694805145,
+    0.3777006268501282,
+    0.32060254746465944
+  ],
+  "checks": {
+    "scene_budget": {
+      "status": "pass",
+      "evidence": "Final GLB reopened in actual Blender; repeated instances included",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Every loop matches original shared palette cell center",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "Final GLB material/texture inspection",
+      "reason": null
+    },
+    "visual_layout": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Actual multi-view review pending"
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Actual new Unity WebGL execution pending"
+    }
+  },
+  "remaining_issues": [
+    "New version needs actual multi-view and WebGL review; no historical pass inherited.",
+    "Preserved intermediate or unused library model; not a verified final deployment."
+  ]
+}

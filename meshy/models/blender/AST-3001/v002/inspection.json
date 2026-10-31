@@ -1,0 +1,59 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-3001",
+  "version": "v002",
+  "kind": "prop",
+  "target_web_environment": "Unity WebGL workplaces-v007; execution pending",
+  "props": [
+    {
+      "name": "백합 꽃꽂이 화분",
+      "triangles_per_instance": 492,
+      "instance_count": 1,
+      "total_triangles": 492
+    }
+  ],
+  "scene_triangles": 492,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3310568,
+  "dimensions_m": [
+    0.8003544807434082,
+    0.7112067639827728,
+    0.7554116169776535
+  ],
+  "checks": {
+    "scene_budget": {
+      "status": "pass",
+      "evidence": "Final GLB reopened in actual Blender; repeated instances included",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Every loop matches original shared palette cell center",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "Final GLB material/texture inspection",
+      "reason": null
+    },
+    "visual_layout": {
+      "status": "fail",
+      "evidence": "meshy/models/original/AST-3001/v002/previews/front.png",
+      "reason": "Initial strong simplification left isolated floral fragments; superseded by locally repaired v003."
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Actual new Unity WebGL execution pending"
+    }
+  },
+  "remaining_issues": [
+    "New version needs actual multi-view and WebGL review; no historical pass inherited.",
+    "Preserved intermediate or unused library model; not a verified final deployment."
+  ]
+}

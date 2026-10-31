@@ -1,0 +1,76 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-3135",
+  "version": "v001",
+  "kind": "prop",
+  "target_web_environment": "New Unity WebGL spatial revision; runtime pending",
+  "props": [
+    {
+      "name": "공간 디테일 — lotus",
+      "triangles_per_instance": 380,
+      "instance_count": 1,
+      "total_triangles": 380
+    }
+  ],
+  "scene_triangles": 380,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3320036,
+  "dimensions_m": [
+    0.3799999952316284,
+    0.3800000250339508,
+    0.08499999716877937
+  ],
+  "bounds_blender_m": {
+    "min": [
+      -0.1899999976158142,
+      -0.1900000125169754,
+      0.027499999850988388
+    ],
+    "max": [
+      0.1899999976158142,
+      0.1900000125169754,
+      0.11249999701976776
+    ]
+  },
+  "checks": {
+    "scene_budget": {
+      "status": "pass",
+      "evidence": "Actual final GLB Blender reimport, repeated instances once",
+      "reason": null
+    },
+    "component_budget": {
+      "status": "pass",
+      "evidence": "Component fixed final GLB counts",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Exact original palette cell centers",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "One model material and one shared palette PNG",
+      "reason": null
+    },
+    "visual_layout": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Actual final Unity WebGL visual review pending"
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "No runtime pass inherited"
+    }
+  },
+  "remaining_issues": [
+    "Actual new Unity/WebGL, screenshot review and gameplay binding smoke pending.",
+    "Intermediate or unused fixed version preserved; not included in this runtime deployment."
+  ]
+}

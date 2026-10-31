@@ -1,0 +1,82 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-3112",
+  "version": "v001",
+  "kind": "prop",
+  "target_web_environment": "Actual Unity WebGL / HTTP / Windows Chrome Intel UHD630 D3D11 / 1440x900 and 900x600",
+  "props": [
+    {
+      "name": "공간 디테일 — clocks",
+      "triangles_per_instance": 288,
+      "instance_count": 1,
+      "total_triangles": 288
+    }
+  ],
+  "scene_triangles": 288,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3312708,
+  "dimensions_m": [
+    1.5,
+    0.4000000059604645,
+    1.4800000190734863
+  ],
+  "bounds_blender_m": {
+    "min": [
+      -0.75,
+      -0.20000000298023224,
+      0.0
+    ],
+    "max": [
+      0.75,
+      0.20000000298023224,
+      1.4800000190734863
+    ]
+  },
+  "checks": {
+    "scene_budget": {
+      "status": "pass",
+      "evidence": "Actual final GLB Blender reimport, repeated instances once",
+      "reason": null
+    },
+    "component_budget": {
+      "status": "pass",
+      "evidence": "Component fixed final GLB counts",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Exact original palette cell centers",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "One model material and one shared palette PNG",
+      "reason": null
+    },
+    "visual_layout": {
+      "status": "unverified",
+      "evidence": [
+        "docs/machine/evidence/workplaces-v011/visual-review.json",
+        "docs/machine/evidence/workplaces-v011/PAN-061-front.png"
+      ],
+      "reason": "Actual scene context was reviewed; isolated detail/hidden surfaces were not separately reviewed."
+    },
+    "web_display": {
+      "status": "pass",
+      "evidence": [
+        "docs/machine/evidence/workplaces-v011/http-spatial.json",
+        "docs/machine/evidence/workplaces-v011/PAN-061-front.png"
+      ],
+      "reason": "Actual new Unity WebGL, same fixed geometry and shared palette."
+    }
+  },
+  "remaining_issues": [
+    "Editor Play Mode, other devices/browsers, complete career work/protocol regression unverified.",
+    "Individual prop detail/hidden surface review unverified; retained in_progress."
+  ]
+}

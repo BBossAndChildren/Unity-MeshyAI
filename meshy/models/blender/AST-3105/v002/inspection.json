@@ -1,0 +1,76 @@
+{
+  "schema_version": 3,
+  "asset_id": "AST-3105",
+  "version": "v002",
+  "kind": "prop",
+  "target_web_environment": "New Unity WebGL spatial revision; runtime pending",
+  "props": [
+    {
+      "name": "전시 선반 — blanket",
+      "triangles_per_instance": 240,
+      "instance_count": 1,
+      "total_triangles": 240
+    }
+  ],
+  "scene_triangles": 240,
+  "material_count": 1,
+  "texture_count": 1,
+  "palette_resolution": [
+    2508,
+    2508
+  ],
+  "glb_bytes": 3311776,
+  "dimensions_m": [
+    0.7799999713897705,
+    0.47999998927116394,
+    0.9070000052452087
+  ],
+  "bounds_blender_m": {
+    "min": [
+      -0.38999998569488525,
+      -0.23999999463558197,
+      0.0
+    ],
+    "max": [
+      0.38999998569488525,
+      0.23999999463558197,
+      0.9070000052452087
+    ]
+  },
+  "checks": {
+    "scene_budget": {
+      "status": "pass",
+      "evidence": "Actual final GLB Blender reimport, repeated instances once",
+      "reason": null
+    },
+    "component_budget": {
+      "status": "pass",
+      "evidence": "Component fixed final GLB counts",
+      "reason": null
+    },
+    "palette_uv": {
+      "status": "pass",
+      "evidence": "Exact original palette cell centers",
+      "reason": null
+    },
+    "shared_material": {
+      "status": "pass",
+      "evidence": "One model material and one shared palette PNG",
+      "reason": null
+    },
+    "visual_layout": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "Actual final Unity WebGL visual review pending"
+    },
+    "web_display": {
+      "status": "unverified",
+      "evidence": null,
+      "reason": "No runtime pass inherited"
+    }
+  },
+  "remaining_issues": [
+    "Actual new Unity/WebGL, screenshot review and gameplay binding smoke pending.",
+    "Intermediate or unused fixed version preserved; not included in this runtime deployment."
+  ]
+}
